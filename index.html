@@ -54,51 +54,16 @@
     <section id="gallery" class="gallery-section">
         <div class="container">
             <h2>Featured Artwork</h2>
-            <p class="section-subtitle">Explore our latest abstract art pieces</p>
+            <p class="section-subtitle">Explore our complete collection from ArtPal and Fine Art America</p>
             
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <span>Abstract Art #1</span>
-                    </div>
-                    <h3>Cosmic Dreams</h3>
-                    <p class="price">Available on Platforms</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <span>Abstract Art #2</span>
-                    </div>
-                    <h3>Digital Harmony</h3>
-                    <p class="price">NFT Available</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <span>Abstract Art #3</span>
-                    </div>
-                    <h3>Colors Collide</h3>
-                    <p class="price">Limited Edition</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <span>Abstract Art #4</span>
-                    </div>
-                    <h3>Digital Fusion</h3>
-                    <p class="price">Available Now</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <span>Abstract Art #5</span>
-                    </div>
-                    <h3>Ethereal Forms</h3>
-                    <p class="price">Coming Soon</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <span>Abstract Art #6</span>
-                    </div>
-                    <h3>Quantum Waves</h3>
-                    <p class="price">On Sale</p>
-                </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="artpal">ArtPal</button>
+                <button class="filter-btn" data-filter="fineartamerica">Fine Art America</button>
+            </div>
+            
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be dynamically loaded here -->
             </div>
         </div>
     </section>
@@ -226,6 +191,7 @@
         </div>
     </footer>
 
+    <script src="gallery-data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

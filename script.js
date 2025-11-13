@@ -1,3 +1,57 @@
+// Gallery Initialization
+function initializeGallery() {
+    const galleryGrid = document.getElementById('galleryGrid');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    // Display gallery items
+    function displayGallery(items) {
+        galleryGrid.innerHTML = '';
+        items.forEach(item => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            galleryItem.dataset.platform = item.platform.toLowerCase().replace(/\s+/g, '');
+            
+            galleryItem.innerHTML = `
+                <div class="gallery-image-container">
+                    ${item.image ? `<img src="${item.image}" alt="${item.title}" class="gallery-image" onerror="this.parentElement.innerHTML = '<div class=\'gallery-placeholder\'><span>${item.title}</span></div>'">` : '<div class="gallery-placeholder"><span>' + item.title + '</span></div>'}
+                </div>
+                <div class="gallery-info">
+                    <h3>${item.title}</h3>
+                    <p class="gallery-collection">${item.collection}</p>
+                    <span class="gallery-platform">${item.platform}</span>
+                    <a href="${item.link}" target="_blank" class="gallery-link">View on ${item.platform}</a>
+                </div>
+            `;
+            
+            galleryGrid.appendChild(galleryItem);
+        });
+    }
+    
+    // Filter functionality
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active state
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Filter items
+            const filter = btn.dataset.filter;
+            let filteredItems = galleryData;
+            
+            if (filter !== 'all') {
+                filteredItems = galleryData.filter(item => 
+                    item.platform.toLowerCase().replace(/\s+/g, '') === filter
+                );
+            }
+            
+            displayGallery(filteredItems);
+        });
+    });
+    
+    // Display all items initially
+    displayGallery(galleryData);
+}
+
 // Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -56,9 +110,17 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-document.querySelectorAll('.gallery-item, .store-card').forEach(item => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(20px)';
-    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(item);
+// Initialize gallery when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initializeGallery();
+    
+    // Observe gallery items for animations
+    setTimeout(() => {
+        document.querySelectorAll('.gallery-item, .store-card').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+    }, 100);
 });

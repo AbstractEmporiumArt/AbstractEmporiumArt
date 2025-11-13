@@ -1,4 +1,75 @@
-// Gallery Initialization
+// Initialize chatbot
+let chatbot = null;
+
+// Initialize chatbot when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize bot
+    if (typeof AbstractEmporiumBot !== 'undefined') {
+        chatbot = new AbstractEmporiumBot();
+        addBotGreeting();
+    }
+    
+    initializeGallery();
+    
+    // Observe gallery items for animations
+    setTimeout(() => {
+        document.querySelectorAll('.gallery-item, .store-card').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+    }, 100);
+});
+
+/**
+ * Chatbot Functions
+ */
+
+function addBotGreeting() {
+    if (!chatbot) return;
+    const greeting = chatbot.processInput('hello');
+    addMessageToChat(greeting, 'bot');
+}
+
+function addMessageToChat(message, sender) {
+    const messagesContainer = document.getElementById('chatbot-messages');
+    if (!messagesContainer) return;
+
+    const messageEl = document.createElement('div');
+    messageEl.className = `chatbot-message ${sender}`;
+    messageEl.textContent = message;
+    messagesContainer.appendChild(messageEl);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+function sendChatMessage() {
+    const input = document.getElementById('chatbot-input');
+    if (!input || !input.value.trim() || !chatbot) return;
+
+    const userMessage = input.value.trim();
+    addMessageToChat(userMessage, 'user');
+    input.value = '';
+
+    // Get bot response
+    setTimeout(() => {
+        const botResponse = chatbot.processInput(userMessage);
+        addMessageToChat(botResponse, 'bot');
+    }, 300);
+}
+
+function handleChatInput(event) {
+    if (event.key === 'Enter') {
+        sendChatMessage();
+    }
+}
+
+function toggleChatbot() {
+    const widget = document.getElementById('chatbot-widget');
+    if (widget) {
+        widget.style.display = widget.style.display === 'none' ? 'flex' : 'none';
+    }
+}
 function initializeGallery() {
     const galleryGrid = document.getElementById('galleryGrid');
     const filterBtns = document.querySelectorAll('.filter-btn');

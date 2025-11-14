@@ -1,0 +1,107 @@
+name: Content Validation
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          echo "Validating JSON files..."
+          node -e "
+            const fs = require('fs');
+            const files = ['vercel.json', 'package.json'];
+            files.forEach(file => {
+              try {
+                if (fs.existsSync(file)) {
+                  const content = fs.readFileSync(file, 'utf8');
+                  JSON.parse(content);
+                  console.log('✓ ' + file + ' is valid');
+                }
+              } catch (e) {
+                console.error('✗ ' + file + ' is invalid: ' + e.message);
+                process.exit(1);
+              }
+            });
+          "
+
+      - name: Check HTML files exist
+        run: |
+          echo "Checking required HTML files..."
+          required_files=(
+            "index.html"
+            "gallery.html"
+            "shop.html"
+            "item-detail.html"
+            "contact.html"
+            "features.html"
+            "canvas.html"
+            "pattern.html"
+          )
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "✗ Missing required file: $file"
+              exit 1
+            else
+              echo "✓ Found $file"
+            fi
+          done
+
+      - name: Check JavaScript files
+        run: |
+          echo "Checking required JavaScript files..."
+          required_files=(
+            "script.js"
+            "helper-bot.js"
+            "image-loader.js"
+            "item-detail.js"
+            "gallery-data.js"
+          )
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "✗ Missing required file: $file"
+              exit 1
+            else
+              echo "✓ Found $file"
+            fi
+          done
+
+      - name: Check CSS files
+        run: |
+          echo "Checking required CSS files..."
+          if [ ! -f "styles.css" ]; then
+            echo "✗ Missing required file: styles.css"
+            exit 1
+          else
+            echo "✓ Found styles.css"
+          fi
+
+      - name: Check API files
+        run: |
+          echo "Checking API files..."
+          if [ ! -d "api" ]; then
+            echo "⚠ Warning: api directory not found"
+          else
+            echo "✓ Found api directory"
+            if [ -f "api/paypal-ipn.js" ]; then
+              echo "✓ Found api/paypal-ipn.js"
+            fi
+            if [ -f "api/process-pattern-order.js" ]; then
+              echo "✓ Found api/process-pattern-order.js"
+            fi
+          fi
+
+      - name: Validate file permissions
+        run: |
+          echo "Checking file permissions..."
+          if [ -f "push-to-github.ps1" ]; then
+            echo "✓ Found push-to-github.ps1"
+          fi

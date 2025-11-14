@@ -1,0 +1,21 @@
+{
+  "buildCommand": "npm install",
+  "outputDirectory": "public",
+  "functions": {
+    "api/**/*.js": {
+      "memory": 3008,
+      "maxDuration": 30
+    }
+  },
+  "env": [
+    {
+      "key": "SENDGRID_API_KEY",
+      "value": "",
+      "type": "secret"
+    },
+    {
+      "key": "PAYPAL_SANDBOX",
+      "value": "false"
+    }
+  ]
+}

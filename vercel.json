@@ -7,15 +7,12 @@
       "maxDuration": 30
     }
   },
-  "env": [
-    {
-      "key": "SENDGRID_API_KEY",
-      "value": "",
-      "type": "secret"
+  "env": {
+    "SENDGRID_API_KEY": {
+      "value": "@sendgrid_api_key"
     },
-    {
-      "key": "PAYPAL_SANDBOX",
+    "PAYPAL_SANDBOX": {
       "value": "false"
     }
-  ]
+  }
 }

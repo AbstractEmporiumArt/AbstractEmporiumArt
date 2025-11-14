@@ -6,55 +6,67 @@ const galleryData = [
         title: "Magical Wonderland #1",
         collection: "Magical Wonderland Collection",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-16",
-        image: "https://img.artpal.com/284761/Magical-Wonderland-1.jpg",
-        category: "Abstract"
+        link: "https://www.artpal.com/Abstractemporium/#i4",
+        artpalId: "284761-16",
+        image: null,
+        category: "Abstract",
+        description: "Part of the Magical Wonderland Collection - 4 piece series"
     },
     {
         id: 2,
         title: "Magical Wonderland #2",
         collection: "Magical Wonderland Collection",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-15",
-        image: "https://img.artpal.com/284761/Magical-Wonderland-2.jpg",
-        category: "Abstract"
+        link: "https://www.artpal.com/Abstractemporium/#i4",
+        artpalId: "284761-15",
+        image: null,
+        category: "Abstract",
+        description: "Part of the Magical Wonderland Collection - 4 piece series"
     },
     {
         id: 3,
         title: "Magical Wonderland #3",
         collection: "Magical Wonderland Collection",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-14",
-        image: "https://img.artpal.com/284761/Magical-Wonderland-3.jpg",
-        category: "Abstract"
+        link: "https://www.artpal.com/Abstractemporium/#i4",
+        artpalId: "284761-14",
+        image: null,
+        category: "Abstract",
+        description: "Part of the Magical Wonderland Collection - 4 piece series"
     },
     {
         id: 4,
         title: "Magical Wonderland #4",
         collection: "Magical Wonderland Collection",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-13",
-        image: "https://img.artpal.com/284761/Magical-Wonderland-4.jpg",
-        category: "Abstract"
+        link: "https://www.artpal.com/Abstractemporium/#i4",
+        artpalId: "284761-13",
+        image: null,
+        category: "Abstract",
+        description: "Part of the Magical Wonderland Collection - 4 piece series"
     },
     // ArtPal - Serenity in Waves
     {
         id: 5,
-        title: "Flowing Tranquility - Art Set",
+        title: "Flowing Tranquility",
         collection: "Serenity in Waves",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-11",
-        image: "https://img.artpal.com/284761/Flowing-Tranquility.jpg",
-        category: "Serenity"
+        link: "https://www.artpal.com/Abstractemporium/#i3",
+        artpalId: "284761-11",
+        image: null,
+        category: "Serenity",
+        description: "Part of Serenity in Waves Collection - 2 piece series"
     },
     {
         id: 6,
-        title: "Serenity in Waves - Art Set",
+        title: "Serenity in Waves",
         collection: "Serenity in Waves",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-10",
-        image: "https://img.artpal.com/284761/Serenity-in-Waves.jpg",
-        category: "Serenity"
+        link: "https://www.artpal.com/Abstractemporium/#i3",
+        artpalId: "284761-10",
+        image: null,
+        category: "Serenity",
+        description: "Part of Serenity in Waves Collection - 2 piece series"
     },
     // ArtPal - Ethereal Kaleidoscope series
     {
@@ -62,91 +74,111 @@ const galleryData = [
         title: "Chronicles of the Cosmos",
         collection: "Ethereal Kaleidoscope",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-8",
-        image: "https://img.artpal.com/284761/Chronicles-of-the-Cosmos.jpg",
-        category: "Cosmic"
+        link: "https://www.artpal.com/Abstractemporium/#i2",
+        artpalId: "284761-8",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Ethereal Kaleidoscope Series - 3 piece collection"
     },
     {
         id: 8,
         title: "Ethereal Whispers",
         collection: "Ethereal Kaleidoscope",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-9",
-        image: "https://img.artpal.com/284761/Ethereal-Whispers.jpg",
-        category: "Ethereal"
+        link: "https://www.artpal.com/Abstractemporium/#i2",
+        artpalId: "284761-9",
+        image: null,
+        category: "Ethereal",
+        description: "Part of Ethereal Kaleidoscope Series - 3 piece collection"
     },
     {
         id: 9,
         title: "Ethereal Kaleidoscope",
         collection: "Ethereal Kaleidoscope",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-7",
-        image: "https://img.artpal.com/284761/Ethereal-Kaleidoscope.jpg",
-        category: "Kaleidoscope"
+        link: "https://www.artpal.com/Abstractemporium/#i2",
+        artpalId: "284761-7",
+        image: null,
+        category: "Kaleidoscope",
+        description: "Part of Ethereal Kaleidoscope Series - 3 piece collection"
     },
-    // ArtPal - Gallery Collection
+    // ArtPal - Individual Gallery Items
     {
         id: 10,
         title: "Dreamz",
         collection: "Gallery",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-2",
-        image: "https://img.artpal.com/284761/Dreamz.jpg",
-        category: "Dreams"
+        link: "https://www.artpal.com/Abstractemporium/?i=284761-2",
+        artpalId: "284761-2",
+        image: null,
+        category: "Dreams",
+        description: "A dreamy abstract composition from our gallery collection"
     },
     {
         id: 11,
         title: "Neon Gardenz",
         collection: "Gallery",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-1",
-        image: "https://img.artpal.com/284761/Neon-Gardenz.jpg",
-        category: "Neon"
+        link: "https://www.artpal.com/Abstractemporium/?i=284761-1",
+        artpalId: "284761-1",
+        image: null,
+        category: "Neon",
+        description: "Vibrant neon colors in a garden-inspired abstract design"
     },
     {
         id: 12,
         title: "Abstract Twist",
         collection: "Gallery",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-3",
-        image: "https://img.artpal.com/284761/Abstract-Twist.jpg",
-        category: "Abstract"
+        link: "https://www.artpal.com/Abstractemporium/?i=284761-3",
+        artpalId: "284761-3",
+        image: null,
+        category: "Abstract",
+        description: "An unexpected twist on abstract art forms"
     },
     {
         id: 13,
         title: "Radiant Fusion",
         collection: "Gallery",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-4",
-        image: "https://img.artpal.com/284761/Radiant-Fusion.jpg",
-        category: "Fusion"
+        link: "https://www.artpal.com/Abstractemporium/?i=284761-4",
+        artpalId: "284761-4",
+        image: null,
+        category: "Fusion",
+        description: "Where radiance meets abstract fusion"
     },
     {
         id: 14,
         title: "Pure Imagination",
         collection: "Gallery",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-12",
-        image: "https://img.artpal.com/284761/Pure-Imagination.jpg",
-        category: "Imagination"
+        link: "https://www.artpal.com/Abstractemporium/?i=284761-12",
+        artpalId: "284761-12",
+        image: null,
+        category: "Imagination",
+        description: "Unleash your imagination with this pure abstract piece"
     },
     {
         id: 15,
         title: "Harmony in Contrast",
         collection: "Gallery",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-6",
-        image: "https://img.artpal.com/284761/Harmony-in-Contrast.jpg",
-        category: "Harmony"
+        link: "https://www.artpal.com/Abstractemporium/?i=284761-6",
+        artpalId: "284761-6",
+        image: null,
+        category: "Harmony",
+        description: "Finding harmony through contrasting elements"
     },
     {
         id: 16,
         title: "Mystic Connections",
         collection: "Gallery",
         platform: "ArtPal",
-        link: "https://www.artpal.com/Abstractemporium?i=284761-5",
-        image: "https://img.artpal.com/284761/Mystic-Connections.jpg",
-        category: "Mystic"
+        link: "https://www.artpal.com/Abstractemporium/?i=284761-5",
+        artpalId: "284761-5",
+        image: null,
+        category: "Mystic",
+        description: "Mysterious connections woven through abstract patterns"
     },
     // Fine Art America - Abstract Warrior Cosmic Collection
     {

@@ -88,22 +88,38 @@ function initializeGallery() {
             galleryItem.setAttribute('data-image-src', item.image);
             galleryItem.style.cursor = 'pointer';
             
+            // Create lazy-loaded image
+            const imgHtml = item.image 
+                ? `<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="${item.image}" alt="${item.title}" class="gallery-image">`
+                : (item.artpalId 
+                    ? `<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-artpal-id="${item.artpalId}" alt="${item.title}" class="gallery-image">`
+                    : `<div class="gallery-placeholder"><span>${item.title}</span></div>`);
+            
             galleryItem.innerHTML = `
                 <div class="gallery-image-container">
-                    ${item.image ? `<img src="${item.image}" alt="${item.title}" class="gallery-image" onerror="this.parentElement.innerHTML = '<div class=\'gallery-placeholder\'><span>${item.title}</span></div>'">` : '<div class="gallery-placeholder"><span>' + item.title + '</span></div>'}
+                    ${imgHtml}
                 </div>
                 <div class="gallery-info">
                     <h3>${item.title}</h3>
                     <p class="gallery-collection">${item.collection}</p>
                     <span class="gallery-platform">${item.platform}</span>
                     <div class="gallery-actions">
-                        <a href="${item.link}" target="_blank" class="gallery-link">View</a>
+                        <a href="item-detail.html?id=${item.id}" class="gallery-link">Details</a>
+                        <a href="${item.link}" target="_blank" class="gallery-link">View Shop</a>
                         <span class="pattern-hint" title="Click image to use in Pattern Maker">📋 Pattern</span>
                     </div>
                 </div>
             `;
             
             galleryGrid.appendChild(galleryItem);
+            
+            // Register images for lazy loading
+            const imgs = galleryItem.querySelectorAll('[data-src], [data-artpal-id]');
+            imgs.forEach(img => {
+                if (typeof lazyImageLoader !== 'undefined') {
+                    lazyImageLoader.registerImage(img);
+                }
+            });
         });
     }
     

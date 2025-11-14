@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop - Abstract Emporium Art - Find our art on ArtPal, Fine Art America, and The HUG">
+    <title>Shop - Abstract Emporium Art</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="banner.jpg" alt="Abstract Emporium Banner" class="banner-img">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img">
+                <span>Abstract Emporium</span>
+            </div>
+            <div class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="canvas.html" class="nav-link">Community Canvas</a></li>
+                <li><a href="pattern.html" class="nav-link">Pattern Maker</a></li>
+                <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Section -->
+    <section class="stores-section">
+        <div class="container">
+            <h1>Shop Our Collections</h1>
+            <p class="section-subtitle">Find our art on multiple platforms and support independent art</p>
+            
+            <div class="stores-grid">
+                <a href="https://www.artpal.com/Abstractemporium/" target="_blank" class="store-card">
+                    <div class="store-icon">🎨</div>
+                    <h3>ArtPal</h3>
+                    <p>Premium digital art marketplace with original and limited edition works</p>
+                    <div class="store-features">
+                        <span>✓ Digital Downloads</span>
+                        <span>✓ Limited Editions</span>
+                        <span>✓ NFTs</span>
+                    </div>
+                    <span class="visit-btn">Visit Store →</span>
+                </a>
+                
+                <a href="https://fineartamerica.com/profiles/lissa-beaulieu/shop" target="_blank" class="store-card">
+                    <div class="store-icon">🖼️</div>
+                    <h3>Fine Art America</h3>
+                    <p>Print-on-demand artwork with a full range of product options</p>
+                    <div class="store-features">
+                        <span>✓ Canvas Prints</span>
+                        <span>✓ Framed Prints</span>
+                        <span>✓ Apparel</span>
+                    </div>
+                    <span class="visit-btn">Visit Store →</span>
+                </a>
+                
+                <a href="https://thehug.xyz/artists/AbstractEmporiumArt/shop" target="_blank" class="store-card">
+                    <div class="store-icon">✨</div>
+                    <h3>The HUG</h3>
+                    <p>Digital art and NFT community celebrating independent artists</p>
+                    <div class="store-features">
+                        <span>✓ NFT Collections</span>
+                        <span>✓ Digital Art</span>
+                        <span>✓ Community</span>
+                    </div>
+                    <span class="visit-btn">Visit Store →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <h2>Support Our Work</h2>
+            <p>Love what we're creating? Your support helps us bring more amazing art and features to life!</p>
+            
+            <div class="support-options">
+                <div class="support-card">
+                    <div class="support-icon">☕</div>
+                    <h3>Buy Me a Coffee</h3>
+                    <p>One-time tip to fuel our creative process</p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+                        <input type="hidden" name="item_name" value="Support Abstract Emporium Art">
+                        <input type="hidden" name="amount" value="5">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <button type="submit" class="support-btn">Tip $5</button>
+                    </form>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon">🎁</div>
+                    <h3>Custom Amount</h3>
+                    <p>Tip any amount you'd like</p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="custom-tip">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+                        <input type="hidden" name="item_name" value="Support Abstract Emporium Art">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="number" name="amount" placeholder="Enter amount" min="1" step="0.01" required>
+                        <button type="submit" class="support-btn">Send Tip</button>
+                    </form>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon">👥</div>
+                    <h3>Join Community</h3>
+                    <p>Subscribe for exclusive updates and benefits</p>
+                    <form class="community-form" id="communitySignupForm">
+                        <input type="email" placeholder="your@email.com" required>
+                        <button type="submit" class="support-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Platforms -->
+    <section class="platforms-info">
+        <div class="container">
+            <h2>Why Multiple Platforms?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🌍 Reach</h3>
+                    <p>Different platforms serve different audiences and art preferences</p>
+                </div>
+                <div class="info-card">
+                    <h3>💰 Affordability</h3>
+                    <p>We offer options for every budget, from digital downloads to premium prints</p>
+                </div>
+                <div class="info-card">
+                    <h3>🛍️ Variety</h3>
+                    <p>Choose how you want to own and display our art—digital, print, apparel, and more</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔐 Support</h3>
+                    <p>Every purchase directly supports independent art creation and community features</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p>&copy; 2025 Abstract Emporium Art. All rights reserved.</p>
+                </div>
+                <div class="footer-section">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/abstractemporium/" target="_blank" class="social-link facebook" title="Facebook">
+                            <span>f</span>
+                        </a>
+                        <a href="https://www.instagram.com/Abstractemporiumart" target="_blank" class="social-link instagram" title="Instagram">
+                            <span>📷</span>
+                        </a>
+                        <a href="https://twitter.com/Abstractempco23" target="_blank" class="social-link twitter" title="X/Twitter">
+                            <span>𝕏</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <span>Abstract Bot 🤖</span>
+            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input 
+                type="text" 
+                id="chatbot-input" 
+                placeholder="Ask me anything..." 
+                onkeypress="handleChatInput(event)"
+            >
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="helper-bot.js"></script>
+    <script>
+        document.getElementById('communitySignupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            localStorage.setItem('communityEmail', email);
+            alert('Thank you for joining our community!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -123,6 +123,25 @@
                 <div class="tool-group">
                     <button class="canvas-action-btn" onclick="window.communityCanvas?.exportAsImage()">📥 Export Canvas</button>
                 </div>
+                
+                <!-- Enhanced Features -->
+                <div class="tool-group enhanced-controls">
+                    <h4>⚙️ Advanced Tools</h4>
+                    <button class="canvas-action-btn" id="undoBtn" title="Undo (Ctrl+Z)">↶ Undo</button>
+                    <button class="canvas-action-btn" id="redoBtn" title="Redo (Ctrl+Y)">↷ Redo</button>
+                    <button class="canvas-action-btn" id="snapshotBtn" title="Save snapshot (Ctrl+S)">📸 Snapshot</button>
+                </div>
+                
+                <div class="tool-group">
+                    <h4>🎨 Color Presets</h4>
+                    <div class="color-preset-grid" id="colorPresetGrid"></div>
+                </div>
+                
+                <div class="tool-group">
+                    <h4>✨ Effects</h4>
+                    <button class="canvas-action-btn" id="particleBtn">💫 Add Sparkles</button>
+                    <button class="canvas-action-btn" id="animateBtn">🎬 Animation Mode</button>
+                </div>
             </div>
             
             <div class="canvas-info">
@@ -195,6 +214,31 @@
                             <option value="geometric">Geometric (Clean)</option>
                         </select>
                         <p class="control-hint">Higher complexity = more detail in the pattern</p>
+                    </div>
+                    
+                    <!-- Enhanced Pattern Controls -->
+                    <div class="control-group">
+                        <label for="craftTypeSelect">Craft Type</label>
+                        <select id="craftTypeSelect" class="craft-select">
+                            <option value="knitting">🧶 Knitting</option>
+                            <option value="crochet">🪝 Crochet</option>
+                            <option value="weaving">🪡 Weaving</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>AI Suggestions</label>
+                        <button class="ai-suggest-btn" id="aiSuggestBtn">🤖 Get Recommendations</button>
+                        <div id="aiSuggestions" class="ai-suggestions"></div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Export Format</label>
+                        <div class="export-buttons">
+                            <button class="export-btn" data-format="PNG">📥 PNG</button>
+                            <button class="export-btn" data-format="SVG">📥 SVG</button>
+                            <button class="export-btn" data-format="CSV">📥 CSV</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -473,9 +517,12 @@
     <script src="gallery-data.js"></script>
     <script src="helper-bot.js"></script>
     <script src="community-canvas.js"></script>
+    <script src="community-canvas-enhanced.js"></script>
     <script src="pattern-generator.js"></script>
+    <script src="pattern-generator-enhanced.js"></script>
     <script src="pattern-delivery.js"></script>
     <script src="user-tracker.js"></script>
+    <script src="enhanced-features-init.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

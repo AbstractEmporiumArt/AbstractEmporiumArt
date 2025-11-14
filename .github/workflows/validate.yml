@@ -1,4 +1,4 @@
-name: Content Validation
+name: File Structure Validation
 
 on:
   push:
@@ -13,95 +13,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate JSON files
-        run: |
-          echo "Validating JSON files..."
-          node -e "
-            const fs = require('fs');
-            const files = ['vercel.json', 'package.json'];
-            files.forEach(file => {
-              try {
-                if (fs.existsSync(file)) {
-                  const content = fs.readFileSync(file, 'utf8');
-                  JSON.parse(content);
-                  console.log('✓ ' + file + ' is valid');
-                }
-              } catch (e) {
-                console.error('✗ ' + file + ' is invalid: ' + e.message);
-                process.exit(1);
-              }
-            });
-          "
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
 
-      - name: Check HTML files exist
+      - name: Validate configuration files
         run: |
-          echo "Checking required HTML files..."
-          required_files=(
-            "index.html"
-            "gallery.html"
-            "shop.html"
-            "item-detail.html"
-            "contact.html"
-            "features.html"
-            "canvas.html"
-            "pattern.html"
-          )
-          for file in "${required_files[@]}"; do
-            if [ ! -f "$file" ]; then
-              echo "✗ Missing required file: $file"
-              exit 1
-            else
-              echo "✓ Found $file"
-            fi
+          echo "Validating configuration files..."
+          node -e "const fs = require('fs'); ['vercel.json', 'package.json'].forEach(f => { try { JSON.parse(fs.readFileSync(f, 'utf8')); console.log('✓ ' + f); } catch (e) { console.error('✗ ' + f); process.exit(1); } });"
+
+      - name: Check project structure
+        run: |
+          echo "Checking project structure..."
+          for f in index.html gallery.html shop.html item-detail.html contact.html features.html canvas.html pattern.html script.js helper-bot.js image-loader.js item-detail.js gallery-data.js styles.css; do
+            [ -f "$f" ] && echo "✓ $f" || (echo "✗ Missing $f"; exit 1)
           done
 
-      - name: Check JavaScript files
+      - name: Check optional directories
         run: |
-          echo "Checking required JavaScript files..."
-          required_files=(
-            "script.js"
-            "helper-bot.js"
-            "image-loader.js"
-            "item-detail.js"
-            "gallery-data.js"
-          )
-          for file in "${required_files[@]}"; do
-            if [ ! -f "$file" ]; then
-              echo "✗ Missing required file: $file"
-              exit 1
-            else
-              echo "✓ Found $file"
-            fi
-          done
-
-      - name: Check CSS files
-        run: |
-          echo "Checking required CSS files..."
-          if [ ! -f "styles.css" ]; then
-            echo "✗ Missing required file: styles.css"
-            exit 1
-          else
-            echo "✓ Found styles.css"
-          fi
-
-      - name: Check API files
-        run: |
-          echo "Checking API files..."
-          if [ ! -d "api" ]; then
-            echo "⚠ Warning: api directory not found"
-          else
-            echo "✓ Found api directory"
-            if [ -f "api/paypal-ipn.js" ]; then
-              echo "✓ Found api/paypal-ipn.js"
-            fi
-            if [ -f "api/process-pattern-order.js" ]; then
-              echo "✓ Found api/process-pattern-order.js"
-            fi
-          fi
-
-      - name: Validate file permissions
-        run: |
-          echo "Checking file permissions..."
-          if [ -f "push-to-github.ps1" ]; then
-            echo "✓ Found push-to-github.ps1"
-          fi
+          echo "Checking optional directories..."
+          [ -d "api" ] && echo "✓ api directory" || echo "ℹ api directory not found"
+          [ -d ".github/workflows" ] && echo "✓ .github/workflows" || echo "ℹ workflows not found"
+          [ -f "package-lock.json" ] && echo "✓ package-lock.json" || echo "ℹ package-lock.json not found"
+          exit 0

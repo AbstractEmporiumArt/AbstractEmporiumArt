@@ -16,31 +16,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18.x'
-          cache: 'npm'
 
       - name: Check for dependency updates
         run: npm outdated || true
+        continue-on-error: true
 
-      - name: Run npm audit fix (dry-run)
+      - name: Run npm audit
         run: npm audit --audit-level=moderate || true
+        continue-on-error: true
 
       - name: Validate package.json
-        run: node -e "require('fs').existsSync('package.json') && JSON.parse(require('fs').readFileSync('package.json')); console.log('package.json is valid')"
-
-      - name: Check Node version compatibility
-        run: |
-          echo "Node version requirements:"
-          node -e "const pkg = require('./package.json'); console.log('Requires Node:', pkg.engines?.node || 'Not specified')"
-
-      - name: Create issue if updates needed
-        if: failure()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '🔄 Scheduled maintenance: Dependencies need updates',
-              body: 'Automated check detected that dependencies may need updating. Please review with `npm outdated` and update as needed.',
-              labels: ['maintenance', 'dependencies']
-            })
+        run: node -e "JSON.parse(require('fs').readFileSync('package.json', 'utf8')); console.log('✓ package.json is valid')"
+        continue-on-error: true

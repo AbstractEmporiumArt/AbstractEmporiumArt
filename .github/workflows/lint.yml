@@ -1,4 +1,4 @@
-name: Lint and Code Quality
+name: Code Quality Checks
 
 on:
   push:
@@ -13,32 +13,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18.x'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
 
       - name: Check JSON files
         run: |
-          for file in vercel.json package.json; do
-            if [ -f "$file" ]; then
-              echo "Validating $file..."
-              node -e "JSON.parse(require('fs').readFileSync('$file', 'utf8'))"
-            fi
-          done
-
-      - name: Validate HTML files
-        run: |
-          npm install -D html-validate --no-save
-          npx html-validate *.html || true
+          echo "Validating JSON files..."
+          node -e "const fs = require('fs'); ['vercel.json', 'package.json'].forEach(f => { JSON.parse(fs.readFileSync(f, 'utf8')); console.log('✓ ' + f); });"
 
       - name: Check JavaScript syntax
         run: |
-          node --check script.js || true
-          node --check helper-bot.js || true
-          node --check image-loader.js || true
-          node --check item-detail.js || true
+          echo "Checking JavaScript syntax..."
+          node --check script.js
+          node --check helper-bot.js
+          node --check image-loader.js
+          node --check item-detail.js
+          node --check gallery-data.js
+          echo "✓ All JavaScript files valid"
+
+      - name: Check required HTML files
+        run: |
+          echo "Checking HTML files..."
+          for f in index.html gallery.html shop.html item-detail.html contact.html features.html canvas.html pattern.html; do
+            [ -f "$f" ] && echo "✓ $f" || (echo "✗ Missing $f"; exit 1)
+          done
+
+      - name: Check CSS files
+        run: |
+          [ -f "styles.css" ] && echo "✓ styles.css" || (echo "✗ Missing styles.css"; exit 1)

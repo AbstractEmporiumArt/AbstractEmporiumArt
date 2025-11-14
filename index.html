@@ -71,7 +71,7 @@
     </section>
 
     <!-- Community Canvas Section -->
-    <section id="community-canvas" class="community-canvas-section">
+    <section id="community-canvas" class="community-canvas-section" data-section="community">
         <div class="container">
             <h2>Community Canvas 🎨</h2>
             <p class="section-subtitle">A living, ever-evolving artwork created together. Add your contribution once per day!</p>
@@ -81,6 +81,15 @@
             </div>
             
             <div id="contributionMessage" class="contribution-message"></div>
+            
+            <div class="canvas-collaboration">
+                <h4>Share & Collaborate</h4>
+                <button id="voteUpBtn" class="collab-btn">👍 Love It</button>
+                <button id="reactBtn" class="collab-btn">😊 React</button>
+                <button id="tipBtn" class="collab-btn">💰 Tip Creator</button>
+                <button id="shareBtn" class="collab-btn">📤 Share</button>
+                <div id="reactionCounter" class="reaction-counter"></div>
+            </div>
             
             <div class="canvas-tools">
                 <div class="tool-group">
@@ -142,7 +151,8 @@
     </section>
 
     <!-- Pattern Generator Section -->
-    <section id="pattern-generator" class="pattern-generator-section">
+        <!-- Pattern Maker Section -->
+    <section id="pattern-generator" class="pattern-generator-section" data-section="patterns">
         <div class="container">
             <h2>Procedural Pattern Generator 🧶</h2>
             <p class="section-subtitle">Transform abstract art into knitting, crochet, and weaving patterns!</p>

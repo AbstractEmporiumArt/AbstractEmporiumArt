@@ -83,6 +83,10 @@ function initializeGallery() {
             const galleryItem = document.createElement('div');
             galleryItem.className = 'gallery-item';
             galleryItem.dataset.platform = item.platform.toLowerCase().replace(/\s+/g, '');
+            // Add pattern generator attributes
+            galleryItem.setAttribute('data-pattern-artworkid', item.id);
+            galleryItem.setAttribute('data-image-src', item.image);
+            galleryItem.style.cursor = 'pointer';
             
             galleryItem.innerHTML = `
                 <div class="gallery-image-container">
@@ -92,7 +96,10 @@ function initializeGallery() {
                     <h3>${item.title}</h3>
                     <p class="gallery-collection">${item.collection}</p>
                     <span class="gallery-platform">${item.platform}</span>
-                    <a href="${item.link}" target="_blank" class="gallery-link">View on ${item.platform}</a>
+                    <div class="gallery-actions">
+                        <a href="${item.link}" target="_blank" class="gallery-link">View</a>
+                        <span class="pattern-hint" title="Click image to use in Pattern Maker">📋 Pattern</span>
+                    </div>
                 </div>
             `;
             
@@ -286,6 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeGallery();
     setupCommunityCanvasTools();
     setupPatternGeneratorTabs();
+    setupCollaborationFeatures();
     
     // Observe gallery items for animations
     setTimeout(() => {
@@ -297,3 +305,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, 100);
 });
+
+// Setup Canvas Collaboration Features
+function setupCollaborationFeatures() {
+    const voteBtn = document.getElementById('voteUpBtn');
+    const shareBtn = document.getElementById('shareBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    if (voteBtn) {
+        voteBtn.addEventListener('click', () => {
+            const loveCount = document.getElementById('loveCount');
+            let current = parseInt(loveCount.textContent) || 0;
+            loveCount.textContent = current + 1;
+            voteBtn.style.transform = 'scale(1.2)';
+            setTimeout(() => voteBtn.style.transform = 'scale(1)', 200);
+            localStorage.setItem('canvasLoves', current + 1);
+        });
+    }
+    
+    if (shareBtn) {
+        shareBtn.addEventListener('click', () => {
+            const url = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Abstract Emporium - Community Canvas',
+                    text: 'Check out our collaborative artwork!',
+                    url: url
+                });
+            } else {
+                alert('Share URL: ' + url);
+            }
+        });
+    }
+    
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', () => {
+            if (window.communityCanvas) {
+                window.communityCanvas.exportAsImage();
+            } else {
+                alert('Generate the canvas first!');
+            }
+        });
+    }
+    
+    // Load stats from localStorage
+    const savedLoves = localStorage.getItem('canvasLoves');
+    const savedViews = localStorage.getItem('canvasViews');
+    const savedContributions = localStorage.getItem('canvasContributions');
+    
+    if (savedLoves) document.getElementById('loveCount').textContent = savedLoves;
+    if (savedViews) document.getElementById('viewCount').textContent = savedViews;
+    if (savedContributions) document.getElementById('contributionCount').textContent = savedContributions;
+    
+    // Increment view count
+    let views = parseInt(localStorage.getItem('canvasViews')) || 0;
+    localStorage.setItem('canvasViews', views + 1);
+    document.getElementById('viewCount').textContent = views + 1;
+}

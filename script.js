@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     initializeGallery();
+    setupCommunityCanvasTools();
+    setupPatternGeneratorTabs();
     
     // Observe gallery items for animations
     setTimeout(() => {
@@ -181,9 +183,109 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
+/**
+ * Community Canvas Setup
+ */
+function setupCommunityCanvasTools() {
+    // Tool selection
+    const toolBtns = document.querySelectorAll('.tool-btn');
+    const shapeGroup = document.getElementById('shapeGroup');
+    const shapeSelect = document.getElementById('shapeType');
+    const brushColor = document.getElementById('brushColor');
+    const brushSize = document.getElementById('brushSize');
+    const brushSizeLabel = document.getElementById('brushSizeLabel');
+    
+    if (!toolBtns.length) return;
+    
+    // Tool buttons
+    toolBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            toolBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const tool = btn.dataset.tool;
+            const options = {
+                color: brushColor?.value || '#6c5ce7',
+                brushSize: parseInt(brushSize?.value || 15),
+                shapeType: shapeSelect?.value || 'circle'
+            };
+            
+            // Show/hide shape options
+            if (tool === 'shape' && shapeGroup) {
+                shapeGroup.style.display = 'flex';
+            } else if (shapeGroup) {
+                shapeGroup.style.display = 'none';
+            }
+            
+            if (window.communityCanvas) {
+                window.communityCanvas.setTool(tool, options);
+            }
+        });
+    });
+    
+    // Brush size slider
+    if (brushSize) {
+        brushSize.addEventListener('input', (e) => {
+            if (brushSizeLabel) {
+                brushSizeLabel.textContent = e.target.value + 'px';
+            }
+            if (window.communityCanvas) {
+                window.communityCanvas.brushSize = parseInt(e.target.value);
+            }
+        });
+    }
+    
+    // Color picker
+    if (brushColor) {
+        brushColor.addEventListener('change', (e) => {
+            if (window.communityCanvas) {
+                window.communityCanvas.color = e.target.value;
+            }
+        });
+    }
+    
+    // Shape type select
+    if (shapeSelect) {
+        shapeSelect.addEventListener('change', (e) => {
+            if (window.communityCanvas) {
+                window.communityCanvas.shapeType = e.target.value;
+            }
+        });
+    }
+}
+
+/**
+ * Pattern Generator Setup
+ */
+function setupPatternGeneratorTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    if (!tabBtns.length) return;
+    
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabName = btn.dataset.tab;
+            
+            // Remove active from all buttons and contents
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+            
+            // Add active to clicked button and corresponding content
+            btn.classList.add('active');
+            const activeContent = document.getElementById(tabName + 'Tab');
+            if (activeContent) {
+                activeContent.classList.add('active');
+            }
+        });
+    });
+}
+
 // Initialize gallery when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     initializeGallery();
+    setupCommunityCanvasTools();
+    setupPatternGeneratorTabs();
     
     // Observe gallery items for animations
     setTimeout(() => {

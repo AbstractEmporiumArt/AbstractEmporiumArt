@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abstract Emporium Art - Artwork Details">
+    <title>Artwork Details - Abstract Emporium Art</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="banner.jpg" alt="Abstract Emporium Banner" class="banner-img">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img">
+                <span>Abstract Emporium</span>
+            </div>
+            <div class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="canvas.html" class="nav-link">Community Canvas</a></li>
+                <li><a href="pattern.html" class="nav-link">Pattern Maker</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Item Detail Section -->
+    <section class="item-detail-section">
+        <div class="container">
+            <div class="item-breadcrumb">
+                <a href="gallery.html">Gallery</a>
+                <span>/</span>
+                <span id="breadcrumb-title">Loading...</span>
+            </div>
+
+            <div class="item-detail-grid">
+                <!-- Image Column -->
+                <div class="item-image-column">
+                    <div class="item-image-container">
+                        <img id="itemImage" src="" alt="Artwork" class="item-image" data-src="">
+                        <div class="image-controls">
+                            <button class="btn-icon" id="zoomBtn" title="Zoom Image">
+                                <span>🔍</span>
+                            </button>
+                            <button class="btn-icon" id="shareImageBtn" title="Share">
+                                <span>📤</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="thumbnail-preview">
+                        <p class="preview-hint">Loading preview images...</p>
+                        <div id="previewContainer" class="preview-grid">
+                            <!-- Preview images will load here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Column -->
+                <div class="item-info-column">
+                    <div class="item-meta">
+                        <span id="itemPlatform" class="platform-badge">Loading...</span>
+                        <span id="itemCategory" class="category-badge">Loading...</span>
+                    </div>
+
+                    <h1 id="itemTitle">Loading...</h1>
+                    
+                    <p id="itemDescription" class="item-description">
+                        Loading description...
+                    </p>
+
+                    <div class="item-details">
+                        <div class="detail-row">
+                            <label>Collection:</label>
+                            <span id="itemCollection">Loading...</span>
+                        </div>
+                        <div class="detail-row">
+                            <label>Platform:</label>
+                            <span id="itemPlatformDetail">Loading...</span>
+                        </div>
+                        <div class="detail-row">
+                            <label>Category:</label>
+                            <span id="itemCategoryDetail">Loading...</span>
+                        </div>
+                    </div>
+
+                    <div class="item-actions">
+                        <a id="viewOnPlatformBtn" href="#" target="_blank" class="btn btn-primary">
+                            View on ArtPal ↗
+                        </a>
+                        <button id="addToCartBtn" class="btn btn-secondary">
+                            Add to Cart
+                        </button>
+                        <button id="saveForLaterBtn" class="btn btn-outline">
+                            Save for Later ❤
+                        </button>
+                    </div>
+
+                    <div class="item-stats">
+                        <div class="stat">
+                            <span class="stat-icon">❤️</span>
+                            <span class="stat-value" id="likeCount">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">👁️</span>
+                            <span class="stat-value" id="viewCount">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">📤</span>
+                            <span class="stat-value" id="shareCount">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Items Section -->
+            <div class="related-section">
+                <h2>Related Artworks</h2>
+                <div class="related-grid" id="relatedGrid">
+                    <!-- Related items will load here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Zoomed Image -->
+    <div id="imageModal" class="image-modal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="zoomedImage" src="" alt="Zoomed Artwork">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p>&copy; 2025 Abstract Emporium Art. All rights reserved.</p>
+                </div>
+                <div class="footer-section">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/abstractemporium/" target="_blank" class="social-link facebook" title="Facebook">
+                            <span>f</span>
+                        </a>
+                        <a href="https://www.instagram.com/Abstractemporiumart" target="_blank" class="social-link instagram" title="Instagram">
+                            <span>📷</span>
+                        </a>
+                        <a href="https://twitter.com/Abstractempco23" target="_blank" class="social-link twitter" title="X/Twitter">
+                            <span>𝕏</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <span>Abstract Bot 🤖</span>
+            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input 
+                type="text" 
+                id="chatbot-input" 
+                placeholder="Ask me anything..." 
+                onkeypress="handleChatInput(event)"
+            >
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="gallery-data.js"></script>
+    <script src="image-loader.js"></script>
+    <script src="helper-bot.js"></script>
+    <script src="item-detail.js"></script>
+</body>
+</html>

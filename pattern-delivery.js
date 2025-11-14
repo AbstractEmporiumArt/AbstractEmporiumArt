@@ -6,7 +6,7 @@
 
 class PatternDeliverySystem {
     constructor() {
-        this.apiEndpoint = '/api/process-pattern-order'; // Your backend endpoint
+        this.apiEndpoint = 'https://abstract-emporium-art.vercel.app/api/process-pattern-order';
         this.generatedPatterns = null;
         this.currentPatternData = null;
         this.init();

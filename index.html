@@ -27,9 +27,11 @@
                 <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img">
                 <span>Abstract Emporium</span>
             </div>
-            <ul class="nav-menu">
+            <div class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#community-canvas" class="nav-link">Community Canvas</a></li>
+                <li><a href="#pattern-generator" class="nav-link">Pattern Maker</a></li>
                 <li><a href="#stores" class="nav-link">Shop</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -64,6 +66,226 @@
             
             <div class="gallery-grid" id="galleryGrid">
                 <!-- Gallery items will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Canvas Section -->
+    <section id="community-canvas" class="community-canvas-section">
+        <div class="container">
+            <h2>Community Canvas 🎨</h2>
+            <p class="section-subtitle">A living, ever-evolving artwork created together. Add your contribution once per day!</p>
+            
+            <div class="canvas-container">
+                <canvas id="communityCanvas" width="1200" height="600" class="community-canvas"></canvas>
+            </div>
+            
+            <div id="contributionMessage" class="contribution-message"></div>
+            
+            <div class="canvas-tools">
+                <div class="tool-group">
+                    <h4>Choose Your Tool</h4>
+                    <button class="tool-btn active" data-tool="brush">🖌️ Brush</button>
+                    <button class="tool-btn" data-tool="shape">⬤ Shape</button>
+                    <button class="tool-btn" data-tool="glyph">✦ Glyph</button>
+                </div>
+                
+                <div class="tool-group">
+                    <h4>Brush Size</h4>
+                    <input type="range" id="brushSize" min="5" max="50" value="15" class="size-slider">
+                    <span id="brushSizeLabel">15px</span>
+                </div>
+                
+                <div class="tool-group">
+                    <h4>Color</h4>
+                    <input type="color" id="brushColor" value="#6c5ce7" class="color-picker">
+                </div>
+                
+                <div class="tool-group" id="shapeGroup" style="display:none;">
+                    <h4>Shape Type</h4>
+                    <select id="shapeType" class="shape-select">
+                        <option value="circle">Circle</option>
+                        <option value="square">Square</option>
+                        <option value="triangle">Triangle</option>
+                        <option value="star">Star</option>
+                    </select>
+                </div>
+                
+                <div class="tool-group">
+                    <button class="canvas-action-btn" onclick="window.communityCanvas?.exportAsImage()">📥 Export Canvas</button>
+                </div>
+            </div>
+            
+            <div class="canvas-info">
+                <h4>About Community Canvas</h4>
+                <ul>
+                    <li>✦ Every visitor contributes one stroke per day</li>
+                    <li>✦ Scroll to zoom in and discover hidden signatures and micro-artwork</li>
+                    <li>✦ Older contributions gradually fade, creating natural cycles</li>
+                    <li>✦ Your anonymous signature marks your contribution for eternity</li>
+                    <li>✦ A true collective masterpiece, growing with every visitor</li>
+                </ul>
+            </div>
+            
+            <!-- Optional: User Tracking for Future Updates -->
+            <div class="canvas-email-signup" id="canvasEmailSignup">
+                <h4>Get Updates on Future Projects</h4>
+                <p>Be the first to know about exclusive community events, special galleries, and new features!</p>
+                <form class="email-signup-form" id="canvasEmailForm">
+                    <input type="text" id="canvasUserName" placeholder="Your Name (optional)" maxlength="50">
+                    <input type="email" id="canvasUserEmail" placeholder="your@email.com" required>
+                    <button type="submit" class="email-signup-btn">Join Community</button>
+                </form>
+                <p class="email-privacy-note">✓ We'll never share your email. Updates about community features only.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pattern Generator Section -->
+    <section id="pattern-generator" class="pattern-generator-section">
+        <div class="container">
+            <h2>Procedural Pattern Generator 🧶</h2>
+            <p class="section-subtitle">Transform abstract art into knitting, crochet, and weaving patterns!</p>
+            
+            <div class="pattern-generator-content">
+                <div class="pattern-input-area">
+                    <h3>Step 1: Select or Upload Artwork</h3>
+                    
+                    <div class="input-tabs">
+                        <button class="tab-btn active" data-tab="upload">Upload Image</button>
+                        <button class="tab-btn" data-tab="gallery">From Gallery</button>
+                    </div>
+                    
+                    <div id="uploadTab" class="tab-content active">
+                        <div class="upload-area">
+                            <input type="file" id="patternImageInput" accept="image/*" class="file-input">
+                            <label for="patternImageInput" class="upload-label">
+                                <div class="upload-icon">📤</div>
+                                <p>Drag and drop your artwork here or click to browse</p>
+                                <p class="upload-hint">Supports JPG, PNG, GIF, WebP</p>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="galleryTab" class="tab-content">
+                        <p class="tab-hint">Click any artwork from the gallery above to convert it</p>
+                    </div>
+                </div>
+                
+                <div class="pattern-controls">
+                    <h3>Step 2: Configure Pattern</h3>
+                    
+                    <div class="control-group">
+                        <label for="complexitySelect">Pattern Complexity</label>
+                        <select id="complexitySelect" class="complexity-select" onchange="window.patternGenerator?.setComplexity(this.value)">
+                            <option value="minimal">Minimal (Sparse)</option>
+                            <option value="medium" selected>Medium (Balanced)</option>
+                            <option value="dense">Dense (Detailed)</option>
+                            <option value="chaotic">Chaotic (Complex)</option>
+                            <option value="geometric">Geometric (Clean)</option>
+                        </select>
+                        <p class="control-hint">Higher complexity = more detail in the pattern</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="patternResults" class="pattern-results">
+                <div class="pattern-section">
+                    <h3>🧶 Knitting Pattern</h3>
+                    <div id="knittingChart" class="pattern-chart"></div>
+                </div>
+                
+                <div class="pattern-section">
+                    <h3>🧶 Crochet Pattern</h3>
+                    <div id="crochetChart" class="pattern-chart"></div>
+                </div>
+                
+                <div class="pattern-section">
+                    <h3>🪡 Weaving Pattern</h3>
+                    <div id="weavingChart" class="pattern-chart"></div>
+                </div>
+            </div>
+            
+            <!-- Pattern Pricing & Purchase -->
+            <div class="pattern-pricing-section">
+                <h3>💳 Download Your Patterns</h3>
+                <p class="pricing-intro">Get your generated pattern ready to create!</p>
+                
+                <div class="pricing-options">
+                    <div class="pricing-card">
+                        <h4>📥 PNG Download</h4>
+                        <p class="price">Free</p>
+                        <p class="price-desc">Visual reference</p>
+                        <ul class="price-features">
+                            <li>✓ Instant download</li>
+                            <li>✓ Print-ready</li>
+                            <li>✓ High resolution</li>
+                        </ul>
+                        <button class="pricing-btn btn-free" onclick="alert('Generate a pattern first to download!')">Free PNG</button>
+                    </div>
+                    
+                    <div class="pricing-card premium">
+                        <span class="popular-badge">POPULAR</span>
+                        <h4>📄 Professional Bundle</h4>
+                        <p class="price">$3.99</p>
+                        <p class="price-desc">Complete package</p>
+                        <ul class="price-features">
+                            <li>✓ PDF + PNG</li>
+                            <li>✓ Materials guide</li>
+                            <li>✓ Abbreviations</li>
+                            <li>✓ Difficulty rating</li>
+                            <li>✓ Lifetime access</li>
+                        </ul>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+                            <input type="hidden" name="item_name" value="Professional Pattern Bundle">
+                            <input type="hidden" name="amount" value="3.99">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <button type="submit" class="pricing-btn btn-premium">Get Bundle ($3.99)</button>
+                        </form>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h4>🎓 Master Pack</h4>
+                        <p class="price">$9.99</p>
+                        <p class="price-desc">All 3 + tutorials</p>
+                        <ul class="price-features">
+                            <li>✓ Knitting</li>
+                            <li>✓ Crochet</li>
+                            <li>✓ Weaving</li>
+                            <li>✓ Video tutorials</li>
+                            <li>✓ Expert tips</li>
+                        </ul>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+                            <input type="hidden" name="item_name" value="Master Pattern Pack">
+                            <input type="hidden" name="amount" value="9.99">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <button type="submit" class="pricing-btn btn-master">Get Master Pack ($9.99)</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Email Capture for Special Deals -->
+            <div class="pattern-email-signup" id="patternEmailSignup">
+                <h3>✨ Exclusive Member Benefits</h3>
+                <p>Join our community for special pattern deals and announcements</p>
+                <div class="signup-benefits">
+                    <span>🎁 10% off first purchase</span>
+                    <span>📧 Weekly new patterns</span>
+                    <span>💝 Exclusive discounts</span>
+                    <span>👥 Community events</span>
+                </div>
+                
+                <form class="email-signup-form pattern-form" id="patternEmailForm">
+                    <input type="text" id="patternUserName" placeholder="Your Name (optional)" maxlength="50">
+                    <input type="email" id="patternUserEmail" placeholder="your@email.com" required>
+                    <button type="submit" class="email-signup-btn">Get 10% Off + Updates</button>
+                </form>
+                <p class="email-privacy-note">✓ We respect your privacy. Unsubscribe anytime.</p>
             </div>
         </div>
     </section>
@@ -148,11 +370,40 @@
                     <h3>Contact Information</h3>
                     <div class="info-item">
                         <span class="info-label">Email:</span>
-                        <a href="mailto:abstractemporiumarrt@outlook.com" class="info-value">abstractemporiumarrt@outlook.com</a>
+                        <a href="mailto:abstractemporiumart@outlook.com" class="info-value">abstractemporiumart@outlook.com</a>
                     </div>
                     <div class="info-item">
                         <span class="info-label">Response Time:</span>
                         <span class="info-value">24-48 hours</span>
+                    </div>
+                    
+                    <!-- Support Creator Section -->
+                    <div class="info-item support-section">
+                        <span class="info-label">💝 Support This Project:</span>
+                        <p class="support-description">Love what we're creating? Your tips help us build more amazing features!</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="paypal-form">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+                            <input type="hidden" name="item_name" value="Support Abstract Emporium Art">
+                            <input type="hidden" name="no_note" value="1">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="lc" value="US">
+                            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHosted">
+                            <button type="submit" class="paypal-tip-btn">☕ Buy Me a Coffee ($5)</button>
+                        </form>
+                        <div class="tip-options">
+                            <p class="tip-label">Or tip any amount:</p>
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                <input type="hidden" name="cmd" value="_xclick">
+                                <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+                                <input type="hidden" name="item_name" value="Support Abstract Emporium Art">
+                                <input type="hidden" name="no_note" value="1">
+                                <input type="hidden" name="currency_code" value="USD">
+                                <input type="hidden" name="lc" value="US">
+                                <input type="number" name="amount" placeholder="$" min="1" max="999" step="0.01" required>
+                                <button type="submit" class="paypal-custom-btn">Send Tip</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -211,6 +462,9 @@
 
     <script src="gallery-data.js"></script>
     <script src="helper-bot.js"></script>
+    <script src="community-canvas.js"></script>
+    <script src="pattern-generator.js"></script>
+    <script src="user-tracker.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

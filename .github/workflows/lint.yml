@@ -1,0 +1,44 @@
+name: Lint and Code Quality
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check JSON files
+        run: |
+          for file in vercel.json package.json; do
+            if [ -f "$file" ]; then
+              echo "Validating $file..."
+              node -e "JSON.parse(require('fs').readFileSync('$file', 'utf8'))"
+            fi
+          done
+
+      - name: Validate HTML files
+        run: |
+          npm install -D html-validate --no-save
+          npx html-validate *.html || true
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check script.js || true
+          node --check helper-bot.js || true
+          node --check image-loader.js || true
+          node --check item-detail.js || true

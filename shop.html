@@ -219,11 +219,12 @@
 
         // Enhance shop page with links to individual items
         document.addEventListener('DOMContentLoaded', () => {
-            // Add direct links to featured items from ArtPal
+            // Add direct links to featured items from both platforms
             const storeCards = document.querySelectorAll('.store-card');
             storeCards.forEach(card => {
-                if (card.href.includes('artpal.com')) {
-                    // Create quick links section
+                const href = card.href || '';
+                if (href.includes('artpal.com')) {
+                    // ArtPal quick links
                     const quickLinks = document.createElement('div');
                     quickLinks.className = 'store-quick-links';
                     quickLinks.innerHTML = `
@@ -233,6 +234,20 @@
                             <a href="item-detail.html?id=10" target="_blank">Dreamz</a>
                             <a href="item-detail.html?id=13" target="_blank">Radiant Fusion</a>
                             <a href="item-detail.html?id=14" target="_blank">Pure Imagination</a>
+                        </div>
+                    `;
+                    card.appendChild(quickLinks);
+                } else if (href.includes('fineartamerica.com')) {
+                    // Fine Art America quick links
+                    const quickLinks = document.createElement('div');
+                    quickLinks.className = 'store-quick-links';
+                    quickLinks.innerHTML = `
+                        <p class="quick-links-title">Featured Items:</p>
+                        <div class="quick-links">
+                            <a href="item-detail.html?id=39" target="_blank">Serenity</a>
+                            <a href="item-detail.html?id=40" target="_blank">Magical Mountains</a>
+                            <a href="item-detail.html?id=41" target="_blank">Radiant Spectrum</a>
+                            <a href="item-detail.html?id=42" target="_blank">Cosmic Collection</a>
                         </div>
                     `;
                     card.appendChild(quickLinks);

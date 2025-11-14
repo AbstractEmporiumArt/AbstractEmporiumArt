@@ -377,7 +377,261 @@ const galleryData = [
         collection: "Melodic Expressions",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/harmony-of-music-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/melodic-expressions-lissa-beaulieu-1692195071.jpg",
-        category: "Music"
+        image: null,
+        category: "Music",
+        description: "Part of Melodic Expressions Series"
+    },
+    // Fine Art America - Featured Individual Items
+    {
+        id: 39,
+        title: "Serenity",
+        collection: "Featured",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/featured/serenity-lissa-beaulieu.html",
+        image: null,
+        category: "Serenity",
+        description: "A serene abstract composition"
+    },
+    {
+        id: 40,
+        title: "Magical Mountains",
+        collection: "Featured",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/featured/magical-mountains-lissa-beaulieu.html",
+        image: null,
+        category: "Landscape",
+        description: "Mountain-inspired abstract artwork"
+    },
+    {
+        id: 41,
+        title: "Radiant Spectrum",
+        collection: "Featured",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/featured/radiant-spectrum-lissa-beaulieu.html",
+        image: null,
+        category: "Abstract",
+        description: "A spectrum of radiant colors and forms"
+    },
+    // Fine Art America - Abstract Warrior Cosmic Collection (1-14)
+    {
+        id: 42,
+        title: "Abstract Warrior Cosmic #1",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 43,
+        title: "Abstract Warrior Cosmic #2",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 44,
+        title: "Abstract Warrior Cosmic #3",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 45,
+        title: "Abstract Warrior Cosmic #4",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 46,
+        title: "Abstract Warrior Cosmic #5",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 47,
+        title: "Abstract Warrior Cosmic #6",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 48,
+        title: "Abstract Warrior Cosmic #7",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 49,
+        title: "Abstract Warrior Cosmic #8",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 50,
+        title: "Abstract Warrior Cosmic #9",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 51,
+        title: "Abstract Warrior Cosmic #10",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 52,
+        title: "Abstract Warrior Cosmic #11",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 53,
+        title: "Abstract Warrior Cosmic #12",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 54,
+        title: "Abstract Warrior Cosmic #13",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    {
+        id: 55,
+        title: "Abstract Warrior Cosmic #14",
+        collection: "Abstract Warrior Cosmic Collection",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
+        image: null,
+        category: "Cosmic",
+        description: "Part of Abstract Warrior Cosmic Collection (1-14)"
+    },
+    // Fine Art America - Melodic Expressions Series (1-8)
+    {
+        id: 56,
+        title: "Melodic Expressions #1",
+        collection: "Melodic Expressions Series",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1136162",
+        image: null,
+        category: "Music",
+        description: "Part of Melodic Expressions Series (1-8)"
+    },
+    {
+        id: 57,
+        title: "Melodic Expressions #2",
+        collection: "Melodic Expressions Series",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1136162",
+        image: null,
+        category: "Music",
+        description: "Part of Melodic Expressions Series (1-8)"
+    },
+    {
+        id: 58,
+        title: "Melodic Expressions #3",
+        collection: "Melodic Expressions Series",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1136162",
+        image: null,
+        category: "Music",
+        description: "Part of Melodic Expressions Series (1-8)"
+    },
+    {
+        id: 59,
+        title: "Melodic Expressions #4",
+        collection: "Melodic Expressions Series",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1136162",
+        image: null,
+        category: "Music",
+        description: "Part of Melodic Expressions Series (1-8)"
+    },
+    {
+        id: 60,
+        title: "Melodic Expressions #5",
+        collection: "Melodic Expressions Series",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1136162",
+        image: null,
+        category: "Music",
+        description: "Part of Melodic Expressions Series (1-8)"
+    },
+    {
+        id: 61,
+        title: "Melodic Expressions #6",
+        collection: "Melodic Expressions Series",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1136162",
+        image: null,
+        category: "Music",
+        description: "Part of Melodic Expressions Series (1-8)"
+    },
+    {
+        id: 62,
+        title: "Melodic Expressions #7",
+        collection: "Melodic Expressions Series",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1136162",
+        image: null,
+        category: "Music",
+        description: "Part of Melodic Expressions Series (1-8)"
+    },
+    {
+        id: 63,
+        title: "Melodic Expressions #8",
+        collection: "Melodic Expressions Series",
+        platform: "Fine Art America",
+        link: "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1136162",
+        image: null,
+        category: "Music",
+        description: "Part of Melodic Expressions Series (1-8)"
     }
 ];

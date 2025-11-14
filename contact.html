@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact - Abstract Emporium Art - Get in touch with us">
+    <title>Contact - Abstract Emporium Art</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="banner.jpg" alt="Abstract Emporium Banner" class="banner-img">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img">
+                <span>Abstract Emporium</span>
+            </div>
+            <div class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="canvas.html" class="nav-link">Community Canvas</a></li>
+                <li><a href="pattern.html" class="nav-link">Pattern Maker</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p class="section-subtitle">Have questions? We'd love to hear from you!</p>
+            
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">Your Name</label>
+                        <input type="text" id="contactName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Your Email</label>
+                        <input type="email" id="contactEmail" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject</label>
+                        <select id="contactSubject" required>
+                            <option value="">Select a subject...</option>
+                            <option value="artwork">Question about Artwork</option>
+                            <option value="patterns">Pattern Generator Help</option>
+                            <option value="canvas">Community Canvas Support</option>
+                            <option value="collaboration">Collaboration Proposal</option>
+                            <option value="feedback">Feedback & Suggestions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Your Message</label>
+                        <textarea id="contactMessage" placeholder="Tell us what's on your mind..." rows="7" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="info-item">
+                        <span class="info-label">📧 Email:</span>
+                        <a href="mailto:abstractemporiumart@outlook.com" class="info-value">abstractemporiumart@outlook.com</a>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-label">⏱️ Response Time:</span>
+                        <span class="info-value">24-48 hours</span>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-label">🌐 Follow Us:</span>
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/abstractemporium/" target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/Abstractemporiumart" target="_blank">Instagram</a>
+                            <a href="https://twitter.com/Abstractempco23" target="_blank">Twitter</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item support-section">
+                        <span class="info-label">💝 Support This Project:</span>
+                        <p class="support-description">Love what we're creating? Your tips help us build more amazing features!</p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="paypal-form">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+                            <input type="hidden" name="item_name" value="Support Abstract Emporium Art">
+                            <input type="hidden" name="no_note" value="1">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="lc" value="US">
+                            <button type="submit" class="paypal-tip-btn">☕ Buy Me a Coffee ($5)</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How often can I contribute to the Community Canvas?</h4>
+                    <p>You can add one contribution per day. This ensures everyone gets a chance to participate in our collaborative masterpiece!</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I download my generated patterns for free?</h4>
+                    <p>Yes! PNG downloads are free. For PDF bundles with materials guides and expert tips, we offer affordable paid tiers.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Where can I buy your artwork?</h4>
+                    <p>You can find our art on ArtPal (digital), Fine Art America (prints), and The HUG (NFTs). Visit our Shop page for direct links.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I collaborate with Abstract Emporium?</h4>
+                    <p>We love collaborations! Reach out to us via email or contact form to discuss partnership opportunities.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How do you use my email if I sign up?</h4>
+                    <p>We only use your email for updates about our features, new artworks, and special offers. We never share your data.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is the Pattern Generator mobile-friendly?</h4>
+                    <p>Yes! All our tools are optimized for desktop and mobile. Upload or select artwork on any device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p>&copy; 2025 Abstract Emporium Art. All rights reserved.</p>
+                </div>
+                <div class="footer-section">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/abstractemporium/" target="_blank" class="social-link facebook" title="Facebook">
+                            <span>f</span>
+                        </a>
+                        <a href="https://www.instagram.com/Abstractemporiumart" target="_blank" class="social-link instagram" title="Instagram">
+                            <span>📷</span>
+                        </a>
+                        <a href="https://twitter.com/Abstractempco23" target="_blank" class="social-link twitter" title="X/Twitter">
+                            <span>𝕏</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <span>Abstract Bot 🤖</span>
+            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input 
+                type="text" 
+                id="chatbot-input" 
+                placeholder="Ask me anything..." 
+                onkeypress="handleChatInput(event)"
+            >
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="helper-bot.js"></script>
+    <script>
+        // Contact form handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('contactName').value,
+                email: document.getElementById('contactEmail').value,
+                subject: document.getElementById('contactSubject').value,
+                message: document.getElementById('contactMessage').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Store in localStorage for now
+            let messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+            messages.push(formData);
+            localStorage.setItem('contactMessages', JSON.stringify(messages));
+            
+            alert('Thank you for your message! We\'ll respond within 24-48 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

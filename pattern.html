@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pattern Maker - Abstract Emporium Art - Transform abstract art into knitting, crochet, and weaving patterns">
+    <title>Pattern Maker - Abstract Emporium Art</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="banner.jpg" alt="Abstract Emporium Banner" class="banner-img">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img">
+                <span>Abstract Emporium</span>
+            </div>
+            <div class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="canvas.html" class="nav-link">Community Canvas</a></li>
+                <li><a href="pattern.html" class="nav-link active">Pattern Maker</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pattern Generator Section -->
+    <section class="pattern-generator-section" data-section="patterns">
+        <div class="container">
+            <h1>Procedural Pattern Generator 🧶</h1>
+            <p class="section-subtitle">Transform abstract art into knitting, crochet, and weaving patterns!</p>
+            
+            <div class="pattern-generator-content">
+                <div class="pattern-input-area">
+                    <h3>Step 1: Select or Upload Artwork</h3>
+                    
+                    <div class="input-tabs">
+                        <button class="tab-btn active" data-tab="upload">Upload Image</button>
+                        <button class="tab-btn" data-tab="gallery">From Gallery</button>
+                    </div>
+                    
+                    <div id="uploadTab" class="tab-content active">
+                        <div class="upload-area">
+                            <input type="file" id="patternImageInput" accept="image/*" class="file-input">
+                            <label for="patternImageInput" class="upload-label">
+                                <div class="upload-icon">📤</div>
+                                <p>Drag and drop your artwork here or click to browse</p>
+                                <p class="upload-hint">Supports JPG, PNG, GIF, WebP</p>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="galleryTab" class="tab-content">
+                        <p class="tab-hint">Visit the Gallery page and click any artwork to convert it to patterns!</p>
+                        <a href="gallery.html" class="cta-button inline">Go to Gallery</a>
+                    </div>
+                </div>
+                
+                <div class="pattern-controls">
+                    <h3>Step 2: Configure Pattern</h3>
+                    
+                    <div class="control-group">
+                        <label for="complexitySelect">Pattern Complexity</label>
+                        <select id="complexitySelect" class="complexity-select" onchange="window.patternGenerator?.setComplexity(this.value)">
+                            <option value="minimal">Minimal (Sparse)</option>
+                            <option value="medium" selected>Medium (Balanced)</option>
+                            <option value="dense">Dense (Detailed)</option>
+                            <option value="chaotic">Chaotic (Complex)</option>
+                            <option value="geometric">Geometric (Clean)</option>
+                        </select>
+                        <p class="control-hint">Higher complexity = more detail in the pattern</p>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="craftTypeSelect">Craft Type</label>
+                        <select id="craftTypeSelect" class="craft-select">
+                            <option value="knitting">🧶 Knitting</option>
+                            <option value="crochet">🪝 Crochet</option>
+                            <option value="weaving">🪡 Weaving</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>AI Suggestions</label>
+                        <button class="ai-suggest-btn" id="aiSuggestBtn">🤖 Get Recommendations</button>
+                        <div id="aiSuggestions" class="ai-suggestions"></div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Export Format</label>
+                        <div class="export-buttons">
+                            <button class="export-btn" data-format="PNG">📥 PNG</button>
+                            <button class="export-btn" data-format="SVG">📥 SVG</button>
+                            <button class="export-btn" data-format="CSV">📥 CSV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="patternResults" class="pattern-results">
+                <div class="pattern-section">
+                    <h3>🧶 Knitting Pattern</h3>
+                    <div id="knittingChart" class="pattern-chart"></div>
+                </div>
+                
+                <div class="pattern-section">
+                    <h3>🧶 Crochet Pattern</h3>
+                    <div id="crochetChart" class="pattern-chart"></div>
+                </div>
+                
+                <div class="pattern-section">
+                    <h3>🪡 Weaving Pattern</h3>
+                    <div id="weavingChart" class="pattern-chart"></div>
+                </div>
+            </div>
+            
+            <!-- Pattern Pricing & Purchase -->
+            <div class="pattern-pricing-section">
+                <h3>💳 Download Your Patterns</h3>
+                <p class="pricing-intro">Get your generated pattern ready to create!</p>
+                
+                <div class="pricing-options">
+                    <div class="pricing-card">
+                        <h4>📥 PNG Download</h4>
+                        <p class="price">Free</p>
+                        <p class="price-desc">Visual reference</p>
+                        <ul class="price-features">
+                            <li>✓ Instant download</li>
+                            <li>✓ Print-ready</li>
+                            <li>✓ High resolution</li>
+                        </ul>
+                        <button class="pricing-btn btn-free" onclick="alert('Generate a pattern first to download!')">Free PNG</button>
+                    </div>
+                    
+                    <div class="pricing-card premium">
+                        <span class="popular-badge">POPULAR</span>
+                        <h4>📄 Professional Bundle</h4>
+                        <p class="price">$3.99</p>
+                        <p class="price-desc">Complete package</p>
+                        <ul class="price-features">
+                            <li>✓ PDF + PNG</li>
+                            <li>✓ Materials guide</li>
+                            <li>✓ Abbreviations</li>
+                            <li>✓ Difficulty rating</li>
+                            <li>✓ Lifetime access</li>
+                        </ul>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+                            <input type="hidden" name="item_name" value="Professional Pattern Bundle">
+                            <input type="hidden" name="amount" value="3.99">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <button type="submit" class="pricing-btn btn-premium">Get Bundle ($3.99)</button>
+                        </form>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h4>🎓 Master Pack</h4>
+                        <p class="price">$9.99</p>
+                        <p class="price-desc">All 3 + tutorials</p>
+                        <ul class="price-features">
+                            <li>✓ Knitting</li>
+                            <li>✓ Crochet</li>
+                            <li>✓ Weaving</li>
+                            <li>✓ Video tutorials</li>
+                            <li>✓ Expert tips</li>
+                        </ul>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+                            <input type="hidden" name="item_name" value="Master Pattern Pack">
+                            <input type="hidden" name="amount" value="9.99">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <button type="submit" class="pricing-btn btn-master">Get Master Pack ($9.99)</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Email Signup -->
+            <div class="pattern-email-signup" id="patternEmailSignup">
+                <h3>✨ Exclusive Member Benefits</h3>
+                <p>Join our community for special pattern deals and announcements</p>
+                <div class="signup-benefits">
+                    <span>🎁 10% off first purchase</span>
+                    <span>📧 Weekly new patterns</span>
+                    <span>💝 Exclusive discounts</span>
+                    <span>👥 Community events</span>
+                </div>
+                
+                <form class="email-signup-form pattern-form" id="patternEmailForm">
+                    <input type="text" id="patternUserName" placeholder="Your Name (optional)" maxlength="50">
+                    <input type="email" id="patternUserEmail" placeholder="your@email.com" required>
+                    <button type="submit" class="email-signup-btn">Get 10% Off + Updates</button>
+                </form>
+                <p class="email-privacy-note">✓ We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p>&copy; 2025 Abstract Emporium Art. All rights reserved.</p>
+                </div>
+                <div class="footer-section">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/abstractemporium/" target="_blank" class="social-link facebook" title="Facebook">
+                            <span>f</span>
+                        </a>
+                        <a href="https://www.instagram.com/Abstractemporiumart" target="_blank" class="social-link instagram" title="Instagram">
+                            <span>📷</span>
+                        </a>
+                        <a href="https://twitter.com/Abstractempco23" target="_blank" class="social-link twitter" title="X/Twitter">
+                            <span>𝕏</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <span>Abstract Bot 🤖</span>
+            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input 
+                type="text" 
+                id="chatbot-input" 
+                placeholder="Ask me anything..." 
+                onkeypress="handleChatInput(event)"
+            >
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="helper-bot.js"></script>
+    <script src="gallery-data.js"></script>
+    <script src="pattern-generator.js"></script>
+    <script src="pattern-generator-enhanced.js"></script>
+    <script src="pattern-delivery.js"></script>
+    <script src="user-tracker.js"></script>
+    <script src="enhanced-features-init.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -50,90 +50,12 @@ class SalesAnnouncementSystem {
   }
 
   /**
-   * Get default sales data (update these manually or via admin panel)
+   * Get default sales data (returns empty - only shows manually added sales)
    */
   getDefaultSales() {
-    const now = new Date();
-    const sales = [];
-
-    // Check for seasonal sales
-    const month = now.getMonth();
-    
-    // Black Friday / Cyber Monday (November)
-    if (month === 10) {
-      sales.push({
-        platform: 'fineartamerica',
-        title: 'Black Friday Sale - Up to 30% Off',
-        description: 'Save big on all prints and merchandise!',
-        discount: '30%',
-        startDate: new Date(now.getFullYear(), 10, 24).toISOString(),
-        endDate: new Date(now.getFullYear(), 10, 30).toISOString(),
-        priority: 1
-      });
-    }
-
-    // Holiday Sales (December)
-    if (month === 11) {
-      sales.push({
-        platform: 'artpal',
-        title: 'Holiday Sale - 20% Off All Artwork',
-        description: 'Perfect gifts for art lovers!',
-        discount: '20%',
-        startDate: new Date(now.getFullYear(), 11, 1).toISOString(),
-        endDate: new Date(now.getFullYear(), 11, 25).toISOString(),
-        priority: 1
-      });
-
-      sales.push({
-        platform: 'fineartamerica',
-        title: 'Free Shipping on Orders $50+',
-        description: 'Holiday special - limited time!',
-        discount: 'Free Shipping',
-        startDate: new Date(now.getFullYear(), 11, 1).toISOString(),
-        endDate: new Date(now.getFullYear(), 11, 31).toISOString(),
-        priority: 2
-      });
-    }
-
-    // New Year (January)
-    if (month === 0) {
-      sales.push({
-        platform: 'thehug',
-        title: 'New Year NFT Sale',
-        description: 'Start your collection with 15% off!',
-        discount: '15%',
-        startDate: new Date(now.getFullYear(), 0, 1).toISOString(),
-        endDate: new Date(now.getFullYear(), 0, 15).toISOString(),
-        priority: 1
-      });
-    }
-
-    // Valentine's Day (February)
-    if (month === 1) {
-      sales.push({
-        platform: 'fineartamerica',
-        title: "Valentine's Day Special",
-        description: 'Gift art to your loved ones - 25% off',
-        discount: '25%',
-        startDate: new Date(now.getFullYear(), 1, 10).toISOString(),
-        endDate: new Date(now.getFullYear(), 1, 14).toISOString(),
-        priority: 1
-      });
-    }
-
-    // Always-on promotions
-    sales.push({
-      platform: 'artpal',
-      title: 'New Customer Discount',
-      description: 'First-time buyers get 10% off',
-      discount: '10%',
-      code: 'WELCOME10',
-      startDate: now.toISOString(),
-      endDate: new Date(now.getFullYear() + 1, 11, 31).toISOString(),
-      priority: 3
-    });
-
-    return sales;
+    // Return empty array - only real sales added via admin panel will display
+    // This ensures only actual live deals from ArtPal, Fine Art America, and The HUG are shown
+    return [];
   }
 
   /**

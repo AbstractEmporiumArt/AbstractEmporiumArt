@@ -73,8 +73,10 @@ class UserTracker {
             // Log for backend integration
             console.log('Canvas signup:', subscriber);
             
-            // Send to backend if needed (uncomment when ready)
-            // this.sendToBackend('/api/subscribe', subscriber);
+            // ========================================
+            // SEND TO FORMSPREE FOR REAL EMAIL
+            // ========================================
+            this.sendToFormspree(subscriber, 'Community Canvas');
         } else {
             this.showMessage(
                 '✓ You\'re already subscribed! Check your email for exclusive deals.',
@@ -126,8 +128,10 @@ class UserTracker {
             // Log for backend integration
             console.log('Pattern signup:', subscriber);
             
-            // Send to backend if needed (uncomment when ready)
-            // this.sendToBackend('/api/subscribe', subscriber);
+            // ========================================
+            // SEND TO FORMSPREE FOR REAL EMAIL
+            // ========================================
+            this.sendToFormspree(subscriber, 'Pattern Generator');
         } else {
             this.showMessage(
                 '✓ You\'re already subscribed! Your 10% discount code is in your email.',
@@ -219,6 +223,39 @@ class UserTracker {
         return `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
     
+    // ==========================================
+    // REAL EMAIL DELIVERY VIA FORMSPREE
+    // ==========================================
+    // Connected to abstractemporiumart@outlook.com
+    sendToFormspree(subscriber, source) {
+        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mvgelyje';
+        
+        fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                email: subscriber.email,
+                name: subscriber.name,
+                source: source,
+                signup_date: subscriber.signupDate,
+                _subject: `🎨 New Subscriber from ${source} - Abstract Emporium!`
+            })
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('📧 Subscriber notification sent to Formspree!');
+            } else {
+                console.log('📧 Formspree pending setup - subscriber stored locally');
+            }
+        })
+        .catch(error => {
+            console.log('📧 Subscriber stored locally (Formspree not configured)');
+        });
+    }
+
     saveData() {
         try {
             localStorage.setItem('subscribers_data', JSON.stringify(this.subscribers));

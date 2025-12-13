@@ -198,22 +198,55 @@
 
     <script src="sales-announcements.js"></script>
     <script src="helper-bot.js"></script>
+    <script src="sales-agent.js"></script>
     <script>
-        // Contact form handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Contact form handler with REAL email delivery
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
+            
             const formData = {
                 name: document.getElementById('contactName').value,
                 email: document.getElementById('contactEmail').value,
                 subject: document.getElementById('contactSubject').value,
                 message: document.getElementById('contactMessage').value,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                page: window.location.href
             };
             
-            // Store in localStorage for now
+            // Store locally as backup
             let messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
             messages.push(formData);
             localStorage.setItem('contactMessages', JSON.stringify(messages));
+            
+            // ========================================
+            // REAL EMAIL DELIVERY VIA FORMSPREE
+            // ========================================
+            // Connected to abstractemporiumart@outlook.com
+            const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mvgelyje';
+            
+            try {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: formData.name,
+                        email: formData.email,
+                        subject: formData.subject,
+                        message: formData.message,
+                        _subject: `🎨 Abstract Emporium Contact: ${formData.subject}`,
+                        _replyto: formData.email
+                    })
+                });
+                
+                if (response.ok) {
+                    console.log('✅ Message sent to abstractemporiumart@outlook.com!');
+                }
+            } catch (error) {
+                console.log('📧 Formspree not configured yet - message stored locally');
+            }
             
             alert('Thank you for your message! We\'ll respond within 24-48 hours.');
             this.reset();

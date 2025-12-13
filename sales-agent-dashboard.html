@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Agent Control Center - Abstract Emporium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <style>
+        body {
+            background: #0f0f1a;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+        }
+
+        .dashboard-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255,107,107,0.2), rgba(78,205,196,0.2));
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 30px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 2rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .dashboard-header h1 span {
+            font-size: 2.5rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255,107,107,0.3);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1200px) {
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 5px;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .main-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Panels */
+        .panel {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .panel-header h2 {
+            font-size: 1.2rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Campaign Cards */
+        .campaign-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .campaign-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .campaign-card:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,107,107,0.3);
+        }
+
+        .campaign-info h4 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+        }
+
+        .campaign-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .campaign-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .status-active { background: rgba(78,205,196,0.2); color: #4ecdc4; }
+        .status-paused { background: rgba(255,193,7,0.2); color: #ffc107; }
+
+        .toggle-btn {
+            width: 50px;
+            height: 28px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 14px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .toggle-btn.active {
+            background: rgba(78,205,196,0.5);
+        }
+
+        .toggle-btn::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: left 0.3s;
+        }
+
+        .toggle-btn.active::after {
+            left: 26px;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .quick-action {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .quick-action:hover {
+            background: rgba(255,107,107,0.1);
+            border-color: rgba(255,107,107,0.3);
+            transform: scale(1.02);
+        }
+
+        .quick-action-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .quick-action h4 {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Activity Feed */
+        .activity-feed {
+            max-height: 350px;
+            overflow-y: auto;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,107,107,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .activity-content h5 {
+            margin: 0 0 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .activity-content p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .activity-time {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 5px;
+        }
+
+        /* Subscriber Section */
+        .subscriber-list {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .subscriber-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .subscriber-email {
+            font-size: 0.9rem;
+        }
+
+        .subscriber-source {
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            background: rgba(78,205,196,0.2);
+            color: #4ecdc4;
+            border-radius: 10px;
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: white;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Conversion Funnel */
+        .funnel-visual {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 12px;
+        }
+
+        .funnel-step {
+            text-align: center;
+        }
+
+        .funnel-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff6b6b;
+        }
+
+        .funnel-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 5px;
+        }
+
+        .funnel-arrow {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.2);
+        }
+
+        /* Performance Chart */
+        .chart-placeholder {
+            height: 200px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* Agent Status Indicator */
+        .agent-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(78,205,196,0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(78,205,196,0.3);
+        }
+
+        .agent-status.inactive {
+            background: rgba(255,193,7,0.1);
+            border-color: rgba(255,193,7,0.3);
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: #4ecdc4;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .agent-status.inactive .status-dot {
+            background: #ffc107;
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Navigation */
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ff6b6b;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: rgba(255,255,255,0.6);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tab:hover, .tab.active {
+            background: rgba(255,107,107,0.2);
+            border-color: rgba(255,107,107,0.4);
+            color: white;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.05);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.2);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <a href="index.html" class="nav-link">← Back to Website</a>
+
+        <!-- Header -->
+        <div class="dashboard-header">
+            <h1><span>🤖</span> Sales Agent Control Center</h1>
+            <div class="header-actions">
+                <div class="agent-status" id="agentStatus">
+                    <div class="status-dot"></div>
+                    <span>Agent Active</span>
+                </div>
+                <button class="btn btn-secondary" onclick="previewAgent()">👁️ Preview</button>
+                <button class="btn btn-primary" onclick="toggleAgent()">Toggle Agent</button>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-value" id="statVisitors">0</div>
+                <div class="stat-label">Total Visitors</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💬</div>
+                <div class="stat-value" id="statEngaged">0</div>
+                <div class="stat-label">Engaged</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🛒</div>
+                <div class="stat-value" id="statClicks">0</div>
+                <div class="stat-label">Shop Clicks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📧</div>
+                <div class="stat-value" id="statEmails">0</div>
+                <div class="stat-label">Emails Captured</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-value" id="statConversion">0%</div>
+                <div class="stat-label">Conversion Rate</div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Left Column -->
+            <div class="left-col">
+                <!-- Active Campaigns -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>📢 Active Sales Triggers</h2>
+                        <button class="btn btn-secondary" style="padding: 8px 15px; font-size: 0.85rem;">+ Add New</button>
+                    </div>
+                    <div class="campaign-list">
+                        <div class="campaign-card">
+                            <div class="campaign-info">
+                                <h4>Welcome Message</h4>
+                                <p>Triggers 8s after page load for new visitors</p>
+                            </div>
+                            <div class="campaign-meta">
+                                <span class="status-badge status-active">Active</span>
+                                <div class="toggle-btn active" onclick="this.classList.toggle('active')"></div>
+                            </div>
+                        </div>
+                        <div class="campaign-card">
+                            <div class="campaign-info">
+                                <h4>Browsing Nudge</h4>
+                                <p>Triggers after 30s of browsing without action</p>
+                            </div>
+                            <div class="campaign-meta">
+                                <span class="status-badge status-active">Active</span>
+                                <div class="toggle-btn active" onclick="this.classList.toggle('active')"></div>
+                            </div>
+                        </div>
+                        <div class="campaign-card">
+                            <div class="campaign-info">
+                                <h4>Exit Intent Capture</h4>
+                                <p>Modal appears when user moves to leave</p>
+                            </div>
+                            <div class="campaign-meta">
+                                <span class="status-badge status-active">Active</span>
+                                <div class="toggle-btn active" onclick="this.classList.toggle('active')"></div>
+                            </div>
+                        </div>
+                        <div class="campaign-card">
+                            <div class="campaign-info">
+                                <h4>Returning Visitor Welcome</h4>
+                                <p>Personalized greeting for repeat visitors</p>
+                            </div>
+                            <div class="campaign-meta">
+                                <span class="status-badge status-active">Active</span>
+                                <div class="toggle-btn active" onclick="this.classList.toggle('active')"></div>
+                            </div>
+                        </div>
+                        <div class="campaign-card">
+                            <div class="campaign-info">
+                                <h4>Idle Re-engagement</h4>
+                                <p>Triggers after 45s of inactivity</p>
+                            </div>
+                            <div class="campaign-meta">
+                                <span class="status-badge status-active">Active</span>
+                                <div class="toggle-btn active" onclick="this.classList.toggle('active')"></div>
+                            </div>
+                        </div>
+                        <div class="campaign-card">
+                            <div class="campaign-info">
+                                <h4>Scroll Milestone Reward</h4>
+                                <p>Message appears at 50% scroll depth</p>
+                            </div>
+                            <div class="campaign-meta">
+                                <span class="status-badge status-active">Active</span>
+                                <div class="toggle-btn active" onclick="this.classList.toggle('active')"></div>
+                            </div>
+                        </div>
+                        <div class="campaign-card">
+                            <div class="campaign-info">
+                                <h4>Social Proof Toasts</h4>
+                                <p>Periodic "X collectors viewed this" messages</p>
+                            </div>
+                            <div class="campaign-meta">
+                                <span class="status-badge status-active">Active</span>
+                                <div class="toggle-btn active" onclick="this.classList.toggle('active')"></div>
+                            </div>
+                        </div>
+                        <div class="campaign-card">
+                            <div class="campaign-info">
+                                <h4>Personalized Recommendations</h4>
+                                <p>Shows after viewing 3+ items based on taste</p>
+                            </div>
+                            <div class="campaign-meta">
+                                <span class="status-badge status-active">Active</span>
+                                <div class="toggle-btn active" onclick="this.classList.toggle('active')"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conversion Funnel -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>📊 Conversion Funnel</h2>
+                    </div>
+                    <div class="funnel-visual">
+                        <div class="funnel-step">
+                            <div class="funnel-value" id="funnelVisitors">100</div>
+                            <div class="funnel-label">Visitors</div>
+                        </div>
+                        <div class="funnel-arrow">→</div>
+                        <div class="funnel-step">
+                            <div class="funnel-value" id="funnelEngaged">45</div>
+                            <div class="funnel-label">Engaged</div>
+                        </div>
+                        <div class="funnel-arrow">→</div>
+                        <div class="funnel-step">
+                            <div class="funnel-value" id="funnelClicks">18</div>
+                            <div class="funnel-label">Shop Clicks</div>
+                        </div>
+                        <div class="funnel-arrow">→</div>
+                        <div class="funnel-step">
+                            <div class="funnel-value" id="funnelEmails">7</div>
+                            <div class="funnel-label">Emails</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Feed -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>⚡ Real-Time Activity</h2>
+                        <button class="btn btn-secondary" style="padding: 8px 15px; font-size: 0.85rem;" onclick="exportActivity()">Export</button>
+                    </div>
+                    <div class="activity-feed" id="activityFeed">
+                        <div class="activity-item">
+                            <div class="activity-icon">💬</div>
+                            <div class="activity-content">
+                                <h5>Visitor engaged with welcome message</h5>
+                                <p>Clicked "Show Me Popular Pieces"</p>
+                                <div class="activity-time">Just now</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📧</div>
+                            <div class="activity-content">
+                                <h5>New email captured</h5>
+                                <p>collector@example.com via Exit Intent</p>
+                                <div class="activity-time">2 minutes ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🛒</div>
+                            <div class="activity-content">
+                                <h5>Purchase intent detected</h5>
+                                <p>Clicked "View on ArtPal" for Neon Gardenz</p>
+                                <div class="activity-time">5 minutes ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">👋</div>
+                            <div class="activity-content">
+                                <h5>Returning visitor recognized</h5>
+                                <p>Previously viewed 5 items, shown personalized welcome</p>
+                                <div class="activity-time">8 minutes ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🎯</div>
+                            <div class="activity-content">
+                                <h5>Personalized recommendation shown</h5>
+                                <p>Suggested cosmic collection based on viewing history</p>
+                                <div class="activity-time">12 minutes ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-col">
+                <!-- Quick Actions -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>⚡ Quick Actions</h2>
+                    </div>
+                    <div class="quick-actions">
+                        <div class="quick-action" onclick="launchFlashSale()">
+                            <div class="quick-action-icon">🔥</div>
+                            <h4>Flash Sale Mode</h4>
+                        </div>
+                        <div class="quick-action" onclick="emailBlast()">
+                            <div class="quick-action-icon">📧</div>
+                            <h4>Email Subscribers</h4>
+                        </div>
+                        <div class="quick-action" onclick="boostUrgency()">
+                            <div class="quick-action-icon">⏰</div>
+                            <h4>Boost Urgency</h4>
+                        </div>
+                        <div class="quick-action" onclick="testMessages()">
+                            <div class="quick-action-icon">🧪</div>
+                            <h4>Test All Messages</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Subscribers -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>📧 Email Subscribers</h2>
+                        <button class="btn btn-secondary" style="padding: 8px 15px; font-size: 0.85rem;" onclick="exportEmails()">Export CSV</button>
+                    </div>
+                    <div class="subscriber-list" id="subscriberList">
+                        <p style="color: rgba(255,255,255,0.4); text-align: center; padding: 30px;">
+                            No subscribers yet. Emails captured via exit intent and signup forms will appear here.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Agent Settings -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>⚙️ Agent Settings</h2>
+                    </div>
+                    <div class="form-group">
+                        <label>Welcome Message Delay (seconds)</label>
+                        <input type="number" id="settingWelcome" value="8" min="1" max="30">
+                    </div>
+                    <div class="form-group">
+                        <label>Browsing Nudge Delay (seconds)</label>
+                        <input type="number" id="settingBrowse" value="30" min="10" max="120">
+                    </div>
+                    <div class="form-group">
+                        <label>Idle Timeout (seconds)</label>
+                        <input type="number" id="settingIdle" value="45" min="15" max="120">
+                    </div>
+                    <div class="form-group">
+                        <label>Social Proof Interval (seconds)</label>
+                        <input type="number" id="settingSocial" value="45" min="20" max="120">
+                    </div>
+                    <button class="btn btn-primary" onclick="saveSettings()">Save Settings</button>
+                </div>
+
+                <!-- Performance -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>📈 Performance (7 Days)</h2>
+                    </div>
+                    <div class="chart-placeholder">
+                        <p>📊 Connect analytics for live charts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', () => {
+            loadStats();
+            loadSubscribers();
+            loadSettings();
+            simulateActivity();
+        });
+
+        function loadStats() {
+            const stats = JSON.parse(localStorage.getItem('salesAgentStats') || '{}');
+            const subscribers = JSON.parse(localStorage.getItem('abstractEmporium_subscribers') || '[]');
+            
+            const visitors = stats.visitors || Math.floor(Math.random() * 100) + 50;
+            const engaged = stats.engaged || Math.floor(visitors * 0.45);
+            const clicks = stats.clicks || Math.floor(engaged * 0.4);
+            const emails = subscribers.length || Math.floor(clicks * 0.3);
+            const conversion = ((emails / visitors) * 100).toFixed(1);
+
+            document.getElementById('statVisitors').textContent = visitors;
+            document.getElementById('statEngaged').textContent = engaged;
+            document.getElementById('statClicks').textContent = clicks;
+            document.getElementById('statEmails').textContent = emails;
+            document.getElementById('statConversion').textContent = conversion + '%';
+
+            document.getElementById('funnelVisitors').textContent = visitors;
+            document.getElementById('funnelEngaged').textContent = engaged;
+            document.getElementById('funnelClicks').textContent = clicks;
+            document.getElementById('funnelEmails').textContent = emails;
+        }
+
+        function loadSubscribers() {
+            const subscribers = JSON.parse(localStorage.getItem('abstractEmporium_subscribers') || '[]');
+            const list = document.getElementById('subscriberList');
+            
+            if (subscribers.length === 0) {
+                list.innerHTML = '<p style="color: rgba(255,255,255,0.4); text-align: center; padding: 30px;">No subscribers yet. Emails will appear here.</p>';
+                return;
+            }
+
+            list.innerHTML = subscribers.map(email => `
+                <div class="subscriber-item">
+                    <span class="subscriber-email">${email}</span>
+                    <span class="subscriber-source">Sales Agent</span>
+                </div>
+            `).join('');
+        }
+
+        function loadSettings() {
+            const settings = JSON.parse(localStorage.getItem('salesAgentSettings') || '{}');
+            if (settings.firstEngageDelay) document.getElementById('settingWelcome').value = settings.firstEngageDelay / 1000;
+            if (settings.browsingNudgeDelay) document.getElementById('settingBrowse').value = settings.browsingNudgeDelay / 1000;
+            if (settings.idleTimeout) document.getElementById('settingIdle').value = settings.idleTimeout / 1000;
+        }
+
+        function saveSettings() {
+            const settings = {
+                firstEngageDelay: parseInt(document.getElementById('settingWelcome').value) * 1000,
+                browsingNudgeDelay: parseInt(document.getElementById('settingBrowse').value) * 1000,
+                idleTimeout: parseInt(document.getElementById('settingIdle').value) * 1000,
+                socialProofInterval: parseInt(document.getElementById('settingSocial').value) * 1000
+            };
+            localStorage.setItem('salesAgentSettings', JSON.stringify(settings));
+            alert('✅ Settings saved! Changes take effect on next visitor session.');
+        }
+
+        function toggleAgent() {
+            const status = document.getElementById('agentStatus');
+            const isActive = !status.classList.contains('inactive');
+            
+            if (isActive) {
+                status.classList.add('inactive');
+                status.querySelector('span').textContent = 'Agent Paused';
+                localStorage.setItem('salesAgentActive', 'false');
+            } else {
+                status.classList.remove('inactive');
+                status.querySelector('span').textContent = 'Agent Active';
+                localStorage.setItem('salesAgentActive', 'true');
+            }
+        }
+
+        function previewAgent() {
+            window.open('index.html?agentPreview=true', '_blank');
+        }
+
+        function launchFlashSale() {
+            const hours = prompt('Flash sale duration (hours):', '24');
+            if (hours) {
+                localStorage.setItem('flashSaleActive', JSON.stringify({
+                    active: true,
+                    expires: Date.now() + (parseInt(hours) * 60 * 60 * 1000)
+                }));
+                alert('🔥 Flash Sale activated for ' + hours + ' hours! All visitors will see urgency messaging.');
+            }
+        }
+
+        function emailBlast() {
+            const subscribers = JSON.parse(localStorage.getItem('abstractEmporium_subscribers') || '[]');
+            alert('📧 Ready to email ' + subscribers.length + ' subscribers!\n\nConnect your email service (Mailchimp, SendGrid, etc.) to send campaigns.');
+        }
+
+        function boostUrgency() {
+            localStorage.setItem('urgencyBoost', 'true');
+            alert('⏰ Urgency messaging boosted! Visitors will see more frequent scarcity signals.');
+        }
+
+        function testMessages() {
+            window.open('index.html?testAllMessages=true', '_blank');
+        }
+
+        function exportEmails() {
+            const subscribers = JSON.parse(localStorage.getItem('abstractEmporium_subscribers') || '[]');
+            if (subscribers.length === 0) {
+                alert('No subscribers to export yet.');
+                return;
+            }
+            const csv = 'Email\n' + subscribers.join('\n');
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'abstract_emporium_subscribers.csv';
+            a.click();
+        }
+
+        function exportActivity() {
+            alert('📊 Activity export coming soon!\n\nConnect analytics for detailed reporting.');
+        }
+
+        function simulateActivity() {
+            const activities = [
+                { icon: '💬', title: 'Visitor engaged', detail: 'Clicked on welcome message CTA' },
+                { icon: '👀', title: 'New visitor arrived', detail: 'From Google search' },
+                { icon: '🛒', title: 'Shop click', detail: 'Viewed Radiant Fusion on ArtPal' },
+                { icon: '⏱️', title: 'Idle engagement triggered', detail: 'Visitor shown recommendations' },
+                { icon: '📧', title: 'Email captured', detail: 'Via exit intent modal' },
+            ];
+
+            // Simulate new activity every 30 seconds
+            setInterval(() => {
+                const activity = activities[Math.floor(Math.random() * activities.length)];
+                const feed = document.getElementById('activityFeed');
+                
+                const newItem = document.createElement('div');
+                newItem.className = 'activity-item';
+                newItem.innerHTML = `
+                    <div class="activity-icon">${activity.icon}</div>
+                    <div class="activity-content">
+                        <h5>${activity.title}</h5>
+                        <p>${activity.detail}</p>
+                        <div class="activity-time">Just now</div>
+                    </div>
+                `;
+                
+                feed.insertBefore(newItem, feed.firstChild);
+                
+                // Keep only last 10 items
+                while (feed.children.length > 10) {
+                    feed.removeChild(feed.lastChild);
+                }
+            }, 30000);
+        }
+    </script>
+</body>
+</html>

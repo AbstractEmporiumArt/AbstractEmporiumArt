@@ -8,6 +8,7 @@
   "dependencies": {
     "nodemailer": "^6.9.7",
     "pdfkit": "^0.13.0",
+    "puppeteer": "^24.34.0",
     "uuid": "^9.0.0"
   },
   "scripts": {

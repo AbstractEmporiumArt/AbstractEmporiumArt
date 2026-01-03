@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free beginner knitting guide. Download your first knitting pattern and learn the basics.">
+    <meta name="keywords" content="knitting, beginner patterns, free guide, learn to knit">
+    <title>Free Beginner Knitting Guide - Abstract Emporium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img">
+                <span>Abstract Emporium</span>
+            </div>
+            <div class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#bundles" class="nav-link active">Bundles</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bundle-hero bundle-free-hero">
+        <div class="container">
+            <div class="bundle-hero-content">
+                <h1>Start Your Knitting Journey</h1>
+                <p>Get your FREE beginner's guide + first pattern. No credit card needed.</p>
+                <button class="cta-button" onclick="document.getElementById('signup-form').scrollIntoView({behavior: 'smooth'})">Get Free Pattern</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="bundle-content">
+        <div class="container">
+            <h2>What's Included in Your Free Bundle</h2>
+            
+            <div class="bundle-features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Beginner's Guide</h3>
+                    <p>Complete introduction to knitting. Learn about needles, yarn, basic techniques, and terminology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧶</div>
+                    <h3>First Pattern</h3>
+                    <p>A simple dishcloth pattern that teaches you the basic knit and purl stitches. Finish in 1-2 hours.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✋</div>
+                    <h3>Basic Techniques</h3>
+                    <p>Step-by-step photos showing how to cast on, knit, purl, and bind off. Crystal clear instructions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Supply Checklist</h3>
+                    <p>Exactly what you need to buy to get started. Where to find it. How much it costs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆘</div>
+                    <h3>Common Mistakes</h3>
+                    <p>What beginners struggle with most, and how to fix them. Troubleshooting guide included.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Next Steps</h3>
+                    <p>Once you finish your first project, here's what bundle is perfect for the next level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Pattern Section -->
+    <section class="bundle-sample">
+        <div class="container">
+            <h2>Your First Project</h2>
+            <div class="sample-content">
+                <div class="sample-image">
+                    <div class="placeholder-image" style="background: linear-gradient(135deg, #00b894, #00a686); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; border-radius: 10px;">🧶</div>
+                </div>
+                <div class="sample-text">
+                    <h3>Simple Dishcloth (Beginner's Dream)</h3>
+                    <p><strong>Skill Level:</strong> Absolute Beginner</p>
+                    <p><strong>Time to Complete:</strong> 1-2 hours</p>
+                    <p><strong>What You'll Learn:</strong></p>
+                    <ul>
+                        <li>Casting on</li>
+                        <li>Knit stitch</li>
+                        <li>Purl stitch</li>
+                        <li>Binding off</li>
+                    </ul>
+                    <p style="margin-top: 20px;">This is the perfect first project. It's quick, satisfying, and teaches you all the fundamental skills you need. You'll finish something tangible in less than 2 hours!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Start Here Section -->
+    <section class="bundle-why">
+        <div class="container">
+            <h2>Why This Free Bundle?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>✓ It's Truly Free</h3>
+                    <p>No hidden costs. No upsell. Genuine value just for trying.</p>
+                </div>
+                <div class="why-card">
+                    <h3>✓ No Experience Needed</h3>
+                    <p>We assume you've never knitted before. Every step explained clearly.</p>
+                </div>
+                <div class="why-card">
+                    <h3>✓ Quick Win</h3>
+                    <p>Finish something real in 1-2 hours. Build confidence immediately.</p>
+                </div>
+                <div class="why-card">
+                    <h3>✓ Clear Next Step</h3>
+                    <p>Know exactly which bundle to buy next based on where you are.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Form Section -->
+    <section class="signup-section" id="signup-form">
+        <div class="container">
+            <div class="signup-box">
+                <h2>Claim Your Free Pattern</h2>
+                <p>Enter your email to download your free beginner's guide and first pattern (PDF).</p>
+                
+                <form class="signup-form" onsubmit="handleFreeBundle(event)">
+                    <input type="email" placeholder="your@email.com" required>
+                    <button type="submit" class="cta-button">Send Me The Free Pattern</button>
+                </form>
+                
+                <p class="form-note">✓ PDF delivered instantly to your email<br>✓ No credit card required<br>✓ Unsubscribe anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps Section -->
+    <section class="next-steps">
+        <div class="container">
+            <h2>What Happens Next?</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <h3>Download (Now)</h3>
+                    <p>Grab your free PDF. Start reading the guide.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <h3>Gather Supplies (Day 1-2)</h3>
+                    <p>Buy needles and yarn. Guide shows you exactly where and what to get ($5-15).</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <h3>Learn & Practice (Day 3)</h3>
+                    <p>Learn casting on, knit stitch, purl stitch. Follow the photo guide.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <h3>Make Your Dishcloth (Day 4-5)</h3>
+                    <p>Follow the pattern. You'll have your first finished project!</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <h3>Decide Your Path (Day 5)</h3>
+                    <p>Ready for more? Upgrade to Beginner Bundle for 3 more projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bundle-faq">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Do I really need to buy anything?</h3>
+                    <p>The guide and pattern are completely free. You'll need to buy needles and yarn to practice ($5-15), but that's your choice.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is this a trial to upsell me?</h3>
+                    <p>Nope! This is genuine value. No hidden catches. Yes, we have paid bundles available, but you're not pressured to buy.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does it take to knit the dishcloth?</h3>
+                    <p>1-2 hours for most beginners. It's designed to be quick so you feel accomplished fast.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I get stuck?</h3>
+                    <p>The guide includes a troubleshooting section. We also have a community where you can ask questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Footer -->
+    <section class="cta-footer">
+        <div class="container">
+            <h2>Ready to Learn?</h2>
+            <p>Your free beginner's guide is waiting. Download it now and start your knitting journey.</p>
+            <button class="cta-button" onclick="document.getElementById('signup-form').scrollIntoView({behavior: 'smooth'})">Get Free Pattern Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p>&copy; 2025 Abstract Emporium. All rights reserved.</p>
+                </div>
+                <div class="footer-section">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/abstractemporium/" target="_blank" class="social-link facebook" title="Abstract Emporium Art - Facebook">
+                            <span>f</span>
+                        </a>
+                        <a href="https://www.facebook.com/LissaKnittingCreations" target="_blank" class="social-link facebook" title="Lissa Knitting Creations - Facebook">
+                            <span>🧶</span>
+                        </a>
+                        <a href="https://www.instagram.com/Abstractemporiumart" target="_blank" class="social-link instagram" title="Instagram">
+                            <span>📷</span>
+                        </a>
+                        <a href="https://x.com/Abstractempco23" target="_blank" class="social-link twitter" title="X/Twitter">
+                            <span>𝕏</span>
+                        </a>
+                        <a href="mailto:abstractemporiumart@outlook.com" class="social-link email" title="Email">
+                            <span>✉</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#bundles">Bundles</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleFreeBundle(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            
+            // Save email to localStorage
+            localStorage.setItem('freeBundle_email', email);
+            
+            // In production, this would send to Brevo
+            alert('Thank you! Check your email for your free pattern. If you don\'t see it, check your spam folder.\n\nEmail: ' + email);
+            
+            // Reset form
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

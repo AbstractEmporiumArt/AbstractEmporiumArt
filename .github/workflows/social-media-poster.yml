@@ -1,0 +1,85 @@
+name: Social Media Auto-Poster
+
+on:
+  # Run every 3 hours
+  schedule:
+    - cron: '0 */3 * * *'  # Every 3 hours at minute 0
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Platform to post to'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - mastodon
+          - bluesky
+
+permissions:
+  contents: write  # Needed to update content-queue.json
+
+jobs:
+  post-to-social:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci || npm install
+          fi
+      
+      - name: Post to Mastodon
+        if: ${{ github.event.inputs.platform == 'mastodon' || github.event.inputs.platform == 'all' || github.event_name == 'schedule' }}
+        env:
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MastodonAccessToken }}
+          MASTODON_INSTANCE_URL: ${{ secrets.MastodonInstanceUrl }}
+        run: |
+          if [ ! -z "$MASTODON_ACCESS_TOKEN" ]; then
+            echo "🦣 Posting to Mastodon..."
+            node scripts/post-to-mastodon.js || echo "⚠️ No posts ready for Mastodon"
+          else
+            echo "⚠️ Mastodon secrets not configured, skipping..."
+          fi
+        continue-on-error: true
+      
+      - name: Post to Bluesky
+        if: ${{ github.event.inputs.platform == 'bluesky' || github.event.inputs.platform == 'all' || github.event_name == 'schedule' }}
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BlueskyHandle }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BlueskyAppPassword }}
+        run: |
+          if [ ! -z "$BLUESKY_HANDLE" ]; then
+            echo "🦋 Posting to Bluesky..."
+            node scripts/post-to-bluesky.js || echo "⚠️ No posts ready for Bluesky"
+          else
+            echo "⚠️ Bluesky secrets not configured, skipping..."
+          fi
+        continue-on-error: true
+      
+      - name: Commit updated queue
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          if git diff --quiet content-queue.json; then
+            echo "ℹ️ No changes to commit"
+          else
+            git add content-queue.json
+            git commit -m "🤖 Update content queue after posting [skip ci]"
+            git push
+            echo "✅ Pushed updated content queue"
+          fi

@@ -53,56 +53,80 @@
         </div>
     </section>
 
-    <!-- Knitting Bundles Section -->
+    <!-- Knitting Bundles Section - COMING SOON -->
     <section class="bundles-section" id="bundles">
         <div class="container">
-            <h2>Learn Knitting. Build Confidence. Create Beautiful Things.</h2>
-            <p class="section-subtitle">Beginner-friendly patterns, step-by-step guidance, and a supportive community</p>
+            <h2>🧶 Knitting Patterns - Coming Soon!</h2>
+            <p class="section-subtitle">Learn knitting with beginner-friendly patterns, step-by-step guidance, and a supportive community</p>
+            
+            <div class="coming-soon-message">
+                <div class="coming-soon-icon">🎯</div>
+                <h3>We're Preparing Something Special!</h3>
+                <p>Our knitting pattern bundles are currently being developed. Subscribe to our newsletter below to be notified when they launch!</p>
+                <p class="coming-soon-features">
+                    ✨ Step-by-step video guides<br>
+                    ✨ Beginner to advanced patterns<br>
+                    ✨ Supportive community access<br>
+                    ✨ Lifetime updates
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coloring Books Section -->
+    <section class="coloring-books-section">
+        <div class="container">
+            <h2>🎨 Abstract Coloring Books</h2>
+            <p class="section-subtitle">Therapeutic coloring experiences with unique abstract designs</p>
             
             <div class="banners-grid">
-                <!-- FREE BUNDLE -->
-                <a href="bundle-free.html" class="banner-card bundle-free">
+                <!-- Coloring Book 1 -->
+                <div class="banner-card coloring-book-card coming-soon-card">
                     <div class="banner-overlay"></div>
                     <div class="banner-content">
-                        <div class="banner-price">FREE</div>
-                        <h3>Free Starter Preview</h3>
-                        <p>Get your first pattern + beginner's guide. Perfect for trying us out!</p>
-                        <span class="banner-link">Get Free Pattern →</span>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <h3>Abstract Serenity</h3>
+                        <p>50 calming abstract designs for mindful coloring and stress relief</p>
+                        <span class="banner-link disabled">Launching Soon →</span>
                     </div>
-                </a>
+                </div>
 
-                <!-- BEGINNER BUNDLE -->
-                <a href="bundle-beginner.html" class="banner-card bundle-beginner">
+                <!-- Coloring Book 2 -->
+                <div class="banner-card coloring-book-card coming-soon-card">
                     <div class="banner-overlay"></div>
                     <div class="banner-content">
-                        <div class="banner-price">$19</div>
-                        <h3>Beginner Bundle</h3>
-                        <p>3 simple patterns + video guides + stitch cheat sheet. Your foundation.</p>
-                        <span class="banner-link">Explore Bundle →</span>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <h3>Geometric Dreams</h3>
+                        <p>Bold geometric patterns and sacred geometry for creative exploration</p>
+                        <span class="banner-link disabled">Launching Soon →</span>
                     </div>
-                </a>
+                </div>
 
-                <!-- STARTER PACK -->
-                <a href="bundle-starter.html" class="banner-card bundle-starter">
+                <!-- Coloring Book 3 -->
+                <div class="banner-card coloring-book-card coming-soon-card">
                     <div class="banner-overlay"></div>
                     <div class="banner-content">
-                        <div class="banner-price">$39</div>
-                        <h3>Starter Pack</h3>
-                        <p>5 patterns + video course + weekly planner. Level up fast.</p>
-                        <span class="banner-link">Learn More →</span>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <h3>Cosmic Collection</h3>
+                        <p>Space-inspired abstract art for out-of-this-world coloring experiences</p>
+                        <span class="banner-link disabled">Launching Soon →</span>
                     </div>
-                </a>
+                </div>
 
-                <!-- MASTER BUNDLE -->
-                <a href="bundle-master.html" class="banner-card bundle-master">
+                <!-- Coloring Book 4 -->
+                <div class="banner-card coloring-book-card coming-soon-card">
                     <div class="banner-overlay"></div>
                     <div class="banner-content">
-                        <div class="banner-price">$79</div>
-                        <h3>Master Bundle</h3>
-                        <p>8 patterns + video course + lifetime updates + community. Go deep.</p>
-                        <span class="banner-link">Become a Master →</span>
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <h3>Nature's Abstracts</h3>
+                        <p>Organic flowing designs inspired by natural forms and patterns</p>
+                        <span class="banner-link disabled">Launching Soon →</span>
                     </div>
-                </a>
+                </div>
+            </div>
+            
+            <div class="notify-message">
+                <p>📧 Want to be notified when our coloring books launch? Subscribe to our newsletter below!</p>
             </div>
         </div>
     </section>
@@ -290,10 +314,10 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
+    <!-- Chat Widget - Merged Art Advisor + Helper Bot -->
     <div id="chatbot-widget" class="chatbot-widget">
         <div class="chatbot-header">
-            <span>Abstract Bot 🤖</span>
+            <span>🎨 Art Helper - Ask me anything!</span>
             <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
         </div>
         <div id="chatbot-messages" class="chatbot-messages"></div>
@@ -301,17 +325,17 @@
             <input 
                 type="text" 
                 id="chatbot-input" 
-                placeholder="Ask me anything..." 
+                placeholder="Ask about our art, collections, or products..." 
                 onkeypress="handleChatInput(event)"
             >
             <button onclick="sendChatMessage()">Send</button>
         </div>
     </div>
 
-    <script src="sales-announcements.js"></script>
+    <!-- REMOVED: sales-announcements.js (caused popup notifications) -->
+    <!-- REMOVED: personalization-algorithm.js (caused tracking popups) -->
+    <!-- REMOVED: sales-agent.js (caused "Art Advisor" popup) -->
     <script src="helper-bot.js"></script>
-    <script src="personalization-algorithm.js"></script>
-    <script src="sales-agent.js"></script>
     <script>
         // Newsletter form handler
         document.getElementById('newsletterForm').addEventListener('submit', function(e) {

@@ -4081,6 +4081,162 @@ img.loaded {
     }
 }
 
+/* COMING SOON STYLES */
+.coming-soon-message {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.coming-soon-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.coming-soon-message h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.coming-soon-message p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+.coming-soon-features {
+    margin-top: 25px;
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* COLORING BOOKS SECTION */
+.coloring-books-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 0;
+    margin: 60px 0;
+    border-top: 3px solid #00b894;
+    border-bottom: 3px solid #00b894;
+}
+
+.coloring-books-section h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.coloring-books-section .section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.coloring-book-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 380px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    background: linear-gradient(135deg, #dfe6e9 0%, #b2bec3 100%);
+}
+
+.coming-soon-card {
+    cursor: default;
+    opacity: 0.85;
+}
+
+.coming-soon-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fdcb6e;
+    color: #2d3436;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.coloring-book-card .banner-content {
+    width: 100%;
+}
+
+.coloring-book-card h3 {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.coloring-book-card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.banner-link.disabled {
+    display: inline-block;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    cursor: not-allowed;
+}
+
+.notify-message {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notify-message p {
+    font-size: 1.1rem;
+    color: #2d3436;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .coloring-books-section {
+        padding: 50px 0;
+    }
+
+    .coloring-books-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .coloring-book-card {
+        height: 320px;
+    }
+
+    .coming-soon-message {
+        padding: 30px 20px;
+    }
+
+    .coming-soon-message h3 {
+        font-size: 1.5rem;
+    }
+}
+
 /* BUNDLE PAGE STYLES */
 
 /* Hero Sections for Bundle Pages */

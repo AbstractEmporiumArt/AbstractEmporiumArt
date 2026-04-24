@@ -2,6 +2,7 @@
   "name": "Abstract Emporium Art - Backend",
   "version": "1.0.0",
   "description": "Pattern delivery and PayPal IPN handler",
+  "type": "module",
   "engines": {
     "node": "18.x"
   },
@@ -13,6 +14,9 @@
   },
   "scripts": {
     "dev": "vercel dev",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod",
+    "post:mastodon": "node scripts/post-to-mastodon.js",
+    "post:bluesky": "node scripts/post-to-bluesky.js",
+    "post:all": "npm run post:mastodon && npm run post:bluesky"
   }
 }

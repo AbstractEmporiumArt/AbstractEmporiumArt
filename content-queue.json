@@ -3,490 +3,918 @@
     {
       "id": "post-001",
       "content": "🎨 NEW RELEASE: Chaos & Calm Abstract Coloring Book\n\n50 pages designed to help you find balance between life's intensity and peace.\n\n✨ Includes:\n• Balance Your Palette Color Guide\n• 4 Therapeutic Techniques\n• 50-Day Transformation Challenge\n\nPerfect for anxiety relief & mindfulness practice.",
-      "hashtags": ["#ColoringBook", "#AnxietyRelief", "#MentalHealth", "#TherapeuticArt", "#SelfCare", "#AbstractArt"],
+      "hashtags": [
+        "#ColoringBook",
+        "#AnxietyRelief",
+        "#MentalHealth",
+        "#TherapeuticArt",
+        "#SelfCare",
+        "#AbstractArt"
+      ],
       "image": "Chaos-Calm/Chaos-and-Calm-Cover.png",
       "link": "https://abstractemporium.com/bundle-chaos-calm.html",
-      "platforms": ["twitter", "bluesky", "mastodon", "facebook", "pinterest"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon",
+        "facebook",
+        "pinterest"
+      ],
       "schedule": "2026-04-15T09:00:00Z",
-      "posted": false
+      "posted": true,
+      "postedAt": "2026-04-24T08:15:39.841Z",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116458687012464059"
     },
     {
       "id": "post-002",
       "content": "💡 COLORING TIP: Start with chaos colors (reds, oranges, hot pinks) to release tension, then transition to calm colors (blues, greens, grays) to find peace.\n\nTry this technique in our Chaos & Calm coloring book! It's like a mini meditation session. 🧘‍♀️",
-      "hashtags": ["#ColoringTips", "#MindfulnessArt", "#ArtTherapy", "#WellnessTips"],
+      "hashtags": [
+        "#ColoringTips",
+        "#MindfulnessArt",
+        "#ArtTherapy",
+        "#WellnessTips"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "mastodon"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon"
+      ],
       "schedule": "2026-04-16T14:00:00Z",
-      "posted": false
+      "posted": true,
+      "postedAt": "2026-04-24T08:15:40.429Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mka3jhqpg52a",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mka3jhqpg52a"
     },
     {
       "id": "post-003",
       "content": "✨ INVISIBLE PAIN COLLECTION ✨\n\n50 pages for processing emotions that others can't see.\n\n💜 Features:\n• Emotion Palette Guide (Pain, Hope, Strength colors)\n• Layering Method for healing journey\n• Trauma-informed affirmations\n• Optional journal prompts\n\nYour pain is valid. Your art is healing.",
-      "hashtags": ["#InvisiblePainArt", "#TraumaHealing", "#EmotionalWellness", "#ArtTherapy", "#MentalHealthAwareness"],
+      "hashtags": [
+        "#InvisiblePainArt",
+        "#TraumaHealing",
+        "#EmotionalWellness",
+        "#ArtTherapy",
+        "#MentalHealthAwareness"
+      ],
       "image": "Invisible-Pain/Invisible-Pain-Cover.png",
       "link": "https://abstractemporium.com/bundle-invisible-pain.html",
-      "platforms": ["twitter", "bluesky", "mastodon", "facebook", "pinterest"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon",
+        "facebook",
+        "pinterest"
+      ],
       "schedule": "2026-04-17T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-004",
       "content": "🌿 Healing Lines Collection - Nature-based therapeutic coloring\n\nConnect with:\n🌲 Forest Therapy (greens & browns for grounding)\n🌊 Ocean Calm (blues & teals for peace)\n🌅 Sunrise Hope (oranges & pinks for renewal)\n🌙 Moonlight Peace (silver & lavender for rest)\n\n50 pages of meditative abstract designs.",
-      "hashtags": ["#HealingLinesJourney", "#NatureTherapy", "#MeditativeArt", "#ColoringForCalm"],
+      "hashtags": [
+        "#HealingLinesJourney",
+        "#NatureTherapy",
+        "#MeditativeArt",
+        "#ColoringForCalm"
+      ],
       "image": "Healing-Lines/Healing-Lines-Cover.png",
       "link": "https://abstractemporium.com/bundle-healing-lines.html",
-      "platforms": ["twitter", "bluesky", "mastodon", "facebook", "pinterest"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon",
+        "facebook",
+        "pinterest"
+      ],
       "schedule": "2026-04-18T11:00:00Z",
       "posted": false
     },
     {
       "id": "post-005",
       "content": "🎯 JOIN THE #ChaosAndCalmChallenge!\n\nColor one page per day for 50 days and watch your transformation unfold.\n\nWeeks 1-2: Chaos Dominance (bold colors)\nWeeks 3-4: Calm Emergence (soothing tones)\nWeeks 5-6: Monochromatic Mastery\nWeek 7: Rainbow Liberation!\n\nTag your progress with #ChaosAndCalmChallenge 💚",
-      "hashtags": ["#ChaosAndCalmChallenge", "#ColoringChallenge", "#50DayChallenge", "#SelfCareChallenge"],
+      "hashtags": [
+        "#ChaosAndCalmChallenge",
+        "#ColoringChallenge",
+        "#50DayChallenge",
+        "#SelfCareChallenge"
+      ],
       "image": null,
       "link": "https://abstractemporium.com/bundle-chaos-calm.html",
-      "platforms": ["twitter", "instagram", "bluesky", "mastodon", "facebook"],
+      "platforms": [
+        "twitter",
+        "instagram",
+        "bluesky",
+        "mastodon",
+        "facebook"
+      ],
       "schedule": "2026-04-19T15:00:00Z",
       "posted": false
     },
     {
       "id": "post-006",
       "content": "💰 BEST VALUE: Abstract Mind Collection\n\nGet ALL 3 coloring books (150 pages) + 50 EXCLUSIVE pages = 200 total\n\nIncludes:\n✓ Chaos & Calm\n✓ Invisible Pain\n✓ Healing Lines\n✓ Mood-Based Color Theory Guide\n✓ 200-Page Journey Tracker\n\nSave $4 vs buying individually\n$19.99 complete collection",
-      "hashtags": ["#ColoringBookBundle", "#BestValue", "#AbstractArt", "#MentalWellness"],
+      "hashtags": [
+        "#ColoringBookBundle",
+        "#BestValue",
+        "#AbstractArt",
+        "#MentalWellness"
+      ],
       "image": "Abstract-Mind-Collection/Abstract-Mind-Collection-Cover.png",
       "link": "https://abstractemporium.com/bundle-abstract-mind.html",
-      "platforms": ["twitter", "bluesky", "mastodon", "facebook", "pinterest"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon",
+        "facebook",
+        "pinterest"
+      ],
       "schedule": "2026-04-20T09:00:00Z",
       "posted": false
     },
     {
       "id": "post-008",
       "content": "💭 AFFIRMATION OF THE DAY:\n\n\"Your pain is valid, even when invisible.\"\n\nFrom our Invisible Pain coloring collection - designed for processing emotions that others can't see.\n\nYou're not alone. Your healing journey is sacred. 💜\n\n#InvisiblePainArt",
-      "hashtags": ["#MentalHealthMatters", "#HealingJourney", "#YouAreNotAlone", "#TraumaRecovery"],
+      "hashtags": [
+        "#MentalHealthMatters",
+        "#HealingJourney",
+        "#YouAreNotAlone",
+        "#TraumaRecovery"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "mastodon", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon",
+        "facebook"
+      ],
       "schedule": "2026-04-22T08:00:00Z",
       "posted": false
     },
     {
       "id": "post-009",
       "content": "📊 POLL TIME!\n\nWhen you color, do you prefer:\n\nA) Colored pencils (precision & layers)\nB) Markers (bold & vibrant)\nC) Gel pens (sparkle & detail)\nD) All of the above (mixing it up!)\n\nReply with your pick! We want to know what our community loves 🎨",
-      "hashtags": ["#ColoringPoll", "#ColoringCommunity", "#ArtSupplies"],
+      "hashtags": [
+        "#ColoringPoll",
+        "#ColoringCommunity",
+        "#ArtSupplies"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "mastodon"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon"
+      ],
       "schedule": "2026-04-23T12:00:00Z",
       "posted": false
     },
     {
       "id": "post-010",
       "content": "🌟 CUSTOMER LOVE:\n\n\"I bought this bundle and haven't looked at another coloring book in months. 200 pages is INSANE value.\" - Rachel P.\n\nThank you for the love! Stories like this fuel our passion for creating therapeutic art.\n\nWant to be featured? Tag #AbstractEmporiumArt in your posts! 💚",
-      "hashtags": ["#CustomerTestimonial", "#CustomerLove", "#AbstractEmporiumArt"],
+      "hashtags": [
+        "#CustomerTestimonial",
+        "#CustomerLove",
+        "#AbstractEmporiumArt"
+      ],
       "image": null,
       "link": "https://abstractemporium.com/bundle-abstract-mind.html",
-      "platforms": ["twitter", "bluesky", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook"
+      ],
       "schedule": "2026-04-24T16:00:00Z",
       "posted": false
     },
     {
       "id": "post-011",
       "content": "🎨 BEHIND THE SCENES:\n\nEach abstract pattern in our coloring books is designed with intention:\n\n• Flowing lines = Meditation & calm\n• Sharp angles = Energy release\n• Repetitive patterns = Grounding rhythm\n• Open spaces = Room for your emotions\n\nTherapeutic art isn't just pretty - it's purposeful.",
-      "hashtags": ["#BehindTheScenes", "#ArtWithPurpose", "#TherapeuticDesign"],
+      "hashtags": [
+        "#BehindTheScenes",
+        "#ArtWithPurpose",
+        "#TherapeuticDesign"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "mastodon", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon",
+        "facebook"
+      ],
       "schedule": "2026-04-25T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-012",
       "content": "🔥 FLASH SALE ALERT! 🔥\n\n24 HOURS ONLY: 20% OFF ALL COLORING BOOKS\nUse code: FLASH20\n\n✅ Chaos & Calm - $6.39 (was $7.99)\n✅ Invisible Pain - $6.39 (was $7.99)\n✅ Healing Lines - $6.39 (was $7.99)\n✅ Complete Collection - $15.99 (was $19.99)\n\nExpires tomorrow at midnight! Don't miss out 🎨",
-      "hashtags": ["#FlashSale", "#ColoringBookSale", "#LimitedTimeOffer"],
+      "hashtags": [
+        "#FlashSale",
+        "#ColoringBookSale",
+        "#LimitedTimeOffer"
+      ],
       "image": null,
       "link": "https://abstractemporium.com",
-      "platforms": ["twitter", "bluesky", "facebook", "pinterest"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook",
+        "pinterest"
+      ],
       "schedule": "2026-04-26T09:00:00Z",
       "posted": false
     },
     {
       "id": "post-013",
       "content": "⏰ SALE ENDS TONIGHT!\n\nLast chance for 20% off all coloring books\nCode: FLASH20\n\nExpires at midnight EST (6 hours!)\n\nGrab your therapeutic coloring books now 💚",
-      "hashtags": ["#LastChance", "#SaleEnding", "#FlashSale"],
+      "hashtags": [
+        "#LastChance",
+        "#SaleEnding",
+        "#FlashSale"
+      ],
       "image": null,
       "link": "https://abstractemporium.com",
-      "platforms": ["twitter", "bluesky", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook"
+      ],
       "schedule": "2026-04-26T18:00:00Z",
       "posted": false
     },
     {
       "id": "post-014",
       "content": "💚 THANK YOU!\n\nOur flash sale was incredible. Thank you to everyone who grabbed a coloring book!\n\nFeature incoming: We'll be showcasing YOUR colored pages throughout the week.\n\nTag #AbstractEmporiumArt so we can find and share your beautiful work! 🎨",
-      "hashtags": ["#ThankYou", "#CommunityLove", "#ColoringCommunity"],
+      "hashtags": [
+        "#ThankYou",
+        "#CommunityLove",
+        "#ColoringCommunity"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook"
+      ],
       "schedule": "2026-04-27T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-016",
       "content": "💡 TIP: Feeling overwhelmed?\n\nTry the \"One-Minute Mindfulness\" technique from our Healing Lines collection:\n\n1. Pick one small section of your coloring page\n2. Set timer for 1 minute\n3. Color slowly and mindfully\n4. Take 10 deep breaths\n5. Notice how you feel\n\nNo pressure to finish. Just be present. 🌿",
-      "hashtags": ["#MindfulnessTip", "#ColoringTherapy", "#OneMindful", "#SelfCareTip"],
+      "hashtags": [
+        "#MindfulnessTip",
+        "#ColoringTherapy",
+        "#OneMindful",
+        "#SelfCareTip"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "mastodon", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon",
+        "facebook"
+      ],
       "schedule": "2026-04-29T14:00:00Z",
       "posted": false
     },
     {
       "id": "post-017",
       "content": "🎨 SNEAK PEEK!\n\nWe're working on something new...\n\nHint: 🌊 Ocean-themed therapeutic coloring + ☀️ Summer mindfulness\n\nComing Summer 2026. Want early access?\n\nReply with 🌊 if you're interested!",
-      "hashtags": ["#ComingSoon", "#SneakPeek", "#NewRelease"],
+      "hashtags": [
+        "#ComingSoon",
+        "#SneakPeek",
+        "#NewRelease"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook"
+      ],
       "schedule": "2026-04-30T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-018",
       "content": "📝 BLOG POST: \"5 Science-Backed Ways Coloring Reduces Anxiety\"\n\nDiscover why therapists recommend adult coloring books for stress management.\n\nIncludes:\n• Research findings\n• How it works (brain science)\n• When to color for maximum benefit\n• Choosing the right materials\n\nRead now (5 min):",
-      "hashtags": ["#MentalHealthResearch", "#ColoringTherapy", "#AnxietyRelief", "#BlogPost"],
+      "hashtags": [
+        "#MentalHealthResearch",
+        "#ColoringTherapy",
+        "#AnxietyRelief",
+        "#BlogPost"
+      ],
       "image": null,
       "link": "https://abstractemporium.com/blog/coloring-reduces-anxiety",
-      "platforms": ["twitter", "bluesky", "facebook", "pinterest"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook",
+        "pinterest"
+      ],
       "schedule": "2026-05-01T09:00:00Z",
       "posted": false
     },
     {
       "id": "post-019",
       "content": "🌟 COMMUNITY SPOTLIGHT:\n\nCheck out this STUNNING page from @[username] using our Chaos & Calm collection!\n\nLove the gradient work from fiery reds to peaceful blues. This is exactly the transformation we envisioned. 💚\n\nWant to be featured? Tag #ChaosAndCalmChallenge!",
-      "hashtags": ["#CommunitySpotlight", "#CustomerArt", "#AbstractEmporiumArt"],
+      "hashtags": [
+        "#CommunitySpotlight",
+        "#CustomerArt",
+        "#AbstractEmporiumArt"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "instagram", "facebook"],
+      "platforms": [
+        "twitter",
+        "instagram",
+        "facebook"
+      ],
       "schedule": "2026-05-02T15:00:00Z",
       "posted": false
     },
     {
       "id": "post-020",
       "content": "Question for our community:\n\nWhat time of day do you prefer to color?\n\n🌅 Morning (start day calm)\n☕ Afternoon (midday break)\n🌙 Evening (wind down)\n🔄 Whenever anxiety hits\n\nReply below! Curious about your coloring rituals 🎨",
-      "hashtags": ["#ColoringRoutine", "#SelfCareRoutine", "#CommunityQuestion"],
+      "hashtags": [
+        "#ColoringRoutine",
+        "#SelfCareRoutine",
+        "#CommunityQuestion"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook"
+      ],
       "schedule": "2026-05-03T12:00:00Z",
       "posted": false
     },
     {
       "id": "post-021",
       "content": "🎁 PERFECT GIFT IDEA:\n\nKnow someone struggling with anxiety, stress, or just needs self-care?\n\nOur coloring books make thoughtful gifts:\n\n💜 Invisible Pain - For trauma survivors\n🎨 Chaos & Calm - For stress relief\n🌿 Healing Lines - For meditation lovers\n📚 Complete Collection - For the ultimate self-care kit\n\nDigital download = Instant gift!",
-      "hashtags": ["#GiftIdea", "#SelfCareGift", "#ThoughtfulGifts"],
+      "hashtags": [
+        "#GiftIdea",
+        "#SelfCareGift",
+        "#ThoughtfulGifts"
+      ],
       "image": null,
       "link": "https://abstractemporium.com",
-      "platforms": ["twitter", "facebook", "pinterest"],
+      "platforms": [
+        "twitter",
+        "facebook",
+        "pinterest"
+      ],
       "schedule": "2026-05-04T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-022",
       "content": "💭 Remember:\n\nAbstract art needs no explanation.\nNeither do your feelings.\n\nColor outside anxiety's lines.\nMake mistakes beautiful.\nFill only the spaces you want.\nLeave unfinished if you need to.\n\nThere's no wrong way to heal. 💚\n\n#InvisiblePainArt",
-      "hashtags": ["#ArtHeals", "#NoRules", "#SelfCompassion", "#HealingJourney"],
+      "hashtags": [
+        "#ArtHeals",
+        "#NoRules",
+        "#SelfCompassion",
+        "#HealingJourney"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "mastodon", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon",
+        "facebook"
+      ],
       "schedule": "2026-05-05T08:00:00Z",
       "posted": false
     },
     {
       "id": "post-023",
       "content": "📚 Did you know?\n\nOur Abstract Mind Collection includes a 200-Page Journey Tracker with milestone reflections at:\n\n📍 Page 1: Beginning\n📍 Page 50: Quarter-way reflection\n📍 Page 100: Halfway growth check\n📍 Page 150: Home stretch wisdom\n📍 Page 200: Complete transformation\n\nIt's not just coloring - it's a documented healing journey.",
-      "hashtags": ["#AbstractMindJourney200", "#HealingJourney", "#PersonalGrowth"],
+      "hashtags": [
+        "#AbstractMindJourney200",
+        "#HealingJourney",
+        "#PersonalGrowth"
+      ],
       "image": null,
       "link": "https://abstractemporium.com/bundle-abstract-mind.html",
-      "platforms": ["twitter", "bluesky", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook"
+      ],
       "schedule": "2026-05-06T11:00:00Z",
       "posted": false
     },
     {
       "id": "post-025",
       "content": "🎨 EXPERIMENTAL CHALLENGE:\n\n\"Opposite Day\" - Color with colors you HATE\n\nThat color that makes you uncomfortable? Use it!\n\nWhy? It breaks your habitual patterns and helps you discover new favorites.\n\nTry it on pages 1-10 of Abstract Mind Collection. Tag your results with #OppositeColorDay!",
-      "hashtags": ["#ColoringChallenge", "#OppositeColorDay", "#ExperimentalArt"],
+      "hashtags": [
+        "#ColoringChallenge",
+        "#OppositeColorDay",
+        "#ExperimentalArt"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook"
+      ],
       "schedule": "2026-05-08T14:00:00Z",
       "posted": false
     },
     {
       "id": "post-026",
       "content": "Weekend vibes 🌿\n\nWhat are you coloring this weekend?\n\nDrop a 🎨 if you're planning some therapeutic coloring time!\n\nReminder: Self-care isn't selfish. Taking 20 minutes to color is taking care of your mental health. You deserve it. 💚",
-      "hashtags": ["#WeekendVibes", "#SelfCareWeekend", "#ColoringTime"],
+      "hashtags": [
+        "#WeekendVibes",
+        "#SelfCareWeekend",
+        "#ColoringTime"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook"
+      ],
       "schedule": "2026-05-09T11:00:00Z",
       "posted": false
     },
     {
       "id": "post-027",
       "content": "💡 PRINTING TIP:\n\nFor best results with our coloring books:\n\n• Paper: 32lb (120gsm) cardstock for markers\n• Paper: Regular copy paper for colored pencils\n• Print setting: High quality / Best\n• Color: Black & white ONLY (you add the color!)\n\nLocal print shops (FedEx, Staples) can print for ~$0.10-0.25/page",
-      "hashtags": ["#PrintingTips", "#ColoringBookTips", "#DIYPrinting"],
+      "hashtags": [
+        "#PrintingTips",
+        "#ColoringBookTips",
+        "#DIYPrinting"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "facebook"],
+      "platforms": [
+        "twitter",
+        "facebook"
+      ],
       "schedule": "2026-05-10T13:00:00Z",
       "posted": false
     },
     {
       "id": "post-028",
       "content": "🌟 MILESTONE ALERT!\n\nWe've reached 500+ downloads across all our coloring books!\n\nThank you for trusting us with your mental wellness journey. Every download represents someone choosing self-care, healing, and creativity.\n\nWe're honored to be part of your story. 💚\n\n#AbstractEmporiumArt",
-      "hashtags": ["#Milestone", "#ThankYou", "#CommunityLove", "#500Downloads"],
+      "hashtags": [
+        "#Milestone",
+        "#ThankYou",
+        "#CommunityLove",
+        "#500Downloads"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "facebook"
+      ],
       "schedule": "2026-05-11T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-030",
       "content": "💭 AFFIRMATION:\n\n\"Every stroke is a step toward wholeness.\"\n\nFrom our Healing Lines collection.\n\nYou don't have to finish the page. You don't have to color perfectly. You just have to show up for yourself.\n\nThat's enough. You're enough. 💚\n\n#HealingJourney",
-      "hashtags": ["#Affirmation", "#YouAreEnough", "#HealingLines", "#SelfCompassion"],
+      "hashtags": [
+        "#Affirmation",
+        "#YouAreEnough",
+        "#HealingLines",
+        "#SelfCompassion"
+      ],
       "image": null,
       "link": null,
-      "platforms": ["twitter", "bluesky", "mastodon", "facebook"],
+      "platforms": [
+        "twitter",
+        "bluesky",
+        "mastodon",
+        "facebook"
+      ],
       "schedule": "2026-05-13T08:00:00Z",
       "posted": false
     },
     {
       "id": "post-031",
       "content": "✨ Welcome to Abstract Emporium! ✨\n\nWhere art meets healing.\n\n🎨 Therapeutic coloring books\n🖼️ Abstract art prints & wall decor\n💜 Wellness through creativity\n\nOur mission: Make self-care accessible through art.\n\nExplore our world:",
-      "hashtags": ["#AbstractEmporium", "#IntroducingUs", "#ArtForWellness", "#CreativeHealing"],
+      "hashtags": [
+        "#AbstractEmporium",
+        "#IntroducingUs",
+        "#ArtForWellness",
+        "#CreativeHealing"
+      ],
       "image": null,
       "link": "https://abstractemporium.art/",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-24T09:00:00Z",
       "posted": false
     },
     {
       "id": "post-032",
       "content": "🖼️ NEW: Abstract Art Gallery Now Live!\n\nBrowse 40+ stunning abstract pieces available as:\n✓ Canvas prints\n✓ Framed posters\n✓ Metal prints\n✓ Phone cases\n✓ Home decor\n\nShop on ArtPal, Fine Art America & Hug.art\n\nVisit our gallery:",
-      "hashtags": ["#AbstractArt", "#ArtGallery", "#PrintOnDemand", "#WallArt"],
+      "hashtags": [
+        "#AbstractArt",
+        "#ArtGallery",
+        "#PrintOnDemand",
+        "#WallArt"
+      ],
       "image": null,
       "link": "https://abstractemporium.art/gallery.html",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-24T12:00:00Z",
       "posted": false
     },
     {
       "id": "post-033",
       "content": "🎨 ArtPal Store Spotlight: Neon Gardenz\n\nVibrant neon florals meet abstract chaos.\n\nAvailable as:\n• Canvas prints (multiple sizes)\n• Framed posters\n• Greeting cards\n• Stickers\n\nBring electric energy to your walls! 🌺⚡",
-      "hashtags": ["#NeonGardenz", "#AbstractArt", "#ArtPalArtist", "#VibrantArt"],
+      "hashtags": [
+        "#NeonGardenz",
+        "#AbstractArt",
+        "#ArtPalArtist",
+        "#VibrantArt"
+      ],
       "image": null,
       "link": "https://www.artpal.com/Abstractemporium/?i=284761-1",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-24T15:00:00Z",
       "posted": false
     },
     {
       "id": "post-034",
       "content": "💫 Featured: Ethereal Kaleidoscope\n\nSymmetry meets abstraction in this mesmerizing piece.\n\nPerfect for:\n🧘 Meditation spaces\n🏠 Living rooms\n🎁 Mindful gifts\n\nAvailable on ArtPal - all print sizes!",
-      "hashtags": ["#EtherealKaleidoscope", "#MeditativeArt", "#AbstractPrint", "#HomeDecor"],
+      "hashtags": [
+        "#EtherealKaleidoscope",
+        "#MeditativeArt",
+        "#AbstractPrint",
+        "#HomeDecor"
+      ],
       "image": null,
       "link": "https://www.artpal.com/Abstractemporium/?i=284761-7",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-25T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-035",
       "content": "🌊 Serenity in Waves Collection\n\nFlowing abstract waters that calm the mind.\n\n2 pieces available:\n• Serenity in Waves\n• Flowing Tranquility\n\nBring ocean peace to any room 🌊💙\n\nShop the collection:",
-      "hashtags": ["#SerenityInWaves", "#OceanArt", "#CalmingArt", "#AbstractCollection"],
+      "hashtags": [
+        "#SerenityInWaves",
+        "#OceanArt",
+        "#CalmingArt",
+        "#AbstractCollection"
+      ],
       "image": null,
       "link": "https://www.artpal.com/Abstractemporium/#i3",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-25T14:00:00Z",
       "posted": false
     },
     {
       "id": "post-036",
       "content": "✨ Magical Wonderland Collection\n\n4 enchanting pieces that transport you:\n\n🎪 Pure Imagination\n🌸 Magical Wonderland #1-3\n\nWhimsical abstract art for dreamers & creators.\n\nExplore the magic:",
-      "hashtags": ["#MagicalWonderland", "#WhimsicalArt", "#DreamyArt", "#AbstractMagic"],
+      "hashtags": [
+        "#MagicalWonderland",
+        "#WhimsicalArt",
+        "#DreamyArt",
+        "#AbstractMagic"
+      ],
       "image": null,
       "link": "https://www.artpal.com/Abstractemporium/#i4",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-26T11:00:00Z",
       "posted": false
     },
     {
       "id": "post-037",
       "content": "🌟 Fine Art America Store is LIVE!\n\n26 pieces now available including:\n\n✨ Serenity collection\n🏔️ Magical Mountains\n🌈 Radiant Spectrum\n🚀 Abstract Warrior Cosmic (14 pieces!)\n🎵 Melodic Expressions (8 pieces!)\n\nShop premium prints:",
-      "hashtags": ["#FineArtAmerica", "#ArtPrints", "#AbstractArtist", "#PrintShop"],
+      "hashtags": [
+        "#FineArtAmerica",
+        "#ArtPrints",
+        "#AbstractArtist",
+        "#PrintShop"
+      ],
       "image": null,
       "link": "https://fineartamerica.com/profiles/lissa-beaulieu/shop",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-26T15:00:00Z",
       "posted": false
     },
     {
       "id": "post-038",
       "content": "🏔️ Magical Mountains\n\nAbstract landscape meets majestic peaks.\n\nThis piece is available on:\n📐 Metal prints\n🖼️ Framed canvas\n📱 Phone cases\n🛋️ Throw pillows\n☕ Coffee mugs\n\nTransform any space with mountain magic!",
-      "hashtags": ["#MagicalMountains", "#MountainArt", "#AbstractLandscape", "#NatureAbstract"],
+      "hashtags": [
+        "#MagicalMountains",
+        "#MountainArt",
+        "#AbstractLandscape",
+        "#NatureAbstract"
+      ],
       "image": null,
       "link": "https://fineartamerica.com/featured/magical-mountains-lissa-beaulieu.html",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-27T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-039",
       "content": "🚀 Abstract Warrior Cosmic Collection\n\n14 pieces exploring space, energy & the cosmos!\n\nFrom celestial battles to cosmic meditations - this collection is for stargazers, sci-fi lovers, and cosmic dreamers.\n\nExplore the universe:",
-      "hashtags": ["#CosmicArt", "#SpaceArt", "#AbstractWarrior", "#GalacticArt"],
+      "hashtags": [
+        "#CosmicArt",
+        "#SpaceArt",
+        "#AbstractWarrior",
+        "#GalacticArt"
+      ],
       "image": null,
       "link": "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1138398",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-27T14:00:00Z",
       "posted": false
     },
     {
       "id": "post-040",
       "content": "🎵 Melodic Expressions Series\n\n8 pieces where music meets visual art.\n\nEach piece captures the essence of:\n🎹 Rhythm\n🎸 Harmony\n🎤 Emotion\n🎶 Movement\n\nFor music lovers & abstract art enthusiasts.\n\nHear with your eyes:",
-      "hashtags": ["#MelodicExpressions", "#MusicArt", "#AbstractMusic", "#SynaesthesiaArt"],
+      "hashtags": [
+        "#MelodicExpressions",
+        "#MusicArt",
+        "#AbstractMusic",
+        "#SynaesthesiaArt"
+      ],
       "image": null,
       "link": "https://fineartamerica.com/profiles/lissa-beaulieu.html?tab=artworkgalleries&artworkgalleryid=1136162",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-28T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-041",
       "content": "🌈 Radiant Spectrum\n\nColor explosion meets abstract form.\n\nThis showstopper is perfect for:\n🎨 Art studios\n🏢 Creative offices\n🏠 Statement walls\n🎁 Bold gifts\n\nAvailable on Fine Art America with 30-day money-back guarantee!",
-      "hashtags": ["#RadiantSpectrum", "#ColorfulArt", "#BoldArt", "#StatementPiece"],
+      "hashtags": [
+        "#RadiantSpectrum",
+        "#ColorfulArt",
+        "#BoldArt",
+        "#StatementPiece"
+      ],
       "image": null,
       "link": "https://fineartamerica.com/featured/radiant-spectrum-lissa-beaulieu.html",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-28T15:00:00Z",
       "posted": false
     },
     {
       "id": "post-042",
       "content": "💎 Featured: Chronicles of the Cosmos\n\nA journey through time, space, and abstract reality.\n\nThis intricate piece invites contemplation. Perfect for:\n🧘 Meditation rooms\n📚 Reading nooks\n💼 Office inspiration\n\nAvailable on ArtPal:",
-      "hashtags": ["#ChroniclesOfTheCosmos", "#AbstractNarrative", "#CosmicArt", "#ContemplativeArt"],
+      "hashtags": [
+        "#ChroniclesOfTheCosmos",
+        "#AbstractNarrative",
+        "#CosmicArt",
+        "#ContemplativeArt"
+      ],
       "image": null,
       "link": "https://www.artpal.com/Abstractemporium/?i=284761-8",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-29T11:00:00Z",
       "posted": false
     },
     {
       "id": "post-043",
       "content": "🛍️ Why shop Abstract Emporium?\n\n✅ Multiple platforms (ArtPal & Fine Art America)\n✅ 40+ unique abstract pieces\n✅ Print-on-demand (no waste!)\n✅ Quality guarantee\n✅ All sizes available\n✅ Ships worldwide\n\nFind your perfect piece:",
-      "hashtags": ["#WhyShopWithUs", "#SustainableArt", "#PrintOnDemand", "#AbstractEmporium"],
+      "hashtags": [
+        "#WhyShopWithUs",
+        "#SustainableArt",
+        "#PrintOnDemand",
+        "#AbstractEmporium"
+      ],
       "image": null,
       "link": "https://abstractemporium.art/shop.html",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-29T15:00:00Z",
       "posted": false
     },
     {
       "id": "post-044",
       "content": "✨ Dreamz - Where imagination takes form\n\nSoft pastels meet flowing abstracts in this dreamy piece.\n\nPerfect for:\n🛏️ Bedrooms (peaceful vibes)\n👶 Nurseries (gentle energy)\n🧘 Yoga spaces (calm focus)\n\nShop on ArtPal:",
-      "hashtags": ["#Dreamz", "#PastelArt", "#SoftAbstract", "#PeacefulArt"],
+      "hashtags": [
+        "#Dreamz",
+        "#PastelArt",
+        "#SoftAbstract",
+        "#PeacefulArt"
+      ],
       "image": null,
       "link": "https://www.artpal.com/Abstractemporium/?i=284761-2",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-30T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-045",
       "content": "🔥 Abstract Twist\n\nDynamic energy captured in abstract form.\n\nThis piece brings MOVEMENT to your walls. Bold, energetic, impossible to ignore.\n\nIdeal for:\n💪 Gyms\n🏢 Modern offices\n🎨 Creative studios\n\nGet it on ArtPal:",
-      "hashtags": ["#AbstractTwist", "#DynamicArt", "#EnergeticArt", "#BoldAbstract"],
+      "hashtags": [
+        "#AbstractTwist",
+        "#DynamicArt",
+        "#EnergeticArt",
+        "#BoldAbstract"
+      ],
       "image": null,
       "link": "https://www.artpal.com/Abstractemporium/?i=284761-3",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-04-30T14:00:00Z",
       "posted": false
     },
     {
       "id": "post-046",
       "content": "🌟 Serenity (Fine Art America exclusive)\n\nPure tranquility in abstract form.\n\nThis piece is our most popular for a reason - it brings instant calm to any space.\n\nAvailable in premium formats:\n🖼️ Museum-quality canvas\n🪨 Metal prints\n🧊 Acrylic prints",
-      "hashtags": ["#Serenity", "#TranquilArt", "#CalmingSpace", "#PremiumPrints"],
+      "hashtags": [
+        "#Serenity",
+        "#TranquilArt",
+        "#CalmingSpace",
+        "#PremiumPrints"
+      ],
       "image": null,
       "link": "https://fineartamerica.com/featured/serenity-lissa-beaulieu.html",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-05-01T11:00:00Z",
       "posted": false
     },
     {
       "id": "post-047",
       "content": "💫 Browse by vibe:\n\n🌊 Want calm? → Serenity in Waves\n⚡ Want energy? → Neon Gardenz\n🌌 Want cosmic? → Abstract Warrior\n🎵 Want rhythm? → Melodic Expressions\n🎪 Want whimsy? → Magical Wonderland\n\nFind YOUR vibe at Abstract Emporium:",
-      "hashtags": ["#FindYourVibe", "#AbstractArt", "#MoodArt", "#PersonalStyle"],
+      "hashtags": [
+        "#FindYourVibe",
+        "#AbstractArt",
+        "#MoodArt",
+        "#PersonalStyle"
+      ],
       "image": null,
       "link": "https://abstractemporium.art/gallery.html",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-05-01T15:00:00Z",
       "posted": false
     },
     {
       "id": "post-048",
       "content": "🎁 Gift Guide: Abstract Art Edition\n\nFor the:\n🧘 Meditator → Ethereal Kaleidoscope\n🌊 Ocean lover → Serenity in Waves\n🚀 Space enthusiast → Cosmic Collection\n🎵 Music fan → Melodic Expressions\n🎨 Bold personality → Radiant Spectrum\n\nShop gifts:",
-      "hashtags": ["#GiftGuide", "#ArtGifts", "#AbstractArtGifts", "#ThoughtfulGiving"],
+      "hashtags": [
+        "#GiftGuide",
+        "#ArtGifts",
+        "#AbstractArtGifts",
+        "#ThoughtfulGiving"
+      ],
       "image": null,
       "link": "https://abstractemporium.art/shop.html",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-05-02T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-049",
       "content": "🖼️ Harmony in Contrast\n\nWhere opposites dance together.\n\nLight & dark. Chaos & order. Movement & stillness.\n\nThis piece embodies duality. Perfect for those who embrace both sides of life.\n\nFind balance on ArtPal:",
-      "hashtags": ["#HarmonyInContrast", "#DualityArt", "#BalanceArt", "#PhilosophicalArt"],
+      "hashtags": [
+        "#HarmonyInContrast",
+        "#DualityArt",
+        "#BalanceArt",
+        "#PhilosophicalArt"
+      ],
       "image": null,
       "link": "https://www.artpal.com/Abstractemporium/?i=284761-6",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-05-02T14:00:00Z",
       "posted": false
     },
     {
       "id": "post-050",
       "content": "🌸 Ethereal Whispers\n\nDelicate. Mysterious. Quietly powerful.\n\nThis piece speaks in soft tones but carries profound depth.\n\nFor those who find beauty in subtlety.\n\nExperience the whispers on ArtPal:",
-      "hashtags": ["#EtherealWhispers", "#SubtleArt", "#DelicateBeauty", "#QuietPower"],
+      "hashtags": [
+        "#EtherealWhispers",
+        "#SubtleArt",
+        "#DelicateBeauty",
+        "#QuietPower"
+      ],
       "image": null,
       "link": "https://www.artpal.com/Abstractemporium/?i=284761-9",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-05-03T11:00:00Z",
       "posted": false
     },
     {
       "id": "post-051",
       "content": "🤗 Now on Hug.art!\n\nWe're excited to join Hug.art - a marketplace celebrating independent artists!\n\n✨ Discover our collection:\n• Abstract prints\n• Wall decor\n• Unique art pieces\n\nSupport independent art & find something special:\n\nhttps://hug.art/artists/AbstractEmporiumArt",
-      "hashtags": ["#HugArt", "#IndependentArtist", "#AbstractEmporium", "#SupportArtists"],
+      "hashtags": [
+        "#HugArt",
+        "#IndependentArtist",
+        "#AbstractEmporium",
+        "#SupportArtists"
+      ],
       "image": null,
       "link": "https://hug.art/artists/AbstractEmporiumArt",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-05-03T15:00:00Z",
       "posted": false
     },
     {
       "id": "post-052",
       "content": "🛍️ Where to Shop Abstract Emporium:\n\n🎨 ArtPal - 12 unique pieces\n🖼️ Fine Art America - 26 artworks\n🤗 Hug.art - Independent artist marketplace\n🎨 Ko-fi - Therapeutic coloring books\n\nEach platform offers unique products & print options.\n\nFind your perfect piece!",
-      "hashtags": ["#ShopSmall", "#AbstractArt", "#WhereToBuy", "#ArtShopping"],
+      "hashtags": [
+        "#ShopSmall",
+        "#AbstractArt",
+        "#WhereToBuy",
+        "#ArtShopping"
+      ],
       "image": null,
       "link": "https://abstractemporium.art/",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-05-04T12:00:00Z",
       "posted": false
     },
     {
       "id": "post-053",
       "content": "💜 Why Shop on Hug.art?\n\n✨ Celebrates independent artists\n🎨 Direct support to creators\n🌍 Global artist community\n💝 Unique, one-of-a-kind pieces\n🤗 Artist-friendly platform\n\nVisit our Hug.art shop & support indie art:",
-      "hashtags": ["#HugArt", "#IndieArtist", "#SupportCreators", "#AbstractEmporium"],
+      "hashtags": [
+        "#HugArt",
+        "#IndieArtist",
+        "#SupportCreators",
+        "#AbstractEmporium"
+      ],
       "image": null,
       "link": "https://hug.art/artists/AbstractEmporiumArt",
-      "platforms": ["mastodon", "bluesky"],
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
       "schedule": "2026-05-05T10:00:00Z",
       "posted": false
     }

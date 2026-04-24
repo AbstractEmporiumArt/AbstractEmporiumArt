@@ -261,7 +261,7 @@ async function handleRequest(request) {
   return new Response(JSON.stringify({ success: true }), {
     headers: { 
       'content-type': 'application/json',
-      'Access-Control-Allow-Origin': 'https://abstractemporiumart.github.io'
+      'Access-Control-Allow-Origin': 'https://abstractemporium.art'
     }
   })
 }

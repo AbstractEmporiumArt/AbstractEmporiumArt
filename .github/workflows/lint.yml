@@ -36,7 +36,7 @@ jobs:
       - name: Check required HTML files
         run: |
           echo "Checking HTML files..."
-          for f in index.html gallery.html shop.html item-detail.html contact.html features.html canvas.html pattern.html; do
+          for f in index.html gallery.html shop.html item-detail.html contact.html features.html pattern.html; do
             [ -f "$f" ] && echo "✓ $f" || (echo "✗ Missing $f"; exit 1)
           done
 

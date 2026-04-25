@@ -4153,24 +4153,60 @@ img.loaded {
     display: flex;
     align-items: flex-end;
     padding: 30px;
-    background: linear-gradient(135deg, #dfe6e9 0%, #b2bec3 100%);
+    transition: all 0.3s ease;
 }
 
-.coming-soon-card {
-    cursor: default;
-    opacity: 0.85;
+/* Chaos & Calm - Vibrant gradient */
+.chaos-calm-card {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #6c5ce7 100%);
 }
 
-.coming-soon-badge {
+.chaos-calm-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+}
+
+/* Invisible Pain - Deep purple */
+.invisible-pain-card {
+    background: linear-gradient(135deg, #5f27cd 0%, #341f97 100%);
+}
+
+.invisible-pain-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(95, 39, 205, 0.4);
+}
+
+/* Healing Lines - Nature greens */
+.healing-lines-card {
+    background: linear-gradient(135deg, #00b894 0%, #00a86b 100%);
+}
+
+.healing-lines-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 184, 148, 0.4);
+}
+
+/* Complete Collection - Gold premium */
+.complete-collection-card {
+    background: linear-gradient(135deg, #2d3436 0%, #1a1a2e 100%);
+    border: 2px solid #ffd700;
+}
+
+.complete-collection-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.price-badge {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #fdcb6e;
+    background: rgba(255, 255, 255, 0.95);
     color: #2d3436;
     padding: 8px 16px;
     border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 700;
+    font-size: 1rem;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -4192,12 +4228,17 @@ img.loaded {
     line-height: 1.5;
 }
 
-.banner-link.disabled {
+.coloring-book-card .banner-link {
     display: inline-block;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.6);
+    text-decoration: underline;
+    color: white;
     font-size: 0.95rem;
-    cursor: not-allowed;
+    transition: all 0.2s ease;
+}
+
+.coloring-book-card:hover .banner-link {
+    transform: translateX(5px);
 }
 
 .notify-message {

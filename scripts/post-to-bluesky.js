@@ -210,11 +210,12 @@ function saveContentQueue(queue) {
 function getNextPost(queue) {
   const now = new Date();
   
-  return queue.posts.find(post => 
-    !post.posted &&
-    post.platforms.includes('bluesky') &&
-    new Date(post.schedule) <= now
-  );
+  return queue.posts.find(post => {
+    const postedPlatforms = post.postedPlatforms || [];
+    return !postedPlatforms.includes('bluesky') &&
+      post.platforms.includes('bluesky') &&
+      new Date(post.schedule) <= now;
+  });
 }
 
 /**
@@ -254,13 +255,25 @@ async function main() {
     console.log('✅ Posted successfully to Bluesky!');
     console.log(`🔗 Post URL: ${postUrl}`);
     
-    // Mark as posted
+    // Mark as posted on Bluesky (per-platform tracking)
     const postIndex = queue.posts.findIndex(p => p.id === post.id);
     if (postIndex !== -1) {
-      queue.posts[postIndex].posted = true;
+      if (!queue.posts[postIndex].postedPlatforms) {
+        queue.posts[postIndex].postedPlatforms = [];
+      }
+      queue.posts[postIndex].postedPlatforms.push('bluesky');
       queue.posts[postIndex].postedAt = new Date().toISOString();
       queue.posts[postIndex].blueskyUrl = postUrl;
       queue.posts[postIndex].blueskyUri = response.uri;
+      
+      // Mark as fully posted only if all platforms are done
+      const allPosted = queue.posts[postIndex].platforms.every(platform => 
+        queue.posts[postIndex].postedPlatforms.includes(platform)
+      );
+      if (allPosted) {
+        queue.posts[postIndex].posted = true;
+      }
+      
       saveContentQueue(queue);
       console.log('💾 Updated content queue');
     }

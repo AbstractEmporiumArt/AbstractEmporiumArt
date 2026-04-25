@@ -26,7 +26,7 @@ jobs:
       - name: Check project structure
         run: |
           echo "Checking project structure..."
-          for f in index.html gallery.html shop.html item-detail.html contact.html features.html canvas.html pattern.html script.js helper-bot.js image-loader.js item-detail.js gallery-data.js styles.css; do
+          for f in index.html gallery.html shop.html item-detail.html contact.html features.html pattern.html script.js helper-bot.js image-loader.js item-detail.js gallery-data.js styles.css; do
             [ -f "$f" ] && echo "✓ $f" || (echo "✗ Missing $f"; exit 1)
           done
 

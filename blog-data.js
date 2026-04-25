@@ -59,6 +59,71 @@ const blogPosts = [
             <p class="signature">— Lissa 💜</p>
         `,
         tags: ["art therapy", "mental health", "creative process", "therapeutic art", "coloring books"]
+    },
+    {
+        id: 2,
+        title: "From Mémère's Hands to Mine: A Lifetime of Knitting as Therapy",
+        date: "April 25, 2026",
+        author: "Lissa Beaulieu",
+        category: "Craft Therapy",
+        excerpt: "Knitting isn't just a hobby - it's a thread connecting generations, a tool for healing, and a rhythm that brings peace. From childhood squares to therapeutic slippers after disability.",
+        image: "banner.jpg",
+        content: `
+            <p>I've been knitting and crocheting since I was a kid. My Mémère and my mom taught me both crafts, patiently guiding my little hands through the motions. Knitting and crochet were a big thing in our family - passed down through generations.</p>
+
+            <p>I remember starting with small knitted squares - just simple, basic stitches repeated over and over.</p>
+
+            <h2>Piles of Little Squares & Community Joy</h2>
+            <p>I knitted <em>piles</em> of those little squares. In my hometown, people would donate these knitted squares, and they'd be assembled into blankets for retirement homes. I remember how much joy that brought me - knowing my work, as simple as it was, would bring warmth and comfort to someone else.</p>
+
+            <p>But getting there wasn't easy! Learning to work the knitting needles took <em>so long</em>. Understanding tension - not knitting too tight or too loose - was a real struggle.</p>
+
+            <h2>The Crooked Crochet Centerpiece</h2>
+            <p>When I learned crochet, oh boy... I remember making a crochet centerpiece that was all sorts of crooked because I'd crochet super loose in one section, then super tight in another. It looked <em>terrible</em>! 😂</p>
+
+            <p>But you know what? I kept it for years and put it on my table anyway. Because it represented learning, effort, and the imperfect beauty of the creative process. Great memories, even if that centerpiece is long gone now.</p>
+
+            <h2>Phennex Slippers, Checkerboard Patterns & Life Getting in the Way</h2>
+            <p>Shortly after that, I learned how to make knitted slippers - phennex style with checkerboard and striped patterns. That took a LONG time by itself due to the pattern complexity, but it became my main product. I knew it very well. I also learned scarves along the way.</p>
+
+            <p>Then adult life came... and knitting fully stopped. Work, responsibilities, the daily grind - it all pushed my needles into a forgotten drawer.</p>
+
+            <h2>Disability, Rediscovery & Knitting as Therapy</h2>
+            <p>Everything changed when I became disabled from workplace injuries. During that difficult transition, I needed something - anything - to help me process what I was going through.</p>
+
+            <p>I picked up my needles again. And knitting became my therapy.</p>
+
+            <p>I relearned how to make those striped and checkerboard phennex slippers. Taught myself how to make tuques (beanies) and pom-poms. Each stitch was meditation. Each row was progress. Each finished piece was proof that I could still create, still contribute, still make beautiful things despite everything.</p>
+
+            <h2>The Therapeutic Rhythm of Repetitive Motion</h2>
+            <p>There's something deeply healing about the rhythm of knitting. The repetitive motion. The focus required. The way your mind quiets when your hands are busy creating.</p>
+
+            <p>It's similar to the flow state I find with fluid art pouring - but knitting has this added dimension of <em>tangible usefulness</em>. You're making something functional, something that will keep someone warm, something you can gift with love.</p>
+
+            <h2>My Next Mission: Knitted Socks!</h2>
+            <p>My next challenge? Learning how to make knitted socks. It's intimidating - the shaping, the heel turn, getting the fit right - but that's part of the excitement. Every new pattern is a puzzle to solve, a skill to master.</p>
+
+            <p>And honestly? The struggle is part of the therapy. It keeps my mind engaged, gives me goals, reminds me I'm still learning and growing.</p>
+
+            <h2>Why Craft Therapy Matters</h2>
+            <p>Whether it's knitting, coloring, painting, or any other hands-on creative work - these activities aren't just hobbies. They're tools for:</p>
+            <ul>
+                <li>🧶 <strong>Mindfulness:</strong> Focusing on the present stitch, not tomorrow's worries</li>
+                <li>💪 <strong>Accomplishment:</strong> Finishing a project builds confidence</li>
+                <li>🤲 <strong>Motor skills:</strong> Keeping hands active and coordinated</li>
+                <li>❤️ <strong>Connection:</strong> Sharing handmade gifts strengthens relationships</li>
+                <li>🧠 <strong>Cognitive exercise:</strong> Following patterns keeps the mind sharp</li>
+                <li>😌 <strong>Stress relief:</strong> The rhythm is naturally calming</li>
+            </ul>
+
+            <h2>From Mémère to Me to You</h2>
+            <p>My Mémère taught my mom. My mom taught me. Knitting and crochet were treasured family traditions. And through Abstract Emporium, I hope to share that same gift - the knowledge that creativity heals, that imperfect is beautiful, that every crooked centerpiece and wonky square is still worthy of being treasured.</p>
+
+            <p>If you're going through a tough time, consider picking up needles, hooks, colored pencils, or paintbrushes. Let your hands be busy while your heart heals. The therapeutic power of creating something - anything - is real.</p>
+
+            <p class="signature">— Lissa 💜<br>P.S. If anyone has tips for knitting socks, I'm all ears! 🧦</p>
+        `,
+        tags: ["knitting", "craft therapy", "disability", "healing", "family traditions", "handmade"]
     }
 ];
 

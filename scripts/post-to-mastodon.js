@@ -121,11 +121,12 @@ function saveContentQueue(queue) {
 function getNextPost(queue) {
   const now = new Date();
   
-  return queue.posts.find(post => 
-    !post.posted &&
-    post.platforms.includes('mastodon') &&
-    new Date(post.schedule) <= now
-  );
+  return queue.posts.find(post => {
+    const postedPlatforms = post.postedPlatforms || [];
+    return !postedPlatforms.includes('mastodon') &&
+      post.platforms.includes('mastodon') &&
+      new Date(post.schedule) <= now;
+  });
 }
 
 /**
@@ -157,12 +158,24 @@ async function main() {
     console.log('✅ Posted successfully to Mastodon!');
     console.log(`🔗 Post URL: ${response.url}`);
     
-    // Mark as posted
+    // Mark as posted on Mastodon (per-platform tracking)
     const postIndex = queue.posts.findIndex(p => p.id === post.id);
     if (postIndex !== -1) {
-      queue.posts[postIndex].posted = true;
+      if (!queue.posts[postIndex].postedPlatforms) {
+        queue.posts[postIndex].postedPlatforms = [];
+      }
+      queue.posts[postIndex].postedPlatforms.push('mastodon');
       queue.posts[postIndex].postedAt = new Date().toISOString();
       queue.posts[postIndex].mastodonUrl = response.url;
+      
+      // Mark as fully posted only if all platforms are done
+      const allPosted = queue.posts[postIndex].platforms.every(platform => 
+        queue.posts[postIndex].postedPlatforms.includes(platform)
+      );
+      if (allPosted) {
+        queue.posts[postIndex].posted = true;
+      }
+      
       saveContentQueue(queue);
       console.log('💾 Updated content queue');
     }

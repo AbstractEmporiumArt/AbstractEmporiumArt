@@ -187,7 +187,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-14-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-14-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -196,7 +196,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-13-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-13-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -205,7 +205,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-12-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-12-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -214,7 +214,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-11-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-11-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -223,7 +223,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-10-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-10-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -232,7 +232,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-9-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-9-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -241,7 +241,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-8-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-8-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -250,7 +250,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-7-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-7-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -259,7 +259,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-6-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-6-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -268,7 +268,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-5-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-5-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -277,7 +277,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-4-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-4-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -286,7 +286,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-3-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-3-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -295,7 +295,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-2-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-2-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     {
@@ -304,7 +304,7 @@ const galleryData = [
         collection: "Abstract Warrior Cosmic Collection",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/cosmic-1-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/abstract-warrior-cosmic-collection-lissa-beaulieu-1693422973.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/cosmic-1-lissa-beaulieu.jpg",
         category: "Cosmic"
     },
     // Fine Art America - Melodic Expressions Collection
@@ -314,7 +314,7 @@ const galleryData = [
         collection: "Melodic Expressions",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/vibrant-crescendo-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/melodic-expressions-lissa-beaulieu-1692195071.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/vibrant-crescendo-lissa-beaulieu.jpg",
         category: "Music"
     },
     {
@@ -323,7 +323,7 @@ const galleryData = [
         collection: "Melodic Expressions",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/pastoral-harmony-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/melodic-expressions-lissa-beaulieu-1692195071.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/pastoral-harmony-lissa-beaulieu.jpg",
         category: "Music"
     },
     {
@@ -332,7 +332,7 @@ const galleryData = [
         collection: "Melodic Expressions",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/harmonic-fusion-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/melodic-expressions-lissa-beaulieu-1692195071.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/harmonic-fusion-lissa-beaulieu.jpg",
         category: "Music"
     },
     {
@@ -341,7 +341,7 @@ const galleryData = [
         collection: "Melodic Expressions",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/radiant-melodies-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/melodic-expressions-lissa-beaulieu-1692195071.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/radiant-melodies-lissa-beaulieu.jpg",
         category: "Music"
     },
     {
@@ -350,7 +350,7 @@ const galleryData = [
         collection: "Melodic Expressions",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/spiraling-symphony-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/melodic-expressions-lissa-beaulieu-1692195071.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/spiraling-symphony-lissa-beaulieu.jpg",
         category: "Music"
     },
     {
@@ -359,7 +359,7 @@ const galleryData = [
         collection: "Melodic Expressions",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/rhythmic-connections-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/melodic-expressions-lissa-beaulieu-1692195071.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/rhythmic-connections-lissa-beaulieu.jpg",
         category: "Music"
     },
     {
@@ -368,7 +368,7 @@ const galleryData = [
         collection: "Melodic Expressions",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/infinite-melodies-lissa-beaulieu.html",
-        image: "https://images.fineartamerica.com/images/artworkgallerylogos/2/melodic-expressions-lissa-beaulieu-1692195071.jpg",
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/infinite-melodies-lissa-beaulieu.jpg",
         category: "Music"
     },
     {
@@ -377,7 +377,7 @@ const galleryData = [
         collection: "Melodic Expressions",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/harmony-of-music-lissa-beaulieu.html",
-        image: null,
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/harmony-of-music-lissa-beaulieu.jpg",
         category: "Music",
         description: "Part of Melodic Expressions Series"
     },
@@ -388,7 +388,7 @@ const galleryData = [
         collection: "Featured",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/serenity-lissa-beaulieu.html",
-        image: null,
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/serenity-lissa-beaulieu.jpg",
         category: "Serenity",
         description: "A serene abstract composition"
     },
@@ -398,7 +398,7 @@ const galleryData = [
         collection: "Featured",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/magical-mountains-lissa-beaulieu.html",
-        image: null,
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/magical-mountains-lissa-beaulieu.jpg",
         category: "Landscape",
         description: "Mountain-inspired abstract artwork"
     },
@@ -408,7 +408,7 @@ const galleryData = [
         collection: "Featured",
         platform: "Fine Art America",
         link: "https://fineartamerica.com/featured/radiant-spectrum-lissa-beaulieu.html",
-        image: null,
+        image: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/radiant-spectrum-lissa-beaulieu.jpg",
         category: "Abstract",
         description: "A spectrum of radiant colors and forms"
     },
@@ -633,5 +633,46 @@ const galleryData = [
         image: null,
         category: "Music",
         description: "Part of Melodic Expressions Series (1-8)"
+    },
+    // Hug.art - NFT Artworks
+    {
+        id: 64,
+        title: "Abstract Emporium NFT #1",
+        collection: "Hug.art Collection",
+        platform: "Hug.art",
+        link: "https://hug.art/artists/AbstractEmporiumArt/updates/eead56ff-baef-48ea-a0ec-660b6428aa1c",
+        image: null,
+        category: "NFT",
+        description: "NFT artwork on Hug.art marketplace"
+    },
+    {
+        id: 65,
+        title: "Abstract Emporium NFT #2",
+        collection: "Hug.art Collection",
+        platform: "Hug.art",
+        link: "https://hug.art/artists/AbstractEmporiumArt/updates/e9cc4596-5885-4e07-9a62-04c0d41334d1",
+        image: null,
+        category: "NFT",
+        description: "NFT artwork on Hug.art marketplace"
+    },
+    {
+        id: 66,
+        title: "Abstract Emporium NFT #3",
+        collection: "Hug.art Collection",
+        platform: "Hug.art",
+        link: "https://hug.art/artists/AbstractEmporiumArt/updates/542d49de-ac0d-4c3e-bd06-02083e780021",
+        image: null,
+        category: "NFT",
+        description: "NFT artwork on Hug.art marketplace"
+    },
+    {
+        id: 67,
+        title: "Abstract Emporium NFT #4",
+        collection: "Hug.art Collection",
+        platform: "Hug.art",
+        link: "https://hug.art/artists/AbstractEmporiumArt/updates/0c8a2854-6256-441d-a5a6-7f50c55e4de2",
+        image: null,
+        category: "NFT",
+        description: "NFT artwork on Hug.art marketplace"
     }
 ];

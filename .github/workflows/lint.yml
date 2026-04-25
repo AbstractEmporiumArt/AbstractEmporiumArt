@@ -21,7 +21,7 @@ jobs:
       - name: Check JSON files
         run: |
           echo "Validating JSON files..."
-          node -e "const fs = require('fs'); ['vercel.json', 'package.json'].forEach(f => { JSON.parse(fs.readFileSync(f, 'utf8')); console.log('✓ ' + f); });"
+          node -e "const fs = require('fs'); JSON.parse(fs.readFileSync('package.json', 'utf8')); console.log('✓ package.json');"
 
       - name: Check JavaScript syntax
         run: |

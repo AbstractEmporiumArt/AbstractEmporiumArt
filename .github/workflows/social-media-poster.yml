@@ -1,11 +1,11 @@
 name: Social Media Auto-Poster
 
 on:
-  # PAUSED: Run twice daily: 10am and 4pm UTC
-  # schedule:
-  #   - cron: '0 10,16 * * *'  # 10:00 AM and 4:00 PM UTC daily
+  # Run twice daily: 10am and 4pm UTC
+  schedule:
+    - cron: '0 10,16 * * *'  # 10:00 AM and 4:00 PM UTC daily
   
-  # Allow manual trigger only (workflow disabled until domain is ready)
+  # Allow manual trigger for testing
   workflow_dispatch:
     inputs:
       platform:

@@ -1,24 +1,19 @@
-name: Deploy to Vercel
+name: Deploy to Vercel (DISABLED - Using GitHub Pages)
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_dispatch:  # Manual trigger only
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: production
+    if: false  # Workflow disabled - site hosted on GitHub Pages
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Install Vercel CLI
         run: npm install -g vercel
-
-      - name: Validate vercel.json
-        run: node -e "JSON.parse(require('fs').readFileSync('vercel.json', 'utf8')); console.log('✓ vercel.json is valid')"
 
       - name: Deploy to Vercel
         env:

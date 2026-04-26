@@ -46,6 +46,20 @@
             margin-bottom: 40px;
         }
 
+        .blog-post-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
         .blog-post-image {
             width: 100%;
             height: 300px;
@@ -93,6 +107,23 @@
             color: #555;
             line-height: 1.6;
             margin-bottom: 20px;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary-color, #4a90e2);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .read-more-btn:hover {
+            background: #357abd;
+            transform: translateX(5px);
         }
 
         .blog-post-full {
@@ -270,7 +301,7 @@
             
             blogPosts.forEach(post => {
                 const postElement = document.createElement('article');
-                postElement.className = 'blog-post';
+                postElement.className = 'blog-post-card';
                 
                 postElement.innerHTML = `
                     <img src="${post.image}" alt="${post.title}" class="blog-post-image">
@@ -280,30 +311,17 @@
                             <span>✍️ ${post.author}</span>
                             <span>🏷️ ${post.category}</span>
                         </div>
-                        <h2 class="blog-post-title">
-                            <a href="#post-${post.id}">${post.title}</a>
-                        </h2>
-                        <div class="blog-post-full">
-                            ${post.content}
-                        </div>
+                        <h2 class="blog-post-title">${post.title}</h2>
+                        <p class="blog-post-excerpt">${post.excerpt}</p>
                         <div class="blog-tags">
                             ${post.tags.map(tag => `<span class="blog-tag">#${tag}</span>`).join('')}
                         </div>
+                        <a href="blog-post-${post.id}.html" class="read-more-btn">Read Full Article →</a>
                     </div>
                 `;
                 
                 blogPostsContainer.appendChild(postElement);
             });
-
-            // Mobile menu toggle
-            const hamburger = document.querySelector('.hamburger');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (hamburger) {
-                hamburger.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                });
-            }
         });
     </script>
 </body>

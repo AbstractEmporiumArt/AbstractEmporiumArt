@@ -62,7 +62,7 @@ const blogPosts = [
     },
     {
         id: 2,
-        title: "From Mémère's Hands to Mine: A Lifetime of Knitting as Therapy",
+        title: "From Mémère's and My Mom's Hands to Mine: A Lifetime of Knitting as Therapy",
         date: "April 25, 2026",
         author: "Lissa Beaulieu",
         category: "Craft Therapy",

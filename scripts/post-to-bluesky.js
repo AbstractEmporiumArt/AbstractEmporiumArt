@@ -159,26 +159,40 @@ async function postToBluesky(content, session) {
 
 /**
  * Format post content with hashtags
+ * Ensures content stays under 300 character limit for Bluesky
  */
 function formatPost(post) {
+  const BLUESKY_LIMIT = 300;
+  const ELLIPSIS = '...';
+  const LINK_LENGTH = post.link ? post.link.length + 4 : 0; // "\n\n🔗 " = 4 chars
+  
   let content = post.content;
+  let hashtags = post.hashtags && post.hashtags.length > 0 
+    ? '\n\n' + post.hashtags.join(' ') 
+    : '';
+  
+  // Calculate available space
+  let availableSpace = BLUESKY_LIMIT - LINK_LENGTH - hashtags.length;
+  
+  // Truncate content if necessary
+  if (content.length > availableSpace) {
+    content = content.substring(0, availableSpace - ELLIPSIS.length) + ELLIPSIS;
+  }
+  
+  // Build final post
+  let finalPost = content + hashtags;
   
   // Add link if present
   if (post.link) {
-    content += `\n\n🔗 ${post.link}`;
+    finalPost += `\n\n🔗 ${post.link}`;
   }
   
-  // Add hashtags
-  if (post.hashtags && post.hashtags.length > 0) {
-    content += '\n\n' + post.hashtags.join(' ');
+  // Final safety check
+  if (finalPost.length > BLUESKY_LIMIT) {
+    finalPost = finalPost.substring(0, BLUESKY_LIMIT - ELLIPSIS.length) + ELLIPSIS;
   }
   
-  // Bluesky has a 300 character limit
-  if (content.length > 300) {
-    content = content.substring(0, 297) + '...';
-  }
-  
-  return content;
+  return finalPost;
 }
 
 /**

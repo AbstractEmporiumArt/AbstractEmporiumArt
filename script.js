@@ -9,9 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
         addBotGreeting();
     }
     
-    initializeGallery();
-    setupCommunityCanvasTools();
-    setupPatternGeneratorTabs();
+    // Only initialize gallery if galleryData exists and gallery element is present
+    if (typeof galleryData !== 'undefined' && document.getElementById('galleryGrid')) {
+        initializeGallery();
+    }
+    
+    // Only initialize canvas tools if canvas element exists
+    if (document.querySelector('.community-canvas')) {
+        setupCommunityCanvasTools();
+    }
+    
+    // Only initialize pattern generator if element exists
+    if (document.querySelector('.pattern-generator')) {
+        setupPatternGeneratorTabs();
+    }
     
     // Mobile Menu Toggle - moved inside DOMContentLoaded
     const hamburger = document.querySelector('.hamburger');
@@ -86,6 +97,11 @@ function toggleChatbot() {
 function initializeGallery() {
     const galleryGrid = document.getElementById('galleryGrid');
     const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    // Exit if galleryData or galleryGrid don't exist
+    if (typeof galleryData === 'undefined' || !galleryGrid) {
+        return;
+    }
     
     // Display gallery items
     function displayGallery(items) {

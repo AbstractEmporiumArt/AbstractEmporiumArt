@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
     setupCommunityCanvasTools();
     setupPatternGeneratorTabs();
     
+    // Mobile Menu Toggle - moved inside DOMContentLoaded
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    }
+    
     // Observe gallery items for animations
     setTimeout(() => {
         document.querySelectorAll('.gallery-item, .store-card').forEach(item => {
@@ -146,17 +157,6 @@ function initializeGallery() {
     
     // Display all items initially
     displayGallery(galleryData);
-}
-
-// Mobile Menu Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
 }
 
 // Smooth Scrolling for Navigation Links

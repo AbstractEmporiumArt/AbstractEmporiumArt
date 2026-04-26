@@ -75,21 +75,40 @@ async function postToMastodon(content, visibility = 'public') {
 
 /**
  * Format post content with hashtags
+ * Ensures content stays under 500 character limit for Mastodon
  */
 function formatPost(post) {
+  const MASTODON_LIMIT = 500;
+  const ELLIPSIS = '...';
+  const LINK_LENGTH = post.link ? post.link.length + 4 : 0; // "\n\n🔗 " = 4 chars
+  
   let content = post.content;
+  let hashtags = post.hashtags && post.hashtags.length > 0 
+    ? '\n\n' + post.hashtags.join(' ') 
+    : '';
+  
+  // Calculate available space
+  let availableSpace = MASTODON_LIMIT - LINK_LENGTH - hashtags.length;
+  
+  // Truncate content if necessary
+  if (content.length > availableSpace) {
+    content = content.substring(0, availableSpace - ELLIPSIS.length) + ELLIPSIS;
+  }
+  
+  // Build final post
+  let finalPost = content + hashtags;
   
   // Add link if present
   if (post.link) {
-    content += `\n\n🔗 ${post.link}`;
+    finalPost += `\n\n🔗 ${post.link}`;
   }
   
-  // Add hashtags
-  if (post.hashtags && post.hashtags.length > 0) {
-    content += '\n\n' + post.hashtags.join(' ');
+  // Final safety check
+  if (finalPost.length > MASTODON_LIMIT) {
+    finalPost = finalPost.substring(0, MASTODON_LIMIT - ELLIPSIS.length) + ELLIPSIS;
   }
   
-  return content;
+  return finalPost;
 }
 
 /**

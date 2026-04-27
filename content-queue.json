@@ -166,9 +166,14 @@
       ],
       "schedule": "2026-04-20T09:00:00Z",
       "posted": true,
-      "postedAt": "2026-04-24T13:55:21.427Z",
-      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mkaoiulyzb2j",
-      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mkaoiulyzb2j"
+      "postedAt": "2026-04-27T17:13:35.216Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mkiky3s2ml2v",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mkiky3s2ml2v",
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116477789108970045"
     },
     {
       "id": "post-008",

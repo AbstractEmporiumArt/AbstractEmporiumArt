@@ -246,9 +246,12 @@
       ],
       "schedule": "2026-04-24T16:00:00Z",
       "posted": true,
-      "postedAt": "2026-04-24T19:04:42.489Z",
-      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mkb7rzszfl2g",
-      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mkb7rzszfl2g"
+      "postedAt": "2026-04-29T11:21:49.475Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mkmyawqbrv2c",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mkmyawqbrv2c",
+      "postedPlatforms": [
+        "bluesky"
+      ]
     },
     {
       "id": "post-011",
@@ -267,7 +270,12 @@
         "facebook"
       ],
       "schedule": "2026-04-25T10:00:00Z",
-      "posted": false
+      "posted": false,
+      "postedPlatforms": [
+        "mastodon"
+      ],
+      "postedAt": "2026-04-29T11:21:48.892Z",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116487730543317999"
     },
     {
       "id": "post-012",

@@ -14,11 +14,8 @@
       "image": "Chaos-Calm/Chaos-and-Calm-Cover.png",
       "link": "https://abstractemporium.art/bundle-chaos-calm.html",
       "platforms": [
-        "twitter",
-        "bluesky",
         "mastodon",
-        "facebook",
-        "pinterest"
+        "bluesky"
       ],
       "schedule": "2026-04-15T09:00:00Z",
       "posted": true,
@@ -43,9 +40,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
-        "mastodon"
+        "mastodon",
+        "bluesky"
       ],
       "schedule": "2026-04-16T14:00:00Z",
       "posted": true,
@@ -71,11 +67,8 @@
       "image": "Invisible-Pain/Invisible-Pain-Cover.png",
       "link": "https://abstractemporium.art/bundle-invisible-pain.html",
       "platforms": [
-        "twitter",
-        "bluesky",
         "mastodon",
-        "facebook",
-        "pinterest"
+        "bluesky"
       ],
       "schedule": "2026-04-17T10:00:00Z",
       "posted": true,
@@ -100,11 +93,8 @@
       "image": "Healing-Lines/Healing-Lines-Cover.png",
       "link": "https://abstractemporium.art/bundle-healing-lines.html",
       "platforms": [
-        "twitter",
-        "bluesky",
         "mastodon",
-        "facebook",
-        "pinterest"
+        "bluesky"
       ],
       "schedule": "2026-04-18T11:00:00Z",
       "posted": true,
@@ -129,11 +119,8 @@
       "image": null,
       "link": "https://abstractemporium.art/bundle-chaos-calm.html",
       "platforms": [
-        "twitter",
-        "instagram",
-        "bluesky",
         "mastodon",
-        "facebook"
+        "bluesky"
       ],
       "schedule": "2026-04-19T15:00:00Z",
       "posted": true,
@@ -158,11 +145,8 @@
       "image": "Abstract-Mind-Collection/Abstract-Mind-Collection-Cover.png",
       "link": "https://abstractemporium.art/bundle-abstract-mind.html",
       "platforms": [
-        "twitter",
-        "bluesky",
         "mastodon",
-        "facebook",
-        "pinterest"
+        "bluesky"
       ],
       "schedule": "2026-04-20T09:00:00Z",
       "posted": true,
@@ -187,10 +171,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
         "mastodon",
-        "facebook"
+        "bluesky"
       ],
       "schedule": "2026-04-22T08:00:00Z",
       "posted": true,
@@ -214,9 +196,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
-        "mastodon"
+        "mastodon",
+        "bluesky"
       ],
       "schedule": "2026-04-23T12:00:00Z",
       "posted": true,
@@ -231,27 +212,26 @@
     },
     {
       "id": "post-010",
-      "content": "🌟 CUSTOMER LOVE:\n\n\"I bought this bundle and haven't looked at another coloring book in months. 200 pages is INSANE value.\" - Rachel P.\n\nThank you for the love! Stories like this fuel our passion for creating therapeutic art.\n\nWant to be featured? Tag #AbstractEmporiumArt in your posts! 💚",
+      "content": "✨ Discover Abstract Emporium ✨\n\nYour destination for therapeutic coloring & abstract art.\n\n🎨 3 Coloring Books ($7.99 each)\n💜 Complete Collection ($19.99)\n🖼️ 70+ Abstract Art Prints\n🌐 Shop: ArtPal, Fine Art America, Hug.art\n\nExplore our world:\nhttps://abstractemporium.art",
       "hashtags": [
-        "#CustomerTestimonial",
-        "#CustomerLove",
-        "#AbstractEmporiumArt"
+        "#AbstractEmporium",
+        "#TherapeuticArt",
+        "#ColoringBooks",
+        "#AbstractArt"
       ],
       "image": null,
-      "link": "https://abstractemporium.art/bundle-abstract-mind.html",
+      "link": "https://abstractemporium.art",
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook"
-      ],
-      "schedule": "2026-04-24T16:00:00Z",
-      "posted": true,
-      "postedAt": "2026-04-29T11:21:49.475Z",
-      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mkmyawqbrv2c",
-      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mkmyawqbrv2c",
-      "postedPlatforms": [
+        "mastodon",
         "bluesky"
-      ]
+      ],
+      "schedule": "2026-05-01T10:00:00Z",
+      "posted": false,
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "postedPlatforms": [],
+      "mastodonUrl": null
     },
     {
       "id": "post-011",
@@ -264,10 +244,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
         "mastodon",
-        "facebook"
+        "bluesky"
       ],
       "schedule": "2026-04-25T10:00:00Z",
       "posted": false,
@@ -282,21 +260,20 @@
     },
     {
       "id": "post-012",
-      "content": "🔥 FLASH SALE ALERT! 🔥\n\n24 HOURS ONLY: 20% OFF ALL COLORING BOOKS\nUse code: FLASH20\n\n✅ Chaos & Calm - $6.39 (was $7.99)\n✅ Invisible Pain - $6.39 (was $7.99)\n✅ Healing Lines - $6.39 (was $7.99)\n✅ Complete Collection - $15.99 (was $19.99)\n\nExpires tomorrow at midnight! Don't miss out 🎨",
+      "content": "🌐 VISIT OUR WEBSITE!\n\nabstractemporium.art\n\n✨ Browse therapeutic coloring books\n🖼️ Explore 70+ abstract art pieces\n🎨 Shop across multiple platforms\n💜 Find your perfect piece\n\nYour journey to creative wellness starts here!",
       "hashtags": [
-        "#FlashSale",
-        "#ColoringBookSale",
-        "#LimitedTimeOffer"
+        "#AbstractEmporium",
+        "#VisitUs",
+        "#TherapeuticArt",
+        "#CreativeWellness"
       ],
       "image": null,
       "link": "https://abstractemporium.art",
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook",
-        "pinterest"
+        "mastodon",
+        "bluesky"
       ],
-      "schedule": "2026-04-26T09:00:00Z",
+      "schedule": "2026-05-02T10:00:00Z",
       "posted": false,
       "postedPlatforms": [
         "bluesky"
@@ -307,20 +284,20 @@
     },
     {
       "id": "post-013",
-      "content": "⏰ SALE ENDS TONIGHT!\n\nLast chance for 20% off all coloring books\nCode: FLASH20\n\nExpires at midnight EST (6 hours!)\n\nGrab your therapeutic coloring books now 💚",
+      "content": "🎨 WHY CHOOSE ABSTRACT EMPORIUM?\n\n✨ Therapeutic coloring designed by an artist who understands healing\n🖼️ 70+ unique abstract art pieces\n💜 Affordable wellness tools ($7.99-$19.99)\n🌐 Shop on your favorite platform\n🎁 Instant digital downloads\n\nVisit us: https://abstractemporium.art",
       "hashtags": [
-        "#LastChance",
-        "#SaleEnding",
-        "#FlashSale"
+        "#WhyUs",
+        "#TherapeuticArt",
+        "#AbstractEmporium",
+        "#ArtForWellness"
       ],
       "image": null,
       "link": "https://abstractemporium.art",
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
-      "schedule": "2026-04-26T18:00:00Z",
+      "schedule": "2026-05-03T10:00:00Z",
       "posted": false,
       "postedPlatforms": [
         "bluesky"
@@ -331,20 +308,20 @@
     },
     {
       "id": "post-014",
-      "content": "💚 THANK YOU!\n\nOur flash sale was incredible. Thank you to everyone who grabbed a coloring book!\n\nFeature incoming: We'll be showcasing YOUR colored pages throughout the week.\n\nTag #AbstractEmporiumArt so we can find and share your beautiful work! 🎨",
+      "content": "💜 ABOUT ABSTRACT EMPORIUM\n\nWe create art that heals.\n\n🎨 Therapeutic coloring books for mental wellness\n🖼️ Abstract art prints for your space\n💚 Designed with intention & care\n\nEvery piece is crafted to support your healing journey.\n\nExplore: https://abstractemporium.art",
       "hashtags": [
-        "#ThankYou",
-        "#CommunityLove",
-        "#ColoringCommunity"
+        "#AboutUs",
+        "#ArtThatHeals",
+        "#AbstractEmporium",
+        "#OurMission"
       ],
       "image": null,
-      "link": null,
+      "link": "https://abstractemporium.art",
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
-      "schedule": "2026-04-27T10:00:00Z",
+      "schedule": "2026-05-04T10:00:00Z",
       "posted": false,
       "postedPlatforms": [
         "bluesky"
@@ -365,10 +342,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
         "mastodon",
-        "facebook"
+        "bluesky"
       ],
       "schedule": "2026-04-29T14:00:00Z",
       "posted": false,
@@ -392,49 +367,46 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
       "schedule": "2026-04-30T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-018",
-      "content": "📝 BLOG POST: \"5 Science-Backed Ways Coloring Reduces Anxiety\"\n\nDiscover why therapists recommend adult coloring books for stress management.\n\nIncludes:\n• Research findings\n• How it works (brain science)\n• When to color for maximum benefit\n• Choosing the right materials\n\nRead now (5 min):",
+      "content": "💡 DID YOU KNOW?\n\nColoring activates both hemispheres of your brain:\n\n🧠 Left brain: Logic & structure (staying in lines)\n🎨 Right brain: Creativity & emotions (color choices)\n\nThis balance creates a meditative state that reduces anxiety.\n\nLearn more at: https://abstractemporium.art",
       "hashtags": [
-        "#MentalHealthResearch",
-        "#ColoringTherapy",
+        "#ColoringScience",
+        "#BrainHealth",
         "#AnxietyRelief",
-        "#BlogPost"
+        "#TherapeuticArt"
       ],
       "image": null,
-      "link": "https://abstractemporium.art/blog/coloring-reduces-anxiety",
+      "link": "https://abstractemporium.art",
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook",
-        "pinterest"
+        "mastodon",
+        "bluesky"
       ],
-      "schedule": "2026-05-01T09:00:00Z",
+      "schedule": "2026-05-05T10:00:00Z",
       "posted": false
     },
     {
       "id": "post-019",
-      "content": "🌟 COMMUNITY SPOTLIGHT:\n\nCheck out this STUNNING page from @[username] using our Chaos & Calm collection!\n\nLove the gradient work from fiery reds to peaceful blues. This is exactly the transformation we envisioned. 💚\n\nWant to be featured? Tag #ChaosAndCalmChallenge!",
+      "content": "🎨 SHARE YOUR JOURNEY!\n\nWorking on our coloring books? We'd LOVE to see your creations!\n\nTag #AbstractEmporiumArt to be featured in future posts.\n\nYour art inspires others to start their own healing journey. 💜\n\nShop coloring books: https://abstractemporium.art",
       "hashtags": [
-        "#CommunitySpotlight",
-        "#CustomerArt",
-        "#AbstractEmporiumArt"
+        "#ShareYourArt",
+        "#ColoringCommunity",
+        "#AbstractEmporiumArt",
+        "#YourJourney"
       ],
       "image": null,
-      "link": null,
+      "link": "https://abstractemporium.art",
       "platforms": [
-        "twitter",
-        "instagram",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
-      "schedule": "2026-05-02T15:00:00Z",
+      "schedule": "2026-05-06T10:00:00Z",
       "posted": false
     },
     {
@@ -448,9 +420,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
       "schedule": "2026-05-03T12:00:00Z",
       "posted": false
@@ -466,9 +437,8 @@
       "image": null,
       "link": "https://abstractemporium.art",
       "platforms": [
-        "twitter",
-        "facebook",
-        "pinterest"
+        "mastodon",
+        "bluesky"
       ],
       "schedule": "2026-05-04T10:00:00Z",
       "posted": false
@@ -485,10 +455,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
         "mastodon",
-        "facebook"
+        "bluesky"
       ],
       "schedule": "2026-05-05T08:00:00Z",
       "posted": false
@@ -504,9 +472,8 @@
       "image": null,
       "link": "https://abstractemporium.art/bundle-abstract-mind.html",
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
       "schedule": "2026-05-06T11:00:00Z",
       "posted": false
@@ -522,9 +489,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
       "schedule": "2026-05-08T14:00:00Z",
       "posted": false
@@ -540,9 +506,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
       "schedule": "2026-05-09T11:00:00Z",
       "posted": false
@@ -558,29 +523,28 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
       "schedule": "2026-05-10T13:00:00Z",
       "posted": false
     },
     {
       "id": "post-028",
-      "content": "🌟 MILESTONE ALERT!\n\nWe've reached 500+ downloads across all our coloring books!\n\nThank you for trusting us with your mental wellness journey. Every download represents someone choosing self-care, healing, and creativity.\n\nWe're honored to be part of your story. 💚\n\n#AbstractEmporiumArt",
+      "content": "✨ EXPLORE ABSTRACT EMPORIUM ✨\n\nYour one-stop destination for:\n\n🎨 Therapeutic Coloring Books (3 books + bundle)\n🖼️ Abstract Art Gallery (70+ pieces)\n💜 Mental Wellness Through Creativity\n🌐 Multiple Shopping Platforms\n\nStart your creative journey: https://abstractemporium.art",
       "hashtags": [
-        "#Milestone",
-        "#ThankYou",
-        "#CommunityLove",
-        "#500Downloads"
+        "#AbstractEmporium",
+        "#CreativeWellness",
+        "#TherapeuticArt",
+        "#DiscoverUs"
       ],
       "image": null,
-      "link": null,
+      "link": "https://abstractemporium.art",
       "platforms": [
-        "twitter",
-        "bluesky",
-        "facebook"
+        "mastodon",
+        "bluesky"
       ],
-      "schedule": "2026-05-11T10:00:00Z",
+      "schedule": "2026-05-07T10:00:00Z",
       "posted": false
     },
     {
@@ -595,10 +559,8 @@
       "image": null,
       "link": null,
       "platforms": [
-        "twitter",
-        "bluesky",
         "mastodon",
-        "facebook"
+        "bluesky"
       ],
       "schedule": "2026-05-13T08:00:00Z",
       "posted": false

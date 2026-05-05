@@ -1,9 +1,9 @@
 name: Social Media Auto-Poster
 
 on:
-  # Run twice daily: 10am and 4pm UTC
+  # Run three times daily: 8am, 2pm, 9pm UTC (spread across day and evening)
   schedule:
-    - cron: '0 10,16 * * *'  # 10:00 AM and 4:00 PM UTC daily
+    - cron: '0 8,14,21 * * *'  # 8:00 AM, 2:00 PM, 9:00 PM UTC daily
   
   # Allow manual trigger for testing
   workflow_dispatch:
@@ -19,7 +19,8 @@ on:
           - bluesky
 
 permissions:
-  contents: write  # Needed to update content-queue.json
+  contents: write  # Needed to update content-queue.json and content-history.json
+  models: read     # Needed for GitHub Models API (AI content generation)
 
 jobs:
   post-to-social:
@@ -41,7 +42,30 @@ jobs:
           if [ -f package.json ]; then
             npm ci || npm install
           fi
-      
+
+      - name: Check queue depth and generate content if low
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "📊 Checking unposted queue depth..."
+          UNPOSTED=$(node -e "
+            const q = JSON.parse(require('fs').readFileSync('content-queue.json','utf8'));
+            const count = q.posts.filter(p => !p.posted && !p.postedAt).length;
+            process.stdout.write(String(count));
+          ")
+          echo "Unposted posts: $UNPOSTED"
+          echo "UNPOSTED_COUNT=$UNPOSTED" >> $GITHUB_ENV
+
+          if [ "$UNPOSTED" -lt "4" ]; then
+            echo "🤖 Queue is low ($UNPOSTED unposted). Generating new content..."
+            GENERATE_COUNT=3 node scripts/generate-content.js
+            echo "CONTENT_GENERATED=true" >> $GITHUB_ENV
+          else
+            echo "✅ Queue has $UNPOSTED posts — no generation needed."
+            echo "CONTENT_GENERATED=false" >> $GITHUB_ENV
+          fi
+        continue-on-error: false
+
       - name: Post to Mastodon
         if: ${{ github.event.inputs.platform == 'mastodon' || github.event.inputs.platform == 'all' || github.event_name == 'schedule' }}
         env:
@@ -75,10 +99,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          if git diff --quiet content-queue.json; then
+          if git diff --quiet content-queue.json data/content-history.json; then
             echo "ℹ️ No changes to commit"
           else
-            git add content-queue.json
+            git add content-queue.json data/content-history.json
             git commit -m "🤖 Update content queue after posting [skip ci]"
             git push
             echo "✅ Pushed updated content queue"

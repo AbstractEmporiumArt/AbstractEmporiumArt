@@ -1,0 +1,94 @@
+name: AI Content Generator (Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of posts to generate (1–10)'
+        required: true
+        default: '3'
+        type: choice
+        options:
+          - '1'
+          - '2'
+          - '3'
+          - '5'
+          - '7'
+          - '10'
+
+permissions:
+  contents: write  # Commit generated posts back to repo
+  models: read     # GitHub Models API (GPT-4o)
+
+jobs:
+  generate-content:
+    runs-on: ubuntu-latest
+    name: Generate ${{ github.event.inputs.count }} post(s)
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci || npm install
+          fi
+
+      - name: Generate content
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GENERATE_COUNT: ${{ github.event.inputs.count }}
+        run: |
+          echo "🎨 Generating $GENERATE_COUNT post(s) for Abstract Emporium..."
+          node scripts/generate-content.js
+
+      - name: Validate generated content
+        run: |
+          echo "🔍 Validating all unposted queue entries..."
+          node scripts/validate-content.js --queue
+
+      - name: Show queue summary
+        run: |
+          node -e "
+            const q = JSON.parse(require('fs').readFileSync('content-queue.json','utf8'));
+            const unposted = q.posts.filter(p => !p.posted && !p.postedAt);
+            const generated = unposted.filter(p => p._generated);
+            console.log('');
+            console.log('📊 Queue Summary');
+            console.log('================');
+            console.log('Total unposted:  ' + unposted.length);
+            console.log('AI-generated:    ' + generated.length);
+            console.log('');
+            console.log('📝 Newly generated posts:');
+            generated.slice(-parseInt(process.env.GENERATE_COUNT || '3')).forEach(p => {
+              console.log('');
+              console.log('  ID:       ' + p.id);
+              console.log('  Category: ' + p._category);
+              console.log('  Schedule: ' + p.schedule);
+              console.log('  Bluesky:  ' + (p.bluesky_content || '').substring(0, 80) + '...');
+            });
+          "
+        env:
+          GENERATE_COUNT: ${{ github.event.inputs.count }}
+
+      - name: Commit generated posts
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          if git diff --quiet content-queue.json data/content-history.json; then
+            echo "ℹ️ No changes to commit (generation may have been skipped)"
+          else
+            git add content-queue.json data/content-history.json
+            git commit -m "🎨 Add ${{ github.event.inputs.count }} AI-generated post(s) to queue [skip ci]"
+            git push
+            echo "✅ Committed generated posts to repository"
+          fi

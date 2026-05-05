@@ -82,7 +82,8 @@ function formatPost(post) {
   const ELLIPSIS = '...';
   const LINK_LENGTH = post.link ? post.link.length + 4 : 0; // "\n\n🔗 " = 4 chars
   
-  let content = post.content;
+  // Prefer platform-specific content if present (AI-generated posts), fall back to legacy content field
+  let content = post.mastodon_content || post.content;
   let hashtags = post.hashtags && post.hashtags.length > 0 
     ? '\n\n' + post.hashtags.join(' ') 
     : '';

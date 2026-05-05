@@ -1,0 +1,452 @@
+{
+  "version": "1.0",
+  "description": "Permanent non-repetition memory for the Abstract Emporium content engine. Every generated and posted entry is stored here. Never delete entries — only append.",
+  "category_rotation": {
+    "last_used": {
+      "abstract_art_spotlight": "2026-05-05T03:45:27.955Z",
+      "knitting_craft_story": "2026-05-05T03:45:30.394Z",
+      "emotional_reflection": "2026-04-28T11:29:38.774Z",
+      "creative_mindfulness": "2026-05-01T16:41:37.868Z",
+      "creator_humor": "2026-05-05T03:45:32.772Z",
+      "behind_the_scenes": "2026-04-29T17:13:25.050Z",
+      "inspiration_spark": "2026-04-25T16:27:13.456Z",
+      "origin_story": "2026-04-25T10:32:26.681Z",
+      "transformation_arc": "2026-04-27T17:13:35.216Z"
+    }
+  },
+  "cta_rotation": {
+    "last_used": {
+      "you can find more of this over at the site if you're curious": "2026-05-05T03:45:27.955Z",
+      "this lives quietly on abstractemporium.art": "2026-05-05T03:45:30.394Z",
+      "there's a whole collection of this kind of work on the site": "2026-05-05T03:45:32.772Z",
+      "the full piece (and others like it) lives on abstractemporium.art": null,
+      "if this is your kind of thing, abstractemporium.art has more": null
+    }
+  },
+  "hashtag_sets_used": [
+    [
+      "#ColoringBook",
+      "#AnxietyRelief",
+      "#MentalHealth",
+      "#TherapeuticArt",
+      "#SelfCare",
+      "#AbstractArt"
+    ],
+    [
+      "#ColoringTips",
+      "#MindfulnessArt",
+      "#ArtTherapy",
+      "#WellnessTips"
+    ],
+    [
+      "#InvisiblePainArt",
+      "#TraumaHealing",
+      "#EmotionalWellness",
+      "#ArtTherapy",
+      "#MentalHealthAwareness"
+    ],
+    [
+      "#HealingLinesJourney",
+      "#NatureTherapy",
+      "#MeditativeArt",
+      "#ColoringForCalm"
+    ],
+    [
+      "#ChaosAndCalmChallenge",
+      "#ColoringChallenge",
+      "#50DayChallenge",
+      "#SelfCareChallenge"
+    ],
+    [
+      "#ColoringBookBundle",
+      "#BestValue",
+      "#AbstractArt",
+      "#MentalWellness"
+    ],
+    [
+      "#MentalHealthMatters",
+      "#HealingJourney",
+      "#YouAreNotAlone",
+      "#TraumaRecovery"
+    ],
+    [
+      "#ColoringPoll",
+      "#ColoringCommunity",
+      "#ArtSupplies"
+    ],
+    [
+      "#BehindTheScenes",
+      "#ArtWithPurpose",
+      "#TherapeuticDesign"
+    ],
+    [
+      "#AbstractEmporium",
+      "#IntroducingUs",
+      "#ArtForWellness",
+      "#CreativeHealing"
+    ],
+    [
+      "#MindfulnessTip",
+      "#ColoringTherapy",
+      "#OneMindful",
+      "#SelfCareTip"
+    ],
+    [
+      "#AbstractExpression",
+      "#CreativeProcess"
+    ],
+    [
+      "#KnittingStories",
+      "#SlowCraft"
+    ],
+    [
+      "#CreativeTime",
+      "#ColorAndCalm"
+    ]
+  ],
+  "posts": [
+    {
+      "id": "post-001",
+      "timestamp": "2026-04-25T10:32:26.681Z",
+      "category": "origin_story",
+      "cta_type": "direct_link",
+      "emotional_theme": "calm_through_making",
+      "bluesky_content": "NEW RELEASE: Chaos & Calm Abstract Coloring Book\n\n50 pages designed to help you find balance between life's intensity and peace.\n\nIncludes: Balance Your Palette Color Guide, 4 Therapeutic Techniques, 50-Day Transformation Challenge.\n\nPerfect for anxiety relief & mindfulness practice.",
+      "mastodon_content": "🎨 NEW RELEASE: Chaos & Calm Abstract Coloring Book\n\n50 pages designed to help you find balance between life's intensity and peace.\n\n✨ Includes:\n• Balance Your Palette Color Guide\n• 4 Therapeutic Techniques\n• 50-Day Transformation Challenge\n\nPerfect for anxiety relief & mindfulness practice.",
+      "hashtags": [
+        "#ColoringBook",
+        "#AnxietyRelief",
+        "#MentalHealth",
+        "#TherapeuticArt",
+        "#SelfCare",
+        "#AbstractArt"
+      ],
+      "content_hash": "a1b2c3d4-post001",
+      "key_phrases": [
+        "chaos calm",
+        "50 pages",
+        "balance palette",
+        "therapeutic techniques",
+        "anxiety relief",
+        "mindfulness practice"
+      ]
+    },
+    {
+      "id": "post-002",
+      "timestamp": "2026-04-25T16:27:13.456Z",
+      "category": "inspiration_spark",
+      "cta_type": "none",
+      "emotional_theme": "calm_through_making",
+      "bluesky_content": "COLORING TIP: Start with chaos colors (reds, oranges, hot pinks) to release tension, then transition to calm colors (blues, greens, grays) to find peace.\n\nTry this technique in our Chaos & Calm coloring book! It's like a mini meditation session.",
+      "mastodon_content": "💡 COLORING TIP: Start with chaos colors (reds, oranges, hot pinks) to release tension, then transition to calm colors (blues, greens, grays) to find peace.\n\nTry this technique in our Chaos & Calm coloring book! It's like a mini meditation session. 🧘‍♀️",
+      "hashtags": [
+        "#ColoringTips",
+        "#MindfulnessArt",
+        "#ArtTherapy",
+        "#WellnessTips"
+      ],
+      "content_hash": "a1b2c3d4-post002",
+      "key_phrases": [
+        "chaos colors",
+        "calm colors",
+        "release tension",
+        "meditation session",
+        "coloring tip"
+      ]
+    },
+    {
+      "id": "post-003",
+      "timestamp": "2026-04-26T10:33:54.580Z",
+      "category": "origin_story",
+      "cta_type": "direct_link",
+      "emotional_theme": "invisible_pain_processing",
+      "bluesky_content": "INVISIBLE PAIN COLLECTION\n\n50 pages for processing emotions that others can't see.\n\nFeatures: Emotion Palette Guide (Pain, Hope, Strength colors), Layering Method for healing journey, Trauma-informed affirmations, Optional journal prompts.\n\nYour pain is valid. Your art is healing.",
+      "mastodon_content": "✨ INVISIBLE PAIN COLLECTION ✨\n\n50 pages for processing emotions that others can't see.\n\n💜 Features:\n• Emotion Palette Guide (Pain, Hope, Strength colors)\n• Layering Method for healing journey\n• Trauma-informed affirmations\n• Optional journal prompts\n\nYour pain is valid. Your art is healing.",
+      "hashtags": [
+        "#InvisiblePainArt",
+        "#TraumaHealing",
+        "#EmotionalWellness",
+        "#ArtTherapy",
+        "#MentalHealthAwareness"
+      ],
+      "content_hash": "a1b2c3d4-post003",
+      "key_phrases": [
+        "invisible pain",
+        "emotions others can't see",
+        "trauma informed",
+        "your pain is valid",
+        "emotion palette",
+        "healing journey"
+      ]
+    },
+    {
+      "id": "post-004",
+      "timestamp": "2026-04-26T16:27:49.676Z",
+      "category": "origin_story",
+      "cta_type": "direct_link",
+      "emotional_theme": "nature_calm",
+      "bluesky_content": "Healing Lines Collection - Nature-based therapeutic coloring\n\nConnect with: Forest Therapy (greens & browns for grounding), Ocean Calm (blues & teals for peace), Sunrise Hope (oranges & pinks for renewal), Moonlight Peace (silver & lavender for rest).\n\n50 pages of meditative abstract designs.",
+      "mastodon_content": "🌿 Healing Lines Collection - Nature-based therapeutic coloring\n\nConnect with:\n🌲 Forest Therapy (greens & browns for grounding)\n🌊 Ocean Calm (blues & teals for peace)\n🌅 Sunrise Hope (oranges & pinks for renewal)\n🌙 Moonlight Peace (silver & lavender for rest)\n\n50 pages of meditative abstract designs.",
+      "hashtags": [
+        "#HealingLinesJourney",
+        "#NatureTherapy",
+        "#MeditativeArt",
+        "#ColoringForCalm"
+      ],
+      "content_hash": "a1b2c3d4-post004",
+      "key_phrases": [
+        "healing lines",
+        "forest therapy",
+        "ocean calm",
+        "sunrise hope",
+        "moonlight peace",
+        "meditative abstract",
+        "nature based"
+      ]
+    },
+    {
+      "id": "post-005",
+      "timestamp": "2026-04-27T11:29:04.840Z",
+      "category": "transformation_arc",
+      "cta_type": "direct_link",
+      "emotional_theme": "challenge_and_growth",
+      "bluesky_content": "JOIN THE #ChaosAndCalmChallenge!\n\nColor one page per day for 50 days and watch your transformation unfold.\n\nWeeks 1-2: Chaos Dominance (bold colors). Weeks 3-4: Calm Emergence (soothing tones). Weeks 5-6: Monochromatic Mastery. Week 7: Rainbow Liberation!\n\nTag your progress with #ChaosAndCalmChallenge",
+      "mastodon_content": "🎯 JOIN THE #ChaosAndCalmChallenge!\n\nColor one page per day for 50 days and watch your transformation unfold.\n\nWeeks 1-2: Chaos Dominance (bold colors)\nWeeks 3-4: Calm Emergence (soothing tones)\nWeeks 5-6: Monochromatic Mastery\nWeek 7: Rainbow Liberation!\n\nTag your progress with #ChaosAndCalmChallenge 💚",
+      "hashtags": [
+        "#ChaosAndCalmChallenge",
+        "#ColoringChallenge",
+        "#50DayChallenge",
+        "#SelfCareChallenge"
+      ],
+      "content_hash": "a1b2c3d4-post005",
+      "key_phrases": [
+        "50 day challenge",
+        "transformation unfold",
+        "chaos dominance",
+        "calm emergence",
+        "rainbow liberation",
+        "color one page per day"
+      ]
+    },
+    {
+      "id": "post-006",
+      "timestamp": "2026-04-27T17:13:35.216Z",
+      "category": "transformation_arc",
+      "cta_type": "direct_link",
+      "emotional_theme": "value_and_access",
+      "bluesky_content": "BEST VALUE: Abstract Mind Collection\n\nGet ALL 3 coloring books (150 pages) + 50 EXCLUSIVE pages = 200 total\n\nIncludes: Chaos & Calm, Invisible Pain, Healing Lines, Mood-Based Color Theory Guide, 200-Page Journey Tracker.\n\nSave $4 vs buying individually — $19.99 complete collection",
+      "mastodon_content": "💰 BEST VALUE: Abstract Mind Collection\n\nGet ALL 3 coloring books (150 pages) + 50 EXCLUSIVE pages = 200 total\n\nIncludes:\n✓ Chaos & Calm\n✓ Invisible Pain\n✓ Healing Lines\n✓ Mood-Based Color Theory Guide\n✓ 200-Page Journey Tracker\n\nSave $4 vs buying individually\n$19.99 complete collection",
+      "hashtags": [
+        "#ColoringBookBundle",
+        "#BestValue",
+        "#AbstractArt",
+        "#MentalWellness"
+      ],
+      "content_hash": "a1b2c3d4-post006",
+      "key_phrases": [
+        "abstract mind collection",
+        "200 pages",
+        "journey tracker",
+        "complete collection",
+        "save money",
+        "bundle"
+      ]
+    },
+    {
+      "id": "post-008",
+      "timestamp": "2026-04-28T11:29:38.774Z",
+      "category": "emotional_reflection",
+      "cta_type": "none",
+      "emotional_theme": "invisible_pain_processing",
+      "bluesky_content": "AFFIRMATION OF THE DAY:\n\n\"Your pain is valid, even when invisible.\"\n\nFrom our Invisible Pain coloring collection - designed for processing emotions that others can't see.\n\nYou're not alone. Your healing journey is sacred.",
+      "mastodon_content": "💭 AFFIRMATION OF THE DAY:\n\n\"Your pain is valid, even when invisible.\"\n\nFrom our Invisible Pain coloring collection - designed for processing emotions that others can't see.\n\nYou're not alone. Your healing journey is sacred. 💜\n\n#InvisiblePainArt",
+      "hashtags": [
+        "#MentalHealthMatters",
+        "#HealingJourney",
+        "#YouAreNotAlone",
+        "#TraumaRecovery"
+      ],
+      "content_hash": "a1b2c3d4-post008",
+      "key_phrases": [
+        "affirmation",
+        "pain is valid",
+        "even when invisible",
+        "you're not alone",
+        "healing journey is sacred"
+      ]
+    },
+    {
+      "id": "post-009",
+      "timestamp": "2026-04-28T17:26:19.987Z",
+      "category": "creator_humor",
+      "cta_type": "none",
+      "emotional_theme": "community_connection",
+      "bluesky_content": "POLL TIME!\n\nWhen you color, do you prefer:\nA) Colored pencils (precision & layers)\nB) Markers (bold & vibrant)\nC) Gel pens (sparkle & detail)\nD) All of the above (mixing it up!)\n\nReply with your pick! We want to know what our community loves",
+      "mastodon_content": "📊 POLL TIME!\n\nWhen you color, do you prefer:\n\nA) Colored pencils (precision & layers)\nB) Markers (bold & vibrant)\nC) Gel pens (sparkle & detail)\nD) All of the above (mixing it up!)\n\nReply with your pick! We want to know what our community loves 🎨",
+      "hashtags": [
+        "#ColoringPoll",
+        "#ColoringCommunity",
+        "#ArtSupplies"
+      ],
+      "content_hash": "a1b2c3d4-post009",
+      "key_phrases": [
+        "poll",
+        "colored pencils",
+        "markers",
+        "gel pens",
+        "community",
+        "coloring supplies"
+      ]
+    },
+    {
+      "id": "post-011",
+      "timestamp": "2026-04-29T17:13:25.050Z",
+      "category": "behind_the_scenes",
+      "cta_type": "none",
+      "emotional_theme": "intentional_design",
+      "bluesky_content": "BEHIND THE SCENES:\n\nEach abstract pattern in our coloring books is designed with intention:\n\n• Flowing lines = Meditation & calm\n• Sharp angles = Energy release\n• Repetitive patterns = Grounding rhythm\n• Open spaces = Room for your emotions\n\nTherapeutic art isn't just pretty - it's purposeful.",
+      "mastodon_content": "🎨 BEHIND THE SCENES:\n\nEach abstract pattern in our coloring books is designed with intention:\n\n• Flowing lines = Meditation & calm\n• Sharp angles = Energy release\n• Repetitive patterns = Grounding rhythm\n• Open spaces = Room for your emotions\n\nTherapeutic art isn't just pretty - it's purposeful.",
+      "hashtags": [
+        "#BehindTheScenes",
+        "#ArtWithPurpose",
+        "#TherapeuticDesign"
+      ],
+      "content_hash": "a1b2c3d4-post011",
+      "key_phrases": [
+        "flowing lines",
+        "sharp angles",
+        "repetitive patterns",
+        "open spaces",
+        "therapeutic art",
+        "designed with intention",
+        "purposeful"
+      ]
+    },
+    {
+      "id": "post-016",
+      "timestamp": "2026-05-01T16:41:37.868Z",
+      "category": "creative_mindfulness",
+      "cta_type": "none",
+      "emotional_theme": "calm_through_making",
+      "bluesky_content": "TIP: Feeling overwhelmed?\n\nTry the \"One-Minute Mindfulness\" technique from our Healing Lines collection:\n\n1. Pick one small section of your coloring page\n2. Set timer for 1 minute\n3. Color slowly and mindfully\n4. Take 10 deep breaths\n5. Notice how you feel\n\nNo pressure to finish. Just be present.",
+      "mastodon_content": "💡 TIP: Feeling overwhelmed?\n\nTry the \"One-Minute Mindfulness\" technique from our Healing Lines collection:\n\n1. Pick one small section of your coloring page\n2. Set timer for 1 minute\n3. Color slowly and mindfully\n4. Take 10 deep breaths\n5. Notice how you feel\n\nNo pressure to finish. Just be present. 🌿",
+      "hashtags": [
+        "#MindfulnessTip",
+        "#ColoringTherapy",
+        "#OneMindful",
+        "#SelfCareTip"
+      ],
+      "content_hash": "a1b2c3d4-post016",
+      "key_phrases": [
+        "one minute mindfulness",
+        "feeling overwhelmed",
+        "no pressure to finish",
+        "just be present",
+        "10 deep breaths",
+        "color slowly"
+      ]
+    },
+    {
+      "id": "post-031",
+      "timestamp": "2026-04-30T11:21:28.888Z",
+      "category": "origin_story",
+      "cta_type": "direct_link",
+      "emotional_theme": "welcome_and_discovery",
+      "bluesky_content": "Welcome to Abstract Emporium!\n\nWhere art meets healing.\n\nTherapeutic coloring books, abstract art prints & wall decor, wellness through creativity.\n\nOur mission: Make self-care accessible through art.\n\nExplore our world.",
+      "mastodon_content": "✨ Welcome to Abstract Emporium! ✨\n\nWhere art meets healing.\n\n🎨 Therapeutic coloring books\n🖼️ Abstract art prints & wall decor\n💜 Wellness through creativity\n\nOur mission: Make self-care accessible through art.\n\nExplore our world:",
+      "hashtags": [
+        "#AbstractEmporium",
+        "#IntroducingUs",
+        "#ArtForWellness",
+        "#CreativeHealing"
+      ],
+      "content_hash": "a1b2c3d4-post031",
+      "key_phrases": [
+        "welcome",
+        "where art meets healing",
+        "therapeutic coloring",
+        "abstract art prints",
+        "self-care accessible",
+        "mission"
+      ]
+    },
+    {
+      "id": "gen-1777952727901-daec1d",
+      "timestamp": "2026-05-05T03:45:27.954Z",
+      "category": "abstract_art_spotlight",
+      "cta_type": "visit_site",
+      "emotional_theme": "beauty_in_chaos",
+      "bluesky_content": "I painted this piece on a day when my thoughts felt like tangled threads. Each color became its own little story, a conversation with the chaos. I didn’t untangle the mess, but I think I made it beautiful. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "This painting started on one of *those* days—when my mind felt like a ball of tangled threads. Each stroke, each color became its own little story, quietly talking to the chaos. I didn’t untangle the mess, but maybe I made it beautiful. See more of this over at the site if you'd like. 💫",
+      "hashtags": [
+        "#AbstractExpression",
+        "#CreativeProcess"
+      ],
+      "content_hash": "6c4f82f5600c6610e7246982e490dd648296b0b54f00984559fa31a114e4e37e",
+      "key_phrases": [
+        "painted this",
+        "this piece",
+        "piece when",
+        "when thoughts",
+        "thoughts felt",
+        "felt like",
+        "like tangled",
+        "tangled threads",
+        "threads each",
+        "each color"
+      ]
+    },
+    {
+      "id": "gen-1777952730393-77e66f",
+      "timestamp": "2026-05-05T03:45:30.393Z",
+      "category": "knitting_craft_story",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "imperfect_is_okay",
+      "bluesky_content": "Knitting is my love letter to time. Each row, a quiet dialogue between patience and persistence. Mistakes? They’re just tiny stories woven into the fabric, reminding me that imperfection can still keep you warm. This lives quietly on abstractemporium.art",
+      "mastodon_content": "Knitting feels like writing a love letter to time. Each row is a quiet conversation with patience and persistence. Mistakes? They’re tiny stories woven into the fabric, proof that imperfection can still hold warmth. This lives quietly on abstractemporium.art. 🧶",
+      "hashtags": [
+        "#KnittingStories",
+        "#SlowCraft"
+      ],
+      "content_hash": "d891f92be7bc7ddb49d8364013a5a5a30b40a532695424685eac44eed09a0795",
+      "key_phrases": [
+        "knitting love",
+        "love letter",
+        "letter time",
+        "time each",
+        "each quiet",
+        "quiet dialogue",
+        "dialogue between",
+        "between patience",
+        "patience persistence",
+        "persistence mistakes"
+      ]
+    },
+    {
+      "id": "gen-1777952732771-c46345",
+      "timestamp": "2026-05-05T03:45:32.772Z",
+      "category": "creator_humor",
+      "cta_type": "natural",
+      "emotional_theme": "relatable_creativity",
+      "bluesky_content": "I thought I'd color for five minutes before bed. Fast-forward two hours: the tea is cold, my hand is cramped, and I’ve overthought the meaning of a single shade of blue. Anyway, there’s a whole collection of this kind of work on the site if you’re curious.",
+      "mastodon_content": "I thought I’d color for five minutes before bed. Just five minutes. Fast-forward two hours: the tea is cold, my hand is cramped, and I’ve spent way too long overthinking the meaning of a single shade of blue. This is why I make coloring books. There’s a whole collection of this kind of work on the site if you’re curious.",
+      "hashtags": [
+        "#CreativeTime",
+        "#ColorAndCalm"
+      ],
+      "content_hash": "b9237e97de082eda36beb7684e7cff9bf31a2686e0e598c30b2f19d597d8a2f5",
+      "key_phrases": [
+        "thought color",
+        "color five",
+        "five minutes",
+        "minutes before",
+        "before fast",
+        "fast forward",
+        "forward hours",
+        "hours cold",
+        "cold hand",
+        "hand cramped"
+      ]
+    }
+  ]
+}

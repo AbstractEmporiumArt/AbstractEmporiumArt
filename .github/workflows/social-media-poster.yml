@@ -66,11 +66,37 @@ jobs:
           fi
         continue-on-error: false
 
+      - name: Select synced post target
+        run: |
+          echo "🎯 Selecting next shared post target for both platforms..."
+          TARGET_POST_ID=$(node -e "
+            const q = JSON.parse(require('fs').readFileSync('content-queue.json','utf8'));
+            const now = new Date();
+            const due = q.posts.filter(p => new Date(p.schedule) <= now);
+            const synced = due.find(p => {
+              const posted = p.postedPlatforms || [];
+              const wantsBoth = (p.platforms || []).includes('mastodon') && (p.platforms || []).includes('bluesky');
+              const mastodonDone = posted.includes('mastodon');
+              const blueskyDone = posted.includes('bluesky');
+              return wantsBoth && !(mastodonDone && blueskyDone);
+            });
+            process.stdout.write(synced ? synced.id : '');
+          ")
+
+          if [ -z "$TARGET_POST_ID" ]; then
+            echo "ℹ️ No synced due post found right now."
+          else
+            echo "✅ Synced target selected: $TARGET_POST_ID"
+          fi
+
+          echo "TARGET_POST_ID=$TARGET_POST_ID" >> $GITHUB_ENV
+
       - name: Post to Mastodon
         if: ${{ github.event.inputs.platform == 'mastodon' || github.event.inputs.platform == 'all' || github.event_name == 'schedule' }}
         env:
           MASTODON_ACCESS_TOKEN: ${{ secrets.MastodonAccessToken }}
           MASTODON_INSTANCE_URL: ${{ secrets.MastodonInstanceUrl }}
+          TARGET_POST_ID: ${{ env.TARGET_POST_ID }}
         run: |
           if [ ! -z "$MASTODON_ACCESS_TOKEN" ]; then
             echo "🦣 Posting to Mastodon..."
@@ -85,6 +111,7 @@ jobs:
         env:
           BLUESKY_HANDLE: ${{ secrets.BlueskyHandle }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BlueskyAppPassword }}
+          TARGET_POST_ID: ${{ env.TARGET_POST_ID }}
         run: |
           if [ ! -z "$BLUESKY_HANDLE" ]; then
             echo "🦋 Posting to Bluesky..."

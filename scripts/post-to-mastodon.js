@@ -12,10 +12,12 @@ import { dirname, join } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const SITE_ROOT = join(__dirname, '..');
 
 // Environment variables
 const MASTODON_ACCESS_TOKEN = process.env.MASTODON_ACCESS_TOKEN;
 const MASTODON_INSTANCE_URL = process.env.MASTODON_INSTANCE_URL || 'https://mastodon.social';
+const TARGET_POST_ID = process.env.TARGET_POST_ID;
 
 if (!MASTODON_ACCESS_TOKEN) {
   console.error('❌ MASTODON_ACCESS_TOKEN environment variable is required');
@@ -80,10 +82,12 @@ async function postToMastodon(content, visibility = 'public') {
 function formatPost(post) {
   const MASTODON_LIMIT = 500;
   const ELLIPSIS = '...';
-  const LINK_LENGTH = post.link ? post.link.length + 4 : 0; // "\n\n🔗 " = 4 chars
+  const safeLink = sanitizeLink(post.link);
+  const linkBlock = safeLink ? `\n\n${safeLink}` : '';
+  const LINK_LENGTH = linkBlock.length;
   
   // Prefer platform-specific content if present (AI-generated posts), fall back to legacy content field
-  let content = post.mastodon_content || post.content;
+  let content = (post.mastodon_content || post.content || '').trim();
   let hashtags = post.hashtags && post.hashtags.length > 0 
     ? '\n\n' + post.hashtags.join(' ') 
     : '';
@@ -100,8 +104,8 @@ function formatPost(post) {
   let finalPost = content + hashtags;
   
   // Add link if present
-  if (post.link) {
-    finalPost += `\n\n🔗 ${post.link}`;
+  if (safeLink) {
+    finalPost += linkBlock;
   }
   
   // Final safety check
@@ -110,6 +114,41 @@ function formatPost(post) {
   }
   
   return finalPost;
+}
+
+/**
+ * Ensure links are always valid site URLs so posts never ship with broken paths.
+ * Invalid or external links fall back to home page.
+ */
+function sanitizeLink(link) {
+  if (!link || !String(link).trim()) {
+    return null;
+  }
+
+  let parsed;
+  try {
+    parsed = new URL(link);
+  } catch {
+    return 'https://abstractemporium.art';
+  }
+
+  if (parsed.hostname !== 'abstractemporium.art') {
+    return 'https://abstractemporium.art';
+  }
+
+  const cleanPath = parsed.pathname.replace(/\/+$/, '');
+  if (!cleanPath || cleanPath === '') {
+    return 'https://abstractemporium.art';
+  }
+
+  const localPath = cleanPath.replace(/^\//, '');
+  const exact = join(SITE_ROOT, localPath);
+  const html = join(SITE_ROOT, `${localPath}.html`);
+  if (fs.existsSync(exact) || fs.existsSync(html)) {
+    return `https://abstractemporium.art/${localPath}`;
+  }
+
+  return 'https://abstractemporium.art';
 }
 
 /**
@@ -140,6 +179,16 @@ function saveContentQueue(queue) {
  */
 function getNextPost(queue) {
   const now = new Date();
+
+  if (TARGET_POST_ID) {
+    return queue.posts.find(post => {
+      const postedPlatforms = post.postedPlatforms || [];
+      return post.id === TARGET_POST_ID &&
+        !postedPlatforms.includes('mastodon') &&
+        post.platforms.includes('mastodon') &&
+        new Date(post.schedule) <= now;
+    });
+  }
   
   return queue.posts.find(post => {
     const postedPlatforms = post.postedPlatforms || [];

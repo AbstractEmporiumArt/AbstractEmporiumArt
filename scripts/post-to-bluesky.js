@@ -12,11 +12,13 @@ import { dirname, join } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const SITE_ROOT = join(__dirname, '..');
 
 // Environment variables
 const BLUESKY_HANDLE = process.env.BLUESKY_HANDLE;
 const BLUESKY_APP_PASSWORD = process.env.BLUESKY_APP_PASSWORD;
 const BLUESKY_SERVICE = 'https://bsky.social';
+const TARGET_POST_ID = process.env.TARGET_POST_ID;
 
 if (!BLUESKY_HANDLE || !BLUESKY_APP_PASSWORD) {
   console.error('❌ BLUESKY_HANDLE and BLUESKY_APP_PASSWORD environment variables are required');
@@ -162,38 +164,82 @@ async function postToBluesky(content, session) {
  * Ensures content stays under 300 character limit for Bluesky
  */
 function formatPost(post) {
-  const BLUESKY_LIMIT = 300;
+  const BLUESKY_LIMIT = 280;
   const ELLIPSIS = '...';
-  const LINK_LENGTH = post.link ? post.link.length + 4 : 0; // "\n\n🔗 " = 4 chars
+  const safeLink = sanitizeLink(post.link);
+  const linkBlock = safeLink ? `\n\n${safeLink}` : '';
   
   // Prefer platform-specific content if present (AI-generated posts), fall back to legacy content field
-  let content = post.bluesky_content || post.content;
-  let hashtags = post.hashtags && post.hashtags.length > 0 
-    ? '\n\n' + post.hashtags.join(' ') 
+  let content = (post.bluesky_content || post.content || '').trim();
+  let hashtags = post.hashtags && post.hashtags.length > 0
+    ? '\n\n' + post.hashtags.join(' ')
     : '';
-  
-  // Calculate available space
-  let availableSpace = BLUESKY_LIMIT - LINK_LENGTH - hashtags.length;
-  
-  // Truncate content if necessary
-  if (content.length > availableSpace) {
-    content = content.substring(0, availableSpace - ELLIPSIS.length) + ELLIPSIS;
+
+  const countChars = (text) => Array.from(text).length;
+
+  // First pass: keep full content/hashtags/link if possible.
+  let finalPost = content + hashtags + linkBlock;
+  if (countChars(finalPost) <= BLUESKY_LIMIT) {
+    return finalPost;
   }
-  
-  // Build final post
-  let finalPost = content + hashtags;
-  
-  // Add link if present
-  if (post.link) {
-    finalPost += `\n\n🔗 ${post.link}`;
+
+  // Second pass: shrink hashtags first so link always stays visible.
+  while (hashtags && countChars(content + hashtags + linkBlock) > BLUESKY_LIMIT) {
+    const parts = hashtags.trim().split(/\s+/);
+    parts.pop();
+    hashtags = parts.length > 0 ? '\n\n' + parts.join(' ') : '';
   }
-  
-  // Final safety check
-  if (finalPost.length > BLUESKY_LIMIT) {
-    finalPost = finalPost.substring(0, BLUESKY_LIMIT - ELLIPSIS.length) + ELLIPSIS;
+
+  // Final pass: trim content while preserving link block.
+  while (countChars(content + hashtags + linkBlock) > BLUESKY_LIMIT) {
+    const chars = Array.from(content);
+    if (chars.length <= ELLIPSIS.length + 1) {
+      content = '';
+      break;
+    }
+    content = chars.slice(0, chars.length - 1).join('');
+    if (!content.endsWith(ELLIPSIS) && countChars(content + ELLIPSIS + hashtags + linkBlock) <= BLUESKY_LIMIT) {
+      content = content.trimEnd() + ELLIPSIS;
+      break;
+    }
   }
-  
-  return finalPost;
+
+  return (content + hashtags + linkBlock).trim();
+}
+
+/**
+ * Ensure links are always valid site URLs so posts never ship with broken paths.
+ * Invalid or external links fall back to home page.
+ */
+function sanitizeLink(link) {
+  if (!link || !String(link).trim()) {
+    return null;
+  }
+
+  let parsed;
+  try {
+    parsed = new URL(link);
+  } catch {
+    return 'https://abstractemporium.art';
+  }
+
+  if (parsed.hostname !== 'abstractemporium.art') {
+    return 'https://abstractemporium.art';
+  }
+
+  const cleanPath = parsed.pathname.replace(/\/+$/, '');
+  if (!cleanPath || cleanPath === '') {
+    return 'https://abstractemporium.art';
+  }
+
+  const localPath = cleanPath.replace(/^\//, '');
+  const exact = join(SITE_ROOT, localPath);
+  const html = join(SITE_ROOT, `${localPath}.html`);
+  if (fs.existsSync(exact) || fs.existsSync(html)) {
+    return `https://abstractemporium.art/${localPath}`;
+  }
+
+  return 'https://abstractemporium.art';
 }
 
 /**
@@ -224,6 +270,16 @@ function saveContentQueue(queue) {
  */
 function getNextPost(queue) {
   const now = new Date();
+
+  if (TARGET_POST_ID) {
+    return queue.posts.find(post => {
+      const postedPlatforms = post.postedPlatforms || [];
+      return post.id === TARGET_POST_ID &&
+        !postedPlatforms.includes('bluesky') &&
+        post.platforms.includes('bluesky') &&
+        new Date(post.schedule) <= now;
+    });
+  }
   
   return queue.posts.find(post => {
     const postedPlatforms = post.postedPlatforms || [];

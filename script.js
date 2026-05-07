@@ -1,5 +1,7 @@
 // Initialize chatbot
 let chatbot = null;
+let hamburger = null;
+let navMenu = null;
 
 // Initialize chatbot when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,14 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
         setupPatternGeneratorTabs();
     }
     
-    // Mobile Menu Toggle - moved inside DOMContentLoaded
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
+    // Mobile Menu Toggle
+    hamburger = document.querySelector('.hamburger');
+    navMenu = document.querySelector('.nav-menu') || document.querySelector('.nav-links');
+
     if (hamburger && navMenu) {
+        hamburger.setAttribute('role', 'button');
+        hamburger.setAttribute('aria-label', 'Toggle navigation menu');
+        hamburger.setAttribute('aria-expanded', 'false');
+
         hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
+            const isActive = navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active', isActive);
+            hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        });
+
+        navMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
         });
     }
     
@@ -182,8 +197,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
-            navMenu.classList.remove('active');
-            if (hamburger) hamburger.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('active');
+            if (hamburger) {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
         }
     });
 });

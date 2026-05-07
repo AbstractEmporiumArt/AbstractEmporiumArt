@@ -346,7 +346,7 @@
     <div id="knitting-chatbot-widget" class="knitting-chatbot-widget minimized">
         <button class="chatbot-toggle" onclick="toggleKnittingChatbot()">
             <span class="chatbot-icon">🧶</span>
-            <span class="chatbot-label">Knitting Helper</span>
+            <span class="chatbot-label">Super Agent</span>
         </button>
         
         <div class="chatbot-container">
@@ -354,8 +354,8 @@
                 <div class="chatbot-header-info">
                     <span class="chatbot-avatar">🧶</span>
                     <div>
-                        <h4>Knitting Assistant</h4>
-                        <p class="chatbot-status">Here to help you start!</p>
+                        <h4>Abstract Emporium Super Agent</h4>
+                        <p class="chatbot-status">Art, patterns, and shop help in one place.</p>
                     </div>
                 </div>
                 <button class="chatbot-minimize-btn" onclick="toggleKnittingChatbot()">−</button>
@@ -427,53 +427,6 @@
         </div>
     </div>
 
-    <!-- Chat Widget -->
-    <div id="chatbot-widget" class="chatbot-widget" style="display:none;">
-        <!-- Hidden - replaced by knitting-specific chatbot --       
-                    <div class="pricing-card">
-                        <h4>🎓 Master Pack</h4>
-                        <p class="price">$9.99</p>
-                        <p class="price-desc">All 3 + tutorials</p>
-                        <ul class="price-features">
-                            <li>✓ Knitting</li>
-                            <li>✓ Crochet</li>
-                            <li>✓ Weaving</li>
-                            <li>✓ Video tutorials</li>
-                            <li>✓ Expert tips</li>
-                        </ul>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                            <input type="hidden" name="cmd" value="_xclick">
-                            <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
-                            <input type="hidden" name="item_name" value="Master Pattern Pack">
-                            <input type="hidden" name="amount" value="9.99">
-                            <input type="hidden" name="currency_code" value="USD">
-                            <button type="submit" class="pricing-btn btn-master">Get Master Pack ($9.99)</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Email Signup -->
-            <div class="pattern-email-signup" id="patternEmailSignup">
-                <h3>✨ Exclusive Member Benefits</h3>
-                <p>Join our community for special pattern deals and announcements</p>
-                <div class="signup-benefits">
-                    <span>🎁 10% off first purchase</span>
-                    <span>📧 Weekly new patterns</span>
-                    <span>💝 Exclusive discounts</span>
-                    <span>👥 Community events</span>
-                </div>
-                
-                <form class="email-signup-form pattern-form" id="patternEmailForm">
-                    <input type="text" id="patternUserName" placeholder="Your Name (optional)" maxlength="50">
-                    <input type="email" id="patternUserEmail" placeholder="your@email.com" required>
-                    <button type="submit" class="email-signup-btn">Get 10% Off + Updates</button>
-                </form>
-                <p class="email-privacy-note">✓ We respect your privacy. Unsubscribe anytime.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -521,28 +474,6 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
-    <div id="chatbot-widget" class="chatbot-widget">
-        <div class="chatbot-header">
-            <span>Abstract Bot 🤖</span>
-            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
-        </div>
-        <div id="chatbot-messages" class="chatbot-messages"></div>
-        <div class="chatbot-input-area">
-            <input 
-                type="text" 
-                id="chatbot-input" 
-                placeholder="Ask me anything..." 
-                onkeypress="handleChatInput(event)"
-            >
-            <button onclick="sendChatMessage()">Send</button>
-        </div>
-    </div>
-
-    <script src="helper-bot.js"></script>
-    <script src="gallery-data.js"></script>
-    <script src="sales-announcements.js"></script>
-    <script src="sales-agent.js"></script>
     <script src="pattern-generator.js"></script>
     <script src="pattern-generator-enhanced.js"></script>
     <script src="pattern-delivery.js"></script>

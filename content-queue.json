@@ -844,7 +844,15 @@
         "bluesky"
       ],
       "schedule": "2026-04-27T10:00:00Z",
-      "posted": false
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-08T22:00:50.303Z",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116541204051505608",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mleq5ul5ja2y",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mleq5ul5ja2y"
     },
     {
       "id": "post-039",

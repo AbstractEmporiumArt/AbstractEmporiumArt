@@ -810,12 +810,15 @@
         "bluesky"
       ],
       "schedule": "2026-04-26T15:00:00Z",
-      "posted": false,
+      "posted": true,
       "postedPlatforms": [
-        "mastodon"
+        "mastodon",
+        "bluesky"
       ],
-      "postedAt": "2026-05-07T22:03:01.672Z",
-      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116535550374992201"
+      "postedAt": "2026-05-08T09:26:42.453Z",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116535550374992201",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mldfzeuq5x2a",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mldfzeuq5x2a"
     },
     {
       "id": "post-038",

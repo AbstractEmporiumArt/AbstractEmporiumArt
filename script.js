@@ -34,11 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.setAttribute('role', 'button');
         hamburger.setAttribute('aria-label', 'Toggle navigation menu');
         hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('tabindex', '0');
 
         hamburger.addEventListener('click', () => {
             const isActive = navMenu.classList.toggle('active');
             hamburger.classList.toggle('active', isActive);
             hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        });
+
+        hamburger.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                hamburger.click();
+            }
         });
 
         navMenu.querySelectorAll('a').forEach((link) => {
@@ -166,11 +174,16 @@ function initializeGallery() {
     }
     
     // Filter functionality
+    filterBtns.forEach((btn) => {
+        btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+    });
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             // Update active state
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            filterBtns.forEach(b => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
             
             // Filter items
             const filter = btn.dataset.filter;

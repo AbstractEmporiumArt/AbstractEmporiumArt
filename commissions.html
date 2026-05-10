@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request a custom abstract art commission from Abstract Emporium. Share your vision, style, size, and timeline to start your project.">
+    <link rel="canonical" href="https://abstractemporium.art/commissions.html">
+    <meta property="og:title" content="Custom Abstract Art Commissions - Abstract Emporium">
+    <meta property="og:description" content="Start your custom commission request for modern abstract artwork tailored to your space.">
+    <meta property="og:image" content="https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761">
+    <meta property="og:url" content="https://abstractemporium.art/commissions.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom Abstract Art Commissions - Abstract Emporium">
+    <meta name="twitter:description" content="Start your custom commission request for modern abstract artwork tailored to your space.">
+    <meta name="twitter:image" content="https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761">
+    <title>Commissions - Abstract Emporium Art</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <style>
+        .commissions-section {
+            padding: 70px 20px;
+        }
+        .commissions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 22px;
+        }
+        .commission-card,
+        .commission-form-wrap {
+            background: #fff;
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+        }
+        .commission-package {
+            border: 1px solid #ececec;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+        .commission-package h3 {
+            margin-bottom: 6px;
+        }
+        .commission-package p {
+            margin: 0;
+            color: #555;
+        }
+        .commission-form {
+            display: grid;
+            gap: 12px;
+        }
+        .commission-form label {
+            font-weight: 600;
+        }
+        .commission-form input,
+        .commission-form select,
+        .commission-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cfd6dd;
+            border-radius: 8px;
+            font: inherit;
+        }
+        .commission-form button {
+            border: none;
+            border-radius: 999px;
+            background: #00b894;
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 18px;
+            cursor: pointer;
+        }
+        .commission-form button:hover {
+            background: #009a7a;
+        }
+        .commission-note {
+            font-size: 0.93rem;
+            color: #60676e;
+            margin-top: 8px;
+        }
+        @media (max-width: 900px) {
+            .commissions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="banner">
+        <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Hug.art Banner" class="banner-img">
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img">
+                <span>Abstract Emporium</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="shop-everywhere.html" class="nav-link">Shop Everywhere</a></li>
+                <li><a href="commissions.html" class="nav-link active">Commissions</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="commissions-section" id="main-content">
+        <div class="container">
+            <h1>Custom Abstract Art Commissions</h1>
+            <p class="section-subtitle">Share your vision and we will design a personalized abstract artwork for your home, office, gift project, or brand space.</p>
+
+            <div class="commissions-grid">
+                <div class="commission-card">
+                    <h2>Commission Options</h2>
+                    <div class="commission-package">
+                        <h3>Mini Commission</h3>
+                        <p>Small custom concept for gifts or personal spaces.</p>
+                    </div>
+                    <div class="commission-package">
+                        <h3>Signature Commission</h3>
+                        <p>Statement abstract piece with style consultation.</p>
+                    </div>
+                    <div class="commission-package">
+                        <h3>Collector Commission</h3>
+                        <p>Large format custom work with multi-step review process.</p>
+                    </div>
+                    <p class="commission-note">After submission, you will receive a response within 24-48 hours with timeline, pricing range, and next steps.</p>
+                    <p class="commission-note">Need a quick question first? <a href="contact.html?subject=commission">Use the contact form</a>.</p>
+                </div>
+
+                <div class="commission-form-wrap">
+                    <h2>Start Your Request</h2>
+                    <form id="commissionsForm" class="commission-form" action="https://formspree.io/f/mvgelyje" method="POST">
+                        <div>
+                            <label for="commissionName">Full Name</label>
+                            <input id="commissionName" name="name" type="text" required>
+                        </div>
+                        <div>
+                            <label for="commissionEmail">Email</label>
+                            <input id="commissionEmail" name="email" type="email" required>
+                        </div>
+                        <div>
+                            <label for="commissionType">Commission Type</label>
+                            <select id="commissionType" name="commission_type" required>
+                                <option value="">Select one...</option>
+                                <option value="mini">Mini Commission</option>
+                                <option value="signature">Signature Commission</option>
+                                <option value="collector">Collector Commission</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="commissionBudget">Budget Range (USD)</label>
+                            <select id="commissionBudget" name="budget_range" required>
+                                <option value="">Select budget...</option>
+                                <option value="under_250">Under $250</option>
+                                <option value="250_750">$250 - $750</option>
+                                <option value="750_2000">$750 - $2,000</option>
+                                <option value="2000_plus">$2,000+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="commissionTimeline">Target Timeline</label>
+                            <input id="commissionTimeline" name="timeline" type="text" placeholder="Example: Needed by August 15">
+                        </div>
+                        <div>
+                            <label for="commissionDetails">Project Details</label>
+                            <textarea id="commissionDetails" name="message" rows="6" placeholder="Tell us preferred colors, mood, dimensions, placement, and inspirations." required></textarea>
+                        </div>
+                        <input type="hidden" name="subject" value="Commission Request">
+                        <button type="submit">Submit Commission Request</button>
+                    </form>
+                    <p id="commissionStatus" class="commission-note" aria-live="polite"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p>&copy; 2026 Abstract Emporium Art. All rights reserved.</p>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="shop-everywhere.html">Shop Everywhere</a>
+                        <a href="commissions.html">Commissions</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('commissionsForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const form = event.currentTarget;
+            const status = document.getElementById('commissionStatus');
+            const payload = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json'
+                    },
+                    body: payload
+                });
+
+                if (response.ok) {
+                    status.textContent = 'Thanks, your commission request was sent successfully. We will reply within 24-48 hours.';
+                    window.dispatchEvent(new CustomEvent('ae_form_submit_success', {
+                        detail: {
+                            form_type: 'commission',
+                            form_id: 'commissionsForm',
+                            form_destination: 'formspree'
+                        }
+                    }));
+                    form.reset();
+                    return;
+                }
+
+                status.textContent = 'We could not send your request right now. Please try again or email us directly.';
+                window.dispatchEvent(new CustomEvent('ae_form_submit_error', {
+                    detail: {
+                        form_type: 'commission',
+                        form_id: 'commissionsForm',
+                        error_context: 'non_200_response'
+                    }
+                }));
+            } catch (error) {
+                status.textContent = 'Connection issue while sending. Please retry in a moment or email us directly.';
+                window.dispatchEvent(new CustomEvent('ae_form_submit_error', {
+                    detail: {
+                        form_type: 'commission',
+                        form_id: 'commissionsForm',
+                        error_context: 'network_error'
+                    }
+                }));
+            }
+        });
+    </script>
+    <script src="jsonld-core.js"></script>
+    <script src="analytics-tracking.js"></script>
+    <script src="script.js"></script>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script>
+</body>
+</html>

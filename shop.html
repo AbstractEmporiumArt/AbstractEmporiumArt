@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Shop - Abstract Emporium Art - Find our art on ArtPal, Fine Art America, and The HUG">
+    <link rel="canonical" href="https://abstractemporium.art/shop.html">
+    <meta property="og:title" content="Shop - Abstract Emporium Art">
+    <meta property="og:description" content="Shop abstract art across ArtPal, Fine Art America, TheHug.art, RedBubble, and Ko-fi.">
+    <meta property="og:image" content="https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761">
+    <meta property="og:url" content="https://abstractemporium.art/shop.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shop - Abstract Emporium Art">
+    <meta name="twitter:description" content="Shop abstract art across ArtPal, Fine Art America, TheHug.art, RedBubble, and Ko-fi.">
+    <meta name="twitter:image" content="https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761">
     <title>Shop - Abstract Emporium Art</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/jpeg" href="logo.jpg">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Banner -->
     <div class="banner">
         <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Hug.art Banner" class="banner-img">
@@ -28,6 +39,8 @@
                 <li><a href="pattern.html" class="nav-link">Pattern Maker</a></li>
                 <li><a href="features.html" class="nav-link">Features</a></li>
                 <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li><a href="shop-everywhere.html" class="nav-link">Shop Everywhere</a></li>
+                <li><a href="commissions.html" class="nav-link">Commissions</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -39,10 +52,14 @@
     </nav>
 
     <!-- Shop Section -->
-    <section class="stores-section">
+    <section class="stores-section" id="main-content">
         <div class="container">
             <h1>Shop Our Collections</h1>
             <p class="section-subtitle">Find our art on multiple platforms and support independent art</p>
+            <p class="section-subtitle" style="margin-top:10px;">
+                Need a full side-by-side comparison? <a href="shop-everywhere.html">Visit Shop Everywhere</a>.
+                Looking for custom work? <a href="commissions.html">Request a commission</a>.
+            </p>
             
             <div class="stores-grid">
                 <a href="https://www.artpal.com/Abstractemporium/" target="_blank" class="store-card">
@@ -194,6 +211,8 @@
                         <a href="index.html">Home</a>
                         <a href="gallery.html">Gallery</a>
                         <a href="shop.html">Shop</a>
+                        <a href="shop-everywhere.html">Shop Everywhere</a>
+                        <a href="commissions.html">Commissions</a>
                         <a href="contact.html">Contact</a>
                     </div>
                 </div>
@@ -269,6 +288,8 @@
             });
         });
     </script>
+    <script src="jsonld-core.js"></script>
+    <script src="analytics-tracking.js"></script>
     <script src="script.js"></script>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

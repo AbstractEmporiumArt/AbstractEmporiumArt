@@ -6,10 +6,16 @@
     <meta name="description" content="Abstract Emporium Art Blog - Exploring the therapeutic power of abstract art, creative processes, and art therapy.">
     <meta name="keywords" content="art therapy, therapeutic art, abstract art blog, creative process, mental health art">
     <meta name="author" content="Abstract Emporium Art">
+    <link rel="canonical" href="https://abstractemporium.art/blog.html">
     <meta property="og:title" content="Abstract Emporium Art Blog - The Therapeutic Side of Art">
     <meta property="og:description" content="Exploring art therapy, creative processes, and the healing power of abstract art.">
-    <meta property="og:image" content="banner.jpg">
+    <meta property="og:image" content="https://abstractemporium.art/banner.jpg">
     <meta property="og:url" content="https://abstractemporium.art/blog.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abstract Emporium Art Blog - The Therapeutic Side of Art">
+    <meta name="twitter:description" content="Exploring art therapy, creative processes, and the healing power of abstract art.">
+    <meta name="twitter:image" content="https://abstractemporium.art/banner.jpg">
     <title>Blog - Abstract Emporium Art</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/jpeg" href="logo.jpg">
@@ -210,6 +216,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Banner -->
     <div class="banner">
         <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Cover" class="banner-img">
@@ -230,6 +237,8 @@
                 <li><a href="pattern.html" class="nav-link">Pattern Maker</a></li>
                 <li><a href="features.html" class="nav-link">Features</a></li>
                 <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="shop-everywhere.html" class="nav-link">Shop Everywhere</a></li>
+                <li><a href="commissions.html" class="nav-link">Commissions</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -242,7 +251,7 @@
 
     <!-- Blog Container -->
     <div class="blog-container">
-        <div class="blog-header">
+        <div class="blog-header" id="main-content">
             <h1>Abstract Emporium Blog</h1>
             <p>Exploring the therapeutic power of abstract art</p>
         </div>
@@ -266,6 +275,8 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="shop.html">Shop</a></li>
+                    <li><a href="shop-everywhere.html">Shop Everywhere</a></li>
+                    <li><a href="commissions.html">Commissions</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -293,6 +304,8 @@
     </footer>
 
     <script src="blog-data.js"></script>
+    <script src="jsonld-core.js"></script>
+    <script src="analytics-tracking.js"></script>
     <script src="script.js"></script>
     <script>
         // Load blog posts

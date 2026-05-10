@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact - Abstract Emporium Art - Get in touch with us">
+    <link rel="canonical" href="https://abstractemporium.art/contact.html">
+    <meta property="og:title" content="Contact - Abstract Emporium Art">
+    <meta property="og:description" content="Contact Abstract Emporium for artwork questions, commissions, and collaborations.">
+    <meta property="og:image" content="https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761">
+    <meta property="og:url" content="https://abstractemporium.art/contact.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - Abstract Emporium Art">
+    <meta name="twitter:description" content="Contact Abstract Emporium for artwork questions, commissions, and collaborations.">
+    <meta name="twitter:image" content="https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761">
     <title>Contact - Abstract Emporium Art</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/jpeg" href="logo.jpg">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Banner -->
     <div class="banner">
         <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Hug.art Banner" class="banner-img">
@@ -28,6 +39,8 @@
                 <li><a href="pattern.html" class="nav-link">Pattern Maker</a></li>
                 <li><a href="features.html" class="nav-link">Features</a></li>
                 <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="shop-everywhere.html" class="nav-link">Shop Everywhere</a></li>
+                <li><a href="commissions.html" class="nav-link">Commissions</a></li>
                 <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -39,10 +52,13 @@
     </nav>
 
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section class="contact-section" id="main-content">
         <div class="container">
             <h1>Get In Touch</h1>
             <p class="section-subtitle">Have questions? We'd love to hear from you!</p>
+            <p class="section-subtitle" style="margin-top: 10px;">
+                Need custom artwork? <a href="commissions.html">Start a commission request here</a> for faster project scoping.
+            </p>
             
             <div class="contact-content">
                 <form class="contact-form" id="contactForm">
@@ -58,6 +74,7 @@
                         <label for="contactSubject">Subject</label>
                         <select id="contactSubject" required>
                             <option value="">Select a subject...</option>
+                            <option value="commission">Commission Request</option>
                             <option value="artwork">Question about Artwork</option>
                             <option value="patterns">Pattern Generator Help</option>
                             <option value="collaboration">Collaboration Proposal</option>
@@ -186,6 +203,8 @@
                         <a href="index.html">Home</a>
                         <a href="gallery.html">Gallery</a>
                         <a href="shop.html">Shop</a>
+                        <a href="shop-everywhere.html">Shop Everywhere</a>
+                        <a href="commissions.html">Commissions</a>
                         <a href="contact.html">Contact</a>
                     </div>
                 </div>
@@ -216,6 +235,14 @@
     <script src="sales-agent.js"></script>
     <script>
         // Contact form handler with REAL email delivery
+        const subjectParam = new URLSearchParams(window.location.search).get('subject');
+        if (subjectParam === 'commission') {
+            const subjectSelect = document.getElementById('contactSubject');
+            if (subjectSelect) {
+                subjectSelect.value = 'commission';
+            }
+        }
+
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
@@ -258,15 +285,39 @@
                 
                 if (response.ok) {
                     console.log('✅ Message sent to abstractemporiumart@outlook.com!');
+                    window.dispatchEvent(new CustomEvent('ae_form_submit_success', {
+                        detail: {
+                            form_type: formData.subject === 'commission' ? 'commission' : 'contact',
+                            form_id: 'contactForm',
+                            form_destination: 'formspree'
+                        }
+                    }));
+                } else {
+                    window.dispatchEvent(new CustomEvent('ae_form_submit_error', {
+                        detail: {
+                            form_type: formData.subject === 'commission' ? 'commission' : 'contact',
+                            form_id: 'contactForm',
+                            error_context: 'non_200_response'
+                        }
+                    }));
                 }
             } catch (error) {
                 console.log('📧 Formspree not configured yet - message stored locally');
+                window.dispatchEvent(new CustomEvent('ae_form_submit_error', {
+                    detail: {
+                        form_type: formData.subject === 'commission' ? 'commission' : 'contact',
+                        form_id: 'contactForm',
+                        error_context: 'network_error'
+                    }
+                }));
             }
             
             alert('Thank you for your message! We\'ll respond within 24-48 hours.');
             this.reset();
         });
     </script>
+    <script src="jsonld-core.js"></script>
+    <script src="analytics-tracking.js"></script>
     <script src="script.js"></script>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

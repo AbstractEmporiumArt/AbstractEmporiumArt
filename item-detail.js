@@ -55,6 +55,8 @@ function getItemIdFromHash() {
 function loadItemData() {
     if (!currentItem) return;
 
+    updateDynamicSeo();
+
     // Update breadcrumb
     document.getElementById('breadcrumb-title').textContent = currentItem.title;
 
@@ -87,6 +89,43 @@ function loadItemData() {
 
     // Load preview images from related items
     loadPreviewImages();
+}
+
+function updateDynamicSeo() {
+    const title = `${currentItem.title} | ${currentItem.collection} | Abstract Emporium Art`;
+    const description = currentItem.description ||
+        `Explore ${currentItem.title} from the ${currentItem.collection} collection on ${currentItem.platform}.`;
+    const canonical = `https://abstractemporium.art/item-detail.html?id=${currentItem.id}`;
+    const image = currentItem.image || "https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761";
+
+    document.title = title;
+
+    setMetaTag('name', 'description', description);
+    setMetaTag('property', 'og:title', title);
+    setMetaTag('property', 'og:description', description);
+    setMetaTag('property', 'og:url', canonical);
+    setMetaTag('property', 'og:image', image);
+    setMetaTag('name', 'twitter:title', title);
+    setMetaTag('name', 'twitter:description', description);
+    setMetaTag('name', 'twitter:image', image);
+
+    let canonicalTag = document.querySelector('link[rel="canonical"]');
+    if (!canonicalTag) {
+        canonicalTag = document.createElement('link');
+        canonicalTag.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.setAttribute('href', canonical);
+}
+
+function setMetaTag(attrName, attrValue, content) {
+    let tag = document.querySelector(`meta[${attrName}="${attrValue}"]`);
+    if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute(attrName, attrValue);
+        document.head.appendChild(tag);
+    }
+    tag.setAttribute('content', content);
 }
 
 /**

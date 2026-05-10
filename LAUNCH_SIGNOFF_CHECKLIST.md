@@ -4,7 +4,8 @@ Prepared by: GitHub Copilot (GPT-5.3-Codex)
 
 ## Final Conversion QA Verdict
 Overall status: NO-GO (deployment gap)
-Final signoff timestamp: 2026-05-09 20:51:42 -04:00
+Final signoff timestamp: 2026-05-09 21:00:26 -04:00
+Deployment commit on `main`: `63b168b`
 
 Reason:
 - Local workspace implementation is complete.
@@ -49,7 +50,7 @@ Reason:
 
 ## Evidence Snapshot
 
-Post-deploy re-verification run: 2026-05-09 20:51:42 -04:00
+Post-deploy re-verification run: 2026-05-09 21:00:26 -04:00
 - https://abstractemporium.art/ -> 200, but no `jsonld-core.js`/`analytics-tracking.js`, and no new funnel links in source.
 - https://abstractemporium.art/shop-everywhere.html -> 404.
 - https://abstractemporium.art/commissions.html -> 404.

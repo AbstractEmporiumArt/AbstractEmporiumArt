@@ -9,18 +9,18 @@
       "creative_mindfulness": "2026-05-01T16:41:37.868Z",
       "creator_humor": "2026-05-05T03:45:32.772Z",
       "behind_the_scenes": "2026-04-29T17:13:25.050Z",
-      "inspiration_spark": "2026-04-25T16:27:13.456Z",
-      "origin_story": "2026-04-25T10:32:26.681Z",
-      "transformation_arc": "2026-04-27T17:13:35.216Z"
+      "inspiration_spark": "2026-05-15T10:28:17.445Z",
+      "origin_story": "2026-05-15T10:28:14.850Z",
+      "transformation_arc": "2026-05-15T10:28:20.060Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-05-05T03:45:27.955Z",
+      "you can find more of this over at the site if you're curious": "2026-05-15T10:28:20.060Z",
       "this lives quietly on abstractemporium.art": "2026-05-05T03:45:30.394Z",
       "there's a whole collection of this kind of work on the site": "2026-05-05T03:45:32.772Z",
-      "the full piece (and others like it) lives on abstractemporium.art": null,
-      "if this is your kind of thing, abstractemporium.art has more": null
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-15T10:28:14.850Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-05-15T10:28:17.445Z"
     }
   },
   "hashtag_sets_used": [
@@ -102,6 +102,18 @@
     [
       "#CreativeTime",
       "#ColorAndCalm"
+    ],
+    [
+      "#ArtJourney",
+      "#CreativeReflection"
+    ],
+    [
+      "#ArtInspiration",
+      "#CreativeBeginnings"
+    ],
+    [
+      "#CreativeGrowth",
+      "#PerfectlyImperfect"
     ]
   ],
   "posts": [
@@ -446,6 +458,84 @@
         "hours cold",
         "cold hand",
         "hand cramped"
+      ]
+    },
+    {
+      "id": "gen-1778840894850-647168",
+      "timestamp": "2026-05-15T10:28:14.850Z",
+      "category": "origin_story",
+      "cta_type": "visit_site",
+      "emotional_theme": "art_as_healing",
+      "bluesky_content": "Abstract Emporium was born on a rainy afternoon with a mug of tea and too many tangled ideas. Art, knitting, and coloring weren’t hobbies—they were lifelines. Slowly, they became stories I could share. Now, they live here. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Abstract Emporium began on a rainy afternoon with tea and way too many tangled ideas. Art, knitting, and coloring weren’t hobbies—they were lifelines. Over time, they turned into stories I could share, and those stories built this space. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#ArtJourney",
+        "#CreativeReflection"
+      ],
+      "content_hash": "fa370df8ad7c1e07cc193a0401daf2af69925cf65117d8953016c23960b73d07",
+      "key_phrases": [
+        "abstract emporium",
+        "emporium born",
+        "born rainy",
+        "rainy afternoon",
+        "afternoon with",
+        "with many",
+        "many tangled",
+        "tangled ideas",
+        "ideas knitting",
+        "knitting coloring"
+      ]
+    },
+    {
+      "id": "gen-1778840897445-78d756",
+      "timestamp": "2026-05-15T10:28:17.445Z",
+      "category": "inspiration_spark",
+      "cta_type": "abstractemporium.art has more",
+      "emotional_theme": "possibility_in_the_blank",
+      "bluesky_content": "Do you ever think about the first color you’d paint your walls in a blank new home? That’s the kind of magic moment every blank page holds—endless possibility, just waiting for you to start. Pick one color and let it lead the way. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Do you ever think about the first color you’d paint your walls in a blank new home? That choice feels big but magical—because it's the beginning of everything. That’s the same spark every blank page holds. Just pick one color. Let it lead the way. 🌈 If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#ArtInspiration",
+        "#CreativeBeginnings"
+      ],
+      "content_hash": "d34274271ba8eac9f7c2f2084bba5efc54c6fa4f6ef918a053f01cbbd7d86334",
+      "key_phrases": [
+        "ever think",
+        "think about",
+        "about first",
+        "first color",
+        "color paint",
+        "paint your",
+        "your walls",
+        "walls blank",
+        "blank home",
+        "home that"
+      ]
+    },
+    {
+      "id": "gen-1778840900060-6589c8",
+      "timestamp": "2026-05-15T10:28:20.060Z",
+      "category": "transformation_arc",
+      "cta_type": "subtle_site_mention",
+      "emotional_theme": "progress_not_perfection",
+      "bluesky_content": "Do transformations always look beautiful? Not really. Growth can be a little awkward, a little messy—a mix of bright, clashing colors before they settle into harmony. It’s progress, not perfection. If you’re craving a space that makes room for messy growth, the site is waiting.",
+      "mastodon_content": "Do transformations always look beautiful? Not really. Growth can be awkward, messy—a mix of bright, clashing colors before they finally settle into harmony. It’s about progress, not perfection. If you’re craving a space that welcomes messy growth, you’ll find it on the site.",
+      "hashtags": [
+        "#CreativeGrowth",
+        "#PerfectlyImperfect"
+      ],
+      "content_hash": "d440be2e628bb68254c5f6887c41009b56fced76a9fd168c0fd60b9a3190ce1e",
+      "key_phrases": [
+        "transformations always",
+        "always look",
+        "look beautiful",
+        "beautiful really",
+        "really growth",
+        "growth little",
+        "little awkward",
+        "awkward little",
+        "little messy",
+        "messy bright"
       ]
     }
   ]

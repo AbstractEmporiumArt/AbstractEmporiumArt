@@ -1374,12 +1374,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-07T10:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-16T09:43:40.544Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mlxkp3j5uy2j",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mlxkp3j5uy2j",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116583603880011303",
       "_generated": true,
       "_category": "origin_story",
       "_cta_type": "visit_site",
@@ -1438,6 +1441,87 @@
       "_category": "transformation_arc",
       "_cta_type": "subtle_site_mention",
       "_emotional_theme": "progress_not_perfection"
+    },
+    {
+      "id": "gen-1778924614211-e135a2",
+      "content": "Some days your emotions feel like a thousand tangled threads, impossible to separate. That’s okay. Start with one—just one. Follow its color, its texture, its path. Unraveling doesn’t have to be a grand gesture. Sometimes it’s just one gentle strand at a time. This lives quietly on abstractemporium.art.",
+      "bluesky_content": "Some days your emotions feel like a thousand tangled threads, impossible to separate. That’s okay. Start with one—just one. Follow its color, its texture, its path. Sometimes unraveling happens one strand at a time. This lives quietly on abstractemporium.art.",
+      "mastodon_content": "Some days your emotions feel like a thousand tangled threads, impossible to separate. That’s okay. Start with one—just one. Follow its color, its texture, its path. Unraveling doesn’t have to be a grand gesture. Sometimes it’s just one gentle strand at a time. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#EmotionalArt",
+        "#MindfulCreativity"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-08T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "small_steps"
+    },
+    {
+      "id": "gen-1778924616640-ed109e",
+      "content": "I almost scrapped a design today. The lines felt awkward, the flow wasn’t right. Then I stepped away, made tea, and came back to see something new—a quiet rhythm hidden in the chaos. Sometimes the art just asks for patience. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "I almost scrapped a design today. The lines felt awkward, the flow wasn’t right. Then I stepped away, made tea, and returned to see something new—a quiet rhythm hidden in the chaos. Sometimes the art asks for patience. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "I almost scrapped a design today. The lines felt awkward, the flow wasn’t right. Then I stepped away, made tea, and came back to see something new—a quiet rhythm hidden in the chaos. Sometimes the art just asks for patience. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ArtInProgress",
+        "#MindfulMaking"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-09T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "trust_the_process"
+    },
+    {
+      "id": "gen-1778924619192-eeaf26",
+      "content": "Ever notice how a single color can shift your whole mood? Like the way a deep green softly whispers \"breathe\" or a golden yellow hums \"hope.\" Take a moment today, pick a color intentionally, and let it lead you somewhere new. The full piece (and others like it) lives on abstractemporium.art 🌿",
+      "bluesky_content": "Ever notice how a single color can shift your whole mood? Like the way a deep green whispers \"breathe\" or a golden yellow hums \"hope.\" Take a moment today, pick a color, and let it lead. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Ever notice how a single color can shift your whole mood? Like the way a deep green softly whispers \"breathe\" or a golden yellow hums \"hope.\" Take a moment today, pick a color intentionally, and let it lead you somewhere new. The full piece (and others like it) lives on abstractemporium.art 🌿",
+      "hashtags": [
+        "#ColorMood",
+        "#MindfulArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-09T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creative_mindfulness",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "color_and_emotion"
     }
   ]
 }

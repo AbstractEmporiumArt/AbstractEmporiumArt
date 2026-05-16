@@ -5,10 +5,10 @@
     "last_used": {
       "abstract_art_spotlight": "2026-05-05T03:45:27.955Z",
       "knitting_craft_story": "2026-05-05T03:45:30.394Z",
-      "emotional_reflection": "2026-04-28T11:29:38.774Z",
-      "creative_mindfulness": "2026-05-01T16:41:37.868Z",
+      "emotional_reflection": "2026-05-16T09:43:34.212Z",
+      "creative_mindfulness": "2026-05-16T09:43:39.192Z",
       "creator_humor": "2026-05-05T03:45:32.772Z",
-      "behind_the_scenes": "2026-04-29T17:13:25.050Z",
+      "behind_the_scenes": "2026-05-16T09:43:36.640Z",
       "inspiration_spark": "2026-05-15T10:28:17.445Z",
       "origin_story": "2026-05-15T10:28:14.850Z",
       "transformation_arc": "2026-05-15T10:28:20.060Z"
@@ -17,9 +17,9 @@
   "cta_rotation": {
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-05-15T10:28:20.060Z",
-      "this lives quietly on abstractemporium.art": "2026-05-05T03:45:30.394Z",
-      "there's a whole collection of this kind of work on the site": "2026-05-05T03:45:32.772Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-15T10:28:14.850Z",
+      "this lives quietly on abstractemporium.art": "2026-05-16T09:43:34.212Z",
+      "there's a whole collection of this kind of work on the site": "2026-05-16T09:43:36.640Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-16T09:43:39.192Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-05-15T10:28:17.445Z"
     }
   },
@@ -114,6 +114,18 @@
     [
       "#CreativeGrowth",
       "#PerfectlyImperfect"
+    ],
+    [
+      "#EmotionalArt",
+      "#MindfulCreativity"
+    ],
+    [
+      "#ArtInProgress",
+      "#MindfulMaking"
+    ],
+    [
+      "#ColorMood",
+      "#MindfulArt"
     ]
   ],
   "posts": [
@@ -536,6 +548,84 @@
         "awkward little",
         "little messy",
         "messy bright"
+      ]
+    },
+    {
+      "id": "gen-1778924614211-e135a2",
+      "timestamp": "2026-05-16T09:43:34.212Z",
+      "category": "emotional_reflection",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "small_steps",
+      "bluesky_content": "Some days your emotions feel like a thousand tangled threads, impossible to separate. That’s okay. Start with one—just one. Follow its color, its texture, its path. Sometimes unraveling happens one strand at a time. This lives quietly on abstractemporium.art.",
+      "mastodon_content": "Some days your emotions feel like a thousand tangled threads, impossible to separate. That’s okay. Start with one—just one. Follow its color, its texture, its path. Unraveling doesn’t have to be a grand gesture. Sometimes it’s just one gentle strand at a time. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#EmotionalArt",
+        "#MindfulCreativity"
+      ],
+      "content_hash": "f2a84ed02003ac1ab80abef5df66edfcbc6992b1cfc2597bbba83f799fb3d4a2",
+      "key_phrases": [
+        "some days",
+        "days your",
+        "your emotions",
+        "emotions feel",
+        "feel like",
+        "like thousand",
+        "thousand tangled",
+        "tangled threads",
+        "threads impossible",
+        "impossible separate"
+      ]
+    },
+    {
+      "id": "gen-1778924616640-ed109e",
+      "timestamp": "2026-05-16T09:43:36.640Z",
+      "category": "behind_the_scenes",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "trust_the_process",
+      "bluesky_content": "I almost scrapped a design today. The lines felt awkward, the flow wasn’t right. Then I stepped away, made tea, and returned to see something new—a quiet rhythm hidden in the chaos. Sometimes the art asks for patience. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "I almost scrapped a design today. The lines felt awkward, the flow wasn’t right. Then I stepped away, made tea, and came back to see something new—a quiet rhythm hidden in the chaos. Sometimes the art just asks for patience. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ArtInProgress",
+        "#MindfulMaking"
+      ],
+      "content_hash": "2f31268148af39ff873e23d4eb3869d50e911c2cead805d2af13e17edeb1aad4",
+      "key_phrases": [
+        "almost scrapped",
+        "scrapped design",
+        "design today",
+        "today lines",
+        "lines felt",
+        "felt awkward",
+        "awkward flow",
+        "flow wasn",
+        "wasn right",
+        "right then"
+      ]
+    },
+    {
+      "id": "gen-1778924619192-eeaf26",
+      "timestamp": "2026-05-16T09:43:39.192Z",
+      "category": "creative_mindfulness",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "color_and_emotion",
+      "bluesky_content": "Ever notice how a single color can shift your whole mood? Like the way a deep green whispers \"breathe\" or a golden yellow hums \"hope.\" Take a moment today, pick a color, and let it lead. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Ever notice how a single color can shift your whole mood? Like the way a deep green softly whispers \"breathe\" or a golden yellow hums \"hope.\" Take a moment today, pick a color intentionally, and let it lead you somewhere new. The full piece (and others like it) lives on abstractemporium.art 🌿",
+      "hashtags": [
+        "#ColorMood",
+        "#MindfulArt"
+      ],
+      "content_hash": "ea72b4c7b0b94fdb40dbeb7ff1a3bdf1302d5a06705c397677cc439d0d179fe4",
+      "key_phrases": [
+        "ever notice",
+        "notice single",
+        "single color",
+        "color shift",
+        "shift your",
+        "your whole",
+        "whole mood",
+        "mood like",
+        "like deep",
+        "deep green"
       ]
     }
   ]

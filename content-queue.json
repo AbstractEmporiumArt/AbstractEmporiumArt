@@ -1464,12 +1464,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-08T22:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-17T09:49:37.979Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mm23intqgr2s",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mm23intqgr2s",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116589289615684506",
       "_generated": true,
       "_category": "emotional_reflection",
       "_cta_type": "this lives quietly on abstractemporium.art",
@@ -1528,6 +1531,87 @@
       "_category": "creative_mindfulness",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
       "_emotional_theme": "color_and_emotion"
+    },
+    {
+      "id": "gen-1779011372261-369105",
+      "content": "This piece began with a single bold brushstroke—almost too loud for the canvas. But every color that followed softened it, held it, gave it context. It reminded me how even our sharpest edges can find their place in a bigger story. If this speaks to you, abstractemporium.art has more.",
+      "bluesky_content": "This piece started as a single bold brushstroke, almost too loud for the canvas. But every color that followed softened it, held it, gave it context. It reminded me how even our sharpest edges can find their place. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "This piece began with a single bold brushstroke—almost too loud for the canvas. But every color that followed softened it, held it, gave it context. It reminded me how even our sharpest edges can find their place in a bigger story. If this speaks to you, abstractemporium.art has more.",
+      "hashtags": [
+        "#AbstractArtStory",
+        "#ArtForTheSoul"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-10T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "abstract_art_spotlight",
+      "_cta_type": "abstractemporium.art_has_more",
+      "_emotional_theme": "sharp_edges_finding_place"
+    },
+    {
+      "id": "gen-1779011374450-d45135",
+      "content": "I unraveled an old sweater today. As the yarn pooled at my feet, I thought about cycles—how something can fall apart but still hold the potential to be remade. That’s the magic of knitting: it teaches you that starting over isn’t failure; it’s transformation. 🧶 More at the site.",
+      "bluesky_content": "I unraveled an old sweater today. As the yarn pooled at my feet, I thought about cycles—how something can fall apart but still hold the potential to be remade. That’s the magic of knitting: it teaches you that starting over isn’t failure; it’s transformation. More at the site.",
+      "mastodon_content": "I unraveled an old sweater today. As the yarn pooled at my feet, I thought about cycles—how something can fall apart but still hold the potential to be remade. That’s the magic of knitting: it teaches you that starting over isn’t failure; it’s transformation. 🧶 More at the site.",
+      "hashtags": [
+        "#KnittingLife",
+        "#CreativeFlow"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-10T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "knitting_craft_story",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "resilience_and_reinvention"
+    },
+    {
+      "id": "gen-1779011376706-4c8f1c",
+      "content": "I sat down to knit \"just a few rows\" last night. When I looked up, the sun was rising, my coffee was cold, and I’d accidentally knit my scarf to approximately the length of a small dragon. Guess I’m ready for winter—and so is my house.  \n\nThis lives quietly on abstractemporium.art 🧶",
+      "bluesky_content": "I sat down to knit \"just a few rows\" last night. When I looked up, the sun was rising, my coffee was cold, and I’d accidentally knit my scarf to approximately the length of a small dragon. Guess I’m ready for winter, and so is my house. This lives quietly on abstractemporium.art",
+      "mastodon_content": "I sat down to knit \"just a few rows\" last night. When I looked up, the sun was rising, my coffee was cold, and I’d accidentally knit my scarf to approximately the length of a small dragon. Guess I’m ready for winter—and so is my house.  \n\nThis lives quietly on abstractemporium.art 🧶",
+      "hashtags": [
+        "#CraftLife",
+        "#CozyHumor"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-11T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "soft_cta",
+      "_emotional_theme": "playful_oops"
     }
   ]
 }

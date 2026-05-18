@@ -9,18 +9,18 @@
       "creative_mindfulness": "2026-05-16T09:43:39.192Z",
       "creator_humor": "2026-05-17T09:49:36.706Z",
       "behind_the_scenes": "2026-05-16T09:43:36.640Z",
-      "inspiration_spark": "2026-05-15T10:28:17.445Z",
-      "origin_story": "2026-05-15T10:28:14.850Z",
-      "transformation_arc": "2026-05-15T10:28:20.060Z"
+      "inspiration_spark": "2026-05-18T11:47:23.028Z",
+      "origin_story": "2026-05-18T11:47:20.668Z",
+      "transformation_arc": "2026-05-18T11:47:26.003Z"
     }
   },
   "cta_rotation": {
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-05-17T09:49:34.450Z",
       "this lives quietly on abstractemporium.art": "2026-05-17T09:49:36.706Z",
-      "there's a whole collection of this kind of work on the site": "2026-05-16T09:43:36.640Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-16T09:43:39.192Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-05-17T09:49:32.262Z"
+      "there's a whole collection of this kind of work on the site": "2026-05-18T11:47:20.668Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-18T11:47:23.028Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-05-18T11:47:26.003Z"
     }
   },
   "hashtag_sets_used": [
@@ -138,6 +138,18 @@
     [
       "#CraftLife",
       "#CozyHumor"
+    ],
+    [
+      "#ArtfulJourney",
+      "#CreativeRebirth"
+    ],
+    [
+      "#SubtleHues",
+      "#ArtInTheDetails"
+    ],
+    [
+      "#CreativeProcess",
+      "#TransformationJourney"
     ]
   ],
   "posts": [
@@ -716,6 +728,84 @@
         "looked rising",
         "rising coffee",
         "coffee cold"
+      ]
+    },
+    {
+      "id": "gen-1779104840667-be718e",
+      "timestamp": "2026-05-18T11:47:20.668Z",
+      "category": "origin_story",
+      "cta_type": "abstract_empire_site",
+      "emotional_theme": "creative_rebirth",
+      "bluesky_content": "Abstract Emporium started with a single question scribbled in a notebook: \"What if creativity could feel like breathing again?\" That thought led to late nights of drawing, unraveling yarn, and experimenting with color. Now, there’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Abstract Emporium began with a single question, scrawled in messy handwriting during a quiet moment: \"What if creativity could feel like breathing again?\" That question turned into late-night sketches, tangled yarn experiments, and endless color play. Now, there’s a collection of this spirit on the site.",
+      "hashtags": [
+        "#ArtfulJourney",
+        "#CreativeRebirth"
+      ],
+      "content_hash": "42b4cbe2dc4d844a04223fa67b213c1c86de03b7b093fbffd4357d6639fa5c0a",
+      "key_phrases": [
+        "abstract emporium",
+        "emporium started",
+        "started with",
+        "with single",
+        "single question",
+        "question scribbled",
+        "scribbled notebook",
+        "notebook what",
+        "what creativity",
+        "creativity could"
+      ]
+    },
+    {
+      "id": "gen-1779104843027-b1eb83",
+      "timestamp": "2026-05-18T11:47:23.028Z",
+      "category": "inspiration_spark",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "hidden_beauty",
+      "bluesky_content": "What’s your favorite “invisible” color? The one you almost miss until light or shadow reveals it—like the faint sheen in feathers or the undertone in a twilight sky. Those hidden hues remind me to look closer. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "What’s your favorite “invisible” color? The ones you almost miss until light or shadow reveals them—like the faint iridescence in feathers or the quiet undertone in a twilight sky. Those hidden hues remind me to look closer. \n\nThe full piece (and others like it) lives on abstractemporium.art",
+      "hashtags": [
+        "#SubtleHues",
+        "#ArtInTheDetails"
+      ],
+      "content_hash": "61079023d38f692a58b09f3fe4667e27618a3a20866b7537c7b8dfff65316426",
+      "key_phrases": [
+        "what your",
+        "your favorite",
+        "favorite invisible",
+        "invisible color",
+        "color almost",
+        "almost miss",
+        "miss until",
+        "until light",
+        "light shadow",
+        "shadow reveals"
+      ]
+    },
+    {
+      "id": "gen-1779104846003-0454de",
+      "timestamp": "2026-05-18T11:47:26.003Z",
+      "category": "transformation_arc",
+      "cta_type": "natural",
+      "emotional_theme": "embracing_the_process",
+      "bluesky_content": "You know that moment when the picture in your head doesn’t match the reality in front of you? That’s where transformation lives. In the gap, the revisions, the in-betweens. Coloring, knitting, creating—none of it is linear. But wow, is it worth it. If that resonates, abstractemporium.art has more.",
+      "mastodon_content": "You know that moment when the picture in your head doesn’t match the reality in front of you? That’s where transformation lives. In the gap, the revisions, the in-betweens. Coloring, knitting, creating—none of it is linear. But wow, is it worth it. \n\nIf that resonates, abstractemporium.art has more.",
+      "hashtags": [
+        "#CreativeProcess",
+        "#TransformationJourney"
+      ],
+      "content_hash": "c98cfb9996ac8d1c5115f1078d9666466f4b542857d2e8e747f31267dd4eac68",
+      "key_phrases": [
+        "know that",
+        "that moment",
+        "moment when",
+        "when picture",
+        "picture your",
+        "your head",
+        "head doesn",
+        "doesn match",
+        "match reality",
+        "reality front"
       ]
     }
   ]

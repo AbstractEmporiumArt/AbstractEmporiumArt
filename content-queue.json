@@ -1644,12 +1644,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-11T22:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-19T11:23:23.424Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mm7bo5lzps2g",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mm7bo5lzps2g",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116600982904304621",
       "_generated": true,
       "_category": "origin_story",
       "_cta_type": "abstract_empire_site",
@@ -1708,6 +1711,87 @@
       "_category": "transformation_arc",
       "_cta_type": "natural",
       "_emotional_theme": "embracing_the_process"
+    },
+    {
+      "id": "gen-1779189796205-af6d40",
+      "content": "Do you ever sit with an emotion so enormous it feels like it could swallow you whole? I’ve learned to let it spill onto the page—lines, colors, textures. Somehow, making it visible makes it less heavy. If this resonates, you can find more of this over at the site if you're curious. 🌿",
+      "bluesky_content": "Do you ever sit with an emotion so big it feels like it might swallow you whole? I’ve learned to let it spill onto the page—lines, colors, textures. Somehow, making it visible makes it less heavy. If this resonates, you can find more of this over at the site if you're curious.",
+      "mastodon_content": "Do you ever sit with an emotion so enormous it feels like it could swallow you whole? I’ve learned to let it spill onto the page—lines, colors, textures. Somehow, making it visible makes it less heavy. If this resonates, you can find more of this over at the site if you're curious. 🌿",
+      "hashtags": [
+        "#EmotionalProcessing",
+        "#CreativeExpression"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-13T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "site_visit",
+      "_emotional_theme": "making_emotions_visible"
+    },
+    {
+      "id": "gen-1779189798899-a3d808",
+      "content": "Behind every pattern is a pile of almost-patterns. Today’s discard: a design that somehow looked sad... but not in the good way. It’s funny how even the rejects teach you something. Sometimes they whisper, \"Not quite yet. Keep going.\" \n\nThis lives quietly on abstractemporium.art",
+      "bluesky_content": "Behind every pattern is a pile of almost-patterns. Today’s discard: a design that somehow looked sad... but not in the good way. It’s funny how even the rejects teach you something. Sometimes they whisper, \"Not quite yet. Keep going.\" This lives quietly on abstractemporium.art",
+      "mastodon_content": "Behind every pattern is a pile of almost-patterns. Today’s discard: a design that somehow looked sad... but not in the good way. It’s funny how even the rejects teach you something. Sometimes they whisper, \"Not quite yet. Keep going.\" \n\nThis lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#ArtStudioDays",
+        "#ProcessOverPerfection"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-13T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "creative_persistence"
+    },
+    {
+      "id": "gen-1779189801840-a4d987",
+      "content": "Have you ever colored something slowly on purpose? Not to finish, not to get to the next page—just to feel the pencil meet the paper. Slowness is its own kind of rebellion, especially in a world that rushes. There’s a whole collection of this kind of work on the site if you’re curious.",
+      "bluesky_content": "Have you ever colored something slowly on purpose? Not to finish, just to feel the pencil meet the paper. It’s strange how rare slowness feels, like a whisper in a loud room. Slowing down is its own art form—and yes, there’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Have you ever colored something slowly on purpose? Not to finish, not to get to the next page—just to feel the pencil meet the paper. Slowness is its own kind of rebellion, especially in a world that rushes. There’s a whole collection of this kind of work on the site if you’re curious.",
+      "hashtags": [
+        "#SlowArt",
+        "#CreativeStillness"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-14T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creative_mindfulness",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "valuing_slowness"
     }
   ]
 }

@@ -1734,12 +1734,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-13T10:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-20T10:54:55.576Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmbqk6eikv2a",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmbqk6eikv2a",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116606533269741043",
       "_generated": true,
       "_category": "emotional_reflection",
       "_cta_type": "site_visit",
@@ -1798,6 +1801,87 @@
       "_category": "creative_mindfulness",
       "_cta_type": "there's a whole collection of this kind of work on the site",
       "_emotional_theme": "valuing_slowness"
+    },
+    {
+      "id": "gen-1779274487745-7f97f9",
+      "content": "This piece started as a quiet meditation—a murmur of colors I wasn’t even sure belonged together. But with patience (and a little stubbornness), they found their rhythm. Funny how harmony can emerge when you least expect it. The full piece (and others like it) lives on abstractemporium.art",
+      "bluesky_content": "This piece began as a quiet meditation, just me and a palette of colors I wasn’t sure would get along. But as the layers built, so did a sense of harmony in the chaos. Isn’t that how life works sometimes? The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "This piece started as a quiet meditation—a murmur of colors I wasn’t even sure belonged together. But with patience (and a little stubbornness), they found their rhythm. Funny how harmony can emerge when you least expect it. The full piece (and others like it) lives on abstractemporium.art",
+      "hashtags": [
+        "#CreativeBalance",
+        "#AbstractHarmony"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-14T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "abstract_art_spotlight",
+      "_cta_type": "abstractemporium.art",
+      "_emotional_theme": "harmony_from_chaos"
+    },
+    {
+      "id": "gen-1779274491333-86ffe8",
+      "content": "I found an old knitting project today—half a sock, needles still in place. It felt like meeting a version of myself I’d forgotten, paused mid-thought, mid-stitch. So I picked it up again. Maybe finishing it is my way of thanking past me for beginning. If this speaks to you, abstractemporium.art has more. 🧶",
+      "bluesky_content": "I found an old knitting project today—half a sock, needles still in place. It was like meeting a version of myself I’d forgotten, mid-thought, mid-stitch. So I picked it up again. Maybe finishing it is my way of thanking past me for beginning. If this speaks to you, abstractemporium.art has more.",
+      "mastodon_content": "I found an old knitting project today—half a sock, needles still in place. It felt like meeting a version of myself I’d forgotten, paused mid-thought, mid-stitch. So I picked it up again. Maybe finishing it is my way of thanking past me for beginning. If this speaks to you, abstractemporium.art has more. 🧶",
+      "hashtags": [
+        "#KnittingStories",
+        "#ThreadOfTime"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-15T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "knitting_craft_story",
+      "_cta_type": "if_this_is_your_kind_of_thing",
+      "_emotional_theme": "continuity_and_reflection"
+    },
+    {
+      "id": "gen-1779274493969-2a1c13",
+      "content": "You ever start a project thinking, \"This will be simple,\" and suddenly you're 12 steps deep in a YouTube rabbit hole learning the history of pigment? Now you're wondering if you need more ultramarine, maybe some ochre? This is fine. You can find more of this energy over at the site. 😅",
+      "bluesky_content": "You ever start a project thinking, \"This will be simple,\" and suddenly you're 12 steps deep in a YouTube rabbit hole researching the history of pigment? And now you're deciding if you need more ultramarine? This is fine. You can find more of this energy at the site.",
+      "mastodon_content": "You ever start a project thinking, \"This will be simple,\" and suddenly you're 12 steps deep in a YouTube rabbit hole learning the history of pigment? Now you're wondering if you need more ultramarine, maybe some ochre? This is fine. You can find more of this energy over at the site. 😅",
+      "hashtags": [
+        "#CreativeCuriosity",
+        "#ArtRabbitHoles"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-15T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "site_visit",
+      "_emotional_theme": "chaotic_creativity"
     }
   ]
 }

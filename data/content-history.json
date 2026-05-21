@@ -9,17 +9,17 @@
       "creative_mindfulness": "2026-05-19T11:23:21.840Z",
       "creator_humor": "2026-05-20T10:54:53.969Z",
       "behind_the_scenes": "2026-05-19T11:23:18.899Z",
-      "inspiration_spark": "2026-05-18T11:47:23.028Z",
-      "origin_story": "2026-05-18T11:47:20.668Z",
-      "transformation_arc": "2026-05-18T11:47:26.003Z"
+      "inspiration_spark": "2026-05-21T11:29:47.181Z",
+      "origin_story": "2026-05-21T11:29:43.609Z",
+      "transformation_arc": "2026-05-21T11:29:49.607Z"
     }
   },
   "cta_rotation": {
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-05-20T10:54:53.969Z",
-      "this lives quietly on abstractemporium.art": "2026-05-19T11:23:18.899Z",
-      "there's a whole collection of this kind of work on the site": "2026-05-19T11:23:21.840Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-20T10:54:47.746Z",
+      "this lives quietly on abstractemporium.art": "2026-05-21T11:29:43.609Z",
+      "there's a whole collection of this kind of work on the site": "2026-05-21T11:29:47.181Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-21T11:29:49.607Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-05-20T10:54:51.333Z"
     }
   },
@@ -174,6 +174,18 @@
     [
       "#CreativeCuriosity",
       "#ArtRabbitHoles"
+    ],
+    [
+      "#CreativeRoots",
+      "#MessyBeginnings"
+    ],
+    [
+      "#ColorStories",
+      "#CreativeWonder"
+    ],
+    [
+      "#CreativeAlchemy",
+      "#MindfulColoring"
     ]
   ],
   "posts": [
@@ -986,6 +998,84 @@
         "suddenly steps",
         "steps deep",
         "deep youtube"
+      ]
+    },
+    {
+      "id": "gen-1779362983609-aef3b7",
+      "timestamp": "2026-05-21T11:29:43.609Z",
+      "category": "origin_story",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "imperfect_is_okay",
+      "bluesky_content": "Abstract Emporium began with a messy desk, not a grand plan. Scraps of color tests, half-finished sketches, loose yarn tangled in a mug handle. It was less “aha moment” and more quiet decision: let’s make space for all this. Now that space lives on abstractemporium.art.",
+      "mastodon_content": "Abstract Emporium didn’t start with a grand vision. It started with a messy desk: scraps of color tests, half-finished sketches, loose yarn tangled in a mug handle. It wasn’t an “aha!” moment—just a quiet decision to make space for the chaos. That space lives on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeRoots",
+        "#MessyBeginnings"
+      ],
+      "content_hash": "e4e7dc6c76923aeed99bb815bdaf18d840e76714f769a958aae4d493aa31977a",
+      "key_phrases": [
+        "abstract emporium",
+        "emporium began",
+        "began with",
+        "with messy",
+        "messy desk",
+        "desk grand",
+        "grand plan",
+        "plan scraps",
+        "scraps color",
+        "color tests"
+      ]
+    },
+    {
+      "id": "gen-1779362987181-647ef0",
+      "timestamp": "2026-05-21T11:29:47.181Z",
+      "category": "inspiration_spark",
+      "cta_type": "soft_prompt",
+      "emotional_theme": "synesthesia_wonder",
+      "bluesky_content": "Imagine if colors had scents. Would green smell like pine or fresh-cut grass? Would blue feel like salt air or frozen mornings? Sometimes when I layer colors, I wonder if they’d tell stories like that. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Imagine if colors had scents. Would green smell like pine or fresh-cut grass? Would blue feel like salt air or frozen mornings? Sometimes when I layer colors, I wonder if they’d tell stories like that. If this resonates, there’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ColorStories",
+        "#CreativeWonder"
+      ],
+      "content_hash": "630088889fdd844fb565226ee7dfaa3781c0d4973abeaf96f9b921074a10f12e",
+      "key_phrases": [
+        "imagine colors",
+        "colors scents",
+        "scents would",
+        "would green",
+        "green smell",
+        "smell like",
+        "like pine",
+        "pine fresh",
+        "fresh grass",
+        "grass would"
+      ]
+    },
+    {
+      "id": "gen-1779362989607-59de3f",
+      "timestamp": "2026-05-21T11:29:49.607Z",
+      "category": "transformation_arc",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "starting_is_enough",
+      "bluesky_content": "Sometimes transformation feels like staring at a blank page with no idea where to start. But the moment you let the first color touch the paper? That’s where the alchemy begins. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Sometimes transformation feels like staring at a blank page, unsure where to even begin. But the moment you let that first color find its place on the paper? That’s when the alchemy begins. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeAlchemy",
+        "#MindfulColoring"
+      ],
+      "content_hash": "592b428a7cdb51dea2e38c38df96a30f46c3716e2b3c9bf1da3274a332feaaf1",
+      "key_phrases": [
+        "sometimes transformation",
+        "transformation feels",
+        "feels like",
+        "like staring",
+        "staring blank",
+        "blank page",
+        "page with",
+        "with idea",
+        "idea where",
+        "where start"
       ]
     }
   ]

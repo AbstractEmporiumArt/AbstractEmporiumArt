@@ -1914,12 +1914,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-16T10:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-22T10:54:33.330Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmgrhe3gvr2q",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmgrhe3gvr2q",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116617856445077495",
       "_generated": true,
       "_category": "origin_story",
       "_cta_type": "this lives quietly on abstractemporium.art",
@@ -1978,6 +1981,87 @@
       "_category": "transformation_arc",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
       "_emotional_theme": "starting_is_enough"
+    },
+    {
+      "id": "gen-1779447265769-21f30a",
+      "content": "I once drew a shape I couldn’t even name, but it felt like sorrow. It’s funny how our hands translate what words can’t. Art doesn’t need answers; it just needs space to speak in its own way. If you’re looking for that kind of space, abstractemporium.art has more.",
+      "bluesky_content": "I once drew a shape I couldn’t even name, but it felt like sorrow. Funny how our hands translate what words can’t. Art doesn’t need answers; it just needs space. If you’re looking for that kind of space, abstractemporium.art has more.",
+      "mastodon_content": "I once drew a shape I couldn’t even name, but it felt like sorrow. It’s funny how our hands translate what words can’t. Art doesn’t need answers; it just needs space to speak in its own way. If you’re looking for that kind of space, abstractemporium.art has more.",
+      "hashtags": [
+        "#UnspokenEmotions",
+        "#ArtAsHealing"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-17T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "if this is your kind of thing, abstractemporium.art has more",
+      "_emotional_theme": "art_as_language"
+    },
+    {
+      "id": "gen-1779447268787-dc3a47",
+      "content": "When I test new coloring patterns, I do it the old-fashioned way: print it, grab some pencils, and get lost in it. If it doesn’t bring me joy to color, it doesn’t make the cut. The process of making art should feel just as good as using it. You can find more over at the site. 💭",
+      "bluesky_content": "Do you know how I test new coloring patterns? I print them out, grab my pencils, and get lost in them like anyone else would. If I don’t enjoy coloring it, it doesn’t make the cut. Art should feel good in the making—and in the using. You can find more over at the site.",
+      "mastodon_content": "When I test new coloring patterns, I do it the old-fashioned way: print it, grab some pencils, and get lost in it. If it doesn’t bring me joy to color, it doesn’t make the cut. The process of making art should feel just as good as using it. You can find more over at the site. 💭",
+      "hashtags": [
+        "#ArtProcess",
+        "#JoyInMaking"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-18T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "soft",
+      "_emotional_theme": "process_joy"
+    },
+    {
+      "id": "gen-1779447271383-2890e7",
+      "content": "What if you didn’t try to make the colors match? Just let your hand wander. Pink next to green. A stripe of orange slicing through a sea of blue. No rules, no plan—just letting it unfold. It might not look “right,” but it will be *yours*. This lives quietly on abstractemporium.art",
+      "bluesky_content": "What if you didn’t try to make the colors match? Just let your hand wander. Pink next to green. A stripe of orange cutting through a sea of blue. No rules, no plan—just seeing what happens. It might not be “right,” but it will be yours. This lives quietly on abstractemporium.art",
+      "mastodon_content": "What if you didn’t try to make the colors match? Just let your hand wander. Pink next to green. A stripe of orange slicing through a sea of blue. No rules, no plan—just letting it unfold. It might not look “right,” but it will be *yours*. This lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#CreativeFreedom",
+        "#ColorPlay"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-18T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creative_mindfulness",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "imperfect_exploration"
     }
   ]
 }

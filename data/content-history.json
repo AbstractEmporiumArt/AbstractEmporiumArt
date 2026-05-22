@@ -5,10 +5,10 @@
     "last_used": {
       "abstract_art_spotlight": "2026-05-20T10:54:47.746Z",
       "knitting_craft_story": "2026-05-20T10:54:51.333Z",
-      "emotional_reflection": "2026-05-19T11:23:16.206Z",
-      "creative_mindfulness": "2026-05-19T11:23:21.840Z",
+      "emotional_reflection": "2026-05-22T10:54:25.770Z",
+      "creative_mindfulness": "2026-05-22T10:54:31.383Z",
       "creator_humor": "2026-05-20T10:54:53.969Z",
-      "behind_the_scenes": "2026-05-19T11:23:18.899Z",
+      "behind_the_scenes": "2026-05-22T10:54:28.787Z",
       "inspiration_spark": "2026-05-21T11:29:47.181Z",
       "origin_story": "2026-05-21T11:29:43.609Z",
       "transformation_arc": "2026-05-21T11:29:49.607Z"
@@ -16,11 +16,11 @@
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-05-20T10:54:53.969Z",
-      "this lives quietly on abstractemporium.art": "2026-05-21T11:29:43.609Z",
+      "you can find more of this over at the site if you're curious": "2026-05-22T10:54:28.787Z",
+      "this lives quietly on abstractemporium.art": "2026-05-22T10:54:31.383Z",
       "there's a whole collection of this kind of work on the site": "2026-05-21T11:29:47.181Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-05-21T11:29:49.607Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-05-20T10:54:51.333Z"
+      "if this is your kind of thing, abstractemporium.art has more": "2026-05-22T10:54:25.770Z"
     }
   },
   "hashtag_sets_used": [
@@ -186,6 +186,18 @@
     [
       "#CreativeAlchemy",
       "#MindfulColoring"
+    ],
+    [
+      "#UnspokenEmotions",
+      "#ArtAsHealing"
+    ],
+    [
+      "#ArtProcess",
+      "#JoyInMaking"
+    ],
+    [
+      "#CreativeFreedom",
+      "#ColorPlay"
     ]
   ],
   "posts": [
@@ -1076,6 +1088,84 @@
         "with idea",
         "idea where",
         "where start"
+      ]
+    },
+    {
+      "id": "gen-1779447265769-21f30a",
+      "timestamp": "2026-05-22T10:54:25.770Z",
+      "category": "emotional_reflection",
+      "cta_type": "if this is your kind of thing, abstractemporium.art has more",
+      "emotional_theme": "art_as_language",
+      "bluesky_content": "I once drew a shape I couldn’t even name, but it felt like sorrow. Funny how our hands translate what words can’t. Art doesn’t need answers; it just needs space. If you’re looking for that kind of space, abstractemporium.art has more.",
+      "mastodon_content": "I once drew a shape I couldn’t even name, but it felt like sorrow. It’s funny how our hands translate what words can’t. Art doesn’t need answers; it just needs space to speak in its own way. If you’re looking for that kind of space, abstractemporium.art has more.",
+      "hashtags": [
+        "#UnspokenEmotions",
+        "#ArtAsHealing"
+      ],
+      "content_hash": "b06cac3f7ebf19c5fdadc6333afba9a24090024f7a41870bd67a98f6dc9c5783",
+      "key_phrases": [
+        "once drew",
+        "drew shape",
+        "shape couldn",
+        "couldn even",
+        "even name",
+        "name felt",
+        "felt like",
+        "like sorrow",
+        "sorrow funny",
+        "funny hands"
+      ]
+    },
+    {
+      "id": "gen-1779447268787-dc3a47",
+      "timestamp": "2026-05-22T10:54:28.787Z",
+      "category": "behind_the_scenes",
+      "cta_type": "soft",
+      "emotional_theme": "process_joy",
+      "bluesky_content": "Do you know how I test new coloring patterns? I print them out, grab my pencils, and get lost in them like anyone else would. If I don’t enjoy coloring it, it doesn’t make the cut. Art should feel good in the making—and in the using. You can find more over at the site.",
+      "mastodon_content": "When I test new coloring patterns, I do it the old-fashioned way: print it, grab some pencils, and get lost in it. If it doesn’t bring me joy to color, it doesn’t make the cut. The process of making art should feel just as good as using it. You can find more over at the site. 💭",
+      "hashtags": [
+        "#ArtProcess",
+        "#JoyInMaking"
+      ],
+      "content_hash": "fa673f91c1f3948f5c7ebcdca385751e7b06f610a02ba82940e05957bb65c044",
+      "key_phrases": [
+        "know test",
+        "test coloring",
+        "coloring patterns",
+        "patterns print",
+        "print them",
+        "them grab",
+        "grab pencils",
+        "pencils lost",
+        "lost them",
+        "them like"
+      ]
+    },
+    {
+      "id": "gen-1779447271383-2890e7",
+      "timestamp": "2026-05-22T10:54:31.383Z",
+      "category": "creative_mindfulness",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "imperfect_exploration",
+      "bluesky_content": "What if you didn’t try to make the colors match? Just let your hand wander. Pink next to green. A stripe of orange cutting through a sea of blue. No rules, no plan—just seeing what happens. It might not be “right,” but it will be yours. This lives quietly on abstractemporium.art",
+      "mastodon_content": "What if you didn’t try to make the colors match? Just let your hand wander. Pink next to green. A stripe of orange slicing through a sea of blue. No rules, no plan—just letting it unfold. It might not look “right,” but it will be *yours*. This lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#CreativeFreedom",
+        "#ColorPlay"
+      ],
+      "content_hash": "73b26dde310ec03169ba68f69406300e6ac9a457ed63654327a1f6edc4971660",
+      "key_phrases": [
+        "what didn",
+        "didn make",
+        "make colors",
+        "colors match",
+        "match just",
+        "just your",
+        "your hand",
+        "hand wander",
+        "wander pink",
+        "pink next"
       ]
     }
   ]

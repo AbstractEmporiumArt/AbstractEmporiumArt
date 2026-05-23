@@ -2004,12 +2004,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-17T22:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-23T09:57:18.078Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmj6pvgbip2j",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmj6pvgbip2j",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116623293645103403",
       "_generated": true,
       "_category": "emotional_reflection",
       "_cta_type": "if this is your kind of thing, abstractemporium.art has more",
@@ -2068,6 +2071,87 @@
       "_category": "creative_mindfulness",
       "_cta_type": "this lives quietly on abstractemporium.art",
       "_emotional_theme": "imperfect_exploration"
+    },
+    {
+      "id": "gen-1779530229586-6ddb4f",
+      "content": "This piece was built on a base of mistakes—brushstrokes I almost wiped away. Instead, I leaned into them. The result? A texture that feels alive and imperfect, like bark on a tree or the surface of a stone. If you like this approach, there’s a whole collection on the site.",
+      "bluesky_content": "This piece was built on a base of mistakes—brushstrokes I almost wiped away. Instead, I leaned into them. The result? A texture that feels alive and imperfect, like bark on a tree or the surface of a stone. There’s more of this kind of imperfection on the site.",
+      "mastodon_content": "This piece was built on a base of mistakes—brushstrokes I almost wiped away. Instead, I leaned into them. The result? A texture that feels alive and imperfect, like bark on a tree or the surface of a stone. If you like this approach, there’s a whole collection on the site.",
+      "hashtags": [
+        "#IntentionalArt",
+        "#PerfectlyImperfect"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-19T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "abstract_art_spotlight",
+      "_cta_type": "collection_on_site",
+      "_emotional_theme": "imperfect_is_okay"
+    },
+    {
+      "id": "gen-1779530232140-b7138d",
+      "content": "My grandmother once told me she could measure time in rows of knitting. \"A scarf is a season; a sleeve, a month.\" I didn’t understand until now. It’s strange how yarn can tell a story—capturing hours, emotions, and the hands that held it. The full piece lives on abstractemporium.art 🧶",
+      "bluesky_content": "My grandmother once told me she could measure time in rows of knitting. \"A scarf is a season; a sleeve, a month.\" I didn’t understand until now. It’s strange how yarn can tell a story—like capturing hours, emotions, and hands that held it. The full piece lives on abstractemporium.art.",
+      "mastodon_content": "My grandmother once told me she could measure time in rows of knitting. \"A scarf is a season; a sleeve, a month.\" I didn’t understand until now. It’s strange how yarn can tell a story—capturing hours, emotions, and the hands that held it. The full piece lives on abstractemporium.art 🧶",
+      "hashtags": [
+        "#KnittingTraditions",
+        "#StoryInStitches"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-19T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "knitting_craft_story",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "memory_through_craft"
+    },
+    {
+      "id": "gen-1779530237144-f91def",
+      "content": "Me: \"I’m just going to swatch this yarn to see how it looks.\" \n\nAlso me, three hours later: \"Well, I guess I accidentally knit a hat... and half a scarf?\" \n\nSwatching is a gateway craft, apparently. If this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "Me: \"I’m just going to swatch this yarn to see how it looks.\" \nAlso me, 3 hours later: \"Well, I guess I accidentally knit a hat... and half a scarf?\"\nAnyway, if this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Me: \"I’m just going to swatch this yarn to see how it looks.\" \n\nAlso me, three hours later: \"Well, I guess I accidentally knit a hat... and half a scarf?\" \n\nSwatching is a gateway craft, apparently. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#CraftConfessions",
+        "#MakingLifeUp"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-20T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "abstractemporium.art",
+      "_emotional_theme": "accidental_creativity"
     }
   ]
 }

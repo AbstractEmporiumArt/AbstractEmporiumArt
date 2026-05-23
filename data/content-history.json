@@ -3,11 +3,11 @@
   "description": "Permanent non-repetition memory for the Abstract Emporium content engine. Every generated and posted entry is stored here. Never delete entries — only append.",
   "category_rotation": {
     "last_used": {
-      "abstract_art_spotlight": "2026-05-20T10:54:47.746Z",
-      "knitting_craft_story": "2026-05-20T10:54:51.333Z",
+      "abstract_art_spotlight": "2026-05-23T09:57:09.586Z",
+      "knitting_craft_story": "2026-05-23T09:57:12.140Z",
       "emotional_reflection": "2026-05-22T10:54:25.770Z",
       "creative_mindfulness": "2026-05-22T10:54:31.383Z",
-      "creator_humor": "2026-05-20T10:54:53.969Z",
+      "creator_humor": "2026-05-23T09:57:17.144Z",
       "behind_the_scenes": "2026-05-22T10:54:28.787Z",
       "inspiration_spark": "2026-05-21T11:29:47.181Z",
       "origin_story": "2026-05-21T11:29:43.609Z",
@@ -18,9 +18,9 @@
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-05-22T10:54:28.787Z",
       "this lives quietly on abstractemporium.art": "2026-05-22T10:54:31.383Z",
-      "there's a whole collection of this kind of work on the site": "2026-05-21T11:29:47.181Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-21T11:29:49.607Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-05-22T10:54:25.770Z"
+      "there's a whole collection of this kind of work on the site": "2026-05-23T09:57:09.586Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-23T09:57:12.140Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-05-23T09:57:17.144Z"
     }
   },
   "hashtag_sets_used": [
@@ -198,6 +198,18 @@
     [
       "#CreativeFreedom",
       "#ColorPlay"
+    ],
+    [
+      "#IntentionalArt",
+      "#PerfectlyImperfect"
+    ],
+    [
+      "#KnittingTraditions",
+      "#StoryInStitches"
+    ],
+    [
+      "#CraftConfessions",
+      "#MakingLifeUp"
     ]
   ],
   "posts": [
@@ -1166,6 +1178,84 @@
         "hand wander",
         "wander pink",
         "pink next"
+      ]
+    },
+    {
+      "id": "gen-1779530229586-6ddb4f",
+      "timestamp": "2026-05-23T09:57:09.586Z",
+      "category": "abstract_art_spotlight",
+      "cta_type": "collection_on_site",
+      "emotional_theme": "imperfect_is_okay",
+      "bluesky_content": "This piece was built on a base of mistakes—brushstrokes I almost wiped away. Instead, I leaned into them. The result? A texture that feels alive and imperfect, like bark on a tree or the surface of a stone. There’s more of this kind of imperfection on the site.",
+      "mastodon_content": "This piece was built on a base of mistakes—brushstrokes I almost wiped away. Instead, I leaned into them. The result? A texture that feels alive and imperfect, like bark on a tree or the surface of a stone. If you like this approach, there’s a whole collection on the site.",
+      "hashtags": [
+        "#IntentionalArt",
+        "#PerfectlyImperfect"
+      ],
+      "content_hash": "c5d1255515f8ebed408147dcc4c31b39c86f167c8c9865da19681c78e9d35f36",
+      "key_phrases": [
+        "this piece",
+        "piece built",
+        "built base",
+        "base mistakes",
+        "mistakes brushstrokes",
+        "brushstrokes almost",
+        "almost wiped",
+        "wiped away",
+        "away instead",
+        "instead leaned"
+      ]
+    },
+    {
+      "id": "gen-1779530232140-b7138d",
+      "timestamp": "2026-05-23T09:57:12.140Z",
+      "category": "knitting_craft_story",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "memory_through_craft",
+      "bluesky_content": "My grandmother once told me she could measure time in rows of knitting. \"A scarf is a season; a sleeve, a month.\" I didn’t understand until now. It’s strange how yarn can tell a story—like capturing hours, emotions, and hands that held it. The full piece lives on abstractemporium.art.",
+      "mastodon_content": "My grandmother once told me she could measure time in rows of knitting. \"A scarf is a season; a sleeve, a month.\" I didn’t understand until now. It’s strange how yarn can tell a story—capturing hours, emotions, and the hands that held it. The full piece lives on abstractemporium.art 🧶",
+      "hashtags": [
+        "#KnittingTraditions",
+        "#StoryInStitches"
+      ],
+      "content_hash": "c3d3711fdbbf06d1249e439a30a11f87487b698c83df1ba2fa769650adf8691a",
+      "key_phrases": [
+        "grandmother once",
+        "once told",
+        "told could",
+        "could measure",
+        "measure time",
+        "time rows",
+        "rows knitting",
+        "knitting scarf",
+        "scarf season",
+        "season sleeve"
+      ]
+    },
+    {
+      "id": "gen-1779530237144-f91def",
+      "timestamp": "2026-05-23T09:57:17.144Z",
+      "category": "creator_humor",
+      "cta_type": "abstractemporium.art",
+      "emotional_theme": "accidental_creativity",
+      "bluesky_content": "Me: \"I’m just going to swatch this yarn to see how it looks.\" \nAlso me, 3 hours later: \"Well, I guess I accidentally knit a hat... and half a scarf?\"\nAnyway, if this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Me: \"I’m just going to swatch this yarn to see how it looks.\" \n\nAlso me, three hours later: \"Well, I guess I accidentally knit a hat... and half a scarf?\" \n\nSwatching is a gateway craft, apparently. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#CraftConfessions",
+        "#MakingLifeUp"
+      ],
+      "content_hash": "ab85ee4f49b6684ccaa91243b04610cf8327f6f062211d5c4a1674d075ee422f",
+      "key_phrases": [
+        "just going",
+        "going swatch",
+        "swatch this",
+        "this yarn",
+        "yarn looks",
+        "looks also",
+        "also hours",
+        "hours later",
+        "later well",
+        "well guess"
       ]
     }
   ]

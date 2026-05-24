@@ -10,15 +10,16 @@
       "creator_humor": "2026-05-23T09:57:17.144Z",
       "behind_the_scenes": "2026-05-22T10:54:28.787Z",
       "inspiration_spark": "2026-05-21T11:29:47.181Z",
-      "origin_story": "2026-05-21T11:29:43.609Z",
-      "transformation_arc": "2026-05-21T11:29:49.607Z"
+      "origin_story": "2026-05-24T09:58:42.643Z",
+      "transformation_arc": "2026-05-21T11:29:49.607Z",
+      "promotion_spotlight": "2026-05-24T09:58:37.845Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-05-22T10:54:28.787Z",
-      "this lives quietly on abstractemporium.art": "2026-05-22T10:54:31.383Z",
-      "there's a whole collection of this kind of work on the site": "2026-05-23T09:57:09.586Z",
+      "you can find more of this over at the site if you're curious": "2026-05-24T09:58:33.652Z",
+      "this lives quietly on abstractemporium.art": "2026-05-24T09:58:37.845Z",
+      "there's a whole collection of this kind of work on the site": "2026-05-24T09:58:42.643Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-05-23T09:57:12.140Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-05-23T09:57:17.144Z"
     }
@@ -210,6 +211,18 @@
     [
       "#CraftConfessions",
       "#MakingLifeUp"
+    ],
+    [
+      "#ArtForYourHome",
+      "#AbstractArtists"
+    ],
+    [
+      "#ArtOfColor",
+      "#AbstractPrints"
+    ],
+    [
+      "#FindingCalm",
+      "#MakingArt"
     ]
   ],
   "posts": [
@@ -1256,6 +1269,84 @@
         "hours later",
         "later well",
         "well guess"
+      ]
+    },
+    {
+      "id": "gen-1779616713652-dceaee",
+      "timestamp": "2026-05-24T09:58:33.652Z",
+      "category": "promotion_spotlight",
+      "cta_type": "soft_sale",
+      "emotional_theme": "emotional_connection",
+      "bluesky_content": "There’s something quietly magical about living with art. A painting you don’t just see but *feel*. If that sounds like your kind of thing, Fine Art America has 20% off right now—perfect timing to take a peek.",
+      "mastodon_content": "There’s something quietly magical about living with art. A painting you don’t just see but *feel*, like it shifts with your mood. If that sounds like your kind of thing, Fine Art America has 20% off right now—perfect timing to take a peek.",
+      "hashtags": [
+        "#ArtForYourHome",
+        "#AbstractArtists"
+      ],
+      "content_hash": "a542ca797ea60e142013196c1d946909d3648bb237fcaa25e19ade7d2b4a93c1",
+      "key_phrases": [
+        "there something",
+        "something quietly",
+        "quietly magical",
+        "magical about",
+        "about living",
+        "living with",
+        "with painting",
+        "painting just",
+        "just feel",
+        "feel that"
+      ]
+    },
+    {
+      "id": "gen-1779616717845-ca3f27",
+      "timestamp": "2026-05-24T09:58:37.845Z",
+      "category": "promotion_spotlight",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "color_surprise",
+      "bluesky_content": "Have you ever had a color catch you off guard? Like a warm yellow that feels like a memory, or a bold blue that demands to be noticed? Some of my abstract prints are living that life right now on Fine Art America.",
+      "mastodon_content": "Have you ever had a color catch you off guard? Like a warm yellow that feels like a memory, or a bold blue that demands to be noticed? Some of my abstract prints are living that life right now on Fine Art America. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ArtOfColor",
+        "#AbstractPrints"
+      ],
+      "content_hash": "5425751405414710b5aeddb147cd1cc74be643d19472e8f22b5a9883fe6fff48",
+      "key_phrases": [
+        "have ever",
+        "ever color",
+        "color catch",
+        "catch guard",
+        "guard like",
+        "like warm",
+        "warm yellow",
+        "yellow that",
+        "that feels",
+        "feels like"
+      ]
+    },
+    {
+      "id": "gen-1779616722643-ba69ab",
+      "timestamp": "2026-05-24T09:58:42.643Z",
+      "category": "origin_story",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "art_as_escape",
+      "bluesky_content": "Abstract Emporium didn’t start as a plan—it started as an escape. A way to breathe through chaos, one sketch, one stitch, or one brushstroke at a time. Now, there’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Abstract Emporium didn’t start as a plan—it started as an escape. A way to breathe through chaos, sketch by sketch, stitch by stitch, brushstroke by brushstroke. Now, there’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#FindingCalm",
+        "#MakingArt"
+      ],
+      "content_hash": "dffa8460d074efd70f626cb0532fa999db0f8bcb99ad5716e300cc6d99acd46d",
+      "key_phrases": [
+        "abstract emporium",
+        "emporium didn",
+        "didn start",
+        "start plan",
+        "plan started",
+        "started escape",
+        "escape breathe",
+        "breathe through",
+        "through chaos",
+        "chaos sketch"
       ]
     }
   ]

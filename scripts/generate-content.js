@@ -241,10 +241,10 @@ STRICT RULES:
 - The post must be totally unlike any post in the RECENT POST HISTORY below
 - Do NOT repeat any ideas, metaphors, hooks, emotional framings, or sentence structures from recent posts
 - Do NOT repeat any hashtag sets from the RECENT HASHTAG SETS below
-- Bluesky version: max 295 characters (count carefully — this is a hard limit)
-- Mastodon version: max 490 characters — can be slightly longer, richer storytelling
+- Bluesky version: max 220 characters (strict safety margin)
+- Mastodon version: max 400 characters (strict safety margin)
 - Include the CTA naturally in the post (it should not feel bolted on): "${cta}"
-- Choose 2–4 hashtags only. Must not match any set in RECENT HASHTAG SETS
+- Choose 2–3 hashtags only. Must not match any set in RECENT HASHTAG SETS
 - One field "emotional_theme" — a short label like "slow_making" or "imperfect_is_okay"
 - No emojis in bluesky_content (Bluesky character limit is strict — save characters for words)
 - Mastodon version may use 1–2 tasteful emojis if they feel natural
@@ -425,18 +425,19 @@ async function main() {
 export function validatePost(post, existingHashes, history) {
   const bluesky = post?.bluesky_content || '';
   const mastodon = post?.mastodon_content || '';
+  const countChars = (text) => Array.from(text || '').length;
 
   // Character limits
-  if (bluesky.length > 300) {
-    return { passed: false, reason: `Bluesky too long: ${bluesky.length} chars (max 300)` };
+  if (countChars(bluesky) > 220) {
+    return { passed: false, reason: `Bluesky too long: ${countChars(bluesky)} chars (max 220)` };
   }
-  if (mastodon.length > 500) {
-    return { passed: false, reason: `Mastodon too long: ${mastodon.length} chars (max 500)` };
+  if (countChars(mastodon) > 400) {
+    return { passed: false, reason: `Mastodon too long: ${countChars(mastodon)} chars (max 400)` };
   }
 
   // Minimum length sanity check
-  if (bluesky.length < 30) {
-    return { passed: false, reason: `Bluesky too short: ${bluesky.length} chars` };
+  if (countChars(bluesky) < 30) {
+    return { passed: false, reason: `Bluesky too short: ${countChars(bluesky)} chars` };
   }
 
   // Required fields
@@ -485,8 +486,8 @@ export function validatePost(post, existingHashes, history) {
 
   // Hashtag count
   const hashtags = post.hashtags || [];
-  if (hashtags.length > 5) {
-    return { passed: false, reason: `Too many hashtags: ${hashtags.length} (max 5)` };
+  if (hashtags.length > 4) {
+    return { passed: false, reason: `Too many hashtags: ${hashtags.length} (max 4)` };
   }
 
   return { passed: true, reason: null };

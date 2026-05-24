@@ -80,39 +80,54 @@ async function postToMastodon(content, visibility = 'public') {
  * Ensures content stays under 500 character limit for Mastodon
  */
 function formatPost(post) {
-  const MASTODON_LIMIT = 500;
+  // Keep a safety margin below Mastodon's hard cap.
+  const MASTODON_LIMIT = 450;
   const ELLIPSIS = '...';
   const safeLink = sanitizeLink(post.link);
   const linkBlock = safeLink ? `\n\n${safeLink}` : '';
-  const LINK_LENGTH = linkBlock.length;
+  const countChars = (text) => Array.from(text || '').length;
   
   // Prefer platform-specific content if present (AI-generated posts), fall back to legacy content field
   let content = (post.mastodon_content || post.content || '').trim();
   let hashtags = post.hashtags && post.hashtags.length > 0 
     ? '\n\n' + post.hashtags.join(' ') 
     : '';
-  
-  // Calculate available space
-  let availableSpace = MASTODON_LIMIT - LINK_LENGTH - hashtags.length;
-  
-  // Truncate content if necessary
-  if (content.length > availableSpace) {
-    content = content.substring(0, availableSpace - ELLIPSIS.length) + ELLIPSIS;
+
+  // First pass: keep full content/hashtags/link if possible.
+  let finalPost = content + hashtags + linkBlock;
+  if (countChars(finalPost) <= MASTODON_LIMIT) {
+    return finalPost;
   }
-  
-  // Build final post
-  let finalPost = content + hashtags;
-  
-  // Add link if present
-  if (safeLink) {
-    finalPost += linkBlock;
+
+  // Trim hashtags first.
+  while (hashtags && countChars(content + hashtags + linkBlock) > MASTODON_LIMIT) {
+    const parts = hashtags.trim().split(/\s+/);
+    parts.pop();
+    hashtags = parts.length > 0 ? '\n\n' + parts.join(' ') : '';
   }
-  
-  // Final safety check
-  if (finalPost.length > MASTODON_LIMIT) {
-    finalPost = finalPost.substring(0, MASTODON_LIMIT - ELLIPSIS.length) + ELLIPSIS;
+
+  // Then trim content while preserving link block.
+  while (countChars(content + hashtags + linkBlock) > MASTODON_LIMIT) {
+    const chars = Array.from(content);
+    if (chars.length <= ELLIPSIS.length + 1) {
+      content = '';
+      break;
+    }
+    content = chars.slice(0, chars.length - 1).join('');
+    if (!content.endsWith(ELLIPSIS) && countChars(content + ELLIPSIS + hashtags + linkBlock) <= MASTODON_LIMIT) {
+      content = content.trimEnd() + ELLIPSIS;
+      break;
+    }
   }
-  
+
+  finalPost = (content + hashtags + linkBlock).trim();
+
+  // Absolute final guard.
+  while (countChars(finalPost) > MASTODON_LIMIT && finalPost.length > ELLIPSIS.length) {
+    const chars = Array.from(finalPost);
+    finalPost = chars.slice(0, chars.length - 1).join('');
+  }
+
   return finalPost;
 }
 

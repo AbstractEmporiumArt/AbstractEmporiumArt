@@ -164,7 +164,8 @@ async function postToBluesky(content, session) {
  * Ensures content stays under 300 character limit for Bluesky
  */
 function formatPost(post) {
-  const BLUESKY_LIMIT = 280;
+  // Keep a strict safety margin under Bluesky's hard cap.
+  const BLUESKY_LIMIT = 260;
   const ELLIPSIS = '...';
   const safeLink = sanitizeLink(post.link);
   const linkBlock = safeLink ? `\n\n${safeLink}` : '';
@@ -175,36 +176,44 @@ function formatPost(post) {
     ? '\n\n' + post.hashtags.join(' ')
     : '';
 
-  const countChars = (text) => Array.from(text).length;
+  const countBytes = (text) => Buffer.byteLength(text || '', 'utf8');
 
   // First pass: keep full content/hashtags/link if possible.
   let finalPost = content + hashtags + linkBlock;
-  if (countChars(finalPost) <= BLUESKY_LIMIT) {
+  if (countBytes(finalPost) <= BLUESKY_LIMIT) {
     return finalPost;
   }
 
   // Second pass: shrink hashtags first so link always stays visible.
-  while (hashtags && countChars(content + hashtags + linkBlock) > BLUESKY_LIMIT) {
+  while (hashtags && countBytes(content + hashtags + linkBlock) > BLUESKY_LIMIT) {
     const parts = hashtags.trim().split(/\s+/);
     parts.pop();
     hashtags = parts.length > 0 ? '\n\n' + parts.join(' ') : '';
   }
 
   // Final pass: trim content while preserving link block.
-  while (countChars(content + hashtags + linkBlock) > BLUESKY_LIMIT) {
+  while (countBytes(content + hashtags + linkBlock) > BLUESKY_LIMIT) {
     const chars = Array.from(content);
     if (chars.length <= ELLIPSIS.length + 1) {
       content = '';
       break;
     }
     content = chars.slice(0, chars.length - 1).join('');
-    if (!content.endsWith(ELLIPSIS) && countChars(content + ELLIPSIS + hashtags + linkBlock) <= BLUESKY_LIMIT) {
+    if (!content.endsWith(ELLIPSIS) && countBytes(content + ELLIPSIS + hashtags + linkBlock) <= BLUESKY_LIMIT) {
       content = content.trimEnd() + ELLIPSIS;
       break;
     }
   }
 
-  return (content + hashtags + linkBlock).trim();
+  finalPost = (content + hashtags + linkBlock).trim();
+
+  // Absolute final guard.
+  while (countBytes(finalPost) > BLUESKY_LIMIT && finalPost.length > ELLIPSIS.length) {
+    const chars = Array.from(finalPost);
+    finalPost = chars.slice(0, chars.length - 1).join('');
+  }
+
+  return finalPost;
 }
 
 /**

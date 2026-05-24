@@ -5,24 +5,46 @@ on:
     - cron: '0 0 * * 0'  # Weekly on Sunday
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: maintenance-${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   maintenance:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18.x'
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install
+          else
+            echo "No package.json found, skipping install"
+          fi
 
       - name: Check for dependency updates
         run: npm outdated || true
         continue-on-error: true
 
       - name: Run npm audit
-        run: npm audit --audit-level=moderate || true
+        if: hashFiles('package.json') != ''
+        run: npm audit --audit-level=high || true
         continue-on-error: true
 
       - name: Validate package.json

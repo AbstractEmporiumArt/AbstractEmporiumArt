@@ -22,9 +22,14 @@ permissions:
   contents: write  # Needed to update content-queue.json and content-history.json
   models: read     # Needed for GitHub Models API (AI content generation)
 
+concurrency:
+  group: social-media-poster-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   post-to-social:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     
     steps:
       - name: Checkout repository
@@ -36,6 +41,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
       
       - name: Install dependencies
         run: |

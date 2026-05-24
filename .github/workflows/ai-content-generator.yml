@@ -20,10 +20,15 @@ permissions:
   contents: write  # Commit generated posts back to repo
   models: read     # GitHub Models API (GPT-4o)
 
+concurrency:
+  group: ai-content-generator-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   generate-content:
     runs-on: ubuntu-latest
     name: Generate ${{ github.event.inputs.count }} post(s)
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repository
@@ -35,6 +40,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
 
       - name: Install dependencies
         run: |

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop - Abstract Emporium Art - Find our art on ArtPal, Fine Art America, and The HUG">
+    <meta name="description" content="Shop Abstract Emporium art across ArtPal, Fine Art America, TheHug.art, RedBubble, and Ko-fi for prints, digital art, and coloring books.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
     <link rel="canonical" href="https://abstractemporium.art/shop.html">
     <meta property="og:title" content="Shop - Abstract Emporium Art">
     <meta property="og:description" content="Shop abstract art across ArtPal, Fine Art America, TheHug.art, RedBubble, and Ko-fi.">
@@ -15,6 +16,7 @@
     <meta name="twitter:description" content="Shop abstract art across ArtPal, Fine Art America, TheHug.art, RedBubble, and Ko-fi.">
     <meta name="twitter:image" content="https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761">
     <title>Shop - Abstract Emporium Art</title>
+    <link rel="preload" href="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" as="image">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/jpeg" href="logo.jpg">
 </head>
@@ -22,14 +24,14 @@
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Banner -->
     <div class="banner">
-        <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Hug.art Banner" class="banner-img">
+        <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Hug.art Banner" class="banner-img" loading="eager" fetchpriority="high" decoding="async">
     </div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img">
+                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" loading="lazy" decoding="async">
                 <span>Abstract Emporium</span>
             </a>
             <ul class="nav-menu">
@@ -69,7 +71,7 @@
                     <div class="store-features">
                         <span>✓ Digital Downloads</span>
                         <span>✓ Limited Editions</span>
-                        <span>✓ NFTs</span>
+                        <span>✓ Digital Collections</span>
                     </div>
                     <span class="visit-btn">Visit Store →</span>
                 </a>
@@ -89,9 +91,9 @@
                 <a href="https://thehug.xyz/artists/AbstractEmporiumArt/shop" target="_blank" class="store-card">
                     <div class="store-icon">✨</div>
                     <h3>The HUG</h3>
-                    <p>Digital art and NFT community celebrating independent artists</p>
+                    <p>Digital art community celebrating independent artists</p>
                     <div class="store-features">
-                        <span>✓ NFT Collections</span>
+                        <span>✓ Digital Collections</span>
                         <span>✓ Digital Art</span>
                         <span>✓ Community</span>
                     </div>

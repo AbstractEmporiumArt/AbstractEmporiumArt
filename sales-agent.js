@@ -409,7 +409,7 @@ class SalesAgent {
                 },
                 {
                     title: "Collector's Tip 🎯",
-                    body: "Many of our pieces are available in multiple formats — canvas, prints, even NFTs. The same art, your preferred medium.",
+                    body: "Many of our pieces are available in multiple formats — canvas, prints, and digital editions. The same art, your preferred medium.",
                     cta: "Explore Formats",
                     ctaAction: () => window.location.href = 'shop.html'
                 },
@@ -526,7 +526,7 @@ class SalesAgent {
             objectionHandlers: {
                 price: {
                     title: "Art is an Investment 💎",
-                    body: "Original abstract art appreciates over time. Plus, our pieces are available in multiple price points — from prints to premium canvas to NFT editions.",
+                    body: "Original abstract art appreciates over time. Plus, our pieces are available in multiple price points — from prints to premium canvas to digital editions.",
                     cta: "See Price Options",
                     ctaAction: () => window.location.href = 'shop.html'
                 },
@@ -538,7 +538,7 @@ class SalesAgent {
                 },
                 shipping: {
                     title: "Delivery Made Easy 📦",
-                    body: "Fine Art America handles museum-quality printing and shipping worldwide. ArtPal offers digital delivery. The HUG provides instant NFT transfer.",
+                    body: "Fine Art America handles museum-quality printing and shipping worldwide. ArtPal offers digital delivery. The HUG provides fast digital collectible access.",
                     cta: "Learn More",
                     ctaAction: () => window.location.href = 'shop.html'
                 }
@@ -1518,7 +1518,7 @@ class SalesAgent {
             this.state.purchaseIntent = 'ready';
             return {
                 title: "Ready to Collect! 🎉",
-                body: "Excellent! You can purchase through:\n\n🎨 ArtPal - Digital & prints\n🖼️ Fine Art America - Premium canvas & décor\n💎 The HUG - NFT ownership\n\nWhich platform works best for you?",
+                body: "Excellent! You can purchase through:\n\n🎨 ArtPal - Digital & prints\n🖼️ Fine Art America - Premium canvas & décor\n💎 The HUG - Digital collectibles\n\nWhich platform works best for you?",
                 cta: "Take Me to Shop",
                 ctaAction: () => window.location.href = 'shop.html'
             };

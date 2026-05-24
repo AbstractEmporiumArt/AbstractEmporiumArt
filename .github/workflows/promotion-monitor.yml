@@ -1,0 +1,133 @@
+name: Store Promotion Monitor
+
+on:
+  # Check for promotions every 6 hours (4x daily)
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours: 12am, 6am, 12pm, 6pm UTC
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write  # Update promotion tracking files
+
+concurrency:
+  group: promotion-monitor-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  monitor-promotions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci || npm install
+          fi
+      
+      - name: Monitor store promotions
+        id: monitor
+        run: |
+          echo "🔍 Checking all shop platforms for promotions..."
+          node scripts/monitor-promotions.js
+          
+          # Check if new promotions were detected
+          NEW_PROMOS=$(node -e "
+            try {
+              const state = JSON.parse(require('fs').readFileSync('data/active-promotions.json','utf8'));
+              process.stdout.write(state.hasNewPromotions ? 'true' : 'false');
+            } catch {
+              process.stdout.write('false');
+            }
+          ")
+          echo "NEW_PROMOTIONS=$NEW_PROMOS" >> $GITHUB_ENV
+          echo "new_promotions=$NEW_PROMOS" >> $GITHUB_OUTPUT
+      
+      - name: Generate promotion alert
+        if: env.NEW_PROMOTIONS == 'true'
+        run: |
+          echo "🎉 New promotions detected!"
+          node -e "
+            const state = JSON.parse(require('fs').readFileSync('data/active-promotions.json','utf8'));
+            if (state.newPromotions && state.newPromotions.length > 0) {
+              console.log('');
+              console.log('🆕 New Promotions:');
+              console.log('================');
+              state.newPromotions.forEach(p => {
+                console.log('');
+                console.log('Platform:    ' + p.platformName);
+                console.log('Type:        ' + p.type);
+                console.log('Description: ' + p.description);
+                console.log('Priority:    ' + p.priority);
+                console.log('Detected:    ' + p.detectedAt);
+              });
+            }
+          "
+      
+      - name: Commit promotion updates
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          if git diff --quiet data/; then
+            echo "ℹ️ No promotion changes to commit"
+          else
+            git add data/active-promotions.json data/promotion-history.json
+            git commit -m "🎯 Update store promotion tracking [skip ci]" || echo "No changes to commit"
+            git push || echo "Nothing to push"
+            echo "✅ Committed promotion updates"
+          fi
+      
+      - name: Generate promotional content if new deals detected
+        if: env.NEW_PROMOTIONS == 'true'
+        run: |
+          echo "🤖 New promotions detected - generating 2 promotional posts for queue"
+          npm ci || npm install
+          GENERATE_COUNT=2 node scripts/generate-content.js
+          
+          # Commit updated queue if content was generated
+          if git diff --quiet content-queue.json data/content-history.json; then
+            echo "ℹ️ No new content generated"
+          else
+            git add content-queue.json data/content-history.json
+            git commit -m "🎨 Auto-generate promotional content for active sales [skip ci]" || echo "No changes"
+            git push || echo "Nothing to push"
+            echo "✅ Generated and committed promotional content"
+          fi
+      
+      - name: Summary
+        run: |
+          echo "📊 Promotion Monitor Complete"
+          echo "=============================="
+          echo ""
+          node -e "
+            try {
+              const state = JSON.parse(require('fs').readFileSync('data/active-promotions.json','utf8'));
+              console.log('Active Promotions: ' + state.active.length);
+              console.log('Last Check: ' + state.lastCheck);
+              console.log('');
+              if (state.active.length > 0) {
+                console.log('Currently Active:');
+                state.active.forEach(p => {
+                  console.log('  • ' + p.platformName + ': ' + p.description);
+                });
+              } else {
+                console.log('No active promotions detected');
+              }
+            } catch (err) {
+              console.log('Error reading promotion state');
+            }
+          "

@@ -63,15 +63,16 @@ function extractKeyPhrases(text) {
 export function validatePost(post, existingHashes, history) {
   const bluesky = post?.bluesky_content || '';
   const mastodon = post?.mastodon_content || '';
+  const countChars = (text) => Array.from(text || '').length;
 
-  if (bluesky.length > 300) {
-    return { passed: false, reason: `Bluesky too long: ${bluesky.length} chars (max 300)` };
+  if (countChars(bluesky) > 220) {
+    return { passed: false, reason: `Bluesky too long: ${countChars(bluesky)} chars (max 220)` };
   }
-  if (mastodon.length > 500) {
-    return { passed: false, reason: `Mastodon too long: ${mastodon.length} chars (max 500)` };
+  if (countChars(mastodon) > 400) {
+    return { passed: false, reason: `Mastodon too long: ${countChars(mastodon)} chars (max 400)` };
   }
-  if (bluesky.length < 30) {
-    return { passed: false, reason: `Bluesky too short: ${bluesky.length} chars` };
+  if (countChars(bluesky) < 30) {
+    return { passed: false, reason: `Bluesky too short: ${countChars(bluesky)} chars` };
   }
   if (!post.category || !ALL_CATEGORIES.includes(post.category)) {
     return { passed: false, reason: `Invalid or missing category: "${post.category}"` };
@@ -112,8 +113,8 @@ export function validatePost(post, existingHashes, history) {
   }
 
   const hashtags = post.hashtags || [];
-  if (hashtags.length > 5) {
-    return { passed: false, reason: `Too many hashtags: ${hashtags.length} (max 5)` };
+  if (hashtags.length > 4) {
+    return { passed: false, reason: `Too many hashtags: ${hashtags.length} (max 4)` };
   }
 
   return { passed: true, reason: null };
@@ -143,7 +144,19 @@ function validateQueue() {
 
     // Skip character limit checks for legacy posts (they may use different format)
     const result = entry._generated
-      ? validatePost(post, existingHashes, history)
+      ? (() => {
+          // Exclude the current entry from uniqueness checks when validating queued posts.
+          const scopedHashes = new Set(
+            (history.posts || [])
+              .filter(p => p.id !== entry.id)
+              .map(p => p.content_hash)
+          );
+          const scopedHistory = {
+            ...history,
+            posts: (history.posts || []).filter(p => p.id !== entry.id)
+          };
+          return validatePost(post, scopedHashes, scopedHistory);
+        })()
       : { passed: true, reason: 'legacy post — skipped full validation' };
 
     if (result.passed) {

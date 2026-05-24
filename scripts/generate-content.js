@@ -33,6 +33,7 @@ const MAX_RETRIES = 3;
 
 const HISTORY_PATH = join(ROOT, 'data', 'content-history.json');
 const QUEUE_PATH = join(ROOT, 'content-queue.json');
+const PROMOTIONS_PATH = join(ROOT, 'data', 'active-promotions.json');
 
 // ─── Content catalogue (inline — keeps script self-contained) ─────────────────
 
@@ -108,7 +109,8 @@ const ALL_CATEGORIES = [
   'behind_the_scenes',
   'inspiration_spark',
   'origin_story',
-  'transformation_arc'
+  'transformation_arc',
+  'promotion_spotlight'  // Only used when active promotions detected
 ];
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -136,10 +138,39 @@ function extractKeyPhrases(text) {
   return [...new Set(phrases)].slice(0, 10);
 }
 
-function pickCategory(history) {
+function loadActivePromotions() {
+  try {
+    if (fs.existsSync(PROMOTIONS_PATH)) {
+      const data = readJSON(PROMOTIONS_PATH);
+      return (data.active || []).filter(p => p.priority === 'high' || p.priority === 'medium');
+    }
+  } catch (err) {
+    console.warn('⚠️  Could not load promotions:', err.message);
+  }
+  return [];
+}
+
+function pickCategory(history, activePromotions = []) {
+  // If high-priority promotions are active and we haven't posted about them recently, prioritize
+  if (activePromotions.length > 0) {
+    const recentCategories = (history.posts || []).slice(-5).map(p => p.category);
+    const promoPostCount = recentCategories.filter(c => c === 'promotion_spotlight').length;
+    
+    // If fewer than 2 of the last 5 posts were promo-focused, insert a promo post
+    if (promoPostCount < 2) {
+      console.log('  🎯 Active promotions detected — prioritizing promotion_spotlight category');
+      return 'promotion_spotlight';
+    }
+  }
+  
   const rotation = history.category_rotation?.last_used || {};
   // Sort by most stale (null first, then oldest timestamp)
-  const sorted = ALL_CATEGORIES.sort((a, b) => {
+  // Exclude promotion_spotlight from rotation unless promotions are active
+  const categories = activePromotions.length > 0 
+    ? ALL_CATEGORIES 
+    : ALL_CATEGORIES.filter(c => c !== 'promotion_spotlight');
+  
+  const sorted = categories.sort((a, b) => {
     const ta = rotation[a] ? new Date(rotation[a]).getTime() : 0;
     const tb = rotation[b] ? new Date(rotation[b]).getTime() : 0;
     return ta - tb;
@@ -218,13 +249,26 @@ function callGitHubModels(messages) {
 
 // ─── Generation ───────────────────────────────────────────────────────────────
 
-async function generatePost(category, cta, history) {
+async function generatePost(category, cta, history, activePromotions = []) {
   const catalogContext = COLLECTIONS
     .map(c => `- ${c.name} (${c.type}): ${c.description} | Themes: ${c.themes.join(', ')}`)
     .join('\n');
 
   const recentPosts = recentPostSummaries(history);
   const recentHashtags = recentHashtagSets(history);
+  
+  // Build promotion context if active
+  let promotionContext = '';
+  if (activePromotions.length > 0 && category === 'promotion_spotlight') {
+    promotionContext = '\n\n🎯 ACTIVE PROMOTIONS TO MENTION:\n';
+    activePromotions.forEach(promo => {
+      promotionContext += `- ${promo.platformName}: ${promo.description}\n`;
+      if (promo.discount) {
+        promotionContext += `  Discount: ${promo.discount}\n`;
+      }
+    });
+    promotionContext += `\nFor "promotion_spotlight" posts: Mention the sale naturally (NOT salesy), direct people to the platform having the sale. Keep the Abstract Emporium voice — warm, real, not hyped. Example tone: "Fine Art America is running their spring sale right now — if you\'ve been eyeing prints, good timing." NO "don\'t miss", "limited time", "act now" language.\n`;
+  }
 
   const systemPrompt = `You are the creative voice of Abstract Emporium (abstractemporium.art).
 
@@ -232,7 +276,7 @@ BRAND VOICE:
 ${BRAND_VOICE}
 
 WHAT THE BRAND SELLS:
-${catalogContext}
+${catalogContext}${promotionContext}
 
 YOUR TASK:
 Generate one unique social media post for the category: "${category}"
@@ -305,6 +349,13 @@ async function main() {
   const history = readJSON(HISTORY_PATH);
   const queue = readJSON(QUEUE_PATH);
   const existingHashes = new Set((history.posts || []).map(p => p.content_hash));
+  
+  // Load active promotions
+  const activePromotions = loadActivePromotions();
+  if (activePromotions.length > 0) {
+    console.log(`\n🎉 ${activePromotions.length} active promotion(s) detected:`);
+    activePromotions.forEach(p => console.log(`   • ${p.platformName}: ${p.description}`));
+  }
 
   let generated = 0;
   let attempt = 0;
@@ -313,7 +364,7 @@ async function main() {
   while (generated < GENERATE_COUNT && attempt < GENERATE_COUNT * MAX_RETRIES) {
     attempt++;
 
-    const category = pickCategory(history);
+    const category = pickCategory(history, activePromotions);
     const cta = pickCTA(history);
 
     console.log(`\n🎨 Generating post #${generated + 1} — category: ${category}`);
@@ -324,7 +375,7 @@ async function main() {
 
     for (let retry = 0; retry < MAX_RETRIES; retry++) {
       try {
-        post = await generatePost(category, cta, history);
+        post = await generatePost(category, cta, history, activePromotions);
         const { passed, reason } = validatePost(post, existingHashes, history);
         if (passed) {
           valid = true;

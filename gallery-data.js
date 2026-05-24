@@ -634,46 +634,46 @@ const galleryData = [
         category: "Music",
         description: "Part of Melodic Expressions Series (1-8)"
     },
-    // Hug.art - NFT Artworks
+    // Hug.art - Digital Collectibles
     {
         id: 64,
-        title: "Abstract Emporium NFT #1",
+        title: "Abstract Emporium Digital Collectible #1",
         collection: "Hug.art Collection",
         platform: "Hug.art",
         link: "https://hug.art/artists/AbstractEmporiumArt/updates/eead56ff-baef-48ea-a0ec-660b6428aa1c",
         image: null,
-        category: "NFT",
-        description: "NFT artwork on Hug.art marketplace"
+        category: "Digital",
+        description: "Digital collectible on Hug.art marketplace"
     },
     {
         id: 65,
-        title: "Abstract Emporium NFT #2",
+        title: "Abstract Emporium Digital Collectible #2",
         collection: "Hug.art Collection",
         platform: "Hug.art",
         link: "https://hug.art/artists/AbstractEmporiumArt/updates/e9cc4596-5885-4e07-9a62-04c0d41334d1",
         image: null,
-        category: "NFT",
-        description: "NFT artwork on Hug.art marketplace"
+        category: "Digital",
+        description: "Digital collectible on Hug.art marketplace"
     },
     {
         id: 66,
-        title: "Abstract Emporium NFT #3",
+        title: "Abstract Emporium Digital Collectible #3",
         collection: "Hug.art Collection",
         platform: "Hug.art",
         link: "https://hug.art/artists/AbstractEmporiumArt/updates/542d49de-ac0d-4c3e-bd06-02083e780021",
         image: null,
-        category: "NFT",
-        description: "NFT artwork on Hug.art marketplace"
+        category: "Digital",
+        description: "Digital collectible on Hug.art marketplace"
     },
     {
         id: 67,
-        title: "Abstract Emporium NFT #4",
+        title: "Abstract Emporium Digital Collectible #4",
         collection: "Hug.art Collection",
         platform: "Hug.art",
         link: "https://hug.art/artists/AbstractEmporiumArt/updates/0c8a2854-6256-441d-a5a6-7f50c55e4de2",
         image: null,
-        category: "NFT",
-        description: "NFT artwork on Hug.art marketplace"
+        category: "Digital",
+        description: "Digital collectible on Hug.art marketplace"
     },
     // RedBubble - Print on Demand Products
     {

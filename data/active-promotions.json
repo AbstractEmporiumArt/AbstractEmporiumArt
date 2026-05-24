@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-05-24T02:28:52.058Z",
+  "lastCheck": "2026-05-24T08:42:19.161Z",
   "active": [
     {
       "platform": "fineartamerica",
@@ -8,18 +8,9 @@
       "discount": "20%",
       "description": "20% off sitewide sale",
       "confidence": "high",
-      "detectedAt": "2026-05-24T02:28:52.058Z",
-      "priority": "high"    },
-    {
-      "platform": "redbubble",
-      "platformName": "RedBubble",
-      "type": "targeted_sale",
-      "discount": null,
-      "description": "RedBubble sale active (manually confirmed)",
-      "confidence": "high",
-      "detectedAt": "2026-05-24T02:45:00.000Z",
-      "priority": "medium",
-      "manual": true    }
+      "detectedAt": "2026-05-24T08:42:19.161Z",
+      "priority": "high"
+    }
   ],
   "platforms": {
     "fineartamerica": {
@@ -49,12 +40,13 @@
     {
       "platform": "redbubble",
       "platformName": "RedBubble",
-      "type": "sitewide_sale",
+      "type": "targeted_sale",
       "discount": null,
-      "description": "Active sale on RedBubble",
+      "description": "RedBubble sale active (manually confirmed)",
       "confidence": "high",
-      "detectedAt": "2026-05-24T02:30:00.000Z",
-      "priority": "medium"
+      "detectedAt": "2026-05-24T02:45:00.000Z",
+      "priority": "medium",
+      "manual": true
     }
   ]
 }

@@ -1,6 +1,23 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T08:42:19.161Z",
+      "newPromotions": [],
+      "endedPromotions": [
+        {
+          "platform": "redbubble",
+          "platformName": "RedBubble",
+          "type": "targeted_sale",
+          "discount": null,
+          "description": "RedBubble sale active (manually confirmed)",
+          "confidence": "high",
+          "detectedAt": "2026-05-24T02:45:00.000Z",
+          "priority": "medium",
+          "manual": true
+        }
+      ]
+    },
+    {
       "timestamp": "2026-05-24T02:28:52.058Z",
       "newPromotions": [],
       "endedPromotions": [

@@ -2184,12 +2184,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-20T22:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-25T11:55:46.685Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmogblngcj23",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmogblngcj23",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116635084101703268",
       "_generated": true,
       "_category": "promotion_spotlight",
       "_cta_type": "soft_sale",
@@ -2248,6 +2251,87 @@
       "_category": "origin_story",
       "_cta_type": "there's a whole collection of this kind of work on the site",
       "_emotional_theme": "art_as_escape"
+    },
+    {
+      "id": "gen-1779710138771-704c92",
+      "content": "I saw a crack in the sidewalk today, and there it was—a tiny flower growing through. Proof that creation always finds a way, even in the hardest places. The full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "I saw a crack in the sidewalk today, and a tiny flower growing through it. Proof that creation finds a way, even in the hardest places. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "I saw a crack in the sidewalk today, and there it was—a tiny flower growing through. Proof that creation always finds a way, even in the hardest places. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeGrowth",
+        "#EverydayWonder"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-22T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "inspiration_spark",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "resilience_in_creation"
+    },
+    {
+      "id": "gen-1779710142645-9d029e",
+      "content": "Ever notice how growth feels like one step forward, two back, then a sideways shuffle? Turns out, dancing with change is still moving forward. If this is your kind of rhythm, abstractemporium.art has more. 🌱",
+      "bluesky_content": "Ever notice how growth feels like one step forward, two back, then a sideways shuffle? Turns out, dancing with change is still moving forward. If this is your kind of rhythm, abstractemporium.art has more.",
+      "mastodon_content": "Ever notice how growth feels like one step forward, two back, then a sideways shuffle? Turns out, dancing with change is still moving forward. If this is your kind of rhythm, abstractemporium.art has more. 🌱",
+      "hashtags": [
+        "#TransformationDance",
+        "#CreativeJourney"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-22T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "transformation_arc",
+      "_cta_type": "if_this_is_your_kind_of_thing",
+      "_emotional_theme": "embracing_growth"
+    },
+    {
+      "id": "gen-1779710144911-f1c989",
+      "content": "I once colored a whole page with just one pencil, pressing harder for dark hues and softer for light. Every stroke felt like it whispered, \"Even within limits, there's so much possibility.\" You can find more like this over at the site.",
+      "bluesky_content": "I once colored a page with just one pencil, pressing harder for dark hues and softer for light. It felt like every stroke whispered, \"Even within limits, there’s so much possibility.\" More like this at the site.",
+      "mastodon_content": "I once colored a whole page with just one pencil, pressing harder for dark hues and softer for light. Every stroke felt like it whispered, \"Even within limits, there's so much possibility.\" You can find more like this over at the site.",
+      "hashtags": [
+        "#CreativeReflections",
+        "#MindfulMaking"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-23T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "indirect_invitation",
+      "_emotional_theme": "possibility_in_limits"
     }
   ]
 }

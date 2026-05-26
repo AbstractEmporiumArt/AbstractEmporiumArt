@@ -12,14 +12,14 @@
       "inspiration_spark": "2026-05-25T11:55:38.771Z",
       "origin_story": "2026-05-24T09:58:42.643Z",
       "transformation_arc": "2026-05-25T11:55:42.645Z",
-      "promotion_spotlight": "2026-05-24T09:58:37.845Z"
+      "promotion_spotlight": "2026-05-26T17:28:36.876Z"
     }
   },
   "cta_rotation": {
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-05-25T11:55:44.911Z",
-      "this lives quietly on abstractemporium.art": "2026-05-24T09:58:37.845Z",
-      "there's a whole collection of this kind of work on the site": "2026-05-24T09:58:42.643Z",
+      "this lives quietly on abstractemporium.art": "2026-05-26T17:28:34.824Z",
+      "there's a whole collection of this kind of work on the site": "2026-05-26T17:28:36.876Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-05-25T11:55:38.771Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-05-25T11:55:42.645Z"
     }
@@ -235,6 +235,14 @@
     [
       "#CreativeReflections",
       "#MindfulMaking"
+    ],
+    [
+      "#ArtForYourSpace",
+      "#SmallTransformations"
+    ],
+    [
+      "#ArtForAtmosphere",
+      "#MoodInColor"
     ]
   ],
   "posts": [
@@ -1437,6 +1445,58 @@
         "harder dark",
         "dark hues",
         "hues softer"
+      ]
+    },
+    {
+      "id": "gen-1779816514824-e87dcb",
+      "timestamp": "2026-05-26T17:28:34.824Z",
+      "category": "promotion_spotlight",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "surrounding_emotions",
+      "bluesky_content": "Do you ever feel like your walls have their own moods? Sometimes they need a pop of bold, other times a whisper of calm. If you’re in the mood to transform a corner, this lives quietly on abstractemporium.art.",
+      "mastodon_content": "Do you ever feel like your walls have their own moods? Sometimes they need a pop of bold, other times just a whisper of calm. If you’re in the mood to transform a corner, this lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ArtForYourSpace",
+        "#SmallTransformations"
+      ],
+      "content_hash": "d98f6d2ec0811e9e4e5708efcb7542d1f3ab4aec0961405d31da8a33cf2d4b78",
+      "key_phrases": [
+        "ever feel",
+        "feel like",
+        "like your",
+        "your walls",
+        "walls have",
+        "have their",
+        "their moods",
+        "moods sometimes",
+        "sometimes they",
+        "they need"
+      ]
+    },
+    {
+      "id": "gen-1779816516875-2a0028",
+      "timestamp": "2026-05-26T17:28:36.875Z",
+      "category": "promotion_spotlight",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "spaces_with_feelings",
+      "bluesky_content": "You know that feeling when a single piece of art shifts the whole mood of a room? It’s like the walls are breathing differently. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "You know that feeling when a single piece of art shifts the entire mood of a room? Suddenly, it’s like the walls are breathing differently. If that resonates, there’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ArtForAtmosphere",
+        "#MoodInColor"
+      ],
+      "content_hash": "17aae6b61efd7ea79d11f6cdd28f8c93772ab193de4925678a369409c7c4537c",
+      "key_phrases": [
+        "know that",
+        "that feeling",
+        "feeling when",
+        "when single",
+        "single piece",
+        "piece shifts",
+        "shifts whole",
+        "whole mood",
+        "mood room",
+        "room like"
       ]
     }
   ]

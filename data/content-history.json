@@ -6,9 +6,9 @@
       "abstract_art_spotlight": "2026-05-23T09:57:09.586Z",
       "knitting_craft_story": "2026-05-23T09:57:12.140Z",
       "emotional_reflection": "2026-05-25T11:55:44.911Z",
-      "creative_mindfulness": "2026-05-22T10:54:31.383Z",
+      "creative_mindfulness": "2026-05-27T11:41:33.815Z",
       "creator_humor": "2026-05-23T09:57:17.144Z",
-      "behind_the_scenes": "2026-05-22T10:54:28.787Z",
+      "behind_the_scenes": "2026-05-27T11:41:31.923Z",
       "inspiration_spark": "2026-05-25T11:55:38.771Z",
       "origin_story": "2026-05-24T09:58:42.643Z",
       "transformation_arc": "2026-05-25T11:55:42.645Z",
@@ -20,8 +20,8 @@
       "you can find more of this over at the site if you're curious": "2026-05-25T11:55:44.911Z",
       "this lives quietly on abstractemporium.art": "2026-05-26T17:28:34.824Z",
       "there's a whole collection of this kind of work on the site": "2026-05-26T17:28:36.876Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-25T11:55:38.771Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-05-25T11:55:42.645Z"
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-27T11:41:31.923Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-05-27T11:41:33.815Z"
     }
   },
   "hashtag_sets_used": [
@@ -243,6 +243,14 @@
     [
       "#ArtForAtmosphere",
       "#MoodInColor"
+    ],
+    [
+      "#StudioLife",
+      "#WatercolorLayers"
+    ],
+    [
+      "#CreativeFlow",
+      "#ArtAndCalm"
     ]
   ],
   "posts": [
@@ -1497,6 +1505,58 @@
         "whole mood",
         "mood room",
         "room like"
+      ]
+    },
+    {
+      "id": "gen-1779882091922-63427a",
+      "timestamp": "2026-05-27T11:41:31.923Z",
+      "category": "behind_the_scenes",
+      "cta_type": "art_gallery",
+      "emotional_theme": "playful_experimentation",
+      "bluesky_content": "Today’s experiment: testing how watercolor glazes layer on top of inked patterns. Spoiler: the paper does not always agree with my decisions. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Today’s experiment: testing how watercolor glazes layer over inked patterns. Spoiler: the paper doesn’t always agree with my decisions. But that’s half the fun, isn’t it? The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#StudioLife",
+        "#WatercolorLayers"
+      ],
+      "content_hash": "8f45381d6dd74e7125fe5ad3f241852a849d6b178a641c6582fc9baf88600b78",
+      "key_phrases": [
+        "today experiment",
+        "experiment testing",
+        "testing watercolor",
+        "watercolor glazes",
+        "glazes layer",
+        "layer inked",
+        "inked patterns",
+        "patterns spoiler",
+        "spoiler paper",
+        "paper does"
+      ]
+    },
+    {
+      "id": "gen-1779882093815-1e56de",
+      "timestamp": "2026-05-27T11:41:33.815Z",
+      "category": "creative_mindfulness",
+      "cta_type": "if this is your kind of thing, abstractemporium.art has more",
+      "emotional_theme": "gentle_attention",
+      "bluesky_content": "What if being mindful didn’t mean clearing your mind, but letting it wander safely? Following a pencil, a brush, a stitch—just one small motion at a time. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "What if mindfulness wasn’t about clearing your mind, but letting it wander safely? Following a pencil, a brush, a stitch—just one small, gentle motion at a time. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#CreativeFlow",
+        "#ArtAndCalm"
+      ],
+      "content_hash": "f1bc39d44f1cfd1ed9cde76ebaade7c1ecddb5be31f3d0d6b5adee85556e125e",
+      "key_phrases": [
+        "what being",
+        "being mindful",
+        "mindful didn",
+        "didn mean",
+        "mean clearing",
+        "clearing your",
+        "your mind",
+        "mind letting",
+        "letting wander",
+        "wander safely"
       ]
     }
   ]

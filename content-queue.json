@@ -2454,14 +2454,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-25T10:00:00.000Z",
-      "posted": false,
+      "posted": true,
       "postedPlatforms": [
-        "bluesky"
+        "bluesky",
+        "mastodon"
       ],
-      "postedAt": "2026-05-28T17:35:55.973Z",
+      "postedAt": "2026-05-28T22:42:36.524Z",
       "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmwkolug4c2n",
       "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmwkolug4c2n",
-      "mastodonUrl": null,
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116654614535864572",
       "_generated": true,
       "_category": "creative_mindfulness",
       "_cta_type": "if this is your kind of thing, abstractemporium.art has more",
@@ -2547,6 +2548,60 @@
       "_category": "promotion_spotlight",
       "_cta_type": "art_gallery",
       "_emotional_theme": "synesthesia_imagining"
+    },
+    {
+      "id": "gen-1780008136988-e1d3ad",
+      "content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you, waiting quietly on the wall. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you, waiting quietly on the wall. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#ArtWithSoul",
+        "#AbstractInspo"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-27T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "personal_connection"
+    },
+    {
+      "id": "gen-1780008139811-623f90",
+      "content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and discover a whole new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and a new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and discover a whole new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#MakerBrain",
+        "#ArtLife"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-27T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "if_this_is_your_kind_of_thing",
+      "_emotional_theme": "creative_spirals"
     }
   ]
 }

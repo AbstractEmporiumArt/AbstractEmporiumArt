@@ -7,12 +7,12 @@
       "knitting_craft_story": "2026-05-27T22:43:21.517Z",
       "emotional_reflection": "2026-05-25T11:55:44.911Z",
       "creative_mindfulness": "2026-05-27T11:41:33.815Z",
-      "creator_humor": "2026-05-23T09:57:17.144Z",
+      "creator_humor": "2026-05-28T22:42:19.811Z",
       "behind_the_scenes": "2026-05-27T11:41:31.923Z",
       "inspiration_spark": "2026-05-25T11:55:38.771Z",
       "origin_story": "2026-05-24T09:58:42.643Z",
       "transformation_arc": "2026-05-25T11:55:42.645Z",
-      "promotion_spotlight": "2026-05-27T22:43:23.671Z"
+      "promotion_spotlight": "2026-05-28T22:42:16.988Z"
     }
   },
   "cta_rotation": {
@@ -20,8 +20,8 @@
       "you can find more of this over at the site if you're curious": "2026-05-27T22:43:18.665Z",
       "this lives quietly on abstractemporium.art": "2026-05-27T22:43:21.517Z",
       "there's a whole collection of this kind of work on the site": "2026-05-27T22:43:23.671Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-27T11:41:31.923Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-05-27T11:41:33.815Z"
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-28T22:42:16.988Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-05-28T22:42:19.811Z"
     }
   },
   "hashtag_sets_used": [
@@ -263,6 +263,14 @@
     [
       "#ColorStories",
       "#CreativeAtmosphere"
+    ],
+    [
+      "#ArtWithSoul",
+      "#AbstractInspo"
+    ],
+    [
+      "#MakerBrain",
+      "#ArtLife"
     ]
   ],
   "posts": [
@@ -1647,6 +1655,58 @@
         "could sing",
         "sing some",
         "some pieces"
+      ]
+    },
+    {
+      "id": "gen-1780008136988-e1d3ad",
+      "timestamp": "2026-05-28T22:42:16.988Z",
+      "category": "promotion_spotlight",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "personal_connection",
+      "bluesky_content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you, waiting quietly on the wall. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#ArtWithSoul",
+        "#AbstractInspo"
+      ],
+      "content_hash": "5116458404acbeabdf7e281a0dd3ee6a6348ef2677d62edff374fc5bdd44b068",
+      "key_phrases": [
+        "ever glance",
+        "glance piece",
+        "piece feel",
+        "feel like",
+        "like holding",
+        "holding secret",
+        "secret story",
+        "story just",
+        "just that",
+        "that energy"
+      ]
+    },
+    {
+      "id": "gen-1780008139811-623f90",
+      "timestamp": "2026-05-28T22:42:19.811Z",
+      "category": "creator_humor",
+      "cta_type": "if_this_is_your_kind_of_thing",
+      "emotional_theme": "creative_spirals",
+      "bluesky_content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and a new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and discover a whole new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#MakerBrain",
+        "#ArtLife"
+      ],
+      "content_hash": "3aee13c682ac24f9eeeb3a734416340295268ab5fa07ac69d6ce1c290196d5a7",
+      "key_phrases": [
+        "quick sketch",
+        "sketch before",
+        "before also",
+        "also hours",
+        "hours later",
+        "later what",
+        "what experiment",
+        "experiment with",
+        "with five",
+        "five different"
       ]
     }
   ]

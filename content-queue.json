@@ -2484,12 +2484,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-25T22:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-29T11:32:39.797Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmygtwq5kw2h",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmygtwq5kw2h",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116657642485216441",
       "_generated": true,
       "_category": "abstract_art_spotlight",
       "_cta_type": "you can find more of this over at the site if you're curious",

@@ -2094,12 +2094,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-19T10:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-24T09:58:43.657Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmlpbeiwfz2c",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmlpbeiwfz2c",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116628961566360222",
       "_generated": true,
       "_category": "abstract_art_spotlight",
       "_cta_type": "collection_on_site",
@@ -2121,12 +2124,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-19T22:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-24T15:07:46.907Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmmajyqaeo22",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmmajyqaeo22",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116630176786019359",
       "_generated": true,
       "_category": "knitting_craft_story",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
@@ -2148,6 +2154,453 @@
         "bluesky"
       ],
       "schedule": "2026-05-20T10:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-24T21:58:49.153Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmmxiyi7gb2g",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmmxiyi7gb2g",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116631793079531612",
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "abstractemporium.art",
+      "_emotional_theme": "accidental_creativity"
+    },
+    {
+      "id": "gen-1779616713652-dceaee",
+      "content": "There’s something quietly magical about living with art. A painting you don’t just see but *feel*, like it shifts with your mood. If that sounds like your kind of thing, Fine Art America has 20% off right now—perfect timing to take a peek.",
+      "bluesky_content": "There’s something quietly magical about living with art. A painting you don’t just see but *feel*. If that sounds like your kind of thing, Fine Art America has 20% off right now—perfect timing to take a peek.",
+      "mastodon_content": "There’s something quietly magical about living with art. A painting you don’t just see but *feel*, like it shifts with your mood. If that sounds like your kind of thing, Fine Art America has 20% off right now—perfect timing to take a peek.",
+      "hashtags": [
+        "#ArtForYourHome",
+        "#AbstractArtists"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-20T22:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-25T11:55:46.685Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmogblngcj23",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmogblngcj23",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116635084101703268",
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "soft_sale",
+      "_emotional_theme": "emotional_connection"
+    },
+    {
+      "id": "gen-1779616717845-ca3f27",
+      "content": "Have you ever had a color catch you off guard? Like a warm yellow that feels like a memory, or a bold blue that demands to be noticed? Some of my abstract prints are living that life right now on Fine Art America. This lives quietly on abstractemporium.art.",
+      "bluesky_content": "Have you ever had a color catch you off guard? Like a warm yellow that feels like a memory, or a bold blue that demands to be noticed? Some of my abstract prints are living that life right now on Fine Art America.",
+      "mastodon_content": "Have you ever had a color catch you off guard? Like a warm yellow that feels like a memory, or a bold blue that demands to be noticed? Some of my abstract prints are living that life right now on Fine Art America. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ArtOfColor",
+        "#AbstractPrints"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-21T10:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-25T16:24:24.342Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmovbwndu22g",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmovbwndu22g",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116636140414956611",
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "color_surprise"
+    },
+    {
+      "id": "gen-1779616722643-ba69ab",
+      "content": "Abstract Emporium didn’t start as a plan—it started as an escape. A way to breathe through chaos, sketch by sketch, stitch by stitch, brushstroke by brushstroke. Now, there’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "Abstract Emporium didn’t start as a plan—it started as an escape. A way to breathe through chaos, one sketch, one stitch, or one brushstroke at a time. Now, there’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Abstract Emporium didn’t start as a plan—it started as an escape. A way to breathe through chaos, sketch by sketch, stitch by stitch, brushstroke by brushstroke. Now, there’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#FindingCalm",
+        "#MakingArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-21T22:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-25T22:11:03.678Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmpinryx252v",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmpinryx252v",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116637503488347079",
+      "_generated": true,
+      "_category": "origin_story",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "art_as_escape"
+    },
+    {
+      "id": "gen-1779710138771-704c92",
+      "content": "I saw a crack in the sidewalk today, and there it was—a tiny flower growing through. Proof that creation always finds a way, even in the hardest places. The full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "I saw a crack in the sidewalk today, and a tiny flower growing through it. Proof that creation finds a way, even in the hardest places. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "I saw a crack in the sidewalk today, and there it was—a tiny flower growing through. Proof that creation always finds a way, even in the hardest places. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeGrowth",
+        "#EverydayWonder"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-22T10:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-26T17:28:52.171Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmrje4rdzs2j",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmrje4rdzs2j",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116642056196586422",
+      "_generated": true,
+      "_category": "inspiration_spark",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "resilience_in_creation"
+    },
+    {
+      "id": "gen-1779710142645-9d029e",
+      "content": "Ever notice how growth feels like one step forward, two back, then a sideways shuffle? Turns out, dancing with change is still moving forward. If this is your kind of rhythm, abstractemporium.art has more. 🌱",
+      "bluesky_content": "Ever notice how growth feels like one step forward, two back, then a sideways shuffle? Turns out, dancing with change is still moving forward. If this is your kind of rhythm, abstractemporium.art has more.",
+      "mastodon_content": "Ever notice how growth feels like one step forward, two back, then a sideways shuffle? Turns out, dancing with change is still moving forward. If this is your kind of rhythm, abstractemporium.art has more. 🌱",
+      "hashtags": [
+        "#TransformationDance",
+        "#CreativeJourney"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-22T22:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-26T22:22:42.558Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmrzrkfnzv2x",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmrzrkfnzv2x",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116643211618949527",
+      "_generated": true,
+      "_category": "transformation_arc",
+      "_cta_type": "if_this_is_your_kind_of_thing",
+      "_emotional_theme": "embracing_growth"
+    },
+    {
+      "id": "gen-1779710144911-f1c989",
+      "content": "I once colored a whole page with just one pencil, pressing harder for dark hues and softer for light. Every stroke felt like it whispered, \"Even within limits, there's so much possibility.\" You can find more like this over at the site.",
+      "bluesky_content": "I once colored a page with just one pencil, pressing harder for dark hues and softer for light. It felt like every stroke whispered, \"Even within limits, there’s so much possibility.\" More like this at the site.",
+      "mastodon_content": "I once colored a whole page with just one pencil, pressing harder for dark hues and softer for light. Every stroke felt like it whispered, \"Even within limits, there's so much possibility.\" You can find more like this over at the site.",
+      "hashtags": [
+        "#CreativeReflections",
+        "#MindfulMaking"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-23T10:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-27T11:41:41.591Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmtggamyq62c",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmtggamyq62c",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116646353369500157",
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "indirect_invitation",
+      "_emotional_theme": "possibility_in_limits"
+    },
+    {
+      "id": "gen-1779816514824-e87dcb",
+      "content": "Do you ever feel like your walls have their own moods? Sometimes they need a pop of bold, other times just a whisper of calm. If you’re in the mood to transform a corner, this lives quietly on abstractemporium.art.",
+      "bluesky_content": "Do you ever feel like your walls have their own moods? Sometimes they need a pop of bold, other times a whisper of calm. If you’re in the mood to transform a corner, this lives quietly on abstractemporium.art.",
+      "mastodon_content": "Do you ever feel like your walls have their own moods? Sometimes they need a pop of bold, other times just a whisper of calm. If you’re in the mood to transform a corner, this lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ArtForYourSpace",
+        "#SmallTransformations"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-23T22:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-27T17:21:10.521Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmtzfbxrmk2o",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmtzfbxrmk2o",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116647688236528332",
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "surrounding_emotions"
+    },
+    {
+      "id": "gen-1779816516875-2a0028",
+      "content": "You know that feeling when a single piece of art shifts the entire mood of a room? Suddenly, it’s like the walls are breathing differently. If that resonates, there’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "You know that feeling when a single piece of art shifts the whole mood of a room? It’s like the walls are breathing differently. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "You know that feeling when a single piece of art shifts the entire mood of a room? Suddenly, it’s like the walls are breathing differently. If that resonates, there’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ArtForAtmosphere",
+        "#MoodInColor"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-24T10:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-27T22:43:26.022Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmulfjppob2v",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmulfjppob2v",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116648955398922346",
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "spaces_with_feelings"
+    },
+    {
+      "id": "gen-1779882091922-63427a",
+      "content": "Today’s experiment: testing how watercolor glazes layer over inked patterns. Spoiler: the paper doesn’t always agree with my decisions. But that’s half the fun, isn’t it? The full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "Today’s experiment: testing how watercolor glazes layer on top of inked patterns. Spoiler: the paper does not always agree with my decisions. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Today’s experiment: testing how watercolor glazes layer over inked patterns. Spoiler: the paper doesn’t always agree with my decisions. But that’s half the fun, isn’t it? The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#StudioLife",
+        "#WatercolorLayers"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-24T22:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-28T11:41:06.663Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmvwu4rbzr2c",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmvwu4rbzr2c",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116652013343828494",
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "art_gallery",
+      "_emotional_theme": "playful_experimentation"
+    },
+    {
+      "id": "gen-1779882093815-1e56de",
+      "content": "What if mindfulness wasn’t about clearing your mind, but letting it wander safely? Following a pencil, a brush, a stitch—just one small, gentle motion at a time. If this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "What if being mindful didn’t mean clearing your mind, but letting it wander safely? Following a pencil, a brush, a stitch—just one small motion at a time. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "What if mindfulness wasn’t about clearing your mind, but letting it wander safely? Following a pencil, a brush, a stitch—just one small, gentle motion at a time. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#CreativeFlow",
+        "#ArtAndCalm"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-25T10:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "bluesky",
+        "mastodon"
+      ],
+      "postedAt": "2026-05-28T22:42:36.524Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmwkolug4c2n",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmwkolug4c2n",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116654614535864572",
+      "_generated": true,
+      "_category": "creative_mindfulness",
+      "_cta_type": "if this is your kind of thing, abstractemporium.art has more",
+      "_emotional_theme": "gentle_attention"
+    },
+    {
+      "id": "gen-1779921798665-d183a8",
+      "content": "Sometimes I paint just to see what a color feels like brushed into existence. This one started as a streak of red, then orange insisted it wanted in. You can find more of this over at the site if you're curious. 🎨",
+      "bluesky_content": "Sometimes I paint just to see what a color feels like brushed into existence. This one started as a streak of red, then orange insisted it wanted in. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "Sometimes I paint just to see what a color feels like brushed into existence. This one started as a streak of red, then orange insisted it wanted in. You can find more of this over at the site if you're curious. 🎨",
+      "hashtags": [
+        "#ColorStories",
+        "#AbstractArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-25T22:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-29T11:32:39.797Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmygtwq5kw2h",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmygtwq5kw2h",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116657642485216441",
+      "_generated": true,
+      "_category": "abstract_art_spotlight",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "curious_experimentation"
+    },
+    {
+      "id": "gen-1779921801517-4de35e",
+      "content": "There’s a point in every knitting project where it looks like absolute chaos—a tangle of yarn and half-formed ideas. But that’s how everything beautiful starts, isn’t it? this lives quietly on abstractemporium.art",
+      "bluesky_content": "There’s a point in every knitting project where it looks like absolute chaos—a tangle of yarn and half-formed ideas. But that’s how everything beautiful starts, isn’t it? this lives quietly on abstractemporium.art",
+      "mastodon_content": "There’s a point in every knitting project where it looks like absolute chaos—a tangle of yarn and half-formed ideas. But that’s how everything beautiful starts, isn’t it? this lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#KnittingThoughts",
+        "#CraftingHope"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-26T10:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-29T17:36:11.263Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmz35xqk4y2i",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmz35xqk4y2i",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116659071888594466",
+      "_generated": true,
+      "_category": "knitting_craft_story",
+      "_cta_type": "website",
+      "_emotional_theme": "embrace_the_mess"
+    },
+    {
+      "id": "gen-1779921803671-60d1ae",
+      "content": "Do you ever wonder what a color might sound like if it could sing? Some of my pieces feel like they hum gently in the background. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "Do you ever wonder what a color might sound like if it could sing? Some of my pieces feel like they hum gently in the background. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Do you ever wonder what a color might sound like if it could sing? Some of my pieces feel like they hum gently in the background. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ColorStories",
+        "#CreativeAtmosphere"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-26T22:00:00.000Z",
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-29T22:39:04.586Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mmzm3l7hcx2h",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mmzm3l7hcx2h",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116660262906562125",
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "art_gallery",
+      "_emotional_theme": "synesthesia_imagining"
+    },
+    {
+      "id": "gen-1780008136988-e1d3ad",
+      "content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you, waiting quietly on the wall. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you, waiting quietly on the wall. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#ArtWithSoul",
+        "#AbstractInspo"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-27T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "personal_connection"
+    },
+    {
+      "id": "gen-1780008139811-623f90",
+      "content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and discover a whole new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and a new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and discover a whole new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#MakerBrain",
+        "#ArtLife"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-27T22:00:00.000Z",
       "posted": false,
       "postedPlatforms": [],
       "postedAt": null,
@@ -2156,8 +2609,89 @@
       "mastodonUrl": null,
       "_generated": true,
       "_category": "creator_humor",
-      "_cta_type": "abstractemporium.art",
-      "_emotional_theme": "accidental_creativity"
+      "_cta_type": "if_this_is_your_kind_of_thing",
+      "_emotional_theme": "creative_spirals"
+    },
+    {
+      "id": "gen-1780094338682-9a6dd9",
+      "content": "Abstract Emporium started as a quiet rebellion. I wasn’t trying to make something ‘worthy’—just trying to feel okay. A page, a line, a stitch. I never expected it to grow. If that speaks to you, there’s more on the site.",
+      "bluesky_content": "Abstract Emporium started as a quiet rebellion. I wasn’t trying to make something ‘worthy’—just trying to feel okay. A page, a line, a stitch. I never expected it to grow. If that speaks to you, there’s more on the site.",
+      "mastodon_content": "Abstract Emporium started as a quiet rebellion. I wasn’t trying to make something ‘worthy’—just trying to feel okay. A page, a line, a stitch. I never expected it to grow. If that speaks to you, there’s more on the site.",
+      "hashtags": [
+        "#OriginOfArt",
+        "#GentleCreation"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-28T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "origin_story",
+      "_cta_type": "you_can_find_more_on_the_site",
+      "_emotional_theme": "art_as_healing"
+    },
+    {
+      "id": "gen-1780094340846-1e418d",
+      "content": "What’s the kindest thing you’ve ever made for yourself? A sketch just because? A scarf to wrap yourself in? Creation doesn’t have to be practical—it just has to be yours. This lives quietly on abstractemporium.art 🌿",
+      "bluesky_content": "What’s the kindest thing you’ve ever made for yourself? A sketch just because? A scarf to wrap yourself in? Creation doesn’t have to be practical—it just has to be yours. This lives quietly on abstractemporium.art",
+      "mastodon_content": "What’s the kindest thing you’ve ever made for yourself? A sketch just because? A scarf to wrap yourself in? Creation doesn’t have to be practical—it just has to be yours. This lives quietly on abstractemporium.art 🌿",
+      "hashtags": [
+        "#KindMaking",
+        "#CreativeKindness"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-28T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "inspiration_spark",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "self_compassion"
+    },
+    {
+      "id": "gen-1780094343054-e35303",
+      "content": "A blank page doesn’t owe us perfection. It asks for honesty. Every line, every color, even the wobbly ones—it’s all part of the story we’re telling ourselves. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "A blank page doesn’t owe us perfection. It asks for honesty. Every line, every color, even the wobbly ones—it’s all part of the story. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "A blank page doesn’t owe us perfection. It asks for honesty. Every line, every color, even the wobbly ones—it’s all part of the story we’re telling ourselves. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#CreativeJourney",
+        "#HonestArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-29T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "transformation_arc",
+      "_cta_type": "subtle_invitation",
+      "_emotional_theme": "embracing_imperfection"
     }
   ]
 }

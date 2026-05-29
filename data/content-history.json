@@ -3,24 +3,25 @@
   "description": "Permanent non-repetition memory for the Abstract Emporium content engine. Every generated and posted entry is stored here. Never delete entries — only append.",
   "category_rotation": {
     "last_used": {
-      "abstract_art_spotlight": "2026-05-23T09:57:09.586Z",
-      "knitting_craft_story": "2026-05-23T09:57:12.140Z",
-      "emotional_reflection": "2026-05-22T10:54:25.770Z",
-      "creative_mindfulness": "2026-05-22T10:54:31.383Z",
-      "creator_humor": "2026-05-23T09:57:17.144Z",
-      "behind_the_scenes": "2026-05-22T10:54:28.787Z",
-      "inspiration_spark": "2026-05-21T11:29:47.181Z",
-      "origin_story": "2026-05-21T11:29:43.609Z",
-      "transformation_arc": "2026-05-21T11:29:49.607Z"
+      "abstract_art_spotlight": "2026-05-27T22:43:18.665Z",
+      "knitting_craft_story": "2026-05-27T22:43:21.517Z",
+      "emotional_reflection": "2026-05-25T11:55:44.911Z",
+      "creative_mindfulness": "2026-05-27T11:41:33.815Z",
+      "creator_humor": "2026-05-28T22:42:19.811Z",
+      "behind_the_scenes": "2026-05-27T11:41:31.923Z",
+      "inspiration_spark": "2026-05-29T22:39:00.846Z",
+      "origin_story": "2026-05-29T22:38:58.683Z",
+      "transformation_arc": "2026-05-29T22:39:03.055Z",
+      "promotion_spotlight": "2026-05-28T22:42:16.988Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-05-22T10:54:28.787Z",
-      "this lives quietly on abstractemporium.art": "2026-05-22T10:54:31.383Z",
-      "there's a whole collection of this kind of work on the site": "2026-05-23T09:57:09.586Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-23T09:57:12.140Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-05-23T09:57:17.144Z"
+      "you can find more of this over at the site if you're curious": "2026-05-29T22:38:58.683Z",
+      "this lives quietly on abstractemporium.art": "2026-05-29T22:39:00.846Z",
+      "there's a whole collection of this kind of work on the site": "2026-05-29T22:39:03.055Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-28T22:42:16.988Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-05-28T22:42:19.811Z"
     }
   },
   "hashtag_sets_used": [
@@ -210,6 +211,78 @@
     [
       "#CraftConfessions",
       "#MakingLifeUp"
+    ],
+    [
+      "#ArtForYourHome",
+      "#AbstractArtists"
+    ],
+    [
+      "#ArtOfColor",
+      "#AbstractPrints"
+    ],
+    [
+      "#FindingCalm",
+      "#MakingArt"
+    ],
+    [
+      "#CreativeGrowth",
+      "#EverydayWonder"
+    ],
+    [
+      "#TransformationDance",
+      "#CreativeJourney"
+    ],
+    [
+      "#CreativeReflections",
+      "#MindfulMaking"
+    ],
+    [
+      "#ArtForYourSpace",
+      "#SmallTransformations"
+    ],
+    [
+      "#ArtForAtmosphere",
+      "#MoodInColor"
+    ],
+    [
+      "#StudioLife",
+      "#WatercolorLayers"
+    ],
+    [
+      "#CreativeFlow",
+      "#ArtAndCalm"
+    ],
+    [
+      "#ColorStories",
+      "#AbstractArt"
+    ],
+    [
+      "#KnittingThoughts",
+      "#CraftingHope"
+    ],
+    [
+      "#ColorStories",
+      "#CreativeAtmosphere"
+    ],
+    [
+      "#ArtWithSoul",
+      "#AbstractInspo"
+    ],
+    [
+      "#MakerBrain",
+      "#ArtLife"
+    ],
+    [
+      "#OriginOfArt",
+      "#GentleCreation"
+    ],
+    [
+      "#KindMaking",
+      "#CreativeKindness"
+    ],
+    [
+      "#CreativeJourney",
+      "#HonestArt"
     ]
   ],
   "posts": [
@@ -1256,6 +1329,474 @@
         "hours later",
         "later well",
         "well guess"
+      ]
+    },
+    {
+      "id": "gen-1779616713652-dceaee",
+      "timestamp": "2026-05-24T09:58:33.652Z",
+      "category": "promotion_spotlight",
+      "cta_type": "soft_sale",
+      "emotional_theme": "emotional_connection",
+      "bluesky_content": "There’s something quietly magical about living with art. A painting you don’t just see but *feel*. If that sounds like your kind of thing, Fine Art America has 20% off right now—perfect timing to take a peek.",
+      "mastodon_content": "There’s something quietly magical about living with art. A painting you don’t just see but *feel*, like it shifts with your mood. If that sounds like your kind of thing, Fine Art America has 20% off right now—perfect timing to take a peek.",
+      "hashtags": [
+        "#ArtForYourHome",
+        "#AbstractArtists"
+      ],
+      "content_hash": "a542ca797ea60e142013196c1d946909d3648bb237fcaa25e19ade7d2b4a93c1",
+      "key_phrases": [
+        "there something",
+        "something quietly",
+        "quietly magical",
+        "magical about",
+        "about living",
+        "living with",
+        "with painting",
+        "painting just",
+        "just feel",
+        "feel that"
+      ]
+    },
+    {
+      "id": "gen-1779616717845-ca3f27",
+      "timestamp": "2026-05-24T09:58:37.845Z",
+      "category": "promotion_spotlight",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "color_surprise",
+      "bluesky_content": "Have you ever had a color catch you off guard? Like a warm yellow that feels like a memory, or a bold blue that demands to be noticed? Some of my abstract prints are living that life right now on Fine Art America.",
+      "mastodon_content": "Have you ever had a color catch you off guard? Like a warm yellow that feels like a memory, or a bold blue that demands to be noticed? Some of my abstract prints are living that life right now on Fine Art America. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ArtOfColor",
+        "#AbstractPrints"
+      ],
+      "content_hash": "5425751405414710b5aeddb147cd1cc74be643d19472e8f22b5a9883fe6fff48",
+      "key_phrases": [
+        "have ever",
+        "ever color",
+        "color catch",
+        "catch guard",
+        "guard like",
+        "like warm",
+        "warm yellow",
+        "yellow that",
+        "that feels",
+        "feels like"
+      ]
+    },
+    {
+      "id": "gen-1779616722643-ba69ab",
+      "timestamp": "2026-05-24T09:58:42.643Z",
+      "category": "origin_story",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "art_as_escape",
+      "bluesky_content": "Abstract Emporium didn’t start as a plan—it started as an escape. A way to breathe through chaos, one sketch, one stitch, or one brushstroke at a time. Now, there’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Abstract Emporium didn’t start as a plan—it started as an escape. A way to breathe through chaos, sketch by sketch, stitch by stitch, brushstroke by brushstroke. Now, there’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#FindingCalm",
+        "#MakingArt"
+      ],
+      "content_hash": "dffa8460d074efd70f626cb0532fa999db0f8bcb99ad5716e300cc6d99acd46d",
+      "key_phrases": [
+        "abstract emporium",
+        "emporium didn",
+        "didn start",
+        "start plan",
+        "plan started",
+        "started escape",
+        "escape breathe",
+        "breathe through",
+        "through chaos",
+        "chaos sketch"
+      ]
+    },
+    {
+      "id": "gen-1779710138771-704c92",
+      "timestamp": "2026-05-25T11:55:38.771Z",
+      "category": "inspiration_spark",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "resilience_in_creation",
+      "bluesky_content": "I saw a crack in the sidewalk today, and a tiny flower growing through it. Proof that creation finds a way, even in the hardest places. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "I saw a crack in the sidewalk today, and there it was—a tiny flower growing through. Proof that creation always finds a way, even in the hardest places. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeGrowth",
+        "#EverydayWonder"
+      ],
+      "content_hash": "139b30acb596c4290c6285093c749f6450928d55ea9761148a7296e86ba9fd86",
+      "key_phrases": [
+        "crack sidewalk",
+        "sidewalk today",
+        "today tiny",
+        "tiny flower",
+        "flower growing",
+        "growing through",
+        "through proof",
+        "proof that",
+        "that creation",
+        "creation finds"
+      ]
+    },
+    {
+      "id": "gen-1779710142645-9d029e",
+      "timestamp": "2026-05-25T11:55:42.645Z",
+      "category": "transformation_arc",
+      "cta_type": "if_this_is_your_kind_of_thing",
+      "emotional_theme": "embracing_growth",
+      "bluesky_content": "Ever notice how growth feels like one step forward, two back, then a sideways shuffle? Turns out, dancing with change is still moving forward. If this is your kind of rhythm, abstractemporium.art has more.",
+      "mastodon_content": "Ever notice how growth feels like one step forward, two back, then a sideways shuffle? Turns out, dancing with change is still moving forward. If this is your kind of rhythm, abstractemporium.art has more. 🌱",
+      "hashtags": [
+        "#TransformationDance",
+        "#CreativeJourney"
+      ],
+      "content_hash": "99282f0f90e868490ce0387d9f458c63114896550b5820ef69cdfee91dd90e0f",
+      "key_phrases": [
+        "ever notice",
+        "notice growth",
+        "growth feels",
+        "feels like",
+        "like step",
+        "step forward",
+        "forward back",
+        "back then",
+        "then sideways",
+        "sideways shuffle"
+      ]
+    },
+    {
+      "id": "gen-1779710144911-f1c989",
+      "timestamp": "2026-05-25T11:55:44.911Z",
+      "category": "emotional_reflection",
+      "cta_type": "indirect_invitation",
+      "emotional_theme": "possibility_in_limits",
+      "bluesky_content": "I once colored a page with just one pencil, pressing harder for dark hues and softer for light. It felt like every stroke whispered, \"Even within limits, there’s so much possibility.\" More like this at the site.",
+      "mastodon_content": "I once colored a whole page with just one pencil, pressing harder for dark hues and softer for light. Every stroke felt like it whispered, \"Even within limits, there's so much possibility.\" You can find more like this over at the site.",
+      "hashtags": [
+        "#CreativeReflections",
+        "#MindfulMaking"
+      ],
+      "content_hash": "9d79640e8f3caa4d267f3804842c12a1e717c6bdac11ba50b0099ffa41df8400",
+      "key_phrases": [
+        "once colored",
+        "colored page",
+        "page with",
+        "with just",
+        "just pencil",
+        "pencil pressing",
+        "pressing harder",
+        "harder dark",
+        "dark hues",
+        "hues softer"
+      ]
+    },
+    {
+      "id": "gen-1779816514824-e87dcb",
+      "timestamp": "2026-05-26T17:28:34.824Z",
+      "category": "promotion_spotlight",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "surrounding_emotions",
+      "bluesky_content": "Do you ever feel like your walls have their own moods? Sometimes they need a pop of bold, other times a whisper of calm. If you’re in the mood to transform a corner, this lives quietly on abstractemporium.art.",
+      "mastodon_content": "Do you ever feel like your walls have their own moods? Sometimes they need a pop of bold, other times just a whisper of calm. If you’re in the mood to transform a corner, this lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ArtForYourSpace",
+        "#SmallTransformations"
+      ],
+      "content_hash": "d98f6d2ec0811e9e4e5708efcb7542d1f3ab4aec0961405d31da8a33cf2d4b78",
+      "key_phrases": [
+        "ever feel",
+        "feel like",
+        "like your",
+        "your walls",
+        "walls have",
+        "have their",
+        "their moods",
+        "moods sometimes",
+        "sometimes they",
+        "they need"
+      ]
+    },
+    {
+      "id": "gen-1779816516875-2a0028",
+      "timestamp": "2026-05-26T17:28:36.875Z",
+      "category": "promotion_spotlight",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "spaces_with_feelings",
+      "bluesky_content": "You know that feeling when a single piece of art shifts the whole mood of a room? It’s like the walls are breathing differently. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "You know that feeling when a single piece of art shifts the entire mood of a room? Suddenly, it’s like the walls are breathing differently. If that resonates, there’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ArtForAtmosphere",
+        "#MoodInColor"
+      ],
+      "content_hash": "17aae6b61efd7ea79d11f6cdd28f8c93772ab193de4925678a369409c7c4537c",
+      "key_phrases": [
+        "know that",
+        "that feeling",
+        "feeling when",
+        "when single",
+        "single piece",
+        "piece shifts",
+        "shifts whole",
+        "whole mood",
+        "mood room",
+        "room like"
+      ]
+    },
+    {
+      "id": "gen-1779882091922-63427a",
+      "timestamp": "2026-05-27T11:41:31.923Z",
+      "category": "behind_the_scenes",
+      "cta_type": "art_gallery",
+      "emotional_theme": "playful_experimentation",
+      "bluesky_content": "Today’s experiment: testing how watercolor glazes layer on top of inked patterns. Spoiler: the paper does not always agree with my decisions. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Today’s experiment: testing how watercolor glazes layer over inked patterns. Spoiler: the paper doesn’t always agree with my decisions. But that’s half the fun, isn’t it? The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#StudioLife",
+        "#WatercolorLayers"
+      ],
+      "content_hash": "8f45381d6dd74e7125fe5ad3f241852a849d6b178a641c6582fc9baf88600b78",
+      "key_phrases": [
+        "today experiment",
+        "experiment testing",
+        "testing watercolor",
+        "watercolor glazes",
+        "glazes layer",
+        "layer inked",
+        "inked patterns",
+        "patterns spoiler",
+        "spoiler paper",
+        "paper does"
+      ]
+    },
+    {
+      "id": "gen-1779882093815-1e56de",
+      "timestamp": "2026-05-27T11:41:33.815Z",
+      "category": "creative_mindfulness",
+      "cta_type": "if this is your kind of thing, abstractemporium.art has more",
+      "emotional_theme": "gentle_attention",
+      "bluesky_content": "What if being mindful didn’t mean clearing your mind, but letting it wander safely? Following a pencil, a brush, a stitch—just one small motion at a time. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "What if mindfulness wasn’t about clearing your mind, but letting it wander safely? Following a pencil, a brush, a stitch—just one small, gentle motion at a time. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#CreativeFlow",
+        "#ArtAndCalm"
+      ],
+      "content_hash": "f1bc39d44f1cfd1ed9cde76ebaade7c1ecddb5be31f3d0d6b5adee85556e125e",
+      "key_phrases": [
+        "what being",
+        "being mindful",
+        "mindful didn",
+        "didn mean",
+        "mean clearing",
+        "clearing your",
+        "your mind",
+        "mind letting",
+        "letting wander",
+        "wander safely"
+      ]
+    },
+    {
+      "id": "gen-1779921798665-d183a8",
+      "timestamp": "2026-05-27T22:43:18.665Z",
+      "category": "abstract_art_spotlight",
+      "cta_type": "you can find more of this over at the site if you're curious",
+      "emotional_theme": "curious_experimentation",
+      "bluesky_content": "Sometimes I paint just to see what a color feels like brushed into existence. This one started as a streak of red, then orange insisted it wanted in. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "Sometimes I paint just to see what a color feels like brushed into existence. This one started as a streak of red, then orange insisted it wanted in. You can find more of this over at the site if you're curious. 🎨",
+      "hashtags": [
+        "#ColorStories",
+        "#AbstractArt"
+      ],
+      "content_hash": "49ae940723bd0019e228264509fe9a63d6314915f643d2bf70a0d8e55a3ee0f0",
+      "key_phrases": [
+        "sometimes paint",
+        "paint just",
+        "just what",
+        "what color",
+        "color feels",
+        "feels like",
+        "like brushed",
+        "brushed into",
+        "into existence",
+        "existence this"
+      ]
+    },
+    {
+      "id": "gen-1779921801517-4de35e",
+      "timestamp": "2026-05-27T22:43:21.517Z",
+      "category": "knitting_craft_story",
+      "cta_type": "website",
+      "emotional_theme": "embrace_the_mess",
+      "bluesky_content": "There’s a point in every knitting project where it looks like absolute chaos—a tangle of yarn and half-formed ideas. But that’s how everything beautiful starts, isn’t it? this lives quietly on abstractemporium.art",
+      "mastodon_content": "There’s a point in every knitting project where it looks like absolute chaos—a tangle of yarn and half-formed ideas. But that’s how everything beautiful starts, isn’t it? this lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#KnittingThoughts",
+        "#CraftingHope"
+      ],
+      "content_hash": "0e0364a106a6ba877d4635b78e23409cc08d6560fda68633b307e719a20e06cc",
+      "key_phrases": [
+        "there point",
+        "point every",
+        "every knitting",
+        "knitting project",
+        "project where",
+        "where looks",
+        "looks like",
+        "like absolute",
+        "absolute chaos",
+        "chaos tangle"
+      ]
+    },
+    {
+      "id": "gen-1779921803671-60d1ae",
+      "timestamp": "2026-05-27T22:43:23.671Z",
+      "category": "promotion_spotlight",
+      "cta_type": "art_gallery",
+      "emotional_theme": "synesthesia_imagining",
+      "bluesky_content": "Do you ever wonder what a color might sound like if it could sing? Some of my pieces feel like they hum gently in the background. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Do you ever wonder what a color might sound like if it could sing? Some of my pieces feel like they hum gently in the background. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ColorStories",
+        "#CreativeAtmosphere"
+      ],
+      "content_hash": "325212b2c626fcf1755d69191bc4dbfd908a8cd96c21ea1d74e22f7c0fa86b4e",
+      "key_phrases": [
+        "ever wonder",
+        "wonder what",
+        "what color",
+        "color might",
+        "might sound",
+        "sound like",
+        "like could",
+        "could sing",
+        "sing some",
+        "some pieces"
+      ]
+    },
+    {
+      "id": "gen-1780008136988-e1d3ad",
+      "timestamp": "2026-05-28T22:42:16.988Z",
+      "category": "promotion_spotlight",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "personal_connection",
+      "bluesky_content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Do you ever glance at a piece of art and feel like it’s holding a secret? A story just for you, waiting quietly on the wall. That’s the energy I try to pour into my abstracts. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#ArtWithSoul",
+        "#AbstractInspo"
+      ],
+      "content_hash": "5116458404acbeabdf7e281a0dd3ee6a6348ef2677d62edff374fc5bdd44b068",
+      "key_phrases": [
+        "ever glance",
+        "glance piece",
+        "piece feel",
+        "feel like",
+        "like holding",
+        "holding secret",
+        "secret story",
+        "story just",
+        "just that",
+        "that energy"
+      ]
+    },
+    {
+      "id": "gen-1780008139811-623f90",
+      "timestamp": "2026-05-28T22:42:19.811Z",
+      "category": "creator_humor",
+      "cta_type": "if_this_is_your_kind_of_thing",
+      "emotional_theme": "creative_spirals",
+      "bluesky_content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and a new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Me: \"Let’s try a quick sketch before bed.\"\nAlso me, 2 hours later: \"What if I experiment with five different shading techniques and discover a whole new color palette?\"\nIf this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#MakerBrain",
+        "#ArtLife"
+      ],
+      "content_hash": "3aee13c682ac24f9eeeb3a734416340295268ab5fa07ac69d6ce1c290196d5a7",
+      "key_phrases": [
+        "quick sketch",
+        "sketch before",
+        "before also",
+        "also hours",
+        "hours later",
+        "later what",
+        "what experiment",
+        "experiment with",
+        "with five",
+        "five different"
+      ]
+    },
+    {
+      "id": "gen-1780094338682-9a6dd9",
+      "timestamp": "2026-05-29T22:38:58.683Z",
+      "category": "origin_story",
+      "cta_type": "you_can_find_more_on_the_site",
+      "emotional_theme": "art_as_healing",
+      "bluesky_content": "Abstract Emporium started as a quiet rebellion. I wasn’t trying to make something ‘worthy’—just trying to feel okay. A page, a line, a stitch. I never expected it to grow. If that speaks to you, there’s more on the site.",
+      "mastodon_content": "Abstract Emporium started as a quiet rebellion. I wasn’t trying to make something ‘worthy’—just trying to feel okay. A page, a line, a stitch. I never expected it to grow. If that speaks to you, there’s more on the site.",
+      "hashtags": [
+        "#OriginOfArt",
+        "#GentleCreation"
+      ],
+      "content_hash": "788066f5eb3e16308c6f508942c8261cc44e3fd998fc96c2cc5bef47274a2982",
+      "key_phrases": [
+        "abstract emporium",
+        "emporium started",
+        "started quiet",
+        "quiet rebellion",
+        "rebellion wasn",
+        "wasn trying",
+        "trying make",
+        "make something",
+        "something worthy",
+        "worthy just"
+      ]
+    },
+    {
+      "id": "gen-1780094340846-1e418d",
+      "timestamp": "2026-05-29T22:39:00.846Z",
+      "category": "inspiration_spark",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "self_compassion",
+      "bluesky_content": "What’s the kindest thing you’ve ever made for yourself? A sketch just because? A scarf to wrap yourself in? Creation doesn’t have to be practical—it just has to be yours. This lives quietly on abstractemporium.art",
+      "mastodon_content": "What’s the kindest thing you’ve ever made for yourself? A sketch just because? A scarf to wrap yourself in? Creation doesn’t have to be practical—it just has to be yours. This lives quietly on abstractemporium.art 🌿",
+      "hashtags": [
+        "#KindMaking",
+        "#CreativeKindness"
+      ],
+      "content_hash": "1b3d995e1aadab3c35edaa8f4a58266a70aee443cd5fd41149369f9edc2f61b8",
+      "key_phrases": [
+        "what kindest",
+        "kindest thing",
+        "thing ever",
+        "ever made",
+        "made yourself",
+        "yourself sketch",
+        "sketch just",
+        "just because",
+        "because scarf",
+        "scarf wrap"
+      ]
+    },
+    {
+      "id": "gen-1780094343054-e35303",
+      "timestamp": "2026-05-29T22:39:03.054Z",
+      "category": "transformation_arc",
+      "cta_type": "subtle_invitation",
+      "emotional_theme": "embracing_imperfection",
+      "bluesky_content": "A blank page doesn’t owe us perfection. It asks for honesty. Every line, every color, even the wobbly ones—it’s all part of the story. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "A blank page doesn’t owe us perfection. It asks for honesty. Every line, every color, even the wobbly ones—it’s all part of the story we’re telling ourselves. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#CreativeJourney",
+        "#HonestArt"
+      ],
+      "content_hash": "60cffc7a990d06cb699b333d7d2d0fa673154d8ac04a73f265e52ed977335746",
+      "key_phrases": [
+        "blank page",
+        "page doesn",
+        "doesn perfection",
+        "perfection asks",
+        "asks honesty",
+        "honesty every",
+        "every line",
+        "line every",
+        "every color",
+        "color even"
       ]
     }
   ]

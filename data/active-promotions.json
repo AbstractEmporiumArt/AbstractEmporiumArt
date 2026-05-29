@@ -1,33 +1,23 @@
 {
-  "lastCheck": "2026-05-24T02:28:52.058Z",
+  "lastCheck": "2026-05-29T20:36:23.407Z",
   "active": [
     {
       "platform": "fineartamerica",
       "platformName": "Fine Art America",
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high",
-      "detectedAt": "2026-05-24T02:28:52.058Z",
-      "priority": "high"    },
-    {
-      "platform": "redbubble",
-      "platformName": "RedBubble",
-      "type": "targeted_sale",
+      "type": "potential_sale",
       "discount": null,
-      "description": "RedBubble sale active (manually confirmed)",
-      "confidence": "high",
-      "detectedAt": "2026-05-24T02:45:00.000Z",
-      "priority": "medium",
-      "manual": true    }
+      "description": "Possible promotion detected",
+      "confidence": "medium",
+      "detectedAt": "2026-05-29T20:36:23.407Z",
+      "priority": "high"
+    }
   ],
   "platforms": {
     "fineartamerica": {
       "detected": true,
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high"
+      "type": "potential_sale",
+      "description": "Possible promotion detected",
+      "confidence": "medium"
     },
     "redbubble": {
       "detected": false
@@ -43,18 +33,29 @@
       "checkMethod": "manual"
     }
   },
-  "hasNewPromotions": false,
-  "newPromotions": [],
+  "hasNewPromotions": true,
+  "newPromotions": [
+    {
+      "platform": "fineartamerica",
+      "platformName": "Fine Art America",
+      "type": "potential_sale",
+      "discount": null,
+      "description": "Possible promotion detected",
+      "confidence": "medium",
+      "detectedAt": "2026-05-29T20:36:23.407Z",
+      "priority": "high"
+    }
+  ],
   "endedPromotions": [
     {
-      "platform": "redbubble",
-      "platformName": "RedBubble",
+      "platform": "fineartamerica",
+      "platformName": "Fine Art America",
       "type": "sitewide_sale",
-      "discount": null,
-      "description": "Active sale on RedBubble",
+      "discount": "20%",
+      "description": "20% off sitewide sale",
       "confidence": "high",
-      "detectedAt": "2026-05-24T02:30:00.000Z",
-      "priority": "medium"
+      "detectedAt": "2026-05-29T16:03:45.572Z",
+      "priority": "high"
     }
   ]
 }

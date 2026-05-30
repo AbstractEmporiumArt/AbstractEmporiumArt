@@ -2634,12 +2634,15 @@
         "bluesky"
       ],
       "schedule": "2026-05-28T10:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-05-30T22:03:43.037Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mn42lbfgss2b",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mn42lbfgss2b",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116665786197142265",
       "_generated": true,
       "_category": "origin_story",
       "_cta_type": "you_can_find_more_on_the_site",
@@ -2698,6 +2701,87 @@
       "_category": "transformation_arc",
       "_cta_type": "subtle_invitation",
       "_emotional_theme": "embracing_imperfection"
+    },
+    {
+      "id": "gen-1780178613738-b0205b",
+      "content": "Some paintings aren’t about perfection; they’re about process. Layers of color, moments captured, sometimes a little chaos. If that speaks to you, the full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "Some paintings aren’t about perfection; they’re about process. Layers of color, moments captured, sometimes a little chaos. If that speaks to you, the full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Some paintings aren’t about perfection; they’re about process. Layers of color, moments captured, sometimes a little chaos. If that speaks to you, the full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeLayers",
+        "#ArtInTheMaking"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-29T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "embracing_imperfection"
+    },
+    {
+      "id": "gen-1780178617934-ce9d25",
+      "content": "Have you ever noticed how abstract art changes with your mood? One day it’s calming; the next it feels electric. If you’re into that kind of vibe-shifting, I’ve got plenty of pieces over on Fine Art America right now.",
+      "bluesky_content": "Have you ever noticed how abstract art changes with your mood? One day it’s calming; the next it feels electric. If you’re into that kind of vibe-shifting, I’ve got plenty of pieces over on Fine Art America right now.",
+      "mastodon_content": "Have you ever noticed how abstract art changes with your mood? One day it’s calming; the next it feels electric. If you’re into that kind of vibe-shifting, I’ve got plenty of pieces over on Fine Art America right now.",
+      "hashtags": [
+        "#ArtForEveryMood",
+        "#AbstractLovers"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-30T10:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "abstract_art_gallery",
+      "_emotional_theme": "emotional_connection"
+    },
+    {
+      "id": "gen-1780178621850-862896",
+      "content": "Once, I redrew the same line over and over—not to fix it, but to feel it. Sometimes art isn’t about creating something new; it’s about staying in the moment. You can find more of this over at the site if you’re curious.",
+      "bluesky_content": "Once, I redrew the same line over and over—not to fix it, but to feel it. Sometimes art isn’t about creating something new; it’s about staying in the moment. You can find more of this over at the site if you’re curious.",
+      "mastodon_content": "Once, I redrew the same line over and over—not to fix it, but to feel it. Sometimes art isn’t about creating something new; it’s about staying in the moment. You can find more of this over at the site if you’re curious.",
+      "hashtags": [
+        "#ArtAndStillness",
+        "#MindfulCreation"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-05-30T22:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "subtle_invitation",
+      "_emotional_theme": "presence_through_repetition"
     }
   ]
 }

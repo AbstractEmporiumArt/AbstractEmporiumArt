@@ -104,13 +104,20 @@
 
 ### Social Media & Marketing
 - **Pinterest:** https://pin.it/2aJQrjp7a
-  - ArtPal Board: https://ca.pinterest.com/abstractemporiumart/artpal/ (17 pins, 3 sections)
-  - Fine Art America Board: In progress (20+ pins)
-  - Coloring Books Board: Planned
+  - Main Profile: https://ca.pinterest.com/abstractemporiumart/
+  - ArtPal Board: https://pin.it/dxxyEHejg (17 pins, 3 sections) ✅
+  - Fine Art America Board: https://pin.it/6T8P5opBW (20+ pins, 2 sections) ✅
+  - Coloring Books Board: https://pin.it/2NaxvqYZB 
+  - RedBubble Board: https://pin.it/rATnDMjdV
 - **Mastodon:** https://mastodon.social/@AbstractEmporiumArt (automated daily posts)
-- **Bluesky:** abstractemporium.bsky.social (automated daily posts)
-- **Facebook:** Manual cross-posts from Mastodon/Bluesky
-- **X/Twitter:** Manual cross-posts from Mastodon/Bluesky
+- **Bluesky:** https://bsky.app/profile/abstractemporium.bsky.social (automated daily posts)
+- **Facebook:** 
+  - Abstract Emporium Page: https://www.facebook.com/abstractemporium
+  - Lissa's Knitting Creations: https://www.facebook.com/LissaKnittingCreations/
+  - Manual cross-posts from Mastodon/Bluesky
+- **Instagram:** https://www.instagram.com/Abstractemporiumart
+- **X/Twitter:** https://x.com/AbstractEmpCo23 (Manual cross-posts from Mastodon/Bluesky)
+- **TheHug.art:** https://hug.art/artists/AbstractEmporiumArt
 
 ---
 

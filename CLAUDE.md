@@ -102,6 +102,16 @@
 - RedBubble: https://www.redbubble.com/people/abstractempco23/explore
 - TheHug.art: https://thehug.xyz/artists/AbstractEmporiumArt/shop
 
+### Social Media & Marketing
+- **Pinterest:** https://pin.it/2aJQrjp7a
+  - ArtPal Board: https://ca.pinterest.com/abstractemporiumart/artpal/ (17 pins, 3 sections)
+  - Fine Art America Board: In progress (20+ pins)
+  - Coloring Books Board: Planned
+- **Mastodon:** https://mastodon.social/@AbstractEmporiumArt (automated daily posts)
+- **Bluesky:** abstractemporium.bsky.social (automated daily posts)
+- **Facebook:** Manual cross-posts from Mastodon/Bluesky
+- **X/Twitter:** Manual cross-posts from Mastodon/Bluesky
+
 ---
 
 ## FILE ORGANIZATION

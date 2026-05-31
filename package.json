@@ -7,10 +7,10 @@
     "node": "18.x"
   },
   "dependencies": {
-    "nodemailer": "^6.9.7",
+    "nodemailer": "^8.0.10",
     "pdfkit": "^0.13.0",
     "puppeteer": "^24.34.0",
-    "uuid": "^9.0.0"
+    "uuid": "^14.0.0"
   },
   "scripts": {
     "dev": "vercel dev",

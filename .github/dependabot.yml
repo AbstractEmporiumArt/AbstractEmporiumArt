@@ -1,0 +1,70 @@
+version: 2
+
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "03:00"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "AbstractEmporiumArt"
+    labels:
+      - "dependencies"
+      - "automated"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    # Automatically merge minor and patch updates
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+    # Group updates by type
+    groups:
+      production-dependencies:
+        applies-to: version-updates
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
+      development-dependencies:
+        applies-to: version-updates
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "03:00"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "AbstractEmporiumArt"
+    labels:
+      - "github-actions"
+      - "automated"
+    commit-message:
+      prefix: "chore(actions)"
+      include: "scope"
+    groups:
+      actions-updates:
+        patterns:
+          - "actions/*"
+          - "github/*"
+
+# Dependabot will:
+# - Check for dependency updates every Monday at 3am
+# - Create PRs for outdated dependencies (max 5 at a time)
+# - Group minor/patch updates together
+# - Prioritize security updates
+# - Keep GitHub Actions up to date

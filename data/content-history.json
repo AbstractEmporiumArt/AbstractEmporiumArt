@@ -5,23 +5,23 @@
     "last_used": {
       "abstract_art_spotlight": "2026-05-27T22:43:18.665Z",
       "knitting_craft_story": "2026-05-27T22:43:21.517Z",
-      "emotional_reflection": "2026-05-25T11:55:44.911Z",
+      "emotional_reflection": "2026-05-30T22:03:41.850Z",
       "creative_mindfulness": "2026-05-27T11:41:33.815Z",
       "creator_humor": "2026-05-28T22:42:19.811Z",
       "behind_the_scenes": "2026-05-27T11:41:31.923Z",
       "inspiration_spark": "2026-05-29T22:39:00.846Z",
       "origin_story": "2026-05-29T22:38:58.683Z",
       "transformation_arc": "2026-05-29T22:39:03.055Z",
-      "promotion_spotlight": "2026-05-28T22:42:16.988Z"
+      "promotion_spotlight": "2026-05-30T22:03:37.934Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-05-29T22:38:58.683Z",
+      "you can find more of this over at the site if you're curious": "2026-05-30T22:03:41.850Z",
       "this lives quietly on abstractemporium.art": "2026-05-29T22:39:00.846Z",
       "there's a whole collection of this kind of work on the site": "2026-05-29T22:39:03.055Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-28T22:42:16.988Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-05-28T22:42:19.811Z"
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-05-30T22:03:33.739Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-05-30T22:03:37.934Z"
     }
   },
   "hashtag_sets_used": [
@@ -283,6 +283,18 @@
     [
       "#CreativeJourney",
       "#HonestArt"
+    ],
+    [
+      "#CreativeLayers",
+      "#ArtInTheMaking"
+    ],
+    [
+      "#ArtForEveryMood",
+      "#AbstractLovers"
+    ],
+    [
+      "#ArtAndStillness",
+      "#MindfulCreation"
     ]
   ],
   "posts": [
@@ -1797,6 +1809,84 @@
         "line every",
         "every color",
         "color even"
+      ]
+    },
+    {
+      "id": "gen-1780178613738-b0205b",
+      "timestamp": "2026-05-30T22:03:33.739Z",
+      "category": "promotion_spotlight",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "embracing_imperfection",
+      "bluesky_content": "Some paintings aren’t about perfection; they’re about process. Layers of color, moments captured, sometimes a little chaos. If that speaks to you, the full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Some paintings aren’t about perfection; they’re about process. Layers of color, moments captured, sometimes a little chaos. If that speaks to you, the full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeLayers",
+        "#ArtInTheMaking"
+      ],
+      "content_hash": "246836a085d32492231db8dffdb11778d6d66f1c71a8e11dca8172b3e6bb1f57",
+      "key_phrases": [
+        "some paintings",
+        "paintings aren",
+        "aren about",
+        "about perfection",
+        "perfection they",
+        "they about",
+        "about process",
+        "process layers",
+        "layers color",
+        "color moments"
+      ]
+    },
+    {
+      "id": "gen-1780178617934-ce9d25",
+      "timestamp": "2026-05-30T22:03:37.934Z",
+      "category": "promotion_spotlight",
+      "cta_type": "abstract_art_gallery",
+      "emotional_theme": "emotional_connection",
+      "bluesky_content": "Have you ever noticed how abstract art changes with your mood? One day it’s calming; the next it feels electric. If you’re into that kind of vibe-shifting, I’ve got plenty of pieces over on Fine Art America right now.",
+      "mastodon_content": "Have you ever noticed how abstract art changes with your mood? One day it’s calming; the next it feels electric. If you’re into that kind of vibe-shifting, I’ve got plenty of pieces over on Fine Art America right now.",
+      "hashtags": [
+        "#ArtForEveryMood",
+        "#AbstractLovers"
+      ],
+      "content_hash": "65ae99d20605d983ed7504bd6527b424c7c426b3a5bfaf0dd0d09aba7549a526",
+      "key_phrases": [
+        "have ever",
+        "ever noticed",
+        "noticed abstract",
+        "abstract changes",
+        "changes with",
+        "with your",
+        "your mood",
+        "mood calming",
+        "calming next",
+        "next feels"
+      ]
+    },
+    {
+      "id": "gen-1780178621850-862896",
+      "timestamp": "2026-05-30T22:03:41.850Z",
+      "category": "emotional_reflection",
+      "cta_type": "subtle_invitation",
+      "emotional_theme": "presence_through_repetition",
+      "bluesky_content": "Once, I redrew the same line over and over—not to fix it, but to feel it. Sometimes art isn’t about creating something new; it’s about staying in the moment. You can find more of this over at the site if you’re curious.",
+      "mastodon_content": "Once, I redrew the same line over and over—not to fix it, but to feel it. Sometimes art isn’t about creating something new; it’s about staying in the moment. You can find more of this over at the site if you’re curious.",
+      "hashtags": [
+        "#ArtAndStillness",
+        "#MindfulCreation"
+      ],
+      "content_hash": "51fc61bbd0aab36d7d54aa22e7ada0e4bceb77afb9811efa102066ce9550db03",
+      "key_phrases": [
+        "once redrew",
+        "redrew same",
+        "same line",
+        "line over",
+        "over over",
+        "over feel",
+        "feel sometimes",
+        "sometimes about",
+        "about creating",
+        "creating something"
       ]
     }
   ]

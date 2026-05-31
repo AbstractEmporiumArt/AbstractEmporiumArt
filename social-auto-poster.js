@@ -44,6 +44,40 @@ function saveQueue(queue) {
   fs.writeFileSync(queuePath, JSON.stringify(queue, null, 2));
 }
 
+// Truncate content to fit platform character limits
+function truncateForPlatform(content, link, maxLength) {
+  // Reserve space for link if provided (Bluesky uses ~27 chars, Mastodon ~23)
+  const linkSpace = link ? 30 : 0;
+  const availableLength = maxLength - linkSpace;
+  
+  if (content.length <= availableLength) {
+    // Content fits, add link if provided
+    return link ? `${content}\n\n${link}` : content;
+  }
+  
+  // Content too long, truncate with ellipsis
+  const truncated = content.substring(0, availableLength - 4) + '...';
+  console.warn(`⚠️  Content truncated from ${content.length} to ${truncated.length} chars`);
+  
+  return link ? `${truncated}\n\n${link}` : truncated;
+}
+
+// Get platform-specific content or fallback to main content
+function getPlatformContent(post, platform, maxLength) {
+  const platformField = `${platform}_content`;
+  let content = post[platformField] || post.content;
+  
+  // Check if we need to truncate
+  if (content.length > maxLength) {
+    content = truncateForPlatform(content, post.link, maxLength);
+  } else if (post.link && !content.includes(post.link)) {
+    // Add link if not already present
+    content = `${content}\n\n${post.link}`;
+  }
+  
+  return content;
+}
+
 // Post to X/Twitter
 async function postToTwitter(content, imagePath) {
   console.log('[Twitter] Posting:', content.substring(0, 50) + '...');
@@ -298,44 +332,63 @@ async function processQueue() {
     console.log('Scheduled for:', post.schedule);
     console.log('Content:', post.content.substring(0, 80) + '...\n');
     
-    // Build full content with hashtags and link
-    let fullContent = post.content;
-    if (post.link) fullContent += `\n\n${post.link}`;
-   if (post.hashtags && post.hashtags.length > 0) {
-      fullContent += `\n\n${post.hashtags.join(' ')}`;
-    }
-    
     // Resolve image path
     const imagePath = post.image ? path.join(__dirname, post.image) : null;
     
     // Track which platforms succeeded
     const results = {};
     
-    // Post to each platform
+    // Post to each platform with platform-specific content
     for (const platform of post.platforms) {
       try {
         let postId;
+        let platformContent;
         
         switch(platform.toLowerCase()) {
           case 'twitter':
-            postId = await postToTwitter(fullContent, imagePath);
+            // Twitter: 280 char limit
+            platformContent = getPlatformContent(post, 'twitter', 250); // Reserve space for hashtags
+            if (post.hashtags && post.hashtags.length > 0) {
+              platformContent += `\n\n${post.hashtags.join(' ')}`;
+            }
+            postId = await postToTwitter(platformContent, imagePath);
             break;
+            
           case 'bluesky':
-            postId = await postToBluesky(fullContent, imagePath);
+            // Bluesky: 300 char limit (STRICT)
+            platformContent = getPlatformContent(post, 'bluesky', 270); // Reserve 30 for hashtags
+            if (post.hashtags && post.hashtags.length > 0 && platformContent.length < 270) {
+              const hashtagString = post.hashtags.slice(0, 3).join(' '); // Max 3 hashtags for Bluesky
+              if (platformContent.length + hashtagString.length < 300) {
+                platformContent += `\n\n${hashtagString}`;
+              }
+            }
+            postId = await postToBluesky(platformContent, imagePath);
             break;
+            
           case 'mastodon':
-            postId = await postToMastodon(fullContent, imagePath);
+            // Mastodon: 500 char limit (default instance)
+            platformContent = getPlatformContent(post, 'mastodon', 470); // Reserve 30 for hashtags
+            if (post.hashtags && post.hashtags.length > 0) {
+              platformContent += `\n\n${post.hashtags.join(' ')}`;
+            }
+            postId = await postToMastodon(platformContent, imagePath);
             break;
+            
           case 'facebook':
-            postId = await postToFacebook(fullContent, imagePath);
+            // Facebook: No practical limit
+            platformContent = post.content;
+            if (post.link) platformContent += `\n\n${post.link}`;
+            if (post.hashtags && post.hashtags.length > 0) {
+              platformContent += `\n\n${post.hashtags.join(' ')}`;
+            }
+            postId = await postToFacebook(platformContent, imagePath);
             break;
+            
           case 'pinterest':
             postId = await postToPinterest(post.content, imagePath, post.link);
             break;
-          default:
-            console.warn(`[${platform}] Unknown platform, skipping`);
-        }
-        
+            
         results[platform] = {
           success: true,
           postId: postId,

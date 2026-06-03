@@ -2901,12 +2901,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-03T17:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-03T18:23:53.451Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mnfq5unztm2b",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mnfq5unztm2b",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116687571039982697"
     },
     {
       "id": "art-platform-005",

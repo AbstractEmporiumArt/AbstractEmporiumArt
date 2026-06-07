@@ -3069,6 +3069,87 @@
       "blueskyUrl": null,
       "blueskyUri": null,
       "mastodonUrl": null
+    },
+    {
+      "id": "gen-1780828296063-a758d8",
+      "content": "There’s a sketchbook on my desk where ideas go to stretch before they’re ready to run. Some pages are half-baked, messy, and wonderfully imperfect. That’s where most creations begin. This lives quietly on abstractemporium.art",
+      "bluesky_content": "There’s a sketchbook on my desk where ideas go to stretch before they’re ready to run. Some pages are half-baked, messy—perfectly imperfect. That’s where most creations begin. This lives quietly on abstractemporium.art",
+      "mastodon_content": "There’s a sketchbook on my desk where ideas go to stretch before they’re ready to run. Some pages are half-baked, messy, and wonderfully imperfect. That’s where most creations begin. This lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#CreativeRoots",
+        "#ArtProcess"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-10T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "imperfect_is_okay"
+    },
+    {
+      "id": "gen-1780828298813-b00aa2",
+      "content": "Have you ever listened to the sound of your pencil? The gentle scrape, the rhythm of curves and lines. It’s like your hands are humming a quiet song. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "Have you ever listened to the sound of your pencil? The gentle scrape, the rhythm of curves and lines. It’s like your hands are humming a quiet song. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Have you ever listened to the sound of your pencil? The gentle scrape, the rhythm of curves and lines. It’s like your hands are humming a quiet song. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#MindfulMaking",
+        "#CreativeFlow"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-10T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creative_mindfulness",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "attuned_senses"
+    },
+    {
+      "id": "gen-1780828309344-2c0b11",
+      "content": "This piece began with a single, restless curve that wouldn’t sit still. It grew into something alive—lines stretching out, colliding, finding space. The full piece (and others like it) lives on abstractemporium.art",
+      "bluesky_content": "This piece began with a single, restless curve that wouldn’t sit still. It grew into something alive—lines stretching out, colliding, finding space. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "This piece began with a single, restless curve that wouldn’t sit still. It grew into something alive—lines stretching out, colliding, finding space. The full piece (and others like it) lives on abstractemporium.art",
+      "hashtags": [
+        "#AbstractForms",
+        "#ArtExploration"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-11T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "abstract_art_spotlight",
+      "_cta_type": "abstractemporium.art",
+      "_emotional_theme": "creative_evolution"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "category_rotation": {
     "last_used": {
       "abstract_art_spotlight": "2026-06-07T10:31:49.344Z",
-      "knitting_craft_story": "2026-05-27T22:43:21.517Z",
+      "knitting_craft_story": "2026-06-09T22:25:47.292Z",
       "emotional_reflection": "2026-05-30T22:03:41.850Z",
       "creative_mindfulness": "2026-06-07T10:31:38.813Z",
       "creator_humor": "2026-05-28T22:42:19.811Z",
@@ -12,16 +12,16 @@
       "inspiration_spark": "2026-05-29T22:39:00.846Z",
       "origin_story": "2026-05-29T22:38:58.683Z",
       "transformation_arc": "2026-05-29T22:39:03.055Z",
-      "promotion_spotlight": "2026-05-30T22:03:37.934Z"
+      "promotion_spotlight": "2026-06-09T22:25:45.374Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-05-30T22:03:41.850Z",
-      "this lives quietly on abstractemporium.art": "2026-06-07T10:31:36.064Z",
+      "you can find more of this over at the site if you're curious": "2026-06-09T22:25:45.374Z",
+      "this lives quietly on abstractemporium.art": "2026-06-09T22:25:47.292Z",
       "there's a whole collection of this kind of work on the site": "2026-06-07T10:31:38.813Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-06-07T10:31:49.344Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-05-30T22:03:37.934Z"
+      "if this is your kind of thing, abstractemporium.art has more": "2026-06-09T22:25:43.244Z"
     }
   },
   "hashtag_sets_used": [
@@ -307,6 +307,18 @@
     [
       "#AbstractForms",
       "#ArtExploration"
+    ],
+    [
+      "#EvolvingArt",
+      "#CreativeReflections"
+    ],
+    [
+      "#VisualConversations",
+      "#AbstractArtistry"
+    ],
+    [
+      "#KnittingComfort",
+      "#WoolStories"
     ]
   ],
   "posts": [
@@ -1977,6 +1989,84 @@
         "that wouldn",
         "wouldn still",
         "still grew"
+      ]
+    },
+    {
+      "id": "gen-1781043943243-56421c",
+      "timestamp": "2026-06-09T22:25:43.244Z",
+      "category": "promotion_spotlight",
+      "cta_type": "art_gallery",
+      "emotional_theme": "art_as_evolution",
+      "bluesky_content": "I caught myself staring at a print I made years ago, and it hit me how different it feels now compared to when I created it. Art evolves with us, doesn’t it? If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "I caught myself staring at a print I made years ago, and it hit me how different it feels now compared to when I created it. Art evolves with us, doesn’t it? If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#EvolvingArt",
+        "#CreativeReflections"
+      ],
+      "content_hash": "fade2f4cbe3c583e1aeb2fcd2a5723a9e6bf46c24cf1adb42b4b577b69f57805",
+      "key_phrases": [
+        "caught myself",
+        "myself staring",
+        "staring print",
+        "print made",
+        "made years",
+        "years different",
+        "different feels",
+        "feels compared",
+        "compared when",
+        "when created"
+      ]
+    },
+    {
+      "id": "gen-1781043945374-6b1cc4",
+      "timestamp": "2026-06-09T22:25:45.374Z",
+      "category": "promotion_spotlight",
+      "cta_type": "art_gallery",
+      "emotional_theme": "art_as_dialogue",
+      "bluesky_content": "Sometimes I think of abstract art as a quiet conversation. Shapes and colors sharing secrets you catch only if you really look. If that resonates, you can find more of this over at the site if you're curious.",
+      "mastodon_content": "Sometimes I think of abstract art as a quiet conversation. Shapes and colors sharing secrets you catch only if you really look. If that resonates, you can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#VisualConversations",
+        "#AbstractArtistry"
+      ],
+      "content_hash": "33541f8d9dac821261aa03d99e56b1eb30e5e33480b035b55edfb5d55f7e7378",
+      "key_phrases": [
+        "sometimes think",
+        "think abstract",
+        "abstract quiet",
+        "quiet conversation",
+        "conversation shapes",
+        "shapes colors",
+        "colors sharing",
+        "sharing secrets",
+        "secrets catch",
+        "catch only"
+      ]
+    },
+    {
+      "id": "gen-1781043947292-a19488",
+      "timestamp": "2026-06-09T22:25:47.292Z",
+      "category": "knitting_craft_story",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "nostalgia_in_creation",
+      "bluesky_content": "Some yarns end up more than stitches—they carry places. I finished a shawl last night, and somehow it smells like the sea. Not salt, but memories of walking the shore. This lives quietly on abstractemporium.art",
+      "mastodon_content": "Some yarns end up more than stitches—they carry places. I finished a shawl last night, and somehow it smells like the sea. Not the salt, exactly, but the memory of walking the shore. How do fibers do that? 🌀 This lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#KnittingComfort",
+        "#WoolStories"
+      ],
+      "content_hash": "b879f00dbf0f6a89b71856c5be4df43abac8c9d314c12c950eea0eb7c1861a7b",
+      "key_phrases": [
+        "some yarns",
+        "yarns more",
+        "more than",
+        "than stitches",
+        "stitches they",
+        "they carry",
+        "carry places",
+        "places finished",
+        "finished shawl",
+        "shawl last"
       ]
     }
   ]

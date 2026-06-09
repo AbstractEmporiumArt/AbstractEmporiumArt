@@ -3159,6 +3159,87 @@
       "_category": "abstract_art_spotlight",
       "_cta_type": "abstractemporium.art",
       "_emotional_theme": "creative_evolution"
+    },
+    {
+      "id": "gen-1781043943243-56421c",
+      "content": "I caught myself staring at a print I made years ago, and it hit me how different it feels now compared to when I created it. Art evolves with us, doesn’t it? If this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "I caught myself staring at a print I made years ago, and it hit me how different it feels now compared to when I created it. Art evolves with us, doesn’t it? If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "I caught myself staring at a print I made years ago, and it hit me how different it feels now compared to when I created it. Art evolves with us, doesn’t it? If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#EvolvingArt",
+        "#CreativeReflections"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-11T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "art_gallery",
+      "_emotional_theme": "art_as_evolution"
+    },
+    {
+      "id": "gen-1781043945374-6b1cc4",
+      "content": "Sometimes I think of abstract art as a quiet conversation. Shapes and colors sharing secrets you catch only if you really look. If that resonates, you can find more of this over at the site if you're curious.",
+      "bluesky_content": "Sometimes I think of abstract art as a quiet conversation. Shapes and colors sharing secrets you catch only if you really look. If that resonates, you can find more of this over at the site if you're curious.",
+      "mastodon_content": "Sometimes I think of abstract art as a quiet conversation. Shapes and colors sharing secrets you catch only if you really look. If that resonates, you can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#VisualConversations",
+        "#AbstractArtistry"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-12T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "art_gallery",
+      "_emotional_theme": "art_as_dialogue"
+    },
+    {
+      "id": "gen-1781043947292-a19488",
+      "content": "Some yarns end up more than stitches—they carry places. I finished a shawl last night, and somehow it smells like the sea. Not the salt, exactly, but the memory of walking the shore. How do fibers do that? 🌀 This lives quietly on abstractemporium.art",
+      "bluesky_content": "Some yarns end up more than stitches—they carry places. I finished a shawl last night, and somehow it smells like the sea. Not salt, but memories of walking the shore. This lives quietly on abstractemporium.art",
+      "mastodon_content": "Some yarns end up more than stitches—they carry places. I finished a shawl last night, and somehow it smells like the sea. Not the salt, exactly, but the memory of walking the shore. How do fibers do that? 🌀 This lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#KnittingComfort",
+        "#WoolStories"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-12T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "knitting_craft_story",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "nostalgia_in_creation"
     }
   ]
 }

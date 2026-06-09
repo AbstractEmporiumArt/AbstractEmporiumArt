@@ -3069,12 +3069,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-09T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-09T16:33:35.190Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mnums5qccg2g",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mnums5qccg2g",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116721111164249089"
     },
     {
       "id": "gen-1780828296063-a758d8",

@@ -1,24 +1,23 @@
 {
-  "lastCheck": "2026-06-08T20:29:36.332Z",
+  "lastCheck": "2026-06-09T04:17:19.401Z",
   "active": [
     {
       "platform": "fineartamerica",
       "platformName": "Fine Art America",
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high",
-      "detectedAt": "2026-06-08T20:29:36.332Z",
+      "type": "potential_sale",
+      "discount": null,
+      "description": "Possible promotion detected",
+      "confidence": "medium",
+      "detectedAt": "2026-06-09T04:17:19.401Z",
       "priority": "high"
     }
   ],
   "platforms": {
     "fineartamerica": {
       "detected": true,
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high"
+      "type": "potential_sale",
+      "description": "Possible promotion detected",
+      "confidence": "medium"
     },
     "redbubble": {
       "detected": false
@@ -39,11 +38,11 @@
     {
       "platform": "fineartamerica",
       "platformName": "Fine Art America",
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high",
-      "detectedAt": "2026-06-08T20:29:36.332Z",
+      "type": "potential_sale",
+      "discount": null,
+      "description": "Possible promotion detected",
+      "confidence": "medium",
+      "detectedAt": "2026-06-09T04:17:19.401Z",
       "priority": "high"
     }
   ],
@@ -51,21 +50,11 @@
     {
       "platform": "fineartamerica",
       "platformName": "Fine Art America",
-      "type": "potential_sale",
-      "discount": null,
-      "description": "Possible promotion detected",
-      "confidence": "medium",
-      "detectedAt": "2026-06-08T16:12:05.888Z",
-      "priority": "high"
-    },
-    {
-      "platform": "kofi",
-      "platformName": "Ko-fi",
-      "type": "shop_sale",
-      "discount": null,
-      "description": "Ko-fi shop promotion",
-      "confidence": "medium",
-      "detectedAt": "2026-06-08T16:12:05.888Z",
+      "type": "sitewide_sale",
+      "discount": "20%",
+      "description": "20% off sitewide sale",
+      "confidence": "high",
+      "detectedAt": "2026-06-08T20:29:36.332Z",
       "priority": "high"
     }
   ]

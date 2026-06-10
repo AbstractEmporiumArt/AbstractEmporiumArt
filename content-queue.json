@@ -3125,12 +3125,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-10T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-10T17:24:08.531Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mnxa3hzjno2t",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mnxa3hzjno2t",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116726972263464860",
       "_generated": true,
       "_category": "creative_mindfulness",
       "_cta_type": "there's a whole collection of this kind of work on the site",

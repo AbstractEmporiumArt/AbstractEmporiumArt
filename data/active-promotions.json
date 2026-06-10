@@ -1,6 +1,52 @@
 {
-  "lastCheck": "2026-06-09T20:18:04.425Z",
+  "lastCheck": "2026-06-10T04:38:25.949Z",
   "active": [
+    {
+      "platform": "fineartamerica",
+      "platformName": "Fine Art America",
+      "type": "potential_sale",
+      "discount": null,
+      "description": "Possible promotion detected",
+      "confidence": "medium",
+      "detectedAt": "2026-06-10T04:38:25.949Z",
+      "priority": "high"
+    }
+  ],
+  "platforms": {
+    "fineartamerica": {
+      "detected": true,
+      "type": "potential_sale",
+      "description": "Possible promotion detected",
+      "confidence": "medium"
+    },
+    "redbubble": {
+      "detected": false
+    },
+    "kofi": {
+      "detected": false
+    },
+    "artpal": {
+      "detected": false
+    },
+    "thehug": {
+      "detected": false,
+      "checkMethod": "manual"
+    }
+  },
+  "hasNewPromotions": true,
+  "newPromotions": [
+    {
+      "platform": "fineartamerica",
+      "platformName": "Fine Art America",
+      "type": "potential_sale",
+      "discount": null,
+      "description": "Possible promotion detected",
+      "confidence": "medium",
+      "detectedAt": "2026-06-10T04:38:25.949Z",
+      "priority": "high"
+    }
+  ],
+  "endedPromotions": [
     {
       "platform": "fineartamerica",
       "platformName": "Fine Art America",
@@ -21,45 +67,5 @@
       "detectedAt": "2026-06-09T20:18:04.425Z",
       "priority": "high"
     }
-  ],
-  "platforms": {
-    "fineartamerica": {
-      "detected": true,
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high"
-    },
-    "redbubble": {
-      "detected": false
-    },
-    "kofi": {
-      "detected": true,
-      "type": "shop_sale",
-      "discount": null,
-      "description": "Ko-fi shop promotion",
-      "confidence": "medium"
-    },
-    "artpal": {
-      "detected": false
-    },
-    "thehug": {
-      "detected": false,
-      "checkMethod": "manual"
-    }
-  },
-  "hasNewPromotions": true,
-  "newPromotions": [
-    {
-      "platform": "kofi",
-      "platformName": "Ko-fi",
-      "type": "shop_sale",
-      "discount": null,
-      "description": "Ko-fi shop promotion",
-      "confidence": "medium",
-      "detectedAt": "2026-06-09T20:18:04.425Z",
-      "priority": "high"
-    }
-  ],
-  "endedPromotions": []
+  ]
 }

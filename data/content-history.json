@@ -7,7 +7,7 @@
       "knitting_craft_story": "2026-06-09T22:25:47.292Z",
       "emotional_reflection": "2026-05-30T22:03:41.850Z",
       "creative_mindfulness": "2026-06-07T10:31:38.813Z",
-      "creator_humor": "2026-05-28T22:42:19.811Z",
+      "creator_humor": "2026-06-11T17:37:46.868Z",
       "behind_the_scenes": "2026-06-07T10:31:36.064Z",
       "inspiration_spark": "2026-05-29T22:39:00.846Z",
       "origin_story": "2026-05-29T22:38:58.683Z",
@@ -19,7 +19,7 @@
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-06-09T22:25:45.374Z",
       "this lives quietly on abstractemporium.art": "2026-06-09T22:25:47.292Z",
-      "there's a whole collection of this kind of work on the site": "2026-06-07T10:31:38.813Z",
+      "there's a whole collection of this kind of work on the site": "2026-06-11T17:37:46.868Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-06-07T10:31:49.344Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-06-09T22:25:43.244Z"
     }
@@ -319,6 +319,10 @@
     [
       "#KnittingComfort",
       "#WoolStories"
+    ],
+    [
+      "#ArtMoments",
+      "#CreativeSpirals"
     ]
   ],
   "posts": [
@@ -2067,6 +2071,32 @@
         "places finished",
         "finished shawl",
         "shawl last"
+      ]
+    },
+    {
+      "id": "gen-1781199466868-88551f",
+      "timestamp": "2026-06-11T17:37:46.868Z",
+      "category": "creator_humor",
+      "cta_type": "collection_promotion",
+      "emotional_theme": "imperfect_is_okay",
+      "bluesky_content": "Why does \"I’ll just dab a bit more paint\" always turn into \"Oops, now it’s a new painting\"? Art supplies don’t warn you about this slippery slope. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Why does \"I’ll just dab a bit more paint\" always turn into \"Oops, now it’s a whole new painting\"? No one tells you art supplies come with slippery slopes. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ArtMoments",
+        "#CreativeSpirals"
+      ],
+      "content_hash": "62bb0c35bb0746cf972f3015bac6595e054003a724cd6e90ddb8231801b3fa5f",
+      "key_phrases": [
+        "does just",
+        "just more",
+        "more paint",
+        "paint always",
+        "always turn",
+        "turn into",
+        "into oops",
+        "oops painting",
+        "painting supplies",
+        "supplies warn"
       ]
     }
   ]

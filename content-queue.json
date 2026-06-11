@@ -3185,12 +3185,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-11T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-11T17:38:09.120Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mnzrdh5xt62y",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mnzrdh5xt62y",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116732689667439249",
       "_generated": true,
       "_category": "promotion_spotlight",
       "_cta_type": "art_gallery",
@@ -3249,6 +3252,33 @@
       "_category": "knitting_craft_story",
       "_cta_type": "this lives quietly on abstractemporium.art",
       "_emotional_theme": "nostalgia_in_creation"
+    },
+    {
+      "id": "gen-1781199466868-88551f",
+      "content": "Why does \"I’ll just dab a bit more paint\" always turn into \"Oops, now it’s a whole new painting\"? No one tells you art supplies come with slippery slopes. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "Why does \"I’ll just dab a bit more paint\" always turn into \"Oops, now it’s a new painting\"? Art supplies don’t warn you about this slippery slope. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Why does \"I’ll just dab a bit more paint\" always turn into \"Oops, now it’s a whole new painting\"? No one tells you art supplies come with slippery slopes. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ArtMoments",
+        "#CreativeSpirals"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-13T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "collection_promotion",
+      "_emotional_theme": "imperfect_is_okay"
     }
   ]
 }

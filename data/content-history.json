@@ -10,7 +10,7 @@
       "creator_humor": "2026-06-11T17:37:46.868Z",
       "behind_the_scenes": "2026-06-07T10:31:36.064Z",
       "inspiration_spark": "2026-05-29T22:39:00.846Z",
-      "origin_story": "2026-05-29T22:38:58.683Z",
+      "origin_story": "2026-06-11T22:51:21.576Z",
       "transformation_arc": "2026-05-29T22:39:03.055Z",
       "promotion_spotlight": "2026-06-09T22:25:45.374Z"
     }
@@ -20,7 +20,7 @@
       "you can find more of this over at the site if you're curious": "2026-06-09T22:25:45.374Z",
       "this lives quietly on abstractemporium.art": "2026-06-09T22:25:47.292Z",
       "there's a whole collection of this kind of work on the site": "2026-06-11T17:37:46.868Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-06-07T10:31:49.344Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-06-11T22:51:21.576Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-06-09T22:25:43.244Z"
     }
   },
@@ -323,6 +323,10 @@
     [
       "#ArtMoments",
       "#CreativeSpirals"
+    ],
+    [
+      "#CreativeEscape",
+      "#ArtToHeal"
     ]
   ],
   "posts": [
@@ -2097,6 +2101,32 @@
         "oops painting",
         "painting supplies",
         "supplies warn"
+      ]
+    },
+    {
+      "id": "gen-1781218281576-947d3d",
+      "timestamp": "2026-06-11T22:51:21.576Z",
+      "category": "origin_story",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "art_as_refuge",
+      "bluesky_content": "It didn’t start with grand ideas or a business plan. Just a tired mind, a blank page, and a pack of cheap markers trying to make shapes that didn’t hurt. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "It didn’t start with grand ideas or a business plan. Just a tired mind, a blank page, and a pack of cheap markers trying to make shapes that didn’t hurt. The full piece (and others like it) lives on abstractemporium.art 🖌️",
+      "hashtags": [
+        "#CreativeEscape",
+        "#ArtToHeal"
+      ],
+      "content_hash": "96005560b08b6a4654aea12e38c339f0008629e27643e2601a6372874824b908",
+      "key_phrases": [
+        "didn start",
+        "start with",
+        "with grand",
+        "grand ideas",
+        "ideas business",
+        "business plan",
+        "plan just",
+        "just tired",
+        "tired mind",
+        "mind blank"
       ]
     }
   ]

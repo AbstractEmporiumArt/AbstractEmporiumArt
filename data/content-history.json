@@ -9,19 +9,19 @@
       "creative_mindfulness": "2026-06-07T10:31:38.813Z",
       "creator_humor": "2026-06-11T17:37:46.868Z",
       "behind_the_scenes": "2026-06-07T10:31:36.064Z",
-      "inspiration_spark": "2026-05-29T22:39:00.846Z",
+      "inspiration_spark": "2026-06-12T16:45:52.536Z",
       "origin_story": "2026-06-11T22:51:21.576Z",
       "transformation_arc": "2026-05-29T22:39:03.055Z",
-      "promotion_spotlight": "2026-06-09T22:25:45.374Z"
+      "promotion_spotlight": "2026-06-12T16:46:00.028Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-06-09T22:25:45.374Z",
-      "this lives quietly on abstractemporium.art": "2026-06-09T22:25:47.292Z",
+      "you can find more of this over at the site if you're curious": "2026-06-12T16:45:57.300Z",
+      "this lives quietly on abstractemporium.art": "2026-06-12T16:46:00.028Z",
       "there's a whole collection of this kind of work on the site": "2026-06-11T17:37:46.868Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-06-11T22:51:21.576Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-06-09T22:25:43.244Z"
+      "if this is your kind of thing, abstractemporium.art has more": "2026-06-12T16:45:52.536Z"
     }
   },
   "hashtag_sets_used": [
@@ -327,6 +327,18 @@
     [
       "#CreativeEscape",
       "#ArtToHeal"
+    ],
+    [
+      "#CreativeCourage",
+      "#ArtInMotion"
+    ],
+    [
+      "#ArtForLife",
+      "#AbstractDiscoveries"
+    ],
+    [
+      "#ArtQuietly",
+      "#AbstractStories"
     ]
   ],
   "posts": [
@@ -2127,6 +2139,84 @@
         "just tired",
         "tired mind",
         "mind blank"
+      ]
+    },
+    {
+      "id": "gen-1781282752535-b7030a",
+      "timestamp": "2026-06-12T16:45:52.536Z",
+      "category": "inspiration_spark",
+      "cta_type": "organic",
+      "emotional_theme": "permission_to_begin",
+      "bluesky_content": "A blank page isn’t empty—it’s full of possibility. Fear of ruining it? That’s proof you care. Start anyway. Let the first mark be messy. Messy means alive. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "A blank page isn’t empty—it’s packed with possibility. Fear of ruining it? That just means you care. Start anyway. Let your first mark be messy. Messy means alive. If this speaks to you, abstractemporium.art has more.",
+      "hashtags": [
+        "#CreativeCourage",
+        "#ArtInMotion"
+      ],
+      "content_hash": "8dbe0b42c9e59b0f83131d02b75022b79c2d1b72265ccd2c0a3de1871e54d0e7",
+      "key_phrases": [
+        "blank page",
+        "page empty",
+        "empty full",
+        "full possibility",
+        "possibility fear",
+        "fear ruining",
+        "ruining that",
+        "that proof",
+        "proof care",
+        "care start"
+      ]
+    },
+    {
+      "id": "gen-1781282757300-0388cb",
+      "timestamp": "2026-06-12T16:45:57.300Z",
+      "category": "promotion_spotlight",
+      "cta_type": "platform_sale",
+      "emotional_theme": "art_meets_you_where_you_are",
+      "bluesky_content": "Art has this way of meeting you wherever you are. Some days it’s a burst of energy, other days it’s a soft place to land. If you’re in need of either, there’s more to explore over on Fine Art America.",
+      "mastodon_content": "Art has this way of meeting you wherever you are. Some days it’s a burst of energy, other days it’s a soft place to land. If you’re in need of either, there’s more to discover over on Fine Art America while their sale is on.",
+      "hashtags": [
+        "#ArtForLife",
+        "#AbstractDiscoveries"
+      ],
+      "content_hash": "b70f73b2c9f6b88448b61c771d39c9a988a93ab99cbbb5cc9553259b4c2a7811",
+      "key_phrases": [
+        "this meeting",
+        "meeting wherever",
+        "wherever some",
+        "some days",
+        "days burst",
+        "burst energy",
+        "energy other",
+        "other days",
+        "days soft",
+        "soft place"
+      ]
+    },
+    {
+      "id": "gen-1781282760028-45fbd2",
+      "timestamp": "2026-06-12T16:46:00.028Z",
+      "category": "promotion_spotlight",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "quiet_art",
+      "bluesky_content": "I think of abstract art as stories told in color. They don’t shout; they hum, they whisper. If you’ve been wanting one to tell its story on your walls, my prints live quietly on abstractemporium.art.",
+      "mastodon_content": "Abstract art feels like stories told in color. Not loud ones—soft ones. Hums, whispers, layers waiting to be heard. If you’d like one to live on your walls, my prints are quietly waiting for you at abstractemporium.art.",
+      "hashtags": [
+        "#ArtQuietly",
+        "#AbstractStories"
+      ],
+      "content_hash": "2ffac92603694846c130188c2b6def2a83a6d8a7855abf2c9bed395cfff2e7d2",
+      "key_phrases": [
+        "think abstract",
+        "abstract stories",
+        "stories told",
+        "told color",
+        "color they",
+        "they shout",
+        "shout they",
+        "they they",
+        "they whisper",
+        "whisper been"
       ]
     }
   ]

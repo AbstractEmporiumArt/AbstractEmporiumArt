@@ -3245,12 +3245,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-12T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-12T16:46:01.014Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mo46v5gblg23",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mo46v5gblg23",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116738146985813645",
       "_generated": true,
       "_category": "knitting_craft_story",
       "_cta_type": "this lives quietly on abstractemporium.art",
@@ -3309,6 +3312,87 @@
       "_category": "origin_story",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
       "_emotional_theme": "art_as_refuge"
+    },
+    {
+      "id": "gen-1781282752535-b7030a",
+      "content": "A blank page isn’t empty—it’s packed with possibility. Fear of ruining it? That just means you care. Start anyway. Let your first mark be messy. Messy means alive. If this speaks to you, abstractemporium.art has more.",
+      "bluesky_content": "A blank page isn’t empty—it’s full of possibility. Fear of ruining it? That’s proof you care. Start anyway. Let the first mark be messy. Messy means alive. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "A blank page isn’t empty—it’s packed with possibility. Fear of ruining it? That just means you care. Start anyway. Let your first mark be messy. Messy means alive. If this speaks to you, abstractemporium.art has more.",
+      "hashtags": [
+        "#CreativeCourage",
+        "#ArtInMotion"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-14T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "inspiration_spark",
+      "_cta_type": "organic",
+      "_emotional_theme": "permission_to_begin"
+    },
+    {
+      "id": "gen-1781282757300-0388cb",
+      "content": "Art has this way of meeting you wherever you are. Some days it’s a burst of energy, other days it’s a soft place to land. If you’re in need of either, there’s more to discover over on Fine Art America while their sale is on.",
+      "bluesky_content": "Art has this way of meeting you wherever you are. Some days it’s a burst of energy, other days it’s a soft place to land. If you’re in need of either, there’s more to explore over on Fine Art America.",
+      "mastodon_content": "Art has this way of meeting you wherever you are. Some days it’s a burst of energy, other days it’s a soft place to land. If you’re in need of either, there’s more to discover over on Fine Art America while their sale is on.",
+      "hashtags": [
+        "#ArtForLife",
+        "#AbstractDiscoveries"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-14T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "platform_sale",
+      "_emotional_theme": "art_meets_you_where_you_are"
+    },
+    {
+      "id": "gen-1781282760028-45fbd2",
+      "content": "Abstract art feels like stories told in color. Not loud ones—soft ones. Hums, whispers, layers waiting to be heard. If you’d like one to live on your walls, my prints are quietly waiting for you at abstractemporium.art.",
+      "bluesky_content": "I think of abstract art as stories told in color. They don’t shout; they hum, they whisper. If you’ve been wanting one to tell its story on your walls, my prints live quietly on abstractemporium.art.",
+      "mastodon_content": "Abstract art feels like stories told in color. Not loud ones—soft ones. Hums, whispers, layers waiting to be heard. If you’d like one to live on your walls, my prints are quietly waiting for you at abstractemporium.art.",
+      "hashtags": [
+        "#ArtQuietly",
+        "#AbstractStories"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-15T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "quiet_art"
     }
   ]
 }

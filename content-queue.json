@@ -3305,12 +3305,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-13T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-13T22:07:05.189Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mo7bc4fjqg2y",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mo7bc4fjqg2y",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116745071632278114",
       "_generated": true,
       "_category": "origin_story",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",

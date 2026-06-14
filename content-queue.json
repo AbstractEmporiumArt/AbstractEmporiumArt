@@ -3335,12 +3335,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-14T04:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-14T10:50:52.602Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3moalxx2p7y2w",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3moalxx2p7y2w",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116748075142976105",
       "_generated": true,
       "_category": "inspiration_spark",
       "_cta_type": "organic",
@@ -3399,6 +3402,60 @@
       "_category": "promotion_spotlight",
       "_cta_type": "this lives quietly on abstractemporium.art",
       "_emotional_theme": "quiet_art"
+    },
+    {
+      "id": "gen-1781434232840-3bf4be",
+      "content": "I used to think transformation was about becoming something new. Now I wonder if it’s about uncovering what was always there, patiently waiting for its moment to emerge. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "I used to think transformation was about becoming something new. Now I wonder if it’s about uncovering what was always there, patiently waiting. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "I used to think transformation was about becoming something new. Now I wonder if it’s about uncovering what was always there, patiently waiting for its moment to emerge. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#InnerGrowth",
+        "#CreativeJourney"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-15T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "transformation_arc",
+      "_cta_type": "site_collection",
+      "_emotional_theme": "self_discovery"
+    },
+    {
+      "id": "gen-1781434243055-110bf4",
+      "content": "Do you ever trace a line on a coloring page and realize it mirrors a feeling more than a shape? There’s something grounding about that—like you’re putting emotions into form. The full piece (and others like it) lives on abstractemporium.art",
+      "bluesky_content": "Do you ever trace a line on a coloring page and realize it mirrors a feeling more than a shape? It’s grounding in a quiet, unspoken way. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Do you ever trace a line on a coloring page and realize it mirrors a feeling more than a shape? There’s something grounding about that—like you’re putting emotions into form. The full piece (and others like it) lives on abstractemporium.art",
+      "hashtags": [
+        "#MindfulLines",
+        "#CreativeFlow"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-16T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "coloring_book",
+      "_emotional_theme": "grounding_through_lines"
     }
   ]
 }

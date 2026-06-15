@@ -6,22 +6,22 @@
       "abstract_art_spotlight": "2026-06-07T10:31:49.344Z",
       "knitting_craft_story": "2026-06-09T22:25:47.292Z",
       "emotional_reflection": "2026-06-14T10:50:43.056Z",
-      "creative_mindfulness": "2026-06-07T10:31:38.813Z",
+      "creative_mindfulness": "2026-06-15T14:26:47.180Z",
       "creator_humor": "2026-06-11T17:37:46.868Z",
-      "behind_the_scenes": "2026-06-07T10:31:36.064Z",
+      "behind_the_scenes": "2026-06-15T14:26:40.489Z",
       "inspiration_spark": "2026-06-12T16:45:52.536Z",
       "origin_story": "2026-06-11T22:51:21.576Z",
       "transformation_arc": "2026-06-14T10:50:32.841Z",
-      "promotion_spotlight": "2026-06-12T16:46:00.028Z"
+      "promotion_spotlight": "2026-06-15T14:26:51.675Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-06-12T16:45:57.300Z",
-      "this lives quietly on abstractemporium.art": "2026-06-12T16:46:00.028Z",
+      "you can find more of this over at the site if you're curious": "2026-06-15T14:26:47.180Z",
+      "this lives quietly on abstractemporium.art": "2026-06-15T14:26:51.675Z",
       "there's a whole collection of this kind of work on the site": "2026-06-14T10:50:32.841Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-06-14T10:50:43.056Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-06-12T16:45:52.536Z"
+      "if this is your kind of thing, abstractemporium.art has more": "2026-06-15T14:26:40.489Z"
     }
   },
   "hashtag_sets_used": [
@@ -347,6 +347,18 @@
     [
       "#MindfulLines",
       "#CreativeFlow"
+    ],
+    [
+      "#StudioDays",
+      "#MakerLife"
+    ],
+    [
+      "#CreativeFlowing",
+      "#MindfulArt"
+    ],
+    [
+      "#ColorWeather",
+      "#AbstractExpressions"
     ]
   ],
   "posts": [
@@ -2277,6 +2289,84 @@
         "feeling more",
         "more than",
         "than shape"
+      ]
+    },
+    {
+      "id": "gen-1781533600489-c5c786",
+      "timestamp": "2026-06-15T14:26:40.489Z",
+      "category": "behind_the_scenes",
+      "cta_type": "soft_prompt",
+      "emotional_theme": "creative_chaos",
+      "bluesky_content": "Behind my desk today: six cups of tea (cold), two half-drawn sketches, and a very opinionated cat who thinks pencils are toys. Creative chaos at its finest. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Current studio scene: six abandoned cups of tea, two half-finished sketches, and one cat convinced pencils are toys. This is what creative chaos looks like! If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#StudioDays",
+        "#MakerLife"
+      ],
+      "content_hash": "133830d83e284867131e0bd94e0753bee49b73d8292a068a4c18274fa7c7f6aa",
+      "key_phrases": [
+        "behind desk",
+        "desk today",
+        "today cups",
+        "cups cold",
+        "cold half",
+        "half drawn",
+        "drawn sketches",
+        "sketches very",
+        "very opinionated",
+        "opinionated thinks"
+      ]
+    },
+    {
+      "id": "gen-1781533607179-4f3fe2",
+      "timestamp": "2026-06-15T14:26:47.180Z",
+      "category": "creative_mindfulness",
+      "cta_type": "gentle_site_reference",
+      "emotional_theme": "thoughts_in_motion",
+      "bluesky_content": "Ever notice how your hand moves when it’s not thinking? A swirl, a scribble, a line. It’s like your thoughts stretching out onto the page. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "Ever notice how your hand moves when it’s not thinking? A swirl, a scribble, a line. It’s like your thoughts stretching out onto the page. You can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#CreativeFlowing",
+        "#MindfulArt"
+      ],
+      "content_hash": "73df1d466992d32c48b0cbc27f2c1e4e05c889a92f233316f544e76dfa2d89d7",
+      "key_phrases": [
+        "ever notice",
+        "notice your",
+        "your hand",
+        "hand moves",
+        "moves when",
+        "when thinking",
+        "thinking swirl",
+        "swirl scribble",
+        "scribble line",
+        "line like"
+      ]
+    },
+    {
+      "id": "gen-1781533611675-c3c79b",
+      "timestamp": "2026-06-15T14:26:51.675Z",
+      "category": "promotion_spotlight",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "art_as_weather",
+      "bluesky_content": "I’ve always found abstract art a bit like weather—some pieces feel like a storm, others like a quiet sunrise. If you’re in the mood to bring some color-weather home, this lives quietly on abstractemporium.art.",
+      "mastodon_content": "Abstract art feels a bit like weather—some pieces are storms, full of chaos and energy; others, like a quiet sunrise. If you’re in the mood to bring some color-weather home, this lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ColorWeather",
+        "#AbstractExpressions"
+      ],
+      "content_hash": "525aed34d2d790794f9e879e427ffa719f9e19dbcdeed24cf26b0bff466383ab",
+      "key_phrases": [
+        "always found",
+        "found abstract",
+        "abstract like",
+        "like weather",
+        "weather some",
+        "some pieces",
+        "pieces feel",
+        "feel like",
+        "like storm",
+        "storm others"
       ]
     }
   ]

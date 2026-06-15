@@ -3395,12 +3395,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-15T04:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-15T14:26:52.851Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3modij4eufi2i",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3modij4eufi2i",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116754586805560006",
       "_generated": true,
       "_category": "promotion_spotlight",
       "_cta_type": "this lives quietly on abstractemporium.art",
@@ -3459,6 +3462,87 @@
       "_category": "emotional_reflection",
       "_cta_type": "coloring_book",
       "_emotional_theme": "grounding_through_lines"
+    },
+    {
+      "id": "gen-1781533600489-c5c786",
+      "content": "Current studio scene: six abandoned cups of tea, two half-finished sketches, and one cat convinced pencils are toys. This is what creative chaos looks like! If this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "Behind my desk today: six cups of tea (cold), two half-drawn sketches, and a very opinionated cat who thinks pencils are toys. Creative chaos at its finest. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Current studio scene: six abandoned cups of tea, two half-finished sketches, and one cat convinced pencils are toys. This is what creative chaos looks like! If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#StudioDays",
+        "#MakerLife"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-16T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "soft_prompt",
+      "_emotional_theme": "creative_chaos"
+    },
+    {
+      "id": "gen-1781533607179-4f3fe2",
+      "content": "Ever notice how your hand moves when it’s not thinking? A swirl, a scribble, a line. It’s like your thoughts stretching out onto the page. You can find more of this over at the site if you're curious.",
+      "bluesky_content": "Ever notice how your hand moves when it’s not thinking? A swirl, a scribble, a line. It’s like your thoughts stretching out onto the page. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "Ever notice how your hand moves when it’s not thinking? A swirl, a scribble, a line. It’s like your thoughts stretching out onto the page. You can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#CreativeFlowing",
+        "#MindfulArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-17T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creative_mindfulness",
+      "_cta_type": "gentle_site_reference",
+      "_emotional_theme": "thoughts_in_motion"
+    },
+    {
+      "id": "gen-1781533611675-c3c79b",
+      "content": "Abstract art feels a bit like weather—some pieces are storms, full of chaos and energy; others, like a quiet sunrise. If you’re in the mood to bring some color-weather home, this lives quietly on abstractemporium.art.",
+      "bluesky_content": "I’ve always found abstract art a bit like weather—some pieces feel like a storm, others like a quiet sunrise. If you’re in the mood to bring some color-weather home, this lives quietly on abstractemporium.art.",
+      "mastodon_content": "Abstract art feels a bit like weather—some pieces are storms, full of chaos and energy; others, like a quiet sunrise. If you’re in the mood to bring some color-weather home, this lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ColorWeather",
+        "#AbstractExpressions"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-17T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "art_as_weather"
     }
   ]
 }

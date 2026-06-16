@@ -3,8 +3,8 @@
   "description": "Permanent non-repetition memory for the Abstract Emporium content engine. Every generated and posted entry is stored here. Never delete entries — only append.",
   "category_rotation": {
     "last_used": {
-      "abstract_art_spotlight": "2026-06-07T10:31:49.344Z",
-      "knitting_craft_story": "2026-06-09T22:25:47.292Z",
+      "abstract_art_spotlight": "2026-06-16T18:28:02.933Z",
+      "knitting_craft_story": "2026-06-16T18:28:04.646Z",
       "emotional_reflection": "2026-06-14T10:50:43.056Z",
       "creative_mindfulness": "2026-06-15T14:26:47.180Z",
       "creator_humor": "2026-06-11T17:37:46.868Z",
@@ -12,16 +12,16 @@
       "inspiration_spark": "2026-06-12T16:45:52.536Z",
       "origin_story": "2026-06-11T22:51:21.576Z",
       "transformation_arc": "2026-06-14T10:50:32.841Z",
-      "promotion_spotlight": "2026-06-15T14:26:51.675Z"
+      "promotion_spotlight": "2026-06-16T18:28:01.123Z"
     }
   },
   "cta_rotation": {
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-06-15T14:26:47.180Z",
       "this lives quietly on abstractemporium.art": "2026-06-15T14:26:51.675Z",
-      "there's a whole collection of this kind of work on the site": "2026-06-14T10:50:32.841Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-06-14T10:50:43.056Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-06-15T14:26:40.489Z"
+      "there's a whole collection of this kind of work on the site": "2026-06-16T18:28:01.123Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-06-16T18:28:02.933Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-06-16T18:28:04.646Z"
     }
   },
   "hashtag_sets_used": [
@@ -359,6 +359,18 @@
     [
       "#ColorWeather",
       "#AbstractExpressions"
+    ],
+    [
+      "#DreamlikeArt",
+      "#QuietInspiration"
+    ],
+    [
+      "#AbstractBalance",
+      "#ColorPlay"
+    ],
+    [
+      "#CraftMeditation",
+      "#YarnMoments"
     ]
   ],
   "posts": [
@@ -2367,6 +2379,84 @@
         "feel like",
         "like storm",
         "storm others"
+      ]
+    },
+    {
+      "id": "gen-1781634481123-323904",
+      "timestamp": "2026-06-16T18:28:01.123Z",
+      "category": "promotion_spotlight",
+      "cta_type": "art_gallery",
+      "emotional_theme": "dreamlike_reflection",
+      "bluesky_content": "Sometimes abstract art feels like catching fragments of a dream—vivid and fleeting, yet grounding. If you're curious, there's a whole collection of this kind of work on the site.",
+      "mastodon_content": "Sometimes abstract art feels like catching fragments of a dream—vivid and fleeting, yet grounding. If you're curious, there's a whole collection of this kind of work on the site. 🌙",
+      "hashtags": [
+        "#DreamlikeArt",
+        "#QuietInspiration"
+      ],
+      "content_hash": "b60f14c28b705dbc3a5aee29032324e09796b7b274f001a54340b1443d795581",
+      "key_phrases": [
+        "sometimes abstract",
+        "abstract feels",
+        "feels like",
+        "like catching",
+        "catching fragments",
+        "fragments dream",
+        "dream vivid",
+        "vivid fleeting",
+        "fleeting grounding",
+        "grounding curious"
+      ]
+    },
+    {
+      "id": "gen-1781634482933-ce6872",
+      "timestamp": "2026-06-16T18:28:02.933Z",
+      "category": "abstract_art_spotlight",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "creative_intuition",
+      "bluesky_content": "This piece started as a quiet rebellion against symmetry. I didn’t plan anything—just let the colors push and pull each other until balance found me. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "This piece began as a quiet rebellion against symmetry. No plan, just letting the colors push and pull each other until balance found me again. The full piece (and others like it) lives on abstractemporium.art 🖼️.",
+      "hashtags": [
+        "#AbstractBalance",
+        "#ColorPlay"
+      ],
+      "content_hash": "c373a578874650d20fbb4fc12b7f71dd8e2427736d6f0d439d7633115cadb7c8",
+      "key_phrases": [
+        "this piece",
+        "piece started",
+        "started quiet",
+        "quiet rebellion",
+        "rebellion against",
+        "against symmetry",
+        "symmetry didn",
+        "didn plan",
+        "plan anything",
+        "anything just"
+      ]
+    },
+    {
+      "id": "gen-1781634484646-57015f",
+      "timestamp": "2026-06-16T18:28:04.646Z",
+      "category": "knitting_craft_story",
+      "cta_type": "soft_invitation",
+      "emotional_theme": "slow_making",
+      "bluesky_content": "There’s something meditative about untangling a knot in yarn. It’s not quick or glamorous, but there's a quiet satisfaction when you finally get it. Who knew patience could feel this soft? More at abstractemporium.art.",
+      "mastodon_content": "Untangling yarn knots is like therapy sometimes. Slow, steady, and surprisingly satisfying once it's sorted. Who knew patience could feel this soft? If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#CraftMeditation",
+        "#YarnMoments"
+      ],
+      "content_hash": "258d8dd28868a11e32f83d7f7df709bbc9fa65b47a061b0b0647b599e4137210",
+      "key_phrases": [
+        "there something",
+        "something meditative",
+        "meditative about",
+        "about untangling",
+        "untangling knot",
+        "knot yarn",
+        "yarn quick",
+        "quick glamorous",
+        "glamorous there",
+        "there quiet"
       ]
     }
   ]

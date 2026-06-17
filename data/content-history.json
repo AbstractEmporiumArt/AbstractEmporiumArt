@@ -7,19 +7,19 @@
       "knitting_craft_story": "2026-06-16T18:28:04.646Z",
       "emotional_reflection": "2026-06-14T10:50:43.056Z",
       "creative_mindfulness": "2026-06-15T14:26:47.180Z",
-      "creator_humor": "2026-06-11T17:37:46.868Z",
+      "creator_humor": "2026-06-17T22:46:48.772Z",
       "behind_the_scenes": "2026-06-15T14:26:40.489Z",
       "inspiration_spark": "2026-06-12T16:45:52.536Z",
-      "origin_story": "2026-06-11T22:51:21.576Z",
+      "origin_story": "2026-06-17T22:46:55.642Z",
       "transformation_arc": "2026-06-14T10:50:32.841Z",
-      "promotion_spotlight": "2026-06-16T18:28:01.123Z"
+      "promotion_spotlight": "2026-06-17T22:46:57.517Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-06-15T14:26:47.180Z",
-      "this lives quietly on abstractemporium.art": "2026-06-15T14:26:51.675Z",
-      "there's a whole collection of this kind of work on the site": "2026-06-16T18:28:01.123Z",
+      "you can find more of this over at the site if you're curious": "2026-06-17T22:46:48.772Z",
+      "this lives quietly on abstractemporium.art": "2026-06-17T22:46:55.642Z",
+      "there's a whole collection of this kind of work on the site": "2026-06-17T22:46:57.517Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-06-16T18:28:02.933Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-06-16T18:28:04.646Z"
     }
@@ -371,6 +371,18 @@
     [
       "#CraftMeditation",
       "#YarnMoments"
+    ],
+    [
+      "#TinyArtMoments",
+      "#CreativeConfessions"
+    ],
+    [
+      "#CreativeRoots",
+      "#ArtAsHealing"
+    ],
+    [
+      "#AbstractArtJourney",
+      "#ArtfulDreams"
     ]
   ],
   "posts": [
@@ -2457,6 +2469,84 @@
         "quick glamorous",
         "glamorous there",
         "there quiet"
+      ]
+    },
+    {
+      "id": "gen-1781736408771-975174",
+      "timestamp": "2026-06-17T22:46:48.772Z",
+      "category": "creator_humor",
+      "cta_type": "you can find more of this over at the site if you're curious",
+      "emotional_theme": "embracing_art_obsession",
+      "bluesky_content": "There’s a fine line between 'this piece needs subtle details' and 'I’m now hunched over drawing microscopic dots like I’m mapping a galaxy.' You can find more of this over at the site if you're curious.",
+      "mastodon_content": "There’s a fine line between 'this piece needs subtle details' and 'I’m now hunched over drawing microscopic dots like I’m mapping a galaxy.' You can find more of this over at the site if you're curious. ✨",
+      "hashtags": [
+        "#TinyArtMoments",
+        "#CreativeConfessions"
+      ],
+      "content_hash": "03eeee363de19cd2476e68e7c8f7e92abf52636ee66d1c8465f965d7ca9e0a33",
+      "key_phrases": [
+        "there fine",
+        "fine line",
+        "line between",
+        "between this",
+        "this piece",
+        "piece needs",
+        "needs subtle",
+        "subtle details",
+        "details hunched",
+        "hunched over"
+      ]
+    },
+    {
+      "id": "gen-1781736415642-04152f",
+      "timestamp": "2026-06-17T22:46:55.642Z",
+      "category": "origin_story",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "humble_beginnings",
+      "bluesky_content": "Before Abstract Emporium had a name, it was just me coloring at my kitchen table. No grand plans, just quiet hours trying to sort out the noise in my head. That messy start lives quietly on abstractemporium.art.",
+      "mastodon_content": "Before Abstract Emporium had a name, it was just me coloring at my kitchen table. No grand plans, just quiet hours trying to sort out the noise in my head—a messy beginning that found its own kind of beauty. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeRoots",
+        "#ArtAsHealing"
+      ],
+      "content_hash": "dfd73f4ae086febcb71f70c9c58e702b4501eee967a7299e6ccc5032fa968a88",
+      "key_phrases": [
+        "before abstract",
+        "abstract emporium",
+        "emporium name",
+        "name just",
+        "just coloring",
+        "coloring kitchen",
+        "kitchen table",
+        "table grand",
+        "grand plans",
+        "plans just"
+      ]
+    },
+    {
+      "id": "gen-1781736417517-ee0d98",
+      "timestamp": "2026-06-17T22:46:57.517Z",
+      "category": "promotion_spotlight",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "fleeting_beauty",
+      "bluesky_content": "I noticed something funny about my abstract pieces: the more I stare at them, the more they remind me of daydreams. The kind you try to hold onto but slip through your fingers. There's a whole collection on the site.",
+      "mastodon_content": "Ever notice how abstract art feels like those fleeting daydreams? The kind you try to hold onto, but they quietly slip away? I caught that mood in a few pieces—there’s a whole collection on the site if you’re curious. 🌙",
+      "hashtags": [
+        "#AbstractArtJourney",
+        "#ArtfulDreams"
+      ],
+      "content_hash": "afc38d5cf23ddd63a7bb083d0c8367cb5fb2332ac24db32e2a436d884d5f7ad3",
+      "key_phrases": [
+        "noticed something",
+        "something funny",
+        "funny about",
+        "about abstract",
+        "abstract pieces",
+        "pieces more",
+        "more stare",
+        "stare them",
+        "them more",
+        "more they"
       ]
     }
   ]

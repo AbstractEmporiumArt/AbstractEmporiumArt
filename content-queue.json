@@ -3639,6 +3639,87 @@
       "_category": "knitting_craft_story",
       "_cta_type": "soft_invitation",
       "_emotional_theme": "slow_making"
+    },
+    {
+      "id": "gen-1781736408771-975174",
+      "content": "There’s a fine line between 'this piece needs subtle details' and 'I’m now hunched over drawing microscopic dots like I’m mapping a galaxy.' You can find more of this over at the site if you're curious. ✨",
+      "bluesky_content": "There’s a fine line between 'this piece needs subtle details' and 'I’m now hunched over drawing microscopic dots like I’m mapping a galaxy.' You can find more of this over at the site if you're curious.",
+      "mastodon_content": "There’s a fine line between 'this piece needs subtle details' and 'I’m now hunched over drawing microscopic dots like I’m mapping a galaxy.' You can find more of this over at the site if you're curious. ✨",
+      "hashtags": [
+        "#TinyArtMoments",
+        "#CreativeConfessions"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-19T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "embracing_art_obsession"
+    },
+    {
+      "id": "gen-1781736415642-04152f",
+      "content": "Before Abstract Emporium had a name, it was just me coloring at my kitchen table. No grand plans, just quiet hours trying to sort out the noise in my head—a messy beginning that found its own kind of beauty. This lives quietly on abstractemporium.art.",
+      "bluesky_content": "Before Abstract Emporium had a name, it was just me coloring at my kitchen table. No grand plans, just quiet hours trying to sort out the noise in my head. That messy start lives quietly on abstractemporium.art.",
+      "mastodon_content": "Before Abstract Emporium had a name, it was just me coloring at my kitchen table. No grand plans, just quiet hours trying to sort out the noise in my head—a messy beginning that found its own kind of beauty. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeRoots",
+        "#ArtAsHealing"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-20T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "origin_story",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "humble_beginnings"
+    },
+    {
+      "id": "gen-1781736417517-ee0d98",
+      "content": "Ever notice how abstract art feels like those fleeting daydreams? The kind you try to hold onto, but they quietly slip away? I caught that mood in a few pieces—there’s a whole collection on the site if you’re curious. 🌙",
+      "bluesky_content": "I noticed something funny about my abstract pieces: the more I stare at them, the more they remind me of daydreams. The kind you try to hold onto but slip through your fingers. There's a whole collection on the site.",
+      "mastodon_content": "Ever notice how abstract art feels like those fleeting daydreams? The kind you try to hold onto, but they quietly slip away? I caught that mood in a few pieces—there’s a whole collection on the site if you’re curious. 🌙",
+      "hashtags": [
+        "#AbstractArtJourney",
+        "#ArtfulDreams"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-20T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "fleeting_beauty"
     }
   ]
 }

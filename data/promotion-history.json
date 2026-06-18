@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-18T20:36:01.326Z",
+      "newPromotions": [
+        {
+          "platform": "fineartamerica",
+          "platformName": "Fine Art America",
+          "type": "potential_sale",
+          "discount": null,
+          "description": "Possible promotion detected",
+          "confidence": "medium",
+          "detectedAt": "2026-06-18T20:36:01.326Z",
+          "priority": "high"
+        }
+      ],
+      "endedPromotions": []
+    },
+    {
       "timestamp": "2026-06-18T15:47:34.044Z",
       "newPromotions": [],
       "endedPromotions": [

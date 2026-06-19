@@ -3665,12 +3665,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-19T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-19T16:33:01.426Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3monrge5y7q2g",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3monrge5y7q2g",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116777732049773675",
       "_generated": true,
       "_category": "creator_humor",
       "_cta_type": "you can find more of this over at the site if you're curious",
@@ -3729,6 +3732,87 @@
       "_category": "promotion_spotlight",
       "_cta_type": "there's a whole collection of this kind of work on the site",
       "_emotional_theme": "fleeting_beauty"
+    },
+    {
+      "id": "gen-1781886768858-b3c0a8",
+      "content": "There’s a piece in my gallery that reminds me of sunlight through a tree canopy—soft, dappled, endlessly shifting. If that sounds like your thing, the full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "There’s a piece in my gallery that reminds me of sunlight through a tree canopy—soft, dappled, endlessly shifting. If that sounds like your thing, the full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "There’s a piece in my gallery that reminds me of sunlight through a tree canopy—soft, dappled, endlessly shifting. If that sounds like your thing, the full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#SoftLight",
+        "#AbstractGallery"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-21T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "nature_inspired"
+    },
+    {
+      "id": "gen-1781886775851-842d7b",
+      "content": "Imagine this: every line you draw, every stitch you knit, is a tiny map of where your mind wandered. There’s no ‘right’ path—just movement, curiosity, and moments of pause. If this sounds like your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "Imagine this: the lines you draw and the stitches you knit are tiny maps of where your mind wandered. No right path—just movement. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Imagine this: every line you draw, every stitch you knit, is a tiny map of where your mind wandered. There’s no ‘right’ path—just movement, curiosity, and moments of pause. If this sounds like your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#WanderingMinds",
+        "#SlowArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-21T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "inspiration_spark",
+      "_cta_type": "if_this_is_your_kind_of_thing",
+      "_emotional_theme": "creative_self_exploration"
+    },
+    {
+      "id": "gen-1781886779669-abf6e2",
+      "content": "Transformation can feel like erosion—gradual, unhurried, shaped by time. What looked like stillness was life carving new paths all along. You can find more of this over at the site if you're curious.",
+      "bluesky_content": "Transformation can feel like erosion—gradual, unhurried, shaped by time. What looked like stillness was life carving new paths all along. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "Transformation can feel like erosion—gradual, unhurried, shaped by time. What looked like stillness was life carving new paths all along. You can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#LifeInLayers",
+        "#TransformationInTime"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-22T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "transformation_arc",
+      "_cta_type": "site_reference",
+      "_emotional_theme": "slow_shift"
     }
   ]
 }

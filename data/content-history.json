@@ -5,22 +5,22 @@
     "last_used": {
       "abstract_art_spotlight": "2026-06-16T18:28:02.933Z",
       "knitting_craft_story": "2026-06-16T18:28:04.646Z",
-      "emotional_reflection": "2026-06-14T10:50:43.056Z",
+      "emotional_reflection": "2026-06-21T11:18:35.823Z",
       "creative_mindfulness": "2026-06-15T14:26:47.180Z",
       "creator_humor": "2026-06-17T22:46:48.772Z",
-      "behind_the_scenes": "2026-06-15T14:26:40.489Z",
+      "behind_the_scenes": "2026-06-21T11:18:38.195Z",
       "inspiration_spark": "2026-06-19T16:32:55.851Z",
       "origin_story": "2026-06-17T22:46:55.642Z",
       "transformation_arc": "2026-06-19T16:32:59.669Z",
-      "promotion_spotlight": "2026-06-19T16:32:48.858Z"
+      "promotion_spotlight": "2026-06-21T11:18:40.168Z"
     }
   },
   "cta_rotation": {
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-06-19T16:32:59.669Z",
-      "this lives quietly on abstractemporium.art": "2026-06-17T22:46:55.642Z",
-      "there's a whole collection of this kind of work on the site": "2026-06-17T22:46:57.517Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-06-19T16:32:48.858Z",
+      "this lives quietly on abstractemporium.art": "2026-06-21T11:18:35.823Z",
+      "there's a whole collection of this kind of work on the site": "2026-06-21T11:18:38.195Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-06-21T11:18:40.168Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-06-19T16:32:55.851Z"
     }
   },
@@ -395,6 +395,18 @@
     [
       "#LifeInLayers",
       "#TransformationInTime"
+    ],
+    [
+      "#ArtAndPatience",
+      "#UntangledMind"
+    ],
+    [
+      "#ArtProcess",
+      "#CreativeJourney"
+    ],
+    [
+      "#VisualRhythm",
+      "#AbstractExpression"
     ]
   ],
   "posts": [
@@ -2637,6 +2649,84 @@
         "time what",
         "what looked",
         "looked like"
+      ]
+    },
+    {
+      "id": "gen-1782040715822-a9f5b6",
+      "timestamp": "2026-06-21T11:18:35.823Z",
+      "category": "emotional_reflection",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "untangling_thoughts",
+      "bluesky_content": "Ever notice how some days your thoughts feel like tangled yarn? Pull one thread, and the knot tightens. But untangling takes patience, not force. This idea lives quietly on abstractemporium.art.",
+      "mastodon_content": "Ever notice how some days your thoughts feel like tangled yarn? Pull one thread, and the knot tightens. Untangling takes patience, not force—gentle hands, a quiet mind. This idea lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ArtAndPatience",
+        "#UntangledMind"
+      ],
+      "content_hash": "9fa92b5311abbd26650b0d010cb9995205ef3978967def5a570d98b933c552ac",
+      "key_phrases": [
+        "ever notice",
+        "notice some",
+        "some days",
+        "days your",
+        "your thoughts",
+        "thoughts feel",
+        "feel like",
+        "like tangled",
+        "tangled yarn",
+        "yarn pull"
+      ]
+    },
+    {
+      "id": "gen-1782040718195-b91f4c",
+      "timestamp": "2026-06-21T11:18:38.195Z",
+      "category": "behind_the_scenes",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "reflective_nostalgia",
+      "bluesky_content": "I found an old sketchbook today, and it’s like unearthing a time capsule. Pages filled with ideas I forgot I had, some scrappy, some surprisingly tender. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "I found an old sketchbook today, and it’s like opening a time capsule. Pages of forgotten ideas—some scrappy, some surprisingly tender, like little fossils of who I was then. There's a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ArtProcess",
+        "#CreativeJourney"
+      ],
+      "content_hash": "3edaff0fa53bd8d7a7201b385cc405db35b1d4e9ef8f66f5fef99ea6d2360781",
+      "key_phrases": [
+        "found sketchbook",
+        "sketchbook today",
+        "today like",
+        "like unearthing",
+        "unearthing time",
+        "time capsule",
+        "capsule pages",
+        "pages filled",
+        "filled with",
+        "with ideas"
+      ]
+    },
+    {
+      "id": "gen-1782040720168-6954d5",
+      "timestamp": "2026-06-21T11:18:40.168Z",
+      "category": "promotion_spotlight",
+      "cta_type": "gallery",
+      "emotional_theme": "art_as_music",
+      "bluesky_content": "Abstract art feels like music for the eyes—colors and shapes that compose their own rhythm. One piece might hum softly; another might crescendo. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Abstract art feels a bit like music for the eyes—colors and shapes composing their own rhythm. Some pieces hum softly; others crescendo. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#VisualRhythm",
+        "#AbstractExpression"
+      ],
+      "content_hash": "e973e37a89c28a94e16e14eab7be5f3284a73ca67c0e8b948f1592eb410ae3d5",
+      "key_phrases": [
+        "abstract feels",
+        "feels like",
+        "like music",
+        "music eyes",
+        "eyes colors",
+        "colors shapes",
+        "shapes that",
+        "that compose",
+        "compose their",
+        "their rhythm"
       ]
     }
   ]

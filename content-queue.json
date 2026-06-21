@@ -3755,12 +3755,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-21T04:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-21T11:18:41.095Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mosas4hzvz2j",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mosas4hzvz2j",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116787820662396733",
       "_generated": true,
       "_category": "promotion_spotlight",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
@@ -3819,6 +3822,87 @@
       "_category": "transformation_arc",
       "_cta_type": "site_reference",
       "_emotional_theme": "slow_shift"
+    },
+    {
+      "id": "gen-1782040715822-a9f5b6",
+      "content": "Ever notice how some days your thoughts feel like tangled yarn? Pull one thread, and the knot tightens. Untangling takes patience, not force—gentle hands, a quiet mind. This idea lives quietly on abstractemporium.art.",
+      "bluesky_content": "Ever notice how some days your thoughts feel like tangled yarn? Pull one thread, and the knot tightens. But untangling takes patience, not force. This idea lives quietly on abstractemporium.art.",
+      "mastodon_content": "Ever notice how some days your thoughts feel like tangled yarn? Pull one thread, and the knot tightens. Untangling takes patience, not force—gentle hands, a quiet mind. This idea lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ArtAndPatience",
+        "#UntangledMind"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-22T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "untangling_thoughts"
+    },
+    {
+      "id": "gen-1782040718195-b91f4c",
+      "content": "I found an old sketchbook today, and it’s like opening a time capsule. Pages of forgotten ideas—some scrappy, some surprisingly tender, like little fossils of who I was then. There's a whole collection of this kind of work on the site.",
+      "bluesky_content": "I found an old sketchbook today, and it’s like unearthing a time capsule. Pages filled with ideas I forgot I had, some scrappy, some surprisingly tender. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "I found an old sketchbook today, and it’s like opening a time capsule. Pages of forgotten ideas—some scrappy, some surprisingly tender, like little fossils of who I was then. There's a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#ArtProcess",
+        "#CreativeJourney"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-23T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "reflective_nostalgia"
+    },
+    {
+      "id": "gen-1782040720168-6954d5",
+      "content": "Abstract art feels a bit like music for the eyes—colors and shapes composing their own rhythm. Some pieces hum softly; others crescendo. The full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "Abstract art feels like music for the eyes—colors and shapes that compose their own rhythm. One piece might hum softly; another might crescendo. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Abstract art feels a bit like music for the eyes—colors and shapes composing their own rhythm. Some pieces hum softly; others crescendo. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#VisualRhythm",
+        "#AbstractExpression"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-23T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "gallery",
+      "_emotional_theme": "art_as_music"
     }
   ]
 }

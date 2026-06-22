@@ -1,23 +1,24 @@
 {
-  "lastCheck": "2026-06-21T19:55:55.993Z",
+  "lastCheck": "2026-06-22T05:21:03.259Z",
   "active": [
     {
       "platform": "fineartamerica",
       "platformName": "Fine Art America",
-      "type": "potential_sale",
-      "discount": null,
-      "description": "Possible promotion detected",
-      "confidence": "medium",
-      "detectedAt": "2026-06-21T19:55:55.993Z",
+      "type": "sitewide_sale",
+      "discount": "20%",
+      "description": "20% off sitewide sale",
+      "confidence": "high",
+      "detectedAt": "2026-06-22T05:21:03.259Z",
       "priority": "high"
     }
   ],
   "platforms": {
     "fineartamerica": {
       "detected": true,
-      "type": "potential_sale",
-      "description": "Possible promotion detected",
-      "confidence": "medium"
+      "type": "sitewide_sale",
+      "discount": "20%",
+      "description": "20% off sitewide sale",
+      "confidence": "high"
     },
     "redbubble": {
       "detected": false
@@ -38,6 +39,18 @@
     {
       "platform": "fineartamerica",
       "platformName": "Fine Art America",
+      "type": "sitewide_sale",
+      "discount": "20%",
+      "description": "20% off sitewide sale",
+      "confidence": "high",
+      "detectedAt": "2026-06-22T05:21:03.259Z",
+      "priority": "high"
+    }
+  ],
+  "endedPromotions": [
+    {
+      "platform": "fineartamerica",
+      "platformName": "Fine Art America",
       "type": "potential_sale",
       "discount": null,
       "description": "Possible promotion detected",
@@ -45,6 +58,5 @@
       "detectedAt": "2026-06-21T19:55:55.993Z",
       "priority": "high"
     }
-  ],
-  "endedPromotions": []
+  ]
 }

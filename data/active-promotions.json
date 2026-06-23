@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-06-23T15:18:53.977Z",
+  "lastCheck": "2026-06-23T20:17:10.701Z",
   "active": [
     {
       "platform": "fineartamerica",
@@ -8,7 +8,7 @@
       "discount": null,
       "description": "Possible promotion detected",
       "confidence": "medium",
-      "detectedAt": "2026-06-23T15:18:53.977Z",
+      "detectedAt": "2026-06-23T20:17:10.701Z",
       "priority": "high"
     }
   ],
@@ -33,29 +33,7 @@
       "checkMethod": "manual"
     }
   },
-  "hasNewPromotions": true,
-  "newPromotions": [
-    {
-      "platform": "fineartamerica",
-      "platformName": "Fine Art America",
-      "type": "potential_sale",
-      "discount": null,
-      "description": "Possible promotion detected",
-      "confidence": "medium",
-      "detectedAt": "2026-06-23T15:18:53.977Z",
-      "priority": "high"
-    }
-  ],
-  "endedPromotions": [
-    {
-      "platform": "fineartamerica",
-      "platformName": "Fine Art America",
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high",
-      "detectedAt": "2026-06-23T09:58:55.178Z",
-      "priority": "high"
-    }
-  ]
+  "hasNewPromotions": false,
+  "newPromotions": [],
+  "endedPromotions": []
 }

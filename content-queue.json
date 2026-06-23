@@ -3999,6 +3999,87 @@
       "_category": "abstract_art_spotlight",
       "_cta_type": "visit_site",
       "_emotional_theme": "wonder_and_discovery"
+    },
+    {
+      "id": "gen-1782253060402-834f5a",
+      "content": "Every sweater I knit feels like a journal entry—each stitch holds the weather, my mood, or a radio show I half-listened to. It’s memory, but wearable. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "Every sweater I knit feels like a journal entry—each stitch holding the weather, my mood, or a radio show I half-listened to. It’s memory, but wearable. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Every sweater I knit feels like a journal entry—each stitch holds the weather, my mood, or a radio show I half-listened to. It’s memory, but wearable. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#KnittingStories",
+        "#MadeByHand"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-25T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "knitting_craft_story",
+      "_cta_type": "collection_promotion",
+      "_emotional_theme": "story_in_stitches"
+    },
+    {
+      "id": "gen-1782253064763-01face",
+      "content": "“Quick sketch to warm up,” I said. Three hours, two cups of tea, and a pile of eraser shavings later, I’m now knee-deep in turning a doodle into a masterpiece. The full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "“Quick sketch to warm up,” I said. Three hours, two cups of tea, and a pile of eraser shavings later, I’m now committed to conquering this masterpiece. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "“Quick sketch to warm up,” I said. Three hours, two cups of tea, and a pile of eraser shavings later, I’m now knee-deep in turning a doodle into a masterpiece. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeDetours",
+        "#ProcessArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-26T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "creative_spirals"
+    },
+    {
+      "id": "gen-1782253066568-a00648",
+      "content": "I was looking at one of my abstract pieces today, and I realized it feels like a deep breath—a pause wrapped in color. If you’re into art that invites stillness, abstractemporium.art has more.",
+      "bluesky_content": "I was looking at one of my abstract pieces today, and I realized it feels like a deep breath—a pause wrapped in color. If you’re into art that invites stillness, abstractemporium.art has more.",
+      "mastodon_content": "I was looking at one of my abstract pieces today, and I realized it feels like a deep breath—a pause wrapped in color. If you’re into art that invites stillness, abstractemporium.art has more.",
+      "hashtags": [
+        "#ArtPause",
+        "#CreativeStillness"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-26T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "abstractemporium.art",
+      "_emotional_theme": "calm_and_reflective"
     }
   ]
 }

@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-25T09:37:49.603Z",
+      "newPromotions": [
+        {
+          "platform": "fineartamerica",
+          "platformName": "Fine Art America",
+          "type": "sitewide_sale",
+          "discount": "20%",
+          "description": "20% off sitewide sale",
+          "confidence": "high",
+          "detectedAt": "2026-06-25T09:37:49.603Z",
+          "priority": "high"
+        }
+      ],
+      "endedPromotions": []
+    },
+    {
       "timestamp": "2026-06-25T04:17:29.612Z",
       "newPromotions": [],
       "endedPromotions": [

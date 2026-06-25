@@ -4025,12 +4025,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-25T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-25T16:28:45.567Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mp4tyaw4c52n",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mp4tyaw4c52n",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116811689139162116",
       "_generated": true,
       "_category": "knitting_craft_story",
       "_cta_type": "collection_promotion",
@@ -4089,6 +4092,87 @@
       "_category": "promotion_spotlight",
       "_cta_type": "abstractemporium.art",
       "_emotional_theme": "calm_and_reflective"
+    },
+    {
+      "id": "gen-1782404917840-163028",
+      "content": "Abstract art sometimes feels like layers of time pressed into a single frame—moments, moods, and motion blending together. If you’re curious, you can find more over at the site.",
+      "bluesky_content": "Abstract art sometimes feels like layers of time pressed together—glimpses of moments, moods, and motion. If you’re curious, there’s more waiting over at the site.",
+      "mastodon_content": "Abstract art sometimes feels like layers of time pressed into a single frame—moments, moods, and motion blending together. If you’re curious, you can find more over at the site.",
+      "hashtags": [
+        "#ArtLayers",
+        "#AbstractMood"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-27T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "layers_of_time"
+    },
+    {
+      "id": "gen-1782404921870-21a27d",
+      "content": "The first time I picked up a pen to calm my mind, it wasn’t about art. It was just a mess of lines and colors that didn’t fit. But something shifted—I felt quieter inside. That quiet moment is where this all began. It lives quietly on abstractemporium.art",
+      "bluesky_content": "The first time I drew to calm my mind, it wasn’t pretty. Just a mess of lines and colors that didn’t fit. But something shifted—I felt quieter inside. That’s where this all began. It lives quietly on abstractemporium.art",
+      "mastodon_content": "The first time I picked up a pen to calm my mind, it wasn’t about art. It was just a mess of lines and colors that didn’t fit. But something shifted—I felt quieter inside. That quiet moment is where this all began. It lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#CreativeRoots",
+        "#CalmThroughArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-27T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "origin_story",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "small_beginnings"
+    },
+    {
+      "id": "gen-1782404923856-2a864a",
+      "content": "Sometimes, the best ideas hide in the corner of the page—the ones you almost miss while focusing on the center. Let your curiosity wander there. There's a whole collection of this kind of work on the site.",
+      "bluesky_content": "Sometimes, the best ideas hide in the corner of the page—the ones you almost miss. Let your curiosity wander there. There's a whole collection of this kind of work on the site.",
+      "mastodon_content": "Sometimes, the best ideas hide in the corner of the page—the ones you almost miss while focusing on the center. Let your curiosity wander there. There's a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#CreativeWander",
+        "#HiddenIdeas"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-28T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "inspiration_spark",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "curiosity_in_art"
     }
   ]
 }

@@ -9,17 +9,17 @@
       "creative_mindfulness": "2026-06-22T18:13:45.821Z",
       "creator_humor": "2026-06-23T22:17:44.763Z",
       "behind_the_scenes": "2026-06-21T11:18:38.195Z",
-      "inspiration_spark": "2026-06-19T16:32:55.851Z",
-      "origin_story": "2026-06-17T22:46:55.642Z",
+      "inspiration_spark": "2026-06-25T16:28:43.856Z",
+      "origin_story": "2026-06-25T16:28:41.870Z",
       "transformation_arc": "2026-06-19T16:32:59.669Z",
-      "promotion_spotlight": "2026-06-23T22:17:46.568Z"
+      "promotion_spotlight": "2026-06-25T16:28:37.840Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-06-22T18:13:45.821Z",
-      "this lives quietly on abstractemporium.art": "2026-06-22T18:13:51.713Z",
-      "there's a whole collection of this kind of work on the site": "2026-06-23T22:17:40.402Z",
+      "you can find more of this over at the site if you're curious": "2026-06-25T16:28:37.840Z",
+      "this lives quietly on abstractemporium.art": "2026-06-25T16:28:41.870Z",
+      "there's a whole collection of this kind of work on the site": "2026-06-25T16:28:43.856Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-06-23T22:17:44.763Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-06-23T22:17:46.568Z"
     }
@@ -431,6 +431,18 @@
     [
       "#ArtPause",
       "#CreativeStillness"
+    ],
+    [
+      "#ArtLayers",
+      "#AbstractMood"
+    ],
+    [
+      "#CreativeRoots",
+      "#CalmThroughArt"
+    ],
+    [
+      "#CreativeWander",
+      "#HiddenIdeas"
     ]
   ],
   "posts": [
@@ -2907,6 +2919,84 @@
         "deep breath",
         "breath pause",
         "pause wrapped"
+      ]
+    },
+    {
+      "id": "gen-1782404917840-163028",
+      "timestamp": "2026-06-25T16:28:37.840Z",
+      "category": "promotion_spotlight",
+      "cta_type": "you can find more of this over at the site if you're curious",
+      "emotional_theme": "layers_of_time",
+      "bluesky_content": "Abstract art sometimes feels like layers of time pressed together—glimpses of moments, moods, and motion. If you’re curious, there’s more waiting over at the site.",
+      "mastodon_content": "Abstract art sometimes feels like layers of time pressed into a single frame—moments, moods, and motion blending together. If you’re curious, you can find more over at the site.",
+      "hashtags": [
+        "#ArtLayers",
+        "#AbstractMood"
+      ],
+      "content_hash": "f3503cea9a52a23981d88acd9013fec774156ce04e154c32e35ca1937c304904",
+      "key_phrases": [
+        "abstract sometimes",
+        "sometimes feels",
+        "feels like",
+        "like layers",
+        "layers time",
+        "time pressed",
+        "pressed together",
+        "together glimpses",
+        "glimpses moments",
+        "moments moods"
+      ]
+    },
+    {
+      "id": "gen-1782404921870-21a27d",
+      "timestamp": "2026-06-25T16:28:41.870Z",
+      "category": "origin_story",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "small_beginnings",
+      "bluesky_content": "The first time I drew to calm my mind, it wasn’t pretty. Just a mess of lines and colors that didn’t fit. But something shifted—I felt quieter inside. That’s where this all began. It lives quietly on abstractemporium.art",
+      "mastodon_content": "The first time I picked up a pen to calm my mind, it wasn’t about art. It was just a mess of lines and colors that didn’t fit. But something shifted—I felt quieter inside. That quiet moment is where this all began. It lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#CreativeRoots",
+        "#CalmThroughArt"
+      ],
+      "content_hash": "5238298848c67ac4b8c875a5949048ed26af2b0bce1d513cb07a05039c6b9dd9",
+      "key_phrases": [
+        "first time",
+        "time drew",
+        "drew calm",
+        "calm mind",
+        "mind wasn",
+        "wasn pretty",
+        "pretty just",
+        "just mess",
+        "mess lines",
+        "lines colors"
+      ]
+    },
+    {
+      "id": "gen-1782404923856-2a864a",
+      "timestamp": "2026-06-25T16:28:43.856Z",
+      "category": "inspiration_spark",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "curiosity_in_art",
+      "bluesky_content": "Sometimes, the best ideas hide in the corner of the page—the ones you almost miss. Let your curiosity wander there. There's a whole collection of this kind of work on the site.",
+      "mastodon_content": "Sometimes, the best ideas hide in the corner of the page—the ones you almost miss while focusing on the center. Let your curiosity wander there. There's a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#CreativeWander",
+        "#HiddenIdeas"
+      ],
+      "content_hash": "d4990f6ebe089c9882df0bbe1c44e9d68d3480781964aa9aae83617d84e87de0",
+      "key_phrases": [
+        "sometimes best",
+        "best ideas",
+        "ideas hide",
+        "hide corner",
+        "corner page",
+        "page ones",
+        "ones almost",
+        "almost miss",
+        "miss your",
+        "your curiosity"
       ]
     }
   ]

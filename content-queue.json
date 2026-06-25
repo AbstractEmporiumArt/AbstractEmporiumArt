@@ -3995,12 +3995,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-25T04:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-25T10:45:36.399Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mp4asnkztl2f",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mp4asnkztl2f",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116810339812781008",
       "_generated": true,
       "_category": "abstract_art_spotlight",
       "_cta_type": "visit_site",

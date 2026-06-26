@@ -4179,6 +4179,87 @@
       "_category": "inspiration_spark",
       "_cta_type": "there's a whole collection of this kind of work on the site",
       "_emotional_theme": "curiosity_in_art"
+    },
+    {
+      "id": "gen-1782512215994-4d98be",
+      "content": "Transformation isn’t always about fixing what’s broken. Sometimes it’s about growing around the cracks, letting them become part of the design. The full piece (and others like it) lives on abstractemporium.art 🌱",
+      "bluesky_content": "Transformation isn’t always about fixing what’s broken. Sometimes it’s about growing around the cracks, letting them become part of the design. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Transformation isn’t always about fixing what’s broken. Sometimes it’s about growing around the cracks, letting them become part of the design. The full piece (and others like it) lives on abstractemporium.art 🌱",
+      "hashtags": [
+        "#GrowthThroughArt",
+        "#EmbracingChange"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-28T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "transformation_arc",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "embracing_flaws"
+    },
+    {
+      "id": "gen-1782512224385-43c7f6",
+      "content": "Ever notice how some feelings don’t translate into words, but somehow they find their place in colors? Like your hands understand something your head can’t explain. If this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "Ever notice how some feelings don’t translate into words, but somehow they fit into colors? Like your hands know what your head can’t explain. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Ever notice how some feelings don’t translate into words, but somehow they find their place in colors? Like your hands understand something your head can’t explain. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#WordlessEmotions",
+        "#ColorAsExpression"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-29T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "if_this_is_your_kind_of_thing",
+      "_emotional_theme": "colors_as_language"
+    },
+    {
+      "id": "gen-1782512226310-bf4f7f",
+      "content": "Some abstract pieces remind me of the way light dances on water—constantly shifting, never the same twice. If that feeling speaks to you, you can find more of this over at the site if you're curious. 🌊",
+      "bluesky_content": "Some abstract pieces remind me of the way light dances on water—constantly shifting, never the same twice. If that feeling speaks to you, you can find more of this over at the site if you're curious.",
+      "mastodon_content": "Some abstract pieces remind me of the way light dances on water—constantly shifting, never the same twice. If that feeling speaks to you, you can find more of this over at the site if you're curious. 🌊",
+      "hashtags": [
+        "#AbstractVibes",
+        "#LightAndColor"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-29T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "fleeting_moments"
     }
   ]
 }

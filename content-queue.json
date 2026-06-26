@@ -4055,12 +4055,15 @@
         "bluesky"
       ],
       "schedule": "2026-06-26T04:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-06-26T10:54:20.482Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mp6rr6tjyn26",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mp6rr6tjyn26",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116816036476918577",
       "_generated": true,
       "_category": "creator_humor",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",

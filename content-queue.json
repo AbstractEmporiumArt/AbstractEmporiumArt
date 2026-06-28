@@ -4269,6 +4269,87 @@
       "_category": "promotion_spotlight",
       "_cta_type": "you can find more of this over at the site if you're curious",
       "_emotional_theme": "fleeting_moments"
+    },
+    {
+      "id": "gen-1782659998129-a13ce7",
+      "content": "Some days I don’t want art to explain itself; I just want to lose myself in the colors and let them say whatever they need to. If you feel the same, my gallery lives quietly on abstractemporium.art.",
+      "bluesky_content": "Some days I don’t want art to explain itself; I just want to lose myself in the colors and let them say whatever they need to. If you feel the same, my gallery lives quietly on abstractemporium.art.",
+      "mastodon_content": "Some days I don’t want art to explain itself; I just want to lose myself in the colors and let them say whatever they need to. If you feel the same, my gallery lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ColorAndFeeling",
+        "#AbstractEscape"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-30T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "surrender_to_color"
+    },
+    {
+      "id": "gen-1782660004334-6e0283",
+      "content": "This morning’s masterpiece? A perfectly zigzagged coffee stain across a half-finished sketch. Art really does take some strange, caffeinated turns. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "This morning’s masterpiece? A perfectly zigzagged coffee stain across a half-finished sketch. Art takes strange turns sometimes. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "This morning’s masterpiece? A perfectly zigzagged coffee stain across a half-finished sketch. Art really does take some strange, caffeinated turns. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#StudioLife",
+        "#AccidentalArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-06-30T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "embracing_imperfections"
+    },
+    {
+      "id": "gen-1782660008261-3defe4",
+      "content": "There’s a quiet kind of bravery in starting something imperfect. A messy line, an unsure color—they’re whispers of ‘let’s try.’ The full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "There’s a quiet kind of bravery in starting something imperfect. A messy line, an unsure color—they’re whispers of ‘let’s try.’ The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "There’s a quiet kind of bravery in starting something imperfect. A messy line, an unsure color—they’re whispers of ‘let’s try.’ The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#GentleCreativity",
+        "#StartMessy"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-01T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creative_mindfulness",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "bravery_in_imperfection"
     }
   ]
 }

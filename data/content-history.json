@@ -6,21 +6,21 @@
       "abstract_art_spotlight": "2026-06-22T18:13:51.713Z",
       "knitting_craft_story": "2026-06-23T22:17:40.402Z",
       "emotional_reflection": "2026-06-26T22:17:04.386Z",
-      "creative_mindfulness": "2026-06-22T18:13:45.821Z",
+      "creative_mindfulness": "2026-06-28T15:20:08.262Z",
       "creator_humor": "2026-06-23T22:17:44.763Z",
-      "behind_the_scenes": "2026-06-21T11:18:38.195Z",
+      "behind_the_scenes": "2026-06-28T15:20:04.334Z",
       "inspiration_spark": "2026-06-25T16:28:43.856Z",
       "origin_story": "2026-06-25T16:28:41.870Z",
       "transformation_arc": "2026-06-26T22:16:55.995Z",
-      "promotion_spotlight": "2026-06-26T22:17:06.311Z"
+      "promotion_spotlight": "2026-06-28T15:19:58.129Z"
     }
   },
   "cta_rotation": {
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-06-26T22:17:06.311Z",
-      "this lives quietly on abstractemporium.art": "2026-06-25T16:28:41.870Z",
-      "there's a whole collection of this kind of work on the site": "2026-06-25T16:28:43.856Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-06-26T22:16:55.995Z",
+      "this lives quietly on abstractemporium.art": "2026-06-28T15:19:58.129Z",
+      "there's a whole collection of this kind of work on the site": "2026-06-28T15:20:04.334Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-06-28T15:20:08.262Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-06-26T22:17:04.386Z"
     }
   },
@@ -455,6 +455,18 @@
     [
       "#AbstractVibes",
       "#LightAndColor"
+    ],
+    [
+      "#ColorAndFeeling",
+      "#AbstractEscape"
+    ],
+    [
+      "#StudioLife",
+      "#AccidentalArt"
+    ],
+    [
+      "#GentleCreativity",
+      "#StartMessy"
     ]
   ],
   "posts": [
@@ -3087,6 +3099,84 @@
         "constantly shifting",
         "shifting never",
         "never same"
+      ]
+    },
+    {
+      "id": "gen-1782659998129-a13ce7",
+      "timestamp": "2026-06-28T15:19:58.129Z",
+      "category": "promotion_spotlight",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "surrender_to_color",
+      "bluesky_content": "Some days I don’t want art to explain itself; I just want to lose myself in the colors and let them say whatever they need to. If you feel the same, my gallery lives quietly on abstractemporium.art.",
+      "mastodon_content": "Some days I don’t want art to explain itself; I just want to lose myself in the colors and let them say whatever they need to. If you feel the same, my gallery lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#ColorAndFeeling",
+        "#AbstractEscape"
+      ],
+      "content_hash": "b96bf9f2ead94c07e1fa92689a7bcb6e655ff8fd6c84fe5c43d26d424165a55d",
+      "key_phrases": [
+        "some days",
+        "days want",
+        "want explain",
+        "explain itself",
+        "itself just",
+        "just want",
+        "want lose",
+        "lose myself",
+        "myself colors",
+        "colors them"
+      ]
+    },
+    {
+      "id": "gen-1782660004334-6e0283",
+      "timestamp": "2026-06-28T15:20:04.334Z",
+      "category": "behind_the_scenes",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "embracing_imperfections",
+      "bluesky_content": "This morning’s masterpiece? A perfectly zigzagged coffee stain across a half-finished sketch. Art takes strange turns sometimes. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "This morning’s masterpiece? A perfectly zigzagged coffee stain across a half-finished sketch. Art really does take some strange, caffeinated turns. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#StudioLife",
+        "#AccidentalArt"
+      ],
+      "content_hash": "cda68fd9be759c3f7421aefc08023fbb1014547c8152dcc9d2a3fbdb9ad31567",
+      "key_phrases": [
+        "this morning",
+        "morning masterpiece",
+        "masterpiece perfectly",
+        "perfectly zigzagged",
+        "zigzagged coffee",
+        "coffee stain",
+        "stain across",
+        "across half",
+        "half finished",
+        "finished sketch"
+      ]
+    },
+    {
+      "id": "gen-1782660008261-3defe4",
+      "timestamp": "2026-06-28T15:20:08.262Z",
+      "category": "creative_mindfulness",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "bravery_in_imperfection",
+      "bluesky_content": "There’s a quiet kind of bravery in starting something imperfect. A messy line, an unsure color—they’re whispers of ‘let’s try.’ The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "There’s a quiet kind of bravery in starting something imperfect. A messy line, an unsure color—they’re whispers of ‘let’s try.’ The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#GentleCreativity",
+        "#StartMessy"
+      ],
+      "content_hash": "438da89ff1d750713e16a1579fe150b2f2eac042e3dca7ca5fab18020d451f25",
+      "key_phrases": [
+        "there quiet",
+        "quiet kind",
+        "kind bravery",
+        "bravery starting",
+        "starting something",
+        "something imperfect",
+        "imperfect messy",
+        "messy line",
+        "line unsure",
+        "unsure color"
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-06-28T09:25:13.479Z",
+  "lastCheck": "2026-06-28T14:07:11.842Z",
   "active": [
     {
       "platform": "fineartamerica",
@@ -8,7 +8,7 @@
       "discount": "20%",
       "description": "20% off sitewide sale",
       "confidence": "high",
-      "detectedAt": "2026-06-28T09:25:13.479Z",
+      "detectedAt": "2026-06-28T14:07:11.842Z",
       "priority": "high"
     }
   ],
@@ -34,18 +34,7 @@
       "checkMethod": "manual"
     }
   },
-  "hasNewPromotions": true,
-  "newPromotions": [
-    {
-      "platform": "fineartamerica",
-      "platformName": "Fine Art America",
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high",
-      "detectedAt": "2026-06-28T09:25:13.479Z",
-      "priority": "high"
-    }
-  ],
+  "hasNewPromotions": false,
+  "newPromotions": [],
   "endedPromotions": []
 }

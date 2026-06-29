@@ -4359,6 +4359,87 @@
       "_category": "creative_mindfulness",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
       "_emotional_theme": "bravery_in_imperfection"
+    },
+    {
+      "id": "gen-1782771023788-ef22b6",
+      "content": "This piece began with one color I couldn’t stop thinking about. It pulled others in, like a quiet conversation that grew into a symphony of shades. If this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "This piece began with one color I couldn’t stop thinking about. It pulled others in, like a quiet conversation that grew louder with every word. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "This piece began with one color I couldn’t stop thinking about. It pulled others in, like a quiet conversation that grew into a symphony of shades. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#ColorStory",
+        "#AbstractWhispers"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-01T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "abstract_art_spotlight",
+      "_cta_type": "abstractemporium.art",
+      "_emotional_theme": "organic_creativity"
+    },
+    {
+      "id": "gen-1782771030191-d4ef9a",
+      "content": "My grandmother used to say, \"Every stitch holds a moment—some joyful, some tearful, all yours.\" Funny how yarn can feel like a diary, weaving together memories. You can find more of this over at the site if you're curious.",
+      "bluesky_content": "My grandmother used to say, \"Every stitch holds a moment—some joyful, some tearful, all yours.\" Funny how yarn can feel like a diary. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "My grandmother used to say, \"Every stitch holds a moment—some joyful, some tearful, all yours.\" Funny how yarn can feel like a diary, weaving together memories. You can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#KnittingStories",
+        "#CraftingLife"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-02T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "knitting_craft_story",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "memory_and_connection"
+    },
+    {
+      "id": "gen-1782771032505-42b33e",
+      "content": "Abstract art feels like catching moments mid-motion—they move, they shift, but they always leave their mark. If you’ve been curious about these ever-changing stories, they’re quietly waiting at abstractemporium.art.",
+      "bluesky_content": "Abstract art is like catching moments mid-motion—they don’t stand still, but they leave their mark. If you've been curious about these shifting stories, they’re quietly waiting at abstractemporium.art.",
+      "mastodon_content": "Abstract art feels like catching moments mid-motion—they move, they shift, but they always leave their mark. If you’ve been curious about these ever-changing stories, they’re quietly waiting at abstractemporium.art.",
+      "hashtags": [
+        "#ArtfulMoments",
+        "#AbstractStories"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-02T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "fleeting_beauty"
     }
   ]
 }

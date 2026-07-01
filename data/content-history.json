@@ -7,20 +7,20 @@
       "knitting_craft_story": "2026-06-29T22:10:30.191Z",
       "emotional_reflection": "2026-06-26T22:17:04.386Z",
       "creative_mindfulness": "2026-06-28T15:20:08.262Z",
-      "creator_humor": "2026-06-23T22:17:44.763Z",
+      "creator_humor": "2026-07-01T16:28:14.214Z",
       "behind_the_scenes": "2026-06-28T15:20:04.334Z",
       "inspiration_spark": "2026-06-25T16:28:43.856Z",
       "origin_story": "2026-06-25T16:28:41.870Z",
       "transformation_arc": "2026-06-26T22:16:55.995Z",
-      "promotion_spotlight": "2026-06-29T22:10:32.505Z"
+      "promotion_spotlight": "2026-07-01T16:28:10.271Z"
     }
   },
   "cta_rotation": {
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-06-29T22:10:30.191Z",
       "this lives quietly on abstractemporium.art": "2026-06-29T22:10:32.505Z",
-      "there's a whole collection of this kind of work on the site": "2026-06-28T15:20:04.334Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-06-28T15:20:08.262Z",
+      "there's a whole collection of this kind of work on the site": "2026-07-01T16:28:10.271Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-07-01T16:28:14.214Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-06-29T22:10:23.789Z"
     }
   },
@@ -479,6 +479,14 @@
     [
       "#ArtfulMoments",
       "#AbstractStories"
+    ],
+    [
+      "#LayersOfColor",
+      "#QuietArtistry"
+    ],
+    [
+      "#CreativeProcess",
+      "#MakingArt"
     ]
   ],
   "posts": [
@@ -3267,6 +3275,58 @@
         "still they",
         "they leave",
         "leave their"
+      ]
+    },
+    {
+      "id": "gen-1782923290270-13d628",
+      "timestamp": "2026-07-01T16:28:10.271Z",
+      "category": "promotion_spotlight",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "color_conversation",
+      "bluesky_content": "Sometimes I think of abstract art as a conversation between colors—some bold, some quiet, all finding a way to speak together. If that resonates, there’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Sometimes I think of abstract art as a conversation between colors—some bold, some quiet, all finding a way to speak together. If that resonates, there’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#LayersOfColor",
+        "#QuietArtistry"
+      ],
+      "content_hash": "5d9d772fd5c597fbb8beb55aa352993c918f2b43dcb317dffc02eeb377ba9cb0",
+      "key_phrases": [
+        "sometimes think",
+        "think abstract",
+        "abstract conversation",
+        "conversation between",
+        "between colors",
+        "colors some",
+        "some bold",
+        "bold some",
+        "some quiet",
+        "quiet finding"
+      ]
+    },
+    {
+      "id": "gen-1782923294214-532d74",
+      "timestamp": "2026-07-01T16:28:14.214Z",
+      "category": "creator_humor",
+      "cta_type": "gallery",
+      "emotional_theme": "imperfection_is_art",
+      "bluesky_content": "Art brain logic: “I’ll just add one more line.” *Adds 47 lines* “Perfect, now I’ll erase some of it for texture.” *Erases 46 lines* The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "Art brain logic: “I’ll just add one more line.”\n*Adds 47 lines.*\n“Perfect, now I’ll erase some of it for texture.”\n*Erases 46 lines.*\n\nThe full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeProcess",
+        "#MakingArt"
+      ],
+      "content_hash": "258d2b3fd7007220b48c2ea388abcb92ee4eca2e48a0ffc4a3fa4460194d8cbd",
+      "key_phrases": [
+        "brain logic",
+        "logic just",
+        "just more",
+        "more line",
+        "line adds",
+        "adds lines",
+        "lines perfect",
+        "perfect erase",
+        "erase some",
+        "some texture"
       ]
     }
   ]

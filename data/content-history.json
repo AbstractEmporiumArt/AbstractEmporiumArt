@@ -9,19 +9,19 @@
       "creative_mindfulness": "2026-06-28T15:20:08.262Z",
       "creator_humor": "2026-07-01T16:28:14.214Z",
       "behind_the_scenes": "2026-06-28T15:20:04.334Z",
-      "inspiration_spark": "2026-06-25T16:28:43.856Z",
-      "origin_story": "2026-06-25T16:28:41.870Z",
-      "transformation_arc": "2026-06-26T22:16:55.995Z",
+      "inspiration_spark": "2026-07-02T16:06:35.918Z",
+      "origin_story": "2026-07-02T16:06:34.014Z",
+      "transformation_arc": "2026-07-02T16:06:39.693Z",
       "promotion_spotlight": "2026-07-01T16:28:10.271Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-06-29T22:10:30.191Z",
-      "this lives quietly on abstractemporium.art": "2026-06-29T22:10:32.505Z",
+      "you can find more of this over at the site if you're curious": "2026-07-02T16:06:35.918Z",
+      "this lives quietly on abstractemporium.art": "2026-07-02T16:06:39.693Z",
       "there's a whole collection of this kind of work on the site": "2026-07-01T16:28:10.271Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-07-01T16:28:14.214Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-06-29T22:10:23.789Z"
+      "if this is your kind of thing, abstractemporium.art has more": "2026-07-02T16:06:34.014Z"
     }
   },
   "hashtag_sets_used": [
@@ -487,6 +487,18 @@
     [
       "#CreativeProcess",
       "#MakingArt"
+    ],
+    [
+      "#ArtAsLanguage",
+      "#CreativeJourney"
+    ],
+    [
+      "#CreativeFreedom",
+      "#ArtWithoutRules"
+    ],
+    [
+      "#SeasonsOfChange",
+      "#MindfulArt"
     ]
   ],
   "posts": [
@@ -3327,6 +3339,84 @@
         "perfect erase",
         "erase some",
         "some texture"
+      ]
+    },
+    {
+      "id": "gen-1783008394013-657589",
+      "timestamp": "2026-07-02T16:06:34.014Z",
+      "category": "origin_story",
+      "cta_type": "if_this_is_your_kind_of_thing",
+      "emotional_theme": "finding_language",
+      "bluesky_content": "Abstract Emporium started with me trying to make sense of things I couldn’t put into words. Shapes, colors—they became the language I didn’t know I spoke. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Abstract Emporium started with me trying to make sense of things I couldn’t put into words. Shapes, colors—they became the language I didn’t know I spoke, a way to untangle what’s unseen. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#ArtAsLanguage",
+        "#CreativeJourney"
+      ],
+      "content_hash": "9b880ced66af12eadb55c58ce0eb8a9a62f3a24e9b120892f47ac66714e4f856",
+      "key_phrases": [
+        "abstract emporium",
+        "emporium started",
+        "started with",
+        "with trying",
+        "trying make",
+        "make sense",
+        "sense things",
+        "things couldn",
+        "couldn into",
+        "into words"
+      ]
+    },
+    {
+      "id": "gen-1783008395918-4b922e",
+      "timestamp": "2026-07-02T16:06:35.918Z",
+      "category": "inspiration_spark",
+      "cta_type": "organic_mention",
+      "emotional_theme": "embracing_mystery",
+      "bluesky_content": "Have you ever looked at a blank page and thought, 'What if I just let it surprise me?' No plan, no expectations—just lines, colors, and whatever happens next. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "Have you ever looked at a blank page and thought, 'What if I just let it surprise me?' No plan, no expectations—just lines, colors, and whatever happens next. Play a little and see what shows up. You can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#CreativeFreedom",
+        "#ArtWithoutRules"
+      ],
+      "content_hash": "1942017f614e7783750e322ae9d5892eeb2c1a003df9f0199d11607cbe1903b4",
+      "key_phrases": [
+        "have ever",
+        "ever looked",
+        "looked blank",
+        "blank page",
+        "page thought",
+        "thought what",
+        "what just",
+        "just surprise",
+        "surprise plan",
+        "plan expectations"
+      ]
+    },
+    {
+      "id": "gen-1783008399693-f36d6f",
+      "timestamp": "2026-07-02T16:06:39.693Z",
+      "category": "transformation_arc",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "quiet_growth",
+      "bluesky_content": "Transformations aren’t always loud. Sometimes they’re like the quiet shift between seasons—subtle, unnoticed, and then one day, everything feels new. That slow magic lives quietly on abstractemporium.art.",
+      "mastodon_content": "Transformations aren’t always loud. Sometimes they’re like the quiet shift between seasons—subtle, unnoticed, and then one day, everything feels new. That slow magic lives quietly on abstractemporium.art. #SeasonsOfChange #MindfulArt",
+      "hashtags": [
+        "#SeasonsOfChange",
+        "#MindfulArt"
+      ],
+      "content_hash": "ed30d3c0633c725abae2c0eb768d6ec32b5d32ccb46d89101bee2327c4cf14f9",
+      "key_phrases": [
+        "transformations aren",
+        "aren always",
+        "always loud",
+        "loud sometimes",
+        "sometimes they",
+        "they like",
+        "like quiet",
+        "quiet shift",
+        "shift between",
+        "between seasons"
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-07-03T14:27:34.673Z",
+  "lastCheck": "2026-07-03T19:41:14.367Z",
   "active": [
     {
       "platform": "fineartamerica",
@@ -8,7 +8,7 @@
       "discount": null,
       "description": "Possible promotion detected",
       "confidence": "medium",
-      "detectedAt": "2026-07-03T14:27:34.673Z",
+      "detectedAt": "2026-07-03T19:41:14.367Z",
       "priority": "high"
     }
   ],

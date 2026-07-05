@@ -4689,6 +4689,87 @@
       "_category": "emotional_reflection",
       "_cta_type": "art_coloring",
       "_emotional_theme": "holding_space"
+    },
+    {
+      "id": "gen-1783264521553-df74ca",
+      "content": "There’s a stack of doodles on my desk, each one a love letter to procrastination. Most will live quietly in a drawer, but some might spark something real. You can find more of this over at the site if you're curious.",
+      "bluesky_content": "There’s a stack of doodles on my desk, each one a love letter to procrastination. Most won’t see the light of day, but some might spark something real. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "There’s a stack of doodles on my desk, each one a love letter to procrastination. Most will live quietly in a drawer, but some might spark something real. You can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#EverydayArt",
+        "#CreativeScatterings"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-07T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "embracing_messiness"
+    },
+    {
+      "id": "gen-1783264525672-337b15",
+      "content": "Some days, the simplest marks on a page feel like an anchor. A line, a shade, a small curve. Tiny gestures that remind you you’re here, and that’s enough. This lives quietly on abstractemporium.art.",
+      "bluesky_content": "Some days, the simplest marks on a page feel like an anchor. A line, a shade, a small curve. Tiny gestures that remind you you’re here, and that’s enough. This lives quietly on abstractemporium.art.",
+      "mastodon_content": "Some days, the simplest marks on a page feel like an anchor. A line, a shade, a small curve. Tiny gestures that remind you you’re here, and that’s enough. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeAnchors",
+        "#SimpleArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-07T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creative_mindfulness",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "grounded_in_simple_things"
+    },
+    {
+      "id": "gen-1783264533413-2eb0f5",
+      "content": "I finished this piece and realized it feels like trying to remember the details of a dream. Half of it is vivid, the rest? Just whispers of color and shape. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "I finished this piece and realized it feels like trying to remember the details of a dream. Half of it is vivid, the rest? Just whispers of color and shape. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "I finished this piece and realized it feels like trying to remember the details of a dream. Half of it is vivid, the rest? Just whispers of color and shape. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#DreamInColor",
+        "#AbstractMind"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-08T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "abstract_art_spotlight",
+      "_cta_type": "abstract_art_gallery",
+      "_emotional_theme": "dreamlike_memory"
     }
   ]
 }

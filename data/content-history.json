@@ -3,12 +3,12 @@
   "description": "Permanent non-repetition memory for the Abstract Emporium content engine. Every generated and posted entry is stored here. Never delete entries — only append.",
   "category_rotation": {
     "last_used": {
-      "abstract_art_spotlight": "2026-06-29T22:10:23.789Z",
+      "abstract_art_spotlight": "2026-07-05T15:15:33.413Z",
       "knitting_craft_story": "2026-06-29T22:10:30.191Z",
       "emotional_reflection": "2026-07-04T10:13:37.781Z",
-      "creative_mindfulness": "2026-06-28T15:20:08.262Z",
+      "creative_mindfulness": "2026-07-05T15:15:25.672Z",
       "creator_humor": "2026-07-01T16:28:14.214Z",
-      "behind_the_scenes": "2026-06-28T15:20:04.334Z",
+      "behind_the_scenes": "2026-07-05T15:15:21.553Z",
       "inspiration_spark": "2026-07-02T16:06:35.918Z",
       "origin_story": "2026-07-02T16:06:34.014Z",
       "transformation_arc": "2026-07-02T16:06:39.693Z",
@@ -17,9 +17,9 @@
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-07-02T16:06:35.918Z",
-      "this lives quietly on abstractemporium.art": "2026-07-02T16:06:39.693Z",
-      "there's a whole collection of this kind of work on the site": "2026-07-04T10:13:33.240Z",
+      "you can find more of this over at the site if you're curious": "2026-07-05T15:15:21.553Z",
+      "this lives quietly on abstractemporium.art": "2026-07-05T15:15:25.672Z",
+      "there's a whole collection of this kind of work on the site": "2026-07-05T15:15:33.413Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-07-04T10:13:35.481Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-07-04T10:13:37.781Z"
     }
@@ -511,6 +511,18 @@
     [
       "#MindfulMaking",
       "#CreativeReflection"
+    ],
+    [
+      "#EverydayArt",
+      "#CreativeScatterings"
+    ],
+    [
+      "#CreativeAnchors",
+      "#SimpleArt"
+    ],
+    [
+      "#DreamInColor",
+      "#AbstractMind"
     ]
   ],
   "posts": [
@@ -3507,6 +3519,84 @@
         "does same",
         "same holds",
         "holds space"
+      ]
+    },
+    {
+      "id": "gen-1783264521553-df74ca",
+      "timestamp": "2026-07-05T15:15:21.553Z",
+      "category": "behind_the_scenes",
+      "cta_type": "you can find more of this over at the site if you're curious",
+      "emotional_theme": "embracing_messiness",
+      "bluesky_content": "There’s a stack of doodles on my desk, each one a love letter to procrastination. Most won’t see the light of day, but some might spark something real. You can find more of this over at the site if you're curious.",
+      "mastodon_content": "There’s a stack of doodles on my desk, each one a love letter to procrastination. Most will live quietly in a drawer, but some might spark something real. You can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#EverydayArt",
+        "#CreativeScatterings"
+      ],
+      "content_hash": "a3065a1c8ea2ab2f9514a0c15e8fb8ae557698d929363b20c89b11fd11d9aded",
+      "key_phrases": [
+        "there stack",
+        "stack doodles",
+        "doodles desk",
+        "desk each",
+        "each love",
+        "love letter",
+        "letter procrastination",
+        "procrastination most",
+        "most light",
+        "light some"
+      ]
+    },
+    {
+      "id": "gen-1783264525672-337b15",
+      "timestamp": "2026-07-05T15:15:25.672Z",
+      "category": "creative_mindfulness",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "grounded_in_simple_things",
+      "bluesky_content": "Some days, the simplest marks on a page feel like an anchor. A line, a shade, a small curve. Tiny gestures that remind you you’re here, and that’s enough. This lives quietly on abstractemporium.art.",
+      "mastodon_content": "Some days, the simplest marks on a page feel like an anchor. A line, a shade, a small curve. Tiny gestures that remind you you’re here, and that’s enough. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#CreativeAnchors",
+        "#SimpleArt"
+      ],
+      "content_hash": "4196d60aee539deab4aaacffaae10833ffbd7625f24447238f1be2fccd67dc8e",
+      "key_phrases": [
+        "some days",
+        "days simplest",
+        "simplest marks",
+        "marks page",
+        "page feel",
+        "feel like",
+        "like anchor",
+        "anchor line",
+        "line shade",
+        "shade small"
+      ]
+    },
+    {
+      "id": "gen-1783264533413-2eb0f5",
+      "timestamp": "2026-07-05T15:15:33.413Z",
+      "category": "abstract_art_spotlight",
+      "cta_type": "abstract_art_gallery",
+      "emotional_theme": "dreamlike_memory",
+      "bluesky_content": "I finished this piece and realized it feels like trying to remember the details of a dream. Half of it is vivid, the rest? Just whispers of color and shape. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "I finished this piece and realized it feels like trying to remember the details of a dream. Half of it is vivid, the rest? Just whispers of color and shape. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#DreamInColor",
+        "#AbstractMind"
+      ],
+      "content_hash": "d6a3f739c98965411fd91906f782153b77c5e471e18521a63afc76bb37c15230",
+      "key_phrases": [
+        "finished this",
+        "this piece",
+        "piece realized",
+        "realized feels",
+        "feels like",
+        "like trying",
+        "trying remember",
+        "remember details",
+        "details dream",
+        "dream half"
       ]
     }
   ]

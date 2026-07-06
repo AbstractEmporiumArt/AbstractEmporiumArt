@@ -4779,6 +4779,87 @@
       "_category": "abstract_art_spotlight",
       "_cta_type": "abstract_art_gallery",
       "_emotional_theme": "dreamlike_memory"
+    },
+    {
+      "id": "gen-1783376178658-98f24c",
+      "content": "I think abstract art sometimes feels like catching the breeze in your hands. It’s not about holding onto it—it’s about feeling it pass through. The full piece (and others like it) lives on abstractemporium.art.",
+      "bluesky_content": "I think abstract art sometimes feels like catching the breeze in your hands. It’s not about holding onto it—it’s about feeling it pass through. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "I think abstract art sometimes feels like catching the breeze in your hands. It’s not about holding onto it—it’s about feeling it pass through. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#AbstractEnergy",
+        "#ArtInTheMoment"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-08T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "fleeting_moments"
+    },
+    {
+      "id": "gen-1783376181105-f3b885",
+      "content": "I caught myself staring at one of my abstract prints today—it’s funny how color can feel like a quiet conversation you didn’t know you needed. If that resonates, there’s more over at abstractemporium.art.",
+      "bluesky_content": "I caught myself staring at one of my abstract prints today—it’s funny how color can feel like a conversation you didn’t know you needed. If that resonates, there’s more waiting at abstractemporium.art.",
+      "mastodon_content": "I caught myself staring at one of my abstract prints today—it’s funny how color can feel like a quiet conversation you didn’t know you needed. If that resonates, there’s more over at abstractemporium.art.",
+      "hashtags": [
+        "#ArtConversations",
+        "#AbstractStudio"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-09T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "if this is your kind of thing, abstractemporium.art has more",
+      "_emotional_theme": "color_as_dialogue"
+    },
+    {
+      "id": "gen-1783376183214-50c7d6",
+      "content": "Knitting feels like a quiet rebellion against time. Every stitch says, 'I’ll slow down, even if the world refuses to.' If you’re craving a moment like that too, you can find more of this over at the site.",
+      "bluesky_content": "Knitting is this tiny rebellion against time. Every stitch says, 'I’ll slow down, even if the world refuses to.' If you need a moment like that too, you can find more of this over at the site.",
+      "mastodon_content": "Knitting feels like a quiet rebellion against time. Every stitch says, 'I’ll slow down, even if the world refuses to.' If you’re craving a moment like that too, you can find more of this over at the site.",
+      "hashtags": [
+        "#SlowCraft",
+        "#MindfulKnitting"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-09T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "knitting_craft_story",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "slow_making"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "category_rotation": {
     "last_used": {
       "abstract_art_spotlight": "2026-07-05T15:15:33.413Z",
-      "knitting_craft_story": "2026-06-29T22:10:30.191Z",
+      "knitting_craft_story": "2026-07-06T22:16:23.214Z",
       "emotional_reflection": "2026-07-04T10:13:37.781Z",
       "creative_mindfulness": "2026-07-05T15:15:25.672Z",
       "creator_humor": "2026-07-01T16:28:14.214Z",
@@ -12,16 +12,16 @@
       "inspiration_spark": "2026-07-02T16:06:35.918Z",
       "origin_story": "2026-07-02T16:06:34.014Z",
       "transformation_arc": "2026-07-02T16:06:39.693Z",
-      "promotion_spotlight": "2026-07-04T10:13:35.481Z"
+      "promotion_spotlight": "2026-07-06T22:16:21.105Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-07-05T15:15:21.553Z",
+      "you can find more of this over at the site if you're curious": "2026-07-06T22:16:23.214Z",
       "this lives quietly on abstractemporium.art": "2026-07-05T15:15:25.672Z",
       "there's a whole collection of this kind of work on the site": "2026-07-05T15:15:33.413Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-07-04T10:13:35.481Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-07-04T10:13:37.781Z"
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-07-06T22:16:18.659Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-07-06T22:16:21.105Z"
     }
   },
   "hashtag_sets_used": [
@@ -523,6 +523,18 @@
     [
       "#DreamInColor",
       "#AbstractMind"
+    ],
+    [
+      "#AbstractEnergy",
+      "#ArtInTheMoment"
+    ],
+    [
+      "#ArtConversations",
+      "#AbstractStudio"
+    ],
+    [
+      "#SlowCraft",
+      "#MindfulKnitting"
     ]
   ],
   "posts": [
@@ -3597,6 +3609,84 @@
         "remember details",
         "details dream",
         "dream half"
+      ]
+    },
+    {
+      "id": "gen-1783376178658-98f24c",
+      "timestamp": "2026-07-06T22:16:18.658Z",
+      "category": "promotion_spotlight",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "fleeting_moments",
+      "bluesky_content": "I think abstract art sometimes feels like catching the breeze in your hands. It’s not about holding onto it—it’s about feeling it pass through. The full piece (and others like it) lives on abstractemporium.art.",
+      "mastodon_content": "I think abstract art sometimes feels like catching the breeze in your hands. It’s not about holding onto it—it’s about feeling it pass through. The full piece (and others like it) lives on abstractemporium.art.",
+      "hashtags": [
+        "#AbstractEnergy",
+        "#ArtInTheMoment"
+      ],
+      "content_hash": "b12e8dba01cd4ec7e3003463b133df3f49eaa47b78aabac1f5dfe5a6de511508",
+      "key_phrases": [
+        "think abstract",
+        "abstract sometimes",
+        "sometimes feels",
+        "feels like",
+        "like catching",
+        "catching breeze",
+        "breeze your",
+        "your hands",
+        "hands about",
+        "about holding"
+      ]
+    },
+    {
+      "id": "gen-1783376181105-f3b885",
+      "timestamp": "2026-07-06T22:16:21.105Z",
+      "category": "promotion_spotlight",
+      "cta_type": "if this is your kind of thing, abstractemporium.art has more",
+      "emotional_theme": "color_as_dialogue",
+      "bluesky_content": "I caught myself staring at one of my abstract prints today—it’s funny how color can feel like a conversation you didn’t know you needed. If that resonates, there’s more waiting at abstractemporium.art.",
+      "mastodon_content": "I caught myself staring at one of my abstract prints today—it’s funny how color can feel like a quiet conversation you didn’t know you needed. If that resonates, there’s more over at abstractemporium.art.",
+      "hashtags": [
+        "#ArtConversations",
+        "#AbstractStudio"
+      ],
+      "content_hash": "e6d6f8ac11fd7401978d6442a7b2c6cfddef5baebc20510a78af3f3485c7762d",
+      "key_phrases": [
+        "caught myself",
+        "myself staring",
+        "staring abstract",
+        "abstract prints",
+        "prints today",
+        "today funny",
+        "funny color",
+        "color feel",
+        "feel like",
+        "like conversation"
+      ]
+    },
+    {
+      "id": "gen-1783376183214-50c7d6",
+      "timestamp": "2026-07-06T22:16:23.214Z",
+      "category": "knitting_craft_story",
+      "cta_type": "you can find more of this over at the site if you're curious",
+      "emotional_theme": "slow_making",
+      "bluesky_content": "Knitting is this tiny rebellion against time. Every stitch says, 'I’ll slow down, even if the world refuses to.' If you need a moment like that too, you can find more of this over at the site.",
+      "mastodon_content": "Knitting feels like a quiet rebellion against time. Every stitch says, 'I’ll slow down, even if the world refuses to.' If you’re craving a moment like that too, you can find more of this over at the site.",
+      "hashtags": [
+        "#SlowCraft",
+        "#MindfulKnitting"
+      ],
+      "content_hash": "8ea4bb4ce8358cac28b40dad9c8eebb2ea35bc60c25938b525f44d2add7d51f2",
+      "key_phrases": [
+        "knitting this",
+        "this tiny",
+        "tiny rebellion",
+        "rebellion against",
+        "against time",
+        "time every",
+        "every stitch",
+        "stitch says",
+        "says slow",
+        "slow down"
       ]
     }
   ]

@@ -7,10 +7,10 @@
       "knitting_craft_story": "2026-07-06T22:16:23.214Z",
       "emotional_reflection": "2026-07-04T10:13:37.781Z",
       "creative_mindfulness": "2026-07-05T15:15:25.672Z",
-      "creator_humor": "2026-07-01T16:28:14.214Z",
+      "creator_humor": "2026-07-08T16:03:14.906Z",
       "behind_the_scenes": "2026-07-05T15:15:21.553Z",
-      "inspiration_spark": "2026-07-02T16:06:35.918Z",
-      "origin_story": "2026-07-02T16:06:34.014Z",
+      "inspiration_spark": "2026-07-08T16:03:18.404Z",
+      "origin_story": "2026-07-08T16:03:16.744Z",
       "transformation_arc": "2026-07-02T16:06:39.693Z",
       "promotion_spotlight": "2026-07-06T22:16:21.105Z"
     }
@@ -18,9 +18,9 @@
   "cta_rotation": {
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-07-06T22:16:23.214Z",
-      "this lives quietly on abstractemporium.art": "2026-07-05T15:15:25.672Z",
-      "there's a whole collection of this kind of work on the site": "2026-07-05T15:15:33.413Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-07-06T22:16:18.659Z",
+      "this lives quietly on abstractemporium.art": "2026-07-08T16:03:14.906Z",
+      "there's a whole collection of this kind of work on the site": "2026-07-08T16:03:16.744Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-07-08T16:03:18.404Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-07-06T22:16:21.105Z"
     }
   },
@@ -535,6 +535,18 @@
     [
       "#SlowCraft",
       "#MindfulKnitting"
+    ],
+    [
+      "#CreativeMess",
+      "#ArtAccidents"
+    ],
+    [
+      "#ColorStories",
+      "#AbstractArt"
+    ],
+    [
+      "#LetArtLead",
+      "#CreativeFreedom"
     ]
   ],
   "posts": [
@@ -3687,6 +3699,84 @@
         "stitch says",
         "says slow",
         "slow down"
+      ]
+    },
+    {
+      "id": "gen-1783526594905-0a78c0",
+      "timestamp": "2026-07-08T16:03:14.906Z",
+      "category": "creator_humor",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "embracing_chaos",
+      "bluesky_content": "You know it’s a creative day when you set out to 'clean the studio' and end up inventing a new art technique involving coffee rings and misplaced paintbrushes. This lives quietly on abstractemporium.art",
+      "mastodon_content": "You know it’s a creative day when 'cleaning the studio' turns into an experimental art session featuring coffee rings and misplaced paintbrushes. Somehow, chaos feels right. This lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#CreativeMess",
+        "#ArtAccidents"
+      ],
+      "content_hash": "0cccfb82f8677b045bb5d2ea4f63b0410251733e77a47dd95f00630ae6786903",
+      "key_phrases": [
+        "know creative",
+        "creative when",
+        "when clean",
+        "clean studio",
+        "studio inventing",
+        "inventing technique",
+        "technique involving",
+        "involving coffee",
+        "coffee rings",
+        "rings misplaced"
+      ]
+    },
+    {
+      "id": "gen-1783526596744-ca7b1e",
+      "timestamp": "2026-07-08T16:03:16.744Z",
+      "category": "origin_story",
+      "cta_type": "gallery",
+      "emotional_theme": "expressing_the_unsaid",
+      "bluesky_content": "Abstract Emporium started with a question: What does it mean to feel something you can’t describe? Shapes and colors became the answer. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Abstract Emporium began with one question: What does it mean to feel something you can’t put into words? Shapes and colors helped me answer. If you want to explore that answer, there’s a whole collection on the site.",
+      "hashtags": [
+        "#ColorStories",
+        "#AbstractArt"
+      ],
+      "content_hash": "77cf0cebc568e110afc771091e1fe9dad1b745b2c623c8b4838f636f6340b085",
+      "key_phrases": [
+        "abstract emporium",
+        "emporium started",
+        "started with",
+        "with question",
+        "question what",
+        "what does",
+        "does mean",
+        "mean feel",
+        "feel something",
+        "something describe"
+      ]
+    },
+    {
+      "id": "gen-1783526598404-260fee",
+      "timestamp": "2026-07-08T16:03:18.404Z",
+      "category": "inspiration_spark",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "intuitive_creation",
+      "bluesky_content": "Ever wonder what your art would say if you stopped whispering instructions? Let the pencil lead for once—it might surprise you. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Ever wonder what your art would say if you stopped whispering instructions? Let the pencil lead for once—it might surprise you. 🖤 The full piece (and others like it) lives on abstractemporium.art",
+      "hashtags": [
+        "#LetArtLead",
+        "#CreativeFreedom"
+      ],
+      "content_hash": "3fc65b8125bd0334ef6707b0fa207fc969d1e26369b5b9c876662fe0090685cb",
+      "key_phrases": [
+        "ever wonder",
+        "wonder what",
+        "what your",
+        "your would",
+        "would stopped",
+        "stopped whispering",
+        "whispering instructions",
+        "instructions pencil",
+        "pencil lead",
+        "lead once"
       ]
     }
   ]

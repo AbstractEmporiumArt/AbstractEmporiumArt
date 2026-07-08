@@ -4805,12 +4805,15 @@
         "bluesky"
       ],
       "schedule": "2026-07-08T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-07-08T16:03:19.761Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mq5imqskzp2s",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mq5imqskzp2s",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116885199195401434",
       "_generated": true,
       "_category": "promotion_spotlight",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
@@ -4869,6 +4872,87 @@
       "_category": "knitting_craft_story",
       "_cta_type": "you can find more of this over at the site if you're curious",
       "_emotional_theme": "slow_making"
+    },
+    {
+      "id": "gen-1783526594905-0a78c0",
+      "content": "You know it’s a creative day when 'cleaning the studio' turns into an experimental art session featuring coffee rings and misplaced paintbrushes. Somehow, chaos feels right. This lives quietly on abstractemporium.art",
+      "bluesky_content": "You know it’s a creative day when you set out to 'clean the studio' and end up inventing a new art technique involving coffee rings and misplaced paintbrushes. This lives quietly on abstractemporium.art",
+      "mastodon_content": "You know it’s a creative day when 'cleaning the studio' turns into an experimental art session featuring coffee rings and misplaced paintbrushes. Somehow, chaos feels right. This lives quietly on abstractemporium.art",
+      "hashtags": [
+        "#CreativeMess",
+        "#ArtAccidents"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-10T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "embracing_chaos"
+    },
+    {
+      "id": "gen-1783526596744-ca7b1e",
+      "content": "Abstract Emporium began with one question: What does it mean to feel something you can’t put into words? Shapes and colors helped me answer. If you want to explore that answer, there’s a whole collection on the site.",
+      "bluesky_content": "Abstract Emporium started with a question: What does it mean to feel something you can’t describe? Shapes and colors became the answer. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Abstract Emporium began with one question: What does it mean to feel something you can’t put into words? Shapes and colors helped me answer. If you want to explore that answer, there’s a whole collection on the site.",
+      "hashtags": [
+        "#ColorStories",
+        "#AbstractArt"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-10T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "origin_story",
+      "_cta_type": "gallery",
+      "_emotional_theme": "expressing_the_unsaid"
+    },
+    {
+      "id": "gen-1783526598404-260fee",
+      "content": "Ever wonder what your art would say if you stopped whispering instructions? Let the pencil lead for once—it might surprise you. 🖤 The full piece (and others like it) lives on abstractemporium.art",
+      "bluesky_content": "Ever wonder what your art would say if you stopped whispering instructions? Let the pencil lead for once—it might surprise you. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Ever wonder what your art would say if you stopped whispering instructions? Let the pencil lead for once—it might surprise you. 🖤 The full piece (and others like it) lives on abstractemporium.art",
+      "hashtags": [
+        "#LetArtLead",
+        "#CreativeFreedom"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-11T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "inspiration_spark",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "intuitive_creation"
     }
   ]
 }

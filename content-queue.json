@@ -4959,6 +4959,87 @@
       "_category": "inspiration_spark",
       "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
       "_emotional_theme": "intuitive_creation"
+    },
+    {
+      "id": "gen-1783635903705-d050ae",
+      "content": "Art sometimes feels like catching fragments of a dream—bits that don’t quite make sense but feel true anyway. If you like wandering through abstract colors and stories, abstractemporium.art has more.",
+      "bluesky_content": "Art sometimes feels like catching fragments of a dream—bits that don’t quite make sense but feel true anyway. If you like wandering through abstract colors and stories, abstractemporium.art has more.",
+      "mastodon_content": "Art sometimes feels like catching fragments of a dream—bits that don’t quite make sense but feel true anyway. If you like wandering through abstract colors and stories, abstractemporium.art has more.",
+      "hashtags": [
+        "#ArtThroughColor",
+        "#CreativeWander"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-11T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "if this is your kind of thing, abstractemporium.art has more",
+      "_emotional_theme": "dreamlike_discovery"
+    },
+    {
+      "id": "gen-1783635906257-3ed3c8",
+      "content": "Ever notice how abstract art loves to live in the in-between? Not quite one thing, not quite another—but exactly itself. A little mystery for your walls. You can find more of this over at the site if you're curious.",
+      "bluesky_content": "Ever notice how abstract art loves to live in the in-between? Not quite one thing, not quite another—but exactly itself. A little mystery for your walls. You can find more of this over at the site if you'd like.",
+      "mastodon_content": "Ever notice how abstract art loves to live in the in-between? Not quite one thing, not quite another—but exactly itself. A little mystery for your walls. You can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#AbstractReflections",
+        "#ArtfulSpaces"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-12T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "embracing_ambiguity"
+    },
+    {
+      "id": "gen-1783635910907-2d33ce",
+      "content": "What if transformation isn’t a straight road but a meadow? No set path, just open space to wander, rest, and grow at your own pace. Maybe it’s not about getting there—maybe it’s about learning the landscape along the way. This lives quietly on abstractemporium.art.",
+      "bluesky_content": "What if transformation isn’t a straight road but a meadow? No set path, just open space to wander, rest, and grow in your own way. Sounds nice, doesn’t it? This lives quietly on abstractemporium.art.",
+      "mastodon_content": "What if transformation isn’t a straight road but a meadow? No set path, just open space to wander, rest, and grow at your own pace. Maybe it’s not about getting there—maybe it’s about learning the landscape along the way. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#PathlessJourney",
+        "#GrowthInTheMeadow"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-12T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "transformation_arc",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "self-paced_growth"
     }
   ]
 }

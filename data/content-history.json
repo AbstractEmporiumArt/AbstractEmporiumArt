@@ -11,17 +11,17 @@
       "behind_the_scenes": "2026-07-05T15:15:21.553Z",
       "inspiration_spark": "2026-07-08T16:03:18.404Z",
       "origin_story": "2026-07-08T16:03:16.744Z",
-      "transformation_arc": "2026-07-02T16:06:39.693Z",
-      "promotion_spotlight": "2026-07-06T22:16:21.105Z"
+      "transformation_arc": "2026-07-09T22:25:10.908Z",
+      "promotion_spotlight": "2026-07-09T22:25:06.257Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-07-06T22:16:23.214Z",
-      "this lives quietly on abstractemporium.art": "2026-07-08T16:03:14.906Z",
+      "you can find more of this over at the site if you're curious": "2026-07-09T22:25:06.257Z",
+      "this lives quietly on abstractemporium.art": "2026-07-09T22:25:10.908Z",
       "there's a whole collection of this kind of work on the site": "2026-07-08T16:03:16.744Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-07-08T16:03:18.404Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-07-06T22:16:21.105Z"
+      "if this is your kind of thing, abstractemporium.art has more": "2026-07-09T22:25:03.706Z"
     }
   },
   "hashtag_sets_used": [
@@ -547,6 +547,18 @@
     [
       "#LetArtLead",
       "#CreativeFreedom"
+    ],
+    [
+      "#ArtThroughColor",
+      "#CreativeWander"
+    ],
+    [
+      "#AbstractReflections",
+      "#ArtfulSpaces"
+    ],
+    [
+      "#PathlessJourney",
+      "#GrowthInTheMeadow"
     ]
   ],
   "posts": [
@@ -3777,6 +3789,84 @@
         "instructions pencil",
         "pencil lead",
         "lead once"
+      ]
+    },
+    {
+      "id": "gen-1783635903705-d050ae",
+      "timestamp": "2026-07-09T22:25:03.706Z",
+      "category": "promotion_spotlight",
+      "cta_type": "if this is your kind of thing, abstractemporium.art has more",
+      "emotional_theme": "dreamlike_discovery",
+      "bluesky_content": "Art sometimes feels like catching fragments of a dream—bits that don’t quite make sense but feel true anyway. If you like wandering through abstract colors and stories, abstractemporium.art has more.",
+      "mastodon_content": "Art sometimes feels like catching fragments of a dream—bits that don’t quite make sense but feel true anyway. If you like wandering through abstract colors and stories, abstractemporium.art has more.",
+      "hashtags": [
+        "#ArtThroughColor",
+        "#CreativeWander"
+      ],
+      "content_hash": "15ebdc238afb526afb06e42dfd5c192f4cfea3d38854f6c6511533318203c83e",
+      "key_phrases": [
+        "sometimes feels",
+        "feels like",
+        "like catching",
+        "catching fragments",
+        "fragments dream",
+        "dream bits",
+        "bits that",
+        "that quite",
+        "quite make",
+        "make sense"
+      ]
+    },
+    {
+      "id": "gen-1783635906257-3ed3c8",
+      "timestamp": "2026-07-09T22:25:06.257Z",
+      "category": "promotion_spotlight",
+      "cta_type": "you can find more of this over at the site if you're curious",
+      "emotional_theme": "embracing_ambiguity",
+      "bluesky_content": "Ever notice how abstract art loves to live in the in-between? Not quite one thing, not quite another—but exactly itself. A little mystery for your walls. You can find more of this over at the site if you'd like.",
+      "mastodon_content": "Ever notice how abstract art loves to live in the in-between? Not quite one thing, not quite another—but exactly itself. A little mystery for your walls. You can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#AbstractReflections",
+        "#ArtfulSpaces"
+      ],
+      "content_hash": "ac96c80b444d39f1a1d2cf3be0d33d56cad8df434abe0c1b2bac90dfb4a80079",
+      "key_phrases": [
+        "ever notice",
+        "notice abstract",
+        "abstract loves",
+        "loves live",
+        "live between",
+        "between quite",
+        "quite thing",
+        "thing quite",
+        "quite another",
+        "another exactly"
+      ]
+    },
+    {
+      "id": "gen-1783635910907-2d33ce",
+      "timestamp": "2026-07-09T22:25:10.908Z",
+      "category": "transformation_arc",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "self-paced_growth",
+      "bluesky_content": "What if transformation isn’t a straight road but a meadow? No set path, just open space to wander, rest, and grow in your own way. Sounds nice, doesn’t it? This lives quietly on abstractemporium.art.",
+      "mastodon_content": "What if transformation isn’t a straight road but a meadow? No set path, just open space to wander, rest, and grow at your own pace. Maybe it’s not about getting there—maybe it’s about learning the landscape along the way. This lives quietly on abstractemporium.art.",
+      "hashtags": [
+        "#PathlessJourney",
+        "#GrowthInTheMeadow"
+      ],
+      "content_hash": "143682fabc7ad25a8b5f2a225960c710d0db41c58ed5f6b406ad97ac66d842d1",
+      "key_phrases": [
+        "what transformation",
+        "transformation straight",
+        "straight road",
+        "road meadow",
+        "meadow path",
+        "path just",
+        "just open",
+        "open space",
+        "space wander",
+        "wander rest"
       ]
     }
   ]

@@ -4865,12 +4865,15 @@
         "bluesky"
       ],
       "schedule": "2026-07-09T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-07-09T16:29:10.074Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mqa2jur3av26",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mqa2jur3av26",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116890963056384513",
       "_generated": true,
       "_category": "knitting_craft_story",
       "_cta_type": "you can find more of this over at the site if you're curious",

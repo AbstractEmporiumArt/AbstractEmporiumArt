@@ -5049,6 +5049,87 @@
       "_category": "transformation_arc",
       "_cta_type": "this lives quietly on abstractemporium.art",
       "_emotional_theme": "self-paced_growth"
+    },
+    {
+      "id": "gen-1783781826940-4f2b87",
+      "content": "Do you ever wonder what your unspoken feelings would look like in shapes and colors? I like to think they’re already there, waiting for us to notice. There’s a whole collection of this kind of work on the site.",
+      "bluesky_content": "Do you ever wonder what your unspoken feelings would look like in shapes and colors? Sometimes I think they’re already there, waiting for us to notice. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Do you ever wonder what your unspoken feelings would look like in shapes and colors? I like to think they’re already there, waiting for us to notice. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#InnerLanguage",
+        "#ColorAndForm"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-13T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "emotional_reflection",
+      "_cta_type": "there's a whole collection of this kind of work on the site",
+      "_emotional_theme": "unspoken_feelings"
+    },
+    {
+      "id": "gen-1783781838478-30feef",
+      "content": "Today’s accidental masterpiece: spilled ink that somehow mapped out an entire coastline on my desk. Proof that art sometimes has its own ideas. The full piece (and others like it) lives on abstractemporium.art 🌊",
+      "bluesky_content": "Today’s accidental masterpiece: spilled ink that somehow mapped out an entire coastline on my desk. Proof that art sometimes shows up uninvited. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Today’s accidental masterpiece: spilled ink that somehow mapped out an entire coastline on my desk. Proof that art sometimes has its own ideas. The full piece (and others like it) lives on abstractemporium.art 🌊",
+      "hashtags": [
+        "#CreativeSurprises",
+        "#ArtInProcess"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-13T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "behind_the_scenes",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "embracing_accidents"
+    },
+    {
+      "id": "gen-1783781840640-6af5d9",
+      "content": "Have you ever noticed how your mind quiets when you trace the edge of a shadow or follow the curve of a pencil line? Like your thoughts are taking a breather for once. If this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "Have you ever noticed how your mind quiets when you trace the edge of a shadow or follow the curve of a pencil line? Like your thoughts are taking a breather. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Have you ever noticed how your mind quiets when you trace the edge of a shadow or follow the curve of a pencil line? Like your thoughts are taking a breather for once. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#QuietFocus",
+        "#TracingLines"
+      ],
+      "image": null,
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-14T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creative_mindfulness",
+      "_cta_type": "if this is your kind of thing",
+      "_emotional_theme": "mindful_stillness"
     }
   ]
 }

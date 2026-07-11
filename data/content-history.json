@@ -5,10 +5,10 @@
     "last_used": {
       "abstract_art_spotlight": "2026-07-05T15:15:33.413Z",
       "knitting_craft_story": "2026-07-06T22:16:23.214Z",
-      "emotional_reflection": "2026-07-04T10:13:37.781Z",
-      "creative_mindfulness": "2026-07-05T15:15:25.672Z",
+      "emotional_reflection": "2026-07-11T14:57:06.941Z",
+      "creative_mindfulness": "2026-07-11T14:57:20.640Z",
       "creator_humor": "2026-07-08T16:03:14.906Z",
-      "behind_the_scenes": "2026-07-05T15:15:21.553Z",
+      "behind_the_scenes": "2026-07-11T14:57:18.478Z",
       "inspiration_spark": "2026-07-08T16:03:18.404Z",
       "origin_story": "2026-07-08T16:03:16.744Z",
       "transformation_arc": "2026-07-09T22:25:10.908Z",
@@ -19,9 +19,9 @@
     "last_used": {
       "you can find more of this over at the site if you're curious": "2026-07-09T22:25:06.257Z",
       "this lives quietly on abstractemporium.art": "2026-07-09T22:25:10.908Z",
-      "there's a whole collection of this kind of work on the site": "2026-07-08T16:03:16.744Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-07-08T16:03:18.404Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-07-09T22:25:03.706Z"
+      "there's a whole collection of this kind of work on the site": "2026-07-11T14:57:06.941Z",
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-07-11T14:57:18.478Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-07-11T14:57:20.640Z"
     }
   },
   "hashtag_sets_used": [
@@ -559,6 +559,18 @@
     [
       "#PathlessJourney",
       "#GrowthInTheMeadow"
+    ],
+    [
+      "#InnerLanguage",
+      "#ColorAndForm"
+    ],
+    [
+      "#CreativeSurprises",
+      "#ArtInProcess"
+    ],
+    [
+      "#QuietFocus",
+      "#TracingLines"
     ]
   ],
   "posts": [
@@ -3867,6 +3879,84 @@
         "open space",
         "space wander",
         "wander rest"
+      ]
+    },
+    {
+      "id": "gen-1783781826940-4f2b87",
+      "timestamp": "2026-07-11T14:57:06.941Z",
+      "category": "emotional_reflection",
+      "cta_type": "there's a whole collection of this kind of work on the site",
+      "emotional_theme": "unspoken_feelings",
+      "bluesky_content": "Do you ever wonder what your unspoken feelings would look like in shapes and colors? Sometimes I think they’re already there, waiting for us to notice. There’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "Do you ever wonder what your unspoken feelings would look like in shapes and colors? I like to think they’re already there, waiting for us to notice. There’s a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#InnerLanguage",
+        "#ColorAndForm"
+      ],
+      "content_hash": "185674b60c78c42d25df720f02644dadef57f8093464d8561ec53c5a0571081b",
+      "key_phrases": [
+        "ever wonder",
+        "wonder what",
+        "what your",
+        "your unspoken",
+        "unspoken feelings",
+        "feelings would",
+        "would look",
+        "look like",
+        "like shapes",
+        "shapes colors"
+      ]
+    },
+    {
+      "id": "gen-1783781838478-30feef",
+      "timestamp": "2026-07-11T14:57:18.478Z",
+      "category": "behind_the_scenes",
+      "cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "emotional_theme": "embracing_accidents",
+      "bluesky_content": "Today’s accidental masterpiece: spilled ink that somehow mapped out an entire coastline on my desk. Proof that art sometimes shows up uninvited. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Today’s accidental masterpiece: spilled ink that somehow mapped out an entire coastline on my desk. Proof that art sometimes has its own ideas. The full piece (and others like it) lives on abstractemporium.art 🌊",
+      "hashtags": [
+        "#CreativeSurprises",
+        "#ArtInProcess"
+      ],
+      "content_hash": "d6cb7ec9b4927c93bf690e806fcdeb4b0dae427516e7650964290f926c4e0f9d",
+      "key_phrases": [
+        "today accidental",
+        "accidental masterpiece",
+        "masterpiece spilled",
+        "spilled that",
+        "that somehow",
+        "somehow mapped",
+        "mapped entire",
+        "entire coastline",
+        "coastline desk",
+        "desk proof"
+      ]
+    },
+    {
+      "id": "gen-1783781840640-6af5d9",
+      "timestamp": "2026-07-11T14:57:20.640Z",
+      "category": "creative_mindfulness",
+      "cta_type": "if this is your kind of thing",
+      "emotional_theme": "mindful_stillness",
+      "bluesky_content": "Have you ever noticed how your mind quiets when you trace the edge of a shadow or follow the curve of a pencil line? Like your thoughts are taking a breather. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Have you ever noticed how your mind quiets when you trace the edge of a shadow or follow the curve of a pencil line? Like your thoughts are taking a breather for once. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#QuietFocus",
+        "#TracingLines"
+      ],
+      "content_hash": "6107ccc8ed38fb872f908cab69c364b1c13f3a18eff37c4512b28dad4d3b90ae",
+      "key_phrases": [
+        "have ever",
+        "ever noticed",
+        "noticed your",
+        "your mind",
+        "mind quiets",
+        "quiets when",
+        "when trace",
+        "trace edge",
+        "edge shadow",
+        "shadow follow"
       ]
     }
   ]

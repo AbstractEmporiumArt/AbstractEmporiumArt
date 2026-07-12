@@ -5045,12 +5045,15 @@
         "bluesky"
       ],
       "schedule": "2026-07-12T16:00:00.000Z",
-      "posted": false,
-      "postedPlatforms": [],
-      "postedAt": null,
-      "blueskyUrl": null,
-      "blueskyUri": null,
-      "mastodonUrl": null,
+      "posted": true,
+      "postedPlatforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "postedAt": "2026-07-12T21:54:38.145Z",
+      "blueskyUrl": "https://bsky.app/profile/abstractemporium.bsky.social/post/3mqi64mkndx2q",
+      "blueskyUri": "at://did:plc:uovvr5qogqiohdphz6sfakpi/app.bsky.feed.post/3mqi64mkndx2q",
+      "mastodonUrl": "https://mastodon.social/@AbstractEmporiumArt/116909229830039296",
       "_generated": true,
       "_category": "transformation_arc",
       "_cta_type": "this lives quietly on abstractemporium.art",

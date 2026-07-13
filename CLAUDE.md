@@ -27,10 +27,10 @@
 - **ZERO traffic** - No visitors, no sales, no marketing executed
 - Social media automation scripts exist but never run
 - Email automation configured but no subscribers
-- Knitting products incomplete (abandon for now, focus coloring books + art prints)
+- Knitting *pattern bundles* deprioritized (too much competition). Lissa's Knitting Creations (slippers/tuques/cloths/scarves) is ACTIVE physical line.
 
-### 🎯 Current Priority
-**GET FIRST 10 SALES via Reddit/Facebook/Instagram posting** - Market BOTH coloring books (Ko-fi) AND art prints (art platforms) (see FIRST_10_SALES_POSTS.md)
+### 🎯 Current Priority (updated 2026-07-12)
+**Build Z3nw1ck shop section + Lissa's Knitting Creations + Commissions pages.** Main focus = Z3nw1ck (candles/wax melts/incense), Lissa's Knitting Creations (slippers/tuques/cloths/scarves), Commissions (fluid/freehand art). POD (ArtPal/FAA/RedBubble/TheHug) kept passive. Coloring books still live. Knitting *pattern bundles* deprioritized.
 
 ---
 
@@ -41,10 +41,12 @@
 - Before creating new guides: Execute what exists first
 - Bias toward action over planning
 
-### 2. **Focus: Two Core Product Lines**
-- **Coloring Books:** 3 books + 1 bundle on Ko-fi (therapeutic, instant download)
-- **Abstract Art Prints:** 5 platforms (Fine Art America, ArtPal, RedBubble, TheHug.art) for wall art/gifts
-- Ignore knitting bundles (not ready, different audience)
+### 2. **Active Product Lines (updated 2026-07-12)**
+- **Z3nw1ck** (PRIMARY): hand-poured candles (2oz/2.5oz/5oz), wax melts, incense — soy wax + premium FO. Inventory live (see z3nw1ck.html).
+- **Lissa's Knitting Creations** (ACTIVE): slippers, tuques, wash cloths, scarves — physical line, NOT bundles.
+- **Commissions** (fluid/freehand abstract art): needs page build.
+- **Coloring Books** (Ko-fi): 4 books, still live.
+- **Art POD** (ArtPal/FAA/RedBubble/TheHug): passive, zero effort.
 - Don't add NEW product categories until first 50 sales achieved across existing
 
 ### 3. **Traffic Before Features**
@@ -198,17 +200,10 @@ KNITTING_*.md                   (80+ files - archive mentally)
 
 ### When Asked to "Create New Product/Feature"
 
-**DEFAULT ANSWER: NO**
+**DEFAULT for unapproved categories: NO.**
 
-Only proceed if:
-- ✅ First 50 coloring book sales achieved
-- ✅ User explicitly insists despite warning
-- ✅ Won't distract from core business (coloring books)
-
-**Reasons:**
-- Product line confusion dilutes marketing
-- 3 books + 1 bundle is already complete offer
-- More products ≠ more sales (traffic is the bottleneck)
+APPROVED active lines (build freely): Z3nw1ck, Lissa's Knitting Creations, Commissions, Coloring Books.
+DECLINED: knitting *pattern bundles* (too much competition). New POD platforms: NO (traffic is bottleneck, not channels).
 
 ---
 
@@ -223,8 +218,8 @@ Only proceed if:
 **Fix:** Post manually for 2 weeks, learn what works, THEN automate
 
 ### ❌ Feature Creep
-**Symptom:** "Let's add knitting patterns + custom commissions + newsletter + chatbot"  
-**Fix:** Focus coloring books only until 50 sales
+**Symptom:** "Let's add Etsy + Gumroad + a 4th POD + a chatbot"
+**Fix:** Master current lines (Z3nw1ck, LKC, Commissions, coloring books) before new platforms
 
 ### ❌ Platform Proliferation
 **Symptom:** "Let's also sell on Etsy, Gumroad, Shopify, Amazon..."  
@@ -318,8 +313,8 @@ When working on Abstract Emporium:
 1. **Read this file first** - Context prevents wasted work
 2. **Verify before changing** - Test live site, check if actually broken
 3. **Execute before documenting** - Bias toward shipping over planning
-4. **Focus two product lines** - Coloring books (Ko-fi) + Art prints (5 platforms). Ignore knitting, ignore new categories until sales proven
-5. **Marketing > Features** - Traffic is the bottleneck, not functionality
+4. **Build approved lines** - Z3nw1ck, Lissa's Knitting Creations, Commissions, Coloring Books. POD passive. Knitting *pattern bundles* deprioritized.
+5. **Marketing > Features** - Traffic is the bottleneck, not product count. Manual marketing (Reddit/FB/Pinterest/IG) for approved lines.
 6. **Use FIRST_10_SALES_POSTS.md** - Ready-to-use marketing content exists
 
 **Primary Goal:** Help user get first 10 sales (coloring books OR art prints) via manual Reddit/Facebook/Instagram posting, NOT by building new features.

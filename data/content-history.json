@@ -3,7 +3,7 @@
   "description": "Permanent non-repetition memory for the Abstract Emporium content engine. Every generated and posted entry is stored here. Never delete entries — only append.",
   "category_rotation": {
     "last_used": {
-      "abstract_art_spotlight": "2026-07-05T15:15:33.413Z",
+      "abstract_art_spotlight": "2026-07-13T11:14:57.165Z",
       "knitting_craft_story": "2026-07-06T22:16:23.214Z",
       "emotional_reflection": "2026-07-11T14:57:06.941Z",
       "creative_mindfulness": "2026-07-11T14:57:20.640Z",
@@ -12,14 +12,14 @@
       "inspiration_spark": "2026-07-08T16:03:18.404Z",
       "origin_story": "2026-07-08T16:03:16.744Z",
       "transformation_arc": "2026-07-09T22:25:10.908Z",
-      "promotion_spotlight": "2026-07-09T22:25:06.257Z"
+      "promotion_spotlight": "2026-07-13T11:14:53.174Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-07-09T22:25:06.257Z",
-      "this lives quietly on abstractemporium.art": "2026-07-09T22:25:10.908Z",
-      "there's a whole collection of this kind of work on the site": "2026-07-11T14:57:06.941Z",
+      "you can find more of this over at the site if you're curious": "2026-07-13T11:14:50.847Z",
+      "this lives quietly on abstractemporium.art": "2026-07-13T11:14:53.174Z",
+      "there's a whole collection of this kind of work on the site": "2026-07-13T11:14:57.165Z",
       "the full piece (and others like it) lives on abstractemporium.art": "2026-07-11T14:57:18.478Z",
       "if this is your kind of thing, abstractemporium.art has more": "2026-07-11T14:57:20.640Z"
     }
@@ -571,6 +571,18 @@
     [
       "#QuietFocus",
       "#TracingLines"
+    ],
+    [
+      "#SubtleArt",
+      "#NegativeSpace"
+    ],
+    [
+      "#ArtPause",
+      "#AbstractView"
+    ],
+    [
+      "#AbstractVibes",
+      "#ArtAndEmotion"
     ]
   ],
   "posts": [
@@ -3957,6 +3969,84 @@
         "trace edge",
         "edge shadow",
         "shadow follow"
+      ]
+    },
+    {
+      "id": "gen-1783941290847-792857",
+      "timestamp": "2026-07-13T11:14:50.847Z",
+      "category": "promotion_spotlight",
+      "cta_type": "fine_art_america_sale",
+      "emotional_theme": "introspection",
+      "bluesky_content": "I was framing one of my abstracts today and realized how much the negative space does the talking. What’s left out feels as meaningful as what’s there. You can find more of this over at the site if you’re curious.",
+      "mastodon_content": "I was framing one of my abstracts today and realized how much the negative space does the talking. What’s left out feels as meaningful as what’s there. You can find more of this over at the site if you’re curious.",
+      "hashtags": [
+        "#SubtleArt",
+        "#NegativeSpace"
+      ],
+      "content_hash": "3ed768164a05361349ad5a9eb0a0a6048393824027c15089d6db0c77995fb04e",
+      "key_phrases": [
+        "framing abstracts",
+        "abstracts today",
+        "today realized",
+        "realized much",
+        "much negative",
+        "negative space",
+        "space does",
+        "does talking",
+        "talking what",
+        "what left"
+      ]
+    },
+    {
+      "id": "gen-1783941293174-9005d9",
+      "timestamp": "2026-07-13T11:14:53.174Z",
+      "category": "promotion_spotlight",
+      "cta_type": "this lives quietly on abstractemporium.art",
+      "emotional_theme": "pause_in_motion",
+      "bluesky_content": "I’ve always thought abstract art holds its breath. It’s a pause, a moment suspended in color and form, like time caught mid-motion. A reminder to just *be*. You’ll find prints of mine over on abstractemporium.art.",
+      "mastodon_content": "I’ve always thought abstract art holds its breath. It’s a pause, a moment suspended in color and form, like time caught mid-motion. A reminder to just *be*. You’ll find prints of mine over on abstractemporium.art.",
+      "hashtags": [
+        "#ArtPause",
+        "#AbstractView"
+      ],
+      "content_hash": "fd7b79ddea60fd98528b6916f1b4bd2883692a4f718024610c6e06c3162ae781",
+      "key_phrases": [
+        "always thought",
+        "thought abstract",
+        "abstract holds",
+        "holds breath",
+        "breath pause",
+        "pause moment",
+        "moment suspended",
+        "suspended color",
+        "color form",
+        "form like"
+      ]
+    },
+    {
+      "id": "gen-1783941297165-160811",
+      "timestamp": "2026-07-13T11:14:57.165Z",
+      "category": "abstract_art_spotlight",
+      "cta_type": "art_collection",
+      "emotional_theme": "quiet_energy",
+      "bluesky_content": "This piece feels like when the rain has just stopped—quiet yet electric, as if the world is holding its breath. Each brushstroke learned how to wait. There's a whole collection of this kind of work on the site.",
+      "mastodon_content": "This piece feels like when the rain has just stopped—quiet yet electric, as if the world is holding its breath. Each brushstroke learned how to wait. There's a whole collection of this kind of work on the site.",
+      "hashtags": [
+        "#AbstractVibes",
+        "#ArtAndEmotion"
+      ],
+      "content_hash": "49ae7146391563c81da1904d8651947ba359abc17b3fc88f6b5bddba1b7de6b2",
+      "key_phrases": [
+        "this piece",
+        "piece feels",
+        "feels like",
+        "like when",
+        "when rain",
+        "rain just",
+        "just stopped",
+        "stopped quiet",
+        "quiet electric",
+        "electric world"
       ]
     }
   ]

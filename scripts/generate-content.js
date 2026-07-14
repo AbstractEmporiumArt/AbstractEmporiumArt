@@ -92,7 +92,7 @@ const COLLECTIONS = [
 // ponytail: image per category so posts ship WITH media (text-only = low reach)
 const CATEGORY_IMAGE = {
   z3nw1ck_spotlight: ['z3nw1ck-product-photos/z3nw1ck-satsuma.png', 'z3nw1ck-product-photos/z3nw1ck-promo.jpg', 'z3nw1ck-product-photos/z3nw1ck-catalog.jpg'],
-  knitting_craft_story: '3-KnittingPatterns/Starter-Pack/9-ChunkyBeanie/STARTERPACKChunkyBeanie5-CompletedAbstractEmporium.png',
+  knitting_craft_story: ['lkc-product-photos/lkc-slippers.jpg', 'lkc-product-photos/lkc-beanies.jpg', 'lkc-product-photos/lkc-mop-pads.jpg', 'lkc-product-photos/lkc-checker-cloths.jpg'],
   promotion_spotlight: ['banner.jpg', 'z3nw1ck-product-photos/loyalty-card.jpg', 'z3nw1ck-product-photos/business-banner.jpg'],   // ponytail: promo/business assets
   abstract_art_spotlight: ['logo.jpg', 'z3nw1ck-product-photos/coloring-books-banner.jpg'],
   emotional_reflection: 'banner.jpg',

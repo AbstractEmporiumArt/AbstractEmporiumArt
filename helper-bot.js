@@ -18,8 +18,8 @@ class AbstractEmporiumBot {
     return {
       greeting: [
         "Welcome to Abstract Emporium! 🎨 I'm here to help you explore our collections. Would you like to browse our gallery, learn about a specific collection, or need help finding something?",
-        "Hello! 👋 I can help you navigate our art collections from ArtPal and Fine Art America, or answer questions about our work. What interests you?",
-        "Hi there! Welcome to Abstract Emporium! I can help you find artworks, learn about our collections, or guide you through the site. What can I assist with?",
+        "Hello! 👋 I can help you find the right thing — original art prints, hand-poured Z3NW1CK candles & incense, Lissa's hand-knit slippers/tuques/scarves, or coloring books. What are you looking for?",
+        "Hi there! Welcome to Abstract Emporium! 🎨 I can help you find artworks, our Z3NW1CK home scents, handmade knits, or guide you through the site. What can I assist with?",
       ],
       gallery: [
         "Our gallery features 41+ artworks across two platforms:\n\n🎨 **ArtPal Collections:**\n• Magical Wonderland (4 pieces)\n• Serenity in Waves (2 pieces)\n• Ethereal Kaleidoscope (3 pieces)\n• Gallery Items (12 individual pieces)\n\n🖼️ **Fine Art America Collections:**\n• Featured Items: Serenity, Magical Mountains, Radiant Spectrum\n• Abstract Warrior Cosmic (14 pieces)\n• Melodic Expressions (8 pieces)\n\nYou can visit gallery.html to browse with filters by platform, or ask me about specific collections!",
@@ -66,6 +66,14 @@ class AbstractEmporiumBot {
         "🌟 **My recommendations for you:**\n\nIf you love **vibrant colors**: Try 'Neon Gardenz' or 'Radiant Spectrum'\nIf you love **peaceful art**: Explore 'Serenity' or 'Flowing Tranquility'\nIf you love **cosmic themes**: Check out the 'Abstract Warrior Cosmic' collection (14 pieces!)\nIf you love **music vibes**: Browse 'Melodic Expressions' series (8 pieces)\nIf you love **whimsy**: Explore 'Magical Wonderland' collection\n\nNeed more specific recommendations? Tell me what you like!",
         "Based on what I know about great art, I'd recommend:\n\n✨ **Start here:**\n- Neon Gardenz (vibrant & energetic)\n- Serenity (peaceful & meditative)\n- Radiant Fusion (balanced & beautiful)\n\n📚 **Then explore:**\n- Full collections that match your favorite\n- Related items in the same series\n- Items on different platforms\n\nWhat style of abstract art appeals to you most?",
       ],
+      z3nw1ck: [
+        "🕯️ **Z3NW1CK by Abstract Emporium** — small-batch hand-poured soy candles, soy wax melts, and 11\" wood-pulp incense sticks!\n\n🌟 **Scents:**\n• Satsuma (bright citrus + musk)\n• Fruit Loops (sweet playful cereal throwback)\n• Simple Daydreams (calm lavender, white oak, cashmere)\n\n🇨🇦 Handcrafted in Canada. Local pickup/drop-off in Thunder Bay + shipping available. Orders welcome!\n\n👉 Browse: z3nw1ck.html",
+        "Looking for cozy? **Z3NW1CK** candles & incense are hand-poured in small batches right here in Canada 🇨🇦:\n\n• 2oz / 2.5oz / 5oz soy candles\n• Soy wax melts\n• 11\" incense sticks (3 scents)\n\nBurn time ~40 min per incense, clean soy burn for candles. Local pickup in Thunder Bay or I ship!\n\n👉 z3nw1ck.html",
+      ],
+      knitting: [
+        "🧶 **Lissa's Knitting Creations** — hand-knitted made-to-order pieces:\n\n• Cozy slippers\n• Warm tuques (beanies)\n• Soft wash cloths\n• Scarves\n\nEach made by hand with roots in a multigenerational family tradition. Slow, meditative, made to last.\n\n📧 To order: email abstractemporiumart@outlook.com with your colour + size preferences!",
+        "Want something handmade and warm? **Lissa's Knitting Creations** makes to order:\n\n🧦 Slippers\n🧢 Tuques (beanies)\n🧼 Wash cloths\n🧣 Scarves\n\nTell me your favourite colours + size and Lissa will knit it up! Email abstractemporiumart@outlook.com to place an order 💜",
+      ],
       notFound: [
         "I'm not sure about that, but I can help! 🤔\n\nTry asking me about:\n• **Gallery** - Browse our collections\n• **ArtPal** or **Fine Art America** - Where to buy\n• **How to browse** - Navigation tips\n• **Collections** - Learn about specific series\n• **Contact** - How to reach us\n• **Recommendations** - Finding art you'll love\n\nOr just ask another question!",
         "Hmm, I didn't quite catch that. 😊 \n\nI'm best at helping with:\n✅ Finding artworks\n✅ Navigating the site\n✅ Learning about collections\n✅ Shopping information\n✅ General questions\n\nWhat would you like to know about Abstract Emporium?",
@@ -102,6 +110,35 @@ class AbstractEmporiumBot {
       input.includes("fineartamerica")
     ) {
       return this.getRandomResponse("fineartamerica");
+    }
+
+    // ponytail: route candle/incense/scent/wax intent to Z3NW1CK
+    if (
+      input.includes("candle") ||
+      input.includes("incense") ||
+      input.includes("scent") ||
+      input.includes("scented") ||
+      input.includes("wax melt") ||
+      input.includes("wax") ||
+      input.includes("z3nw1ck") ||
+      input.includes("z3nwick")
+    ) {
+      return this.getRandomResponse("z3nw1ck");
+    }
+
+    // ponytail: route knitwear intent to Lissa's Knitting Creations (email-to-order)
+    if (
+      input.includes("knit") ||
+      input.includes("knitting") ||
+      input.includes("slipper") ||
+      input.includes("tuque") ||
+      input.includes("beanie") ||
+      input.includes("scarf") ||
+      input.includes("wash cloth") ||
+      input.includes("washcloth") ||
+      input.includes("yarn")
+    ) {
+      return this.getRandomResponse("knitting");
     }
 
     if (

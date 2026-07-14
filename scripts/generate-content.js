@@ -84,7 +84,7 @@ const COLLECTIONS = [
     name: 'Z3NW1CK by Abstract Emporium',
     type: 'handmade_home',
     url: 'https://abstractemporium.art/z3nw1ck.html',
-    description: 'Small-batch hand-poured soy candles (2oz/2.5oz/5oz), soy wax melts, and 11-inch wood-pulp incense sticks in three scents: Satsuma (bright citrus + musk), Fruit Loops (sweet playful cereal throwback), Simple Daydreams (calm lavender, white oak, cashmere). Handcrafted in Canada. Local pickup/drop-off in Thunder Bay + shipping available. Orders welcome.',
+    description: 'Small-batch hand-poured soy candles (2oz/2.5oz/5oz), soy wax melts, and 11-inch wood-pulp incense sticks in three signature scents: (1) Satsuma — bright citrus + white grapefruit lifted by soft white musk, juicy and uplifting; (2) Fruit Loops Type — sweet nostalgic cereal blend of tangy lemon, raspberry, orange, lime, cherry with sugared marshmallow in a vanilla base, playful; (3) Simple Daydreams — calming lavender + delicate magnolia warmed by white oak and soft cashmere, peaceful. Handcrafted in Canada from premium fragrance oils. Local pickup/drop-off in Thunder Bay + shipping available. Orders welcome.',
     themes: ['small batch', 'hand poured', 'soy candles', 'incense', 'wax melts', 'cozy home', 'scent', 'made in canada', 'sensory comfort']
   }
 ];

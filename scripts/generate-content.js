@@ -93,10 +93,9 @@ const COLLECTIONS = [
 const CATEGORY_IMAGE = {
   z3nw1ck_spotlight: ['z3nw1ck-product-photos/z3nw1ck-satsuma.png', 'z3nw1ck-product-photos/z3nw1ck-promo.jpg', 'z3nw1ck-product-photos/z3nw1ck-catalog.jpg'],
   knitting_craft_story: '3-KnittingPatterns/Starter-Pack/9-ChunkyBeanie/STARTERPACKChunkyBeanie5-CompletedAbstractEmporium.png',
-  promotion_spotlight: 'banner.jpg',
-  abstract_art_spotlight: 'logo.jpg',
+  promotion_spotlight: ['banner.jpg', 'z3nw1ck-product-photos/loyalty-card.jpg'],   // ponytail: loyalty card is a promo asset
+  abstract_art_spotlight: ['logo.jpg', 'z3nw1ck-product-photos/coloring-books-banner.jpg'],
   emotional_reflection: 'banner.jpg',
-  creative_mindfulness: 'banner.jpg',
   creator_humor: 'logo.jpg',
   behind_the_scenes: 'banner.jpg',
   inspiration_spark: 'logo.jpg',

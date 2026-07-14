@@ -70,7 +70,7 @@ const COLLECTIONS = [
     name: 'Abstract art gallery',
     type: 'gallery',
     url: 'https://abstractemporium.art/gallery.html',
-    description: '40+ original abstract pieces available as prints, canvas, framed posters, and home décor on ArtPal and Fine Art America.',
+    description: '40+ original abstract pieces available as prints, canvas, framed posters, and home décor across our POD stores: Fine Art America, ArtPal, RedBubble, and TheHug.art.',
     themes: ['original art', 'wall decor', 'print on demand', 'colour-driven', 'expressive abstraction']
   },
   {
@@ -88,6 +88,21 @@ const COLLECTIONS = [
     themes: ['small batch', 'hand poured', 'soy candles', 'incense', 'wax melts', 'cozy home', 'scent', 'made in canada', 'sensory comfort']
   }
 ];
+
+// ponytail: image per category so posts ship WITH media (text-only = low reach)
+const CATEGORY_IMAGE = {
+  z3nw1ck_spotlight: 'z3nw1ck-product-photos/z3nw1ck-satsuma.png',
+  knitting_craft_story: '3-KnittingPatterns/Starter-Pack/9-ChunkyBeanie/STARTERPACKChunkyBeanie5-CompletedAbstractEmporium.png',
+  promotion_spotlight: 'banner.jpg',
+  abstract_art_spotlight: 'logo.jpg',
+  emotional_reflection: 'banner.jpg',
+  creative_mindfulness: 'banner.jpg',
+  creator_humor: 'logo.jpg',
+  behind_the_scenes: 'banner.jpg',
+  inspiration_spark: 'logo.jpg',
+  origin_story: 'logo.jpg',
+  transformation_arc: 'banner.jpg'
+};
 
 const BRAND_VOICE = `
 Abstract Emporium is not a business account — it is a creative personality.
@@ -413,7 +428,7 @@ async function main() {
       bluesky_content: post.bluesky_content,
       mastodon_content: post.mastodon_content,
       hashtags: post.hashtags || [],
-      image: null,
+      image: CATEGORY_IMAGE[post.category] || 'banner.jpg',
       link: null,
       platforms: ['mastodon', 'bluesky'],
       schedule,

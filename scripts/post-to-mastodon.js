@@ -27,13 +27,22 @@ if (!MASTODON_ACCESS_TOKEN) {
 /**
  * Post to Mastodon
  */
-async function postToMastodon(content, visibility = 'public') {
+async function postToMastodon(content, visibility = 'public', imagePath) {
+  let mediaId;
+  // ponytail: attach image if present + exists (text-only = low reach)
+  if (imagePath && fs.existsSync(imagePath)) {
+    try {
+      mediaId = await uploadMedia(imagePath);
+    } catch (e) {
+      console.warn('⚠️ Mastodon image upload failed, posting text-only:', e.message);
+    }
+  }
+
   const url = new URL('/api/v1/statuses', MASTODON_INSTANCE_URL);
-  
-  const data = JSON.stringify({
-    status: content,
-    visibility: visibility
-  });
+
+  const body = { status: content, visibility };
+  if (mediaId) body.media_ids = [mediaId];
+  const data = JSON.stringify(body);
 
   return new Promise((resolve, reject) => {
     const options = {
@@ -44,14 +53,9 @@ async function postToMastodon(content, visibility = 'public') {
         'Content-Length': Buffer.byteLength(data)
       }
     };
-
     const req = https.request(url, options, (res) => {
       let body = '';
-      
-      res.on('data', (chunk) => {
-        body += chunk;
-      });
-      
+      res.on('data', (chunk) => { body += chunk; });
       res.on('end', () => {
         if (res.statusCode >= 200 && res.statusCode < 300) {
           try {
@@ -70,6 +74,38 @@ async function postToMastodon(content, visibility = 'public') {
       reject(error);
     });
 
+    req.write(data);
+    req.end();
+  });
+}
+
+// ponytail: upload image to Mastodon v2 media API, return media id
+async function uploadMedia(imagePath) {
+  const ext = imagePath.split('.').pop().toLowerCase();
+  const mime = ext === 'png' ? 'image/png' : ext === 'jpg' || ext === 'jpeg' ? 'image/jpeg' : 'image/webp';
+  const url = new URL('/api/v2/media', MASTODON_INSTANCE_URL);
+  const data = fs.readFileSync(imagePath);
+  return new Promise((resolve, reject) => {
+    const options = {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${MASTODON_ACCESS_TOKEN}`,
+        'Content-Type': mime
+      }
+    };
+    const req = https.request(url, options, (res) => {
+      let body = '';
+      res.on('data', (chunk) => { body += chunk; });
+      res.on('end', () => {
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          try { resolve(JSON.parse(body).id); }
+          catch (e) { reject(new Error('Failed to parse media response: ' + e.message)); }
+        } else {
+          reject(new Error(`Mastodon media API error ${res.statusCode}: ${body}`));
+        }
+      });
+    });
+    req.on('error', reject);
     req.write(data);
     req.end();
   });
@@ -237,7 +273,8 @@ async function main() {
     console.log(content);
     console.log('\n');
     
-    const response = await postToMastodon(content);
+    const imagePath = post.image ? join(SITE_ROOT, post.image) : null;
+    const response = await postToMastodon(content, 'public', imagePath);
     
     console.log('✅ Posted successfully to Mastodon!');
     console.log(`🔗 Post URL: ${response.url}`);

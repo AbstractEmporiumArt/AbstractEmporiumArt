@@ -126,28 +126,37 @@ function detectFacets(text) {
 /**
  * Post to Bluesky
  */
-async function postToBluesky(content, session) {
+async function postToBluesky(content, session, imagePath) {
   const url = new URL('/xrpc/com.atproto.repo.createRecord', BLUESKY_SERVICE);
-  
-  const now = new Date().toISOString();
-  const facets = detectFacets(content);
-  
+
   const record = {
     $type: 'app.bsky.feed.post',
     text: content,
-    createdAt: now
+    createdAt: new Date().toISOString()
   };
-  
-  if (facets) {
-    record.facets = facets;
+
+  const facets = detectFacets(content);
+  if (facets) record.facets = facets;
+
+  // ponytail: attach image if present + exists (text-only = low reach)
+  if (imagePath && fs.existsSync(imagePath)) {
+    try {
+      const blob = await uploadBlob(fs.readFileSync(imagePath), imagePath);
+      record.embed = {
+        $type: 'app.bsky.embed.images',
+        images: [{ alt: 'Abstract Emporium product', image: blob }]
+      };
+    } catch (e) {
+      console.warn('⚠️ Image upload failed, posting text-only:', e.message);
+    }
   }
-  
+
   const data = {
     repo: session.did,
     collection: 'app.bsky.feed.post',
-    record: record
+    record
   };
-  
+
   const options = {
     method: 'POST',
     headers: {
@@ -155,8 +164,23 @@ async function postToBluesky(content, session) {
       'Content-Type': 'application/json'
     }
   };
-  
+
   return makeRequest(url, options, data);
+}
+
+async function uploadBlob(data, imagePath) {
+  const ext = imagePath.split('.').pop().toLowerCase();
+  const mime = ext === 'png' ? 'image/png' : ext === 'jpg' || ext === 'jpeg' ? 'image/jpeg' : 'image/webp';
+  const url = new URL('/xrpc/com.atproto.repo.uploadBlob', BLUESKY_SERVICE);
+  const options = {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${BLUESKY_APP_PASSWORD}`,
+      'Content-Type': mime
+    }
+  };
+  const res = await makeRequest(url, options, data);
+  return res.blob;
 }
 
 /**
@@ -328,7 +352,8 @@ async function main() {
     console.log(content);
     console.log('\n');
     
-    const response = await postToBluesky(content, session);
+    const imagePath = post.image ? join(SITE_ROOT, post.image) : null;
+    const response = await postToBluesky(content, session, imagePath);
     
     const postUrl = `https://bsky.app/profile/${session.handle}/post/${response.uri.split('/').pop()}`;
     

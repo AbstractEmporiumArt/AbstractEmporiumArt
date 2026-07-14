@@ -141,6 +141,9 @@ const ALL_CATEGORIES = [
   'z3nw1ck_spotlight'     // ponytail: dedicated Z3NW1CK push since launch 2026-07
 ];
 
+// ponytail: product categories — guarantee a real-product post in every rollout
+const PRODUCT_CATEGORIES = ['z3nw1ck_spotlight', 'knitting_craft_story', 'promotion_spotlight'];
+
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function readJSON(path) {
@@ -178,26 +181,31 @@ function loadActivePromotions() {
   return [];
 }
 
-function pickCategory(history, activePromotions = []) {
+function pickCategory(history, activePromotions = [], preferProduct = false) {
   // If high-priority promotions are active and we haven't posted about them recently, prioritize
-  if (activePromotions.length > 0) {
+  if (activePromotions.length > 0 && !preferProduct) {
     const recentCategories = (history.posts || []).slice(-5).map(p => p.category);
     const promoPostCount = recentCategories.filter(c => c === 'promotion_spotlight').length;
-    
+
     // If fewer than 2 of the last 5 posts were promo-focused, insert a promo post
     if (promoPostCount < 2) {
       console.log('  🎯 Active promotions detected — prioritizing promotion_spotlight category');
       return 'promotion_spotlight';
     }
   }
-  
+
   const rotation = history.category_rotation?.last_used || {};
-  // Sort by most stale (null first, then oldest timestamp)
   // Exclude promotion_spotlight from rotation unless promotions are active
-  const categories = activePromotions.length > 0 
-    ? ALL_CATEGORIES 
+  let categories = activePromotions.length > 0
+    ? ALL_CATEGORIES
     : ALL_CATEGORIES.filter(c => c !== 'promotion_spotlight');
-  
+
+  // ponytail: when we still need a product post this run, only consider product cats
+  if (preferProduct) {
+    categories = categories.filter(c => PRODUCT_CATEGORIES.includes(c));
+  }
+
+  // Sort by most stale (null first, then oldest timestamp)
   const sorted = categories.sort((a, b) => {
     const ta = rotation[a] ? new Date(rotation[a]).getTime() : 0;
     const tb = rotation[b] ? new Date(rotation[b]).getTime() : 0;
@@ -392,7 +400,9 @@ async function main() {
   while (generated < GENERATE_COUNT && attempt < GENERATE_COUNT * MAX_RETRIES) {
     attempt++;
 
-    const category = pickCategory(history, activePromotions);
+    const categoryUsedProduct = categoryUsed.filter(c => PRODUCT_CATEGORIES.includes(c)).length;
+    const preferProduct = (categoryUsedProduct === 0 && generated > 0);
+    const category = pickCategory(history, activePromotions, preferProduct);
     const cta = pickCTA(history);
 
     console.log(`\n🎨 Generating post #${generated + 1} — category: ${category}`);

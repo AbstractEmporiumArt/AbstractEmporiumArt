@@ -33,7 +33,9 @@ const ALL_CATEGORIES = [
   'behind_the_scenes',
   'inspiration_spark',
   'origin_story',
-  'transformation_arc'
+  'transformation_arc',
+  'promotion_spotlight',   // ponytail: added to match generator; was missing
+  'z3nw1ck_spotlight'      // ponytail: dedicated Z3NW1CK push since launch 2026-07
 ];
 
 const BANNED_PHRASES = [

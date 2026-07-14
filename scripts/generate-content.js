@@ -91,7 +91,7 @@ const COLLECTIONS = [
 
 // ponytail: image per category so posts ship WITH media (text-only = low reach)
 const CATEGORY_IMAGE = {
-  z3nw1ck_spotlight: ['z3nw1ck-product-photos/z3nw1ck-satsuma.png', 'z3nw1ck-product-photos/z3nw1ck-promo.jpg'],
+  z3nw1ck_spotlight: ['z3nw1ck-product-photos/z3nw1ck-satsuma.png', 'z3nw1ck-product-photos/z3nw1ck-promo.jpg', 'z3nw1ck-product-photos/z3nw1ck-catalog.jpg'],
   knitting_craft_story: '3-KnittingPatterns/Starter-Pack/9-ChunkyBeanie/STARTERPACKChunkyBeanie5-CompletedAbstractEmporium.png',
   promotion_spotlight: 'banner.jpg',
   abstract_art_spotlight: 'logo.jpg',

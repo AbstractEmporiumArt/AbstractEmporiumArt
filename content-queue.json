@@ -5229,6 +5229,60 @@
       "_category": "abstract_art_spotlight",
       "_cta_type": "art_collection",
       "_emotional_theme": "quiet_energy"
+    },
+    {
+      "id": "gen-1784042697467-0ff237",
+      "content": "There’s a kind of memory that isn’t tied to words—it’s in scents that nudge you gently. A whisper of citrus, a hug of lavender, a laugh of something sugary sweet. Find your story in these aromas at abstractemporium.art.",
+      "bluesky_content": "There’s a kind of memory that isn’t tied to words—it’s in scents that nudge you gently. A whisper of citrus, a hug of lavender, a laugh of something sugary sweet. Find your story in these aromas at abstractemporium.art.",
+      "mastodon_content": "There’s a kind of memory that isn’t tied to words—it’s in scents that nudge you gently. A whisper of citrus, a hug of lavender, a laugh of something sugary sweet. Find your story in these aromas at abstractemporium.art.",
+      "hashtags": [
+        "#ScentStories",
+        "#HandcraftedComfort"
+      ],
+      "image": "z3nw1ck-product-photos/z3nw1ck-satsuma-oos.jpg",
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-16T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "z3nw1ck_spotlight",
+      "_cta_type": "the full piece (and others like it) lives on abstractemporium.art",
+      "_emotional_theme": "scent_and_memory"
+    },
+    {
+      "id": "gen-1784042703123-e870ac",
+      "content": "There’s something quietly radical about hand-knitting. It’s not just making things—it’s mending time, one loop at a time, with nothing but yarn and patience. If this feels like your kind of thing, abstractemporium.art has more. 🧶",
+      "bluesky_content": "There’s something quietly radical about hand-knitting. It’s not just making things—it’s mending time, one loop at a time, with nothing but yarn and patience. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "There’s something quietly radical about hand-knitting. It’s not just making things—it’s mending time, one loop at a time, with nothing but yarn and patience. If this feels like your kind of thing, abstractemporium.art has more. 🧶",
+      "hashtags": [
+        "#KnittingTradition",
+        "#MindfulCrafting"
+      ],
+      "image": "lkc-product-photos/lkc-scarves.jpg",
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-16T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "knitting_craft_story",
+      "_cta_type": "if_this_is_your_kind_of_thing",
+      "_emotional_theme": "slow_making"
     }
   ]
 }

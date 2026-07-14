@@ -74,11 +74,11 @@ const COLLECTIONS = [
     themes: ['original art', 'wall decor', 'print on demand', 'colour-driven', 'expressive abstraction']
   },
   {
-    name: 'Knitting patterns & handmade work',
+    name: "Lissa's Knitting Creations",
     type: 'craft',
     url: 'https://abstractemporium.art',
-    description: 'Hand-knitted pieces and craft patterns with roots in a multigenerational family tradition. Slow, meditative, made by hand.',
-    themes: ['handmade', 'slow craft', 'knitting', 'family heritage', 'meditative making']
+    description: 'Hand-knitted made-to-order pieces: cozy slippers, warm tuques (beanies), soft wash cloths, and scarves — each made by hand with roots in a multigenerational family tradition. Slow, meditative, made by hand. To order, email abstractemporiumart@outlook.com with your colour and size preferences.',
+    themes: ['handmade', 'slow craft', 'knitting', 'family heritage', 'meditative making', 'made to order', 'slippers', 'tuques', 'wash cloths', 'scarves']
   },
   {
     name: 'Z3NW1CK by Abstract Emporium',

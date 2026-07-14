@@ -91,7 +91,7 @@ const COLLECTIONS = [
 
 // ponytail: image per category so posts ship WITH media (text-only = low reach)
 const CATEGORY_IMAGE = {
-  z3nw1ck_spotlight: 'z3nw1ck-product-photos/z3nw1ck-satsuma.png',
+  z3nw1ck_spotlight: ['z3nw1ck-product-photos/z3nw1ck-satsuma.png', 'z3nw1ck-product-photos/z3nw1ck-promo.jpg'],
   knitting_craft_story: '3-KnittingPatterns/Starter-Pack/9-ChunkyBeanie/STARTERPACKChunkyBeanie5-CompletedAbstractEmporium.png',
   promotion_spotlight: 'banner.jpg',
   abstract_art_spotlight: 'logo.jpg',
@@ -103,6 +103,12 @@ const CATEGORY_IMAGE = {
   origin_story: 'logo.jpg',
   transformation_arc: 'banner.jpg'
 };
+
+// ponytail: category may map to one image (string) or several (array → random pick for variety)
+function pickImage(category) {
+  const i = CATEGORY_IMAGE[category];
+  return Array.isArray(i) ? i[Math.floor(Math.random() * i.length)] : (i || 'banner.jpg');
+}
 
 const BRAND_VOICE = `
 Abstract Emporium is not a business account — it is a creative personality.
@@ -428,7 +434,7 @@ async function main() {
       bluesky_content: post.bluesky_content,
       mastodon_content: post.mastodon_content,
       hashtags: post.hashtags || [],
-      image: CATEGORY_IMAGE[post.category] || 'banner.jpg',
+      image: pickImage(post.category),
       link: null,
       platforms: ['mastodon', 'bluesky'],
       schedule,

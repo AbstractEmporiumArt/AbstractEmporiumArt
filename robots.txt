@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: /features.html
 Disallow: /pattern.html
+Disallow: /sales-admin.html
+Disallow: /sales-agent-dashboard.html
 Allow: /
+Sitemap: https://abstractemporium.art/sitemap.xml

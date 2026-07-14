@@ -1,3 +1,4 @@
 User-agent: *
+Disallow: /features.html
+Disallow: /pattern.html
 Allow: /
-Sitemap: https://abstractemporium.art/sitemap.xml

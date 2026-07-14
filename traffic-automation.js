@@ -85,9 +85,7 @@ class TrafficAutomation {
       '/gallery.html',
       '/shop.html',
       '/contact.html',
-      '/features.html',
       '/canvas.html',
-      '/pattern.html',
       '/item-detail.html'
     ];
 

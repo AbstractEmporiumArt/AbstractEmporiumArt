@@ -5289,6 +5289,87 @@
       "_category": "knitting_craft_story",
       "_cta_type": "if_this_is_your_kind_of_thing",
       "_emotional_theme": "slow_making"
+    },
+    {
+      "id": "gen-1784129248325-e453dd",
+      "content": "Me: I’ll just test these markers on scrap paper. \n\n*Two hours later* \n\nWhy is this paper now a fully-realized art piece with a backstory and emotional arc? \n\nYou can find more of this over at the site if you're curious.",
+      "bluesky_content": "Me: I’ll just test these markers on scrap paper. *Two hours later* Why is this paper now a fully-realized art piece with a backstory and emotional arc? You can find more of this over at the site if you're curious.",
+      "mastodon_content": "Me: I’ll just test these markers on scrap paper. \n\n*Two hours later* \n\nWhy is this paper now a fully-realized art piece with a backstory and emotional arc? \n\nYou can find more of this over at the site if you're curious.",
+      "hashtags": [
+        "#ArtDetours",
+        "#AccidentalMasterpiece"
+      ],
+      "image": "logo.jpg",
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-17T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "creator_humor",
+      "_cta_type": "website",
+      "_emotional_theme": "playful_creativity"
+    },
+    {
+      "id": "gen-1784129250665-adab4e",
+      "content": "Abstract art feels a bit like overhearing café conversations—scraps of dialogue, gestures, and glances that somehow weave into their own rhythm. If you like that kind of energy, some prints live quietly on abstractemporium.art.",
+      "bluesky_content": "Abstract art reminds me of conversations you overhear in a café—disjointed pieces that somehow form their own rhythm. If that’s your kind of vibe, some prints live quietly on abstractemporium.art.",
+      "mastodon_content": "Abstract art feels a bit like overhearing café conversations—scraps of dialogue, gestures, and glances that somehow weave into their own rhythm. If you like that kind of energy, some prints live quietly on abstractemporium.art.",
+      "hashtags": [
+        "#RhythmsOfArt",
+        "#AbstractPieces"
+      ],
+      "image": "banner.jpg",
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-17T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "this lives quietly on abstractemporium.art",
+      "_emotional_theme": "found_moments"
+    },
+    {
+      "id": "gen-1784129254837-89cf26",
+      "content": "I sometimes think of abstract art as a frozen moment mid-motion—like watching ripples in a pond just as they begin to fade into stillness. If that image speaks to you, there’s a whole collection of this kind of work waiting on the site.",
+      "bluesky_content": "I sometimes think of abstract art as a frozen moment mid-motion—like watching ripples in a pond just as they begin to fade. If that image speaks to you, there’s a whole collection of this kind of work on the site.",
+      "mastodon_content": "I sometimes think of abstract art as a frozen moment mid-motion—like watching ripples in a pond just as they begin to fade into stillness. If that image speaks to you, there’s a whole collection of this kind of work waiting on the site.",
+      "hashtags": [
+        "#PondRipples",
+        "#AbstractArtistry"
+      ],
+      "image": "z3nw1ck-product-photos/loyalty-card.jpg",
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-18T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "promotion_spotlight",
+      "_cta_type": "there’s a whole collection of this kind of work on the site",
+      "_emotional_theme": "fleeting_moments"
     }
   ]
 }

@@ -9,20 +9,20 @@
       "creative_mindfulness": "2026-07-11T14:57:20.640Z",
       "creator_humor": "2026-07-15T15:27:28.325Z",
       "behind_the_scenes": "2026-07-11T14:57:18.478Z",
-      "inspiration_spark": "2026-07-08T16:03:18.404Z",
-      "origin_story": "2026-07-08T16:03:16.744Z",
+      "inspiration_spark": "2026-07-17T10:00:44.938Z",
+      "origin_story": "2026-07-17T10:00:41.026Z",
       "transformation_arc": "2026-07-09T22:25:10.908Z",
       "promotion_spotlight": "2026-07-15T15:27:34.837Z",
-      "z3nw1ck_spotlight": "2026-07-14T15:24:57.467Z"
+      "z3nw1ck_spotlight": "2026-07-17T10:00:43.128Z"
     }
   },
   "cta_rotation": {
     "last_used": {
-      "you can find more of this over at the site if you're curious": "2026-07-15T15:27:28.325Z",
+      "you can find more of this over at the site if you're curious": "2026-07-17T10:00:44.938Z",
       "this lives quietly on abstractemporium.art": "2026-07-15T15:27:30.666Z",
       "there's a whole collection of this kind of work on the site": "2026-07-15T15:27:34.837Z",
-      "the full piece (and others like it) lives on abstractemporium.art": "2026-07-14T15:24:57.467Z",
-      "if this is your kind of thing, abstractemporium.art has more": "2026-07-14T15:25:03.123Z"
+      "the full piece (and others like it) lives on abstractemporium.art": "2026-07-17T10:00:41.026Z",
+      "if this is your kind of thing, abstractemporium.art has more": "2026-07-17T10:00:43.128Z"
     }
   },
   "hashtag_sets_used": [
@@ -604,6 +604,18 @@
     [
       "#PondRipples",
       "#AbstractArtistry"
+    ],
+    [
+      "#ArtOrigins",
+      "#FromColorToForm"
+    ],
+    [
+      "#ScentMagic",
+      "#TimeEchoes"
+    ],
+    [
+      "#CreativeFreedom",
+      "#RawArt"
     ]
   ],
   "posts": [
@@ -4198,6 +4210,84 @@
         "watching ripples",
         "ripples pond",
         "pond just"
+      ]
+    },
+    {
+      "id": "gen-1784282441026-a365b4",
+      "timestamp": "2026-07-17T10:00:41.026Z",
+      "category": "origin_story",
+      "cta_type": "abstract_art_gallery",
+      "emotional_theme": "quiet_creation",
+      "bluesky_content": "Before Abstract Emporium had a name, it was just me and a corner desk. A place to question things and let color answer. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Abstract Emporium started as a quiet rebellion. Just me, a corner desk, and some colors trying to answer questions I couldn’t put into words. The full piece (and others like it) lives on abstractemporium.art",
+      "hashtags": [
+        "#ArtOrigins",
+        "#FromColorToForm"
+      ],
+      "content_hash": "1ff4c757aed88ca419f8593cc9d8f88db57c70e3d183a0aa7317e33595d5a737",
+      "key_phrases": [
+        "before abstract",
+        "abstract emporium",
+        "emporium name",
+        "name just",
+        "just corner",
+        "corner desk",
+        "desk place",
+        "place question",
+        "question things",
+        "things color"
+      ]
+    },
+    {
+      "id": "gen-1784282443128-2ed0fb",
+      "timestamp": "2026-07-17T10:00:43.128Z",
+      "category": "z3nw1ck_spotlight",
+      "cta_type": "if_this_is_your_kind_of_thing",
+      "emotional_theme": "memory_recall",
+      "bluesky_content": "It’s funny how a scent can be a time machine. One spark of lavender or citrus, and suddenly you’re back—in a memory so vivid it feels like now. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Scent is its own kind of time travel, isn’t it? A flicker of lavender or sunlight citrus can pull you back to moments that feel alive again. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#ScentMagic",
+        "#TimeEchoes"
+      ],
+      "content_hash": "b1fe49fa9b4dea7848f0157374c1dccda8314c7a609f1d83c064833a49feb517",
+      "key_phrases": [
+        "funny scent",
+        "scent time",
+        "time machine",
+        "machine spark",
+        "spark lavender",
+        "lavender citrus",
+        "citrus suddenly",
+        "suddenly back",
+        "back memory",
+        "memory vivid"
+      ]
+    },
+    {
+      "id": "gen-1784282444938-928725",
+      "timestamp": "2026-07-17T10:00:44.938Z",
+      "category": "inspiration_spark",
+      "cta_type": "you can find more of this over at the site if you're curious",
+      "emotional_theme": "freedom_in_imperfection",
+      "bluesky_content": "Ever try making art with your non-dominant hand? It’s not about control—it’s about letting go. Shapes stumble, lines wobble, and somehow it’s more alive. You can find more of this over at the site if you’re curious.",
+      "mastodon_content": "Ever tried making art with your non-dominant hand? It’s less about control and more about letting go. Shapes stumble, lines wobble, but they breathe in a way that feels raw and real. You can find more of this over at the site if you’re curious.",
+      "hashtags": [
+        "#CreativeFreedom",
+        "#RawArt"
+      ],
+      "content_hash": "698f9506ef38453b0dbbfae347ae7da186e9943bc51d0da6aa050fcec85474cc",
+      "key_phrases": [
+        "ever making",
+        "making with",
+        "with your",
+        "your dominant",
+        "dominant hand",
+        "hand about",
+        "about control",
+        "control about",
+        "about letting",
+        "letting shapes"
       ]
     }
   ]

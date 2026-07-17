@@ -5378,6 +5378,87 @@
       "_category": "promotion_spotlight",
       "_cta_type": "there’s a whole collection of this kind of work on the site",
       "_emotional_theme": "fleeting_moments"
+    },
+    {
+      "id": "gen-1784282441026-a365b4",
+      "content": "Abstract Emporium started as a quiet rebellion. Just me, a corner desk, and some colors trying to answer questions I couldn’t put into words. The full piece (and others like it) lives on abstractemporium.art",
+      "bluesky_content": "Before Abstract Emporium had a name, it was just me and a corner desk. A place to question things and let color answer. The full piece (and others like it) lives on abstractemporium.art",
+      "mastodon_content": "Abstract Emporium started as a quiet rebellion. Just me, a corner desk, and some colors trying to answer questions I couldn’t put into words. The full piece (and others like it) lives on abstractemporium.art",
+      "hashtags": [
+        "#ArtOrigins",
+        "#FromColorToForm"
+      ],
+      "image": "logo.jpg",
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-18T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "origin_story",
+      "_cta_type": "abstract_art_gallery",
+      "_emotional_theme": "quiet_creation"
+    },
+    {
+      "id": "gen-1784282443128-2ed0fb",
+      "content": "Scent is its own kind of time travel, isn’t it? A flicker of lavender or sunlight citrus can pull you back to moments that feel alive again. If this is your kind of thing, abstractemporium.art has more.",
+      "bluesky_content": "It’s funny how a scent can be a time machine. One spark of lavender or citrus, and suddenly you’re back—in a memory so vivid it feels like now. If this is your kind of thing, abstractemporium.art has more.",
+      "mastodon_content": "Scent is its own kind of time travel, isn’t it? A flicker of lavender or sunlight citrus can pull you back to moments that feel alive again. If this is your kind of thing, abstractemporium.art has more.",
+      "hashtags": [
+        "#ScentMagic",
+        "#TimeEchoes"
+      ],
+      "image": "z3nw1ck-product-photos/z3nw1ck-satsuma.png",
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-19T04:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "z3nw1ck_spotlight",
+      "_cta_type": "if_this_is_your_kind_of_thing",
+      "_emotional_theme": "memory_recall"
+    },
+    {
+      "id": "gen-1784282444938-928725",
+      "content": "Ever tried making art with your non-dominant hand? It’s less about control and more about letting go. Shapes stumble, lines wobble, but they breathe in a way that feels raw and real. You can find more of this over at the site if you’re curious.",
+      "bluesky_content": "Ever try making art with your non-dominant hand? It’s not about control—it’s about letting go. Shapes stumble, lines wobble, and somehow it’s more alive. You can find more of this over at the site if you’re curious.",
+      "mastodon_content": "Ever tried making art with your non-dominant hand? It’s less about control and more about letting go. Shapes stumble, lines wobble, but they breathe in a way that feels raw and real. You can find more of this over at the site if you’re curious.",
+      "hashtags": [
+        "#CreativeFreedom",
+        "#RawArt"
+      ],
+      "image": "logo.jpg",
+      "link": null,
+      "platforms": [
+        "mastodon",
+        "bluesky"
+      ],
+      "schedule": "2026-07-19T16:00:00.000Z",
+      "posted": false,
+      "postedPlatforms": [],
+      "postedAt": null,
+      "blueskyUrl": null,
+      "blueskyUri": null,
+      "mastodonUrl": null,
+      "_generated": true,
+      "_category": "inspiration_spark",
+      "_cta_type": "you can find more of this over at the site if you're curious",
+      "_emotional_theme": "freedom_in_imperfection"
     }
   ]
 }

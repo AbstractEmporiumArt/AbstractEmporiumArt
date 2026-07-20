@@ -108,6 +108,11 @@ const CATEGORY_IMAGE = {
     'z3nw1ck-promo/promo-fruitloops-5oz-tin.jpg',
     'z3nw1ck-promo/promo-simpledaydreams-waxmelts.jpg',
     'z3nw1ck-promo/promo-simpledaydreams-candles.jpg',
+    'z3nw1ck-promo/promo-simpledaydreams-scent-notes.jpg',
+    'z3nw1ck-promo/promo-simpledaydreams-refresh.jpg',
+    'z3nw1ck-promo/promo-simpledaydreams-incense.jpg',
+    'z3nw1ck-promo/promo-simpledaydreams-collection.jpg',
+    'z3nw1ck-promo/promo-simpledaydreams-soy-candle.jpg',
   ],
   knitting_craft_story: ['lkc-product-photos/lkc-slippers.jpg', 'lkc-product-photos/lkc-beanies.jpg', 'lkc-product-photos/lkc-mop-pads.jpg', 'lkc-product-photos/lkc-checker-cloths.jpg', 'lkc-product-photos/lkc-scarves.jpg', 'lkc-product-photos/lkc-stocking-cap.jpg'],
   promotion_spotlight: ['banner.jpg', 'z3nw1ck-product-photos/loyalty-card.jpg', 'z3nw1ck-product-photos/business-banner.jpg'],   // ponytail: promo/business assets

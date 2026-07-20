@@ -5140,6 +5140,22 @@ img.loaded {
     83%, 97%  { transform: translateX(-83.3333%); }
     100%      { transform: translateX(0); }
 }
+/* ponytail: 7-slide variant — mirror of track-5/6 */
+.about-carousel.track-7 .about-carousel-track {
+    width: 700%;
+    animation: about-slide-7 42s infinite;   /* 7 slides × 6s */
+}
+.about-carousel.track-7 .about-slide { flex-basis: 14.2857%; }
+@keyframes about-slide-7 {
+    0%, 12%   { transform: translateX(0); }
+    14%, 26%  { transform: translateX(-14.2857%); }
+    29%, 41%  { transform: translateX(-28.5714%); }
+    43%, 55%  { transform: translateX(-42.8571%); }
+    58%, 70%  { transform: translateX(-57.1428%); }
+    72%, 84%  { transform: translateX(-71.4285%); }
+    86%, 98%  { transform: translateX(-85.7142%); }
+    100%      { transform: translateX(0); }
+}
 
     margin-top: 24px;
     font-weight: 600;

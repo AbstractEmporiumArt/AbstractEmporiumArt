@@ -71,6 +71,7 @@
 
 ### Key Files
 - `index.html` - Homepage; leads with Z3NW1CK + Lissa's Knitting Creations, PODs follow
+- `about.html` - Lissa's story + the 4 origin fluid-pour paintings
 - `bundle-chaos-calm.html` - Individual coloring book page
 - `bundle-invisible-pain.html` - Individual coloring book page  
 - `bundle-healing-lines.html` - Individual coloring book page

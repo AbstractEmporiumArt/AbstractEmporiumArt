@@ -5111,6 +5111,20 @@ img.loaded {
     .about-carousel-track { animation: none; }
     .about-slide { flex-basis: 50%; }
 }
+/* ponytail: 5-slide variant for the drawing carousel — only the track differs */
+.about-carousel.track-5 .about-carousel-track {
+    width: 500%;
+    animation: about-slide-5 30s infinite;   /* 5 slides × 6s */
+}
+.about-carousel.track-5 .about-slide { flex-basis: 20%; }
+@keyframes about-slide-5 {
+    0%, 16%   { transform: translateX(0); }
+    20%, 36%  { transform: translateX(-20%); }
+    40%, 56%  { transform: translateX(-40%); }
+    60%, 76%  { transform: translateX(-60%); }
+    80%, 96%  { transform: translateX(-80%); }
+    100%      { transform: translateX(0); }
+}
 
     margin-top: 24px;
     font-weight: 600;

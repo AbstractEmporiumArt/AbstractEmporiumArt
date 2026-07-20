@@ -91,7 +91,24 @@ const COLLECTIONS = [
 
 // ponytail: image per category so posts ship WITH media (text-only = low reach)
 const CATEGORY_IMAGE = {
-  z3nw1ck_spotlight: ['z3nw1ck-product-photos/z3nw1ck-satsuma.png', 'z3nw1ck-product-photos/z3nw1ck-promo.jpg', 'z3nw1ck-product-photos/z3nw1ck-catalog.jpg'],
+  z3nw1ck_spotlight: [
+    'z3nw1ck-product-photos/z3nw1ck-satsuma.png',
+    'z3nw1ck-product-photos/z3nw1ck-promo.jpg',
+    'z3nw1ck-product-photos/z3nw1ck-catalog.jpg',
+    'z3nw1ck-promo/promo-satsuma-most-requested.jpg',
+    'z3nw1ck-promo/promo-satsuma-collection.jpg',
+    'z3nw1ck-promo/promo-satsuma-refresh.jpg',
+    'z3nw1ck-promo/promo-satsuma-scent-notes.jpg',
+    'z3nw1ck-promo/promo-satsuma-bursting.jpg',
+    'z3nw1ck-promo/promo-fruitloops-scent-notes.jpg',
+    'z3nw1ck-promo/promo-fruitloops-fun-fruity.jpg',
+    'z3nw1ck-promo/promo-fruitloops-incense-smoke.jpg',
+    'z3nw1ck-promo/promo-fruitloops-incense.jpg',
+    'z3nw1ck-promo/promo-fruitloops-heart-tin.jpg',
+    'z3nw1ck-promo/promo-fruitloops-5oz-tin.jpg',
+    'z3nw1ck-promo/promo-simpledaydreams-waxmelts.jpg',
+    'z3nw1ck-promo/promo-simpledaydreams-candles.jpg',
+  ],
   knitting_craft_story: ['lkc-product-photos/lkc-slippers.jpg', 'lkc-product-photos/lkc-beanies.jpg', 'lkc-product-photos/lkc-mop-pads.jpg', 'lkc-product-photos/lkc-checker-cloths.jpg', 'lkc-product-photos/lkc-scarves.jpg', 'lkc-product-photos/lkc-stocking-cap.jpg'],
   promotion_spotlight: ['banner.jpg', 'z3nw1ck-product-photos/loyalty-card.jpg', 'z3nw1ck-product-photos/business-banner.jpg'],   // ponytail: promo/business assets
   abstract_art_spotlight: ['logo.jpg', 'z3nw1ck-product-photos/coloring-books-banner.jpg'],

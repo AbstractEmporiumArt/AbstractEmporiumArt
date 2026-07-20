@@ -1,13 +1,13 @@
 # Abstract Emporium - Project Memory & Conventions
 
-**Last Updated:** May 31, 2026  
+**Last Updated:** July 19, 2026  
 **Status:** Live in production, zero sales, GitHub optimized and secured, ready for marketing push
 
 ---
 
 ## PROJECT OVERVIEW
 
-**What:** Digital art business selling therapeutic abstract coloring books + multi-platform art prints  
+**What:** Handmade + digital art studio — Z3NW1CK candles/wax melts/incense, Lissa's Knitting Creations (slippers/tuques/cloths/scarves), abstract art prints (POD), therapeutic coloring books (Ko-fi), commissions.  
 **Business Model:** Ko-fi coloring books ($7.99-$19.99) + art marketplace presence (Fine Art America, ArtPal, RedBubble, TheHug.art)  
 **Tech Stack:** Static HTML/CSS/JS site deployed on Cloudflare Pages  
 **Repository:** https://github.com/AbstractEmporiumArt/AbstractEmporiumArt  
@@ -27,10 +27,10 @@
 - **ZERO traffic** - No visitors, no sales, no marketing executed
 - Social media automation scripts exist but never run
 - Email automation configured but no subscribers
-- Knitting *pattern bundles* deprioritized (too much competition). Lissa's Knitting Creations (slippers/tuques/cloths/scarves) is ACTIVE physical line.
+- Knitting *pattern bundles* REMOVED entirely from site (2026-07-19) — too much competition. Lissa's Knitting Creations (slippers/tuques/cloths/scarves) is ACTIVE physical line, site focus.
 
 ### 🎯 Current Priority (updated 2026-07-12)
-**Build Z3nw1ck shop section + Lissa's Knitting Creations + Commissions pages.** Main focus = Z3nw1ck (candles/wax melts/incense), Lissa's Knitting Creations (slippers/tuques/cloths/scarves), Commissions (fluid/freehand art). POD (ArtPal/FAA/RedBubble/TheHug) kept passive. Coloring books still live. Knitting *pattern bundles* deprioritized.
+**Site focus (updated 2026-07-19):** Z3NW1CK (candles/wax melts/incense) + Lissa's Knitting Creations (slippers/tuques/cloths/scarves) lead the homepage; POD art prints (ArtPal/FAA/Redbubble/TheHug) follow; Coloring Books (Ko-fi) + Commissions still live. Knitting *pattern bundles* removed entirely.
 
 ---
 
@@ -70,7 +70,7 @@
 - **Responsive design** - Mobile-first CSS
 
 ### Key Files
-- `index.html` - Homepage with Ko-fi CTAs
+- `index.html` - Homepage; leads with Z3NW1CK + Lissa's Knitting Creations, PODs follow
 - `bundle-chaos-calm.html` - Individual coloring book page
 - `bundle-invisible-pain.html` - Individual coloring book page  
 - `bundle-healing-lines.html` - Individual coloring book page
@@ -158,11 +158,7 @@ content-queue.json              (30 days content - unused)
 
 ### Legacy/Reference (Ignore Unless Needed)
 ```
-bundle-beginner.html            (Knitting - ignore)
-bundle-starter.html             (Knitting - ignore)
-bundle-master.html              (Knitting - ignore)
-bundle-free.html                (Knitting - ignore)
-KNITTING_*.md                   (80+ files - archive mentally)
+KNITTING_*.md                   (80+ files - archive mentally; pattern bundles removed from site 2026-07-19)
 ```
 
 ---
@@ -203,7 +199,7 @@ KNITTING_*.md                   (80+ files - archive mentally)
 **DEFAULT for unapproved categories: NO.**
 
 APPROVED active lines (build freely): Z3nw1ck, Lissa's Knitting Creations, Commissions, Coloring Books.
-DECLINED: knitting *pattern bundles* (too much competition). New POD platforms: NO (traffic is bottleneck, not channels).
+REMOVED: knitting *pattern bundles* (too much competition, deleted from site 2026-07-19). New POD platforms: NO (traffic is bottleneck, not channels).
 
 ---
 
@@ -313,7 +309,7 @@ When working on Abstract Emporium:
 1. **Read this file first** - Context prevents wasted work
 2. **Verify before changing** - Test live site, check if actually broken
 3. **Execute before documenting** - Bias toward shipping over planning
-4. **Build approved lines** - Z3nw1ck, Lissa's Knitting Creations, Commissions, Coloring Books. POD passive. Knitting *pattern bundles* deprioritized.
+4. **Build approved lines** - Z3nw1ck, Lissa's Knitting Creations, Commissions, Coloring Books. POD passive. Knitting *pattern bundles* removed entirely.
 5. **Marketing > Features** - Traffic is the bottleneck, not product count. Manual marketing (Reddit/FB/Pinterest/IG) for approved lines.
 6. **Use FIRST_10_SALES_POSTS.md** - Ready-to-use marketing content exists
 

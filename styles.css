@@ -5125,6 +5125,21 @@ img.loaded {
     80%, 96%  { transform: translateX(-80%); }
     100%      { transform: translateX(0); }
 }
+/* ponytail: 6-slide variant — mirror of track-5 */
+.about-carousel.track-6 .about-carousel-track {
+    width: 600%;
+    animation: about-slide-6 36s infinite;   /* 6 slides × 6s */
+}
+.about-carousel.track-6 .about-slide { flex-basis: 16.6667%; }
+@keyframes about-slide-6 {
+    0%, 14%   { transform: translateX(0); }
+    16%, 30%  { transform: translateX(-16.6667%); }
+    33%, 47%  { transform: translateX(-33.3333%); }
+    50%, 64%  { transform: translateX(-50%); }
+    66%, 80%  { transform: translateX(-66.6667%); }
+    83%, 97%  { transform: translateX(-83.3333%); }
+    100%      { transform: translateX(0); }
+}
 
     margin-top: 24px;
     font-weight: 600;

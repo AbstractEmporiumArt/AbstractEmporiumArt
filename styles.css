@@ -5091,14 +5091,9 @@ img.loaded {
     min-width: 100%;
     scroll-snap-align: center;
 }
-.product-card .body .about-slide {
-    display: none;
-    flex: 0 0 auto !important;
-    width: 200px;
-    scroll-snap-align: start;
-}
+.product-card .body .about-slide,
 .product-card .body .about-slide img {
-    display: none;
+    display: none !important;
 }
 .z3-home-carousel .about-slide img, .product-card .body .about-slide img {
     width: 100%;

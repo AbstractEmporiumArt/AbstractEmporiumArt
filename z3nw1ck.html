@@ -431,5 +431,46 @@
       ]);
     })();
     </script>
-    </body>
+    <script>
+    /* product-card slideshow transformer */
+    document.querySelectorAll('.product-card .body .about-carousel[style*="--count"]').forEach(box=>{
+      const images=[...box.querySelectorAll('.about-slide img')].map(img=>img.getAttribute('src'));
+      if(!images.length) return;
+      const track=box.querySelector('.about-carousel-track');
+      if(track) track.style.display='none';
+      const img=document.createElement('img');
+      img.src=images[0];
+      img.alt='';
+      img.style.cssText='width:100%; height:220px; object-fit:cover; border-radius:8px; display:block;';
+      box.insertBefore(img, track?track.nextSibling:box.firstChild);
+      let i=0;
+      const dots=document.createElement('div');
+      dots.style.cssText='display:flex; gap:8px; justify-content:center; margin-top:8px;';
+      images.forEach((_,idx)=>{
+        const d=document.createElement('button');
+        d.textContent='•';
+        d.style.cssText='opacity:'+(idx===0?1:0.4)+';background:none;border:0;color:#fff;cursor:pointer;font-size:1rem;padding:0;';
+        d.onclick=()=>show(idx);
+        dots.appendChild(d);
+      });
+      const prev=document.createElement('button');
+      prev.textContent='◀';
+      prev.style.cssText='position:absolute; top:50%; left:8px; transform:translateY(-50%); background:rgba(0,0,0,0.45); color:#fff; border:0; padding:6px 10px; border-radius:6px; cursor:pointer;';
+      const next=document.createElement('button');
+      next.textContent='▶';
+      next.style.cssText='position:absolute; top:50%; right:8px; transform:translateY(-50%); background:rgba(0,0,0,0.45); color:#fff; border:0; padding:6px 10px; border-radius:6px; cursor:pointer;';
+      box.style.position='relative';
+      box.appendChild(dots);
+      box.appendChild(prev);
+      box.appendChild(next);
+      function show(n){
+        i=(n+images.length)%images.length;
+        img.src=images[i];
+        Array.from(dots.children).forEach((d,j)=>d.style.opacity=j===i?1:0.4);
+      }
+      prev.onclick=()=>show(i-1);
+      next.onclick=()=>show(i+1);
+    });
+    </script>
+  </body>
 </html>

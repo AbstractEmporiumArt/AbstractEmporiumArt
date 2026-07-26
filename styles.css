@@ -5119,13 +5119,18 @@ img.loaded {
     .about-slide { flex-basis: 50%; }
 }
 /* ponytail: generic N-slide carousel — set --count on .about-carousel, add no CSS per count */
-/* continuous smooth scroll (linear) so any count works from one keyframe */
+/* ponytail: generic N-slide carousel — set --count on .about-carousel, add no CSS per count */
 .about-carousel[style*="--count"] .about-carousel-track {
     width: calc(100% * var(--count));
     animation: about-slide-n calc(var(--count) * 6s) infinite linear;
 }
 .about-carousel[style*="--count"] .about-slide {
     flex: 0 0 calc(100% / var(--count));
+}
+
+/* ponytail: pause on hover */
+.about-carousel[style*="--count"] .about-carousel-track:hover {
+    animation-play-state: paused;
 }
 @keyframes about-slide-n {
     0%   { transform: translateX(0); }

@@ -5068,61 +5068,59 @@ img.loaded {
     margin: 0 0 18px;
     font-size: 1.02rem;
 }
-/* ponytail: about carousel — native CSS scroll-snap, override all previous carousel rules with this single block */
-.about-carousel {
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
+/* ponytail: homepage carousel only */
+.z3-home-carousel, .product-card .body .about-carousel {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     border-radius: 10px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-    display: block;
 }
-.about-carousel::-webkit-scrollbar { display: none; }
-.about-carousel-track {
+.z3-home-carousel::-webkit-scrollbar, .product-card .body .about-carousel::-webkit-scrollbar { display: none; }
+.z3-home-carousel .about-carousel-track, .product-card .body .about-carousel .about-carousel-track {
     display: flex;
     gap: 0;
     width: max-content;
-    animation: none; /* ponytail: no animation, user scrolls */
-}
-.about-slide {
-    scroll-snap-align: center;
-    flex: 0 0 100%;
-}
-.about-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-.about-slide figcaption {
-    padding: 8px;
-    font-size: 0.88rem;
-    color: #fff;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.75);
-    background: linear-gradient(0deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);
-    margin: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-@media (prefers-reduced-motion: reduce) {
-    .about-carousel-track { animation: none; }
-    .about-slide { flex-basis: 100%; }
-}
-.about-carousel[style*="--count"] .about-carousel-track,
-.about-carousel[style*="--count"] .about-slide,
-.about-carousel-track,
-.about-slide {
     animation: none;
-}
-.about-carousel[style*="--count"] .about-carousel-track {
-    width: max-content;
 }
 .z3-home-carousel .about-slide {
     flex: 0 0 100% !important;
     min-width: 100%;
+    scroll-snap-align: center;
+}
+.product-card .body .about-slide {
+    flex: 0 0 auto !important;
+    width: 200px;
+    scroll-snap-align: start;
+}
+.z3-home-carousel .about-slide img, .product-card .body .about-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.product-card .body .about-slide img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: zoom-in;
+}
+.z3-home-carousel .about-slide figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+}
+.product-card .body .about-slide figcaption {
+    position: static;
+    background: none;
+    color: #ccc;
+    text-shadow: none;
+    text-align: center;
 }
 
 .about-cta {

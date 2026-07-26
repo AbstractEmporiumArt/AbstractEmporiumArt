@@ -5119,11 +5119,8 @@ img.loaded {
 .about-carousel[style*="--count"] .about-carousel-track {
     width: max-content;
 }
-@keyframes about-slide,
-@keyframes about-slide-n {
-    /* ponytail: removed animation to stop broken carousel behavior */;
-}
 
+.about-cta {
     margin-top: 24px;
     font-weight: 600;
 }

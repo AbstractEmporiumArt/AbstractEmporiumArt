@@ -130,19 +130,15 @@
                 <button class="cta-button" onclick="window.location.href='z3nw1ck.html'">Shop Z3NW1CK</button>
             </div>
         </div>
-        <div class="about-carousel z3-home-carousel" style="--count: 5" aria-roledescription="carousel" aria-label="Z3NW1CK homepage promos">
-          <div class="about-carousel-track">
-            <figure class="about-slide"><img src="z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_183035.png" alt="Z3NW1CK" loading="lazy"><figcaption>Z3NW1CK</figcaption></figure>
-            <figure class="about-slide"><img src="z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_183333.png" alt="Z3NW1CK" loading="lazy"><figcaption>Z3NW1CK</figcaption></figure>
-            <figure class="about-slide"><img src="z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_185258.png" alt="Z3NW1CK" loading="lazy"><figcaption>Z3NW1CK</figcaption></figure>
-            <figure class="about-slide"><img src="z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_185639.png" alt="Z3NW1CK" loading="lazy"><figcaption>Z3NW1CK</figcaption></figure>
-            <figure class="about-slide"><img src="z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_190009.png" alt="Z3NW1CK" loading="lazy"><figcaption>Z3NW1CK</figcaption></figure>
-          </div>
+        <div id="home-slideshow" style="position:relative; max-width:900px; margin:0 auto; aspect-ratio:16/9; background:#000; overflow:hidden; border-radius:10px; box-shadow:0 4px 18px rgba(0,0,0,0.35);">
+            <img class="slide-active" src="z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_183035.png" alt="Z3NW1CK" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+            <button id="home-prev" style="position:absolute; top:50%; left:12px; transform:translateY(-50%); background:rgba(0,0,0,0.45); color:#fff; border:0; padding:10px 14px; border-radius:8px; cursor:pointer; font-size:1.1rem;">◀</button>
+            <button id="home-next" style="position:absolute; top:50%; right:12px; transform:translateY(-50%); background:rgba(0,0,0,0.45); color:#fff; border:0; padding:10px 14px; border-radius:8px; cursor:pointer; font-size:1.1rem;">▶</button>
+            <div id="home-dots" style="position:absolute; bottom:12px; left:50%; transform:translateX(-50%); display:flex; gap:8px;"></div>
         </div>
         <div style="text-align:center; margin-top:18px;">
           <a class="cta-button" href="z3nw1ck.html">Shop Z3NW1CK</a>
         </div>
-      </div>
     </section>
 
     <!-- Lissa's Knitting Creations Section -->
@@ -481,5 +477,56 @@
     <script src="jsonld-core.js"></script>
     <script src="analytics-tracking.js"></script>
     <script src="script.js"></script>
-    </body>
+    <script>
+    (function(){
+      function initSlideshow(containerId, images){
+        const box = document.getElementById(containerId);
+        if(!box) return;
+        const img = box.querySelector('img.slide-active');
+        let i=0;
+        const dots = box.querySelector('#'+containerId.replace('slideshow','dots'));
+        images.forEach((src,idx)=>{
+          const d=document.createElement('button');
+          d.textContent='•';
+          d.style.cssText='opacity:'+(idx===0?1:0.4)+';background:none;border:0;color:#fff;cursor:pointer;font-size:1.1rem;padding:0;';
+          d.setAttribute('aria-label','Slide '+(idx+1));
+          d.onclick=()=>show(idx);
+          if(dots) dots.appendChild(d);
+        });
+        function show(n){
+          i=(n+images.length)%images.length;
+          img.src=images[i];
+          Array.from((dots||{}).children||[]).forEach((d,idx)=>d.style.opacity=idx===i?1:0.4);
+        }
+        box.querySelector('#home-prev,'+containerId.replace('home-','page-').replace('slideshow','prev')).onclick=()=>show(i-1);
+        box.querySelector('#home-next,'+containerId.replace('home-','page-').replace('slideshow','next')).onclick=()=>show(i+1);
+      }
+      initSlideshow('home-slideshow',[
+        "z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_183035.png",
+        "z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_183333.png",
+        "z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_185258.png",
+        "z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_185639.png",
+        "z3nw1ck-product-photos/z3nw1ckpromohomepage/20260725_190009.png"
+      ]);
+      initSlideshow('page-slideshow',[
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_182226.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_182752.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_182939.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183035.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183051.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183123.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183430.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183457.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_184926.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185153.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185213.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185258.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185352.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185422.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185741.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_190009.png"
+      ]);
+    })();
+    </script>
+  </body>
 </html>

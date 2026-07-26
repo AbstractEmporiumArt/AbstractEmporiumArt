@@ -5092,9 +5092,13 @@ img.loaded {
     scroll-snap-align: center;
 }
 .product-card .body .about-slide {
+    display: none;
     flex: 0 0 auto !important;
     width: 200px;
     scroll-snap-align: start;
+}
+.product-card .body .about-slide img {
+    display: none;
 }
 .z3-home-carousel .about-slide img, .product-card .body .about-slide img {
     width: 100%;

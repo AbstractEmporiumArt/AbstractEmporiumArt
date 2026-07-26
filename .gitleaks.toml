@@ -1,0 +1,4 @@
+[allowlist]
+regexes = [
+  'data-cf-beacon=.*',
+]

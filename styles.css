@@ -5070,7 +5070,8 @@ img.loaded {
 }
 /* ponytail: about carousel — native CSS scroll-snap, override all previous carousel rules with this single block */
 .about-carousel {
-    overflow-x: auto;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -5118,6 +5119,10 @@ img.loaded {
 }
 .about-carousel[style*="--count"] .about-carousel-track {
     width: max-content;
+}
+.z3-home-carousel .about-slide {
+    flex: 0 0 100% !important;
+    min-width: 100%;
 }
 
 .about-cta {

@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-07-31T03:41:07.515Z",
+  "lastCheck": "2026-07-31T09:12:54.022Z",
   "active": [
     {
       "platform": "fineartamerica",
@@ -8,7 +8,7 @@
       "discount": "10%",
       "description": "10% off sitewide sale",
       "confidence": "high",
-      "detectedAt": "2026-07-31T03:41:07.515Z",
+      "detectedAt": "2026-07-31T09:12:54.022Z",
       "priority": "high"
     }
   ],

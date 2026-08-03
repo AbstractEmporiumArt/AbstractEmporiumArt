@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-08-03T10:01:20.143Z",
+  "lastCheck": "2026-08-03T15:08:17.191Z",
   "active": [
     {
       "platform": "fineartamerica",
@@ -8,7 +8,17 @@
       "discount": "10%",
       "description": "10% off sitewide sale",
       "confidence": "high",
-      "detectedAt": "2026-08-03T10:01:20.143Z",
+      "detectedAt": "2026-08-03T15:08:17.191Z",
+      "priority": "high"
+    },
+    {
+      "platform": "kofi",
+      "platformName": "Ko-fi",
+      "type": "shop_sale",
+      "discount": null,
+      "description": "Ko-fi shop promotion",
+      "confidence": "medium",
+      "detectedAt": "2026-08-03T15:08:17.191Z",
       "priority": "high"
     }
   ],
@@ -24,7 +34,11 @@
       "detected": false
     },
     "kofi": {
-      "detected": false
+      "detected": true,
+      "type": "shop_sale",
+      "discount": null,
+      "description": "Ko-fi shop promotion",
+      "confidence": "medium"
     },
     "artpal": {
       "detected": false
@@ -34,7 +48,18 @@
       "checkMethod": "manual"
     }
   },
-  "hasNewPromotions": false,
-  "newPromotions": [],
+  "hasNewPromotions": true,
+  "newPromotions": [
+    {
+      "platform": "kofi",
+      "platformName": "Ko-fi",
+      "type": "shop_sale",
+      "discount": null,
+      "description": "Ko-fi shop promotion",
+      "confidence": "medium",
+      "detectedAt": "2026-08-03T15:08:17.191Z",
+      "priority": "high"
+    }
+  ],
   "endedPromotions": []
 }

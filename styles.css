@@ -1647,6 +1647,16 @@ textarea:focus-visible,
     font-weight: 700;
     margin: 15px 0 5px;
 }
+/* ponytail: allow pricing flyer image to render full-width inside .price on slippers card — overrides the font-size constraint */
+.product-card .body .price img {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-size: unset;
+    font-weight: normal;
+    margin: 0;
+    max-width: 100%;
+}
 
 .price-desc {
     color: var(--text-dark);

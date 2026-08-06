@@ -5095,6 +5095,34 @@ img.loaded {
 .product-card .body .about-slide img {
     display: none !important;
 }
+/* ponytail: show slides in slippers-slideshow (not the JS-populated z3nw1ck ones) */
+.product-card .body .slippers-slideshow .about-slide,
+.product-card .body .slippers-slideshow .about-slide img {
+    display: block !important;
+}
+/* ponytail: slippers-slideshow reuses carousel layout but is static HTML, not JS-populated */
+.product-card .body .slippers-slideshow {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    margin: 12px 0;
+}
+.product-card .body .slippers-slideshow::-webkit-scrollbar { display: none; }
+.product-card .body .slippers-slideshow .about-carousel-track {
+    display: flex;
+    gap: 0;
+    width: max-content;
+}
+.product-card .body .slippers-slideshow .about-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: center;
+}
 .z3-home-carousel .about-slide img, .product-card .body .about-slide img {
     width: 100%;
     height: auto;

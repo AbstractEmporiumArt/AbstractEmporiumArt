@@ -5133,10 +5133,16 @@ img.loaded {
     min-width: 100%;
     scroll-snap-align: center;
 }
-.z3-home-carousel .about-slide img, .product-card .body .about-slide img {
+.z3-home-carousel .about-slide img, .product-card .body .about-slide img, .about-carousel .about-slide img {
     width: 100%;
     height: auto;
     display: block;
+}
+/* ponytail: about.html carousel mobile — images overflow full-native-size on small screens without this */
+@media (max-width: 768px) {
+    .about-carousel .about-slide img {
+        max-width: 100vw;
+    }
 }
 .product-card .body .about-slide img {
     width: 200px;

@@ -70,6 +70,16 @@
             width: 100% !important;
             height: auto !important;
         }
+        /* mobile viewport sizing */
+        @media (max-width: 768px) {
+            .slippers-slideshow {
+                max-width: 100vw;
+                overflow-x: auto;
+            }
+            .slippers-slideshow .about-slide {
+                min-width: 90vw !important;
+            }
+        }
         .product-card a.buy-btn:hover { background: #ffefa0; }
         .lkc-cta { text-align: center; margin: 30px 0; }
         .lkc-cta a {

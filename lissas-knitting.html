@@ -169,6 +169,25 @@
                 </div>
             </div>
 
+            <div class="lkc-slideshow">
+                <h2>Slipper Styles Gallery</h2>
+                <div class="about-carousel" style="--count: 11" aria-roledescription="carousel" aria-label="Slippers promo gallery">
+                    <div class="about-carousel-track">
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_f8bdd73eaa15.jpg" alt="Handmade knitted slippers — purple pink white stripe" loading="lazy"><figcaption>Slipper Style 1</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_8110ad346cfa.jpg" alt="Chunky red white cream crochet slippers" loading="lazy"><figcaption>Slipper Style 2</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_a5288197c7c1.jpg" alt="Multi-color ribbed knit slippers" loading="lazy"><figcaption>Slipper Style 3</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_5701d1d62461.jpg" alt="Blue white striped slippers" loading="lazy"><figcaption>Slipper Style 4</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_eb38126ebba7.jpg" alt="Green purple checkered slippers" loading="lazy"><figcaption>Slipper Style 5</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_3f595b000d8f.jpg" alt="Lime blue purple diagonal stripe slippers" loading="lazy"><figcaption>Slipper Style 6</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_1c84e72f85e7.jpg" alt="Maroon purple white chunky knit slippers" loading="lazy"><figcaption>Slipper Style 7</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_346ade8aebec.jpg" alt="Purple grey red white slippers" loading="lazy"><figcaption>Slipper Style 8</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_fcf1252c56de.jpg" alt="Blue white fluffy slippers" loading="lazy"><figcaption>Slipper Style 9</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_1900003a4a50.jpg" alt="Charcoal yellow striped slippers" loading="lazy"><figcaption>Slipper Style 10</figcaption></figure>
+                    <figure class="about-slide" style="scroll-snap-align:center;flex:0 0 100%;min-width:100%"><img src="social-assets/slippers/img_8db898077af5.jpg" alt="Red black white basketweave slippers" loading="lazy"><figcaption>Slipper Style 11</figcaption></figure>
+                    </div>
+                </div>
+            </div>
+
             <div class="lkc-logistics">
                 <p>📍 <strong>Local pickup</strong> available in Thunder Bay.</p>
                 <p>🚗 Delivery/drop-off may be possible depending on location — message to arrange.</p>
@@ -217,5 +236,26 @@
     <script src="jsonld-core.js"></script>
     <script src="analytics-tracking.js"></script>
     <script src="script.js"></script>
+    <script>
+      // ponytail: horizontal scroll-snap for slippers promo carousel
+      // no lightbox dependency — pure scroll-snap CSS; carousel is navigable by drag/swipe
+      // upgrade path: wire into shared lightbox when knitting page gets #z3Lightbox container
+      (function(){
+        const track = document.querySelector('.lkc-slideshow .about-carousel-track');
+        if (!track) return;
+        let isDown = false, startX, scrollLeft;
+        track.addEventListener('mousedown', function(e){
+          isDown = true; track.style.scrollBehavior = 'auto';
+          startX = e.clientX; scrollLeft = track.scrollLeft;
+        });
+        track.addEventListener('mousemove', function(e){
+          if (!isDown) return;
+          e.preventDefault();
+          track.scrollLeft = scrollLeft - (e.clientX - startX) * 0.5;
+        });
+        track.addEventListener('mouseup', function(){ isDown = false; track.style.scrollBehavior = 'smooth'; });
+        track.addEventListener('mouseleave', function(){ isDown = false; });
+      })();
+    </script>
     </body>
 </html>

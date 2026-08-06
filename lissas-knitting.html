@@ -43,6 +43,33 @@
             background: #f5d76e; color: #1a1a2e; border-radius: 8px;
             text-decoration: none; font-weight: 700;
         }
+        /* ponytail: slippers-slideshow overrides — force slides visible, break out of .about-slide display:none */
+        .slippers-slideshow {
+            display: block !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            scroll-snap-type: x mandatory !important;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            margin: 16px 0;
+        }
+        .slippers-slideshow::-webkit-scrollbar { display: none; }
+        .slippers-slideshow .about-carousel-track {
+            display: flex !important;
+            width: max-content !important;
+            gap: 0;
+        }
+        .slippers-slideshow .about-slide {
+            flex: 0 0 100% !important;
+            min-width: 100% !important;
+            display: block !important;
+            scroll-snap-align: center;
+        }
+        .slippers-slideshow .about-slide img {
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+        }
         .product-card a.buy-btn:hover { background: #ffefa0; }
         .lkc-cta { text-align: center; margin: 30px 0; }
         .lkc-cta a {

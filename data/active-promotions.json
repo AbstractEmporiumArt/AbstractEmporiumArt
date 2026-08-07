@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-08-07T13:20:45.664Z",
+  "lastCheck": "2026-08-07T19:07:12.915Z",
   "active": [
     {
       "platform": "fineartamerica",
@@ -8,7 +8,7 @@
       "discount": "10%",
       "description": "10% off sitewide sale",
       "confidence": "high",
-      "detectedAt": "2026-08-07T13:20:45.664Z",
+      "detectedAt": "2026-08-07T19:07:12.915Z",
       "priority": "high"
     },
     {
@@ -18,18 +18,8 @@
       "discount": null,
       "description": "Ko-fi shop promotion",
       "confidence": "medium",
-      "detectedAt": "2026-08-07T13:20:45.664Z",
+      "detectedAt": "2026-08-07T19:07:12.915Z",
       "priority": "high"
-    },
-    {
-      "platform": "artpal",
-      "platformName": "ArtPal",
-      "type": "platform_sale",
-      "discount": null,
-      "description": "ArtPal promotion active",
-      "confidence": "medium",
-      "detectedAt": "2026-08-07T13:20:45.664Z",
-      "priority": "medium"
     }
   ],
   "platforms": {
@@ -51,19 +41,16 @@
       "confidence": "medium"
     },
     "artpal": {
-      "detected": true,
-      "type": "platform_sale",
-      "discount": null,
-      "description": "ArtPal promotion active",
-      "confidence": "medium"
+      "detected": false
     },
     "thehug": {
       "detected": false,
       "checkMethod": "manual"
     }
   },
-  "hasNewPromotions": true,
-  "newPromotions": [
+  "hasNewPromotions": false,
+  "newPromotions": [],
+  "endedPromotions": [
     {
       "platform": "artpal",
       "platformName": "ArtPal",
@@ -74,6 +61,5 @@
       "detectedAt": "2026-08-07T13:20:45.664Z",
       "priority": "medium"
     }
-  ],
-  "endedPromotions": []
+  ]
 }

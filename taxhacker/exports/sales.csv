@@ -1,2 +1,7 @@
 record_type,record_id,date,customer,vendor,note,items,subtotal,shipping,hst,total,status,currency
 order,1,2026-08-08,Eugene,,fellow board member tbdiwsg,Lissa's Knitting - Adult Medium Slippers x2,20.00,12.00,2.60,34.60,pending,CAD
+order,2,2026-07-30,Kelsie,,Thunder Bay,Z3nw1ck - 5oz Fruit Loops Candle x2,40.00,0.00,5.20,45.20,paid,CAD
+order,3,2026-07-22,Carissa,,Thunder Bay,Z3nw1ck - Satsuma Wax Melt x1;Z3nw1ck - Fruit Loops Wax Melt x1,12.00,0.00,1.56,13.56,paid,CAD
+order,4,2026-07-20,Carissa,,Thunder Bay,Z3nw1ck - Simple Daydreams Wax Melt x1,6.00,0.00,0.78,6.78,paid,CAD
+order,5,2026-07-18,Tracey,,client, partial fulfillment of reserved Satsuma order,Z3nw1ck - Satsuma Wax Melt x2;Z3nw1ck - 5oz Simple Daydreams Candle x1;Z3nw1ck - 5oz Satsuma Candle x2,50.00,0.00,6.50,56.50,paid,CAD
+order,6,2026-08-06,Janice,,Facebook Marketplace / Thunder Bay area,Z3nw1ck - Fruit Loops Wax Melt x2,10.00,0.00,1.30,11.30,paid,CAD

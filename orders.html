@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AE Orders</title>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b0c10;color:#c5c6c7;margin:0}
+  header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:#0f1014;border-bottom:1px solid #1f2833}
+  h1{font-size:16px;margin:0}
+  .pill{font-size:12px;padding:4px 8px;border-radius:999px;background:#1f2833;color:#66fcf1}
+  table{width:100%;border-collapse:collapse;margin-top:12px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #1f2833;font-size:13px}
+  th{color:#8b8e93;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+  tr:hover td{background:#0f1014}
+  .badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+  .badge.pending{background:#3a2a0b;color:#ffd166}
+  .badge.paid{background:#0b3d2a;color:#66fcf1}
+  .badge.shipped{background:#1a237e33;color:#90caf9}
+  button{background:#66fcf1;color:#0b0c10;border:none;padding:6px 10px;border-radius:6px;font-weight:600;cursor:pointer}
+  button.secondary{background:#1f2833;color:#c5c6c7}
+  .actions{display:flex;gap:6px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Abstract Emporium Orders</h1>
+  <div class="pill" id="count">0</div>
+</header>
+<main style="padding:16px 20px">
+  <div style="display:flex;gap:8px;margin-bottom:10px">
+    <button onclick="render()">Refresh</button>
+    <button class="secondary" onclick="exportCsv()">Export CSV</button>
+  </div>
+  <table>
+    <thead>
+      <tr><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Actions</th></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+</main>
+<script>
+const ORDER_FILE = 'C:\\Users\\HP\\Desktop\\AbstractEmporium\\orders.jsonl'
+let orders = []
+function fmt(n){return '$'+Number(n||0).toFixed(2)+' CAD'}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]))}
+function moneyTotal(o){return o.items.reduce((s,it)=>s+(Number(it.price)||0)*(Number(it.qty)||1),0)}
+async function load(){
+  try{
+    const r = await fetch('file:///C:/Users/HP/Desktop/AbstractEmporium/orders.jsonl')
+    const text = await r.text()
+    orders = text.split(/\r?\n/).filter(Boolean).map(line => JSON.parse(line))
+  }catch(e){ orders = [] }
+}
+function save(){
+  return fetch(ORDER_FILE, {method:'PUT', body: orders.map(o=>JSON.stringify(o)).join('\n')})
+}
+function setStatus(i,status){
+  orders[i].status = status
+  save().then(render)
+}
+function render(){
+  document.getElementById('count').textContent = orders.length + ' orders'
+  const tb = document.getElementById('rows')
+  tb.innerHTML = orders.map((o,i)=>`
+    <tr>
+      <td>${esc(o.customer||'Order')}${o.note?'<br><small style=\"color:#8b8e93\">'+esc(o.note)+'</small>':''}</td>
+      <td>${o.items.map(it=>esc(it.title)+' x'+(it.qty||1)).join('<br>')}</td>
+      <td>${fmt(moneyTotal(o))}</td>
+      <td><span class=\"badge ${o.status||'pending'}\">${o.status||'pending'}</span></td>
+      <td class=\"actions\">
+        <button onclick=\"setStatus(${i},'paid')\">Paid</button>
+        <button class=\"secondary\" onclick=\"setStatus(${i},'shipped')\">Shipped</button>
+      </td>
+    </tr>
+  `).join('') || '<tr><td colspan=5 style=\"color:#8b8e93\">No orders yet</td></tr>'
+}
+function exportCsv(){
+  const header = 'customer,note,items,total,status\n'
+  const rows = orders.map(o => [o.customer, (o.note||'').replace(/,/g,';'), o.items.map(it=>it.title+' x'+(it.qty||1)).join(';'), moneyTotal(o), o.status||'pending'].join(','))
+  const blob = new Blob([header+rows.join('\n')], {type:'text/csv'})
+  const a = document.createElement('a')
+  a.href = URL.createObjectURL(blob)
+  a.download = 'ae-orders.csv'
+  a.click()
+}
+load().then(render)
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Abstract Emporium</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cart-container { max-width: 900px; margin: 40px auto; padding: 20px; }
+        .cart-item { display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #eee; align-items: center; }
+        .cart-item img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; }
+        .cart-item-info { flex: 1; }
+        .cart-item-title { font-weight: 700; margin-bottom: 4px; }
+        .cart-item-price { color: #666; }
+        .cart-summary { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .cart-row { display: flex; justify-content: space-between; padding: 6px 0; }
+        .cart-total { font-weight: 700; font-size: 1.2em; border-top: 2px solid #333; padding-top: 10px; margin-top: 10px; }
+        .checkout-btn { display: inline-block; margin-top: 16px; padding: 14px 28px; background: #0070f3; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; }
+        .empty-cart { text-align: center; padding: 60px 20px; }
+        .remove-btn { background: #dc3545; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Abstract Emporium</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html" class="active">Cart <span id="cartCount">(0)</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+        <div id="cartItems"></div>
+        <div id="cartSummary" class="cart-summary" style="display:none;"></div>
+        <div id="emptyCart" class="empty-cart" style="display:none;">
+            <h2>Your cart is empty</h2>
+            <p>Browse our <a href="shop.html">shop</a> or <a href="gallery.html">gallery</a> to add items.</p>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

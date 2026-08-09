@@ -1,0 +1,6 @@
+record_type,record_id,date,vendor,invoice,order,items,subtotal,shipping,tax,total,currency,paid_via
+expense,1,2026-07-14,Shenzhen Xinxi'an E-commerce,CA61WYEIYXA2I,702-6747465-0894667,ASTARON 12 Pack 2oz Heart Tins x2,33.98,0.00,4.42,38.40,CAD,Amazon
+expense,2,2026-07-25,HONGKONG DINGFU E-COMMERCE,CA6XBRIHKAEI,702-9193361-0327448,Jucoan 100 Pack Wax Melt Clamshell Mold x2,47.98,0.00,3.12,51.10,CAD,Amazon
+expense,3,2026-07-14,huizhoushitejiameigongyipin,CA6A5QSJATYI,702-6747465-0894667,20LB Natural Soy Wax Flakes 320oz x2,159.98,0.00,10.40,170.38,CAD,Amazon
+expense,4,2026-07-14,ShenZhenShiDingYuanShuangHeMaoYi,CA61ZRLFNPI,702-6747465-0894667,DingwinSharp 5 oz Candle Tins 12 Pcs x3,29.97,0.00,1.30,31.27,CAD,Amazon
+expense,5,2026-07-14,DELOVA LLC,CA68N6HL6L3I,,Aroma Depot 10 Bundles Unscented Incense Sticks x1,55.01,0.00,7.15,62.16,CAD,Amazon

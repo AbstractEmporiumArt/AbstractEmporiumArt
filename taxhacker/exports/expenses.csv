@@ -1,6 +1,10 @@
 record_type,record_id,date,vendor,invoice,order,items,subtotal,shipping,tax,total,currency,paid_via
-expense,1,2026-07-14,Shenzhen Xinxi'an E-commerce,CA61WYEIYXA2I,702-6747465-0894667,ASTARON 12 Pack 2oz Heart Tins x2,33.98,0.00,4.42,38.40,CAD,Amazon
-expense,2,2026-07-25,HONGKONG DINGFU E-COMMERCE,CA6XBRIHKAEI,702-9193361-0327448,Jucoan 100 Pack Wax Melt Clamshell Mold x2,47.98,0.00,3.12,51.10,CAD,Amazon
-expense,3,2026-07-14,huizhoushitejiameigongyipin,CA6A5QSJATYI,702-6747465-0894667,20LB Natural Soy Wax Flakes 320oz x2,159.98,0.00,10.40,170.38,CAD,Amazon
-expense,4,2026-07-14,ShenZhenShiDingYuanShuangHeMaoYi,CA61ZRLFNPI,702-6747465-0894667,DingwinSharp 5 oz Candle Tins 12 Pcs x3,29.97,0.00,1.30,31.27,CAD,Amazon
-expense,5,2026-07-14,DELOVA LLC,CA68N6HL6L3I,,Aroma Depot 10 Bundles Unscented Incense Sticks x1,55.01,0.00,7.15,62.16,CAD,Amazon
+expense,1,2026-06-17,ON Ministry,txn 39328d0952c8c635,,Register Business Name — Sole Proprietorship (ABSTRACT EMPORIUM #1001649050) x1,60.00,0.00,0.00,60.00,CAD,Debit Card
+expense,2,2026-06-16,Voyageur Soap & Candle,#541001,,Z3nw1ck fragrance oils 500ml ea: Simple Daydream/Fruit Loops/Satsuma x3,115.90,0.00,0.00,115.90,CAD,Amazon
+expense,3,2026-07-02,Temu,PO-037-02514125020792327,,Candle wicks 200pc x1;Custom business cards x200 x1;Radium self-adhesive label bags x1,33.78,0.00,0.00,33.78,CAD,Temu app
+expense,4,2026-06-23,Amazon CA / Aroma Depot,CA67KLHL6L3I,702-9950332-4861024,Amazon incense sticks 1000ct unscented wood-pulp punk sticks x1,64.56,0.00,0.00,64.56,CAD,Amazon CA
+expense,5,2026-06-23,Amazon CA / GPI,CA6295418T6I,702-8792151-9760227,Amazon 1000ct clear zip bags 2""x12"" x1,26.89,0.00,0.00,26.89,CAD,Amazon CA
+expense,6,2026-06-23,Amazon CA,702-4048145-6784223,702-4048145-6784223,Wicks+stickers x1;Candle tins x1;PG 946mL x1;Wax melt molds x1;Pencil grips x1;Soy wax 10LB x1,188.81,0.00,0.00,188.81,CAD,Amazon CA
+expense,7,2025-09-29,Amazon CA / bagasin,Amazon order Sep 29 2025,,Laptop shoulder bag 17-18\"" case — 50% AE / 50% S0vryn9 x1,17.00,0.00,0.00,17.00,CAD,Amazon CA
+expense,8,2025-09-23,Amazon CA,CA527F1V5ZBI,702-0599454-8347461,Candle making kit: soy wax + 12 constellation molds + pot x1,89.99,0.00,0.00,89.99,CAD,Amazon CA
+expense,9,2025-09-23,Amazon CA / LIANGSTAR,CA52LNAH730I,702-0599454-8347461,Cooling pad 6-fan RGB — 50% AE / 50% S0vryn9 x1,14.99,0.00,0.00,14.99,CAD,Amazon CA

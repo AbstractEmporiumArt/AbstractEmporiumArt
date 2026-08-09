@@ -347,7 +347,9 @@ function addToCart() {
             title: currentItem.title,
             link: currentItem.link,
             platform: currentItem.platform,
-            addedAt: new Date().toISOString()
+            addedAt: new Date().toISOString(),
+            price: currentItem.price || null,
+            image: currentItem.image || null
         });
         localStorage.setItem('artCart', JSON.stringify(cart));
         alert(`"${currentItem.title}" added to cart!`);

@@ -1,14 +1,14 @@
 {
-  "lastCheck": "2026-08-17T07:09:16.165Z",
+  "lastCheck": "2026-08-17T12:58:18.850Z",
   "active": [
     {
       "platform": "fineartamerica",
       "platformName": "Fine Art America",
       "type": "sitewide_sale",
-      "discount": "10%",
-      "description": "10% off sitewide sale",
+      "discount": "20%",
+      "description": "20% off sitewide sale",
       "confidence": "high",
-      "detectedAt": "2026-08-17T07:09:16.165Z",
+      "detectedAt": "2026-08-17T12:58:18.850Z",
       "priority": "high"
     },
     {
@@ -18,7 +18,7 @@
       "discount": null,
       "description": "Ko-fi shop promotion",
       "confidence": "medium",
-      "detectedAt": "2026-08-17T07:09:16.165Z",
+      "detectedAt": "2026-08-17T12:58:18.850Z",
       "priority": "high"
     }
   ],
@@ -26,8 +26,8 @@
     "fineartamerica": {
       "detected": true,
       "type": "sitewide_sale",
-      "discount": "10%",
-      "description": "10% off sitewide sale",
+      "discount": "20%",
+      "description": "20% off sitewide sale",
       "confidence": "high"
     },
     "redbubble": {

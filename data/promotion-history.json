@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "timestamp": "2026-08-18T01:42:52.941Z",
+      "newPromotions": [],
+      "endedPromotions": [
+        {
+          "platform": "fineartamerica",
+          "platformName": "Fine Art America",
+          "type": "sitewide_sale",
+          "discount": "20%",
+          "description": "20% off sitewide sale",
+          "confidence": "high",
+          "detectedAt": "2026-08-17T18:50:25.635Z",
+          "priority": "high"
+        }
+      ]
+    },
+    {
       "timestamp": "2026-08-08T13:04:36.556Z",
       "newPromotions": [
         {
@@ -2413,33 +2429,6 @@
           "description": "20% off sitewide sale",
           "confidence": "high",
           "detectedAt": "2026-06-02T16:50:21.968Z",
-          "priority": "high"
-        }
-      ]
-    },
-    {
-      "timestamp": "2026-06-02T16:50:21.968Z",
-      "newPromotions": [
-        {
-          "platform": "fineartamerica",
-          "platformName": "Fine Art America",
-          "type": "sitewide_sale",
-          "discount": "20%",
-          "description": "20% off sitewide sale",
-          "confidence": "high",
-          "detectedAt": "2026-06-02T16:50:21.968Z",
-          "priority": "high"
-        }
-      ],
-      "endedPromotions": [
-        {
-          "platform": "fineartamerica",
-          "platformName": "Fine Art America",
-          "type": "potential_sale",
-          "discount": null,
-          "description": "Possible promotion detected",
-          "confidence": "medium",
-          "detectedAt": "2026-06-02T10:50:59.611Z",
           "priority": "high"
         }
       ]

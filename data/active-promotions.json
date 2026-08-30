@@ -1,16 +1,6 @@
 {
-  "lastCheck": "2026-08-30T11:46:03.784Z",
+  "lastCheck": "2026-08-30T16:34:21.587Z",
   "active": [
-    {
-      "platform": "fineartamerica",
-      "platformName": "Fine Art America",
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high",
-      "detectedAt": "2026-08-30T11:46:03.784Z",
-      "priority": "high"
-    },
     {
       "platform": "kofi",
       "platformName": "Ko-fi",
@@ -18,17 +8,13 @@
       "discount": null,
       "description": "Ko-fi shop promotion",
       "confidence": "medium",
-      "detectedAt": "2026-08-30T11:46:03.784Z",
+      "detectedAt": "2026-08-30T16:34:21.587Z",
       "priority": "high"
     }
   ],
   "platforms": {
     "fineartamerica": {
-      "detected": true,
-      "type": "sitewide_sale",
-      "discount": "20%",
-      "description": "20% off sitewide sale",
-      "confidence": "high"
+      "detected": false
     },
     "redbubble": {
       "detected": false
@@ -50,5 +36,16 @@
   },
   "hasNewPromotions": false,
   "newPromotions": [],
-  "endedPromotions": []
+  "endedPromotions": [
+    {
+      "platform": "fineartamerica",
+      "platformName": "Fine Art America",
+      "type": "sitewide_sale",
+      "discount": "20%",
+      "description": "20% off sitewide sale",
+      "confidence": "high",
+      "detectedAt": "2026-08-30T11:46:03.784Z",
+      "priority": "high"
+    }
+  ]
 }

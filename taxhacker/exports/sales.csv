@@ -1,16 +1,11 @@
 record_type,record_id,date,customer,vendor,note,items,subtotal,shipping,hst,total,status,currency
-order,1,2026-08-08,Eugene,,fellow board member tbdiwsg,Lissa's Knitting - Adult Medium Slippers x2,20.00,12.00,2.60,34.60,paid,CAD
-order,2,2026-07-30,Kelsie,,Thunder Bay,Z3nw1ck - 5oz Fruit Loops Candle x2,40.00,0.00,5.20,45.20,paid,CAD
-order,3,2026-07-22,Carissa,,Thunder Bay,Z3nw1ck - Satsuma Wax Melt x1;Z3nw1ck - Fruit Loops Wax Melt x1,12.00,0.00,1.56,13.56,paid,CAD
-order,4,2026-07-20,Carissa,,Thunder Bay,Z3nw1ck - Simple Daydreams Wax Melt x1,6.00,0.00,0.78,6.78,paid,CAD
-order,5,2026-07-18,Tracey,,client, partial fulfillment of reserved Satsuma order,Z3nw1ck - Satsuma Wax Melt x2;Z3nw1ck - 5oz Simple Daydreams Candle x1;Z3nw1ck - 5oz Satsuma Candle x2,50.00,0.00,6.50,56.50,paid,CAD
-order,6,2026-08-06,Janice,,Facebook Marketplace / Thunder Bay area,Z3nw1ck - Fruit Loops Wax Melt x2,10.00,0.00,1.30,11.30,paid,CAD
-order,7,2026-08-09,Tracey,,client, $40 + 15% off,Z3nw1ck - Monkey Farts Wax Melt x6;Z3nw1ck - 5oz Monkey Farts Candle x6;Z3nw1ck - Bourbon & Sandalwood Wax Melt x2;Z3nw1ck - 5oz Bourbon & Sandalwood Candle x2,208.00,0.00,27.04,235.04,paid,CAD
-order,8,2026-08-09,Carissa,,3rd order,Z3nw1ck - Monkey Farts Wax Melt x1;Z3nw1ck - Fruit Loops Wax Melt x1,10.00,0.00,1.30,11.30,paid,CAD
-order,9,2026-08-09,,,refill credit: returned 3 empty 5oz tins + 2 empty wax melts,,0.00,0.00,0.00,0.00,paid,CAD
-order,10,2026-09-02,Carissa,,$5 credit for donated sampler containers for fragrances,,0.00,0.00,0.00,0.00,credit,CAD
-order,11,2026-09-02,,,Melissa (Beads Bags N Beyond) - label design for candles/melts/incense, Clay""s wife starting new business,Z3NW1CK Label Design - Candles/Melts/Incense x1,220.00,0.00,28.60,248.60,paid,CAD
-order,12,2026-09-02,,,Temu order PO-037 - 1000 custom round stickers,Custom Round Stickers 1000pcs x1,37.31,12.00,4.85,54.16,paid,CAD
-order,13,2026-09-02,,,Temu order PO-037 - 1000 custom round stickers,Custom Round Stickers 1000pcs x1,37.31,12.00,4.85,54.16,paid,CAD
-order,14,2026-09-02,,,Temu order PO-037 - mixed pack mailing bags + business cards,Mixed Pack Mailing Bags 50pc x1;Personalized Business Cards 500pcs x1,63.32,12.00,8.23,83.55,paid,CAD
-order,15,2026-09-02,,,Temu order PO-037 - business cards,Personalized Business Cards 500pcs x1,18.03,12.00,2.34,32.37,paid,CAD
+order,1,2026-08-08,Eugene,,fellow board member tbdiwsg,Lissa's Knitting - Adult Medium Slippers x2,20.00,0.00,0.00,20.00,paid,CAD
+order,2,2026-07-30,Kelsie,,Thunder Bay,Z3nw1ck - 5oz Fruit Loops Candle x2,40.00,0.00,0.00,40.00,paid,CAD
+order,3,2026-07-22,Carissa,,Thunder Bay,Z3nw1ck - Satsuma Wax Melt x1;Z3nw1ck - Fruit Loops Wax Melt x1,12.00,0.00,0.00,12.00,paid,CAD
+order,4,2026-07-20,Carissa,,Thunder Bay,Z3nw1ck - Simple Daydreams Wax Melt x1,6.00,0.00,0.00,6.00,paid,CAD
+order,5,2026-07-18,Tracey,,client, partial fulfillment of reserved Satsuma order,Z3nw1ck - Satsuma Wax Melt x2;Z3nw1ck - 5oz Simple Daydreams Candle x1;Z3nw1ck - 5oz Satsuma Candle x2,50.00,0.00,0.00,50.00,paid,CAD
+order,6,2026-08-06,Janice,,Facebook Marketplace / Thunder Bay area,Z3nw1ck - Fruit Loops Wax Melt x2,10.00,0.00,0.00,10.00,paid,CAD
+order,7,2026-08-09,Tracey,,client, $40 + 15% off,Z3nw1ck - Monkey Farts Wax Melt x6;Z3nw1ck - 5oz Monkey Farts Candle x6;Z3nw1ck - Bourbon & Sandalwood Wax Melt x2;Z3nw1ck - 5oz Bourbon & Sandalwood Candle x2,208.00,0.00,0.00,176.80,paid,CAD
+order,8,2026-08-09,Carissa,,3rd order,Z3nw1ck - Monkey Farts Wax Melt x1;Z3nw1ck - Fruit Loops Wax Melt x1,10.00,0.00,0.00,10.00,paid,CAD
+order,9,2026-08-09,Tracey,,refill credit: returned 3 empty 5oz tins + 2 empty wax melts,,0.00,0.00,0.00,-15.00,paid,CAD
+order,10,2026-09-02,Carissa,,$5 credit for donated sampler containers for fragrances,,0.00,0.00,0.00,-5.00,credit,CAD

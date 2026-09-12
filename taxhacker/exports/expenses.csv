@@ -1,6 +1,5 @@
 record_type,record_id,date,vendor,invoice,order,items,subtotal,shipping,tax,total,currency,paid_via
 expense,1,2026-09-02,Melissa (Beads Bags N Beyond),,,Z3NW1CK Label Design - Candles/Melts/Incense x1,220.00,0.00,0.00,220.00,CAD,cash
 expense,2,2026-09-02,Temu order PO-037,,,Custom Round Stickers 1000pcs x1,37.31,0.00,0.00,37.31,CAD,Mastercard 4204
-expense,3,2026-09-02,Temu order PO-037,,,Custom Round Stickers 1000pcs x1,37.31,0.00,0.00,37.31,CAD,Mastercard 4204
-expense,4,2026-09-02,Temu order PO-037,,,Mixed Pack Mailing Bags 50pc x1;Personalized Business Cards 500pcs x1,63.32,0.00,0.00,63.32,CAD,Mastercard 4204
-expense,5,2026-09-02,Temu order PO-037,,,Personalized Business Cards 500pcs x1,18.03,0.00,0.00,18.03,CAD,Mastercard 4204
+expense,3,2026-09-02,Temu order PO-037,,,Mixed Pack Mailing Bags 50pc x1;Personalized Business Cards 500pcs x1,63.32,0.00,0.00,63.32,CAD,Mastercard 4204
+expense,4,2026-09-02,Temu order PO-037,,,Personalized Business Cards 500pcs x1,18.03,0.00,0.00,18.03,CAD,Mastercard 4204

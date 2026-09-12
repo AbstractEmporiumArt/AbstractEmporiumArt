@@ -1,5 +1,8 @@
-{"customer":"Tracey","stamps":3,"last_order":"2026-08-09","notes":"$15 credit for tin/melt returns; big spender"}
-{"customer":"Carissa","stamps":4,"last_order":"2026-09-02","notes":"$5 credit for sampler container donations; frequent buyer"}
-{"customer":"Kelsie","stamps":1,"last_order":"2026-07-30","notes":"Thunder Bay"}
-{"customer":"Janice","stamps":1,"last_order":"2026-08-06","notes":"FB Marketplace"}
-{"customer":"Eugene","stamps":1,"last_order":"2026-08-08","notes":"Paid $20 for 2 pairs of slippers"}
+{"customer": "Tracey", "stamps": 2, "last_order": "2026-08-09", "notes": "$15 credit for tin/melt returns; big spender (2 orders)"}
+{"customer": "Carissa", "stamps": 3, "last_order": "2026-09-02", "notes": "$5 credit for sampler container donations; frequent buyer (3 orders)"}
+{"customer": "Kelsie", "stamps": 1, "last_order": "2026-07-30", "notes": "Thunder Bay"}
+{"customer": "Janice", "stamps": 1, "last_order": "2026-08-06", "notes": "FB Marketplace"}
+{"customer": "Eugene", "stamps": 1, "last_order": "2026-08-08", "notes": "Paid $20 for 2 pairs of slippers"}
+{"customer": "Jamie (City)", "stamps": 1, "last_order": "2026-09-04", "notes": "$20 cash, 4x 2oz candles + incense freebie"}
+{"customer": "Jayme", "stamps": 1, "last_order": "2026-09-05", "notes": "HIGH RISK - FB Marketplace, e-transfer after follow-up; pay in advance going forward", "high_risk": true}
+{"customer": "Heather", "stamps": 1, "last_order": "2026-08-23", "notes": "2x Bourbon & Sandalwood melts"}

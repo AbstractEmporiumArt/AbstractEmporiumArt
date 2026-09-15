@@ -5182,3 +5182,23 @@ img.loaded {
     .about-page { padding: 28px 16px 48px; }
 }
 }
+/* Accessibility: visible keyboard focus (Eduardo a11y review 2026-09-15) */
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.buy-btn:focus-visible,
+.cta-button:focus-visible,
+.banner-link:focus-visible {
+  outline: 3px solid #b5651d;
+  outline-offset: 2px;
+}
+
+.size-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin: 6px 0 2px;
+}

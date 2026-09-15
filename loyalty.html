@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="2FfLbRapfEI5LR9oLM75mJgn3lwYE8GcEB1TZUo59xc">
+    <meta name="msvalidate.01" content="E958527EEF5DF92B51F83A21DBD81613">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abstract Emporium Loyalty Card — buy 10 handmade items, get the 11th free. Track your stamps and redeem your reward.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="https://abstractemporium.art/loyalty.html">
+    <meta property="og:title" content="Abstract Emporium Loyalty Card | Buy 10, Get the 11th Free">
+    <meta property="og:description" content="Track your Abstract Emporium loyalty stamps and redeem your free handmade item after 10 purchases.">
+    <meta property="og:image" content="https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761">
+    <meta property="og:url" content="https://abstractemporium.art/loyalty.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abstract Emporium Loyalty Card | Buy 10, Get the 11th Free">
+    <meta name="twitter:description" content="Track your Abstract Emporium loyalty stamps and redeem your free handmade item after 10 purchases.">
+    <meta name="twitter:image" content="https://abstractemporium.art/TheHugArtAbstractEmporiumCover.jpg?v=1777240761">
+    <title>Abstract Emporium Loyalty Card | Buy 10, Get the 11th Free</title>
+    <link rel="preload" href="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" as="image">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <style>
+        .loyalty-section { padding: 70px 20px; }
+        .loyalty-card {
+            max-width: 640px;
+            margin: 24px auto;
+            background: linear-gradient(135deg, #6c5ce7, #00b894);
+            border-radius: 18px;
+            padding: 28px;
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+            text-align: center;
+        }
+        .loyalty-card h2 { margin: 0 0 4px; font-size: 1.6rem; }
+        .loyalty-card .sub { opacity: 0.9; margin: 0 0 18px; letter-spacing: 2px; }
+        .stamp-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .stamp {
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            border: 2px dashed rgba(255,255,255,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            background: rgba(255,255,255,0.12);
+        }
+        .stamp.filled {
+            background: #ffd166;
+            color: #2d3436;
+            border: 2px solid #ffd166;
+        }
+        .stamp.free {
+            background: #ff7675;
+            border-color: #ff7675;
+            color: #fff;
+        }
+        .stamp.free.earned {
+            background: #00cec9;
+            border-color: #00cec9;
+            color: #fff;
+            animation: pulse 1.2s infinite;
+        }
+        @keyframes pulse { 0%{transform:scale(1);} 50%{transform:scale(1.06);} 100%{transform:scale(1);} }
+        .loyalty-progress { font-size: 1.05rem; font-weight: 600; margin: 10px 0; }
+        .loyalty-actions { margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .loyalty-actions button {
+            border: none; border-radius: 999px; padding: 12px 20px; font-weight: 700; cursor: pointer; font: inherit;
+        }
+        .btn-add { background: #fff; color: #2d3436; }
+        .btn-redeem { background: #ffd166; color: #2d3436; }
+        .loyalty-note { max-width: 640px; margin: 16px auto 0; color: #555; font-size: 0.92rem; text-align: center; line-height: 1.5; }
+        .loyalty-reward-msg { color: #00b894; font-weight: 700; margin-top: 12px; }
+        @media (max-width: 480px){ .stamp-grid { grid-template-columns: repeat(4, 1fr); } }
+    </style>
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1719352401749537');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1719352401749537&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="banner">
+        <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Hug.art Banner" class="banner-img" loading="eager" fetchpriority="high" decoding="async">
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" loading="lazy" decoding="async">
+                <span>Abstract Emporium</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="shop-everywhere.html" class="nav-link">Shop Everywhere</a></li>
+                <li><a href="commissions.html" class="nav-link">Commissions</a></li>
+                <li><a href="loyalty.html" class="nav-link active">Loyalty</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="cart.html">Cart <span id="cartCount">(0)</span></a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+    <section class="loyalty-section" id="main-content">
+        <div class="container">
+            <h1>Abstract Emporium Loyalty Card</h1>
+            <p class="section-subtitle">Thank you for supporting handmade. Buy 10 items, get your 11th free.</p>
+            <div class="loyalty-card">
+                <h2>Buy 10 &middot; Get the 11th FREE!</h2>
+                <p class="sub">ART &middot; CRAFT &middot; AROMA &middot; POSITIVITY</p>
+                <div class="stamp-grid" id="stampGrid" role="img" aria-label="Loyalty card stamp progress"></div>
+                <p class="loyalty-progress" id="loyaltyProgress">0 of 10 stamps</p>
+                <div class="loyalty-actions">
+                    <button type="button" class="btn-add" id="addStamp">+ Add Stamp</button>
+                    <button type="button" class="btn-redeem" id="redeemBtn" style="display:none;">Redeem &amp; Reset</button>
+                </div>
+                <p class="loyalty-reward-msg" id="rewardMsg" style="display:none;"></p>
+            </div>
+            <p class="loyalty-note">
+                After each order, tap <strong>+ Add Stamp</strong>. Your card is saved in this browser on this device &mdash; it follows you on this phone or computer, but not across different devices. When you reach 10 stamps, your next item is free: message Lissa to claim it, then tap <strong>Redeem &amp; Reset</strong>.<br><br>
+                Prefer a physical stamped card? Just ask Lissa and she'll keep one for you &mdash; this page is a handy way to track it yourself between visits.
+            </p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><p>&copy; 2026 Abstract Emporium Art. All rights reserved.</p></div>
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="shop-everywhere.html">Shop Everywhere</a>
+                        <a href="commissions.html">Commissions</a>
+                        <a href="loyalty.html">Loyalty</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="jsonld-core.js"></script>
+    <script src="analytics-tracking.js"></script>
+    <script src="script.js"></script>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script>
+    <script src="cart.js"></script>
+    <script src="loyalty.js"></script>
+</body>
+</html>

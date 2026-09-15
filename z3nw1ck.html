@@ -157,6 +157,7 @@ fbq('track', 'PageView');
                 <li><a href="shop-everywhere.html" class="nav-link">Shop Everywhere</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="commissions.html" class="nav-link">Commissions</a></li>
+                <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="cart.html">Cart <span id="cartCount">(0)</span></a></li>
             </ul>
@@ -196,7 +197,8 @@ fbq('track', 'PageView');
         <input type="hidden" name="item_name" value="Z3NW1CK Satsuma Wax Melts">
         <input type="hidden" name="amount" value="6">
         <input type="hidden" name="currency_code" value="CAD">
-        <button type="submit" class="buy-btn">Buy Melts </button>
+        <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+        <button type="submit" class="buy-btn">Buy with PayPal</button>
       </form>
       <button type="button" class="buy-btn add-to-cart" onclick="addToCartDirect('Z3NW1CK Satsuma Wax Melts', 6, 'z3nw1ck-product-photos/satsuma/satsuma-incense-1.jpg')">Add to Cart</button>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline;">
@@ -209,7 +211,8 @@ fbq('track', 'PageView');
           <option value="8">8oz - </option>
           <option value="10">10oz - 0</option>
         </select></label>
-        <button type="submit" class="buy-btn">Buy Candle</button>
+        <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+        <button type="submit" class="buy-btn">Buy with PayPal</button>
       </form>
       <button type="button" class="buy-btn add-to-cart" onclick="addCandleToCart('candleSize-satsuma', 'Z3NW1CK Satsuma Candle', 'z3nw1ck-product-photos/satsuma/satsuma-incense-1.jpg')">Add to Cart</button>
       <a class="buy-btn" href="contact.html?product=satsuma" style="background:#555;color:#ddd;">Email Order</a>
@@ -239,7 +242,8 @@ fbq('track', 'PageView');
         <input type="hidden" name="item_name" value="Z3NW1CK Fruit Loops Wax Melts">
         <input type="hidden" name="amount" value="6">
         <input type="hidden" name="currency_code" value="CAD">
-        <button type="submit" class="buy-btn">Buy Melts </button>
+        <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+        <button type="submit" class="buy-btn">Buy with PayPal</button>
       </form>
       <button type="button" class="buy-btn add-to-cart" onclick="addToCartDirect('Z3NW1CK Fruit Loops Wax Melts', 6, 'z3nw1ck-product-photos/fruitloops/fruitloops-incense-1.jpg')">Add to Cart</button>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline;">
@@ -252,7 +256,8 @@ fbq('track', 'PageView');
           <option value="8">8oz - </option>
           <option value="10">10oz - 0</option>
         </select></label>
-        <button type="submit" class="buy-btn">Buy Candle</button>
+        <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+        <button type="submit" class="buy-btn">Buy with PayPal</button>
       </form>
       <button type="button" class="buy-btn add-to-cart" onclick="addCandleToCart('candleSize-fruitloops', 'Z3NW1CK Fruit Loops Candle', 'z3nw1ck-product-photos/fruitloops/fruitloops-incense-1.jpg')">Add to Cart</button>
       <a class="buy-btn" href="contact.html?product=fruitloops" style="background:#555;color:#ddd;">Email Order</a>
@@ -282,7 +287,8 @@ fbq('track', 'PageView');
         <input type="hidden" name="item_name" value="Z3NW1CK Simple Daydreams Wax Melts">
         <input type="hidden" name="amount" value="6">
         <input type="hidden" name="currency_code" value="CAD">
-        <button type="submit" class="buy-btn">Buy Melts </button>
+        <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+        <button type="submit" class="buy-btn">Buy with PayPal</button>
       </form>
       <button type="button" class="buy-btn add-to-cart" onclick="addToCartDirect('Z3NW1CK Simple Daydreams Wax Melts', 6, 'z3nw1ck-product-photos/simpledaydreams/simpledaydreams-incense-1.jpg')">Add to Cart</button>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline;">
@@ -295,7 +301,8 @@ fbq('track', 'PageView');
           <option value="8">8oz - </option>
           <option value="10">10oz - 0</option>
         </select></label>
-        <button type="submit" class="buy-btn">Buy Candle</button>
+        <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+        <button type="submit" class="buy-btn">Buy with PayPal</button>
       </form>
       <button type="button" class="buy-btn add-to-cart" onclick="addCandleToCart('candleSize-simpledaydreams', 'Z3NW1CK Simple Daydreams Candle', 'z3nw1ck-product-photos/simpledaydreams/simpledaydreams-incense-1.jpg')">Add to Cart</button>
       <a class="buy-btn" href="contact.html?product=simpledaydream" style="background:#555;color:#ddd;">Email Order</a>
@@ -400,6 +407,7 @@ fbq('track', 'PageView');
                         <a href="z3nw1ck.html">Z3NW1CK</a>
                         <a href="shop-everywhere.html">Shop Everywhere</a>
                         <a href="commissions.html">Commissions</a>
+                        <a href="loyalty.html">Loyalty</a>
                         <a href="contact.html">Contact</a>
                     </div>
                 </div>

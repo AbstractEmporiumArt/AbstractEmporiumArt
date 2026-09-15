@@ -140,6 +140,7 @@ fbq('track', 'PageView');
                 <li><a href="shop-everywhere.html" class="nav-link">Shop Everywhere</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="commissions.html" class="nav-link">Commissions</a></li>
+                <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger"><span></span><span></span><span></span></div>
@@ -218,7 +219,8 @@ fbq('track', 'PageView');
           <option value="8">1 pad - $8</option>
           <option value="20">3 pads - $20</option>
         </select></label>
-        <button type="submit" class="buy-btn">Buy Mop Pads</button>
+        <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+        <button type="submit" class="buy-btn">Buy with PayPal</button>
       </form>
       <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('mopSelect', 'Lissa\'s Knitting - Mop Pads', 'LissaKnittingCreationsLogo.jpg')">Add to Cart</button>
                         <a class="buy-btn" href="contact.html?product=mop-pad">Inquire to Order</a>
@@ -238,7 +240,8 @@ fbq('track', 'PageView');
           <option value="5">1 cloth - $5</option>
           <option value="10">3 cloths - $10</option>
         </select></label>
-        <button type="submit" class="buy-btn">Buy Cloths</button>
+        <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+        <button type="submit" class="buy-btn">Buy with PayPal</button>
       </form>
       <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('clothSelect', 'Lissa\'s Knitting - Cloths', 'LissaKnittingCreationsLogo.jpg')">Add to Cart</button>
                         <a class="buy-btn" href="contact.html?product=cloth">Inquire to Order</a>
@@ -343,6 +346,7 @@ fbq('track', 'PageView');
                         <a href="lissas-knitting.html">Lissa's Knitting</a>
                         <a href="shop-everywhere.html">Shop Everywhere</a>
                         <a href="commissions.html">Commissions</a>
+                        <a href="loyalty.html">Loyalty</a>
                         <a href="contact.html">Contact</a>
                     </div>
                 </div>

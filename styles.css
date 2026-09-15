@@ -5228,3 +5228,19 @@ textarea:focus-visible,
 /* Add to Cart button (distinct gold from blue Buy Now) */
 .add-to-cart { background: #f5d76e; color: #1a1a2e; }
 .add-to-cart:hover { background: #ffefa0; }
+
+/* Quantity input for PayPal Buy Now buttons */
+.qty-input {
+  width: 64px;
+  padding: 8px;
+  margin: 8px 6px 0 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+@media (max-width: 480px) {
+  .buy-btn, .add-to-cart { display: block; width: 100%; margin: 8px 0 0; min-height: 46px; }
+  .qty-input { display: block; width: 100%; margin: 8px 0 0; }
+  form[style*="inline"] { display: block !important; }
+}

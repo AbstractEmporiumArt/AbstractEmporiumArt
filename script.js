@@ -58,6 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
+    // Inject Art Helper header icon (replaces bottom-right auto-popup — Lissa 2026-09-15)
+    const navContainer = document.querySelector('.nav-container');
+    if (navContainer && !document.getElementById('art-helper-btn')) {
+        const ahBtn = document.createElement('button');
+        ahBtn.id = 'art-helper-btn';
+        ahBtn.className = 'art-helper-btn';
+        ahBtn.type = 'button';
+        ahBtn.innerHTML = '\uD83E\uDD16';
+        ahBtn.title = 'Art Helper — ask me anything';
+        ahBtn.setAttribute('aria-label', 'Open Art Helper chat');
+        ahBtn.addEventListener('click', toggleChatbot);
+        const hb = navContainer.querySelector('.hamburger');
+        if (hb) navContainer.insertBefore(ahBtn, hb); else navContainer.appendChild(ahBtn);
+    }
+
     // Observe gallery items for animations
     setTimeout(() => {
         document.querySelectorAll('.gallery-item, .store-card').forEach(item => {
@@ -75,8 +90,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function addBotGreeting() {
     if (!chatbot) return;
-    const greeting = chatbot.processInput('hello');
-    addMessageToChat(greeting, 'bot');
+    addMessageToChat("\uD83D\uDC4B Hi! I'm the Art Helper. What are you looking for?", 'bot');
+    addQuickActions();
+}
+
+function addQuickActions() {
+    const container = document.getElementById('chatbot-messages');
+    if (!container || container.querySelector('.chat-quick-actions')) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'chat-quick-actions';
+    const actions = [
+        { label: '\uD83D\uDECD\uFE0F Shop', href: 'shop.html' },
+        { label: '\uD83D\uDD6C Z3NW1CK', href: 'z3nw1ck.html' },
+        { label: '\uD83C\uDFA8 Browse Art', href: 'gallery.html' },
+        { label: '\uD83D\uDCAC Contact', href: 'contact.html' },
+    ];
+    actions.forEach(a => {
+        const link = document.createElement('a');
+        link.href = a.href;
+        link.className = 'chat-quick-btn';
+        link.textContent = a.label;
+        wrap.appendChild(link);
+    });
+    container.appendChild(wrap);
+    container.scrollTop = container.scrollHeight;
 }
 
 function addMessageToChat(message, sender) {
@@ -113,9 +150,9 @@ function handleChatInput(event) {
 
 function toggleChatbot() {
     const widget = document.getElementById('chatbot-widget');
-    if (widget) {
-        widget.style.display = widget.style.display === 'none' ? 'flex' : 'none';
-    }
+    if (!widget) return;
+    const hidden = getComputedStyle(widget).display === 'none';
+    widget.style.display = hidden ? 'flex' : 'none';
 }
 function initializeGallery() {
     const galleryGrid = document.getElementById('galleryGrid');

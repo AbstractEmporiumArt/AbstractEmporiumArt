@@ -124,7 +124,6 @@
 - **Bluesky:** https://bsky.app/profile/abstractemporium.bsky.social (automated daily posts)
 - **Facebook:** 
   - Abstract Emporium Page: https://www.facebook.com/abstractemporium
-  - Lissa's Knitting Creations: https://www.facebook.com/LissaKnittingCreations/
   - Manual cross-posts from Mastodon/Bluesky
 - **Instagram:** https://www.instagram.com/Abstractemporiumart
 - **X/Twitter:** https://x.com/AbstractEmpCo23 (Manual cross-posts from Mastodon/Bluesky)

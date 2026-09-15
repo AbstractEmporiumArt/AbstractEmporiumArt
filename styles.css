@@ -5224,3 +5224,7 @@ textarea:focus-visible,
 /* Nav links consistent: white, no underline (Contact/Cart were default-blue) */
 .nav-menu a { color: #fff; text-decoration: none; }
 .nav-menu a:hover { color: #f5d76e; }
+
+/* Add to Cart button (distinct gold from blue Buy Now) */
+.add-to-cart { background: #f5d76e; color: #1a1a2e; }
+.add-to-cart:hover { background: #ffefa0; }

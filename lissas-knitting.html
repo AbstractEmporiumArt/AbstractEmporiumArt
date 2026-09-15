@@ -214,12 +214,13 @@ fbq('track', 'PageView');
         <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
         <input type="hidden" name="item_name" value="Lissa's Knitting - Mop Pads">
         <input type="hidden" name="currency_code" value="CAD">
-        <label class="size-label">Choose item: <select name="amount" required>
+        <label class="size-label">Choose item: <select name="amount" id="mopSelect" required>
           <option value="8">1 pad - $8</option>
           <option value="20">3 pads - $20</option>
         </select></label>
         <button type="submit" class="buy-btn">Buy Mop Pads</button>
       </form>
+      <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('mopSelect', 'Lissa\'s Knitting - Mop Pads', 'LissaKnittingCreationsLogo.jpg')">Add to Cart</button>
                         <a class="buy-btn" href="contact.html?product=mop-pad">Inquire to Order</a>
                     </div>
                 </div>
@@ -233,12 +234,13 @@ fbq('track', 'PageView');
         <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
         <input type="hidden" name="item_name" value="Lissa's Knitting - Cloths">
         <input type="hidden" name="currency_code" value="CAD">
-        <label class="size-label">Choose item: <select name="amount" required>
+        <label class="size-label">Choose item: <select name="amount" id="clothSelect" required>
           <option value="5">1 cloth - $5</option>
           <option value="10">3 cloths - $10</option>
         </select></label>
         <button type="submit" class="buy-btn">Buy Cloths</button>
       </form>
+      <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('clothSelect', 'Lissa\'s Knitting - Cloths', 'LissaKnittingCreationsLogo.jpg')">Add to Cart</button>
                         <a class="buy-btn" href="contact.html?product=cloth">Inquire to Order</a>
                     </div>
                 </div>

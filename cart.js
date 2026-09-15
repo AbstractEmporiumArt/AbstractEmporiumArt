@@ -16,6 +16,10 @@
 
   function formatMoney(n){ return '$' + n.toFixed(2); }
 
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
   function render(){
     const cart = getCart();
     const wrap = document.getElementById('cartItems');
@@ -23,7 +27,7 @@
     const empty = document.getElementById('emptyCart');
     const count = document.getElementById('cartCount');
     if(!wrap) return;
-    count.textContent = '(' + cart.length + ')';
+    if (count) count.textContent = '(' + cart.length + ')';
 
     if(!cart.length){
       wrap.innerHTML = '';
@@ -82,20 +86,36 @@
     });
   }
 
-  function escapeHtml(s){
-    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
-  }
-
   document.addEventListener('DOMContentLoaded', render);
 })();
 
+/* Public add-to-cart API (used by product pages) */
 (function(){
-  if (typeof addToCartDirect !== 'undefined') return;
-  window.addToCartDirect = function(title, price, image){
+  function pushItem(title, price, image){
     price = Number(price) || 0;
-    let cart = JSON.parse(localStorage.getItem('artCart') || '[]');
+    const cart = JSON.parse(localStorage.getItem('artCart') || '[]');
     cart.push({ id: Date.now(), title: title, price: price, image: image || null, addedAt: new Date().toISOString() });
     localStorage.setItem('artCart', JSON.stringify(cart));
-    alert('Added: ' + title + ' — ' + price.toFixed(2) + ' CAD');
+    const badge = document.getElementById('cartCount');
+    if (badge) badge.textContent = '(' + cart.length + ')';
+    alert('Added to cart: ' + title + ' — $' + price.toFixed(2) + ' CAD');
+  }
+
+  // Fixed-price item (e.g. wax melts, knits via select)
+  window.addToCartDirect = function(title, price, image){ pushItem(title, price, image); };
+
+  // Candle: price depends on chosen size (5/8/10 oz)
+  window.addCandleToCart = function(selectId, title, image){
+    const sel = document.getElementById(selectId);
+    const size = sel ? sel.value : '8';
+    const priceMap = { '5': 5, '8': 8, '10': 10 };
+    pushItem(title + ' (' + size + 'oz)', priceMap[size] || 8, image);
+  };
+
+  // Knit: select value IS the price (e.g. 8, 20)
+  window.addSelectToCart = function(selectId, title, image){
+    const sel = document.getElementById(selectId);
+    const price = sel ? Number(sel.value) : 0;
+    pushItem(title, price, image);
   };
 })();

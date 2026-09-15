@@ -696,7 +696,7 @@ textarea:focus-visible,
     background-color: var(--text-light);
     border-radius: 12px;
     box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
-    display: flex;
+    display: none;
     flex-direction: column;
     font-family: inherit;
     z-index: 9999;
@@ -5202,3 +5202,18 @@ textarea:focus-visible,
   color: #2d3436;
   margin: 6px 0 2px;
 }
+
+/* Art Helper header icon + chat quick actions (Lissa 2026-09-15: no auto-popup, lives in header) */
+.art-helper-btn {
+  background: #f5d76e; border: none; color: #1a1a2e; font-size: 1.15rem;
+  width: 38px; height: 38px; border-radius: 50%; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; margin-left: 8px; line-height: 1;
+}
+.art-helper-btn:hover { background: #ffefa0; }
+.art-helper-btn:focus-visible { outline: 3px solid #b5651d; outline-offset: 2px; }
+.chat-quick-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.chat-quick-btn {
+  display: inline-block; background: #f5d76e; color: #1a1a2e; text-decoration: none;
+  font-size: 0.82rem; font-weight: 600; padding: 6px 10px; border-radius: 14px;
+}
+.chat-quick-btn:hover { background: #ffefa0; }

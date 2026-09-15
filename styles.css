@@ -689,7 +689,7 @@ textarea:focus-visible,
 /* Chatbot Widget */
 .chatbot-widget {
     position: fixed;
-    bottom: 20px;
+    top: 72px;
     right: 20px;
     width: 350px;
     max-width: 90vw;
@@ -5217,3 +5217,7 @@ textarea:focus-visible,
   font-size: 0.82rem; font-weight: 600; padding: 6px 10px; border-radius: 14px;
 }
 .chat-quick-btn:hover { background: #ffefa0; }
+
+/* Nav links consistent: white, no underline (Contact/Cart were default-blue) */
+.nav-menu a { color: #fff; text-decoration: none; }
+.nav-menu a:hover { color: #f5d76e; }

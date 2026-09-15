@@ -621,8 +621,11 @@ textarea:focus-visible,
 /* Social Links */
 .social-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
+    row-gap: 1rem;
+    max-width: 100%;
     align-items: center;
 }
 

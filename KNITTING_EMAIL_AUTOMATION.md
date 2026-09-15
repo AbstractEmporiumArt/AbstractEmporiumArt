@@ -225,7 +225,7 @@ Lissa
 
 **Follow us for daily inspiration:**
 📷 [Instagram](https://instagram.com/abstractemporiumart)
-📘 [Facebook - Lissa Knitting Creations](https://facebook.com/LissaKnittingCreations)
+📘 [Facebook - Abstract Emporium](https://facebook.com/abstractemporium)
 
 P.S. Motivational Quote for Today:
 *"The rhythm of knitting is like meditation. Each stitch is a breath, each row is progress."*

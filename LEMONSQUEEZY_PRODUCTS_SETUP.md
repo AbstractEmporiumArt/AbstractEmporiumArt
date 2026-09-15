@@ -84,7 +84,7 @@ Your guide includes everything you need to start knitting today.
 Questions? Email: abstractemporiumart@outlook.com
 
 Or connect with us:
-📘 Facebook: facebook.com/LissaKnittingCreations
+📘 Facebook: facebook.com/abstractemporium
 📷 Instagram: instagram.com/Abstractemporiumart
 🐦 Twitter: x.com/Abstractempco23
 
@@ -208,7 +208,7 @@ Your guide has 20+ recommended YouTube channels, websites, yarn shops, and books
 
 ❓ Questions?
 Email: abstractemporiumart@outlook.com
-Facebook: facebook.com/LissaKnittingCreations
+Facebook: facebook.com/abstractemporium
 Instagram: instagram.com/Abstractemporiumart
 
 NEXT LEVEL:
@@ -377,7 +377,7 @@ After completing Starter Pack, consider:
 
 Questions?
 📧 Email: abstractemporiumart@outlook.com
-👍 Facebook: facebook.com/LissaKnittingCreations
+👍 Facebook: facebook.com/abstractemporium
 📷 Instagram: instagram.com/Abstractemporiumart
 🐦 Twitter: x.com/Abstractempco23
 
@@ -634,7 +634,7 @@ After mastery, consider:
 
 ❓ QUESTIONS?
 📧 Email: abstractemporiumart@outlook.com
-👍 Facebook: facebook.com/LissaKnittingCreations
+👍 Facebook: facebook.com/abstractemporium
 📷 Instagram: instagram.com/Abstractemporiumart
 🐦 Twitter: x.com/Abstractempco23
 

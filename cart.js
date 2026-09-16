@@ -2,6 +2,7 @@
   const BUSINESS_EMAIL = 'abstractemporiumart@outlook.com';
   const SHIPPING_THRESHOLD = 75;
   const SHIPPING_RATE = 12;
+  let priorityOptIn = false;
 
   function getCart(){
     try { return JSON.parse(localStorage.getItem('artCart') || '[]'); }
@@ -50,11 +51,19 @@
 
     const subtotal = calcSubtotal(cart);
     const shipping = calcShipping(subtotal, cart.length);
-    const total = subtotal + shipping;
+    const priority = priorityOptIn ? 5 : 0;
+    const total = subtotal + shipping + priority;
 
     summary.innerHTML = `
       <div class="cart-row"><span>Subtotal</span><span>${formatMoney(subtotal)}</span></div>
       <div class="cart-row"><span>Shipping</span><span>${shipping === 0 ? 'FREE' : formatMoney(shipping)}</span></div>
+      <div class="cart-row priority-row">
+        <label class="priority-label">
+          <input type="checkbox" id="priorityCheck" ${priorityOptIn ? 'checked' : ''}>
+          <span>🚀 $5 Priority — Rush Order <em>(optional)</em></span>
+        </label>
+      </div>
+      <p class="priority-note">Handmade to order: Z3NW1CK candles, wax melts &amp; incense need curing time, and Lissa's knitting (especially slippers) takes time to create. Add $5 Priority to flag your order as rush during the busy fall/winter season.</p>
       <div class="cart-row cart-total"><span>Total</span><span>${formatMoney(total)}</span></div>
       <form id="paypalCheckout" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <input type="hidden" name="cmd" value="_cart">
@@ -66,6 +75,11 @@
           <input type="hidden" name="amount_${i+1}" value="${Number(item.price).toFixed(2)}">
           <input type="hidden" name="quantity_${i+1}" value="1">
         `).join('')}
+        ${priorityOptIn ? `
+          <input type="hidden" name="item_name_${cart.length+1}" value="Priority - Rush Order">
+          <input type="hidden" name="amount_${cart.length+1}" value="5.00">
+          <input type="hidden" name="quantity_${cart.length+1}" value="1">
+        ` : ''}
         <button type="submit" class="checkout-btn">Checkout with PayPal</button>
       </form>
       <p style="font-size:0.9em;color:#666;margin-top:10px;">Shipping to Thunder Bay, ON. Free shipping on orders over ${formatMoney(SHIPPING_THRESHOLD)}.</p>
@@ -80,6 +94,14 @@
         render();
       });
     });
+
+    const priorityBox = document.getElementById('priorityCheck');
+    if (priorityBox) {
+      priorityBox.addEventListener('change', (e) => {
+        priorityOptIn = e.target.checked;
+        render();
+      });
+    }
   }
 
   document.addEventListener('DOMContentLoaded', render);

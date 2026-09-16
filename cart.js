@@ -1,7 +1,6 @@
 (function(){
   const BUSINESS_EMAIL = 'abstractemporiumart@outlook.com';
-  const TAX_RATE = 0.13; // Ontario HST
-  const SHIPPING_THRESHOLD = 75; // free shipping over this
+  const SHIPPING_THRESHOLD = 75;
   const SHIPPING_RATE = 12;
 
   function getCart(){
@@ -11,11 +10,11 @@
   function setCart(cart){ localStorage.setItem('artCart', JSON.stringify(cart)); }
 
   function calcSubtotal(cart){ return cart.reduce((sum, i) => sum + (Number(i.price) || 0), 0); }
-  function calcTax(sub){ return Math.round(sub * TAX_RATE * 100) / 100; }
-  function calcShipping(sub){ return sub >= SHIPPING_THRESHOLD && sub > 0 ? 0 : (cart.length ? SHIPPING_RATE : 0); }
-
-  function formatMoney(n){ return '$' + n.toFixed(2); }
-
+  function calcShipping(sub, count){
+    if (count === 0 || sub <= 0) return 0;
+    return sub >= SHIPPING_THRESHOLD ? 0 : SHIPPING_RATE;
+  }
+  function formatMoney(n){ return '$' + (Number(n) || 0).toFixed(2); }
   function escapeHtml(s){
     return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   }
@@ -50,13 +49,11 @@
     `).join('');
 
     const subtotal = calcSubtotal(cart);
-    const tax = calcTax(subtotal);
-    const shipping = calcShipping(subtotal);
-    const total = subtotal + tax + shipping;
+    const shipping = calcShipping(subtotal, cart.length);
+    const total = subtotal + shipping;
 
     summary.innerHTML = `
       <div class="cart-row"><span>Subtotal</span><span>${formatMoney(subtotal)}</span></div>
-      <div class="cart-row"><span>HST (13%)</span><span>${formatMoney(tax)}</span></div>
       <div class="cart-row"><span>Shipping</span><span>${shipping === 0 ? 'FREE' : formatMoney(shipping)}</span></div>
       <div class="cart-row cart-total"><span>Total</span><span>${formatMoney(total)}</span></div>
       <form id="paypalCheckout" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -69,7 +66,6 @@
           <input type="hidden" name="amount_${i+1}" value="${Number(item.price).toFixed(2)}">
           <input type="hidden" name="quantity_${i+1}" value="1">
         `).join('')}
-        <input type="hidden" name="tax_cart" value="${tax.toFixed(2)}">
         <button type="submit" class="checkout-btn">Checkout with PayPal</button>
       </form>
       <p style="font-size:0.9em;color:#666;margin-top:10px;">Shipping to Thunder Bay, ON. Free shipping on orders over ${formatMoney(SHIPPING_THRESHOLD)}.</p>
@@ -91,6 +87,7 @@
 
 /* Public add-to-cart API (used by product pages) */
 (function(){
+  function formatMoney(n){ return '$' + (Number(n) || 0).toFixed(2); }
   function pushItem(title, price, image){
     price = Number(price) || 0;
     const cart = JSON.parse(localStorage.getItem('artCart') || '[]');
@@ -98,21 +95,19 @@
     localStorage.setItem('artCart', JSON.stringify(cart));
     const badge = document.getElementById('cartCount');
     if (badge) badge.textContent = '(' + cart.length + ')';
-    alert('Added to cart: ' + title + ' — $' + price.toFixed(2) + ' CAD');
+    alert('Added to cart: ' + title + ' — ' + formatMoney(price) + ' CAD');
   }
 
-  // Fixed-price item (e.g. wax melts, knits via select)
   window.addToCartDirect = function(title, price, image){ pushItem(title, price, image); };
 
-  // Candle: price depends on chosen size (5/8/10 oz)
   window.addCandleToCart = function(selectId, title, image){
     const sel = document.getElementById(selectId);
-    const size = sel ? sel.value : '8';
-    const priceMap = { '5': 5, '8': 8, '10': 10 };
-    pushItem(title + ' (' + size + 'oz)', priceMap[size] || 8, image);
+    if(!sel){ pushItem(title, 0, image); return; }
+    const price = Number(sel.value) || 0;
+    const label = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : '';
+    pushItem(title + (label ? ' (' + label + ')' : ''), price, image);
   };
 
-  // Knit: select value IS the price (e.g. 8, 20)
   window.addSelectToCart = function(selectId, title, image){
     const sel = document.getElementById(selectId);
     const price = sel ? Number(sel.value) : 0;

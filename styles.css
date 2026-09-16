@@ -5244,3 +5244,15 @@ textarea:focus-visible,
   .qty-input { display: block; width: 100%; margin: 8px 0 0; }
   form[style*="inline"] { display: block !important; }
 }
+
+/* Homepage Shop-the-Collections promo strip */
+.promo-strip { background: linear-gradient(135deg, #6c5ce7, #00b894); padding: 40px 0; }
+.promo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.promo-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 24px 16px; background: rgba(255,255,255,0.12); border-radius: 14px; color: #fff; text-decoration: none; transition: transform .15s ease, background .15s ease; }
+.promo-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.22); }
+.promo-emoji { font-size: 2rem; }
+.promo-title { font-weight: 800; font-size: 1.15rem; margin-top: 6px; }
+.promo-sub { font-size: 0.9rem; opacity: 0.9; margin-top: 2px; }
+.promo-loyalty { text-align: center; color: #fff; margin: 22px auto 0; max-width: 760px; font-size: 1.02rem; }
+.promo-loyalty a { color: #ffeaa7; font-weight: 700; text-decoration: underline; }
+@media (max-width: 600px){ .promo-grid { grid-template-columns: 1fr; } }

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lissa's Knitting Creationz by Abstract Emporium — hand-knit beanies, cloths, mop pads, and cozy crochet slippers. Made to order in Thunder Bay, Canada.">
+    <meta name="description" content="Lissa's Knitting Creationz by Abstract Emporium — hand-knit beanies, cloths, mop pads, and cozy knit slippers. Made to order in Thunder Bay, Canada.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <link rel="canonical" href="https://abstractemporium.art/lissas-knitting.html">
     <meta property="og:title" content="Lissa's Knitting Creationz | Abstract Emporium">
-    <meta property="og:description" content="Hand-knit beanies, cloths, mop pads, and cozy crochet slippers. Made to order in Thunder Bay, Canada.">
+    <meta property="og:description" content="Hand-knit beanies, cloths, mop pads, and cozy knit slippers. Made to order in Thunder Bay, Canada.">
     <meta property="og:image" content="https://abstractemporium.art/lkc-product-photos/lkc-slippers-01a.png">
     <meta property="og:url" content="https://abstractemporium.art/lissas-knitting.html">
     <meta property="og:type" content="website">
@@ -153,7 +153,7 @@ fbq('track', 'PageView');
         <div class="container">
             <p class="lkc-intro">
                 Lissa's Knitting Creationz is our handmade line — cozy beanies, reusable knit cloths,
-                mop pads, and warm crochet slippers. Made to order with care, passed down through
+                mop pads, and warm knit slippers. Made to order with care, passed down through
                 generations of family craft. Local pickup in Thunder Bay + delivery possible by arrangement.
             </p>
 
@@ -282,7 +282,20 @@ fbq('track', 'PageView');
                         <h3>🎩 Classic Stocking Cap (Very Long Tail)</h3>
                         <p class="notes">Hand-knit classic stocking cap with a very long tail. Knitting pattern fits women. Measures 27" from beginning to end (excluding braid and tassel). Made to order.</p>
                         <p class="price">$30 CAD</p>
-                        <a class="buy-btn" href="contact.html?product=stocking-cap">Inquire to Order</a>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+          <input type="hidden" name="item_name" value="Lissa's Knitting - Stocking Cap">
+          <input type="hidden" name="amount" value="30">
+          <input type="hidden" name="currency_code" value="CAD">
+          <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+          <button type="submit" class="buy-btn">Buy with PayPal</button>
+        </form>
+        <button type="button" class="buy-btn add-to-cart" onclick="addToCartDirect('Lissa\'s Knitting - Stocking Cap', 30, 'logo.jpg')">Add to Cart</button>
+        <a class="buy-btn" href="contact.html?product=stocking-cap" style="background:#555;color:#ddd;">Email Order</a>
                     </div>
                 </div>
 </div>
+</body>
+<script src="script.js"></script>
+</html>

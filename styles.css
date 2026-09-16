@@ -5256,3 +5256,8 @@ textarea:focus-visible,
 .promo-loyalty { text-align: center; color: #fff; margin: 22px auto 0; max-width: 760px; font-size: 1.02rem; }
 .promo-loyalty a { color: #ffeaa7; font-weight: 700; text-decoration: underline; }
 @media (max-width: 600px){ .promo-grid { grid-template-columns: 1fr; } }
+
+/* Seasonal order-early banner */
+.season-banner { background: linear-gradient(135deg, #e17055, #fdcb6e); color: #2d3436; text-align: center; padding: 10px 16px; font-size: 0.98rem; font-weight: 600; }
+.season-banner a { color: #2d3436; text-decoration: underline; font-weight: 800; }
+@media (max-width: 600px){ .season-banner { font-size: 0.86rem; } }

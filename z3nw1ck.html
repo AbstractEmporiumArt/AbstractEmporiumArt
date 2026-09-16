@@ -38,7 +38,11 @@
         }
         .product-card img { width: 100%; height: 220px; object-fit: cover; }
         .product-card .body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
-        .product-card h3 { margin: 0 0 6px; color: #f5d76e; }
+        .product-card h3 { margin: 0 0 6px; color: #f5d76e; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.tier-badge { font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; }
+.tier-classic { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
+.tier-premium { background: #f3e5f5; color: #4a148c; border: 1px solid #ce93d8; }
+.collection-sub { grid-column: 1 / -1; text-align: center; color: #555; font-size: 0.95em; margin: -4px auto 18px; max-width: 760px; line-height: 1.4; }
         .product-card .notes { font-size: 0.9em; color: #aaa; margin: 0 0 12px; flex: 1; }
         .product-card .price { font-weight: 700; color: #fff; font-size: 1.1em; margin-bottom: 12px; }
         .product-card a.buy-btn {
@@ -191,9 +195,10 @@ fbq('track', 'PageView');
 
             <div class="product-grid">
 <h2 style="grid-column:1/-1;text-align:center;color:var(--text-dark);">Classic Collection</h2>
+<p class="collection-sub">Everyday signature scents at standard pricing — these are the <strong>classic-line items</strong> included FREE on your 11th loyalty order.</p>
 <div class="product-card">
 <div class="body">
-        <h3>🍊 Satsuma - Candle</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🍊 Satsuma - Candle</h3>
         <p class="notes">Bursting. Citrus. Uplifting. Orange, white grapefruit, and soft white musk.</p>
         <p class="price">2oz $5 - 5oz $10</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -214,7 +219,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🍊 Satsuma - Wax Melts</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🍊 Satsuma - Wax Melts</h3>
         <p class="notes">Hand-poured clamshell soy wax melts.</p>
         <p class="price">Clamshell Wax Melts $6</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -232,7 +237,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🍊 Satsuma - Incense (20-pack)</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🍊 Satsuma - Incense (20-pack)</h3>
         <p class="notes">Hand-dipped 10" punk incense sticks, 20 per pack.</p>
         <p class="price">Incense 20-pack $8</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -250,7 +255,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🍊 Satsuma - Refill</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🍊 Satsuma - Refill</h3>
         <p class="notes">Return your empty tin, clamshell, or incense baggie for a discounted refill.</p>
         <p class="price">2oz $4.25 - 5oz $8.5 - Melts $5 - Incense $7</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -273,7 +278,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥣 Fruit Loops - Candle</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🥣 Fruit Loops - Candle</h3>
         <p class="notes">Sweet. Fruity. Nostalgic. Sugared fruit loops with a vanilla swirl.</p>
         <p class="price">2oz $5 - 5oz $10</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -294,7 +299,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥣 Fruit Loops - Wax Melts</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🥣 Fruit Loops - Wax Melts</h3>
         <p class="notes">Hand-poured clamshell soy wax melts.</p>
         <p class="price">Clamshell Wax Melts $6</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -312,7 +317,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥣 Fruit Loops - Incense (20-pack)</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🥣 Fruit Loops - Incense (20-pack)</h3>
         <p class="notes">Hand-dipped 10" punk incense sticks, 20 per pack.</p>
         <p class="price">Incense 20-pack $8</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -330,7 +335,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥣 Fruit Loops - Refill</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🥣 Fruit Loops - Refill</h3>
         <p class="notes">Return your empty tin, clamshell, or incense baggie for a discounted refill.</p>
         <p class="price">2oz $4.25 - 5oz $8.5 - Melts $5 - Incense $7</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -353,7 +358,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>☁️ Simple Daydreams - Candle</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> ☁️ Simple Daydreams - Candle</h3>
         <p class="notes">Light. Clean. Peaceful. Lavender, magnolia blossom, white oak, and soft cashmere.</p>
         <p class="price">2oz $5 - 5oz $10</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -374,7 +379,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>☁️ Simple Daydreams - Wax Melts</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> ☁️ Simple Daydreams - Wax Melts</h3>
         <p class="notes">Hand-poured clamshell soy wax melts.</p>
         <p class="price">Clamshell Wax Melts $6</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -392,7 +397,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>☁️ Simple Daydreams - Incense (20-pack)</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> ☁️ Simple Daydreams - Incense (20-pack)</h3>
         <p class="notes">Hand-dipped 10" punk incense sticks, 20 per pack.</p>
         <p class="price">Incense 20-pack $8</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -410,7 +415,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>☁️ Simple Daydreams - Refill</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> ☁️ Simple Daydreams - Refill</h3>
         <p class="notes">Return your empty tin, clamshell, or incense baggie for a discounted refill.</p>
         <p class="price">2oz $4.25 - 5oz $8.5 - Melts $5 - Incense $7</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -433,7 +438,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥣 Cap'n Crunch Berries - Candle</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🥣 Cap'n Crunch Berries - Candle</h3>
         <p class="notes">Sweet. Cereal. Nostalgic. Sugared berry crunch with vanilla milk.</p>
         <p class="price">2oz $5 - 5oz $10</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -454,7 +459,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥣 Cap'n Crunch Berries - Wax Melts</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🥣 Cap'n Crunch Berries - Wax Melts</h3>
         <p class="notes">Hand-poured clamshell soy wax melts.</p>
         <p class="price">Clamshell Wax Melts $6</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -472,7 +477,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥣 Cap'n Crunch Berries - Incense (20-pack)</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🥣 Cap'n Crunch Berries - Incense (20-pack)</h3>
         <p class="notes">Hand-dipped 10" punk incense sticks, 20 per pack.</p>
         <p class="price">Incense 20-pack $8</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -490,7 +495,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥣 Cap'n Crunch Berries - Refill</h3>
+        <h3><span class="tier-badge tier-classic">CLASSIC</span> 🥣 Cap'n Crunch Berries - Refill</h3>
         <p class="notes">Return your empty tin, clamshell, or incense baggie for a discounted refill.</p>
         <p class="price">2oz $4.25 - 5oz $8.5 - Melts $5 - Incense $7</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -512,9 +517,10 @@ fbq('track', 'PageView');
       </div>
     </div>
 <h2 style="grid-column:1/-1;text-align:center;color:var(--text-dark);">Premium Collection</h2>
+<p class="collection-sub">Elevated fragrance oils at premium pricing — <strong>not</strong> included as the free loyalty reward.</p>
 <div class="product-card">
 <div class="body">
-        <h3>🐒 Monkey Farts - Candle</h3>
+        <h3><span class="tier-badge tier-premium">PREMIUM</span> 🐒 Monkey Farts - Candle</h3>
         <p class="notes">Playful. Fruity. Fun. Banana, pineapple, mandarin, grapefruit, kiwi, coconut cream, raspberry, strawberry, apple, tonka, vanilla.</p>
         <p class="price">2oz $9 - 5oz $16</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -535,7 +541,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🐒 Monkey Farts - Wax Melts</h3>
+        <h3><span class="tier-badge tier-premium">PREMIUM</span> 🐒 Monkey Farts - Wax Melts</h3>
         <p class="notes">Hand-poured clamshell soy wax melts.</p>
         <p class="price">Clamshell Wax Melts $10</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -553,7 +559,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🐒 Monkey Farts - Incense (20-pack)</h3>
+        <h3><span class="tier-badge tier-premium">PREMIUM</span> 🐒 Monkey Farts - Incense (20-pack)</h3>
         <p class="notes">Hand-dipped 10" punk incense sticks, 20 per pack.</p>
         <p class="price">Incense 20-pack $12</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -571,7 +577,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🐒 Monkey Farts - Refill</h3>
+        <h3><span class="tier-badge tier-premium">PREMIUM</span> 🐒 Monkey Farts - Refill</h3>
         <p class="notes">Return your empty tin, clamshell, or incense baggie for a discounted refill.</p>
         <p class="price">2oz $8 - 5oz $14 - Melts $9 - Incense $11</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -594,7 +600,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥃 Bourbon & Sandalwood - Candle</h3>
+        <h3><span class="tier-badge tier-premium">PREMIUM</span> 🥃 Bourbon & Sandalwood - Candle</h3>
         <p class="notes">Warm. Smoky. Cozy. Wintergreen, sage, jasmine, lavender, vanilla, cedarwood, patchouli, musk, sandalwood.</p>
         <p class="price">2oz $9 - 5oz $16</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -615,7 +621,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥃 Bourbon & Sandalwood - Wax Melts</h3>
+        <h3><span class="tier-badge tier-premium">PREMIUM</span> 🥃 Bourbon & Sandalwood - Wax Melts</h3>
         <p class="notes">Hand-poured clamshell soy wax melts.</p>
         <p class="price">Clamshell Wax Melts $10</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -633,7 +639,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥃 Bourbon & Sandalwood - Incense (20-pack)</h3>
+        <h3><span class="tier-badge tier-premium">PREMIUM</span> 🥃 Bourbon & Sandalwood - Incense (20-pack)</h3>
         <p class="notes">Hand-dipped 10" punk incense sticks, 20 per pack.</p>
         <p class="price">Incense 20-pack $12</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -651,7 +657,7 @@ fbq('track', 'PageView');
     </div>
 <div class="product-card">
 <div class="body">
-        <h3>🥃 Bourbon & Sandalwood - Refill</h3>
+        <h3><span class="tier-badge tier-premium">PREMIUM</span> 🥃 Bourbon & Sandalwood - Refill</h3>
         <p class="notes">Return your empty tin, clamshell, or incense baggie for a discounted refill.</p>
         <p class="price">2oz $8 - 5oz $14 - Melts $9 - Incense $11</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">

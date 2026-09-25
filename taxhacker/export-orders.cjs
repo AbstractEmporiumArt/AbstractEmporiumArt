@@ -24,7 +24,7 @@ function exportSales(){
   const orders = readJsonl('orders.jsonl')
   const header = 'record_type,record_id,date,customer,vendor,note,items,subtotal,shipping,hst,total,status,currency\n'
   const rows = []
-  orders.forEach((o,i) => {
+  orders.filter(o => Number(o.total ?? 0) > 0).forEach((o,i) => {
     const sub = Number(o.subtotal ?? o.items.reduce((s,it)=>s+Number(it.price||0)*Number(it.qty||1),0))
     // AE is pickup/drop-off only — shipping defaults to 0 unless explicitly set on the order.
     const shipping = Number(o.shipping ?? 0)
@@ -49,7 +49,7 @@ function exportExpenses(){
 }
 
 function exportTax(){
-  const sales = readJsonl('orders.jsonl').map(o => {
+  const sales = readJsonl('orders.jsonl').filter(o => Number(o.total ?? 0) > 0).map(o => {
     const sub = Number(o.subtotal ?? o.items.reduce((s,it)=>s+Number(it.price||0)*Number(it.qty||1),0))
     const shipping = Number(o.shipping ?? 0)
     const hst = Number(o.tax ?? 0)

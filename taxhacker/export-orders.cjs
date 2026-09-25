@@ -18,7 +18,7 @@ function readJsonl(file){
   if (!fs.existsSync(p)) return []
   return fs.readFileSync(p, 'utf8').split(/\r?\n/).filter(Boolean).map(line => { try { return JSON.parse(line) } catch { return null } }).filter(Boolean)
 }
-function escCsv(s){ return String(s||'').replace(/"/g,'""') }
+function escCsv(s){ return '"' + String(s||'').replace(/\"/g,'""') + '"' }
 
 function exportSales(){
   const orders = readJsonl('orders.jsonl')
@@ -53,7 +53,8 @@ function exportTax(){
     const sub = Number(o.subtotal ?? o.items.reduce((s,it)=>s+Number(it.price||0)*Number(it.qty||1),0))
     const shipping = Number(o.shipping ?? 0)
     const hst = Number(o.tax ?? 0)
-    return { month: (o.created_at||'').slice(0,7), sales: sub, shipping, hst }
+    const total = Number((o.total ?? (sub + shipping + hst)).toFixed(2))
+    return { month: (o.created_at||'').slice(0,7), sales: total, shipping, hst }
   })
   const byMonth = {}
   sales.forEach(o => {

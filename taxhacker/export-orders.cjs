@@ -70,7 +70,28 @@ function exportTax(){
   fs.writeFileSync(path.join(OUT_DIR, 'tax-summary.csv'), header + rows.join('\n'))
 }
 
+function exportRefills(){
+  const orders = readJsonl('orders.jsonl')
+  const rows = []
+  orders.forEach(o => {
+    const total = Number(o.total ?? 0)
+    const disc = Number(o.discount ?? 0)
+    const note = (o.note || '')
+    const isRefundLine = total <= 0
+    const isEmbeddedRefill = disc > 0 && /empties|refill/i.test(note)
+    if (isRefundLine || isEmbeddedRefill) {
+      const amt = isRefundLine ? Math.abs(total) : disc
+      rows.push(['refill', o.created_at || '', o.customer || o.customer_name || '', amt.toFixed(2), escCsv(note)])
+    }
+  })
+  const totalAmt = rows.reduce((s, r) => s + Number(r[3]), 0)
+  rows.push(['total', '', '', totalAmt.toFixed(2), ''])
+  const header = 'record_type,date,customer,refill_amount,note\n'
+  fs.writeFileSync(path.join(OUT_DIR, 'refill-returns.csv'), header + rows.map(r => r.join(',')).join('\n'))
+}
+
 exportSales()
 exportExpenses()
 exportTax()
+exportRefills()
 console.log('exported to', OUT_DIR)

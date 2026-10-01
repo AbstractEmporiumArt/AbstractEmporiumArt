@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- lastmod refreshed 2026-10-01 — bump on every content deploy -->
   <!-- Core Product Lines (priority) -->
   <url>
     <loc>https://abstractemporium.art/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/shop.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/z3nw1ck.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/lissas-knitting.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/shop-everywhere.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -35,25 +36,25 @@
   <!-- Coloring Books (active product line) -->
   <url>
     <loc>https://abstractemporium.art/bundle-chaos-calm.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/bundle-invisible-pain.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/bundle-healing-lines.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/bundle-abstract-mind.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,55 +62,55 @@
   <!-- Content / Support -->
   <url>
     <loc>https://abstractemporium.art/gallery.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/commissions.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/contact.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/blog.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/blog-post-1.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/blog-post-2.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/item-detail.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/privacy.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://abstractemporium.art/terms.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

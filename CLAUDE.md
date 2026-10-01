@@ -317,8 +317,31 @@ When working on Abstract Emporium:
 
 ---
 
+## AE SKILLS (Hermes Agent)
+
+Load the relevant skill before any AE task — skills carry the user's exact workflows + safe-edit rules:
+
+- `abstract-emporium-site-ops` — editing the Abstract Emporium static site.
+- `abstract-emporium-operations` — store products, pricing, revenue roadmap, ops coordination.
+- `abstract-emporium-order-ops` — AE order edits, no-HST rule, TaxHacker exports, safe push.
+- `abstract-emporium-checkout` — AE cart, checkout, orders, TaxHacker handoff.
+- `abstract-emporium-marketplace-ops` — AE marketplace drafts + Z3nw1ck slideshow additions.
+- `z3nw1ck-inventory` — track/report Z3nw1ck (candle line) inventory.
+
+## OBSIDIAN / MEMORY (AE)
+
+**Source of truth:** the Obsidian vault (`C:/Users/HP/Documents/Obsidian Vault`) — not this repo or chat transcripts. AE notes live under **`11 AbstractEmporium/`**; cross-cutting analysis under `Research/`.
+
+- **Short-term:** daily working notes, current tasks, in-progress items → `11 AbstractEmporium/` + dated daily notes. Every completed work item is saved to Obsidian daily (standing rule: *every work completed every day always send to obsidian*).
+- **Long-term:** durable AE records — site audits, competitive landscape, inventory, orders, strategy — in `11 AbstractEmporium/`. Canonical and persistent across sessions.
+- **Memory recall:** at session start, load `Research/_OBSIDIAN_INDEX.md` and search the vault for AE context before acting. Never rely on chat memory alone; Obsidian is authoritative. Verify against Obsidian; do not trust stale chat recollection.
+- **Daily scan:** every new/fresh chat, scan Obsidian for new/updated notes since the last session (load the index, check recent changes). Standing rule: Obsidian is scanned at the start of every new/fresh conversation.
+
+---
+
 ## VERSION HISTORY
 
+- **October 1, 2026 (2)** - Added AE Skills (Hermes) pointer + Obsidian/Memory (AE) section (short-term / long-term / recall / daily-scan workflow).
 - **May 29, 2026** - CLAUDE.md created to prevent documentation paralysis and focus on sales
 - **May 10, 2026** - Site deployed to production
 - **October 1, 2026** - Status refreshed: sales now occurring (ramping); prior "zero sales" framing outdated. Traffic/execution remains the growth focus.

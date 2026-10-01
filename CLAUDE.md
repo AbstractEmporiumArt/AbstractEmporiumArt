@@ -1,7 +1,7 @@
 # Abstract Emporium - Project Memory & Conventions
 
-**Last Updated:** July 19, 2026  
-**Status:** Live in production, zero sales, GitHub optimized and secured, ready for marketing push
+**Last Updated:** October 1, 2026  
+**Status:** Live in production, sales now coming in (slowly ramping), GitHub optimized and secured, marketing/SEO execution underway
 
 ---
 
@@ -24,7 +24,7 @@
 - Art platforms: All 5 platforms active with product listings
 
 ### ❌ What Doesn't Work (Yet)
-- **ZERO traffic** - No visitors, no sales, no marketing executed
+- **Traffic is the #1 growth lever** - visitor volume is still low, but sales have started (no longer zero); marketing/SEO execution is the active focus rather than a blocking gap
 - Social media automation scripts exist but never run
 - Email automation configured but no subscribers
 - Knitting *pattern bundles* REMOVED entirely from site (2026-07-19) — too much competition. Lissa's Knitting Creations (slippers/tuques/cloths/scarves) is ACTIVE physical line, site focus.
@@ -258,7 +258,7 @@ User Request
 - ✅ Website live
 - ✅ Payment system working
 - ✅ Products published
-- ⏳ First 10 sales (BLOCKED: zero traffic)
+- ✅ First sales achieved (ramping) — proof-of-concept block lifted; now scaling toward 10+
 - ⏳ First customer feedback
 
 ### Phase 2: Product-Market Fit (After First 10 Sales)
@@ -310,15 +310,16 @@ When working on Abstract Emporium:
 2. **Verify before changing** - Test live site, check if actually broken
 3. **Execute before documenting** - Bias toward shipping over planning
 4. **Build approved lines** - Z3nw1ck, Lissa's Knitting Creations, Commissions, Coloring Books. POD passive. Knitting *pattern bundles* removed entirely.
-5. **Marketing > Features** - Traffic is the bottleneck, not product count. Manual marketing (Reddit/FB/Pinterest/IG) for approved lines.
+5. **Marketing > Features** - Traffic/execution remains the primary growth lever (sales are happening but volume is the constraint, not the product). Manual marketing (Reddit/FB/Pinterest/IG) for approved lines.
 6. **Use FIRST_10_SALES_POSTS.md** - Ready-to-use marketing content exists
 
-**Primary Goal:** Help user get first 10 sales (coloring books OR art prints) via manual Reddit/Facebook/Instagram posting, NOT by building new features.
+**Primary Goal:** Help scale sales via manual Reddit/Facebook/Instagram/Pinterest marketing + SEO, NOT by building new features. First sales are in; the focus is now volume + repeat customers.
 
 ---
 
 ## VERSION HISTORY
 
 - **May 29, 2026** - CLAUDE.md created to prevent documentation paralysis and focus on sales
-- **May 10, 2026** - Site deployed to production (19 days ago, still zero sales)
+- **May 10, 2026** - Site deployed to production
+- **October 1, 2026** - Status refreshed: sales now occurring (ramping); prior "zero sales" framing outdated. Traffic/execution remains the growth focus.
 - **April 13, 2026** - Ko-fi products published and integrated

@@ -88,7 +88,29 @@
         }
         .lkc-logistics { max-width: 720px; margin: 0 auto 30px; text-align: center; color: #2d3436; }
         .lkc-logistics p { margin: 6px 0; }
-    </style>
+    
+/* ---- product photo galleries, added 2026-10-05 ---- */
+.product-gallery{margin:1.1rem 0 1.4rem}
+.gal-group{margin-bottom:1rem}
+.gal-label{font-weight:700;margin:0 0 .45rem;font-size:.95rem;color:#3d2b1f}
+.gal-row{display:flex;flex-wrap:wrap;gap:.55rem}
+.gal-row img{width:104px;height:104px;object-fit:cover;border-radius:8px;border:1px solid #e3d9cd;background:#faf7f3}
+.gal-note{font-size:.86rem;color:#6b5a4a;margin:.6rem 0 0;line-height:1.5}
+@media (max-width:600px){.gal-row img{width:82px;height:82px}}
+
+/* ---- ready-made vs custom order block, 2026-10-05 ---- */
+.order-box{margin:1.2rem 0 .4rem;padding:1rem 1.1rem;background:#fbf8f4;border:1px solid #e3d9cd;border-radius:10px}
+.order-box h4{margin:0 0 .3rem;font-size:1.02rem;color:#3d2b1f}
+.order-grid{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:.7rem}
+.order-col{flex:1 1 240px;border-radius:8px;padding:.75rem .85rem;background:#fff;border:1px solid #e3d9cd}
+.order-col.ready{border-left:4px solid #2e7d32}
+.order-col.custom{border-left:4px solid #b07d2b}
+.order-head{font-weight:700;margin:0 0 .35rem;font-size:.95rem}
+.order-col ul{margin:.2rem 0 .45rem 1.1rem;padding:0;font-size:.92rem;line-height:1.75}
+.order-cta{margin:.75rem 0 0;font-size:.92rem}
+.order-cta a{font-weight:600}
+@media (max-width:600px){.order-grid{flex-direction:column}}
+</style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -235,6 +257,86 @@ fbq('track', 'PageView');
 <div class="product-card">
 <div class="body">
         <h3>🧶 Cozy Slippers</h3>
+
+        <!-- Product photos added 2026-10-05. Newborn (4), Toddler (5), Adult 9" (11)
+             all in stock and ready. Baby/Child/Youth/Adult S-M-L-XL are made to order. -->
+        <div class="product-gallery">
+          <div class="gal-group">
+            <p class="gal-label">Newborn — 4 pairs ready</p>
+            <div class="gal-row">
+              <img src="lkc-slippers-newborn-01.jpg" alt="Newborn knit slippers, pair 1 of 4" loading="lazy" width="1600" height="1200">
+              <img src="lkc-slippers-newborn-02.jpg" alt="Newborn knit slippers, pair 2 of 4" loading="lazy" width="1600" height="1200">
+              <img src="lkc-slippers-newborn-03.jpg" alt="Newborn knit slippers, pair 3 of 4" loading="lazy" width="1600" height="1200">
+              <img src="lkc-slippers-newborn-04.jpg" alt="Newborn knit slippers, pair 4 of 4" loading="lazy" width="1600" height="1200">
+            </div>
+          </div>
+          <div class="gal-group">
+            <p class="gal-label">Toddler — 5 pairs ready</p>
+            <div class="gal-row">
+              <img src="lkc-slippers-toddler-01.jpg" alt="Toddler knit slippers, pair 1 of 5" loading="lazy" width="1600" height="1200">
+              <img src="lkc-slippers-toddler-02.jpg" alt="Toddler knit slippers, pair 2 of 5" loading="lazy" width="1600" height="1200">
+              <img src="lkc-slippers-toddler-03.jpg" alt="Toddler knit slippers, pair 3 of 5" loading="lazy" width="1600" height="1200">
+              <img src="lkc-slippers-toddler-04.jpg" alt="Toddler knit slippers, pair 4 of 5" loading="lazy" width="1600" height="1200">
+              <img src="lkc-slippers-toddler-05.jpg" alt="Toddler knit slippers, pair 5 of 5" loading="lazy" width="1600" height="1200">
+            </div>
+          </div>
+          <div class="gal-group">
+            <p class="gal-label">Adult Large (9&quot;-9.5&quot;, 9&quot; foot) &mdash; 11 pairs ready &mdash; $35</p>
+            <div class="gal-row">
+              <img src="lkc-slippers-adult9-01.jpg" alt="Adult 9 inch knit slippers, pair 1 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-02.jpg" alt="Adult 9 inch knit slippers, pair 2 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-03.jpg" alt="Adult 9 inch knit slippers, pair 3 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-04.jpg" alt="Adult 9 inch knit slippers, pair 4 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-05.jpg" alt="Adult 9 inch knit slippers, pair 5 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-06.jpg" alt="Adult 9 inch knit slippers, pair 6 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-07.jpg" alt="Adult 9 inch knit slippers, pair 7 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-08.jpg" alt="Adult 9 inch knit slippers, pair 8 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-09.jpg" alt="Adult 9 inch knit slippers, pair 9 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-10.jpg" alt="Adult 9 inch knit slippers, pair 10 of 11" loading="lazy" width="433" height="577">
+              <img src="lkc-slippers-adult9-11.jpg" alt="Adult 9 inch knit slippers, pair 11 of 11" loading="lazy" width="433" height="577">
+            </div>
+          </div>
+          <p class="gal-note">Sizing runs Newborn (3.5&quot;-4&quot;), Baby (4&quot;-5&quot;), Toddler (5&quot;-5.75&quot;), Child (5.75&quot;-7&quot;),
+             Youth (7&quot;-8&quot;), Adult Small (8&quot;-8.5&quot;), Medium, Large and XL. Sizes without photos are made to order —
+             message us and we&apos;ll confirm fabric and timing.</p>
+
+        <!-- Ready-made vs custom ordering, added 2026-10-05 at Lissa's request. -->
+        <div class="order-box">
+          <h4>Ready-made now, or custom made to order?</h4>
+          <p class="gal-note">The sizes photographed above are <strong>finished pairs in stock</strong> &mdash; they ship as-is.
+             Any other size is <strong>made to order</strong> in your colour choice.</p>
+
+          <div class="order-grid">
+            <div class="order-col ready">
+              <p class="order-head">Ready-made &mdash; ships now</p>
+              <ul>
+                <li><strong>Newborn</strong> (3.5&quot;-4&quot;) &mdash; 4 pairs &mdash; <strong>$7</strong></li>
+                <li><strong>Toddler</strong> (5&quot;-5.75&quot;) &mdash; 5 pairs &mdash; <strong>$12</strong></li>
+                <li><strong>Adult Large</strong> (9&quot;-9.5&quot;) &mdash; 11 pairs &mdash; <strong>$35</strong></li>
+              </ul>
+              <p class="gal-note">Photo above shows the pairs available. Tell us which one (or how many) when you order.</p>
+            </div>
+            <div class="order-col custom">
+              <p class="order-head">Custom &mdash; made to order</p>
+              <ul>
+                <li>Baby (4&quot;-5&quot;) &mdash; $10</li>
+                <li>Child (5.75&quot;-7&quot;) &mdash; $15</li>
+                <li>Youth (7&quot;-8&quot;) &mdash; $20</li>
+                <li>Adult Small (8&quot;-8.5&quot;) &mdash; $25</li>
+                <li>Adult Medium (8.5&quot;-9&quot;) &mdash; $30</li>
+                <li>Adult XL (9.5&quot;-10&quot;) &mdash; $40</li>
+              </ul>
+              <p class="gal-note">Also available custom: <strong>more Newborn, Toddler and Adult Large</strong> once these run out,
+                 in your colour and pattern choice. Message us for fabric, colours and timing.</p>
+            </div>
+          </div>
+          <p class="order-cta">
+            <a href="https://www.facebook.com/TheHugArtAbstractEmporium" target="_blank" rel="noopener">Message us to order &rarr;</a>
+            &nbsp;&middot;&nbsp; <a href="contact.html">Contact form</a>
+            &nbsp;&middot;&nbsp; <a href="orders.html">Order history</a>
+          </p>
+        </div>
+        </div>
         <p class="notes">Handmade knit, checkerboard &amp; classic stripes. Made to order - message for custom pairs and sizes.</p>
         <p class="price">Newborn (0-6mo) $7 - Baby (6-12mo) $10 - Toddler (1-2yr) $12 - Child (3-6yr) $15 - Youth (7-12yr) $20 - Adult S $25 - Adult M $30 - Adult L $35 - Adult XL $40</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -295,6 +397,7 @@ fbq('track', 'PageView');
                     </div>
                 </div>
 </div>
+        </div><!-- /.container -->
 </body>
 <script src="script.js"></script>
 </html>

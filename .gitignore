@@ -30,3 +30,16 @@ invoices/
 taxhacker/exports/
 
 taxhacker/invoices/
+
+# Secrets — NEVER commit these. .env holds the PayPal business email and API keys.
+.env
+.env.*
+!.env.example
+
+# Photo drop + processing working dirs (2026-10-05). The PROCESSED copies are
+# what ship to the site and those ARE committed from the repo root.
+_incoming-photos/
+_processed/
+
+# Site backups
+*.bak-*

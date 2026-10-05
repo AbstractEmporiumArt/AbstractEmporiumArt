@@ -523,6 +523,17 @@ fbq('track', 'PageView');
 <section id="testimonials" style="padding:2rem 1rem;background:#fafafa;border-top:1px solid #e5e7eb">
   <h2 style="text-align:center;margin-bottom:1rem">What Our Customers Say</h2>
   <p style="text-align:center;color:#6b7280;font-style:italic">Testimonials are vocal / in-person — none received online yet. Check back once written reviews come in.</p>
+  <div style="max-width:600px;margin:1.5rem auto;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+    <h3 style="margin-bottom:1rem">Leave a comment</h3>
+    <form style="display:flex;flex-direction:column;gap:0.75rem" aria-label="Leave a comment">
+      <label for="comment-name">Name <span aria-hidden="true">*</span></label>
+      <input id="comment-name" name="name" type="text" required style="padding:8px;border:1px solid #ccc;border-radius:4px;font-size:14px" aria-required="true">
+      <label for="comment-msg">Your comment <span aria-hidden="true">*</span></label>
+      <textarea id="comment-msg" name="comment" required rows="4" style="padding:8px;border:1px solid #ccc;border-radius:4px;font-size:14px" aria-required="true"></textarea>
+      <button type="submit" style="padding:10px 20px;background:#1a1a2e;color:#fff;border:none;border-radius:4px;font-size:14px;cursor:pointer">Submit comment</button>
+    </form>
+    <p style="font-size:12px;color:#6b7280;margin-top:0.5rem">Comments are reviewed before posting. Vocal testimonials welcome — reach out directly.</p>
+  </div>
 </section>
 </body>
 </html>

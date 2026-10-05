@@ -110,6 +110,18 @@
 .order-cta{margin:.75rem 0 0;font-size:.92rem}
 .order-cta a{font-weight:600}
 @media (max-width:600px){.order-grid{flex-direction:column}}
+
+/* === Accessibility / Disability angle === */
+.skip-link{position:absolute;top:-40px;left:0;background:#1a1a2e;color:#fff;padding:8px 16px;z-index:1000;font-size:14px;border-radius:0 0 4px 0;transition:top 0.2s}
+.skip-link:focus{top:0}
+*:focus{outline:3px solid #2563eb;outline-offset:2px}
+:focus:not(:focus-visible){outline:none}
+:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+[role="banner"],[role="navigation"],[role="main"],[role="contentinfo"]{display:block}
+.disability-badge{display:inline-block;background:#1a1a2e;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px 0}
+.high-contrast{background:#000;color:#fff}
+.high-contrast a{color:#60a5fa}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
     <script type="application/ld+json">
     {
@@ -145,7 +157,7 @@ fbq('track', 'PageView');
         <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Hug.art Banner" class="banner-img" loading="eager" fetchpriority="high" decoding="async">
     </div>
 
-    <nav class="navbar">
+    <nav role="navigation" class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" loading="lazy" decoding="async">
@@ -168,7 +180,7 @@ fbq('track', 'PageView');
         </div>
     </nav>
 
-    <section id="main-content">
+    <main role="main"><section id="main-content">
             <div style="max-width: 860px; margin: 24px auto; padding: 16px 22px; background: #fff8e1; border: 1px solid #f0d9a8; border-left: 4px solid #b5651d; border-radius: 8px; font-size: 0.98rem; line-height: 1.55; text-align: center;">
               <p style="margin: 0;"><strong>🛍️ Shop = ready-made.</strong> For custom colour, size, or personalization on Z3NW1CK or Lissa's Knitting, DM us — we'll confirm the details together before any payment.</p>
             </div>
@@ -398,7 +410,8 @@ fbq('track', 'PageView');
                 </div>
 </div>
         </div><!-- /.container -->
-<section style="padding:1rem;background:#fdf6e3;border-radius:6px;margin:1rem 0;border-left:4px solid #b07d2b;"><h3>Newborn Tuque — In the Making (LKC)</h3><p>A newborn tuque is currently on the needles — part of LKC (Lissa's Knitting Creations). Not yet listed for sale; coming soon once complete.</p><img src="lkc-newborn-tuque-on-needles.jpg" alt="Newborn tuque in progress — cream ribbed knitting on grey circular needles with a ball of cream yarn, on a grey blanket" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;margin:0.5rem 0;"><p>Status: work-in-progress.</p></section>
+<section style="padding:1rem;background:#fdf6e3;border-radius:6px;margin:1rem 0;border-left:4px solid #b07d2b;"><h3>Newborn Tuque — In the Making (LKC)</h3><p>A newborn tuque is currently on the needles — part of LKC (Lissa's Knitting Creations). Not yet listed for sale; coming soon once complete.</p><img src="lkc-newborn-tuque-on-needles.jpg" alt="Newborn tuque in progress — cream ribbed knitting on grey circular needles with a ball of cream yarn, on a grey blanket" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;margin:0.5rem 0;"><p>Status: work-in-progress.</p></main>
+</section>
 </body>
 <script src="script.js"></script>
 </html>

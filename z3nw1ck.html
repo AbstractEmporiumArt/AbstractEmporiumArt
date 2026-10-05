@@ -111,7 +111,19 @@
             background:none; border:none; color:#fff;
             font-size:28px; cursor:pointer; line-height:1;
         }
-    </style>
+    
+/* === Accessibility / Disability angle === */
+.skip-link{position:absolute;top:-40px;left:0;background:#1a1a2e;color:#fff;padding:8px 16px;z-index:1000;font-size:14px;border-radius:0 0 4px 0;transition:top 0.2s}
+.skip-link:focus{top:0}
+*:focus{outline:3px solid #2563eb;outline-offset:2px}
+:focus:not(:focus-visible){outline:none}
+:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+[role="banner"],[role="navigation"],[role="main"],[role="contentinfo"]{display:block}
+.disability-badge{display:inline-block;background:#1a1a2e;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px 0}
+.high-contrast{background:#000;color:#fff}
+.high-contrast a{color:#60a5fa}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -141,12 +153,13 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel -->
 <script>fbq('track','ViewContent',{content_name:'Z3NW1CK Collection',content_category:'Candles & Wax Melts'});</script></head>
 <body>
-<section style="padding:1rem;background:#fdf6e3;border-radius:6px;margin:1rem 0;border-left:4px solid #b07d2b;">
+<main role="main"><section style="padding:1rem;background:#fdf6e3;border-radius:6px;margin:1rem 0;border-left:4px solid #b07d2b;">
 <h3>Seasonal Collection — Coming Soon</h3>
 <p style="margin-bottom:0.5rem;"><strong>Hello Fall (Halloween)</strong>: 2.5oz Halloween candle tins + 5oz abstract candle tins + wax melt clamshell.</p>
 <p style="margin-bottom:0.5rem;"><strong>Santa's Pipe (Christmas)</strong>: 2.5oz Christmas candle tins + 5oz abstract candle tins + wax melt clamshell.</p>
 <p style="margin-bottom:0.5rem;">Test batch must complete, cure, and burn good before any batches for sale. Curing always takes 2 weeks per batch. Coming soon once test batch is golden — will make batches for sale then. Not available until FO delivered + test batch complete + cured + burns clean.</p>
 <p style="font-style:italic;color:#6b5a4a;font-size:0.9rem">Confirmed by Lissa. Status: Coming Soon.</p>
+</main>
 </section>
 
 
@@ -155,7 +168,7 @@ fbq('track', 'PageView');
         <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Hug.art Banner" class="banner-img" loading="eager" fetchpriority="high" decoding="async">
     </div>
 
-    <nav class="navbar">
+    <nav role="navigation" class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" loading="lazy" decoding="async">

@@ -117,7 +117,21 @@
     localStorage.setItem('artCart', JSON.stringify(cart));
     const badge = document.getElementById('cartCount');
     if (badge) badge.textContent = '(' + cart.length + ')';
-    alert('Added to cart: ' + title + ' — ' + formatMoney(price) + ' CAD');
+
+    // Visible accessible toast notification (no blocked alerts)
+    const existingToast = document.getElementById('ae-cart-toast');
+    if (existingToast) existingToast.remove();
+    const toast = document.createElement('div');
+    toast.id = 'ae-cart-toast';
+    toast.style.cssText = 'position:fixed;top:60px;left:50%;transform:translateX(-50%);background:#1a1a2e;color:#fff;padding:14px 24px;border-radius:10px;z-index:9999;font-weight:600;font-size:.95rem;box-shadow:0 6px 22px rgba(0,0,0,.35);animation:aeFadeIn .25s ease-out;pointer-events:none;';
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+    toast.textContent = 'Added to cart: ' + title + ' — ' + formatMoney(price) + ' CAD';
+    document.body.appendChild(toast);
+    setTimeout(() => { toast.style.transition='opacity .3s ease-out'; toast.style.opacity='0'; setTimeout(() => toast.remove(), 350); }, 2200);
+    // Fallback alert for browsers that suppress toasts
+    try { alert('Added to cart: ' + title + ' — ' + formatMoney(price) + ' CAD'); } catch(e){}
+
   }
 
   window.addToCartDirect = function(title, price, image){ pushItem(title, price, image); };
@@ -135,4 +149,10 @@
     const price = sel ? Number(sel.value) : 0;
     pushItem(title, price, image);
   };
+})();
+
+(function(){
+  const s = document.createElement('style');
+  s.textContent = '@keyframes aeFadeIn{from{opacity:0;transform:translate(-50%, -8px);}to{opacity:1;transform:translate(-50%, 0);}}';
+  document.head.appendChild(s);
 })();

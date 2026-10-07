@@ -262,6 +262,7 @@ fbq('track', 'PageView');
     <p style="font-size:12px;color:#6b7280;margin-top:0.5rem">Comments are reviewed before posting. Vocal testimonials welcome — reach out directly.</p>
   </div>
 </section>
+    <div id="chatbot-widget" class="chatbot-widget">        <div class="chatbot-header">            <span>🎨 Art Helper - Ask me anything!</span>            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>        </div>        <div id="chatbot-messages" class="chatbot-messages"></div>        <div class="chatbot-input-area">            <input                 type="text"                 id="chatbot-input"                 placeholder="Ask about our art, collections, or products..."                 onkeypress="handleChatInput(event)"            >            <button onclick="sendChatMessage()">Send</button>        </div>
 </body>
 </html>
 
@@ -518,21 +519,6 @@ fbq('track', 'PageView');
             </div>
         </div>
     </footer>
-    <div id="chatbot-widget" class="chatbot-widget">
-        <div class="chatbot-header">
-            <span>🎨 Art Helper - Ask me anything!</span>
-            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
-        </div>
-        <div id="chatbot-messages" class="chatbot-messages"></div>
-        <div class="chatbot-input-area">
-            <input 
-                type="text" 
-                id="chatbot-input" 
-                placeholder="Ask about our art, collections, or products..." 
-                onkeypress="handleChatInput(event)"
-            >
-            <button onclick="sendChatMessage()">Send</button>
-        </div>
     </div>
 
     <!-- REMOVED: sales-announcements.js (caused popup notifications) -->

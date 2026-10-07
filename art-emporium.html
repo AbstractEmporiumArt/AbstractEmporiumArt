@@ -132,6 +132,64 @@ fbq('track', 'PageView');
                 <p style="font-size:.93rem;color:#60676e;margin-top:.3rem;">After submission, you will receive a response within 24-48 hours with timeline, pricing range, and next steps.</p>
             </div>
 
+    
+            <div class="commission-form-embed" style="max-width:860px;margin:2rem auto 0;padding:1.2rem;background:#fff;border:1px solid #e8dcc8;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.03);">
+                <h2 style="margin:0 0 1rem;color:#1a1a2e;font-size:1.3rem;">Start Your Request</h2>
+                <form id="commissionsForm" class="commission-form" action="https://formspree.io/f/mvgelyje" method="POST" style="display:grid;gap:12px;">
+                    <div>
+                        <label for="commissionName" style="font-weight:600;display:block;margin-bottom:4px;">Full Name</label>
+                        <input id="commissionName" name="name" type="text" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                    </div>
+                    <div>
+                        <label for="commissionEmail" style="font-weight:600;display:block;margin-bottom:4px;">Email</label>
+                        <input id="commissionEmail" name="email" type="email" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                    </div>
+                    <div>
+                        <label for="commissionType" style="font-weight:600;display:block;margin-bottom:4px;">Commission Type</label>
+                        <select id="commissionType" name="commission_type" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                            <option value="">Select one...</option>
+                            <option value="mini">Mini Commission</option>
+                            <option value="signature">Signature Commission</option>
+                            <option value="collector">Collector Commission</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="commissionBudget" style="font-weight:600;display:block;margin-bottom:4px;">Budget Range (USD)</label>
+                        <select id="commissionBudget" name="budget_range" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                            <option value="">Select budget...</option>
+                            <option value="under_250">Under $250</option>
+                            <option value="250_750">$250 - $750</option>
+                            <option value="750_2000">$750 - $2,000</option>
+                            <option value="2000_plus">$2,000+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="commissionTimeline" style="font-weight:600;display:block;margin-bottom:4px;">Target Timeline</label>
+                        <input id="commissionTimeline" name="timeline" type="text" placeholder="Example: Needed by August 15" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                    </div>
+                    <div>
+                        <label for="commissionDetails" style="font-weight:600;display:block;margin-bottom:4px;">Project Details</label>
+                        <textarea id="commissionDetails" name="message" rows="5" required placeholder="Tell us preferred colors, mood, dimensions, placement, and inspirations." style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;resize:vertical;min-height:100px;"></textarea>
+                    </div>
+                    <input type="hidden" name="subject" value="Commission Request">
+                    <button type="submit" style="border:none;border-radius:999px;background:#00b894;color:#fff;font-weight:700;padding:12px 20px;cursor:pointer;font-size:1rem;">Submit Commission Request</button>
+                </form>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top:14px;padding-top:14px;border-top:1px solid #e8dcc8;">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="[EMAIL]">
+                    <input type="hidden" name="item_name" value="Commission Deposit">
+                    <input type="hidden" name="currency_code" value="CAD">
+                    <label style="font-weight:600;font-size:.95rem;">Deposit amount: </label>
+                    <select name="amount" required style="padding:8px;border-radius:6px;border:1px solid #ccc;margin-right:8px;">
+                        <option value="50">$50 deposit</option>
+                        <option value="100">$100 deposit</option>
+                        <option value="150">$150 deposit</option>
+                    </select>
+                    <button type="submit" style="border:none;border-radius:999px;background:#b5651d;color:#fff;font-weight:700;padding:8px 16px;cursor:pointer;font-size:.9rem;">Pay Deposit</button>
+                </form>
+                <p id="commissionStatus" class="commission-note" aria-live="polite" style="font-size:.88rem;color:#60676e;margin-top:10px;"></p>
+            </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">

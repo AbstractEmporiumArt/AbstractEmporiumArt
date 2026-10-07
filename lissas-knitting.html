@@ -412,15 +412,42 @@ fbq('track', 'PageView');
           <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
           <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers">
           <input type="hidden" name="currency_code" value="CAD">
-          <label class="size-label">Size: <select name="amount" id="slipperSize" class="size-select" required><option value="7">Newborn (0-6mo, 3.5&quot;-4&quot;) - $7</option>
-             <option value="10">Baby (6-12mo, 4&quot;-5&quot;) - $10</option>
-             <option value="12">Toddler (1-2yr, 5&quot;-5.75&quot;) - $12</option>
-             <option value="15">Child (3-6yr, 5.75&quot;-7&quot;) - $15</option>
-             <option value="20">Youth (7-12yr, 7&quot;-8&quot;) - $20</option>
-             <option value="25">Adult Small (womens 5-7 / mens 4-6, 8&quot;-8.5&quot;) - $25</option>
-             <option value="30">Adult Medium (womens 7-9 / mens 6-8, 8.5&quot;-9&quot;) - $30</option>
-             <option value="35">Adult Large (womens 9-12 / mens 8-11, 9&quot;-9.5&quot;) - $35</option>
-             <option value="40">Adult XL (womens 12-14+ / mens 11-13+, 9.5&quot;-10&quot;) - $40</option></select></label>
+          <label class="size-label">Size / Pair: <select name="amount" id="slipperSize" class="size-select" required>
+                            <optgroup label="Newborn (3.5-4") — 4 pairs ready — $7 CAD">
+                                <option value="7">Newborn Pair 1 of 4 — $7</option>
+                                <option value="7">Newborn Pair 2 of 4 — $7</option>
+                                <option value="7">Newborn Pair 3 of 4 — $7</option>
+                                <option value="7">Newborn Pair 4 of 4 — $7</option>
+                            </optgroup>
+                            <optgroup label="Toddler (5-5.75") — 5 pairs ready — $12 CAD">
+                                <option value="12">Toddler Pair 1 of 5 — $12</option>
+                                <option value="12">Toddler Pair 2 of 5 — $12</option>
+                                <option value="12">Toddler Pair 3 of 5 — $12</option>
+                                <option value="12">Toddler Pair 4 of 5 — $12</option>
+                                <option value="12">Toddler Pair 5 of 5 — $12</option>
+                            </optgroup>
+                            <optgroup label="Adult Large (9-9.5", 9" foot) — 11 pairs ready — $35 CAD">
+                                <option value="35">Adult Large Pair 1 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 2 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 3 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 4 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 5 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 6 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 7 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 8 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 9 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 10 of 11 — $35</option>
+                                <option value="35">Adult Large Pair 11 of 11 — $35</option>
+                            </optgroup>
+                            <optgroup label="Made to order — choose colour &amp; pattern">
+                                <option value="10">Baby (4-5") — $10</option>
+                                <option value="15">Child (5.75-7") — $15</option>
+                                <option value="20">Youth (7-8") — $20</option>
+                                <option value="25">Adult Small (8-8.5") — $25</option>
+                                <option value="30">Adult Medium (8.5-9") — $30</option>
+                                <option value="40">Adult XL (9.5-10") — $40</option>
+                            </optgroup>
+                        </select></label>
           <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
           <button type="submit" class="buy-btn">Buy with PayPal</button>
         </form>

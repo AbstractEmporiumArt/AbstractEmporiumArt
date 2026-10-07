@@ -167,14 +167,13 @@ fbq('track', 'PageView');
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="art-emporium.html" class="nav-link">Art Emporium</a></li>
-                <li><li><a href="art-emporium.html#commission-merge">Custom Art</a></li>
-                <a href="pods.html" class="nav-link">PODs</a></li>
+                <li><a href="art-emporium.html#commission-merge">Custom Art</a></li>
+                <li><a href="pods.html" class="nav-link">PODs</a></li>
                 <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
                 <li><a href="lissas-knitting.html" class="nav-link active">Lissa's Knitting</a></li>
                 <li><a href="cart.html">Cart <span id="cartCount">(0)</span></a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="commissions.html" class="nav-link">Commissions</a></li>
-                <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
+                                <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger"><span></span><span></span><span></span></div>
@@ -209,6 +208,7 @@ fbq('track', 'PageView');
 🧶 Handmade Knit Tuques</h3>
         <p class="notes">Two styles: beanie (tiny sizes) and mariner ribbed, worsted weight. Colours: confetti charcoal, purple variegated, navy confetti pom, pink confetti, mustard &amp; navy (more on request).</p>
         <p class="price">Newborn $5 - Baby $8 - Toddler $12 - Child $15 - Adult $20</p>
+        <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
@@ -231,6 +231,7 @@ fbq('track', 'PageView');
         <h3>🧶 Mop / Swiffer Pads</h3>
         <p class="notes">Reusable, washable pad that sticks to the bottom Velcro. Fits Swiffer-style mops (4.5" x 10").</p>
         <p class="price">$8 ea - 3 for $20</p>
+        <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
@@ -252,6 +253,7 @@ fbq('track', 'PageView');
         <h3>🧼 Wash Cloths</h3>
         <p class="notes">Reusable knit cloths. Soft, durable, eco-friendly.</p>
         <p class="price">$5 ea - 3 for $10</p>
+        <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
@@ -269,8 +271,10 @@ fbq('track', 'PageView');
       </div>
     </div>
 <div class="product-card">
-<div class="body">
+  <img src="lkc-slippers-newborn-01.jpg" alt="Newborn knit slippers — hand-knit in Thunder Bay" loading="lazy" style="width:100%;height:200px;object-fit:cover;border-radius:12px 12px 0 0;display:block;">
+  <div class="body">
         <h3>🧶 Cozy Slippers</h3>
+        <p style="font-size:.9rem;color:#aaa;margin:-4px 0 8px;line-height:1.45;">Hand-knit slippers in three ready-made sizes. Each pair is made to order — photos above show finished pairs in stock. Custom colours and sizes available.</p>
 
         <!-- Product photos added 2026-10-05. Newborn (4), Toddler (5), Adult 9" (11)
              all in stock and ready. Baby/Child/Youth/Adult S-M-L-XL are made to order. -->
@@ -351,8 +355,56 @@ fbq('track', 'PageView');
           </p>
         </div>
         </div>
-        <p class="notes">Handmade knit, checkerboard &amp; classic stripes. Made to order - message for custom pairs and sizes.</p>
+        <div class="commission-form-embed" style="max-width:860px;margin:1.5rem auto 0;padding:1rem;background:#fbf8f4;border:1px solid #e3d9cd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.03);">
+                <h4 style="margin:0 0 .6rem;color:#1a1a2e;font-size:1.05rem;">Custom Slippers Order</h4>
+                <form id="slipperCustomForm" class="commission-form" action="https://formspree.io/f/mvgelyje" method="POST" style="display:grid;gap:10px;">
+                    <div>
+                        <label for="slipperName" style="font-weight:600;">Full Name</label>
+                        <input id="slipperName" name="name" type="text" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                    </div>
+                    <div>
+                        <label for="slipperEmail" style="font-weight:600;">Email</label>
+                        <input id="slipperEmail" name="email" type="email" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                    </div>
+                    <div>
+                        <label for="slipperSize" style="font-weight:600;">Size / Age</label>
+                        <select id="slipperSize" name="size" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                            <option value="">Select size...</option>
+                            <option value="newborn">Newborn (3.5-4")</option>
+                            <option value="baby">Baby (4-5")</option>
+                            <option value="toddler">Toddler (5-5.75")</option>
+                            <option value="child">Child (5.75-7")</option>
+                            <option value="youth">Youth (7-8")</option>
+                            <option value="adult_small">Adult Small (8-8.5")</option>
+                            <option value="adult_medium">Adult Medium (8.5-9")</option>
+                            <option value="adult_large">Adult Large (9-9.5")</option>
+                            <option value="adult_xl">Adult XL (9.5-10")</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="slipperColors" style="font-weight:600;">Colour / Pattern Preferences</label>
+                        <textarea id="slipperColors" name="message" rows="4" placeholder="Tell us your colour choices, stripe patterns, or custom ideas." required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;resize:vertical;min-height:80px;"></textarea>
+                    </div>
+                    <input type="hidden" name="subject" value="Custom Slippers Order">
+                    <button type="submit" style="border:none;border-radius:999px;background:#1a1a2e;color:#fff;font-weight:700;padding:10px 18px;cursor:pointer;font-size:.95rem;">Submit Custom Request</button>
+                </form>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top:10px;padding-top:10px;border-top:1px solid #e3d9cd;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="[EMAIL]">
+                    <input type="hidden" name="item_name" value="Custom Slippers Deposit">
+                    <input type="hidden" name="currency_code" value="CAD">
+                    <label style="font-weight:600;font-size:.9rem;">Deposit: </label>
+                    <select name="amount" required style="padding:6px;border-radius:6px;border:1px solid #ccc;font-size:.9rem;">
+                        <option value="10">$10 deposit</option>
+                        <option value="20">$20 deposit</option>
+                        <option value="30">$30 deposit</option>
+                    </select>
+                    <button type="submit" style="border:none;border-radius:999px;background:#b5651d;color:#fff;font-weight:700;padding:6px 14px;cursor:pointer;font-size:.85rem;">Pay Deposit</button>
+                </form>
+            </div>
+<p class="notes">Handmade knit, checkerboard &amp; classic stripes. Made to order - message for custom pairs and sizes.</p>
         <p class="price">Newborn (0-6mo) $7 - Baby (6-12mo) $10 - Toddler (1-2yr) $12 - Child (3-6yr) $15 - Youth (7-12yr) $20 - Adult S $25 - Adult M $30 - Adult L $35 - Adult XL $40</p>
+        <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
@@ -379,6 +431,7 @@ fbq('track', 'PageView');
         <h3>🧣 Reversible Scarves</h3>
         <p class="notes">Two looks in one. 6" wide x 48" long. Any colour made to order.</p>
         <p class="price">$30 CAD each</p>
+        <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
@@ -397,7 +450,8 @@ fbq('track', 'PageView');
                         <h3>🎩 Classic Stocking Cap (Very Long Tail)</h3>
                         <p class="notes">Hand-knit classic stocking cap with a very long tail. Knitting pattern fits women. Measures 27" from beginning to end (excluding braid and tassel). Made to order.</p>
                         <p class="price">$30 CAD</p>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
+                        <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
           <input type="hidden" name="item_name" value="Lissa's Knitting - Stocking Cap (One Size, 27 inch)">

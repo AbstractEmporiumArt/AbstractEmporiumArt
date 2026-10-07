@@ -54,6 +54,7 @@ fbq('track', 'PageView');
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="art-emporium.html" class="nav-link">Art Emporium</a></li>
+                <li><a href="art-emporium.html#commission-merge">Custom Art</a></li>
                 <li><a href="pods.html" class="nav-link">PODs</a></li>
                 <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
                 <li><a href="lissas-knitting.html" class="nav-link">Lissa's Knitting</a></li>
@@ -69,7 +70,25 @@ fbq('track', 'PageView');
             </div>
         </div>
     </nav>
+<!-- Chat Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <span>🎨 Art Helper - Ask me anything!</span>
+            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input 
+                type="text" 
+                id="chatbot-input" 
+                placeholder="Ask me anything..." 
+                onkeypress="handleChatInput(event)"
+            >
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
 
+    
     <!-- Shop Section -->
     <main role="main"><section</main> class="stores-section" id="main-content">
         <div class="container">
@@ -82,7 +101,6 @@ fbq('track', 'PageView');
               <p style="margin:0;"><strong>🖨️ PODs = Print-on-Demand.</strong> Every piece here is generated with <strong>GoArt</strong>, <strong>Picsart</strong>, and laptop design tools — digital-first, no physical originals exist. These are reproductions, not one-of-a-kind originals. If you want a physical canvas painting by Lissa, go to <a href="art-emporium.html">physical art for sale</a>.</p>
             </div>
             
-
             <div style="max-width: 860px; margin: 24px auto; padding: 16px 22px; background: #fff8e1; border: 1px solid #f0d9a8; border-left: 4px solid #b5651d; border-radius: 8px; font-size: 0.98rem; line-height: 1.55; text-align: center;">
               <p style="margin: 0;"><strong>🛍️ Shop = ready-made.</strong> For custom colour, size, or personalization on Z3NW1CK or Lissa's Knitting, DM us — we'll confirm the details together before any payment.</p>
             </div>
@@ -375,24 +393,6 @@ fbq('track', 'PageView');
             </div>
         </div>
     </footer>
-
-    <!-- Chat Widget -->
-    <div id="chatbot-widget" class="chatbot-widget">
-        <div class="chatbot-header">
-            <span>🎨 Art Helper - Ask me anything!</span>
-            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
-        </div>
-        <div id="chatbot-messages" class="chatbot-messages"></div>
-        <div class="chatbot-input-area">
-            <input 
-                type="text" 
-                id="chatbot-input" 
-                placeholder="Ask me anything..." 
-                onkeypress="handleChatInput(event)"
-            >
-            <button onclick="sendChatMessage()">Send</button>
-        </div>
-    </div>
 
     <script src="sales-announcements.js"></script>
     <script src="helper-bot.js"></script>

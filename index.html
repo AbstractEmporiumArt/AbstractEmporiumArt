@@ -140,6 +140,7 @@ fbq('track', 'PageView');
                 <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
                 <li><a href="lissas-knitting.html" class="nav-link">Knitting</a></li>
                 <li><a href="art-emporium.html" class="nav-link">Art Emporium</a></li>
+                <li><a href="art-emporium.html#commission-merge">Custom Art</a></li>
                 <li><a href="pods.html" class="nav-link">PODs</a></li>
                 <li><a href="commissions.html" class="nav-link">Commissions</a></li>
                 <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
@@ -154,6 +155,135 @@ fbq('track', 'PageView');
             </div>
         </div>
     </nav>
+
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <span>🎨 Art Helper - Ask me anything!</span>
+            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input 
+                type="text" 
+                id="chatbot-input" 
+                placeholder="Ask about our art, collections, or products..." 
+                onkeypress="handleChatInput(event)"
+            >
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- REMOVED: sales-announcements.js (caused popup notifications) -->
+    <!-- REMOVED: personalization-algorithm.js (caused tracking popups) -->
+    <!-- REMOVED: sales-agent.js (caused "Art Advisor" popup) -->
+    <script src="helper-bot.js"></script>
+    
+    <!-- Brevo Newsletter Form Scripts -->
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+      window.LOCALE = 'en';
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+      window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+      window.translation = {
+        common: {
+          selectedList: '{quantity} list selected',
+          selectedLists: '{quantity} lists selected',
+          selectedOption: '{quantity} selected',
+          selectedOptions: '{quantity} selected',
+        }
+      };
+      var AUTOHIDE = Boolean(0);
+    </script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    <script async defer src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+    
+    <!-- Ko-fi Support Button -->
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'Q5Q71YC8FL');kofiwidget2.draw();</script>
+    
+    <!-- Ko-fi Floating Tip Widget -->
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+      kofiWidgetOverlay.draw('abstractemporium', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Tip Me',
+        'floating-chat.donateButton.background-color': '#00b9fe',
+        'floating-chat.donateButton.text-color': '#fff'
+      });
+    </script>
+    <script src="jsonld-core.js"></script>
+    <script src="analytics-tracking.js"></script>
+    <script src="script.js"></script>
+    <script>
+    (function(){
+      function initSlideshow(containerId, images){
+        const box = document.getElementById(containerId);
+        if(!box) return;
+        const img = box.querySelector('img.slide-active');
+        let i=0;
+        const dots = box.querySelector('#'+containerId.replace('slideshow','dots'));
+        images.forEach((src,idx)=>{
+          const d=document.createElement('button');
+          d.textContent='•';
+          d.style.cssText='opacity:'+(idx===0?1:0.4)+';background:none;border:0;color:#fff;cursor:pointer;font-size:1.1rem;padding:0;';
+          d.setAttribute('aria-label','Slide '+(idx+1));
+          d.onclick=()=>show(idx);
+          if(dots) dots.appendChild(d);
+        });
+        function show(n){
+          i=(n+images.length)%images.length;
+          img.src=images[i];
+          Array.from((dots||{}).children||[]).forEach((d,idx)=>d.style.opacity=idx===i?1:0.4);
+        }
+        box.querySelector('#home-prev,'+containerId.replace('home-','page-').replace('slideshow','prev')).onclick=()=>show(i-1);
+        box.querySelector('#home-next,'+containerId.replace('home-','page-').replace('slideshow','next')).onclick=()=>show(i+1);
+      }
+      // initSlideshow for home-slideshow removed — slideshow section deprecated from DOM
+      initSlideshow('page-slideshow',[
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_182226.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_182752.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_182939.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183035.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183051.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183123.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183430.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183457.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_184926.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185153.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185213.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185258.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185352.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185422.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185741.png",
+        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_190009.png"
+      ]);
+    })();
+    </script>
+  <script src="cart.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script>
+  <div style="margin-top:1rem;padding:1rem;background:#fdf6e3;border-left:4px solid #b07d2b;border-radius:4px;"><div style="display:inline-block;padding:.25rem .6rem;background:#2a2233;color:#fdf6e3;border-radius:999px;font-weight:700;font-size:.85rem;letter-spacing:.03em;margin-bottom:.6rem;">SEASONAL COLLECTION</div>
+<strong>Z3NWICK Seasonal Collection — Coming Soon</strong> — Hello Fall (Halloween tin 2.4oz + 5oz abstract tin + wax melt clamshell) and Santa's Pipe (Christmas tin 2.5oz + 5oz abstract tin + wax melt clamshell). <strong>Not yet available for sale.</strong> Will be available once FO delivered and test batch is complete, cured, and burns good.</div>
+
+<section id="testimonials" style="padding:2rem 1rem;background:#fafafa;border-top:1px solid #e5e7eb">
+  <h2 style="text-align:center;margin-bottom:1rem">What Our Customers Say</h2>
+  <p style="text-align:center;color:#6b7280;font-style:italic">Testimonials are vocal / in-person — none received online yet. Check back once written reviews come in.</p>
+  <p style="text-align:center;color:#6b7280;font-size:13px;margin-top:0.25rem"><strong>Classic Collection — Loyalty &amp; Refill:</strong> Buy 10 orders, 11th order gets 1 free classic collection item — applies to z3nw1ck &amp; LKC only (physical art). PODS / coloring books are 3rd party — excluded.</p>
+  <div style="max-width:600px;margin:1.5rem auto;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+    <h3 style="margin-bottom:1rem">Leave a comment</h3>
+    <form style="display:flex;flex-direction:column;gap:0.75rem" aria-label="Leave a comment">
+      <label for="comment-name">Name <span aria-hidden="true">*</span></label>
+      <input id="comment-name" name="name" type="text" required style="padding:8px;border:1px solid #ccc;border-radius:4px;font-size:14px" aria-required="true">
+      <label for="comment-msg">Your comment <span aria-hidden="true">*</span></label>
+      <textarea id="comment-msg" name="comment" required rows="4" style="padding:8px;border:1px solid #ccc;border-radius:4px;font-size:14px" aria-required="true"></textarea>
+      <button type="submit" style="padding:10px 20px;background:#1a1a2e;color:#fff;border:none;border-radius:4px;font-size:14px;cursor:pointer">Submit comment</button>
+    </form>
+    <p style="font-size:12px;color:#6b7280;margin-top:0.5rem">Comments are reviewed before posting. Vocal testimonials welcome — reach out directly.</p>
+  </div>
+</section>
+</body>
+</html>
 
     <!-- Seasonal order-early banner -->
     <div class="season-banner">
@@ -410,131 +540,4 @@ fbq('track', 'PageView');
     </footer>
 
     <!-- Chat Widget - Merged Art Advisor + Helper Bot -->
-    <div id="chatbot-widget" class="chatbot-widget">
-        <div class="chatbot-header">
-            <span>🎨 Art Helper - Ask me anything!</span>
-            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
-        </div>
-        <div id="chatbot-messages" class="chatbot-messages"></div>
-        <div class="chatbot-input-area">
-            <input 
-                type="text" 
-                id="chatbot-input" 
-                placeholder="Ask about our art, collections, or products..." 
-                onkeypress="handleChatInput(event)"
-            >
-            <button onclick="sendChatMessage()">Send</button>
-        </div>
-    </div>
-
-    <!-- REMOVED: sales-announcements.js (caused popup notifications) -->
-    <!-- REMOVED: personalization-algorithm.js (caused tracking popups) -->
-    <!-- REMOVED: sales-agent.js (caused "Art Advisor" popup) -->
-    <script src="helper-bot.js"></script>
     
-    <!-- Brevo Newsletter Form Scripts -->
-    <script>
-      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-      window.LOCALE = 'en';
-      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-      window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-      window.translation = {
-        common: {
-          selectedList: '{quantity} list selected',
-          selectedLists: '{quantity} lists selected',
-          selectedOption: '{quantity} selected',
-          selectedOptions: '{quantity} selected',
-        }
-      };
-      var AUTOHIDE = Boolean(0);
-    </script>
-    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-    <script async defer src="https://www.google.com/recaptcha/api.js?hl=en"></script>
-    
-    <!-- Ko-fi Support Button -->
-    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-    <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'Q5Q71YC8FL');kofiwidget2.draw();</script>
-    
-    <!-- Ko-fi Floating Tip Widget -->
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-    <script>
-      kofiWidgetOverlay.draw('abstractemporium', {
-        'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Tip Me',
-        'floating-chat.donateButton.background-color': '#00b9fe',
-        'floating-chat.donateButton.text-color': '#fff'
-      });
-    </script>
-    <script src="jsonld-core.js"></script>
-    <script src="analytics-tracking.js"></script>
-    <script src="script.js"></script>
-    <script>
-    (function(){
-      function initSlideshow(containerId, images){
-        const box = document.getElementById(containerId);
-        if(!box) return;
-        const img = box.querySelector('img.slide-active');
-        let i=0;
-        const dots = box.querySelector('#'+containerId.replace('slideshow','dots'));
-        images.forEach((src,idx)=>{
-          const d=document.createElement('button');
-          d.textContent='•';
-          d.style.cssText='opacity:'+(idx===0?1:0.4)+';background:none;border:0;color:#fff;cursor:pointer;font-size:1.1rem;padding:0;';
-          d.setAttribute('aria-label','Slide '+(idx+1));
-          d.onclick=()=>show(idx);
-          if(dots) dots.appendChild(d);
-        });
-        function show(n){
-          i=(n+images.length)%images.length;
-          img.src=images[i];
-          Array.from((dots||{}).children||[]).forEach((d,idx)=>d.style.opacity=idx===i?1:0.4);
-        }
-        box.querySelector('#home-prev,'+containerId.replace('home-','page-').replace('slideshow','prev')).onclick=()=>show(i-1);
-        box.querySelector('#home-next,'+containerId.replace('home-','page-').replace('slideshow','next')).onclick=()=>show(i+1);
-      }
-      // initSlideshow for home-slideshow removed — slideshow section deprecated from DOM
-      initSlideshow('page-slideshow',[
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_182226.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_182752.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_182939.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183035.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183051.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183123.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183430.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_183457.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_184926.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185153.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185213.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185258.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185352.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185422.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_185741.png",
-        "z3nw1ck-product-photos/z3nw1ckpagephotoscarousel/20260725_190009.png"
-      ]);
-    })();
-    </script>
-  <script src="cart.js"></script>
-  <!-- Cloudflare Web Analytics -->
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script>
-  <div style="margin-top:1rem;padding:1rem;background:#fdf6e3;border-left:4px solid #b07d2b;border-radius:4px;"><div style="display:inline-block;padding:.25rem .6rem;background:#2a2233;color:#fdf6e3;border-radius:999px;font-weight:700;font-size:.85rem;letter-spacing:.03em;margin-bottom:.6rem;">SEASONAL COLLECTION</div>
-<strong>Z3NWICK Seasonal Collection — Coming Soon</strong> — Hello Fall (Halloween tin 2.4oz + 5oz abstract tin + wax melt clamshell) and Santa's Pipe (Christmas tin 2.5oz + 5oz abstract tin + wax melt clamshell). <strong>Not yet available for sale.</strong> Will be available once FO delivered and test batch is complete, cured, and burns good.</div>
-
-<section id="testimonials" style="padding:2rem 1rem;background:#fafafa;border-top:1px solid #e5e7eb">
-  <h2 style="text-align:center;margin-bottom:1rem">What Our Customers Say</h2>
-  <p style="text-align:center;color:#6b7280;font-style:italic">Testimonials are vocal / in-person — none received online yet. Check back once written reviews come in.</p>
-  <p style="text-align:center;color:#6b7280;font-size:13px;margin-top:0.25rem"><strong>Classic Collection — Loyalty &amp; Refill:</strong> Buy 10 orders, 11th order gets 1 free classic collection item — applies to z3nw1ck &amp; LKC only (physical art). PODS / coloring books are 3rd party — excluded.</p>
-  <div style="max-width:600px;margin:1.5rem auto;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
-    <h3 style="margin-bottom:1rem">Leave a comment</h3>
-    <form style="display:flex;flex-direction:column;gap:0.75rem" aria-label="Leave a comment">
-      <label for="comment-name">Name <span aria-hidden="true">*</span></label>
-      <input id="comment-name" name="name" type="text" required style="padding:8px;border:1px solid #ccc;border-radius:4px;font-size:14px" aria-required="true">
-      <label for="comment-msg">Your comment <span aria-hidden="true">*</span></label>
-      <textarea id="comment-msg" name="comment" required rows="4" style="padding:8px;border:1px solid #ccc;border-radius:4px;font-size:14px" aria-required="true"></textarea>
-      <button type="submit" style="padding:10px 20px;background:#1a1a2e;color:#fff;border:none;border-radius:4px;font-size:14px;cursor:pointer">Submit comment</button>
-    </form>
-    <p style="font-size:12px;color:#6b7280;margin-top:0.5rem">Comments are reviewed before posting. Vocal testimonials welcome — reach out directly.</p>
-  </div>
-</section>
-</body>
-</html>

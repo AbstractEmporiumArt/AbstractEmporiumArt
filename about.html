@@ -53,6 +53,7 @@ fbq('track', 'PageView');
                 <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
                 <li><a href="lissas-knitting.html" class="nav-link">Knitting</a></li>
                 <li><a href="art-emporium.html" class="nav-link">Art Emporium</a></li>
+                <li><a href="art-emporium.html#commission-merge">Custom Art</a></li>
                 <li><a href="pods.html" class="nav-link">PODs</a></li>
                 <li><a href="commissions.html" class="nav-link">Commissions</a></li>
                 <li><a href="about.html" class="nav-link active">About</a></li>
@@ -66,6 +67,23 @@ fbq('track', 'PageView');
             </div>
         </div>
     </nav>
+
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <span>🎨 Art Helper - Ask me anything!</span>
+            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input
+                type="text"
+                id="chatbot-input"
+                placeholder="Ask about our art, collections, or products..."
+                onkeypress="handleChatInput(event)"
+            >
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    
 
     <main id="main-content" class="about-page">
         <section class="about-hero">
@@ -326,21 +344,6 @@ fbq('track', 'PageView');
         </div>
     </footer>
 
-    <div id="chatbot-widget" class="chatbot-widget">
-        <div class="chatbot-header">
-            <span>🎨 Art Helper - Ask me anything!</span>
-            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
-        </div>
-        <div id="chatbot-messages" class="chatbot-messages"></div>
-        <div class="chatbot-input-area">
-            <input
-                type="text"
-                id="chatbot-input"
-                placeholder="Ask about our art, collections, or products..."
-                onkeypress="handleChatInput(event)"
-            >
-            <button onclick="sendChatMessage()">Send</button>
-        </div>
     </div>
 
     <script src="helper-bot.js"></script>

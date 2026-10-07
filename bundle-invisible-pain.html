@@ -21,10 +21,16 @@ fbq('track', 'PageView');
 </script>
 <noscript><img alt="Abstract Emporium artwork"height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1719352401749537&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel -->
+
+<style>:focus-visible{outline:3px solid #2563eb;outline-offset:2px}</style>
+
+<style>@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}</style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav role="navigation" class="navbar">
         <div class="nav-container">
             <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
                 <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img">
@@ -32,7 +38,7 @@ fbq('track', 'PageView');
             </div>
             <div class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="shop.html" class="nav-link active">Products</a></li>
+                <li><a href="pods.html" class="nav-link active">Products</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -49,7 +55,7 @@ fbq('track', 'PageView');
     </nav>
 
     <!-- Hero Section -->
-    <section class="bundle-hero" style="background: linear-gradient(135deg, #2d1b3d 0%, #432950 50%, #5a3763 100%);">
+    <main id="main-content" role="main"><section</main> class="bundle-hero" style="background: linear-gradient(135deg, #2d1b3d 0%, #432950 50%, #5a3763 100%);">
         <div class="container">
             <div class="bundle-hero-content">
                 <h1>🫥 Invisible Pain</h1>
@@ -424,7 +430,7 @@ fbq('track', 'PageView');
                 <div class="footer-section">
                     <div class="footer-links">
                         <a href="index.html">Home</a>
-                        <a href="shop.html">Products</a>
+                        <a href="pods.html">Products</a>
                         <a href="terms.html">Terms</a>
                         <a href="privacy.html">Privacy</a>
                         <a href="about.html">About</a>

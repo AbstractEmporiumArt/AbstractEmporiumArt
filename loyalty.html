@@ -78,7 +78,19 @@
         .loyalty-note { max-width: 640px; margin: 16px auto 0; color: #555; font-size: 0.92rem; text-align: center; line-height: 1.5; }
         .loyalty-reward-msg { color: #00b894; font-weight: 700; margin-top: 12px; }
         @media (max-width: 480px){ .stamp-grid { grid-template-columns: repeat(4, 1fr); } }
-    </style>
+    
+/* === Accessibility / Disability angle === */
+.skip-link{position:absolute;top:-40px;left:0;background:#1a1a2e;color:#fff;padding:8px 16px;z-index:1000;font-size:14px;border-radius:0 0 4px 0;transition:top 0.2s}
+.skip-link:focus{top:0}
+*:focus{outline:3px solid #2563eb;outline-offset:2px}
+:focus:not(:focus-visible){outline:none}
+:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+[role="banner"],[role="navigation"],[role="main"],[role="contentinfo"]{display:block}
+.disability-badge{display:inline-block;background:#1a1a2e;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px 0}
+.high-contrast{background:#000;color:#fff}
+.high-contrast a{color:#60a5fa}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
     <!-- Meta Pixel -->
     <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -93,7 +105,7 @@
     <div class="banner">
         <img src="TheHugArtAbstractEmporiumCover.jpg?v=1777240761" alt="Abstract Emporium Hug.art Banner" class="banner-img" loading="eager" fetchpriority="high" decoding="async">
     </div>
-    <nav class="navbar">
+    <nav role="navigation" class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" loading="lazy" decoding="async">
@@ -102,7 +114,7 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li><a href="shop.html" class="nav-link">Art</a></li>
+                <li><a href="pods.html" class="nav-link">PODs</a></li>
                 <li><a href="commissions.html" class="nav-link">Commissions</a></li>
                 <li><a href="loyalty.html" class="nav-link active">Loyalty</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -114,7 +126,7 @@
             <div class="hamburger"><span></span><span></span><span></span></div>
         </div>
     </nav>
-    <section class="loyalty-section" id="main-content">
+    <main role="main"><section</main> class="loyalty-section" id="main-content">
         <div class="container">
             <h1>Abstract Emporium Loyalty Card</h1>
             <p class="section-subtitle">Thank you for supporting handmade. Buy 10 items, get your 11th free.</p>

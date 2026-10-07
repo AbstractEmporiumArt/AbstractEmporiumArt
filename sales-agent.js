@@ -411,7 +411,7 @@ class SalesAgent {
                     title: "Collector's Tip 🎯",
                     body: "Many of our pieces are available in multiple formats — canvas, prints, and digital editions. The same art, your preferred medium.",
                     cta: "Explore Formats",
-                    ctaAction: () => window.location.href = 'shop.html'
+                    ctaAction: () => window.location.href = 'pods.html'
                 },
                 {
                     title: "Quick Question 🤔",
@@ -434,7 +434,7 @@ class SalesAgent {
                     title: "Did You Know? 💡",
                     body: "Each Abstract Emporium piece is available on multiple platforms. Premium canvas at Fine Art America, digital ownership at The HUG, and more at ArtPal.",
                     cta: "Compare Options",
-                    ctaAction: () => window.location.href = 'shop.html'
+                    ctaAction: () => window.location.href = 'pods.html'
                 }
             ],
 
@@ -528,7 +528,7 @@ class SalesAgent {
                     title: "Art is an Investment 💎",
                     body: "Original abstract art appreciates over time. Plus, our pieces are available in multiple price points — from prints to premium canvas to digital editions.",
                     cta: "See Price Options",
-                    ctaAction: () => window.location.href = 'shop.html'
+                    ctaAction: () => window.location.href = 'pods.html'
                 },
                 decide: {
                     title: "Take Your Time ⏳",
@@ -540,7 +540,7 @@ class SalesAgent {
                     title: "Delivery Made Easy 📦",
                     body: "Fine Art America handles museum-quality printing and shipping worldwide. ArtPal offers digital delivery. The HUG provides fast digital collectible access.",
                     cta: "Learn More",
-                    ctaAction: () => window.location.href = 'shop.html'
+                    ctaAction: () => window.location.href = 'pods.html'
                 }
             }
         };
@@ -1520,7 +1520,7 @@ class SalesAgent {
                 title: "Ready to Collect! 🎉",
                 body: "Excellent! You can purchase through:\n\n🎨 ArtPal - Digital & prints\n🖼️ Fine Art America - Premium canvas & décor\n💎 The HUG - Digital collectibles\n\nWhich platform works best for you?",
                 cta: "Take Me to Shop",
-                ctaAction: () => window.location.href = 'shop.html'
+                ctaAction: () => window.location.href = 'pods.html'
             };
         }
 

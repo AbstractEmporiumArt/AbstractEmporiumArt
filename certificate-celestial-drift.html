@@ -1,4 +1,4 @@
-<nav style="padding:0.5rem 1rem;background:#0a0c14;border-bottom:1px solid #1a1a2e;display:flex;gap:1rem;flex-wrap:wrap;font-size:12px">
+<nav role="navigation" style="padding:0.5rem 1rem;background:#0a0c14;border-bottom:1px solid #1a1a2e;display:flex;gap:1rem;flex-wrap:wrap;font-size:12px">
   <a href="index.html" style="color:#cbd5e1;text-decoration:none">Home</a>
   <a href="z3nw1ck.html" style="color:#cbd5e1;text-decoration:none">Z3NW1CK</a>
   <a href="lissas-knitting.html" style="color:#cbd5e1;text-decoration:none">Lissa's Knitting (LKC)</a>
@@ -24,9 +24,23 @@
   .sig { margin-top: 40px; display: flex; justify-content: space-between; }
   .sig div { width: 45%; text-align: center; }
   .line { border-top: 1px solid #1a1a1a; padding-top: 8px; margin-top: 6px; font-size: 12px; }
+
+/* === Accessibility / Disability angle === */
+.skip-link{position:absolute;top:-40px;left:0;background:#1a1a2e;color:#fff;padding:8px 16px;z-index:1000;font-size:14px;border-radius:0 0 4px 0;transition:top 0.2s}
+.skip-link:focus{top:0}
+*:focus{outline:3px solid #2563eb;outline-offset:2px}
+:focus:not(:focus-visible){outline:none}
+:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+[role="banner"],[role="navigation"],[role="main"],[role="contentinfo"]{display:block}
+.disability-badge{display:inline-block;background:#1a1a2e;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px 0}
+.high-contrast{background:#000;color:#fff}
+.high-contrast a{color:#60a5fa}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
   <div class="cert">
     <h1>Certificate of Authenticity</h1>
     <div class="sub">S0vryn9 C011ect1ve — Abstract Emporium</div>

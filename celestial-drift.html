@@ -26,10 +26,24 @@
 .cd-btn.msg{background:#1a1420;color:#f5d76e}
 .cd-note{font-size:.88rem;color:#6b5a4a;margin-top:1.6rem;line-height:1.6;border-top:1px solid #e3d9cd;padding-top:1rem}
 @media (max-width:600px){.cd-title{font-size:1.6rem}}
+
+/* === Accessibility / Disability angle === */
+.skip-link{position:absolute;top:-40px;left:0;background:#1a1a2e;color:#fff;padding:8px 16px;z-index:1000;font-size:14px;border-radius:0 0 4px 0;transition:top 0.2s}
+.skip-link:focus{top:0}
+*:focus{outline:3px solid #2563eb;outline-offset:2px}
+:focus:not(:focus-visible){outline:none}
+:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+[role="banner"],[role="navigation"],[role="main"],[role="contentinfo"]{display:block}
+.disability-badge{display:inline-block;background:#1a1a2e;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px 0}
+.high-contrast{background:#000;color:#fff}
+.high-contrast a{color:#60a5fa}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<nav class="navbar">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav role="navigation" class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" loading="lazy" decoding="async">
@@ -41,7 +55,7 @@
                 <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
                 <li><a href="lissas-knitting.html" class="nav-link">Knitting</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li><a href="shop.html" class="nav-link">Art</a></li>
+                <li><a href="pods.html" class="nav-link">PODs</a></li>
                 <li><a href="commissions.html" class="nav-link">Commissions</a></li>
                 <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>

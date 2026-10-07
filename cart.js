@@ -1,5 +1,5 @@
 (function(){
-  const BUSINESS_EMAIL = 'abstractemporiumart@outlook.com';
+  const BUSINESS_EMAIL = 'abstractemporiumart@outlook.com'; // Interac e-Transfer: sender picks their Canadian bank/credit union from dropdown; receiver (AE) gets it free
   const SHIPPING_THRESHOLD = 75;
   const SHIPPING_RATE = 12;
   let priorityOptIn = false;

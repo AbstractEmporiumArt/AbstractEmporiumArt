@@ -156,25 +156,6 @@ fbq('track', 'PageView');
         </div>
     </nav>
 
-    <div id="chatbot-widget" class="chatbot-widget">
-        <div class="chatbot-header">
-            <span>🎨 Art Helper - Ask me anything!</span>
-            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
-        </div>
-        <div id="chatbot-messages" class="chatbot-messages"></div>
-        <div class="chatbot-input-area">
-            <input 
-                type="text" 
-                id="chatbot-input" 
-                placeholder="Ask about our art, collections, or products..." 
-                onkeypress="handleChatInput(event)"
-            >
-            <button onclick="sendChatMessage()">Send</button>
-        </div>
-    </div>
-
-    <!-- REMOVED: sales-announcements.js (caused popup notifications) -->
-    <!-- REMOVED: personalization-algorithm.js (caused tracking popups) -->
     <script src="helper-bot.js"></script>
     
     <!-- Brevo Newsletter Form Scripts -->
@@ -263,7 +244,7 @@ fbq('track', 'PageView');
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script>
   <div style="margin-top:1rem;padding:1rem;background:#fdf6e3;border-left:4px solid #b07d2b;border-radius:4px;"><div style="display:inline-block;padding:.25rem .6rem;background:#2a2233;color:#fdf6e3;border-radius:999px;font-weight:700;font-size:.85rem;letter-spacing:.03em;margin-bottom:.6rem;">SEASONAL COLLECTION</div>
-<strong>Z3NWICK Seasonal Collection — Coming Soon</strong> — Hello Fall (Halloween tin 2.5oz + 5oz abstract tin + wax melt clamshell) and Santa's Pipe (Christmas tin 2.5oz + 5oz abstract tin + wax melt clamshell). <strong>Not yet available for sale.</strong> Will be available once FO delivered and test batch is complete, cured, and burns good.</div>
+<strong>Z3NWICK Seasonal Collection — Coming Soon</strong> — Hello Fall (Halloween tin 2.4oz + 5oz abstract tin + wax melt clamshell) and Santa's Pipe (Christmas tin 2.5oz + 5oz abstract tin + wax melt clamshell). <strong>Not yet available for sale.</strong> Will be available once FO delivered and test batch is complete, cured, and burns good.</div>
 
 <section id="testimonials" style="padding:2rem 1rem;background:#fafafa;border-top:1px solid #e5e7eb">
   <h2 style="text-align:center;margin-bottom:1rem">What Our Customers Say</h2>
@@ -346,7 +327,7 @@ fbq('track', 'PageView');
       <div class="container">
         <div class="promo-grid">
           <a class="promo-card" href="z3nw1ck.html">
-            <span class="promo-emoji">🕯️</span>
+            <span class="promo-emoji">🍬</span>
             <span class="promo-title">Z3NW1CK</span>
             <span class="promo-sub">Candles · Melts · Incense</span>
           </a>
@@ -537,6 +518,28 @@ fbq('track', 'PageView');
             </div>
         </div>
     </footer>
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <span>🎨 Art Helper - Ask me anything!</span>
+            <button class="chatbot-minimize" onclick="toggleChatbot()">−</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input 
+                type="text" 
+                id="chatbot-input" 
+                placeholder="Ask about our art, collections, or products..." 
+                onkeypress="handleChatInput(event)"
+            >
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- REMOVED: sales-announcements.js (caused popup notifications) -->
+    <!-- REMOVED: personalization-algorithm.js (caused tracking popups) -->
+    <!-- REMOVED: sales-agent.js (caused "Art Advisor" popup) -->
+    
+
 
     <!-- Chat Widget - Merged Art Advisor + Helper Bot -->
     

@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-10-08T23:14:39.454Z",
+  "lastCheck": "2026-10-09T05:53:35.775Z",
   "active": [
     {
       "platform": "fineartamerica",
@@ -8,7 +8,7 @@
       "discount": "20%",
       "description": "20% off sitewide sale",
       "confidence": "high",
-      "detectedAt": "2026-10-08T23:14:39.454Z",
+      "detectedAt": "2026-10-09T05:53:35.775Z",
       "priority": "high"
     },
     {
@@ -18,7 +18,7 @@
       "discount": null,
       "description": "Ko-fi shop promotion",
       "confidence": "medium",
-      "detectedAt": "2026-10-08T23:14:39.454Z",
+      "detectedAt": "2026-10-09T05:53:35.775Z",
       "priority": "high"
     }
   ],

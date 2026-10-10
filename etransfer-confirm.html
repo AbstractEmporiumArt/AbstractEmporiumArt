@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eTransfer Confirmation — Abstract Emporium</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .ec-wrap{max-width:560px;margin:40px auto;padding:24px;background:#fdf6e3;border-radius:10px;border-left:4px solid #b07d2b;}
+  .ec-wrap h1{margin:0 0 8px;color:#1a1a2e;}
+  .ec-field{margin:14px 0;}
+  .ec-field label{display:block;font-weight:600;margin-bottom:6px;}
+  .ec-field input,.ec-field textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;}
+  .ec-submit{background:#1a1a2e;color:#fff;border:none;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;}
+  .ec-status{margin-top:14px;font-weight:600;}
+  .ec-note{font-size:.9rem;color:#666;margin-top:10px;}
+</style>
+</head>
+<body>
+<main role="main">
+  <div class="ec-wrap">
+    <h1>eTransfer Confirmation</h1>
+    <p>After sending your Interac eTransfer to <strong>[EMAIL]</strong>, confirm it here so we can auto-match it to your order and email you the match.</p>
+    <form id="ecForm">
+      <div class="ec-field">
+        <label for="ecOrder">Order #</label>
+        <input id="ecOrder" name="order" placeholder="AE-XXXXXX-XXXX" required>
+      </div>
+      <div class="ec-field">
+        <label for="ecAmount">Amount sent (CAD)</label>
+        <input id="ecAmount" name="amount" type="number" step="0.01" placeholder="0.00" required>
+      </div>
+      <div class="ec-field">
+        <label for="ecName">Your name / email</label>
+        <input id="ecName" name="name" placeholder="so we can confirm the match" required>
+      </div>
+      <div class="ec-field">
+        <label for="ecMsg">Anything in the eTransfer message?</label>
+        <textarea id="ecMsg" name="message" rows="3" placeholder="e.g. included order #, shipping address"></textarea>
+      </div>
+      <button type="submit" class="ec-submit">Confirm eTransfer</button>
+    </form>
+    <p id="ecStatus" class="ec-status" role="status" aria-live="polite"></p>
+    <p class="ec-note">We receive an Interac notification automatically; this form links your payment to your order number so the system can match and confirm it without manual lookups.</p>
+  </div>
+</main>
+<script src="order.js"></script>
+<script>
+  // Pre-fill order # from ?order= if present
+  (function(){
+    const params = new URLSearchParams(window.location.search);
+    const o = params.get('order');
+    if (o) document.getElementById('ecOrder').value = o;
+    else if (window.AE && window.AE.getOrderNumber) document.getElementById('ecOrder').value = window.AE.getOrderNumber();
+  })();
+
+  document.getElementById('ecForm').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const status = document.getElementById('ecStatus');
+    const payload = {
+      order: document.getElementById('ecOrder').value,
+      amount: document.getElementById('ecAmount').value,
+      name: document.getElementById('ecName').value,
+      message: document.getElementById('ecMsg').value,
+      channel: 'etransfer_manual_confirm',
+      timestamp: new Date().toISOString()
+    };
+    status.textContent = 'Submitting…';
+    try {
+      const res = await fetch('/api/order-match', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) {
+        status.style.color = '#1a7f37';
+        status.textContent = '✅ Confirmed. We will email you once the eTransfer is matched to your order.';
+      } else {
+        status.style.color = '#b03a2e';
+        status.textContent = 'Could not submit (server unavailable). Please email [EMAIL] with your order #.';
+      }
+    } catch(err) {
+      status.style.color = '#b03a2e';
+      status.textContent = 'Network error — please email [EMAIL] with your order # and amount.';
+    }
+  });
+</script>
+</body>
+</html>

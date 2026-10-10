@@ -52,10 +52,16 @@
     const subtotal = calcSubtotal(cart);
     const shipping = calcShipping(subtotal, cart.length);
     const priority = priorityOptIn ? 5 : 0;
-    const total = subtotal + shipping + priority;
+    const FALL15_MIN = 60;
+    const FALL15_RATE = 0.15;
+    const fall15 = subtotal >= FALL15_MIN ? subtotal * FALL15_RATE : 0;
+    const discounted = subtotal - fall15;
+    const total = discounted + shipping + priority;
+    const orderNumber = (window.AE && window.AE.getOrderNumber) ? window.AE.getOrderNumber() : '';
 
     summary.innerHTML = `
       <div class="cart-row"><span>Subtotal</span><span>${formatMoney(subtotal)}</span></div>
+      ${fall15 > 0 ? `<div class="cart-row" style="color:#1a7f37;font-weight:600"><span>FALL15 — 15% off $60+</span><span>-${formatMoney(fall15)}</span></div>` : ''}
       <div class="cart-row"><span>Shipping</span><span>${shipping === 0 ? 'FREE' : formatMoney(shipping)}</span></div>
       <div class="cart-row priority-row">
         <label class="priority-label">
@@ -65,12 +71,14 @@
       </div>
       <p class="priority-note">Handmade to order: Z3NW1CK candles, wax melts &amp; incense need curing time, and Lissa's knitting (especially slippers) takes time to create. Add $5 Priority to flag your order as rush during the busy fall/winter season.</p>
       <div class="cart-row cart-total"><span>Total</span><span>${formatMoney(total)}</span></div>
+      ${orderNumber ? `<div class="cart-row" style="font-size:0.9em;color:#555"><span>Order #</span><span><strong>${orderNumber}</strong></span></div>` : ''}
       <form id="paypalCheckout" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <input type="hidden" name="cmd" value="_cart">
         <input type="hidden" name="upload" value="1">
         <input type="hidden" name="business" value="${BUSINESS_EMAIL}">
         <input type="hidden" name="currency_code" value="CAD">
-        <input type="hidden" name="custom" value="${(window.AE && window.AE.getOrderNumber) ? window.AE.getOrderNumber() : ''}">
+        <input type="hidden" name="custom" value="${orderNumber}">
+        ${fall15 > 0 ? `<input type="hidden" name="discount_amount_cart" value="${fall15.toFixed(2)}">` : ''}
         ${cart.map((item, i) => `
           <input type="hidden" name="item_name_${i+1}" value="${escapeHtml(item.title)}">
           <input type="hidden" name="amount_${i+1}" value="${Number(item.price).toFixed(2)}">
@@ -83,7 +91,9 @@
         ` : ''}
         <button type="submit" class="checkout-btn">Checkout with PayPal</button>
       </form>
+      ${fall15 > 0 ? `<p style="font-size:0.85em;color:#1a7f37;margin-top:6px;">🎉 FALL15 applied: 15% off your $60+ order.</p>` : `<p style="font-size:0.85em;color:#666;margin-top:6px;">Spend $60+ to unlock code <strong>FALL15</strong> (15% off).</p>`}
       <p style="font-size:0.9em;color:#666;margin-top:10px;">Shipping to Thunder Bay, ON. Free shipping on orders over ${formatMoney(SHIPPING_THRESHOLD)}.</p>
+      <p style="font-size:0.85em;color:#666;margin-top:6px;">Paying by eTransfer? Send to <strong>[EMAIL]</strong> and put your Order # <strong>${orderNumber}</strong> in the message. Then confirm at <a href="etransfer-confirm.html?order=${orderNumber}">eTransfer confirm</a>.</p>
     `;
 
     wrap.querySelectorAll('.remove-btn').forEach(btn => {

@@ -223,6 +223,7 @@ fbq('track', 'PageView');
                   </form>
                     </form>
                     <p id="commissionStatus" class="commission-note" aria-live="polite"></p>
+                <p style="font-size:0.85em;color:#666;margin-top:8px;">Your commission request generates an Order # (<span id="commissionOrderNo">loading…</span>) — include it if paying by eTransfer to <strong>[EMAIL]</strong>. Then confirm at <a href="etransfer-confirm.html">eTransfer confirm</a>.</p>
                 </div>
             </div>
         </div>
@@ -247,6 +248,13 @@ fbq('track', 'PageView');
     </footer>
 
     <script>
+        // Show this session's order number on the commission page
+        (function(){
+          const el = document.getElementById('commissionOrderNo');
+          if (el && window.AE && window.AE.getOrderNumber) {
+            el.textContent = window.AE.getOrderNumber();
+          }
+        })();
         document.getElementById('commissionsForm').addEventListener('submit', async function (event) {
             event.preventDefault();
             const form = event.currentTarget;
@@ -295,6 +303,7 @@ fbq('track', 'PageView');
             }
         });
     </script>
+    <script src="order.js"></script>
     <script src="jsonld-core.js"></script>
     <script src="analytics-tracking.js"></script>
     <script src="script.js"></script>

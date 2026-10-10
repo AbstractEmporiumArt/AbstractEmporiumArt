@@ -70,6 +70,7 @@
         <input type="hidden" name="upload" value="1">
         <input type="hidden" name="business" value="${BUSINESS_EMAIL}">
         <input type="hidden" name="currency_code" value="CAD">
+        <input type="hidden" name="custom" value="${(window.AE && window.AE.getOrderNumber) ? window.AE.getOrderNumber() : ''}">
         ${cart.map((item, i) => `
           <input type="hidden" name="item_name_${i+1}" value="${escapeHtml(item.title)}">
           <input type="hidden" name="amount_${i+1}" value="${Number(item.price).toFixed(2)}">

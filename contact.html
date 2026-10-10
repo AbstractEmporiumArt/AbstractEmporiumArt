@@ -257,6 +257,7 @@ fbq('track', 'PageView');
         </div>
     </footer>
 
+    <script src="order.js"></script>
     <script src="sales-announcements.js"></script>
     <script src="helper-bot.js"></script>
     <script>
@@ -272,11 +273,21 @@ fbq('track', 'PageView');
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
+            const orderNumber = (window.AE && window.AE.getOrderNumber) ? window.AE.getOrderNumber() : '';
+            const cartTitles = (window.AE && window.AE.getCartTitles) ? window.AE.getCartTitles() : [];
+            const userMessage = document.getElementById('contactMessage').value;
+            const orderBlock = orderNumber ? `\n\nOrder #: ${orderNumber}` : '';
+            const itemsBlock = cartTitles.length ? `\nItems: ${cartTitles.join('; ')}` : '';
+            const messageWithOrder = (orderNumber || cartTitles.length)
+                ? `${userMessage}${orderBlock}${itemsBlock}`
+                : userMessage;
+
             const formData = {
                 name: document.getElementById('contactName').value,
                 email: document.getElementById('contactEmail').value,
                 subject: document.getElementById('contactSubject').value,
-                message: document.getElementById('contactMessage').value,
+                message: messageWithOrder,
+                order_number: orderNumber,
                 timestamp: new Date().toISOString(),
                 page: window.location.href
             };

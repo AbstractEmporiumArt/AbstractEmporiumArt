@@ -112,14 +112,51 @@ fbq('track', 'PageView');
   <!-- Celestial Drift, added 2026-10-05 -->
   <div class="cd-feature" style="max-width:900px;margin:1.6rem auto 2rem;padding:1.1rem;border:1px solid #2a2233;border-radius:10px;background:#14101c;">
     <a href="celestial-drift.html" style="display:block;text-decoration:none;color:inherit;">
-      <img src="celestial-drift-main.webp" alt="Celestial Drift by Lissa Beaulieu — a one-of-a-kind original mixed media painting, crescent moon over deep blacks, electric blues and metallic gold. 14 by 11 inches, acrylic and silver leaf on canvas."
-           style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;" loading="lazy">
+      <div class="cd-slideshow" style="position:relative;text-align:center;">
+        <img class="cd-slide" src="celestial-drift-main.webp" alt="Celestial Drift by Lissa Beaulieu — one-of-a-kind original mixed media painting, crescent moon over deep blacks, electric blues and metallic gold. 14x11 inches, acrylic and silver leaf on canvas." style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;" loading="lazy">
+        <img class="cd-slide" src="celestial-drift-1.jpg" alt="Celestial Drift, view 1 of 6 — full piece, portrait orientation" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
+        <img class="cd-slide" src="celestial-drift-2.jpg" alt="Celestial Drift, view 2 of 6 — detail of the crescent moon and metallic gold accents" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
+        <img class="cd-slide" src="celestial-drift-3.jpg" alt="Celestial Drift, view 3 of 6 — detail of the nebula clouds in teal and magenta" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
+        <img class="cd-slide" src="celestial-drift-4.jpg" alt="Celestial Drift, view 4 of 6 — hand-painted stars and scattered highlights" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
+        <img class="cd-slide" src="celestial-drift-5.jpg" alt="Celestial Drift, view 5 of 6 — texture and dry-brush detail" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
+        <img class="cd-slide" src="celestial-drift-6.jpg" alt="Celestial Drift, view 6 of 6 — full piece, portrait orientation" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
+        <div class="cd-dots" style="text-align:center;margin-top:.4rem;">
+        <span class="cd-dot" data-i="0" style="width:9px;height:9px;border-radius:50%;background:#f5d76e;display:inline-block;margin:0 4px;cursor:pointer;"></span>
+        <span class="cd-dot" data-i="1" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
+        <span class="cd-dot" data-i="2" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
+        <span class="cd-dot" data-i="3" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
+        <span class="cd-dot" data-i="4" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
+        <span class="cd-dot" data-i="5" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
+        <span class="cd-dot" data-i="6" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
+        </div>
+      </div>
       <h2 style="margin:0 0 .2rem;color:#f5d76e;text-align:center;">Celestial Drift</h2>
       <p style="margin:0 0 .3rem;text-align:center;color:#c9bda8;font-style:italic;">Lissa Beaulieu &middot; 2026 &middot; Original 1/1</p>
       <p style="margin:0 0 .6rem;text-align:center;color:#d8cfc2;font-size:.94rem;">Acrylic on canvas with silver leaf &amp; metallic accents &middot; 14 &times; 11 inches &middot; Gloss sealed</p>
       <p style="margin:0;text-align:center;font-weight:700;color:#f5d76e;font-size:1.2rem;">$80 CAD &rarr;</p>
     </a>
   </div>
+
+  <script>
+  (function(){
+    var slides=[].slice.call(document.querySelectorAll('.cd-feature .cd-slide'));
+    var dots=[].slice.call(document.querySelectorAll('.cd-feature .cd-dot'));
+    if(!slides.length) return;
+    var idx=0, timer=null;
+    function show(n){
+      idx=(n+slides.length)%slides.length;
+      slides.forEach(function(s,i){ s.style.display = i===idx ? 'block':'none'; });
+      dots.forEach(function(d,i){ d.style.background = i===idx ? '#f5d76e':'#555'; });
+    }
+    function next(){ show(idx+1); }
+    function start(){ timer=setInterval(next,3500); }
+    dots.forEach(function(d,i){ d.addEventListener('click',function(e){ e.stopPropagation(); e.preventDefault(); show(i); restart(); }); });
+    var box=document.querySelector('.cd-feature .cd-slideshow');
+    if(box) box.addEventListener('click', function(e){ if(e.target.tagName==='IMG'){ next(); restart(); } });
+    function restart(){ if(timer) clearInterval(timer); start(); }
+    start();
+  })();
+  </script>
 
 
             

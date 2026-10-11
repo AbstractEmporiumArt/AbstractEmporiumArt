@@ -44,11 +44,11 @@
 
   <div class="cert">
     <h1>Certificate of Authenticity</h1>
-    <div class="sub">Abstract Emporium</div>
+    <div class="sub">Abstract Emporium &middot; abstractemporium.art &middot; abstractemporiumart@outlook.com</div>
 
     <div class="title">Celestial Drift</div>
     <div class="meta">
-      Artist: L. Beaulieu<br>
+      Artist: Lissa Beaulieu<br>
       Date: <span id="certDate">2026</span><br>
       Medium: Acrylic on canvas with silver leaf &amp; metallic accents<br>
       Dimensions: 14 × 11 in (35.6 × 27.9 cm)<br>
@@ -58,12 +58,12 @@
 
     <div class="sig">
       <div>
-        <div>Artist Signature</div>
-        <div class="line">L. Beaulieu</div>
+        <div>Artist &mdash; Electronic Signature</div>
+        <div class="line">Lissa Beaulieu</div>
       </div>
       <div>
         <div>Owner</div>
-        <div class="line">&nbsp;</div>
+        <div class="line" id="ownerName">&nbsp;</div>
       </div>
     </div>
   </div>
@@ -76,6 +76,7 @@
     var date = p.get('date');
     if (name) document.getElementById('ownerName').textContent = name;
     if (date) document.getElementById('certDate').textContent = date;
+    else document.getElementById('certDate').textContent = new Date().toLocaleDateString('en-CA');
     if (order) {
       var o = document.createElement('div');
       o.className = 'meta';

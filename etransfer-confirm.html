@@ -99,8 +99,9 @@
         status.textContent = '✅ Confirmed. We will email you once the eTransfer is matched to your order.';
         var nm = encodeURIComponent(document.getElementById('ecName').value);
         var od = encodeURIComponent(document.getElementById('ecOrder').value);
+        var dt = encodeURIComponent(new Date().toISOString().slice(0,10));
         var link = document.createElement('p');
-        link.innerHTML = '<a href="certificate-celestial-drift.html?name=' + nm + '&order=' + od + '" style="font-weight:700;color:#1a5fa0;">📜 View your Certificate of Authenticity</a>';
+        link.innerHTML = '<a href="certificate-celestial-drift.html?name=' + nm + '&order=' + od + '&date=' + dt + '" style="font-weight:700;color:#1a5fa0;">📜 View your Certificate of Authenticity</a>';
         status.parentNode.appendChild(link);
       } else {
         status.style.color = '#b03a2e';

@@ -44,12 +44,12 @@
 
   <div class="cert">
     <h1>Certificate of Authenticity</h1>
-    <div class="sub">S0vryn9 C011ect1ve — Abstract Emporium</div>
+    <div class="sub">Abstract Emporium</div>
 
     <div class="title">Celestial Drift</div>
     <div class="meta">
       Artist: L. Beaulieu<br>
-      Date: 2026<br>
+      Date: <span id="certDate">2026</span><br>
       Medium: Acrylic on canvas with silver leaf &amp; metallic accents<br>
       Dimensions: 14 × 11 in (35.6 × 27.9 cm)<br>
       Finish: Gloss sealed<br>
@@ -67,5 +67,23 @@
       </div>
     </div>
   </div>
+
+<script>
+  (function(){
+    var p = new URLSearchParams(window.location.search);
+    var name = p.get('name') || p.get('owner');
+    var order = p.get('order');
+    var date = p.get('date');
+    if (name) document.getElementById('ownerName').textContent = name;
+    if (date) document.getElementById('certDate').textContent = date;
+    if (order) {
+      var o = document.createElement('div');
+      o.className = 'meta';
+      o.style.marginTop = '10px';
+      o.innerHTML = 'Order: ' + order;
+      document.querySelector('.cert').appendChild(o);
+    }
+  })();
+</script>
 </body>
 </html>

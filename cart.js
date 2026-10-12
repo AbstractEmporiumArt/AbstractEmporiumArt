@@ -77,8 +77,6 @@
         <input type="hidden" name="upload" value="1">
         <input type="hidden" name="business" value="${BUSINESS_EMAIL}">
         <input type="hidden" name="currency_code" value="CAD">
-        <input type="hidden" name="no_shipping" value="1">
-        <input type="hidden" name="handling_cart" value="${shipping.toFixed(2)}">
         <input type="hidden" name="custom" value="${orderNumber}">
         ${fall15 > 0 ? `<input type="hidden" name="discount_amount_cart" value="${fall15.toFixed(2)}">` : ''}
         ${cart.map((item, i) => `

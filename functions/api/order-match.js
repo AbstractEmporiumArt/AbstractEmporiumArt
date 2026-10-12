@@ -58,6 +58,16 @@ export async function onRequestPost(context) {
   }, 200);
 }
 
+export async function onRequestGet(context) {
+  return json({
+    ok: true,
+    service: 'AE order-match',
+    status: 'live',
+    methods: ['GET', 'POST'],
+    note: 'POST an order payload {order, name, amount?, message?, channel?} to record a match.'
+  }, 200);
+}
+
 function json(body, status) {
   return new Response(JSON.stringify(body), {
     status,

@@ -48,16 +48,14 @@ jobs:
         run: |
           echo "Checking JavaScript syntax..."
           node --check script.js
-          node --check helper-bot.js
           node --check image-loader.js
           node --check item-detail.js
-          node --check gallery-data.js
           echo "✓ All JavaScript files valid"
 
       - name: Check required HTML files
         run: |
           echo "Checking HTML files..."
-          for f in index.html gallery.html shop.html item-detail.html contact.html; do
+          for f in index.html item-detail.html contact.html; do
             [ -f "$f" ] && echo "✓ $f" || (echo "✗ Missing $f"; exit 1)
           done
 

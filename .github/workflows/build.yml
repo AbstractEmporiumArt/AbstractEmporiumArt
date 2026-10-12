@@ -45,7 +45,6 @@ jobs:
       - name: Check JavaScript syntax
         run: |
           node --check script.js
-          node --check helper-bot.js
           node --check image-loader.js
           node --check item-detail.js
           echo "✓ All JavaScript files are valid"

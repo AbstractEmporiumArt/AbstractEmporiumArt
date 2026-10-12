@@ -94,6 +94,14 @@
       ${fall15 > 0 ? `<p style="font-size:0.85em;color:#1a7f37;margin-top:6px;">🎉 FALL15 applied: 15% off your $60+ order.</p>` : `<p style="font-size:0.85em;color:#666;margin-top:6px;">Spend $60+ to unlock code <strong>FALL15</strong> (15% off).</p>`}
       <p style="font-size:0.9em;color:#666;margin-top:10px;">Shipping via NetParcel (real-time rate at PayPal checkout, or quoted for e-Transfer after your address). From Thunder Bay, ON. Free shipping on orders over ${formatMoney(SHIPPING_THRESHOLD)}.</p>
       <p style="font-size:0.85em;color:#666;margin-top:6px;">Paying by Interac e-Transfer? Send to <strong>[EMAIL]</strong> (auto-deposits to our Canadian bank — free for you) and put your Order # <strong>${orderNumber}</strong> in the message. Then confirm at <a href="etransfer-confirm.html?order=${orderNumber}">eTransfer confirm</a>.</p>
+      <div id="etTransferQuote" style="margin-top:10px;border:1px solid #ddd;border-radius:8px;padding:10px;background:#fafaff;">
+        <label style="font-size:0.85em;font-weight:600;" for="etPostal">Get your live NetParcel shipping quote (e-Transfer):</label>
+        <div style="display:flex;gap:6px;margin-top:6px;">
+          <input id="etPostal" type="text" inputmode="latin" placeholder="Postal code (e.g. M5V 2T6)" style="flex:1;padding:8px;border:1px solid #ccc;border-radius:6px;">
+          <button id="etQuoteBtn" type="button" style="padding:8px 12px;border:none;border-radius:6px;background:#007a63;color:#fff;cursor:pointer;">Quote</button>
+        </div>
+        <div id="etQuoteResult" style="font-size:0.85em;margin-top:8px;color:#444;"></div>
+      </div>
     `;
 
     wrap.querySelectorAll('.remove-btn').forEach(btn => {
@@ -111,6 +119,27 @@
       priorityBox.addEventListener('change', (e) => {
         priorityOptIn = e.target.checked;
         render();
+      });
+    }
+
+    const etQuoteBtn = document.getElementById('etQuoteBtn');
+    const etPostal = document.getElementById('etPostal');
+    const etQuoteResult = document.getElementById('etQuoteResult');
+    if (etQuoteBtn && etPostal && etQuoteResult) {
+      etQuoteBtn.addEventListener('click', async () => {
+        const postal = etPostal.value.trim();
+        if (!postal) { etQuoteResult.textContent = 'Enter a postal code.'; return; }
+        etQuoteResult.textContent = 'Looking up live NetParcel rates…';
+        try {
+          const res = await fetch('/api/shipping-rate?postal=' + encodeURIComponent(postal) + '&country=CA', { method: 'POST' });
+          const data = await res.json();
+          if (!data.ok) { etQuoteResult.textContent = 'Quote unavailable: ' + (data.error || 'try again'); return; }
+          if (!data.rates.length) { etQuoteResult.textContent = 'No rates returned.'; return; }
+          const lines = data.rates.map(r => `• ${r.service || r.carrier}: ${formatMoney(r.amount)} ${r.currency}` + (r.est_delivery_days != null ? ` (≈${r.est_delivery_days} days)` : '')).join('<br>');
+          etQuoteResult.innerHTML = 'From Thunder Bay, ON — NetParcel live rates:<br>' + lines;
+        } catch (e) {
+          etQuoteResult.textContent = 'Network error fetching quote.';
+        }
       });
     }
   }

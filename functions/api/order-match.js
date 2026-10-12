@@ -68,6 +68,8 @@ function json(body, status) {
 async function sendMatchEmail(env, rec) {
   const apiKey = env.BREVO_API_KEY;
   const to = env.OWNER_EMAIL || 'Abstractemporiumart@outlook.com';
+  const fromEmail = env.AE_FROM_EMAIL || 'orders@abstractemporium.art';
+  const fromName = env.AE_FROM_NAME || 'Abstract Emporium Orders';
   if (!apiKey) return false;
   const subject = `🔔 AE Order Match — ${rec.order} (${rec.channel})`;
   const text =
@@ -89,7 +91,7 @@ async function sendMatchEmail(env, rec) {
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        sender: { name: 'Abstract Emporium Orders', email: to },
+        sender: { name: fromName, email: fromEmail },
         to: [{ email: to }],
         subject,
         textContent: text

@@ -19,13 +19,7 @@ const KOFI_LINKS = {
     'chaos-calm': 'https://ko-fi.com/s/5072178dee',
     'invisible-pain': 'https://ko-fi.com/s/055c3fda6c',
     'healing-lines': 'https://ko-fi.com/s/b3aafaae02',
-    'abstract-mind': 'https://ko-fi.com/s/c61dcbbf95',
-    
-    // Knitting Bundles
-    'free-knitting': 'YOUR_FREE_KNITTING_LINK',
-    'beginner-knitting': 'YOUR_BEGINNER_KNITTING_LINK',
-    'starter-knitting': 'YOUR_STARTER_KNITTING_LINK',
-    'master-knitting': 'YOUR_MASTER_KNITTING_LINK'
+    'abstract-mind': 'https://ko-fi.com/s/c61dcbbf95'
 };
 
 // Product Details (for tracking)
@@ -53,30 +47,6 @@ const PRODUCTS = {
         price: 19.99,
         type: 'coloring',
         downloadFile: 'Abstract-Mind-Collection-Complete.pdf'
-    },
-    'free-knitting': {
-        name: 'Free Beginner Knitting Pattern',
-        price: 0,
-        type: 'knitting',
-        downloadFile: 'Free-Beginner-Knitting.pdf'
-    },
-    'beginner-knitting': {
-        name: 'Beginner Knitting Bundle (5 Patterns)',
-        price: 19,
-        type: 'knitting',
-        downloadFile: 'Beginner-Knitting-Bundle.pdf'
-    },
-    'starter-knitting': {
-        name: 'Starter Knitting Bundle (15 Patterns)',
-        price: 39,
-        type: 'knitting',
-        downloadFile: 'Starter-Knitting-Bundle.pdf'
-    },
-    'master-knitting': {
-        name: 'Master Knitting Bundle (25 Patterns)',
-        price: 79,
-        type: 'knitting',
-        downloadFile: 'Master-Knitting-Bundle.pdf'
     }
 };
 
@@ -89,25 +59,6 @@ const PRODUCTS = {
  */
 function purchaseColoringBook(productId, price) {
     const kofiLink = KOFI_LINKS[productId];
-    
-    if (!kofiLink || kofiLink.startsWith('YOUR_')) {
-        alert('Ko-fi product link not yet configured. Please publish the product on Ko-fi first and update paypal-integration.js');
-        return;
-    }
-    
-    // Track click event (for analytics)
-    trackPurchaseAttempt(productId, price);
-    
-    // Redirect to Ko-fi checkout
-    window.location.href = kofiLink;
-}
-
-/**
- * Handle purchase button click for knitting bundles
- */
-function purchaseKnittingBundle(productId, price) {
-    const buttonId = PAYPAL_BUTTONS[productId];
-    kofiLink = KOFI_LINKS[productId];
     
     if (!kofiLink || kofiLink.startsWith('YOUR_')) {
         alert('Ko-fi product link not yet configured. Please publish the product on Ko-fi first and update paypal-integration.js');
@@ -193,10 +144,7 @@ function generateDownloadLink(productId) {
         'chaos-calm': 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
         'invisible-pain': 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
         'healing-lines': 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
-        'abstract-mind': 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
-        'beginner-knitting': 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
-        'starter-knitting': 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
-        'master-knitting': 'https://drive.google.com/file/d/YOUR_FILE_ID/view'
+        'abstract-mind': 'https://drive.google.com/file/d/YOUR_FILE_ID/view'
     };
     
     return downloadLinks[productId];

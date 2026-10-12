@@ -22,10 +22,6 @@ export default {
 
 // Product ID to R2 file mapping
 const PRODUCT_FILES = {
-  'free-beginner-knitting': 'free-bundle.pdf',
-  'beginner-knitting-bundle': 'beginner-bundle.pdf',
-  'starter-knitting-pack': 'starter-pack.pdf',
-  'master-knitting-bundle': 'master-bundle.pdf',
   'chaos-calm': 'Chaos-and-Calm-Coloring-Book.pdf',
   'invisible-pain': 'Invisible-Pain-Coloring-Book.pdf',
   'healing-lines': 'Healing-Lines-Coloring-Book.pdf',
@@ -40,11 +36,6 @@ async function handleDownload(request, url, env) {
   
   if (!productId || !token) {
     return new Response('Missing product or payment token', { status: 400 });
-  }
-  
- // Free products don't need verification
-  if (productId === 'free-beginner-knitting') {
-    return await serveFile(productId, env);
   }
   
   // Verify payment with PayPal
@@ -227,10 +218,10 @@ SETUP INSTRUCTIONS:
 
 7. Update Thank-You Pages:
    Replace download button href with:
-   https://downloads.abstractemporium.com/download?product=beginner-knitting-bundle&token={PAYMENT_ID}
+   https://downloads.abstractemporium.com/download?product=chaos-calm&token={PAYMENT_ID}
 
 8. Update PayPal Button Success URLs:
-   Success URL: https://yoursite.com/thank-you-beginner-knitting.html?token={payment_id}
+   Success URL: https://yoursite.com/thank-you-chaos-calm.html?token={payment_id}
    
    Then in thank-you page JavaScript:
    ```javascript
@@ -239,7 +230,7 @@ SETUP INSTRUCTIONS:
    const token = urlParams.get('token');
    if (token) {
      document.getElementById('download-link').href = 
-       `https://downloads.abstractemporium.com/download?product=beginner-knitting-bundle&token=${token}`;
+       `https://downloads.abstractemporium.com/download?product=chaos-calm&token=${token}`;
    }
    ```
 

@@ -13,11 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setupCommunityCanvasTools();
     }
     
-    // Only initialize pattern generator if element exists
-    if (document.querySelector('.pattern-generator')) {
-        setupPatternGeneratorTabs();
-    }
-    
     // Mobile Menu Toggle
     hamburger = document.querySelector('.hamburger');
     navMenu = document.querySelector('.nav-menu') || document.querySelector('.nav-links');
@@ -268,38 +263,10 @@ function setupCommunityCanvasTools() {
     }
 }
 
-/**
- * Pattern Generator Setup
- */
-function setupPatternGeneratorTabs() {
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-    
-    if (!tabBtns.length) return;
-    
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const tabName = btn.dataset.tab;
-            
-            // Remove active from all buttons and contents
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
-            
-            // Add active to clicked button and corresponding content
-            btn.classList.add('active');
-            const activeContent = document.getElementById(tabName + 'Tab');
-            if (activeContent) {
-                activeContent.classList.add('active');
-            }
-        });
-    });
-}
-
 // Initialize gallery when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     initializeGallery();
     setupCommunityCanvasTools();
-    setupPatternGeneratorTabs();
     setupCollaborationFeatures();
     
     // Observe gallery items for animations

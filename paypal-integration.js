@@ -118,7 +118,8 @@ function purchaseKnittingBundle(productId, price) {
     trackPurchaseAttempt(productId, price);
     
     // Redirect to Ko-fi checkout
-    window.location.href = kofiLink
+    window.location.href = kofiLink;
+}
 
 /**
  * Track purchase attempt in localStorage (client-side analytics)

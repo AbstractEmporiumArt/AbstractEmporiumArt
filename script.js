@@ -1,16 +1,8 @@
-// Initialize chatbot
-let chatbot = null;
 let hamburger = null;
 let navMenu = null;
 
-// Initialize chatbot when DOM is ready
+// Initialize site features when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize bot
-    if (typeof AbstractEmporiumBot !== 'undefined') {
-        chatbot = new AbstractEmporiumBot();
-        addBotGreeting();
-    }
-    
     // Only initialize gallery if galleryData exists and gallery element is present
     if (typeof galleryData !== 'undefined' && document.getElementById('galleryGrid')) {
         initializeGallery();
@@ -58,21 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Inject Art Helper header icon (replaces bottom-right auto-popup — Lissa 2026-09-15)
-    const navContainer = document.querySelector('.nav-container');
-    if (navContainer && !document.getElementById('art-helper-btn')) {
-        const ahBtn = document.createElement('button');
-        ahBtn.id = 'art-helper-btn';
-        ahBtn.className = 'art-helper-btn';
-        ahBtn.type = 'button';
-        ahBtn.innerHTML = '\uD83E\uDD16';
-        ahBtn.title = 'Art Helper — ask me anything';
-        ahBtn.setAttribute('aria-label', 'Open Art Helper chat');
-        ahBtn.addEventListener('click', toggleChatbot);
-        const hb = navContainer.querySelector('.hamburger');
-        if (hb) navContainer.insertBefore(ahBtn, hb); else navContainer.appendChild(ahBtn);
-    }
-
     // Observe gallery items for animations
     setTimeout(() => {
         document.querySelectorAll('.gallery-item, .store-card').forEach(item => {
@@ -84,76 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
 });
 
-/**
- * Chatbot Functions
- */
-
-function addBotGreeting() {
-    if (!chatbot) return;
-    addMessageToChat("\uD83D\uDC4B Hi! I'm the Art Helper. What are you looking for?", 'bot');
-    addQuickActions();
-}
-
-function addQuickActions() {
-    const container = document.getElementById('chatbot-messages');
-    if (!container || container.querySelector('.chat-quick-actions')) return;
-    const wrap = document.createElement('div');
-    wrap.className = 'chat-quick-actions';
-    const actions = [
-        { label: '\uD83D\uDECD\uFE0F Shop', href: 'shop.html' },
-        { label: '\uD83D\uDD6C Z3NW1CK', href: 'z3nw1ck.html' },
-        { label: '\uD83C\uDFA8 Browse Art', href: 'gallery.html' },
-        { label: '\uD83D\uDCAC Contact', href: 'contact.html' },
-    ];
-    actions.forEach(a => {
-        const link = document.createElement('a');
-        link.href = a.href;
-        link.className = 'chat-quick-btn';
-        link.textContent = a.label;
-        wrap.appendChild(link);
-    });
-    container.appendChild(wrap);
-    container.scrollTop = container.scrollHeight;
-}
-
-function addMessageToChat(message, sender) {
-    const messagesContainer = document.getElementById('chatbot-messages');
-    if (!messagesContainer) return;
-
-    const messageEl = document.createElement('div');
-    messageEl.className = `chatbot-message ${sender}`;
-    messageEl.textContent = message;
-    messagesContainer.appendChild(messageEl);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-}
-
-function sendChatMessage() {
-    const input = document.getElementById('chatbot-input');
-    if (!input || !input.value.trim() || !chatbot) return;
-
-    const userMessage = input.value.trim();
-    addMessageToChat(userMessage, 'user');
-    input.value = '';
-
-    // Get bot response
-    setTimeout(() => {
-        const botResponse = chatbot.processInput(userMessage);
-        addMessageToChat(botResponse, 'bot');
-    }, 300);
-}
-
-function handleChatInput(event) {
-    if (event.key === 'Enter') {
-        sendChatMessage();
-    }
-}
-
-function toggleChatbot() {
-    const widget = document.getElementById('chatbot-widget');
-    if (!widget) return;
-    const hidden = getComputedStyle(widget).display === 'none';
-    widget.style.display = hidden ? 'flex' : 'none';
-}
 function initializeGallery() {
     const galleryGrid = document.getElementById('galleryGrid');
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -452,13 +359,18 @@ function setupCollaborationFeatures() {
     const savedLoves = localStorage.getItem('canvasLoves');
     const savedViews = localStorage.getItem('canvasViews');
     const savedContributions = localStorage.getItem('canvasContributions');
-    
-    if (savedLoves) document.getElementById('loveCount').textContent = savedLoves;
-    if (savedViews) document.getElementById('viewCount').textContent = savedViews;
-    if (savedContributions) document.getElementById('contributionCount').textContent = savedContributions;
-    
-    // Increment view count
+
+    const loveCountEl = document.getElementById('loveCount');
+    const viewCountEl = document.getElementById('viewCount');
+    const contributionCountEl = document.getElementById('contributionCount');
+
+    if (savedLoves && loveCountEl) loveCountEl.textContent = savedLoves;
+    if (savedViews && viewCountEl) viewCountEl.textContent = savedViews;
+    if (savedContributions && contributionCountEl) contributionCountEl.textContent = savedContributions;
+
+    // Increment view count (only if the element exists on this page)
     let views = parseInt(localStorage.getItem('canvasViews')) || 0;
-    localStorage.setItem('canvasViews', views + 1);
-    document.getElementById('viewCount').textContent = views + 1;
+    views += 1;
+    localStorage.setItem('canvasViews', views);
+    if (viewCountEl) viewCountEl.textContent = views;
 }

@@ -388,7 +388,8 @@ async function processQueue() {
           case 'pinterest':
             postId = await postToPinterest(post.content, imagePath, post.link);
             break;
-            
+        }
+
         results[platform] = {
           success: true,
           postId: postId,

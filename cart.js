@@ -1,6 +1,6 @@
 (function(){
   const BUSINESS_EMAIL = 'abstractemporiumart@outlook.com'; // Interac e-Transfer: sender picks their Canadian bank/credit union from dropdown; receiver (AE) gets it free
-  const SHIPPING_THRESHOLD = 75;
+  const SHIPPING_THRESHOLD = 100;
   const SHIPPING_RATE = 12;
   let priorityOptIn = false;
 
@@ -94,8 +94,8 @@
         <button type="submit" class="checkout-btn">Checkout with PayPal</button>
       </form>
       ${fall15 > 0 ? `<p style="font-size:0.85em;color:#1a7f37;margin-top:6px;">🎉 FALL15 applied: 15% off your $60+ order.</p>` : `<p style="font-size:0.85em;color:#666;margin-top:6px;">Spend $60+ to unlock code <strong>FALL15</strong> (15% off).</p>`}
-      <p style="font-size:0.9em;color:#666;margin-top:10px;">Shipping to Thunder Bay, ON. Free shipping on orders over ${formatMoney(SHIPPING_THRESHOLD)}.</p>
-      <p style="font-size:0.85em;color:#666;margin-top:6px;">Paying by eTransfer? Send to <strong>[EMAIL]</strong> and put your Order # <strong>${orderNumber}</strong> in the message. Then confirm at <a href="etransfer-confirm.html?order=${orderNumber}">eTransfer confirm</a>.</p>
+      <p style="font-size:0.9em;color:#666;margin-top:10px;">Shipping from Thunder Bay, ON. Free shipping on orders over ${formatMoney(SHIPPING_THRESHOLD)}.</p>
+      <p style="font-size:0.85em;color:#666;margin-top:6px;">Paying by Interac e-Transfer? Send to <strong>[EMAIL]</strong> (auto-deposits to our Canadian bank — free for you) and put your Order # <strong>${orderNumber}</strong> in the message. Then confirm at <a href="etransfer-confirm.html?order=${orderNumber}">eTransfer confirm</a>.</p>
     `;
 
     wrap.querySelectorAll('.remove-btn').forEach(btn => {

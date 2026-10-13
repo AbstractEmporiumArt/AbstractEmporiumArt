@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://abstractemporium.art/lissas-knitting.html">
     <meta property="og:title" content="Lissa's Knitting Creationz | Abstract Emporium">
     <meta property="og:description" content="Hand-knit beanies, cloths, mop pads, and cozy knit slippers. Made to order in Thunder Bay, Canada.">
-    <meta property="og:image" content="https://abstractemporium.art/lkc-product-photos/lkc-slippers-01a.png">
+    <meta property="og:image" content="https://abstractemporium.art/lkc-slippers-adult9-01.jpg">
     <meta property="og:url" content="https://abstractemporium.art/lissas-knitting.html">
     <meta property="og:type" content="website">
     <title>Lissa's Knitting Creationz | Abstract Emporium</title>
@@ -81,6 +81,15 @@
             }
         }
         .product-card a.buy-btn:hover { background: #ffefa0; }
+
+        /* ---- LKC slipper thumbnail galleries (2026-10-12 rebuild) ---- */
+        .sl-gallery{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0 1rem}
+        .sl-thumb{width:84px;height:84px;object-fit:cover;border-radius:8px;border:1px solid #2e2e4a;cursor:pointer;transition:transform .12s,box-shadow .12s;background:#000}
+        .sl-thumb:hover{transform:scale(1.05);box-shadow:0 0 0 2px #f5d76e}
+        .lkc-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}
+        .lkc-lightbox.open{display:flex}
+        .lkc-lightbox img{max-width:92vw;max-height:88vh;border-radius:10px;box-shadow:0 8px 40px rgba(0,0,0,.5)}
+        .lkc-lightbox:after{content:"\00d7";position:absolute;top:14px;right:22px;color:#fff;font-size:2rem;cursor:pointer;line-height:1}
         .lkc-cta { text-align: center; margin: 30px 0; }
         .lkc-cta a {
             display: inline-block; padding: 14px 28px; background: #f5d76e; color: #1a1a2e;
@@ -129,7 +138,7 @@
       "@type": "Product",
       "name": "Lissa's Knitting Creationz",
       "description": "Hand-knit beanies, stocking caps, scarves, slippers, wash cloths, and mop pads. Made to order in Thunder Bay, Canada.",
-      "image": "https://abstractemporium.art/lkc-product-photos/lkc-slippers-01a.png",
+      "image": "https://abstractemporium.art/lkc-slippers-adult9-01.jpg",
       "brand": { "@type": "Brand", "name": "Lissa's Knitting Creationz" },
       "offers": {
         "@type": "AggregateOffer",
@@ -271,190 +280,143 @@ fbq('track', 'PageView');
       </div>
     </div>
 <div class="product-card">
-  <img src="lkc-slippers-newborn-01.jpg" alt="Newborn knit slippers — hand-knit in Thunder Bay" loading="lazy" style="width:100%;height:200px;object-fit:cover;border-radius:12px 12px 0 0;display:block;">
-  <div class="body">
-        <h3>🧶 Cozy Slippers</h3>
-        <p style="font-size:.9rem;color:#aaa;margin:-4px 0 8px;line-height:1.45;">Hand-knit slippers in three ready-made sizes. Each pair is made to order — photos above show finished pairs in stock. Custom colours and sizes available.</p>
-
-        <!-- Product photos added 2026-10-05. Newborn (4), Toddler (5), Adult 9" (11)
-             all in stock and ready. Baby/Child/Youth/Adult S-M-L-XL are made to order. -->
-        <div class="product-gallery">
-          <div class="gal-group">
-            <p class="gal-label">Newborn — 4 pairs ready</p>
-            <div class="gal-row">
-              <img src="lkc-slippers-newborn-01.jpg" alt="Newborn knit slippers, pair 1 of 4" loading="lazy" width="1600" height="1200">
-              <img src="lkc-slippers-newborn-02.jpg" alt="Newborn knit slippers, pair 2 of 4" loading="lazy" width="1600" height="1200">
-              <img src="lkc-slippers-newborn-03.jpg" alt="Newborn knit slippers, pair 3 of 4" loading="lazy" width="1600" height="1200">
-              <img src="lkc-slippers-newborn-04.jpg" alt="Newborn knit slippers, pair 4 of 4" loading="lazy" width="1600" height="1200">
-            </div>
-          </div>
-          <div class="gal-group">
-            <p class="gal-label">Toddler — 5 pairs ready</p>
-            <div class="gal-row">
-              <img src="lkc-slippers-toddler-01.jpg" alt="Toddler knit slippers, pair 1 of 5" loading="lazy" width="1600" height="1200">
-              <img src="lkc-slippers-toddler-02.jpg" alt="Toddler knit slippers, pair 2 of 5" loading="lazy" width="1600" height="1200">
-              <img src="lkc-slippers-toddler-03.jpg" alt="Toddler knit slippers, pair 3 of 5" loading="lazy" width="1600" height="1200">
-              <img src="lkc-slippers-toddler-04.jpg" alt="Toddler knit slippers, pair 4 of 5" loading="lazy" width="1600" height="1200">
-              <img src="lkc-slippers-toddler-05.jpg" alt="Toddler knit slippers, pair 5 of 5" loading="lazy" width="1600" height="1200">
-            </div>
-          </div>
-          <div class="gal-group">
-            <p class="gal-label">Adult Large (9&quot;-9.5&quot;, 9&quot; foot) &mdash; 11 pairs ready &mdash; $35</p>
-            <div class="gal-row">
-              <img src="lkc-slippers-adult9-01.jpg" alt="Adult 9 inch knit slippers, pair 1 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-02.jpg" alt="Adult 9 inch knit slippers, pair 2 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-03.jpg" alt="Adult 9 inch knit slippers, pair 3 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-04.jpg" alt="Adult 9 inch knit slippers, pair 4 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-05.jpg" alt="Adult 9 inch knit slippers, pair 5 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-06.jpg" alt="Adult 9 inch knit slippers, pair 6 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-07.jpg" alt="Adult 9 inch knit slippers, pair 7 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-08.jpg" alt="Adult 9 inch knit slippers, pair 8 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-09.jpg" alt="Adult 9 inch knit slippers, pair 9 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-10.jpg" alt="Adult 9 inch knit slippers, pair 10 of 11" loading="lazy" width="433" height="577">
-              <img src="lkc-slippers-adult9-11.jpg" alt="Adult 9 inch knit slippers, pair 11 of 11" loading="lazy" width="433" height="577">
-            </div>
-          </div>
-          <p class="gal-note">Sizing runs Newborn (3.5&quot;-4&quot;), Baby (4&quot;-5&quot;), Toddler (5&quot;-5.75&quot;), Child (5.75&quot;-7&quot;),
-             Youth (7&quot;-8&quot;), Adult Small (8&quot;-8.5&quot;), Medium, Large and XL. Sizes without photos are made to order —
-             message us and we&apos;ll confirm fabric and timing.</p>
-
-        <!-- Ready-made vs custom ordering, added 2026-10-05 at Lissa's request. -->
-        <div class="order-box">
-          <h4>Ready-made now, or custom made to order?</h4>
-          <p style="font-size:.9rem;color:#555;margin:-4px 0 10px;line-height:1.5;">Each tier has finished pairs ready to ship. Photos above show the actual pairs available. Select your tier below — the dropdown lists each ready pair.</p>
-          <p class="gal-note">The sizes photographed above are <strong>finished pairs in stock</strong> &mdash; they ship as-is.
-             Any other size is <strong>made to order</strong> in your colour choice.</p>
-
-          <p style="font-size:.85rem;color:#777;margin:.8rem 0 .3rem;line-height:1.45;">📸 Photos above = finished pairs in stock (Newborn 4, Toddler 5, Adult Large 11). Other sizes = made to order after selection.</p>
-          <div class="order-grid">
-            <div class="order-col ready">
-              <p class="order-head">Ready-made &mdash; ships now</p>
-              <ul>
-                <li><strong>Newborn</strong> (3.5&quot;-4&quot;) &mdash; 4 pairs &mdash; <strong>$7</strong></li>
-                <li><strong>Toddler</strong> (5&quot;-5.75&quot;) &mdash; 5 pairs &mdash; <strong>$12</strong></li>
-                <li><strong>Adult Large</strong> (9&quot;-9.5&quot;) &mdash; 11 pairs &mdash; <strong>$35</strong></li>
-              </ul>
-              <p class="gal-note">Photo above shows the pairs available. Tell us which one (or how many) when you order.</p>
-            </div>
-            <div class="order-col custom">
-              <p class="order-head">Custom &mdash; made to order</p>
-              <ul>
-                <li>Baby (4&quot;-5&quot;) &mdash; $10</li>
-                <li>Child (5.75&quot;-7&quot;) &mdash; $15</li>
-                <li>Youth (7&quot;-8&quot;) &mdash; $20</li>
-                <li>Adult Small (8&quot;-8.5&quot;) &mdash; $25</li>
-                <li>Adult Medium (8.5&quot;-9&quot;) &mdash; $30</li>
-                <li>Adult XL (9.5&quot;-10&quot;) &mdash; $40</li>
-              </ul>
-              <p class="gal-note">Also available custom: <strong>more Newborn, Toddler and Adult Large</strong> once these run out,
-                 in your colour and pattern choice. Message us for fabric, colours and timing.</p>
-            </div>
-          </div>
-          <p class="order-cta">
-            <a href="https://www.facebook.com/TheHugArtAbstractEmporium" target="_blank" rel="noopener">Message us to order &rarr;</a>
-            &nbsp;&middot;&nbsp; <a href="contact.html">Contact form</a>
-            &nbsp;&middot;&nbsp; <a href="orders.html">Order history</a>
-          </p>
+      <div class="body">
+        <h3>🧶 Cozy Knit Slippers — Newborn</h3>
+        <p class="notes">Hand-knit newborn slippers (3.5"-4"). The 4 pairs below are finished and ready to ship. $7 each.</p>
+        <div class="sl-gallery">
+              <img class="sl-thumb" src="lkc-slippers-newborn-01.jpg" alt="newborn slippers pair 1" loading="lazy" data-full="lkc-slippers-newborn-01.jpg">
+              <img class="sl-thumb" src="lkc-slippers-newborn-02.jpg" alt="newborn slippers pair 2" loading="lazy" data-full="lkc-slippers-newborn-02.jpg">
+              <img class="sl-thumb" src="lkc-slippers-newborn-03.jpg" alt="newborn slippers pair 3" loading="lazy" data-full="lkc-slippers-newborn-03.jpg">
+              <img class="sl-thumb" src="lkc-slippers-newborn-04.jpg" alt="newborn slippers pair 4" loading="lazy" data-full="lkc-slippers-newborn-04.jpg">
         </div>
-        </div>
-        <div class="commission-form-embed" style="max-width:860px;margin:1.5rem auto 0;padding:1rem;background:#fbf8f4;border:1px solid #e3d9cd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.03);">
-                <h4 style="margin:0 0 .6rem;color:#1a1a2e;font-size:1.05rem;">Custom Slippers Order</h4>
-                <form id="slipperCustomForm" class="commission-form" action="https://formspree.io/f/mvgelyje" method="POST" style="display:grid;gap:10px;">
-                    <div>
-                        <label for="slipperName" style="font-weight:600;">Full Name</label>
-                        <input id="slipperName" name="name" type="text" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
-                    </div>
-                    <div>
-                        <label for="slipperEmail" style="font-weight:600;">Email</label>
-                        <input id="slipperEmail" name="email" type="email" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
-                    </div>
-                    <div>
-                        <label for="slipperSize" style="font-weight:600;">Size / Age</label>
-                        <select id="slipperSize" name="size" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
-                            <option value="">Select size...</option>
-                            <option value="newborn">Newborn (3.5-4")</option>
-                            <option value="baby">Baby (4-5")</option>
-                            <option value="toddler">Toddler (5-5.75")</option>
-                            <option value="child">Child (5.75-7")</option>
-                            <option value="youth">Youth (7-8")</option>
-                            <option value="adult_small">Adult Small (8-8.5")</option>
-                            <option value="adult_medium">Adult Medium (8.5-9")</option>
-                            <option value="adult_large">Adult Large (9-9.5")</option>
-                            <option value="adult_xl">Adult XL (9.5-10")</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="slipperColors" style="font-weight:600;">Colour / Pattern Preferences</label>
-                        <textarea id="slipperColors" name="message" rows="4" placeholder="Tell us your colour choices, stripe patterns, or custom ideas." required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;resize:vertical;min-height:80px;"></textarea>
-                    </div>
-                    <input type="hidden" name="subject" value="Custom Slippers Order">
-                    <button type="submit" style="border:none;border-radius:999px;background:#1a1a2e;color:#fff;font-weight:700;padding:10px 18px;cursor:pointer;font-size:.95rem;">Submit Custom Request</button>
-                </form>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top:10px;padding-top:10px;border-top:1px solid #e3d9cd;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                    <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="[EMAIL]">
-                    <input type="hidden" name="item_name" value="Custom Slippers Deposit">
-                    <input type="hidden" name="currency_code" value="CAD">
-                    <label style="font-weight:600;font-size:.9rem;">Deposit: </label>
-                    <select name="amount" required style="padding:6px;border-radius:6px;border:1px solid #ccc;font-size:.9rem;">
-                        <option value="10">$10 deposit</option>
-                        <option value="20">$20 deposit</option>
-                        <option value="30">$30 deposit</option>
-                    </select>
-                    <button type="submit" style="border:none;border-radius:999px;background:#8a4b12;color:#ffffff;font-weight:700;padding:6px 14px;cursor:pointer;font-size:.85rem;">Pay Deposit</button>
-                </form>
-            </div>
-<p class="notes">Handmade knit, checkerboard &amp; classic stripes. Made to order - message for custom pairs and sizes.</p>
-        <p class="price">Newborn (0-6mo) $7 - Baby (6-12mo) $10 - Toddler (1-2yr) $12 - Child (3-6yr) $15 - Youth (7-12yr) $20 - Adult S $25 - Adult M $30 - Adult L $35 - Adult XL $40</p>
-        <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
           <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
-          <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers">
+          <input type="hidden" name="business" value="[EMAIL]">
+          <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Newborn">
           <input type="hidden" name="currency_code" value="CAD">
-          <label class="size-label">Size / Pair: <select name="amount" id="slipperSize" class="size-select" required>
-                            <optgroup label="Newborn (3.5-4") — 4 pairs ready — $7 CAD">
-                                <option value="7">Newborn Pair 1 of 4 — $7</option>
-                                <option value="7">Newborn Pair 2 of 4 — $7</option>
-                                <option value="7">Newborn Pair 3 of 4 — $7</option>
-                                <option value="7">Newborn Pair 4 of 4 — $7</option>
-                            </optgroup>
-                            <optgroup label="Toddler (5-5.75") — 5 pairs ready — $12 CAD">
-                                <option value="12">Toddler Pair 1 of 5 — $12</option>
-                                <option value="12">Toddler Pair 2 of 5 — $12</option>
-                                <option value="12">Toddler Pair 3 of 5 — $12</option>
-                                <option value="12">Toddler Pair 4 of 5 — $12</option>
-                                <option value="12">Toddler Pair 5 of 5 — $12</option>
-                            </optgroup>
-                            <optgroup label="Adult Large (9-9.5", 9" foot) — 11 pairs ready — $35 CAD">
-                                <option value="35">Adult Large Pair 1 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 2 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 3 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 4 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 5 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 6 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 7 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 8 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 9 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 10 of 11 — $35</option>
-                                <option value="35">Adult Large Pair 11 of 11 — $35</option>
-                            </optgroup>
-                            <optgroup label="Made to order — choose colour &amp; pattern">
-                                <option value="10">Baby (4-5") — $10</option>
-                                <option value="15">Child (5.75-7") — $15</option>
-                                <option value="20">Youth (7-8") — $20</option>
-                                <option value="25">Adult Small (8-8.5") — $25</option>
-                                <option value="30">Adult Medium (8.5-9") — $30</option>
-                                <option value="40">Adult XL (9.5-10") — $40</option>
-                            </optgroup>
-                        </select></label>
+          <label class="size-label">Choose pair:
+            <select name="amount" id="newbornPairs" class="size-select" required>
+                <option value="7" data-img="lkc-slippers-newborn-01.jpg">Newborn (3.5-4") Pair 1 of 4 — $7</option>
+                <option value="7" data-img="lkc-slippers-newborn-02.jpg">Newborn (3.5-4") Pair 2 of 4 — $7</option>
+                <option value="7" data-img="lkc-slippers-newborn-03.jpg">Newborn (3.5-4") Pair 3 of 4 — $7</option>
+                <option value="7" data-img="lkc-slippers-newborn-04.jpg">Newborn (3.5-4") Pair 4 of 4 — $7</option>
+            </select>
+          </label>
           <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
           <button type="submit" class="buy-btn">Buy with PayPal</button>
         </form>
-        <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('slipperSize', 'Lissa\'s Knitting - Slippers', 'lkc-product-photos/lkc-slippers-01a.png')">Add to Cart</button>
-        <a class="buy-btn" href="contact.html?product=slippers" style="background:#555;color:#ddd;">Email Order</a>
+        <button type="button" class="buy-btn add-to-cart" onclick="cartSlipper('newbornPairs', 'Lissa\'s Knitting - Slippers Newborn')">Add to Cart</button>
+        <a class="buy-btn" href="contact.html?product=slippers-newborn" style="background:#555;color:#ddd;">Email Order</a>
+        <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
       </div>
     </div>
+<div class="product-card">
+      <div class="body">
+        <h3>🧶 Cozy Knit Slippers — Toddler</h3>
+        <p class="notes">Hand-knit toddler slippers (5"-5.75"). The 5 pairs below are finished and ready to ship. $12 each.</p>
+        <div class="sl-gallery">
+              <img class="sl-thumb" src="lkc-slippers-toddler-01.jpg" alt="toddler slippers pair 1" loading="lazy" data-full="lkc-slippers-toddler-01.jpg">
+              <img class="sl-thumb" src="lkc-slippers-toddler-02.jpg" alt="toddler slippers pair 2" loading="lazy" data-full="lkc-slippers-toddler-02.jpg">
+              <img class="sl-thumb" src="lkc-slippers-toddler-03.jpg" alt="toddler slippers pair 3" loading="lazy" data-full="lkc-slippers-toddler-03.jpg">
+              <img class="sl-thumb" src="lkc-slippers-toddler-04.jpg" alt="toddler slippers pair 4" loading="lazy" data-full="lkc-slippers-toddler-04.jpg">
+              <img class="sl-thumb" src="lkc-slippers-toddler-05.jpg" alt="toddler slippers pair 5" loading="lazy" data-full="lkc-slippers-toddler-05.jpg">
+        </div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="[EMAIL]">
+          <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Toddler">
+          <input type="hidden" name="currency_code" value="CAD">
+          <label class="size-label">Choose pair:
+            <select name="amount" id="toddlerPairs" class="size-select" required>
+                <option value="12" data-img="lkc-slippers-toddler-01.jpg">Toddler (5-5.75") Pair 1 of 5 — $12</option>
+                <option value="12" data-img="lkc-slippers-toddler-02.jpg">Toddler (5-5.75") Pair 2 of 5 — $12</option>
+                <option value="12" data-img="lkc-slippers-toddler-03.jpg">Toddler (5-5.75") Pair 3 of 5 — $12</option>
+                <option value="12" data-img="lkc-slippers-toddler-04.jpg">Toddler (5-5.75") Pair 4 of 5 — $12</option>
+                <option value="12" data-img="lkc-slippers-toddler-05.jpg">Toddler (5-5.75") Pair 5 of 5 — $12</option>
+            </select>
+          </label>
+          <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+          <button type="submit" class="buy-btn">Buy with PayPal</button>
+        </form>
+        <button type="button" class="buy-btn add-to-cart" onclick="cartSlipper('toddlerPairs', 'Lissa\'s Knitting - Slippers Toddler')">Add to Cart</button>
+        <a class="buy-btn" href="contact.html?product=slippers-toddler" style="background:#555;color:#ddd;">Email Order</a>
+        <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
+      </div>
+    </div>
+<div class="product-card">
+      <div class="body">
+        <h3>🧶 Cozy Knit Slippers — Adult 9"</h3>
+        <p class="notes">Hand-knit adult slippers (9"-9.5" foot). The 11 pairs below are finished and ready to ship. $35 each.</p>
+        <div class="sl-gallery">
+              <img class="sl-thumb" src="lkc-slippers-adult9-01.jpg" alt="adult9 slippers pair 1" loading="lazy" data-full="lkc-slippers-adult9-01.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-02.jpg" alt="adult9 slippers pair 2" loading="lazy" data-full="lkc-slippers-adult9-02.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-03.jpg" alt="adult9 slippers pair 3" loading="lazy" data-full="lkc-slippers-adult9-03.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-04.jpg" alt="adult9 slippers pair 4" loading="lazy" data-full="lkc-slippers-adult9-04.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-05.jpg" alt="adult9 slippers pair 5" loading="lazy" data-full="lkc-slippers-adult9-05.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-06.jpg" alt="adult9 slippers pair 6" loading="lazy" data-full="lkc-slippers-adult9-06.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-07.jpg" alt="adult9 slippers pair 7" loading="lazy" data-full="lkc-slippers-adult9-07.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-08.jpg" alt="adult9 slippers pair 8" loading="lazy" data-full="lkc-slippers-adult9-08.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-09.jpg" alt="adult9 slippers pair 9" loading="lazy" data-full="lkc-slippers-adult9-09.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-10.jpg" alt="adult9 slippers pair 10" loading="lazy" data-full="lkc-slippers-adult9-10.jpg">
+              <img class="sl-thumb" src="lkc-slippers-adult9-11.jpg" alt="adult9 slippers pair 11" loading="lazy" data-full="lkc-slippers-adult9-11.jpg">
+        </div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="[EMAIL]">
+          <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Adult 9 inch">
+          <input type="hidden" name="currency_code" value="CAD">
+          <label class="size-label">Choose pair:
+            <select name="amount" id="adultPairs" class="size-select" required>
+                <option value="35" data-img="lkc-slippers-adult9-01.jpg">Adult 9" (9-9.5") Pair 1 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-02.jpg">Adult 9" (9-9.5") Pair 2 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-03.jpg">Adult 9" (9-9.5") Pair 3 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-04.jpg">Adult 9" (9-9.5") Pair 4 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-05.jpg">Adult 9" (9-9.5") Pair 5 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-06.jpg">Adult 9" (9-9.5") Pair 6 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-07.jpg">Adult 9" (9-9.5") Pair 7 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-08.jpg">Adult 9" (9-9.5") Pair 8 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-09.jpg">Adult 9" (9-9.5") Pair 9 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-10.jpg">Adult 9" (9-9.5") Pair 10 of 11 — $35</option>
+                <option value="35" data-img="lkc-slippers-adult9-11.jpg">Adult 9" (9-9.5") Pair 11 of 11 — $35</option>
+            </select>
+          </label>
+          <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+          <button type="submit" class="buy-btn">Buy with PayPal</button>
+        </form>
+        <button type="button" class="buy-btn add-to-cart" onclick="cartSlipper('adultPairs', 'Lissa\'s Knitting - Slippers Adult 9 inch')">Add to Cart</button>
+        <a class="buy-btn" href="contact.html?product=slippers-adult9" style="background:#555;color:#ddd;">Email Order</a>
+        <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
+      </div>
+    </div>
+<div class="order-box" id="customSlippers" style="max-width:860px;margin:1.5rem auto;padding:1.2rem 1.3rem;background:#fbf8f4;border:1px solid #e3d9cd;border-radius:10px;">
+      <h4 style="margin:0 0 .4rem;color:#1a1a2e;font-size:1.05rem;">Custom Slippers — other sizes (made to order)</h4>
+      <p style="font-size:.92rem;color:#555;margin:0 0 .6rem;line-height:1.5;">Baby (4-5") $10 · Child (5.75-7") $15 · Youth (7-8") $20 · Adult Small (8-8.5") $25 · Adult Medium (8.5-9") $30 · Adult XL (9.5-10") $40. Tell us your size, colour and pattern — we'll confirm and knit to order.</p>
+      <form id="slipperCustomForm" class="commission-form" action="https://formspree.io/f/mvgelyje" method="POST" style="display:grid;gap:10px;">
+        <div><label for="slipperName" style="font-weight:600;">Full Name</label><input id="slipperName" name="name" type="text" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;"></div>
+        <div><label for="slipperEmail" style="font-weight:600;">Email</label><input id="slipperEmail" name="email" type="email" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;"></div>
+        <div><label for="slipperSize" style="font-weight:600;">Size / Age</label>
+          <select id="slipperSize" name="size" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+            <option value="">Select size...</option>
+            <option value="baby">Baby (4-5") — $10</option>
+            <option value="child">Child (5.75-7") — $15</option>
+            <option value="youth">Youth (7-8") — $20</option>
+            <option value="adult_small">Adult Small (8-8.5") — $25</option>
+            <option value="adult_medium">Adult Medium (8.5-9") — $30</option>
+            <option value="adult_xl">Adult XL (9.5-10") — $40</option>
+          </select>
+        </div>
+        <div><label for="slipperColors" style="font-weight:600;">Colour / Pattern Preferences</label><textarea id="slipperColors" name="message" rows="4" placeholder="Colour choices, stripe patterns, or custom ideas." required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;resize:vertical;min-height:80px;"></textarea></div>
+        <input type="hidden" name="subject" value="Custom Slippers Order">
+        <button type="submit" style="border:none;border-radius:999px;background:#1a1a2e;color:#fff;font-weight:700;padding:10px 18px;cursor:pointer;font-size:.95rem;">Submit Custom Request</button>
+      </form>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top:10px;padding-top:10px;border-top:1px solid #e3d9cd;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="[EMAIL]"><input type="hidden" name="item_name" value="Custom Slippers Deposit"><input type="hidden" name="currency_code" value="CAD">
+        <label style="font-weight:600;font-size:.9rem;">Deposit: </label>
+        <select name="amount" required style="padding:6px;border-radius:6px;border:1px solid #ccc;font-size:.9rem;"><option value="10">$10 deposit</option><option value="20">$20 deposit</option><option value="30">$30 deposit</option></select>
+        <button type="submit" style="border:none;border-radius:999px;background:#8a4b12;color:#fff;font-weight:700;padding:6px 14px;cursor:pointer;font-size:.85rem;">Pay Deposit</button>
+      </form>
+    </div>
+
 <div class="product-card">
       <div class="body">
         <h3>🧣 Reversible Scarves</h3>
@@ -508,4 +470,33 @@ fbq('track', 'PageView');
     <script src="jsonld-core.js"></script>
     <script src="analytics-tracking.js"></script>
     <script src="script.js"></script>
+    <script>
+      // LKC slippers: add selected pair to cart with its specific photo
+      window.cartSlipper = function(selectId, title){
+        var sel = document.getElementById(selectId);
+        if(!sel) return;
+        var opt = sel.options[sel.selectedIndex];
+        var price = parseFloat(sel.value) || 0;
+        var img = opt.getAttribute('data-img') || 'logo.jpg';
+        if(window.addToCartDirect){ window.addToCartDirect(title, price, img); }
+      };
+      // Lightbox for slipper thumbnails
+      (function(){
+        var lb = document.createElement('div');
+        lb.className = 'lkc-lightbox';
+        lb.innerHTML = '<img alt="Enlarged slipper photo">';
+        document.body.appendChild(lb);
+        var img = lb.querySelector('img');
+        document.addEventListener('click', function(e){
+          var t = e.target;
+          if(t && t.classList && t.classList.contains('sl-thumb')){
+            img.src = t.getAttribute('data-full') || t.src;
+            lb.classList.add('open');
+          } else if(e.target === lb || (t && t.classList && t.classList.contains('lkc-lightbox')) ){
+            lb.classList.remove('open');
+          }
+        });
+        document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.classList.remove('open'); });
+      })();
+    </script>
 </html>

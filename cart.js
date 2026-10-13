@@ -1,7 +1,7 @@
 (function(){
   const BUSINESS_EMAIL = 'abstractemporiumart@outlook.com'; // Interac e-Transfer: sender picks their Canadian bank/credit union from dropdown; receiver (AE) gets it free
   const SHIPPING_THRESHOLD = 100;
-  const SHIPPING_RATE = 12;
+  const SHIPPING_RATE = -1; // -1 = QUOTED: no flat rate. Real shipping via NetParcel (PayPal checkout) or quoted for e-Transfer. $12 flat removed — underfunded.
   let priorityOptIn = false;
 
   function getCart(){
@@ -62,7 +62,7 @@
     summary.innerHTML = `
       <div class="cart-row"><span>Subtotal</span><span>${formatMoney(subtotal)}</span></div>
       ${fall15 > 0 ? `<div class="cart-row" style="color:#1a7f37;font-weight:600"><span>FALL15 — 15% off $60+</span><span>-${formatMoney(fall15)}</span></div>` : ''}
-      <div class="cart-row"><span>Shipping</span><span>${shipping === 0 ? 'FREE' : formatMoney(shipping)}</span></div>
+      <div class="cart-row"><span>Shipping</span><span>${shipping === 0 ? 'FREE' : (shipping < 0 ? 'QUOTED' : formatMoney(shipping))}</span></div>
       <div class="cart-row priority-row">
         <label class="priority-label">
           <input type="checkbox" id="priorityCheck" ${priorityOptIn ? 'checked' : ''}>

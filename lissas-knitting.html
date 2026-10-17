@@ -171,12 +171,12 @@ fbq('track', 'PageView');
 <style>
 @media (max-width:768px){.about-slide{flex:0 0 100% !important;max-width:100% !important;}.about-slide img{width:100% !important;max-width:100% !important;height:auto !important;}}</style>
 <style>
-.slippers-slideshow { overflow: visible; display: block; scroll-snap-type: none; scrollbar-width: none; }
+.slippers-slideshow { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; display: block; scroll-behavior: smooth; }
 .slippers-slideshow .about-carousel-track { display: flex; flex-wrap: wrap; gap: 12px; width: 100%; justify-content: center; }
 .slippers-slideshow .about-slide { flex: 0 0 48%; max-width: 48%; width: 100%; box-sizing: border-box; overflow: hidden; margin-bottom: 12px; }
 .slippers-slideshow .about-slide img { width: 100%; max-width: 100%; height: auto; display: block; object-fit: contain; border-radius: 8px; }
 @media (max-width: 768px) {
-  .slippers-slideshow .about-slide { flex: 0 0 48%; max-width: 48%; width: 100%; }
+  .slippers-slideshow .about-slide { flex: 0 0 100vw; max-width: 100vw; width: 100vw; }
   .slippers-slideshow .about-slide img { max-height: 60vh; width: 100%; height: auto; object-fit: contain; border-radius: 8px; }
 }
 </style>
@@ -487,19 +487,59 @@ fbq('track', 'PageView');
 </div>
         </div><!-- /.container -->
         <h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.1rem;">LKC Gallery — Sold, Commissioned, Personal & Gift Creations</h3>
-        <div class="slippers-slideshow" aria-label="Finished LKC knits" style="display:block;overflow-x:auto;overflow-y:hidden;">
-            <div class="about-carousel-track" style="display:flex;gap:0;width:max-content;">
-                <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;overflow:hidden;box-sizing:border-box;"><img src="lkc-completed-adult-slippers.jpg" alt="Completed adult slipper — finished handmade knit (LKC)" loading="lazy" decoding="async" style="width:100%;max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption style="font-size:.85rem;color:#777;text-align:center;">Completed adult slipper — finished.</figcaption></figure>
-                <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;overflow:hidden;box-sizing:border-box;"><img src="lkc-completed-adult-slippers-size9-1.jpg" alt="Completed sold adult slipper pair — size 9 — finished handmade knit (LKC)" loading="lazy" decoding="async" style="width:100%;max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption style="font-size:.85rem;color:#777;text-align:center;">Size 9 — completed, made to order.</figcaption></figure>
-                <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;overflow:hidden;box-sizing:border-box;"><img src="lkc-completed-adult-slippers-size9-2.jpg" alt="Completed sold adult slipper pair — size 9 — finished handmade knit (LKC)" loading="lazy" decoding="async" style="width:100%;max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption style="font-size:.85rem;color:#777;text-align:center;">Size 9 — completed pair.</figcaption></figure>
-                <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;overflow:hidden;box-sizing:border-box;"><img src="lkc-sold-newborn-tuq.jpg" alt="Sold newborn tuque — finished handmade knit (LKC)" loading="lazy" decoding="async" style="width:100%;max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption style="font-size:.85rem;color:#777;text-align:center;">Sold newborn tuque — finished.</figcaption></figure>
-                <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;overflow:hidden;box-sizing:border-box;"><img src="lkc-newborn-slippers-pair.jpg" alt="Newborn slippers as a pair — sold finished handmade knit (LKC)" loading="lazy" decoding="async" style="width:100%;max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption style="font-size:.85rem;color:#777;text-align:center;">Newborn slippers as a pair — sold.</figcaption></figure>
-                <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;overflow:hidden;box-sizing:border-box;"><img src="lkc-sold-hockey-slippers.jpg" alt="Sold hockey-themed slippers — 4 Montreal Canadiens + 2 Vegas Golden Knights (LKC)" loading="lazy" decoding="async" style="width:100%;max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption style="font-size:.85rem;color:#777;text-align:center;">Hockey-themed — 4 Mtl + 2 Vegas.</figcaption></figure>
-                <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;overflow:hidden;box-sizing:border-box;"><img src="lkc-gift-4-pairs-slippers.jpg" alt="4 pairs of slippers given as a gift — finished handmade knit (LKC)" loading="lazy" decoding="async" style="width:100%;max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption style="font-size:.85rem;color:#777;text-align:center;">4 pairs — gift — finished.</figcaption></figure>
-                <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;overflow:hidden;box-sizing:border-box;"><img src="lkc-personal-2-pairs-slippers.jpg" alt="2 personal pairs of slippers — finished handmade knit (LKC)" loading="lazy" decoding="async" style="width:100%;max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption style="font-size:.85rem;color:#777;text-align:center;">2 personal pairs — finished.</figcaption></figure>
-            </div>
-        </div></section>
+        <div style="text-align:center;margin:1rem 0;">
+          <label for="slipper-category" style="font-size:.95rem;color:#333;">Select category: </label>
+          <select id="slipper-category" onchange="showCategory(this.value)" style="padding:6px 12px;border-radius:999px;background:#1a1a2e;color:#fdf6e3;font-size:.9rem;border:none;cursor:pointer;">
+            <option value="adult">Cozy Knit Slippers — Adult 9"</option>
+            <option value="toddler">Cozy Knit Slippers — Toddler</option>
+            <option value="newborn">Cozy Knit Slippers — Newborn</option>
+          </select>
+        </div>
+        <script>function showCategory(val){document.querySelectorAll('.gallery-category').forEach(el=>el.style.display='none');var target=document.getElementById('cat-'+val);if(target)target.style.display='block';}</script>
 
+        <!-- Adult 9 -->
+        <div id="cat-adult" class="gallery-category slippers-slideshow" aria-label="Adult 9 slippers" style="display:block;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;">
+          <div class="about-carousel-track" style="display:flex;gap:8px;width:max-content;">
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-completed-adult-slippers.jpg" alt="Adult 9 completed slipper — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Adult 9 — completed.</figcaption></figure>
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-completed-adult-slippers-size9-1.jpg" alt="Adult 9 size 9 completed sold pair — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Size 9 — completed pair.</figcaption></figure>
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-completed-adult-slippers-size9-2.jpg" alt="Adult 9 size 9 completed sold pair — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Size 9 — second completed pair.</figcaption></figure>
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-slippers-adult9-01.jpg" alt="Adult 9 slippers — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Adult 9 — finished.</figcaption></figure>
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-slippers-adult9-02.jpg" alt="Adult 9 slippers — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Adult 9 — pair 2.</figcaption></figure>
+          </div>
+          <div style="text-align:center;margin-top:6px;">
+            <button onclick="document.querySelector('#cat-adult .about-carousel-track').scrollBy({left:-window.innerWidth*0.92,behavior:'smooth'})" aria-label="Previous adult 9" style="padding:4px 12px;background:#1a1a2e;color:#fdf6e3;border:none;border-radius:999px;font-size:.9rem;margin-right:6px;cursor:pointer;">◀</button>
+            <span style="font-size:.8rem;color:#777;">Swipe / click arrows</span>
+            <button onclick="document.querySelector('#cat-adult .about-carousel-track').scrollBy({left:window.innerWidth*0.92,behavior:'smooth'})" aria-label="Next adult 9" style="padding:4px 12px;background:#1a1a2e;color:#fdf6e3;border:none;border-radius:999px;font-size:.9rem;margin-left:6px;cursor:pointer;">▶</button>
+          </div>
+        </div>
+
+        <!-- Toddler -->
+        <div id="cat-toddler" class="gallery-category slippers-slideshow" aria-label="Toddler slippers" style="display:none;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;">
+          <div class="about-carousel-track" style="display:flex;gap:8px;width:max-content;">
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-slippers-toddler-01.jpg" alt="Toddler slippers — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Toddler — finished.</figcaption></figure>
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-slippers-toddler-02.jpg" alt="Toddler slippers — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Toddler — pair 2.</figcaption></figure>
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-slippers-toddler-03.jpg" alt="Toddler slippers — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Toddler — pair 3.</figcaption></figure>
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-slippers-toddler-04.jpg" alt="Toddler slippers — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Toddler — pair 4.</figcaption></figure>
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-slippers-toddler-05.jpg" alt="Toddler slippers — finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Toddler — pair 5.</figcaption></figure>
+          </div>
+          <div style="text-align:center;margin-top:6px;">
+            <button onclick="document.querySelector('#cat-toddler .about-carousel-track').scrollBy({left:-window.innerWidth*0.92,behavior:'smooth'})" aria-label="Previous toddler" style="padding:4px 12px;background:#1a1a2e;color:#fdf6e3;border:none;border-radius:999px;font-size:.9rem;margin-right:6px;cursor:pointer;">◀</button>
+            <span style="font-size:.8rem;color:#777;">Swipe / click arrows</span>
+            <button onclick="document.querySelector('#cat-toddler .about-carousel-track').scrollBy({left:window.innerWidth*0.92,behavior:'smooth'})" aria-label="Next toddler" style="padding:4px 12px;background:#1a1a2e;color:#fdf6e3;border:none;border-radius:999px;font-size:.9rem;margin-left:6px;cursor:pointer;">▶</button>
+          </div>
+        </div>
+
+        <!-- Newborn -->
+        <div id="cat-newborn" class="gallery-category slippers-slideshow" aria-label="Newborn slippers" style="display:none;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;">
+          <div class="about-carousel-track" style="display:flex;gap:8px;width:max-content;">
+            <figure class="about-slide" style="flex:0 0 100vw;max-width:100vw;width:100vw;display:block;scroll-snap-align:center;text-align:center;box-sizing:border-box;overflow:hidden;"><img src="lkc-newborn-slippers-pair.jpg" alt="Newborn slippers as a pair — sold finished handmade knit (LKC)" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);"><figcaption>Newborn slippers — pair (sold).</figcaption></figure>
+          </div>
+          <div style="text-align:center;margin-top:6px;">
+            <button onclick="document.querySelector('#cat-newborn .about-carousel-track').scrollBy({left:-window.innerWidth*0.92,behavior:'smooth'})" aria-label="Previous newborn" style="padding:4px 12px;background:#1a1a2e;color:#fdf6e3;border:none;border-radius:999px;font-size:.9rem;margin-right:6px;cursor:pointer;">◀</button>
+            <span style="font-size:.8rem;color:#777;">Swipe / click arrows</span>
+            <button onclick="document.querySelector('#cat-newborn .about-carousel-track').scrollBy({left:window.innerWidth*0.92,behavior:'smooth'})" aria-label="Next newborn" style="padding:4px 12px;background:#1a1a2e;color:#fdf6e3;border:none;border-radius:999px;font-size:.9rem;margin-left:6px;cursor:pointer;">▶</button>
+          </div>
+        </div>
 </main>
 </section>
 </body>

@@ -61,7 +61,7 @@
         }
         /* ponytail: scoped carousel override inside product cards only */
         .product-card .body .about-carousel {
-            overflow-x:auto;
+            overflow-x:auto;overflow-y:hidden;
             display:flex;
             gap:10px;
             padding:10px 4px;
@@ -153,7 +153,15 @@ fbq('track', 'PageView');
 </script>
 <noscript><img alt="Abstract Emporium artwork"height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1719352401749537&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel -->
-<script>fbq('track','ViewContent',{content_name:'Z3NW1CK Collection',content_category:'Candles & Wax Melts'});</script></head>
+<script>fbq('track','ViewContent',{content_name:'Z3NW1CK Collection',content_category:'Candles & Wax Melts'});</script><style>
+.slideshow-slide { flex: 0 0 100vw; max-width: 100vw; width: 100vw; scroll-snap-align: center; }
+.slideshow-track { display: flex; gap: 0; width: max-content; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
+</style>
+<style>
+*:focus{outline:3px solid #cfae00;outline-offset:2px;transition:outline .1s;}
+.slideshow-slide img, .gallery-img{display:block;max-width:100%;height:auto;}
+</style>
+</head>
 <body>
 <nav role="navigation" class="navbar">
         <div class="nav-container">
@@ -646,6 +654,40 @@ fbq('track', 'PageView');
   <script src="order.js"></script>
 <script src="cart.js"></script>
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script>
+<script>
+// Shared cart across all 3 shops
+(function() {
+  if (!window.aeCart) window.aeCart = { items: [] };
+  function save() { localStorage.setItem('ae_cart', JSON.stringify(window.aeCart.items)); }
+  function load() {
+    try { var s = localStorage.getItem('ae_cart'); if (s) window.aeCart.items = JSON.parse(s); } catch(e){}
+  }
+  load();
+  window.aeAddToCart = function(id, name, price, qty) {
+    qty = qty || 1; var existing = window.aeCart.items.find(i => i.id === id);
+    if (existing) existing.qty += qty; else window.aeCart.items.push({id:id, name:name, price:parseFloat(price)||0, qty:qty});
+    save(); alert('Added: ' + name + ' (x' + qty + ')');
+  };
+  window.aeRemoveFromCart = function(id) {
+    window.aeCart.items = window.aeCart.items.filter(i => i.id !== id); save();
+  };
+  window.aeGetCart = function() { return window.aeCart.items; };
+})();
+</script>
+
+<section id="custom-order" aria-label="Custom Order Request">
+<h3>Custom Order Request</h3>
+<form onsubmit="event.preventDefault(); alert('Custom order request saved. A merchant quote will follow within 48 hours.'); this.reset();" style="max-width:500px;margin:0 auto;background:#fdf6e3;padding:1rem;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);">
+  <label for="cust-name">Name: <input type="text" id="cust-name" required style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></label>
+  <label for="cust-email">Email: <input type="email" id="cust-email" required style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></label>
+  <label for="cust-item">Item / Description: <textarea id="cust-item" rows="3" required style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></textarea></label>
+  <label for="cust-deposit">Agreed deposit (CAD): <input type="number" id="cust-deposit" min="0" step="0.01" placeholder="e.g. 25.00" style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></label>
+  <label for="cust-notes">Notes / Reference: <textarea id="cust-notes" rows="2" style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></textarea></label>
+  <p style="font-size:.7rem;color:#777;">Terms: 50% deposit to confirm order; balance due before delivery. Refunds processed only before work begins.</p>
+  <button type="submit" style="padding:.6rem 1.2rem;background:#1a1a2e;color:#fdf6e3;border:none;border-radius:999px;font-size:.9rem;cursor:pointer;">Submit Request</button>
+</form>
+</section>
+
 </body>
 
 
@@ -657,3 +699,5 @@ fbq('track', 'PageView');
   <p style="margin: 5px 0; font-size: 0.9em;">*Online orders only • Free shipping on orders over $100</p>
 </div>
 </html
+<section id="checkout"><h2>Cart / Checkout</h2>
+<p>Checkout connected: PayPal + Canadian e-Transfer.</p></section>

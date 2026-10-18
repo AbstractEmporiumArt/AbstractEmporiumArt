@@ -115,10 +115,12 @@ fbq('track', 'PageView');
 <img src="celestial-drift-4.jpg" alt="Celestial Drift — hand-painted stars" class="slide" data-variant="gallery-cd-4" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="celestial-drift-5.jpg" alt="Celestial Drift — texture/dry-brush" class="slide" data-variant="gallery-cd-5" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="celestial-drift-6.jpg" alt="Celestial Drift — full piece, portrait" class="slide" data-variant="gallery-cd-6" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<button class="nav-btn prev" onclick="navSlide('gallery-cd',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-cd',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
 </div>
 <hr style="border:0;border-top:1px solid #3a2a4a;margin:0.8rem 0;">
       <h2 style="margin:0.6rem 0 .2rem;color:#f5d76e;text-align:center;">Celestial Drift</h2>
-<p><a href="z3nw1ck.html#checkout" style="color:#1a4a6e;text-decoration:underline;">Cart / Checkout (PayPal + e-Transfer)</a></p>
+
       <p style="margin:0 0 .3rem;text-align:center;color:#c9bda8;font-style:italic;">Lissa Beaulieu &middot; 2026 &middot; Original 1/1</p>
       <p style="margin:0 0 .6rem;text-align:center;color:#d8cfc2;font-size:.94rem;">Acrylic on canvas with silver leaf &amp; metallic accents &middot; 14 &times; 11 inches &middot; Gloss sealed</p>
       <p style="margin:0;text-align:center;font-weight:700;color:#f5d76e;font-size:1.2rem;">$80 CAD &rarr;</p>
@@ -154,10 +156,10 @@ fbq('track', 'PageView');
 
             <div class="custom-art" style="max-width:860px;margin:2.6rem auto 0;padding:1.2rem;background:#f8f4f0;border:1px solid #e8dcc8;border-radius:12px;">
                 <h2 style="margin:0 0 1rem;color:#1a1a2e;font-size:1.35rem;">Request Custom Art</h2>
-<p><a href="z3nw1ck.html#checkout" style="color:#1a4a6e;text-decoration:underline;">Cart / Checkout (PayPal + e-Transfer)</a></p>
+
 <div class="commission-form-embed" style="max-width:860px;margin:2rem auto 0;padding:1.2rem;background:#fff;border:1px solid #e8dcc8;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.03);">
 <h2 style="margin:0 0 1rem;color:#1a1a2e;font-size:1.3rem;">Start Your Request</h2>
-<p><a href="z3nw1ck.html#checkout" style="color:#1a4a6e;text-decoration:underline;">Cart / Checkout (PayPal + e-Transfer)</a></p>
+
                 <form id="commissionsForm" class="commission-form" action="https://formspree.io/f/mvgelyje" method="POST" style="display:grid;gap:12px;">
                     <div>
                         <label for="commissionName" style="font-weight:600;display:block;margin-bottom:4px;">Full Name</label>
@@ -221,15 +223,21 @@ Gallery — A Visual Journey</h2>
 <img src="about-origin-painting-1.jpg" alt="Origin 1" class="slide active" data-variant="gallery-origin-1" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-origin-painting-2.jpg" alt="Origin 2" class="slide" data-variant="gallery-origin-2" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-origin-painting-3.jpg" alt="Origin 3" class="slide" data-variant="gallery-origin-3" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
-<img src="about-origin-painting-4.jpg" alt="Origin 4" class="slide" data-variant="gallery-origin-4" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;"><div class="counter" id="count-origin" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div>
+<img src="about-origin-painting-4.jpg" alt="Origin 4" class="slide" data-variant="gallery-origin-4" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;"><div class="counter" id="count-cd" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 7<div class="counter" id="count-origin" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div>
 <button class="nav-btn prev" onclick="navSlide('gallery-origin',-1)" aria-label="Previous">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('gallery-origin',1)" aria-label="Next">&#9654;</button>
-<div class="counter" id="count-cd" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 7</div>
+</div>
 <button class="nav-btn prev" onclick="navSlide('gallery-cd',-1)" aria-label="Previous">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('gallery-cd',1)" aria-label="Next">&#9654;</button>
 
+<button class="nav-btn prev" onclick="navSlide('gallery-cd',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-cd',1)" aria-label="Next">&#9654;</button>
+<button class="nav-btn prev" onclick="navSlide('gallery-cd',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-cd',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
+<button class="nav-btn prev" onclick="navSlide('gallery-origin',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-origin',1)" aria-label="Next">&#9654;</button>
 </section>
-</section>
+<button class="nav-btn prev" onclick="navSlide('gallery-origin',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-origin',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button></section>
 
 <!-- 2. Fluid Pours on Wood -->
 <section ar
@@ -240,6 +248,10 @@ Gallery — A Visual Journey</h2>
 <button class="nav-btn prev" onclick="navSlide('gallery-wood',-1)" aria-label="Previous">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('gallery-wood',1)" aria-label="Next">&#9654;</button>
 
+<button class="nav-btn prev" onclick="navSlide('gallery-wood',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-wood',1)" aria-label="Next">&#9654;</button>
+<button class="nav-btn prev" onclick="navSlide('gallery-wood',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-wood',1)" aria-label="Next">&#9654;</button>
 </section>
 </section>
 
@@ -252,12 +264,16 @@ Gallery — A Visual Journey</h2>
 <img src="about-drawing-11.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-2" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-12.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-3" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-13.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-4" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<button class="nav-btn prev" onclick="navSlide('gallery-wood',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-wood',1)" aria-label="Next">&#9654;</button>
 <img src="about-drawing-14.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-5" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-15.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-6" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-16.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-7" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-17.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-8" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-18.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-9" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-19.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-10" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next">&#9654;</button>
 <img src="about-drawing-2.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-11" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-20.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-12" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-3.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-13" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
@@ -266,12 +282,16 @@ Gallery — A Visual Journey</h2>
 <img src="about-drawing-6.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-16" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-7.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-17" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-8.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-18" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
-<img src="about-drawing-9.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-19" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;"><div class="counter" id="count-draw" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 20</div>
+<img src="about-drawing-9.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-19" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
+<button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button><button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button><button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button><div class="counter" id="count-draw" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 20</div>
 <button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next">&#9654;</button>
-
 </div>
 
+<button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next">&#9654;</button>
 </section>
 
 <!-- 4. Sold Works — Commissions -->
@@ -292,6 +312,8 @@ Gallery — A Visual Journey</h2>
 <button class="nav-btn prev" onclick="navSlide('gallery-sold',-1)" aria-label="Previous">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('gallery-sold',1)" aria-label="Next">&#9654;</button>
 
+<button class="nav-btn prev" onclick="navSlide('gallery-sold',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-sold',1)" aria-label="Next">&#9654;</button>
 </section>
 </section>
 

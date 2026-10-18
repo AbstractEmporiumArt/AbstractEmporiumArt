@@ -111,25 +111,19 @@ fbq('track', 'PageView');
   <!-- Celestial Drift, added 2026-10-05 -->
   <div class="cd-feature" style="max-width:900px;margin:2rem auto;padding:1.2rem;border:1px solid #3a2a4a;border-radius:14px;background:#16122b;box-shadow:0 8px 32px rgba(0,0,0,0.35);">
     <a href="celestial-drift.html" style="display:block;text-decoration:none;color:inherit;">
-      <div class="cd-slideshow" style="position:relative;text-align:center;">
-        <img class="cd-slide" src="celestial-drift-main.webp" alt="Celestial Drift by Lissa Beaulieu — one-of-a-kind original mixed media painting, crescent moon over deep blacks, electric blues and metallic gold. 14x11 inches, acrylic and silver leaf on canvas." style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;" loading="lazy">
-        <img class="cd-slide" src="celestial-drift-1.jpg" alt="Celestial Drift, view 1 of 6 — full piece, portrait orientation" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
-        <img class="cd-slide" src="celestial-drift-2.jpg" alt="Celestial Drift, view 2 of 6 — detail of the crescent moon and metallic gold accents" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
-        <img class="cd-slide" src="celestial-drift-3.jpg" alt="Celestial Drift, view 3 of 6 — detail of the nebula clouds in teal and magenta" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
-        <img class="cd-slide" src="celestial-drift-4.jpg" alt="Celestial Drift, view 4 of 6 — hand-painted stars and scattered highlights" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
-        <img class="cd-slide" src="celestial-drift-5.jpg" alt="Celestial Drift, view 5 of 6 — texture and dry-brush detail" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
-        <img class="cd-slide" src="celestial-drift-6.jpg" alt="Celestial Drift, view 6 of 6 — full piece, portrait orientation" style="width:100%;max-width:380px;border-radius:8px;display:block;margin:0 auto 0.9rem;object-fit:cover;aspect-ratio:3/4;display:none;" loading="lazy">
-        <div class="cd-dots" style="text-align:center;margin-top:.4rem;">
-        <span class="cd-dot" data-i="0" style="width:9px;height:9px;border-radius:50%;background:#f5d76e;display:inline-block;margin:0 4px;cursor:pointer;"></span>
-        <span class="cd-dot" data-i="1" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
-        <span class="cd-dot" data-i="2" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
-        <span class="cd-dot" data-i="3" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
-        <span class="cd-dot" data-i="4" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
-        <span class="cd-dot" data-i="5" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
-        <span class="cd-dot" data-i="6" style="width:9px;height:9px;border-radius:50%;background:#555;display:inline-block;margin:0 4px;cursor:pointer;"></span>
-        </div>
-      </div>
-      <hr style="border:0;border-top:1px solid #3a2a4a;margin:0.8rem 0;">
+      <div class="slideshow" id="gallery-cd" style="position:relative;overflow:hidden;height:68vh;max-height:520px;background:#0f0f1a;border-radius:8px;margin-bottom:6px;">
+<img src="celestial-drift-main.webp" alt="Celestial Drift — one-of-a-kind original mixed media painting" class="slide active" data-variant="gallery-cd-0" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<img src="celestial-drift-1.jpg" alt="Celestial Drift — full piece, portrait orientation" class="slide" data-variant="gallery-cd-1" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<img src="celestial-drift-2.jpg" alt="Celestial Drift — crescent moon + metallic gold" class="slide" data-variant="gallery-cd-2" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<img src="celestial-drift-3.jpg" alt="Celestial Drift — nebula clouds teal/magenta" class="slide" data-variant="gallery-cd-3" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<img src="celestial-drift-4.jpg" alt="Celestial Drift — hand-painted stars" class="slide" data-variant="gallery-cd-4" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<img src="celestial-drift-5.jpg" alt="Celestial Drift — texture/dry-brush" class="slide" data-variant="gallery-cd-5" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<img src="celestial-drift-6.jpg" alt="Celestial Drift — full piece, portrait" class="slide" data-variant="gallery-cd-6" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<div class="counter" id="count-cd" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 7</div>
+<button class="nav-btn prev" onclick="navSlide('gallery-cd',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-cd',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
+</div>
+<hr style="border:0;border-top:1px solid #3a2a4a;margin:0.8rem 0;">
       <h2 style="margin:0.6rem 0 .2rem;color:#f5d76e;text-align:center;">Celestial Drift</h2>
 <p><a href="z3nw1ck.html#checkout" style="color:#1a4a6e;text-decoration:underline;">Cart / Checkout (PayPal + e-Transfer)</a></p>
       <p style="margin:0 0 .3rem;text-align:center;color:#c9bda8;font-style:italic;">Lissa Beaulieu &middot; 2026 &middot; Original 1/1</p>
@@ -171,19 +165,6 @@ fbq('track', 'PageView');
                 <div class="commission-packages" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:1.2rem;">
                     <div class="commission-package" style="background:#fff;padding:14px;border-radius:10px;border:1px solid #ececec;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
                         <h3 style="margin-bottom:6px;color:#2a2a3a;font-size:1.05rem;">Mini Commission</h3>
-                        <p style="margin:0;color:#555;font-size:.92rem;line-height:1.4;">Ideal for gifts, small walls, and focused concept pieces.</p>
-                    </div>
-                    <div class="commission-package" style="background:#fff;padding:14px;border-radius:10px;border:1px solid #ececec;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                        <h3 style="margin-bottom:6px;color:#2a2a3a;font-size:1.05rem;">Signature Commission</h3>
-                        <p style="margin:0;color:#555;font-size:.92rem;line-height:1.4;">Statement abstract piece with collaborative style direction.</p>
-                    </div>
-                    <div class="commission-package" style="background:#fff;padding:14px;border-radius:10px;border:1px solid #ececec;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                        <h3 style="margin-bottom:6px;color:#2a2a3a;font-size:1.05rem;">Collector Commission</h3>
-                        <p style="margin:0;color:#555;font-size:.92rem;line-height:1.4;">Large-format custom artwork with staged review checkpoints.</p>
-                    </div>
-                </div>
-                <p style="font-size:.93rem;color:#60676e;margin-top:.3rem;">After submission, you will receive a response within 24-48 hours with timeline, pricing range, and next steps.</p>
-            </div>
 
     
             <div class="commission-form-embed" style="max-width:860px;margin:2rem auto 0;padding:1.2rem;background:#fff;border:1px solid #e8dcc8;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.03);">

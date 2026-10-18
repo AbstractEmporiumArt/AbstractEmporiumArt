@@ -353,5 +353,33 @@ Gallery — A Visual Journey</h2>
 <p style="text-align:center;margin-top:1rem;"><a href="z3nw1ck.html#custom-order" style="color:#1a4a6e;text-decoration:underline;">Custom Orders — request quote + deposit</a></p>
 </main>
 <script src="script.js"></script>
+
+<script>
+// FALLBACK: directly apply display styles to slides (bypasses CSS dependency)
+document.addEventListener('DOMContentLoaded', function() {
+  // For each gallery, hide all .slide except first
+  ['gallery-cd','gallery-origin','gallery-wood','gallery-draw','gallery-sold'].forEach(function(id) {
+    var box = document.getElementById(id);
+    if (!box) return;
+    var slides = box.querySelectorAll('img');
+    slides.forEach(function(s, i) {
+      if (i === 0) { s.style.display = 'block'; s.classList.add('active'); }
+      else { s.style.display = 'none'; s.classList.remove('active'); }
+    });
+  });
+  // Ensure navSlide updates display
+  window.navSlide = function(id, delta) {
+    var box = document.getElementById(id);
+    if (!box) return;
+    var slides = Array.from(box.querySelectorAll('img'));
+    var idx = slides.findIndex(function(s) { return s.style.display !== 'none'; });
+    if (idx < 0) idx = 0;
+    idx = (idx + delta + slides.length) % slides.length;
+    slides.forEach(function(s, i) { s.style.display = (i === idx) ? 'block' : 'none'; });
+    var ctr = document.getElementById('count-' + id.replace('gallery-','')) || document.getElementById('count-cd');
+    if (ctr) ctr.textContent = (idx + 1) + ' / ' + slides.length;
+  };
+});
+</script>
 </body>
 </html>

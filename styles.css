@@ -5121,3 +5121,7 @@ textarea:focus-visible,
 .peak-note strong { color: #c0392b; }
 .peak-note .fee { font-weight: 700; color: #2d3436; background: #ffe0b2; padding: 1px 6px; border-radius: 5px; }
 @media (max-width: 600px){ .peak-note { font-size: 0.9rem; padding: 12px 14px; } }
+
+/* Verified gallery slideshow standard (LKC / AE / art-emporium) */
+.slide { display: none; position: absolute; inset: 0; object-fit: contain; width: 100%; height: 100%; }
+.slide.active { display: block; }

@@ -36,17 +36,7 @@ fbq('track', 'PageView');
 
 <style>@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}</style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Celestial Drift",
-  "image": "https://abstractemporium.art/celestial-drift-main.webp",
-  "description": "A one-of-a-kind original mixed media painting — crescent moon over deep blacks, electric blues and metallic gold. 14 by 11 inches, acrylic and silver leaf on canvas. Gloss sealed.",
-  "brand": {"@type":"Brand","name":"Abstract Emporium Art"},
-  "offers": {"@type":"Offer","price":"80.00","priceCurrency":"CAD","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","seller":{"@type":"Person","name":"Lissa Beaulieu"}}
-}
-</script>
+
 
 <style>
 @media (forced-colors: active) {
@@ -61,6 +51,24 @@ fbq('track', 'PageView');
 *:focus{outline:3px solid #cfae00;outline-offset:2px;transition:outline .1s;}
 .slideshow-slide img, .gallery-img{display:block;max-width:100%;height:auto;}
 </style>
+
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Celestial Drift",
+   "description": "One-of-a-kind original mixed media painting. Acrylic on canvas with silver leaf & metallic accents. 14 x 11 in.",
+   "image": "https://abstractemporium.art/celestial-drift-main.webp",
+   "brand": { "@type": "Brand", "name": "Abstract Emporium" },
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "CAD",
+    "price": "80.00",
+    "availability": "https://schema.org/InStock",
+    "url": "https://abstractemporium.art/art-emporium.html"
+   }
+  }
+  </script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -222,3 +230,45 @@ fbq('track', 'PageView');
 <button class="nav-btn next" onclick="navSlide('gallery-sold',1)" aria-label="Next">&#9654;</button>
 </div>
 </section>
+
+<section id="custom-order" aria-label="Custom Order Request" style="max-width:900px;margin:2rem auto;padding:1.5rem;background:#16122b;border-radius:14px;border:1px solid #3a2a4a;box-shadow:0 8px 32px rgba(0,0,0,0.35);">
+<h3 style="margin:0 0 1rem;color:#f5d76e;text-align:center;font-size:1.25rem;">Request Custom Art</h3>
+<p style="text-align:center;color:#c9bda8;margin-bottom:1.5rem;">Commission a one-of-a-kind piece. Choose Mini, Signature, or Collector tier. 24-48 hour response. 50% deposit to begin.</p>
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="max-width:500px;margin:0 auto;background:#fdf6e3;padding:1.5rem;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);">
+  <div style="margin-bottom:1rem;">
+    <label for="cust-name" style="display:block;margin-bottom:.3rem;font-weight:600;color:#3d2b1f;">Name <span style="color:#b07d2b;">*</span></label>
+    <input type="text" id="cust-name" name="name" required style="width:100%;padding:.6rem;border:1px solid #e3d9cd;border-radius:4px;font-size:1rem;">
+  </div>
+  <div style="margin-bottom:1rem;">
+    <label for="cust-email" style="display:block;margin-bottom:.3rem;font-weight:600;color:#3d2b1f;">Email <span style="color:#b07d2b;">*</span></label>
+    <input type="email" id="cust-email" name="email" required style="width:100%;padding:.6rem;border:1px solid #e3d9cd;border-radius:4px;font-size:1rem;">
+  </div>
+  <div style="margin-bottom:1rem;">
+    <label for="cust-tier" style="display:block;margin-bottom:.3rem;font-weight:600;color:#3d2b1f;">Commission Tier <span style="color:#b07d2b;">*</span></label>
+    <select id="cust-tier" name="tier" required style="width:100%;padding:.6rem;border:1px solid #e3d9cd;border-radius:4px;font-size:1rem;">
+      <option value="">Select tier</option>
+      <option value="Mini">Mini - $80-150 CAD (small study, 1-2 weeks)</option>
+      <option value="Signature">Signature - $200-400 CAD (full painting, 3-4 weeks)</option>
+      <option value="Collector">Collector - $500+ CAD (large/complex, 4-8 weeks)</option>
+    </select>
+  </div>
+  <div style="margin-bottom:1rem;">
+    <label for="cust-description" style="display:block;margin-bottom:.3rem;font-weight:600;color:#3d2b1f;">Description / Vision <span style="color:#b07d2b;">*</span></label>
+    <textarea id="cust-description" name="description" rows="4" required style="width:100%;padding:.6rem;border:1px solid #e3d9cd;border-radius:4px;font-size:1rem;font-family:inherit;"></textarea>
+  </div>
+  <div style="margin-bottom:1rem;">
+    <label for="cust-deposit" style="display:block;margin-bottom:.3rem;font-weight:600;color:#3d2b1f;">Agreed Deposit (CAD) <span style="color:#b07d2b;">*</span></label>
+    <input type="number" id="cust-deposit" name="deposit" min="40" step="1" placeholder="e.g. 100" required style="width:100%;padding:.6rem;border:1px solid #e3d9cd;border-radius:4px;font-size:1rem;">
+    <p style="font-size:.8rem;color:#777;margin:.3rem 0 0;">50% of quoted price minimum. Balance due before delivery.</p>
+  </div>
+  <div style="margin-bottom:1rem;">
+    <label for="cust-notes" style="display:block;margin-bottom:.3rem;font-weight:600;color:#3d2b1f;">Pickup / Delivery / Priority Notes</label>
+    <textarea id="cust-notes" name="notes" rows="2" style="width:100%;padding:.6rem;border:1px solid #e3d9cd;border-radius:4px;font-size:1rem;font-family:inherit;"></textarea>
+  </div>
+  <p style="font-size:.75rem;color:#777;margin:0 0 1rem;">Terms: 50% deposit confirms order; balance due before delivery. Refunds only before work begins. Pickup in Thunder Bay available; delivery options quoted separately.</p>
+  <button type="submit" style="width:100%;padding:.8rem;background:#1a1a2e;color:#fdf6e3;border:none;border-radius:999px;font-size:1rem;font-weight:700;cursor:pointer;">Submit Request</button>
+</form>
+</section>
+
+</body>
+</html>

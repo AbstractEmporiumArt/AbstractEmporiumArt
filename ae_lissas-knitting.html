@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lissa's Knitting | Abstract Emporium</title>
+<style>
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin:30px 0}
+.product-card{background:#1a1a2e;border:1px solid #2e2e4a;border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card-slideshow{position:relative;overflow:hidden;height:220px;background:#0f0f1a}
+.card-slideshow .slide{display:none;width:100%;height:220px;object-fit:cover}
+.card-slideshow .slide.active{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.card-slideshow .nav-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10}
+.card-slideshow .nav-btn.prev{left:8px}.card-slideshow .nav-btn.next{right:8px}
+.card-slideshow .counter{position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10}
+.card-dropdown{margin:6px 0 4px;padding:6px 8px;border-radius:6px;border:1px solid #2e2e4a;background:#12122b;color:#f5d76e;font-size:.9em;width:100%;box-sizing:border-box}
+.product-card .body{padding:18px;flex:1;display:flex;flex-direction:column}
+.product-card h3{margin:0 0 6px;color:#f5d76e}
+.product-card .notes{font-size:.9em;color:#aaa;margin:0 0 12px;flex:1}
+.product-card .price{font-weight:700;color:#fff;font-size:1.1em;margin-bottom:12px}
+.product-card a.buy-btn{display:block;text-align:center;padding:10px;background:#f5d76e;color:#1a1a2e;border-radius:8px;text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+<div style="max-width:960px;margin:0 auto;padding:20px;font-family:system-ui,-apple-system,sans-serif;color:#eaeaea;background:#0a0a14;">
+<h2 style="text-align:center;color:#f5d76e;margin-bottom:4px;">Lissa's Knitting — Cozy Slippers</h2>
+<p style="text-align:center;color:#aaa;font-size:.9em;margin-top:0;margin-bottom:24px;">Independent slideshow per card. One photo visible at a time. Arrow / swipe / counter. Dropdown selects size/photo set.</p>
+
+<div class="product-grid">
+
+<!-- NEWBORN -->
+<div class="product-card">
+<div class="card-slideshow" id="slide-newborn">
+<img src="lkc-product-photos/slipperspair1.jpg" alt="Newborn Pair 1" class="slide active" data-variant="newborn-p1">
+<img src="lkc-product-photos/slipperspair1-1.jpg" alt="Newborn Pair 2" class="slide" data-variant="newborn-p2">
+<img src="lkc-product-photos/slipperspair1-3.jpg" alt="Newborn Pair 3" class="slide" data-variant="newborn-p3">
+<img src="lkc-product-photos/slipperspair4.jpg" alt="Newborn Pair 4" class="slide" data-variant="newborn-p4">
+<button class="nav-btn prev" onclick="navSlide('newborn',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('newborn',1)" aria-label="Next">&#9654;</button>
+<div class="counter" id="count-newborn">1 / 2</div>
+</div>
+<div class="body">
+<h3>🧦 Cozy Slippers — Newborn</h3>
+<p class="notes">Handmade knit in checkerboard & classic stripes. 0-6 months. Made to order.</p>
+<select class="card-dropdown" onchange="setSlide('newborn',this.value)" aria-label="Newborn variant">
+<option value="newborn-p1">Newborn Pair 1 — $7</option>
+<option value="newborn-p2">Newborn Pair 2 — $7</option>
+<option value="newborn-p3">Newborn Pair 3 — $7</option>
+<option value="newborn-p4">Newborn Pair 4 — $7</option>
+</select>
+<p class="price">Newborn $7</p>
+<a class="buy-btn" href="contact.html?product=slippers-newborn">Inquire to Order</a>
+</div>
+</div>
+
+<!-- TODDLER -->
+<div class="product-card">
+<div class="card-slideshow" id="slide-toddler">
+<img src="lkc-product-photos/slipperspair2.jpg" alt="Toddler Pair 1" class="slide active" data-variant="toddler-p1">
+<img src="lkc-product-photos/slipperspair2-2.jpg" alt="Toddler Pair 2" class="slide" data-variant="toddler-p2">
+<img src="lkc-product-photos/slipperspair2-3.jpg" alt="Toddler Pair 3" class="slide" data-variant="toddler-p3">
+<img src="lkc-product-photos/slipperspair5.jpg" alt="Toddler Pair 4" class="slide" data-variant="toddler-p4">
+<img src="lkc-product-photos/slipperspair5-2.jpg" alt="Toddler Pair 5" class="slide" data-variant="toddler-p5">
+<button class="nav-btn prev" onclick="navSlide('toddler',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('toddler',1)" aria-label="Next">&#9654;</button>
+<div class="counter" id="count-toddler">1 / 2</div>
+</div>
+<div class="body">
+<h3>🧦 Cozy Slippers — Toddler</h3>
+<p class="notes">Handmade knit. 1-2 years. Checkerboard & stripe. Made to order.</p>
+<select class="card-dropdown" onchange="setSlide('toddler',this.value)" aria-label="Toddler variant">
+<option value="toddler-p1">Toddler Pair 1 — $12</option>
+<option value="toddler-p2">Toddler Pair 2 — $12</option>
+<option value="toddler-p3">Toddler Pair 3 — $12</option>
+<option value="toddler-p4">Toddler Pair 4 — $12</option>
+<option value="toddler-p5">Toddler Pair 5 — $12</option>
+</select>
+<p class="price">Toddler $12</p>
+<a class="buy-btn" href="contact.html?product=slippers-toddler">Inquire to Order</a>
+</div>
+</div>
+
+<!-- ADULT 9" / ADULT LARGE -->
+<div class="product-card">
+<div class="card-slideshow" id="slide-adult-large">
+<img src="lkc-product-photos/slipperspair3.jpg" alt="Adult 9" Large Pair 1 — checkerboard" class="slide active" data-variant="adult-large-p1">
+<img src="lkc-product-photos/slipperspair3-2.jpg" alt="Adult 9" Large Pair 2" class="slide" data-variant="adult-large-p2">
+<img src="lkc-product-photos/slipperspair3-3.jpg" alt="Adult 9" Large Pair 3" class="slide" data-variant="adult-large-p3">
+<img src="lkc-product-photos/slipperspair4.jpg" alt="Adult 9" Large Pair 4" class="slide" data-variant="adult-large-p4">
+<img src="lkc-product-photos/slipperspair4-2.jpg" alt="Adult 9" Large Pair 5" class="slide" data-variant="adult-large-p5">
+<img src="lkc-product-photos/slipperspair4-3.jpg" alt="Adult 9" Large Pair 6" class="slide" data-variant="adult-large-p6">
+<img src="lkc-product-photos/slipperspair5.jpg" alt="Adult 9" Large Pair 7" class="slide" data-variant="adult-large-p7">
+<img src="lkc-product-photos/slipperspair5-2.jpg" alt="Adult 9" Large Pair 8" class="slide" data-variant="adult-large-p8">
+<img src="lkc-product-photos/slipperspair5-3.jpg" alt="Adult 9" Large Pair 9" class="slide" data-variant="adult-large-p9">
+<img src="lkc-product-photos/slipperspair6.jpg" alt="Adult 9" Large Pair 10" class="slide" data-variant="adult-large-p10">
+<img src="lkc-product-photos/slipperspair6-2.jpg" alt="Adult 9" Large Pair 11" class="slide" data-variant="adult-large-p11">
+<button class="nav-btn prev" onclick="navSlide('adult-large',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('adult-large',1)" aria-label="Next">&#9654;</button>
+<div class="counter" id="count-adult-large">1 / 11</div>
+</div>
+<div class="body">
+<h3>🧦 Cozy Slippers — Adult 9" (Adult Large)</h3>
+<p class="notes">Adult Large = 9"-9.5" foot length ($35). Confirmed: Adult 9" = Adult Large (pricing reference + inventory). Handmade to order.</p>
+<select class="card-dropdown" onchange="setSlide('adult-large',this.value)" aria-label="Adult Large pair">
+<option value="adult-large-p1">Adult Large Pair 1 (checkerboard) — $35</option>
+<option value="adult-large-p2">Adult Large Pair 2 — $35</option>
+<option value="adult-large-p3">Adult Large Pair 3 — $35</option>
+<option value="adult-large-p4">Adult Large Pair 4 — $35</option>
+<option value="adult-large-p5">Adult Large Pair 5 — $35</option>
+<option value="adult-large-p6">Adult Large Pair 6 — $35</option>
+<option value="adult-large-p7">Adult Large Pair 7 — $35</option>
+<option value="adult-large-p8">Adult Large Pair 8 — $35</option>
+<option value="adult-large-p9">Adult Large Pair 9 — $35</option>
+<option value="adult-large-p10">Adult Large Pair 10 — $35</option>
+<option value="adult-large-p11">Adult Large Pair 11 — $35</option>
+</select>
+<p class="price">Adult Large $35</p>
+<a class="buy-btn" href="contact.html?product=slippers-adult-large">Inquire to Order</a>
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+function navSlide(id, d) {
+  const wrap = document.getElementById('slide-' + id);
+  const slides = wrap.querySelectorAll('.slide');
+  const cur = wrap.querySelector('.slide.active');
+  let i = Array.from(slides).indexOf(cur);
+  i = (i + d + slides.length) % slides.length;
+  slides.forEach(s => s.classList.remove('active'));
+  slides[i].classList.add('active');
+  document.getElementById('count-' + id).textContent = (i + 1) + ' / ' + slides.length;
+}
+function setSlide(id, v) {
+  const wrap = document.getElementById('slide-' + id);
+  const slides = wrap.querySelectorAll('.slide');
+  for (let i = 0; i < slides.length; i++) {
+    if (slides[i].dataset.variant === v) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[i].classList.add('active');
+      document.getElementById('count-' + id).textContent = (i + 1) + ' / ' + slides.length;
+      break;
+    }
+  }
+}
+['newborn','toddler','adult-large'].forEach(id => {
+  const el = document.getElementById('slide-' + id);
+  let sx = 0;
+  el.addEventListener('touchstart', e => sx = e.changedTouches[0].screenX, {passive:true});
+  el.addEventListener('touchend', e => {
+    const dx = sx - e.changedTouches[0].screenX;
+    if (Math.abs(dx) > 30) navSlide(id, dx > 0 ? 1 : -1);
+  }, {passive:true});
+});
+</script>
+</body>
+</html>

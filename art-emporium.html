@@ -98,10 +98,6 @@ fbq('track', 'PageView');
         </div>
     </nav>
 <!-- Chat Widget -->
-    </div>
-
-    
-    <!-- Gallery Section -->
     <main role="main" id="main-content">
         <div class="container">
             <h1>Art Emporium</h1>
@@ -202,11 +198,11 @@ fbq('track', 'PageView');
                         <textarea id="commissionDetails" name="message" rows="5" required placeholder="Tell us preferred colors, mood, dimensions, placement, and inspirations." style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;resize:vertical;min-height:100px;"></textarea>
                     </div>
                     <input type="hidden" name="subject" value="Commission Request">
-                    <button type="submit" style="border:none;border-radius:999px;background:#007a63;color:#ffffff;font-weight:700;padding:12px 20px;cursor:pointer;font-size:1rem;">Submit Commission Request</button>
+                    <button type="submit" onclick="this.form.submitting=true;this.textContent='Sending...';this.disabled=true;setTimeout(function(){document.getElementById('commissionStatus').textContent='Request sent. We respond within 24-48 hours.';document.getElementById('commissionStatus').style.color='#007a63';},1000);return true;" style="border:none;border-radius:999px;background:#007a63;color:#ffffff;font-weight:700;padding:12px 20px;cursor:pointer;font-size:1rem;">Submit Commission Request</button>
                 </form>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top:14px;padding-top:14px;border-top:1px solid #e8dcc8;">
                     <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="[EMAIL]">
+                    <input type="hidden" name="business" value="contact@abstractemporium.art"> <!-- Payment instructions confirmed after request -->
                     <input type="hidden" name="item_name" value="Commission Deposit">
                     <input type="hidden" name="currency_code" value="CAD">
                     <label style="font-weight:600;font-size:.95rem;">Deposit amount: </label>
@@ -230,9 +226,14 @@ Gallery — A Visual Journey</h2>
 <img src="about-origin-painting-3.jpg" alt="Origin 3" class="slide" data-variant="gallery-origin-3" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-origin-painting-4.jpg" alt="Origin 4" class="slide" data-variant="gallery-origin-4" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <div class="counter" id="count-origin" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div>
-<button class="&#9664;</button>
-<button class="&#9654;</button>
-<div class="counter" id="count-cd" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 7</div><button class="&#9664;</button><button class="&#9654;</button><div class="counter" id="count-origin" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div><button class="<button class="&#9654;</button></div>
+<button class="nav-btn prev" onclick="navSlide('gallery-cd',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-cd',1)" aria-label="Next">&#9654;</button>
+<div class="counter" id="count-cd" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 7</div>
+<button class="nav-btn prev" onclick="navSlide('gallery-cd',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-cd',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
+<button class="nav-btn prev" onclick="navSlide('gallery-cd',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-cd',1)" aria-label="Next">&#9654;</button>
+</section>
 <div class="counter" id="count-origin" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div><button class="nav-btn prev" onclick="navSlide('gallery-origin',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-origin',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button></section>
 
 <!-- 2. Fluid Pours on Wood -->
@@ -241,12 +242,15 @@ Gallery — A Visual Journey</h2>
 <div class="slideshow" id="gallery-wood" style="position:relative;overflow:hidden;height:68vh;max-height:520px;background:#0f0f1a;border-radius
 <img src="about-wood-1.jpg" alt="Wood pour 1" class="slide active" data-variant="gallery-wood-1" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-wood-2.jpg" alt="Wood pour 2" class="slide" data-variant="gallery-wood-2" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
-<img src="about-wood-3.jpg" alt="Wood pour 3" class="slide" data-variant="gallery-wood-3" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
-<img src="about-wood-4.jpg" alt="Wood pour 4" class="slide" data-variant="gallery-wood-4" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<button class="nav-btn prev" onclick="navSlide('gallery-wood',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-wood',1)" aria-label="Next">&#9654;</button>
 <div class="counter" id="count-origin" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div>
-<button class="&#9664;</button>
-<button class="&#9654;</button>
-<div class="counter" id="count-wood" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div><button class="nav-btn prev" onclick="navSlide('gallery-wood',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-wood',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button></div>
+
+
+<div class="counter" id="count-wood" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div>
+<button class="nav-btn prev" onclick="navSlide('gallery-wood',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-wood',1)" aria-label="Next">&#9654;</button>
+</section>
 </section>
 
 <!-- 3. Freehand Drawings -->
@@ -254,7 +258,7 @@ Gallery — A Visual Journey</h2>
 <h3 style="margin:0 0 .6rem;color:#f5d76e;text-align:center;font-size:1.15rem;">3. Freehand Drawings — Sketchbook &amp; Canvas</h3>
 <div class="slideshow" id="gallery-draw" style="position:relative;overflow:hidden;height:68vh;max-height:520px;background:#0f0f1a;border-radius:8px;margin-bottom:6px;">
 <img src="about-drawing-1.jpg" alt="Drawing — sketchbook / painted" class="slide active" data-variant="gallery-draw-0" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
-<img src="about-drawing-10.jpg" alt="Drawing — sketchbook / painted" class="slide active" data-variant="gallery-draw-1" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<img src="about-drawing-10.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-1" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-11.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-2" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-12.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-3" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-13.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-4" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
@@ -273,7 +277,6 @@ Gallery — A Visual Journey</h2>
 <img src="about-drawing-7.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-17" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-8.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-18" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-drawing-9.jpg" alt="Drawing — sketchbook / painted" class="slide" data-variant="gallery-draw-19" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
-<div class="counter" id="count-draw" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 20</div>
 <button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
 <div class="counter" id="count-draw" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 20</div><button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button><div class="counter" id="count-draw" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 20</div><button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button><div class="counter" id="count-draw" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 20</div><button class="nav-btn prev" onclick="navSlide('gallery-draw',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-draw',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button></div>
@@ -284,7 +287,7 @@ Gallery — A Visual Journey</h2>
 <h3 style="margin:0 0 .6rem;color:#f5d76e;text-align:center;font-size:1.15rem;">4. Sold Works — Commissions</h3>
 <div class="slideshow" id="gallery-sold" style="position:relative;overflow:hidden;height:68vh;max-height:520px;background:#0f0f1a;border-radius:8px;margin-bottom:6px;">
 <img src="about-sold-1.jpg" alt="Sold commission 1" class="slide active" data-variant="gallery-sold-0" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
-<img src="about-sold-10.jpg" alt="Sold commission 2" class="slide active" data-variant="gallery-sold-1" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
+<img src="about-sold-10.jpg" alt="Sold commission 2" class="slide" data-variant="gallery-sold-1" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-sold-11.jpg" alt="Sold commission 3" class="slide" data-variant="gallery-sold-2" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-sold-12.jpg" alt="Sold commission 4" class="slide" data-variant="gallery-sold-3" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-sold-2.jpg" alt="Sold commission 5" class="slide" data-variant="gallery-sold-4" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
@@ -295,9 +298,12 @@ Gallery — A Visual Journey</h2>
 <img src="about-sold-7.jpg" alt="Sold commission 10" class="slide" data-variant="gallery-sold-9" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <img src="about-sold-9.jpg" alt="Sold commission 11" class="slide" data-variant="gallery-sold-10" loading="lazy" style="position:absolute;inset:0;object-fit:contain;width:100%;height:100%;">
 <div class="counter" id="count-sold" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 11</div>
-<button class="&#9664;</button>
-<button class="&#96
-<div class="counter" id="count-sold" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 11</div><button class="nav-btn prev" onclick="navSlide('gallery-sold',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button><button class="nav-btn next" onclick="navSlide('gallery-sold',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button></div>
+
+
+<div class="counter" id="count-sold" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 11</div>
+<button class="nav-btn prev" onclick="navSlide('gallery-sold',-1)" aria-label="Previous">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery-sold',1)" aria-label="Next">&#9654;</button>
+</section>
 </section>
 
 

@@ -131,6 +131,8 @@
 .high-contrast{background:#000;color:#fff}
 .high-contrast a{color:#60a5fa}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.card-slideshow .slide{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:8px;background:#000}
+.card-slideshow .slide.active{display:block;position:relative}
 </style>
   <script type="application/ld+json">
   {
@@ -247,7 +249,7 @@ fbq('track', 'PageView');
       <div class="product-grid">
 <div class="product-card">
 <div class="body">
-    <h3><span style="display:inline-block;background:#1a1a2e;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px 0">✓ Ready to ship — Thunder Bay ON Canada — Accessible &amp; disability-owned</span>
+    <h3>
 🧶 Handmade Knit Tuques</h3>
     <p class="notes">Two styles: beanie (tiny sizes) and mariner ribbed, worsted weight. Colours: confetti charcoal, purple variegated, navy confetti pom, pink confetti, mustard &amp; navy (more on request).</p>
     <p class="price">Newborn $5 - Baby $8 - Toddler $12 - Child $15 - Adult $20</p>
@@ -332,11 +334,11 @@ fbq('track', 'PageView');
      <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Newborn">
      <input type="hidden" name="currency_code" value="CAD">
      <label class="size-label">Choose pair:
-      <select name="amount" id="newbornPairs" class="size-select" required>
-        <option value="7" data-img="lkc-slippers-newborn-01.jpg">Newborn (3.5-4") Pair 1 of 4 — $7</option>
-        <option value="7" data-img="lkc-slippers-newborn-02.jpg">Newborn (3.5-4") Pair 2 of 4 — $7</option>
-        <option value="7" data-img="lkc-slippers-newborn-03.jpg">Newborn (3.5-4") Pair 3 of 4 — $7</option>
-        <option value="7" data-img="lkc-slippers-newborn-04.jpg">Newborn (3.5-4") Pair 4 of 4 — $7</option>
+      <select name="amount" id="newbornPairs" class="size-select" required onchange="setSlide('newborn', this.options[this.selectedIndex].getAttribute('data-variant'))">
+        <option value="7" data-img="lkc-slippers-newborn-01.jpg" data-variant="newborn-p1">Newborn (3.5-4") Pair 1 of 4 — $7</option>
+        <option value="7" data-img="lkc-slippers-newborn-02.jpg" data-variant="newborn-p2">Newborn (3.5-4") Pair 2 of 4 — $7</option>
+        <option value="7" data-img="lkc-slippers-newborn-03.jpg" data-variant="newborn-p3">Newborn (3.5-4") Pair 3 of 4 — $7</option>
+        <option value="7" data-img="lkc-slippers-newborn-04.jpg" data-variant="newborn-p4">Newborn (3.5-4") Pair 4 of 4 — $7</option>
       </select>
      </label>
      <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
@@ -367,12 +369,12 @@ fbq('track', 'PageView');
      <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Toddler">
      <input type="hidden" name="currency_code" value="CAD">
      <label class="size-label">Choose pair:
-      <select name="amount" id="toddlerPairs" class="size-select" required>
-        <option value="12" data-img="lkc-slippers-toddler-01.jpg">Toddler (5-5.75") Pair 1 of 5 — $12</option>
-        <option value="12" data-img="lkc-slippers-toddler-02.jpg">Toddler (5-5.75") Pair 2 of 5 — $12</option>
-        <option value="12" data-img="lkc-slippers-toddler-03.jpg">Toddler (5-5.75") Pair 3 of 5 — $12</option>
-        <option value="12" data-img="lkc-slippers-toddler-04.jpg">Toddler (5-5.75") Pair 4 of 5 — $12</option>
-        <option value="12" data-img="lkc-slippers-toddler-05.jpg">Toddler (5-5.75") Pair 5 of 5 — $12</option>
+      <select name="amount" id="toddlerPairs" class="size-select" required onchange="setSlide('toddler', this.options[this.selectedIndex].getAttribute('data-variant'))">
+        <option value="12" data-img="lkc-slippers-toddler-01.jpg" data-variant="toddler-p1">Toddler (5-5.75") Pair 1 of 5 — $12</option>
+        <option value="12" data-img="lkc-slippers-toddler-02.jpg" data-variant="toddler-p2">Toddler (5-5.75") Pair 2 of 5 — $12</option>
+        <option value="12" data-img="lkc-slippers-toddler-03.jpg" data-variant="toddler-p3">Toddler (5-5.75") Pair 3 of 5 — $12</option>
+        <option value="12" data-img="lkc-slippers-toddler-04.jpg" data-variant="toddler-p4">Toddler (5-5.75") Pair 4 of 5 — $12</option>
+        <option value="12" data-img="lkc-slippers-toddler-05.jpg" data-variant="toddler-p5">Toddler (5-5.75") Pair 5 of 5 — $12</option>
       </select>
      </label>
      <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
@@ -409,18 +411,18 @@ fbq('track', 'PageView');
      <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Adult 9 inch">
      <input type="hidden" name="currency_code" value="CAD">
      <label class="size-label">Choose pair:
-      <select name="amount" id="adultPairs" class="size-select" required>
-        <option value="35" data-img="lkc-slippers-adult9-01.jpg">Adult 9" (9-9.5") Pair 1 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-02.jpg">Adult 9" (9-9.5") Pair 2 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-03.jpg">Adult 9" (9-9.5") Pair 3 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-04.jpg">Adult 9" (9-9.5") Pair 4 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-05.jpg">Adult 9" (9-9.5") Pair 5 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-06.jpg">Adult 9" (9-9.5") Pair 6 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-07.jpg">Adult 9" (9-9.5") Pair 7 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-08.jpg">Adult 9" (9-9.5") Pair 8 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-09.jpg">Adult 9" (9-9.5") Pair 9 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-10.jpg">Adult 9" (9-9.5") Pair 10 of 11 — $35</option>
-        <option value="35" data-img="lkc-slippers-adult9-11.jpg">Adult 9" (9-9.5") Pair 11 of 11 — $35</option>
+      <select name="amount" id="adultPairs" class="size-select" required onchange="setSlide('adult', this.options[this.selectedIndex].getAttribute('data-variant'))">
+        <option value="35" data-img="lkc-slippers-adult9-01.jpg" data-variant="adult-p1">Adult 9" (9-9.5") Pair 1 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-02.jpg" data-variant="adult-p2">Adult 9" (9-9.5") Pair 2 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-03.jpg" data-variant="adult-p3">Adult 9" (9-9.5") Pair 3 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-04.jpg" data-variant="adult-p4">Adult 9" (9-9.5") Pair 4 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-05.jpg" data-variant="adult-p5">Adult 9" (9-9.5") Pair 5 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-06.jpg" data-variant="adult-p6">Adult 9" (9-9.5") Pair 6 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-07.jpg" data-variant="adult-p7">Adult 9" (9-9.5") Pair 7 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-08.jpg" data-variant="adult-p8">Adult 9" (9-9.5") Pair 8 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-09.jpg" data-variant="adult-p9">Adult 9" (9-9.5") Pair 9 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-10.jpg" data-variant="adult-p10">Adult 9" (9-9.5") Pair 10 of 11 — $35</option>
+        <option value="35" data-img="lkc-slippers-adult9-11.jpg" data-variant="adult-p11">Adult 9" (9-9.5") Pair 11 of 11 — $35</option>
       </select>
      </label>
      <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">

@@ -433,43 +433,6 @@ fbq('track', 'PageView');
     <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
    </div>
   </div>
-<div class="order-box" id="customSlippers" style="max-width:860px;margin:1.5rem auto;padding:1.2rem 1.3rem;background:#fbf8f4;border:1px solid #e3d9cd;border-radius:10px;">
-   <h4 style="margin:0 0 .4rem;color:#1a1a2e;font-size:1.05rem;">Custom Order — All LKC Products (50% deposit, balance on delivery)</h4>
-   <p style="font-size:.92rem;color:#555;margin:0 0 .6rem;line-height:1.5;">Select any Lissa's Knitting product. 50% deposit holds your order; balance on delivery. We confirm colour, size, timing and details before knitting.</p>
-   <form id="slipperCustomForm" class="commission-form" action="https://formspree.io/f/mvgelyje" method="POST" style="display:grid;gap:10px;">
-    <div><label for="slipperName" style="font-weight:600;">Full Name</label><input id="slipperName" name="name" type="text" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;"></div>
-    <div><label for="slipperEmail" style="font-weight:600;">Email</label><input id="slipperEmail" name="email" type="email" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;"></div>
-    <div><label for="slipperSize" style="font-weight:600;">Product — 50% deposit required (half now, half on delivery)</label>
-          <select id="slipperSize" name="product" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
-      <option value="">Select product...</option>
-      <option value="tuque_newborn">Tuque — Newborn ($5) · 50% deposit $2.50</option>
-      <option value="tuque_baby">Tuque — Baby ($8) · 50% deposit $4</option>
-      <option value="tuque_toddler">Tuque — Toddler ($12) · 50% deposit $6</option>
-      <option value="tuque_child">Tuque — Child ($15) · 50% deposit $7.50</option>
-      <option value="tuque_adult">Tuque — Adult ($20) · 50% deposit $10</option>
-      <option value="mop_1">Mop Pad — 1 pad ($8) · 50% deposit $4</option>
-      <option value="mop_3">Mop Pad — 3 pads ($20) · 50% deposit $10</option>
-      <option value="cloth_1">Wash Cloth — 1 ($5) · 50% deposit $2.50</option>
-      <option value="cloth_2">Wash Cloth — 2 ($10) · 50% deposit $5</option>
-      <option value="newborn">Newborn Slippers ($7) · 50% deposit $3.50</option>
-      <option value="toddler">Toddler Slippers ($12) · 50% deposit $6</option>
-      <option value="adult">Adult Slippers ($35) · 50% deposit $17.50</option>
-      <option value="scarf">Reversible Scarf ($30) · 50% deposit $15</option>
-      <option value="cap">Classic Stocking Cap ($30) · 50% deposit $15</option>
-      <option value="custom">Custom / Other — specify details</option>
-     </select>
-    </div>
-    <div><label for="slipperColors" style="font-weight:600;">Colour / Pattern Preferences</label><textarea id="slipperColors" name="message" rows="4" placeholder="Colour choices, stripe patterns, or custom ideas." required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;resize:vertical;min-height:80px;"></textarea></div>
-    <input type="hidden" name="subject" value="LKC Custom Order — 50% Deposit">
-    <button type="submit" style="border:none;border-radius:999px;background:#1a1a2e;color:#fff;font-weight:700;padding:10px 18px;cursor:pointer;font-size:.95rem;">Submit Custom Request</button>
-   </form>
-   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top:10px;padding-top:10px;border-top:1px solid #e3d9cd;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-    <input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="[EMAIL]"><input type="hidden" name="item_name" value="Custom Slippers Deposit"><input type="hidden" name="currency_code" value="CAD">
-    <label style="font-weight:600;font-size:.9rem;">Deposit: </label>
-    <select name="amount" required style="padding:6px;border-radius:6px;border:1px solid #ccc;font-size:.9rem;"><option value="10">$10 deposit</option><option value="20">$20 deposit</option><option value="30">$30 deposit</option></select>
-    <button type="submit" style="border:none;border-radius:999px;background:#8a4b12;color:#fff;font-weight:700;padding:6px 14px;cursor:pointer;font-size:.85rem;">Pay Deposit</button>
-   </form>
-  </div>
 
 <div class="product-card">
    <div class="body">

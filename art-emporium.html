@@ -163,7 +163,71 @@ fbq('track', 'PageView');
                 <h2 style="margin:0 0 1rem;color:#1a1a2e;font-size:1.35rem;">Request Custom Art</h2>
 <p><a href="z3nw1ck.html#checkout" style="color:#1a4a6e;text-decoration:underline;">Cart / Checkout (PayPal + e-Transfer)</a></p>
                 <div class="commission-form-embed" style="max-width:860px;margin:2rem auto 0;padding:1.2rem;background:#fff;border:1px solid #e8dcc8;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.03);">
-                
+<h2 style="margin:0 0 1rem;color:#1a1a2e;font-size:1.3rem;">Start Your Request</h2>
+<p><a href="z3nw1ck.html#checkout" style="color:#1a4a6e;text-decoration:underline;">Cart / Checkout (PayPal + e-Transfer)</a></p>
+                <form id="commissionsForm" class="commission-form" action="https://formspree.io/f/mvgelyje" method="POST" style="display:grid;gap:12px;">
+                    <div>
+                        <label for="commissionName" style="font-weight:600;display:block;margin-bottom:4px;">Full Name</label>
+                        <input id="commissionName" name="name" type="text" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                    </div>
+                    <div>
+                        <label for="commissionEmail" style="font-weight:600;display:block;margin-bottom:4px;">Email</label>
+                        <input id="commissionEmail" name="email" type="email" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                    </div>
+                    <div>
+                        <label for="commissionType" style="font-weight:600;display:block;margin-bottom:4px;">Commission Type</label>
+                        <select id="commissionType" name="commission_type" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                            <option value="">Select one...</option>
+                            <option value="mini">Mini Commission</option>
+                            <option value="signature">Signature Commission</option>
+                            <option value="collector">Collector Commission</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="commissionBudget" style="font-weight:600;display:block;margin-bottom:4px;">Budget Range (CAD)</label>
+                        <select id="commissionBudget" name="budget_range" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                            <option value="">Select budget...</option>
+                            <option value="under_250">Under $250</option>
+                            <option value="250_750">$250 - $750</option>
+                            <option value="750_2000">$750 - $2,000</option>
+                            <option value="2000_plus">$2,000+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="commissionTimeline" style="font-weight:600;display:block;margin-bottom:4px;">Target Timeline</label>
+                        <input id="commissionTimeline" name="timeline" type="text" placeholder="Example: Needed by August 15" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+                    </div>
+                    <div>
+                        <label for="commissionDetails" style="font-weight:600;display:block;margin-bottom:4px;">Project Details</label>
+                        <textarea id="commissionDetails" name="message" rows="5" required placeholder="Tell us preferred colors, mood, dimensions, placement, and inspirations." style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit;resize:vertical;min-height:100px;"></textarea>
+                    </div>
+                    <input type="hidden" name="subject" value="Commission Request">
+                    <button type="submit" style="border:none;border-radius:999px;background:#007a63;color:#ffffff;font-weight:700;padding:12px 20px;cursor:pointer;font-size:1rem;">Submit Commission Request</button>
+                </form>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top:14px;padding-top:14px;border-top:1px solid #e8dcc8;">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="[EMAIL]">
+                    <input type="hidden" name="item_name" value="Commission Deposit">
+                    <input type="hidden" name="currency_code" value="CAD">
+                    <label style="font-weight:600;font-size:.95rem;">Deposit amount: </label>
+                    <select name="amount" required style="padding:8px;border-radius:6px;border:1px solid #ccc;margin-right:8px;">
+                        <option value="50">$50 deposit</option>
+                        <option value="100">$100 deposit</option>
+                        <option value="150">$150 deposit</option>
+                    </select>
+                    <button type="submit" style="border:none;border-radius:999px;background:#8a4b12;color:#ffffff;font-weight:700;padding:8px 16px;cursor:pointer;font-size:.9rem;">Pay Deposit</button>
+                </form>
+                <p id="commissionStatus" class="commission-note" aria-live="polite" style="font-size:.88rem;color:#60676e;margin-top:10px;"></p>
+            </div>
+
+    <!-- Footer -->
+    
+    
+
+    
+
+
+
 </div>
 </div>
 
@@ -289,56 +353,7 @@ fbq('track', 'PageView');
     
     
 
-    <section id="gallery" style="max-width:1000px;margin:3rem auto;padding:0 1rem;">
-        <h2 style="text-align:center;color:#f5d76e;margin-bottom:.5rem;">Gallery — A Visual Journey</h2>
-<p><a href="z3nw1ck.html#checkout" style="color:#1a4a6e;text-decoration:underline;">Cart / Checkout (PayPal + e-Transfer)</a></p>
-        <p style="text-align:center;color:#c9bda8;font-size:.9rem;margin-bottom:2rem;">Scroll through each collection. Every piece is original, one-of-a-kind, never duplicated.</p>
-        <h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.05rem;">Fluid Acrylic Origins — The Four That Started It</h3>
-        <div class="about-carousel" style="--count:4" aria-roledescription="carousel" aria-label="Fluid acrylic origin paintings">
-            <div class="about-carousel-track">
-                <figure class="about-slide"><img src="about-origin-painting-1.jpg" alt="Origin fluid acrylic pour — hot pink over black skeletal lines" loading="lazy" decoding="async"><figcaption>Origin 1 — hot-pink pour on raw canvas.</figcaption></figure>
-                <figure class="about-slide"><img src="about-origin-painting-2.jpg" alt="Origin fluid acrylic pour — coral and teal wash" loading="lazy" decoding="async"><figcaption>Origin 2 — coral / teal fluid wash.</figcaption></figure>
-                <figure class="about-slide"><img src="about-origin-painting-3.jpg" alt="Origin fluid acrylic pour — iridescent pastel blues" loading="lazy" decoding="async"><figcaption>Origin 3 — iridescent pastel wash.</figcaption></figure>
-                <figure class="about-slide"><img src="about-origin-painting-4.jpg" alt="Origin fluid acrylic pour — pink and gold cells" loading="lazy" decoding="async"><figcaption>Origin 4 — pink / gold metallic cells.</figcaption></figure>
-            </div>
-        </div>
-        <h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.05rem;">Fluid Pours on Wood</h3>
-        <div class="about-carousel" style="--count:4" aria-roledescription="carousel" aria-label="Wood panel fluid pours">
-            <div class="about-carousel-track">
-                <figure class="about-slide"><img src="about-wood-1.jpg" alt="Wood pour — teal over warm red" loading="lazy" decoding="async"><figcaption>Wood — cool greens over earth tones.</figcaption></figure>
-                <figure class="about-slide"><img src="about-wood-2.jpg" alt="Wood pour — teal, magenta and red swirls" loading="lazy" decoding="async"><figcaption>Wood — teal / magenta swirls.</figcaption></figure>
-                <figure class="about-slide"><img src="about-wood-3.jpg" alt="Wood pour — teal, crimson and gold marble" loading="lazy" decoding="async"><figcaption>Wood — crimson / gold marble.</figcaption></figure>
-                <figure class="about-slide"><img src="about-wood-4.jpg" alt="Wood pour — emerald, lime, turquoise and silver" loading="lazy" decoding="async"><figcaption>Wood — emerald / turquoise + silver.</figcaption></figure>
-            </div>
-        </div>
-        <h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.05rem;">Freehand Drawings — in my sketchbook and painted on canvas</h3>
-        <div class="about-carousel" style="--count:10" aria-roledescription="carousel" aria-label="Freehand drawings painted on canvas">
-            <div class="about-carousel-track">
-                <figure class="about-slide"><img src="about-drawing-9.jpg" alt="Trailer Park Boys — lounging group with kitten" loading="lazy" decoding="async"><figcaption>Trailer Park Boys — lounging group with kitten.</figcaption></figure>
-                <figure class="about-slide"><img src="about-drawing-13.jpg" alt="Aliens from The Simpsons — freehand" loading="lazy" decoding="async"><figcaption>Aliens from The Simpsons.</figcaption></figure>
-                <figure class="about-slide"><img src="about-drawing-1.jpg" alt="Pinky and the Brain freehand on galaxy background" loading="lazy" decoding="async"><figcaption>Pinky &amp; the Brain — galaxy pour.</figcaption></figure>
-                <figure class="about-slide"><img src="about-drawing-5.jpg" alt="Beavis and Butt-Head freehand sketch" loading="lazy" decoding="async"><figcaption>Beavis &amp; Butt-Head.</figcaption></figure>
-                <figure class="about-slide"><img src="about-drawing-6.jpg" alt="SpongeBob SquarePants freehand sketch" loading="lazy" decoding="async"><figcaption>SpongeBob sketch.</figcaption></figure>
-                <figure class="about-slide"><img src="about-drawing-12.jpg" alt="6 Disney character studies" loading="lazy" decoding="async"><figcaption>Disney studies panel.</figcaption></figure>
-                <figure class="about-slide"><img src="about-drawing-8.jpg" alt="9 Looney Tunes studies page" loading="lazy" decoding="async"><figcaption>Looney Tunes study page.</figcaption></figure>
-                <figure class="about-slide"><img src="about-drawing-10.jpg" alt="South Park-style cast sketch" loading="lazy" decoding="async"><figcaption>South Park-style cast.</figcaption></figure>
-                <figure class="about-slide"><img src="about-drawing-15.jpg" alt="Arthur cast sketch" loading="lazy" decoding="async"><figcaption>Arthur cast.</figcaption></figure>
-                <figure class="about-slide"><img src="about-drawing-16.jpg" alt="Winnie the Pooh crew sketch" loading="lazy" decoding="async"><figcaption>Pooh crew.</figcaption></figure>
-            </div>
-        </div>
-        <h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.05rem;">Sold Works — Commissions</h3>
-        <div class="about-carousel" style="--count:6" aria-roledescription="carousel" aria-label="Sold commission paintings">
-            <div class="about-carousel-track">
-                <figure class="about-slide"><img src="about-sold-1.jpg" alt="Sold black/red/white fluid art" loading="lazy" decoding="async"><figcaption>Sold — black/red/white pour.</figcaption></figure>
-                <figure class="about-slide"><img src="about-sold-2.jpg" alt="Sold gold/yellow/orange fluid art" loading="lazy" decoding="async"><figcaption>Sold — gold/yellow/orange pour.</figcaption></figure>
-                <figure class="about-slide"><img src="about-sold-5.jpg" alt="Sold paired paintings in situ" loading="lazy" decoding="async"><figcaption>Sold — paired paintings in situ.</figcaption></figure>
-                <figure class="about-slide"><img src="about-sold-6.jpg" alt="Sold black/white/red fluid art" loading="lazy" decoding="async"><figcaption>Sold — black/white/red pour.</figcaption></figure>
-                <figure class="about-slide"><img src="about-sold-9.jpg" alt="Sold black/purple/gold fluid art" loading="lazy" decoding="async"><figcaption>Sold — black/purple/gold pour.</figcaption></figure>
-                <figure class="about-slide"><img src="about-sold-12.jpg" alt="Sold triptych teal/purple" loading="lazy" decoding="async"><figcaption>Sold — triptych teal/purple.</figcaption></figure>
-            </div>
-        </div>
-        <p style="text-align:center;color:#777;font-size:.85rem;margin-top:1.2rem;">Every piece is original, one-of-a-kind. <a href="contact.html" style="color:#007a63;font-weight:600;">Request a custom piece</a> or <a href="lissas-knitting.html" style="color:#007a63;font-weight:600;">pair with knit slippers</a>.</p>
-    </section>
+    
 
 
 

@@ -268,7 +268,7 @@ fbq('track', 'PageView');
      <button type="submit" class="buy-btn"></button>
     </form>
     <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('tuqueSize', 'Lissa\'s Knitting - Tuque', 'lkc-product-photos/tuq-confetti-charcoal.jpg')">Add to Cart</button>
-    <a class="buy-btn" href="cart.html?item=tuque" style="background:#555;color:#ddd;">Email Order</a>
+    
    </div>
   </div>
 <div class="product-card">
@@ -290,7 +290,7 @@ fbq('track', 'PageView');
      <button type="submit" class="buy-btn"></button>
     </form>
     <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('mopSelect', 'Lissa\'s Knitting - Mop Pads', 'logo.jpg')">Add to Cart</button>
-    <a class="buy-btn" href="cart.html?item=mop-pad" style="background:#555;color:#ddd;">Email Order</a>
+    
    </div>
   </div>
 <div class="product-card">
@@ -312,7 +312,7 @@ fbq('track', 'PageView');
      <button type="submit" class="buy-btn"></button>
     </form>
     <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('clothSelect', 'Lissa\'s Knitting - Cloths', 'logo.jpg')">Add to Cart</button>
-    <a class="buy-btn" href="cart.html?item=cloth" style="background:#555;color:#ddd;">Email Order</a>
+    
    </div>
   </div>
 <div class="product-card">
@@ -345,7 +345,7 @@ fbq('track', 'PageView');
      <button type="submit" class="buy-btn"></button>
     </form>
     <button type="button" class="buy-btn add-to-cart" onclick="cartSlipper('newbornPairs', 'Lissa\'s Knitting - Slippers Newborn')">Add to Cart</button>
-    <a class="buy-btn" href="cart.html?item=slippers-newborn" style="background:#555;color:#ddd;">Email Order</a>
+    
     <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
    </div>
   </div>
@@ -381,7 +381,7 @@ fbq('track', 'PageView');
      <button type="submit" class="buy-btn"></button>
     </form>
     <button type="button" class="buy-btn add-to-cart" onclick="cartSlipper('toddlerPairs', 'Lissa\'s Knitting - Slippers Toddler')">Add to Cart</button>
-    <a class="buy-btn" href="cart.html?item=slippers-toddler" style="background:#555;color:#ddd;">Email Order</a>
+    
     <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
    </div>
   </div>
@@ -429,29 +429,38 @@ fbq('track', 'PageView');
      <button type="submit" class="buy-btn"></button>
     </form>
     <button type="button" class="buy-btn add-to-cart" onclick="cartSlipper('adultPairs', 'Lissa\'s Knitting - Slippers Adult 9 inch')">Add to Cart</button>
-    <a class="buy-btn" href="cart.html?item=slippers-adult9" style="background:#555;color:#ddd;">Email Order</a>
+    
     <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
    </div>
   </div>
 <div class="order-box" id="customSlippers" style="max-width:860px;margin:1.5rem auto;padding:1.2rem 1.3rem;background:#fbf8f4;border:1px solid #e3d9cd;border-radius:10px;">
-   <h4 style="margin:0 0 .4rem;color:#1a1a2e;font-size:1.05rem;">Custom Slippers — other sizes (made to order)</h4>
-   <p style="font-size:.92rem;color:#555;margin:0 0 .6rem;line-height:1.5;">Baby (4-5") $10 · Child (5.75-7") $15 · Youth (7-8") $20 · Adult Small (8-8.5") $25 · Adult Medium (8.5-9") $30 · Adult XL (9.5-10") $40. Tell us your size, colour and pattern — we'll confirm and knit to order.</p>
+   <h4 style="margin:0 0 .4rem;color:#1a1a2e;font-size:1.05rem;">Custom Order — All LKC Products (50% deposit, balance on delivery)</h4>
+   <p style="font-size:.92rem;color:#555;margin:0 0 .6rem;line-height:1.5;">Select any Lissa's Knitting product. 50% deposit holds your order; balance on delivery. We confirm colour, size, timing and details before knitting.</p>
    <form id="slipperCustomForm" class="commission-form" action="https://formspree.io/f/mvgelyje" method="POST" style="display:grid;gap:10px;">
     <div><label for="slipperName" style="font-weight:600;">Full Name</label><input id="slipperName" name="name" type="text" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;"></div>
     <div><label for="slipperEmail" style="font-weight:600;">Email</label><input id="slipperEmail" name="email" type="email" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;"></div>
-    <div><label for="slipperSize" style="font-weight:600;">Size / Age</label>
-     <select id="slipperSize" name="size" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
-      <option value="">Select size...</option>
-      <option value="baby">Baby (4-5") — $10</option>
-      <option value="child">Child (5.75-7") — $15</option>
-      <option value="youth">Youth (7-8") — $20</option>
-      <option value="adult_small">Adult Small (8-8.5") — $25</option>
-      <option value="adult_medium">Adult Medium (8.5-9") — $30</option>
-      <option value="adult_xl">Adult XL (9.5-10") — $40</option>
+    <div><label for="slipperSize" style="font-weight:600;">Product — 50% deposit required (half now, half on delivery)</label>
+          <select id="slipperSize" name="product" required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;">
+      <option value="">Select product...</option>
+      <option value="tuque_newborn">Tuque — Newborn ($5) · 50% deposit $2.50</option>
+      <option value="tuque_baby">Tuque — Baby ($8) · 50% deposit $4</option>
+      <option value="tuque_toddler">Tuque — Toddler ($12) · 50% deposit $6</option>
+      <option value="tuque_child">Tuque — Child ($15) · 50% deposit $7.50</option>
+      <option value="tuque_adult">Tuque — Adult ($20) · 50% deposit $10</option>
+      <option value="mop_1">Mop Pad — 1 pad ($8) · 50% deposit $4</option>
+      <option value="mop_3">Mop Pad — 3 pads ($20) · 50% deposit $10</option>
+      <option value="cloth_1">Wash Cloth — 1 ($5) · 50% deposit $2.50</option>
+      <option value="cloth_2">Wash Cloth — 2 ($10) · 50% deposit $5</option>
+      <option value="newborn">Newborn Slippers ($7) · 50% deposit $3.50</option>
+      <option value="toddler">Toddler Slippers ($12) · 50% deposit $6</option>
+      <option value="adult">Adult Slippers ($35) · 50% deposit $17.50</option>
+      <option value="scarf">Reversible Scarf ($30) · 50% deposit $15</option>
+      <option value="cap">Classic Stocking Cap ($30) · 50% deposit $15</option>
+      <option value="custom">Custom / Other — specify details</option>
      </select>
     </div>
     <div><label for="slipperColors" style="font-weight:600;">Colour / Pattern Preferences</label><textarea id="slipperColors" name="message" rows="4" placeholder="Colour choices, stripe patterns, or custom ideas." required style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font:inherit;resize:vertical;min-height:80px;"></textarea></div>
-    <input type="hidden" name="subject" value="Custom Slippers Order">
+    <input type="hidden" name="subject" value="LKC Custom Order — 50% Deposit">
     <button type="submit" style="border:none;border-radius:999px;background:#1a1a2e;color:#fff;font-weight:700;padding:10px 18px;cursor:pointer;font-size:.95rem;">Submit Custom Request</button>
    </form>
    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top:10px;padding-top:10px;border-top:1px solid #e3d9cd;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
@@ -478,7 +487,7 @@ fbq('track', 'PageView');
      <button type="submit" class="buy-btn"></button>
     </form>
     <button type="button" class="buy-btn add-to-cart" onclick="addToCartDirect('Lissa\'s Knitting - Scarf', 30, 'logo.jpg')">Add to Cart</button>
-    <a class="buy-btn" href="cart.html?item=scarf" style="background:#555;color:#ddd;">Email Order</a>
+    
    </div>
   </div>
 <div class="product-card">
@@ -497,7 +506,7 @@ fbq('track', 'PageView');
      <button type="submit" class="buy-btn"></button>
     </form>
     <button type="button" class="buy-btn add-to-cart" onclick="addToCartDirect('Lissa\'s Knitting - Stocking Cap (One Size, 27 inch)', 30, 'logo.jpg')">Add to Cart</button>
-    <a class="buy-btn" href="cart.html?item=stocking-cap" style="background:#555;color:#ddd;">Email Order</a>
+    
           </div>
         </div>
 </div>

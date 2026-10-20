@@ -160,9 +160,7 @@
 .high-contrast{background:#000;color:#fff}
 .high-contrast a{color:#60a5fa}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-.card-slideshow .slide{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:8px;background:#000}
-.card-slideshow .slide.active{display:block;position:relative}
-
+/* removed conflicting card-slideshow display:none */
 .slippers-slideshow .slide{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;border-radius:8px}
 .slippers-slideshow .slide.active{display:block;position:absolute;inset:0}
   
@@ -355,23 +353,20 @@ fbq('track', 'PageView');
     <h3>
 🧶 Handmade Knit Tuques</h3>
 
-    <!-- Newborn Tuques in-card slideshow (fixed 2026-10-20) -->
-    <p class="notes" style="margin:0 0 6px;">Newborn ribbed tuques — ready stock. $5 each. Pick a colour/angle below.</p>
-    <div class="card-slideshow" id="slide-tuque" style="position:relative;overflow:hidden;height:240px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
-<img src="lkc-newborn-tuque-1.jpg" alt="Cream ribbed newborn tuque on needles" class="slide active" data-variant="tuque-1" data-img="lkc-newborn-tuque-1.jpg" loading="eager" decoding="async" width="960" height="1280">
-<img src="lkc-newborn-tuque-2.jpg" alt="Cream ribbed newborn tuque close-up texture" class="slide" data-variant="tuque-2" data-img="lkc-newborn-tuque-2.jpg" loading="eager" decoding="async" width="960" height="1280">
-<img src="lkc-newborn-tuque-3.jpg" alt="Taupe ribbed newborn tuque" class="slide" data-variant="tuque-3" data-img="lkc-newborn-tuque-3.jpg" loading="eager" decoding="async" width="960" height="1280">
-<img src="lkc-newborn-tuque-4.jpg" alt="Maroon ribbed newborn tuque" class="slide" data-variant="tuque-4" data-img="lkc-newborn-tuque-4.jpg" loading="eager" decoding="async" width="960" height="1280">
-<button class="nav-btn prev" onclick="navSlide('tuque',-1)" aria-label="Previous" type="button">&#9664;</button>
-<button class="nav-btn next" onclick="navSlide('tuque',1)" aria-label="Next" type="button">&#9654;</button>
-<div class="counter" id="count-tuque">1 / 4</div>
-</div>
+    <!-- Newborn Tuques — simple src-swap viewer (no opacity/display battles) -->
+    <p class="notes" style="margin:0 0 6px;">Newborn ribbed tuques — ready stock. $5 each. Pick a colour below.</p>
+    <div class="tuque-viewer" id="tuque-viewer" style="position:relative;width:100%;height:280px;background:#0f0f1a;border-radius:8px;overflow:hidden;margin:8px 0 12px;">
+      <img id="tuque-view-img" src="lkc-newborn-tuque-1.jpg" alt="Cream ribbed newborn tuque on needles" width="960" height="1280" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#0f0f1a;display:block;">
+      <button type="button" class="nav-btn prev" onclick="tuqueStep(-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;">&#9664;</button>
+      <button type="button" class="nav-btn next" onclick="tuqueStep(1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;">&#9654;</button>
+      <div id="tuque-view-count" style="position:absolute;bottom:8px;right:12px;z-index:40;background:rgba(0,0,0,.75);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;">1 / 4</div>
+    </div>
     <label class="size-label">Choose newborn tuque:
-      <select id="newbornTuqueSelect" class="size-select" required onchange="setSlide('tuque', this.options[this.selectedIndex].getAttribute('data-variant'))">
-        <option value="5" data-variant="tuque-1" data-img="lkc-newborn-tuque-1.jpg" data-name="Cream Ribbed on Needles">1 — Cream Ribbed on Needles — $5</option>
-        <option value="5" data-variant="tuque-2" data-img="lkc-newborn-tuque-2.jpg" data-name="Cream Ribbed Close-up">2 — Cream Ribbed Close-up — $5</option>
-        <option value="5" data-variant="tuque-3" data-img="lkc-newborn-tuque-3.jpg" data-name="Taupe Ribbed">3 — Taupe Ribbed — $5</option>
-        <option value="5" data-variant="tuque-4" data-img="lkc-newborn-tuque-4.jpg" data-name="Maroon Ribbed">4 — Maroon Ribbed — $5</option>
+      <select id="newbornTuqueSelect" class="size-select" required onchange="tuqueSelect(this.selectedIndex)">
+        <option value="5" data-img="lkc-newborn-tuque-1.jpg" data-name="Cream Ribbed on Needles">1 — Cream Ribbed on Needles — $5</option>
+        <option value="5" data-img="lkc-newborn-tuque-2.jpg" data-name="Cream Ribbed Close-up">2 — Cream Ribbed Close-up — $5</option>
+        <option value="5" data-img="lkc-newborn-tuque-3.jpg" data-name="Taupe Ribbed">3 — Taupe Ribbed — $5</option>
+        <option value="5" data-img="lkc-newborn-tuque-4.jpg" data-name="Maroon Ribbed">4 — Maroon Ribbed — $5</option>
       </select>
     </label>
     <button type="button" class="buy-btn add-to-cart" onclick="cartTuque()">Add Selected Newborn Tuque to Cart</button>
@@ -655,19 +650,6 @@ fbq('track', 'PageView');
 <!-- navSlide deferred to end-of-page (after script.js) -->
 
 
-<script>
-function cartTuque(){
-  var sel = document.getElementById('newbornTuqueSelect');
-  if(!sel) return;
-  var opt = sel.options[sel.selectedIndex];
-  var price = parseFloat(opt.value) || 5;
-  var img = opt.getAttribute('data-img') || 'lkc-newborn-tuque-1.jpg';
-  var name = opt.getAttribute('data-name') || 'Newborn Tuque';
-  if(window.addToCartDirect){ window.addToCartDirect("Lissa's Knitting - Newborn Tuque (" + name + ")", price, img); }
-}
-// Ensure navSlide/setSlide cover slide-tuque via id "tuque"
-</script>
-
 </body>
   <script src="order.js"></script>
   <script src="cart.js"></script>
@@ -773,6 +755,61 @@ function cartTuque(){
   });
 })();
 </script>
+
+<script id="lkc-tuque-viewer">
+(function(){
+  var imgs = [
+    {src:'lkc-newborn-tuque-1.jpg', name:'Cream Ribbed on Needles', alt:'Cream ribbed newborn tuque on needles'},
+    {src:'lkc-newborn-tuque-2.jpg', name:'Cream Ribbed Close-up', alt:'Cream ribbed newborn tuque close-up texture'},
+    {src:'lkc-newborn-tuque-3.jpg', name:'Taupe Ribbed', alt:'Taupe brown ribbed newborn tuque'},
+    {src:'lkc-newborn-tuque-4.jpg', name:'Maroon Ribbed', alt:'Maroon pink ribbed newborn tuque'}
+  ];
+  // preload all so 3/4 never blank
+  imgs.forEach(function(it){ var i=new Image(); i.src=it.src; });
+  var idx = 0;
+  function paint(){
+    var el = document.getElementById('tuque-view-img');
+    var ctr = document.getElementById('tuque-view-count');
+    var sel = document.getElementById('newbornTuqueSelect');
+    if(!el) return;
+    var it = imgs[idx];
+    el.src = it.src;
+    el.alt = it.alt;
+    if(ctr) ctr.textContent = (idx+1) + ' / ' + imgs.length;
+    if(sel) sel.selectedIndex = idx;
+  }
+  window.tuqueStep = function(d){
+    idx = (idx + d + imgs.length) % imgs.length;
+    paint();
+  };
+  window.tuqueSelect = function(i){
+    if(typeof i !== 'number' || i < 0 || i >= imgs.length) return;
+    idx = i;
+    paint();
+  };
+  window.cartTuque = function(){
+    var it = imgs[idx];
+    if(window.addToCartDirect){
+      window.addToCartDirect("Lissa's Knitting - Newborn Tuque (" + it.name + ")", 5.00, it.src);
+    }
+  };
+  // swipe on viewer
+  document.addEventListener('DOMContentLoaded', function(){
+    paint();
+    var box = document.getElementById('tuque-viewer');
+    if(!box) return;
+    var sx=0;
+    box.addEventListener('touchstart', function(e){ sx=e.changedTouches[0].screenX; }, {passive:true});
+    box.addEventListener('touchend', function(e){
+      var dx = sx - e.changedTouches[0].screenX;
+      if(Math.abs(dx)>30) window.tuqueStep(dx>0?1:-1);
+    }, {passive:true});
+  });
+  // also paint immediately if DOM already ready
+  if(document.readyState !== 'loading') paint();
+})();
+</script>
+
 
   <script>
    // LKC slippers: add selected pair to cart with its specific photo

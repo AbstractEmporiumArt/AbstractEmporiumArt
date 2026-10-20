@@ -354,19 +354,19 @@ fbq('track', 'PageView');
 🧶 Handmade Knit Tuques</h3>
 
     <!-- Newborn Tuques — simple src-swap viewer (no opacity/display battles) -->
-    <p class="notes" style="margin:0 0 6px;">Newborn ribbed tuques — ready stock. $5 each. Pick a colour below.</p>
+    <p class="notes" style="margin:0 0 6px;">Completed newborn ribbed tuques — ready to ship/pickup. $5 each. Pick a colour below.</p>
     <div class="tuque-viewer" id="tuque-viewer" style="position:relative;width:100%;height:280px;background:#0f0f1a;border-radius:8px;overflow:hidden;margin:8px 0 12px;">
-      <img id="tuque-view-img" src="lkc-newborn-tuque-1.jpg" alt="Cream ribbed newborn tuque on needles" width="960" height="1280" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#0f0f1a;display:block;">
+      <img id="tuque-view-img" src="lkc-newborn-tuque-1.jpg" alt="Completed cream ribbed newborn tuque — ready" width="960" height="1280" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#0f0f1a;display:block;">
       <button type="button" class="nav-btn prev" onclick="tuqueStep(-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;">&#9664;</button>
       <button type="button" class="nav-btn next" onclick="tuqueStep(1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;">&#9654;</button>
       <div id="tuque-view-count" style="position:absolute;bottom:8px;right:12px;z-index:40;background:rgba(0,0,0,.75);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;">1 / 4</div>
     </div>
     <label class="size-label">Choose newborn tuque:
       <select id="newbornTuqueSelect" class="size-select" required onchange="tuqueSelect(this.selectedIndex)">
-        <option value="5" data-img="lkc-newborn-tuque-1.jpg" data-name="Cream Ribbed on Needles">1 — Cream Ribbed on Needles — $5</option>
-        <option value="5" data-img="lkc-newborn-tuque-2.jpg" data-name="Cream Ribbed Close-up">2 — Cream Ribbed Close-up — $5</option>
-        <option value="5" data-img="lkc-newborn-tuque-3.jpg" data-name="Taupe Ribbed">3 — Taupe Ribbed — $5</option>
-        <option value="5" data-img="lkc-newborn-tuque-4.jpg" data-name="Maroon Ribbed">4 — Maroon Ribbed — $5</option>
+        <option value="5" data-img="lkc-newborn-tuque-1.jpg" data-name="Cream Ribbed">1 — Cream Ribbed (ready) — $5</option>
+        <option value="5" data-img="lkc-newborn-tuque-2.jpg" data-name="Cream Ribbed (detail)">2 — Cream Ribbed detail (ready) — $5</option>
+        <option value="5" data-img="lkc-newborn-tuque-3.jpg" data-name="Taupe Ribbed">3 — Taupe Ribbed (ready) — $5</option>
+        <option value="5" data-img="lkc-newborn-tuque-4.jpg" data-name="Maroon Ribbed">4 — Maroon Ribbed (ready) — $5</option>
       </select>
     </label>
     <button type="button" class="buy-btn add-to-cart" onclick="cartTuque()">Add Selected Newborn Tuque to Cart</button>
@@ -759,10 +759,10 @@ fbq('track', 'PageView');
 <script id="lkc-tuque-viewer">
 (function(){
   var imgs = [
-    {src:'lkc-newborn-tuque-1.jpg', name:'Cream Ribbed on Needles', alt:'Cream ribbed newborn tuque on needles'},
-    {src:'lkc-newborn-tuque-2.jpg', name:'Cream Ribbed Close-up', alt:'Cream ribbed newborn tuque close-up texture'},
-    {src:'lkc-newborn-tuque-3.jpg', name:'Taupe Ribbed', alt:'Taupe brown ribbed newborn tuque'},
-    {src:'lkc-newborn-tuque-4.jpg', name:'Maroon Ribbed', alt:'Maroon pink ribbed newborn tuque'}
+    {src:'lkc-newborn-tuque-1.jpg', name:'Cream Ribbed', alt:'Completed cream ribbed newborn tuque — ready'},
+    {src:'lkc-newborn-tuque-2.jpg', name:'Cream Ribbed (detail)', alt:'Completed cream ribbed newborn tuque detail — ready'},
+    {src:'lkc-newborn-tuque-3.jpg', name:'Taupe Ribbed', alt:'Completed taupe ribbed newborn tuque — ready'},
+    {src:'lkc-newborn-tuque-4.jpg', name:'Maroon Ribbed', alt:'Completed maroon ribbed newborn tuque — ready'}
   ];
   // preload all so 3/4 never blank
   imgs.forEach(function(it){ var i=new Image(); i.src=it.src; });

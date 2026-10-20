@@ -29,3 +29,13 @@ Completed payment is matched to its order automatically.
 These Functions store order-match records (order #, amount, name, message) in KV.
 KV is not the public git repo and contains no code. Records hold minimal PII needed
 to match a payment to an order. Do not log full card/PayPal financial detail.
+
+
+## Shipping quotes (NetParcel via ShipEngine)
+- Endpoint: `GET|POST /api/shipping-rate?postal=…&country=CA`
+- Secrets: `SHIPENGINE_API_KEY`, optional `NETPARCEL_CARRIER_ID`, `AE_POSTAL`, `AE_ADDRESS`
+- See `docs/NETPARCEL-ORDER-MATCH-SETUP.md`
+
+## Invoice PDF on match
+- `order-match` emails owner with subject `[AELB] Order match …` and attaches `AE-invoice-{order}.pdf`
+- Requires `BREVO_API_KEY`, `OWNER_EMAIL`, `AE_FROM_EMAIL` (verified in Brevo)

@@ -92,10 +92,10 @@
         <button type="submit" class="checkout-btn">Checkout with PayPal</button>
       </form>
       ${fall15 > 0 ? `<p style="font-size:0.85em;color:#1a7f37;margin-top:6px;">🎉 FALL15 applied: 15% off your $60+ order.</p>` : `<p style="font-size:0.85em;color:#666;margin-top:6px;">Spend $60+ to unlock code <strong>FALL15</strong> (15% off).</p>`}
-      <p style="font-size:0.9em;color:#666;margin-top:10px;">Canada-wide shipping from Thunder Bay, ON — live NetParcel rate at PayPal checkout, or quote for Interac e-transfer after you share your address. TB pickup/drop-off: no shipping fee. Invoice + Order # with every paid order. Free shipping on orders over ${formatMoney(SHIPPING_THRESHOLD)} (when threshold applies).</p>
+      <p style="font-size:0.9em;color:#666;margin-top:10px;">Canada-wide from Thunder Bay, ON. <strong>PayPal:</strong> live shipping via NetParcel at checkout. <strong>E-transfer:</strong> Canada Post quote below (or we quote after your address). <strong>TB pickup/drop-off:</strong> no shipping fee. Invoice + Order # with every paid order.</p>
       <p style="font-size:0.85em;color:#666;margin-top:6px;">Paying by Interac e-Transfer? Send to <strong>[EMAIL]</strong> (auto-deposits to our Canadian bank — free for you) and put your Order # <strong>${orderNumber}</strong> in the message. Then confirm at <a href="etransfer-confirm.html?order=${orderNumber}">eTransfer confirm</a>.</p>
       <div id="etTransferQuote" style="margin-top:10px;border:1px solid #ddd;border-radius:8px;padding:10px;background:#fafaff;">
-        <label style="font-size:0.85em;font-weight:600;" for="etPostal">Get your live NetParcel shipping quote (e-Transfer):</label>
+        <label style="font-size:0.85em;font-weight:600;" for="etPostal">Canada Post shipping quote (e-Transfer · Canada only):</label>
         <div style="display:flex;gap:6px;margin-top:6px;">
           <input id="etPostal" type="text" inputmode="latin" placeholder="Postal code (e.g. M5V 2T6)" style="flex:1;padding:8px;border:1px solid #ccc;border-radius:6px;">
           <button id="etQuoteBtn" type="button" style="padding:8px 12px;border:none;border-radius:6px;background:#007a63;color:#fff;cursor:pointer;">Quote</button>
@@ -129,14 +129,14 @@
       etQuoteBtn.addEventListener('click', async () => {
         const postal = etPostal.value.trim();
         if (!postal) { etQuoteResult.textContent = 'Enter a postal code.'; return; }
-        etQuoteResult.textContent = 'Looking up live NetParcel rates…';
+        etQuoteResult.textContent = 'Looking up Canada Post rates…';
         try {
           const res = await fetch('/api/shipping-rate?postal=' + encodeURIComponent(postal) + '&country=CA', { method: 'POST' });
           const data = await res.json();
           if (!data.ok) { etQuoteResult.textContent = 'Quote unavailable: ' + (data.error || 'try again'); return; }
           if (!data.rates.length) { etQuoteResult.textContent = 'No rates returned.'; return; }
           const lines = data.rates.map(r => `• ${r.service || r.carrier}: ${formatMoney(r.amount)} ${r.currency}` + (r.est_delivery_days != null ? ` (≈${r.est_delivery_days} days)` : '')).join('<br>');
-          etQuoteResult.innerHTML = 'From Thunder Bay, ON — NetParcel live rates:<br>' + lines;
+          etQuoteResult.innerHTML = 'From Thunder Bay, ON — Canada Post:<br>' + lines + '<br><span style="color:#666">PayPal checkout still uses NetParcel live rates.</span>';
         } catch (e) {
           etQuoteResult.textContent = 'Network error fetching quote.';
         }

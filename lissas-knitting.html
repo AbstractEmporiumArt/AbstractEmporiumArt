@@ -48,6 +48,33 @@
       position: absolute !important;
       inset: 0 !important;
     }
+
+    /* Slipper card viewers — never inherit .product-card img 240px cap */
+    .product-card .card-slideshow,
+    .product-card .slip-viewer {
+      height: 260px !important;
+      max-height: none !important;
+      min-height: 220px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      background: #0f0f1a !important;
+    }
+    .product-card .card-slideshow img,
+    .product-card .slip-viewer img,
+    .product-card #newborn-view-img,
+    .product-card #toddler-view-img,
+    .product-card #adult-view-img {
+      max-height: none !important;
+      height: 100% !important;
+      width: 100% !important;
+      object-fit: contain !important;
+      object-position: center !important;
+      display: block !important;
+      position: absolute !important;
+      inset: 0 !important;
+      opacity: 1 !important;
+      z-index: 1 !important;
+    }
     .tuque-thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 0 0 10px; }
     .tuque-thumbs button {
       appearance: none; border: 2px solid #2e2e4a; border-radius: 8px; padding: 0;
@@ -469,14 +496,11 @@ fbq('track', 'PageView');
    <div class="body">
     <h3>🧶 Cozy Knit Slippers — Newborn</h3>
     <p class="notes">Hand-knit newborn slippers (3.5"-4"). The 4 pairs below are finished and ready to ship. $7 each.</p>
-    <div class="card-slideshow" id="slide-newborn" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
-<img src="lkc-slippers-newborn-01.jpg" alt="newborn pair 1" class="slide active" data-variant="newborn-p1" loading="eager" decoding="async">
-<img src="lkc-slippers-newborn-02.jpg" alt="newborn pair 2" class="slide" data-variant="newborn-p2" loading="eager" decoding="async">
-<img src="lkc-slippers-newborn-03.jpg" alt="newborn pair 3" class="slide" data-variant="newborn-p3" loading="eager" decoding="async">
-<img src="lkc-slippers-newborn-04.jpg" alt="newborn pair 4" class="slide" data-variant="newborn-p4" loading="eager" decoding="async">
-<button class="nav-btn prev" onclick="navSlide('newborn',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
-<button class="nav-btn next" onclick="navSlide('newborn',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
-<div class="counter" id="count-newborn" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div>
+    <div class="slip-viewer card-slideshow" id="slide-newborn" style="position:relative;overflow:hidden;height:260px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
+<img id="newborn-view-img" src="lkc-slippers-newborn-01.jpg" alt="Newborn slippers pair 1 of 4 — ready" width="1600" height="1200" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#0f0f1a;display:block;">
+<button type="button" class="nav-btn prev" onclick="slipStep('newborn',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:40;">&#9664;</button>
+<button type="button" class="nav-btn next" onclick="slipStep('newborn',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:40;">&#9654;</button>
+<div class="counter" id="count-newborn" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:40;">1 / 4</div>
 </div>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
      <input type="hidden" name="cmd" value="_xclick">
@@ -484,7 +508,7 @@ fbq('track', 'PageView');
      <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Newborn">
      <input type="hidden" name="currency_code" value="CAD">
      <label class="size-label">Choose pair:
-      <select name="amount" id="newbornPairs" class="size-select" required onchange="setSlide('newborn', this.options[this.selectedIndex].getAttribute('data-variant'))">
+      <select name="amount" id="newbornPairs" class="size-select" required onchange="slipSelect('newborn', this.selectedIndex)">
         <option value="7" data-img="lkc-slippers-newborn-01.jpg" data-variant="newborn-p1">Newborn (3.5-4") Pair 1 of 4 — $7</option>
         <option value="7" data-img="lkc-slippers-newborn-02.jpg" data-variant="newborn-p2">Newborn (3.5-4") Pair 2 of 4 — $7</option>
         <option value="7" data-img="lkc-slippers-newborn-03.jpg" data-variant="newborn-p3">Newborn (3.5-4") Pair 3 of 4 — $7</option>
@@ -787,6 +811,75 @@ fbq('track', 'PageView');
   });
 })();
 </script>
+
+<script id="lkc-slip-viewers">
+/* Single-img src-swap for product slippers — avoids .slide opacity/display wars (blank 3/4). */
+(function(){
+  var CATALOG = {
+    newborn: {
+      imgId: 'newborn-view-img',
+      countId: 'count-newborn',
+      selectId: 'newbornPairs',
+      items: [
+        {src:'lkc-slippers-newborn-01.jpg', alt:'Newborn slippers pair 1 of 4 — ready'},
+        {src:'lkc-slippers-newborn-02.jpg', alt:'Newborn slippers pair 2 of 4 — ready'},
+        {src:'lkc-slippers-newborn-03.jpg', alt:'Newborn slippers pair 3 of 4 — ready'},
+        {src:'lkc-slippers-newborn-04.jpg', alt:'Newborn slippers pair 4 of 4 — ready'}
+      ]
+    }
+  };
+  var idx = { newborn: 0 };
+  Object.keys(CATALOG).forEach(function(k){
+    CATALOG[k].items.forEach(function(it){ var i=new Image(); i.src=it.src; });
+  });
+  function paint(key){
+    var cat = CATALOG[key]; if(!cat) return;
+    var i = idx[key] || 0;
+    var it = cat.items[i]; if(!it) return;
+    var el = document.getElementById(cat.imgId);
+    var ctr = document.getElementById(cat.countId);
+    var sel = document.getElementById(cat.selectId);
+    if(el){ el.src = it.src; el.alt = it.alt; el.style.opacity='1'; el.style.display='block'; el.style.visibility='visible'; }
+    if(ctr) ctr.textContent = (i+1) + ' / ' + cat.items.length;
+    if(sel) sel.selectedIndex = i;
+  }
+  window.slipStep = function(key, d){
+    var cat = CATALOG[key]; if(!cat) return;
+    var n = cat.items.length;
+    idx[key] = ((idx[key]||0) + d + n) % n;
+    paint(key);
+  };
+  window.slipSelect = function(key, i){
+    var cat = CATALOG[key]; if(!cat) return;
+    if(typeof i !== 'number' || i < 0 || i >= cat.items.length) return;
+    idx[key] = i;
+    paint(key);
+  };
+  // Keep setSlide('newborn', variant) working for any leftover callers
+  var _set = window.setSlide;
+  window.setSlide = function(id, variant){
+    if(id === 'newborn' || id === 'slide-newborn'){
+      var cat = CATALOG.newborn;
+      var j;
+      for(j=0;j<cat.items.length;j++){
+        // match by filename index from variant newborn-pN
+        var m = String(variant||'').match(/p(\d+)/);
+        if(m){ slipSelect('newborn', parseInt(m[1],10)-1); return; }
+      }
+    }
+    if(typeof _set === 'function') return _set(id, variant);
+  };
+  var _nav = window.navSlide;
+  window.navSlide = function(id, delta){
+    if(id === 'newborn' || id === 'slide-newborn'){ slipStep('newborn', delta||0); return; }
+    if(typeof _nav === 'function') return _nav(id, delta);
+  };
+  function boot(){ paint('newborn'); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+})();
+</script>
+
 
 <script id="lkc-tuque-viewer">
 (function(){

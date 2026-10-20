@@ -33,54 +33,83 @@
       display: flex;
       flex-direction: column;
     }
-    .product-card img { width: 100%; height: 220px; object-fit: cover; }
-    .product-card .body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+    .product-card img { width: 100%; height: auto; max-height: 240px; object-fit: contain; background: #0f0f1a; }
+    .product-card .body { padding: 18px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
     .product-card h3 { margin: 0 0 6px; color: #f5d76e; }
     .product-card .notes { font-size: 0.9em; color: #aaa; margin: 0 0 12px; flex: 1; }
     .product-card .price { font-weight: 700; color: #fff; font-size: 1.1em; margin-bottom: 12px; }
-    .product-card a.buy-btn {
-      display: block; text-align: center; padding: 10px;
-      background: #f5d76e; color: #1a1a2e; border-radius: 8px;
-      text-decoration: none; font-weight: 700;
+    .product-card a.buy-btn, .product-card button.buy-btn {
+      display: block; text-align: center; padding: 10px; width: 100%;
+      background: #f5d76e; color: #1a1a2e; border-radius: 8px; border: none;
+      text-decoration: none; font-weight: 700; cursor: pointer; box-sizing: border-box;
+      margin-top: 8px;
     }
-    /* ponytail: slippers-slideshow overrides — force slides visible, break out of .about-slide display:none */
+    .product-card a.buy-btn:hover, .product-card button.buy-btn:hover { background: #ffefa0; }
+    .product-card .size-select, .product-card .qty-input { max-width: 100%; box-sizing: border-box; }
+    .product-card .size-label { color: #ccc; font-size: 0.9em; display: block; margin: 8px 0; }
+    /* In-card slideshow (matches slippers product cards) */
+    .product-card .card-slideshow {
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+      max-height: 220px;
+      width: 100%;
+      background: #0f0f1a;
+      border-radius: 8px;
+      margin: 8px 0 12px;
+    }
+    .product-card .card-slideshow .slide {
+      display: none;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #0f0f1a;
+    }
+    .product-card .card-slideshow .slide.active {
+      display: block;
+    }
+    .product-card .card-slideshow .nav-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,.6); color: #fff; border: none; border-radius: 50%;
+      width: 32px; height: 32px; cursor: pointer; font-size: 14px; line-height: 32px; z-index: 10;
+    }
+    .product-card .card-slideshow .nav-btn.prev { left: 6px; }
+    .product-card .card-slideshow .nav-btn.next { right: 6px; }
+    .product-card .card-slideshow .counter {
+      position: absolute; bottom: 6px; right: 10px;
+      background: rgba(0,0,0,.7); color: #fff; font-size: .75em;
+      padding: 2px 8px; border-radius: 10px; z-index: 10;
+    }
+    /* Bottom full gallery only — never inside product cards */
     .slippers-slideshow {
-      display: block !important;
-      overflow-x: auto !important;
-      overflow-y: hidden !important;
-      scroll-snap-type: x mandatory !important;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      height: 70vh;
+      max-height: 520px;
+      width: 100%;
+      max-width: 100%;
       margin: 16px 0;
+      background: #0f0f1a;
+      border-radius: 8px;
     }
-    .slippers-slideshow::-webkit-scrollbar { display: none; }
-    .slippers-slideshow .about-carousel-track {
-      display: flex !important;
-      width: max-content !important;
-      gap: 0;
+    .slippers-slideshow .slide {
+      display: none;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #0f0f1a;
     }
-    .slippers-slideshow .about-slide {
-      flex: 0 0 100% !important;
-      min-width: 100% !important;
-      display: block !important;
-      scroll-snap-align: center;
-    }
-    .slippers-slideshow .about-slide img {
-      display: block !important;
-      width: 100% !important;
-      height: auto !important;
-    }
-    /* mobile viewport sizing */
+    .slippers-slideshow .slide.active { display: block; }
     @media (max-width: 768px) {
-      .slippers-slideshow {
-        max-width: 100vw;
-        overflow-x: auto;
-      }
-      .slippers-slideshow .about-slide {
-        min-width: 90vw !important;
-      }
+      .product-grid { grid-template-columns: 1fr; gap: 16px; }
+      .product-card .card-slideshow { height: 200px; max-height: 200px; }
+      .slippers-slideshow { height: 50vh; max-height: 360px; }
     }
-    .product-card a.buy-btn:hover { background: #ffefa0; }
 
     /* ---- LKC slipper thumbnail galleries (2026-10-12 rebuild) ---- */
     .sl-gallery{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0 1rem}
@@ -163,12 +192,12 @@ fbq('track', 'PageView');
 .slippers-slideshow .about-slide { flex: 0 0 48%; max-width: 48%; width: 100%; box-sizing: border-box; overflow: hidden; margin-bottom: 12px; }
 .slippers-slideshow .about-slide img { width: 100%; max-width: 100%; height: auto; display: block; object-fit: contain; border-radius: 8px; }
 @media (max-width: 768px) {
- .slippers-slideshow .about-slide { flex: 0 0 100vw; max-width: 100vw; width: 100vw; }
+ /* removed 100% about-slide rule */
  .slippers-slideshow .about-slide img { max-height: 60vh; width: 100%; height: auto; object-fit: contain; border-radius: 8px; }
 }
 </style>
 <style>
-.slippers-slideshow .about-slide { flex:0 0 100vw; max-width:100vw; width:100vw; scroll-snap-align:center; }
+/* removed 100% about-slide rule */
 .slippers-slideshow .about-carousel-track { display:flex; gap:0; width:max-content; }
 .slippers-slideshow { overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scrollbar-width:none; scroll-behavior:smooth; }
 </style>
@@ -177,8 +206,8 @@ fbq('track', 'PageView');
 .slideshow-slide img, .gallery-img{display:block;max-width:100%;height:auto;}
 </style>
 <style>
-.sl-thumb { max-width:100vw; max-height:70vh; width:100%; height:auto; object-fit:contain; display:block; }
-.slideshow-slide img { max-width:100vw; max-height:70vh; object-fit:contain; display:block; }
+.sl-thumb { max-width:100%; max-height:70vh; width:84px; height:84px; object-fit:cover; display:block; }
+.slideshow-slide img { max-width:100%; max-height:70vh; object-fit:contain; display:block; }
 </style>
 
   <script type="application/ld+json">
@@ -256,54 +285,27 @@ fbq('track', 'PageView');
     <h3>
 🧶 Handmade Knit Tuques</h3>
 
-    <!-- Newborn Tuques Interactive Slideshow + Dropdown (added 2026-10-20, matched to slippers pattern) -->
-    <div class="slippers-slideshow" id="newborn-tuques-slideshow">
-      <div class="about-carousel-track">
-        <div class="about-slide" data-variant="1"><img src="lkc-newborn-tuque-1.jpg" alt="Cream ribbed newborn tuque on circular needles with ball of cream yarn on grey blanket" loading="lazy" decoding="async"></div>
-        <div class="about-slide" data-variant="2"><img src="lkc-newborn-tuque-2.jpg" alt="Close-up of cream ribbed newborn tuque knitting texture and detail" loading="lazy" decoding="async"></div>
-        <div class="about-slide" data-variant="3"><img src="lkc-newborn-tuque-3.jpg" alt="Taupe ribbed newborn tuque on grey background" loading="lazy" decoding="async"></div>
-        <div class="about-slide" data-variant="4"><img src="lkc-newborn-tuque-4.jpg" alt="Maroon ribbed newborn tuque on grey background" loading="lazy" decoding="async"></div>
-        <div class="about-slide" data-variant="5"><img src="lkc-newborn-tuque-5.jpg" alt="Fifth newborn tuque angle and texture detail" loading="lazy" decoding="async"></div>
-      </div>
-      <button class="nav-btn prev" onclick="navSlide('newborn-tuques', -1)">‹</button>
-      <button class="nav-btn next" onclick="navSlide('newborn-tuques', 1)">›</button>
-      <div class="counter" id="count-newborn-tuques">1 / 5</div>
-    </div>
-
-    <label class="size-label" style="display:block;margin:12px 0 8px">Choose Newborn Tuque:
-      <select id="newbornTuqueSelect" class="size-select" onchange="selectNewbornVariant(this.value)" required>
-        <option value="1">1 - Cream Ribbed on Needles ($5)</option>
-        <option value="2">2 - Cream Ribbed Close-up ($5)</option>
-        <option value="3">3 - Taupe Ribbed ($5)</option>
-        <option value="4">4 - Maroon Ribbed ($5)</option>
-        <option value="5">5 - Additional Angle ($5)</option>
+    <!-- Newborn Tuques in-card slideshow (fixed 2026-10-20) -->
+    <p class="notes" style="margin:0 0 6px;">Newborn ribbed tuques — ready stock. $5 each. Pick a colour/angle below.</p>
+    <div class="card-slideshow" id="slide-tuque" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
+<img src="lkc-newborn-tuque-1.jpg" alt="Cream ribbed newborn tuque on needles" class="slide active" data-variant="tuque-1" data-img="lkc-newborn-tuque-1.jpg" loading="lazy">
+<img src="lkc-newborn-tuque-2.jpg" alt="Cream ribbed newborn tuque close-up texture" class="slide" data-variant="tuque-2" data-img="lkc-newborn-tuque-2.jpg" loading="lazy">
+<img src="lkc-newborn-tuque-3.jpg" alt="Taupe ribbed newborn tuque" class="slide" data-variant="tuque-3" data-img="lkc-newborn-tuque-3.jpg" loading="lazy">
+<img src="lkc-newborn-tuque-4.jpg" alt="Maroon ribbed newborn tuque" class="slide" data-variant="tuque-4" data-img="lkc-newborn-tuque-4.jpg" loading="lazy">
+<button class="nav-btn prev" onclick="navSlide('tuque',-1)" aria-label="Previous" type="button">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('tuque',1)" aria-label="Next" type="button">&#9654;</button>
+<div class="counter" id="count-tuque">1 / 4</div>
+</div>
+    <label class="size-label">Choose newborn tuque:
+      <select id="newbornTuqueSelect" class="size-select" required onchange="setSlide('tuque', this.options[this.selectedIndex].getAttribute('data-variant'))">
+        <option value="5" data-variant="tuque-1" data-img="lkc-newborn-tuque-1.jpg" data-name="Cream Ribbed on Needles">1 — Cream Ribbed on Needles — $5</option>
+        <option value="5" data-variant="tuque-2" data-img="lkc-newborn-tuque-2.jpg" data-name="Cream Ribbed Close-up">2 — Cream Ribbed Close-up — $5</option>
+        <option value="5" data-variant="tuque-3" data-img="lkc-newborn-tuque-3.jpg" data-name="Taupe Ribbed">3 — Taupe Ribbed — $5</option>
+        <option value="5" data-variant="tuque-4" data-img="lkc-newborn-tuque-4.jpg" data-name="Maroon Ribbed">4 — Maroon Ribbed — $5</option>
       </select>
     </label>
-
-    <button type="button" class="buy-btn add-to-cart" onclick="addNewbornToCart()">Add Selected Newborn Tuque to Cart</button>
-
-    <div class="gal-note" style="margin-top:8px">Newborn size (approx 4–4.5″ tall). Ribbed knit in 5 colour/angle variants. $5 each. Dropdown selects which one to add to cart and updates the slideshow. Made to order or ready stock — message for timing.</div>
-
-    <script>
-    function selectNewbornVariant(n) {
-      const slides = document.querySelectorAll('#newborn-tuques-slideshow .about-slide');
-      slides.forEach(slide => slide.classList.toggle('active', slide.getAttribute('data-variant') === n));
-      document.getElementById('count-newborn-tuques').textContent = n + ' / 5';
-    }
-    function addNewbornToCart() {
-      const select = document.getElementById('newbornTuqueSelect');
-      const variant = select.value;
-      const name = select.options[select.selectedIndex].text.split(' - ')[1].replace(' ($5)', '');
-      const image = `lkc-newborn-tuque-${variant}.jpg`;
-      addToCartDirect(`Lissa's Knitting - Newborn Tuque (${name})`, 5.00, image);
-    }
-    // Initialize first slide
-    window.addEventListener('load', () => {
-      selectNewbornVariant('1');
-    });
-    </script>
-
-    <p class="notes">Ribbed Beanie Knit Mariner Hats. Two styles: beanie (tiny sizes) and mariner ribbed, worsted weight. Colours: confetti charcoal, purple variegated, navy confetti pom, pink confetti, mustard & navy (more on request).</p>
+    <button type="button" class="buy-btn add-to-cart" onclick="cartTuque()">Add Selected Newborn Tuque to Cart</button>
+<p class="notes">Ribbed Beanie Knit Mariner Hats. Two styles: beanie (tiny sizes) and mariner ribbed, worsted weight. Colours: confetti charcoal, purple variegated, navy confetti pom, pink confetti, mustard & navy (more on request).</p>
     <p class="price">Newborn $5 - Baby $8 - Toddler $12 - Child $15 - Adult $20</p>
     <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
@@ -371,7 +373,7 @@ fbq('track', 'PageView');
    <div class="body">
     <h3>🧶 Cozy Knit Slippers — Newborn</h3>
     <p class="notes">Hand-knit newborn slippers (3.5"-4"). The 4 pairs below are finished and ready to ship. $7 each.</p>
-    <div class="card-slideshow" id="slide-newborn" style="position:relative;overflow:hidden;height:240px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
+    <div class="card-slideshow" id="slide-newborn" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
 <img src="lkc-slippers-newborn-01.jpg" alt="newborn pair 1" class="slide active" data-variant="newborn-p1" loading="lazy">
 <img src="lkc-slippers-newborn-02.jpg" alt="newborn pair 2" class="slide" data-variant="newborn-p2" loading="lazy">
 <img src="lkc-slippers-newborn-03.jpg" alt="newborn pair 3" class="slide" data-variant="newborn-p3" loading="lazy">
@@ -379,7 +381,7 @@ fbq('track', 'PageView');
 <button class="nav-btn prev" onclick="navSlide('newborn',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('newborn',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
 <div class="counter" id="count-newborn" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div>
-</div>>
+</div>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
      <input type="hidden" name="cmd" value="_xclick">
      <input type="hidden" name="business" value="[EMAIL]">
@@ -403,11 +405,47 @@ fbq('track', 'PageView');
   </div>
 
   </div>
+
+<div class="product-card">
+   <div class="body">
+    <h3>🧶 Cozy Knit Slippers — Toddler</h3>
+    <p class="notes">Hand-knit toddler slippers (5"-5.75"). The 5 pairs below are finished and ready to ship. $12 each.</p>
+    <div class="card-slideshow" id="slide-toddler" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
+<img src="lkc-slippers-toddler-01.jpg" alt="toddler pair 1" class="slide active" data-variant="toddler-p1" loading="lazy">
+<img src="lkc-slippers-toddler-02.jpg" alt="toddler pair 2" class="slide" data-variant="toddler-p2" loading="lazy">
+<img src="lkc-slippers-toddler-03.jpg" alt="toddler pair 3" class="slide" data-variant="toddler-p3" loading="lazy">
+<img src="lkc-slippers-toddler-04.jpg" alt="toddler pair 4" class="slide" data-variant="toddler-p4" loading="lazy">
+<img src="lkc-slippers-toddler-05.jpg" alt="toddler pair 5" class="slide" data-variant="toddler-p5" loading="lazy">
+<button class="nav-btn prev" onclick="navSlide('toddler',-1)" aria-label="Previous" type="button">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('toddler',1)" aria-label="Next" type="button">&#9654;</button>
+<div class="counter" id="count-toddler">1 / 5</div>
+</div>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;width:100%;">
+     <input type="hidden" name="cmd" value="_xclick">
+     <input type="hidden" name="business" value="[EMAIL]">
+     <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Toddler">
+     <input type="hidden" name="currency_code" value="CAD">
+     <label class="size-label">Choose pair:
+      <select name="amount" id="toddlerPairs" class="size-select" required onchange="setSlide('toddler', this.options[this.selectedIndex].getAttribute('data-variant'))">
+        <option value="12" data-img="lkc-slippers-toddler-01.jpg" data-variant="toddler-p1">Toddler (5-5.75") Pair 1 of 5 — $12</option>
+        <option value="12" data-img="lkc-slippers-toddler-02.jpg" data-variant="toddler-p2">Toddler (5-5.75") Pair 2 of 5 — $12</option>
+        <option value="12" data-img="lkc-slippers-toddler-03.jpg" data-variant="toddler-p3">Toddler (5-5.75") Pair 3 of 5 — $12</option>
+        <option value="12" data-img="lkc-slippers-toddler-04.jpg" data-variant="toddler-p4">Toddler (5-5.75") Pair 4 of 5 — $12</option>
+        <option value="12" data-img="lkc-slippers-toddler-05.jpg" data-variant="toddler-p5">Toddler (5-5.75") Pair 5 of 5 — $12</option>
+      </select>
+     </label>
+     <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+     <button type="submit" class="buy-btn" style="display:none;" aria-hidden="true"></button>
+    </form>
+    <button type="button" class="buy-btn add-to-cart" onclick="cartSlipper('toddlerPairs', 'Lissa\'s Knitting - Slippers Toddler')">Add to Cart</button>
+    <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
+   </div>
+  </div>
 <div class="product-card">
    <div class="body">
     <h3>🧶 Cozy Knit Slippers — Adult 9"</h3>
     <p class="notes">Hand-knit adult slippers (9"-9.5" foot). The 11 pairs below are finished and ready to ship. $35 each.</p>
-    <div class="card-slideshow" id="slide-adult" style="position:relative;overflow:hidden;height:240px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
+    <div class="card-slideshow" id="slide-adult" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
 <img src="lkc-slippers-adult9-01.jpg" alt="adult pair 1" class="slide active" data-variant="adult-p1" loading="lazy">
 <img src="lkc-slippers-adult9-02.jpg" alt="adult pair 2" class="slide" data-variant="adult-p2" loading="lazy">
 <img src="lkc-slippers-adult9-03.jpg" alt="adult pair 3" class="slide" data-variant="adult-p3" loading="lazy">
@@ -422,7 +460,7 @@ fbq('track', 'PageView');
 <button class="nav-btn prev" onclick="navSlide('adult',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('adult',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
 <div class="counter" id="count-adult" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 11</div>
-</div>>
+</div>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
      <input type="hidden" name="cmd" value="_xclick">
      <input type="hidden" name="business" value="[EMAIL]">
@@ -547,8 +585,22 @@ fbq('track', 'PageView');
 <script>
 function navSlide(id,d){var w=document.getElementById("slide-"+id);var s=w.querySelectorAll(".slide");var c=w.querySelector(".slide.active");var i=Array.from(s).indexOf(c);i=(i+d+s.length)%s.length;s.forEach(x=>x.classList.remove("active"));s[i].classList.add("active");document.getElementById("count-"+id).textContent=(i+1)+" / "+s.length;}
 function setSlide(id,v){var w=document.getElementById("slide-"+id);var s=w.querySelectorAll(".slide");for(var j=0;j<s.length;j++){if(s[j].dataset.variant===v){s.forEach(x=>x.classList.remove("active"));s[j].classList.add("active");document.getElementById("count-"+id).textContent=(j+1)+" / "+s.length;break;}}}
-["newborn","toddler","adult"].forEach(id=>{var el=document.getElementById("slide-"+id);var sx=0;el.addEventListener("touchstart",e=>sx=e.changedTouches[0].screenX,{passive:true});el.addEventListener("touchend",e=>{var dx=sx-e.changedTouches[0].screenX;if(Math.abs(dx)>30)navSlide(id,dx>0?1:-1);},{passive:true});});
+["newborn","toddler","adult","tuque"].forEach(id=>{var el=document.getElementById("slide-"+id);var sx=0;el.addEventListener("touchstart",e=>sx=e.changedTouches[0].screenX,{passive:true});el.addEventListener("touchend",e=>{var dx=sx-e.changedTouches[0].screenX;if(Math.abs(dx)>30)navSlide(id,dx>0?1:-1);},{passive:true});});
 </script>
+
+<script>
+function cartTuque(){
+  var sel = document.getElementById('newbornTuqueSelect');
+  if(!sel) return;
+  var opt = sel.options[sel.selectedIndex];
+  var price = parseFloat(opt.value) || 5;
+  var img = opt.getAttribute('data-img') || 'lkc-newborn-tuque-1.jpg';
+  var name = opt.getAttribute('data-name') || 'Newborn Tuque';
+  if(window.addToCartDirect){ window.addToCartDirect("Lissa's Knitting - Newborn Tuque (" + name + ")", price, img); }
+}
+// Ensure navSlide/setSlide cover slide-tuque via id "tuque"
+</script>
+
 </body>
   <script src="order.js"></script>
   <script src="cart.js"></script>

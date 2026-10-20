@@ -256,6 +256,48 @@ fbq('track', 'PageView');
 }
 </style>
 
+
+<style id="lkc-slide-visibility-fix">
+/* Prefer opacity over display:none so all slides decode; only active is visible */
+.card-slideshow .slide,
+.slippers-slideshow .slide {
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #0f0f1a !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+.card-slideshow .slide.active,
+.slippers-slideshow .slide.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  z-index: 2 !important;
+}
+.card-slideshow {
+  height: 240px !important;
+  max-height: 240px !important;
+  min-height: 200px !important;
+}
+#slide-tuque {
+  height: 260px !important;
+  max-height: 260px !important;
+}
+.card-slideshow .nav-btn,
+.slippers-slideshow .nav-btn {
+  z-index: 30 !important;
+}
+.card-slideshow .counter,
+.slippers-slideshow .counter {
+  z-index: 30 !important;
+}
+</style>
+
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -315,11 +357,11 @@ fbq('track', 'PageView');
 
     <!-- Newborn Tuques in-card slideshow (fixed 2026-10-20) -->
     <p class="notes" style="margin:0 0 6px;">Newborn ribbed tuques — ready stock. $5 each. Pick a colour/angle below.</p>
-    <div class="card-slideshow" id="slide-tuque" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
-<img src="lkc-newborn-tuque-1.jpg" alt="Cream ribbed newborn tuque on needles" class="slide active" data-variant="tuque-1" data-img="lkc-newborn-tuque-1.jpg" loading="lazy">
-<img src="lkc-newborn-tuque-2.jpg" alt="Cream ribbed newborn tuque close-up texture" class="slide" data-variant="tuque-2" data-img="lkc-newborn-tuque-2.jpg" loading="lazy">
-<img src="lkc-newborn-tuque-3.jpg" alt="Taupe ribbed newborn tuque" class="slide" data-variant="tuque-3" data-img="lkc-newborn-tuque-3.jpg" loading="lazy">
-<img src="lkc-newborn-tuque-4.jpg" alt="Maroon ribbed newborn tuque" class="slide" data-variant="tuque-4" data-img="lkc-newborn-tuque-4.jpg" loading="lazy">
+    <div class="card-slideshow" id="slide-tuque" style="position:relative;overflow:hidden;height:240px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
+<img src="lkc-newborn-tuque-1.jpg" alt="Cream ribbed newborn tuque on needles" class="slide active" data-variant="tuque-1" data-img="lkc-newborn-tuque-1.jpg" loading="eager" decoding="async" width="960" height="1280">
+<img src="lkc-newborn-tuque-2.jpg" alt="Cream ribbed newborn tuque close-up texture" class="slide" data-variant="tuque-2" data-img="lkc-newborn-tuque-2.jpg" loading="eager" decoding="async" width="960" height="1280">
+<img src="lkc-newborn-tuque-3.jpg" alt="Taupe ribbed newborn tuque" class="slide" data-variant="tuque-3" data-img="lkc-newborn-tuque-3.jpg" loading="eager" decoding="async" width="960" height="1280">
+<img src="lkc-newborn-tuque-4.jpg" alt="Maroon ribbed newborn tuque" class="slide" data-variant="tuque-4" data-img="lkc-newborn-tuque-4.jpg" loading="eager" decoding="async" width="960" height="1280">
 <button class="nav-btn prev" onclick="navSlide('tuque',-1)" aria-label="Previous" type="button">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('tuque',1)" aria-label="Next" type="button">&#9654;</button>
 <div class="counter" id="count-tuque">1 / 4</div>
@@ -402,10 +444,10 @@ fbq('track', 'PageView');
     <h3>🧶 Cozy Knit Slippers — Newborn</h3>
     <p class="notes">Hand-knit newborn slippers (3.5"-4"). The 4 pairs below are finished and ready to ship. $7 each.</p>
     <div class="card-slideshow" id="slide-newborn" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
-<img src="lkc-slippers-newborn-01.jpg" alt="newborn pair 1" class="slide active" data-variant="newborn-p1" loading="lazy">
-<img src="lkc-slippers-newborn-02.jpg" alt="newborn pair 2" class="slide" data-variant="newborn-p2" loading="lazy">
-<img src="lkc-slippers-newborn-03.jpg" alt="newborn pair 3" class="slide" data-variant="newborn-p3" loading="lazy">
-<img src="lkc-slippers-newborn-04.jpg" alt="newborn pair 4" class="slide" data-variant="newborn-p4" loading="lazy">
+<img src="lkc-slippers-newborn-01.jpg" alt="newborn pair 1" class="slide active" data-variant="newborn-p1" loading="eager" decoding="async">
+<img src="lkc-slippers-newborn-02.jpg" alt="newborn pair 2" class="slide" data-variant="newborn-p2" loading="eager" decoding="async">
+<img src="lkc-slippers-newborn-03.jpg" alt="newborn pair 3" class="slide" data-variant="newborn-p3" loading="eager" decoding="async">
+<img src="lkc-slippers-newborn-04.jpg" alt="newborn pair 4" class="slide" data-variant="newborn-p4" loading="eager" decoding="async">
 <button class="nav-btn prev" onclick="navSlide('newborn',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('newborn',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
 <div class="counter" id="count-newborn" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 4</div>
@@ -439,11 +481,11 @@ fbq('track', 'PageView');
     <h3>🧶 Cozy Knit Slippers — Toddler</h3>
     <p class="notes">Hand-knit toddler slippers (5"-5.75"). The 5 pairs below are finished and ready to ship. $12 each.</p>
     <div class="card-slideshow" id="slide-toddler" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
-<img src="lkc-slippers-toddler-01.jpg" alt="toddler pair 1" class="slide active" data-variant="toddler-p1" loading="lazy">
-<img src="lkc-slippers-toddler-02.jpg" alt="toddler pair 2" class="slide" data-variant="toddler-p2" loading="lazy">
-<img src="lkc-slippers-toddler-03.jpg" alt="toddler pair 3" class="slide" data-variant="toddler-p3" loading="lazy">
-<img src="lkc-slippers-toddler-04.jpg" alt="toddler pair 4" class="slide" data-variant="toddler-p4" loading="lazy">
-<img src="lkc-slippers-toddler-05.jpg" alt="toddler pair 5" class="slide" data-variant="toddler-p5" loading="lazy">
+<img src="lkc-slippers-toddler-01.jpg" alt="toddler pair 1" class="slide active" data-variant="toddler-p1" loading="eager" decoding="async">
+<img src="lkc-slippers-toddler-02.jpg" alt="toddler pair 2" class="slide" data-variant="toddler-p2" loading="eager" decoding="async">
+<img src="lkc-slippers-toddler-03.jpg" alt="toddler pair 3" class="slide" data-variant="toddler-p3" loading="eager" decoding="async">
+<img src="lkc-slippers-toddler-04.jpg" alt="toddler pair 4" class="slide" data-variant="toddler-p4" loading="eager" decoding="async">
+<img src="lkc-slippers-toddler-05.jpg" alt="toddler pair 5" class="slide" data-variant="toddler-p5" loading="eager" decoding="async">
 <button class="nav-btn prev" onclick="navSlide('toddler',-1)" aria-label="Previous" type="button">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('toddler',1)" aria-label="Next" type="button">&#9654;</button>
 <div class="counter" id="count-toddler">1 / 5</div>
@@ -474,17 +516,17 @@ fbq('track', 'PageView');
     <h3>🧶 Cozy Knit Slippers — Adult 9"</h3>
     <p class="notes">Hand-knit adult slippers (9"-9.5" foot). The 11 pairs below are finished and ready to ship. $35 each.</p>
     <div class="card-slideshow" id="slide-adult" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
-<img src="lkc-slippers-adult9-01.jpg" alt="adult pair 1" class="slide active" data-variant="adult-p1" loading="lazy">
-<img src="lkc-slippers-adult9-02.jpg" alt="adult pair 2" class="slide" data-variant="adult-p2" loading="lazy">
-<img src="lkc-slippers-adult9-03.jpg" alt="adult pair 3" class="slide" data-variant="adult-p3" loading="lazy">
-<img src="lkc-slippers-adult9-04.jpg" alt="adult pair 4" class="slide" data-variant="adult-p4" loading="lazy">
-<img src="lkc-slippers-adult9-05.jpg" alt="adult pair 5" class="slide" data-variant="adult-p5" loading="lazy">
-<img src="lkc-slippers-adult9-06.jpg" alt="adult pair 6" class="slide" data-variant="adult-p6" loading="lazy">
-<img src="lkc-slippers-adult9-07.jpg" alt="adult pair 7" class="slide" data-variant="adult-p7" loading="lazy">
-<img src="lkc-slippers-adult9-08.jpg" alt="adult pair 8" class="slide" data-variant="adult-p8" loading="lazy">
-<img src="lkc-slippers-adult9-09.jpg" alt="adult pair 9" class="slide" data-variant="adult-p9" loading="lazy">
-<img src="lkc-slippers-adult9-10.jpg" alt="adult pair 10" class="slide" data-variant="adult-p10" loading="lazy">
-<img src="lkc-slippers-adult9-11.jpg" alt="adult pair 11" class="slide" data-variant="adult-p11" loading="lazy">
+<img src="lkc-slippers-adult9-01.jpg" alt="adult pair 1" class="slide active" data-variant="adult-p1" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-02.jpg" alt="adult pair 2" class="slide" data-variant="adult-p2" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-03.jpg" alt="adult pair 3" class="slide" data-variant="adult-p3" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-04.jpg" alt="adult pair 4" class="slide" data-variant="adult-p4" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-05.jpg" alt="adult pair 5" class="slide" data-variant="adult-p5" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-06.jpg" alt="adult pair 6" class="slide" data-variant="adult-p6" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-07.jpg" alt="adult pair 7" class="slide" data-variant="adult-p7" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-08.jpg" alt="adult pair 8" class="slide" data-variant="adult-p8" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-09.jpg" alt="adult pair 9" class="slide" data-variant="adult-p9" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-10.jpg" alt="adult pair 10" class="slide" data-variant="adult-p10" loading="eager" decoding="async">
+<img src="lkc-slippers-adult9-11.jpg" alt="adult pair 11" class="slide" data-variant="adult-p11" loading="eager" decoding="async">
 <button class="nav-btn prev" onclick="navSlide('adult',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('adult',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
 <div class="counter" id="count-adult" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 11</div>
@@ -560,15 +602,15 @@ fbq('track', 'PageView');
     </div><!-- /.container -->
     <h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.1rem;"><h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.1rem;text-align:center;"><h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.1rem;text-align:center;"><h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.1rem;text-align:center;">LKC Gallery — Completed & Commissioned Creations (9)</h3>
 <div class="slippers-slideshow" id="slide-gallery" style="position:relative;overflow:hidden;height:70vh;max-height:520px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
-<img src="lkc-custom-ordered-slippers.jpg" alt="Custom ordered knit slippers" class="slide active" data-variant="gallery-p1" loading="lazy">
-<img src="lkc-newborn-red-set.jpg" alt="Newborn pink pair" class="slide" data-variant="gallery-p2" loading="lazy">
-<img src="lkc-personal-2-pairs-slippers.jpg" alt="Personal colorful pairs" class="slide" data-variant="gallery-p3" loading="lazy">
-<img src="lkc-gift-4-pairs-slippers.jpg" alt="Gift 4 pairs" class="slide" data-variant="gallery-p4" loading="lazy">
-<img src="lkc-personal-slippers.jpg" alt="Personal finished" class="slide" data-variant="gallery-p5" loading="lazy">
-<img src="lkc-completed-adult-slippers.jpg" alt="Adult completed" class="slide" data-variant="gallery-p6" loading="lazy">
-<img src="lkc-sold-hockey-slippers.jpg" alt="Hockey team slippers" class="slide" data-variant="gallery-p7" loading="lazy">
-<img src="lkc-newborn-slippers-pair.jpg" alt="Newborn finished pair" class="slide" data-variant="gallery-p8" loading="lazy">
-<img src="lkc-gallery-pink-coral-slippers.jpg" alt="Pink and coral hand-knit slippers, completed pair" class="slide" data-variant="gallery-p9" loading="lazy">
+<img src="lkc-custom-ordered-slippers.jpg" alt="Custom ordered knit slippers" class="slide active" data-variant="gallery-p1" loading="eager" decoding="async">
+<img src="lkc-newborn-red-set.jpg" alt="Newborn pink pair" class="slide" data-variant="gallery-p2" loading="eager" decoding="async">
+<img src="lkc-personal-2-pairs-slippers.jpg" alt="Personal colorful pairs" class="slide" data-variant="gallery-p3" loading="eager" decoding="async">
+<img src="lkc-gift-4-pairs-slippers.jpg" alt="Gift 4 pairs" class="slide" data-variant="gallery-p4" loading="eager" decoding="async">
+<img src="lkc-personal-slippers.jpg" alt="Personal finished" class="slide" data-variant="gallery-p5" loading="eager" decoding="async">
+<img src="lkc-completed-adult-slippers.jpg" alt="Adult completed" class="slide" data-variant="gallery-p6" loading="eager" decoding="async">
+<img src="lkc-sold-hockey-slippers.jpg" alt="Hockey team slippers" class="slide" data-variant="gallery-p7" loading="eager" decoding="async">
+<img src="lkc-newborn-slippers-pair.jpg" alt="Newborn finished pair" class="slide" data-variant="gallery-p8" loading="eager" decoding="async">
+<img src="lkc-gallery-pink-coral-slippers.jpg" alt="Pink and coral hand-knit slippers, completed pair" class="slide" data-variant="gallery-p9" loading="eager" decoding="async">
 <div class="counter" id="count-slide-gallery" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 9</div>
 <button class="nav-btn prev" onclick="navSlide('gallery',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
 <button class="nav-btn next" onclick="navSlide('gallery',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
@@ -682,6 +724,16 @@ function cartTuque(){
         slides[i].classList.toggle('active', i === idx);
       }
       var ctr = resolveCounter(id, box);
+      
+      // Force decode of newly active slide (fixes blank slides 3/4 after lazy/display:none)
+      try {
+        var active = slides[idx];
+        if (active && active.tagName === 'IMG') {
+          if (!active.complete) { active.loading = 'eager'; active.setAttribute('src', active.getAttribute('src')); }
+          if (active.decode) active.decode().catch(function(){});
+        }
+      } catch (ignore) {}
+
       if (ctr) ctr.textContent = (idx + 1) + ' / ' + slides.length;
     } catch (e) {
       console.error('navSlide error', id, e);

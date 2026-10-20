@@ -228,6 +228,34 @@ fbq('track', 'PageView');
    }
   }
   </script>
+
+<style id="lkc-slide-fix">
+/* Force single-slide visibility for all LKC slideshows */
+.card-slideshow .slide,
+.slippers-slideshow .slide {
+  display: none !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  background: #0f0f1a !important;
+}
+.card-slideshow .slide.active,
+.slippers-slideshow .slide.active {
+  display: block !important;
+}
+.card-slideshow, .slippers-slideshow {
+  position: relative !important;
+  overflow: hidden !important;
+}
+.card-slideshow .nav-btn,
+.slippers-slideshow .nav-btn {
+  z-index: 20 !important;
+  pointer-events: auto !important;
+}
+</style>
+
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -542,8 +570,8 @@ fbq('track', 'PageView');
 <img src="lkc-newborn-slippers-pair.jpg" alt="Newborn finished pair" class="slide" data-variant="gallery-p8" loading="lazy">
 <img src="lkc-gallery-pink-coral-slippers.jpg" alt="Pink and coral hand-knit slippers, completed pair" class="slide" data-variant="gallery-p9" loading="lazy">
 <div class="counter" id="count-slide-gallery" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 9</div>
-<button class="nav-btn prev" onclick="navSlide('slide-gallery',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
-<button class="nav-btn next" onclick="navSlide('slide-gallery',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
+<button class="nav-btn prev" onclick="navSlide('gallery',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('gallery',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
 </div>
 <p style="text-align:center;font-size:.85rem;color:#777;margin:.3rem 0 1rem;">Swipe or click arrows — 9 completed / commissioned / gift / personal creations.</p>
 <script>
@@ -582,11 +610,8 @@ fbq('track', 'PageView');
 </form>
 </section>
 
-<script>
-function navSlide(id,d){var w=document.getElementById("slide-"+id);var s=w.querySelectorAll(".slide");var c=w.querySelector(".slide.active");var i=Array.from(s).indexOf(c);i=(i+d+s.length)%s.length;s.forEach(x=>x.classList.remove("active"));s[i].classList.add("active");document.getElementById("count-"+id).textContent=(i+1)+" / "+s.length;}
-function setSlide(id,v){var w=document.getElementById("slide-"+id);var s=w.querySelectorAll(".slide");for(var j=0;j<s.length;j++){if(s[j].dataset.variant===v){s.forEach(x=>x.classList.remove("active"));s[j].classList.add("active");document.getElementById("count-"+id).textContent=(j+1)+" / "+s.length;break;}}}
-["newborn","toddler","adult","tuque"].forEach(id=>{var el=document.getElementById("slide-"+id);var sx=0;el.addEventListener("touchstart",e=>sx=e.changedTouches[0].screenX,{passive:true});el.addEventListener("touchend",e=>{var dx=sx-e.changedTouches[0].screenX;if(Math.abs(dx)>30)navSlide(id,dx>0?1:-1);},{passive:true});});
-</script>
+<!-- navSlide deferred to end-of-page (after script.js) -->
+
 
 <script>
 function cartTuque(){
@@ -608,6 +633,95 @@ function cartTuque(){
   <script src="jsonld-core.js"></script>
   <script src="analytics-tracking.js"></script>
   <script src="script.js"></script>
+
+<script id="lkc-navslide-final">
+/* LKC slideshow nav — must load AFTER script.js (which overwrites navSlide).
+   Accepts short ids ('newborn') OR full ids ('slide-newborn', 'slide-gallery'). */
+(function () {
+  function resolveBox(id) {
+    if (!id) return null;
+    return document.getElementById(id)
+      || document.getElementById('slide-' + id)
+      || document.getElementById(id.replace(/^slide-/, ''))
+      || null;
+  }
+  function resolveCounter(id, box) {
+    var keys = [
+      'count-' + id,
+      'count-slide-' + id,
+      'count-' + id.replace(/^slide-/, ''),
+      'count-' + (box && box.id ? box.id : ''),
+      'count-' + (box && box.id ? box.id.replace(/^slide-/, '') : '')
+    ];
+    for (var i = 0; i < keys.length; i++) {
+      var el = document.getElementById(keys[i]);
+      if (el) return el;
+    }
+    if (box) {
+      var c = box.querySelector('.counter');
+      if (c) return c;
+    }
+    return null;
+  }
+  function getSlides(box) {
+    // Prefer direct children/descendants with .slide
+    return box.querySelectorAll(':scope > .slide, .slide');
+  }
+  window.navSlide = function (id, delta) {
+    try {
+      var box = resolveBox(id);
+      if (!box) { console.warn('navSlide: no box for', id); return; }
+      var slides = getSlides(box);
+      if (!slides.length) { console.warn('navSlide: no slides in', id); return; }
+      var idx = 0, i;
+      for (i = 0; i < slides.length; i++) {
+        if (slides[i].classList.contains('active')) { idx = i; break; }
+      }
+      idx = (idx + (delta || 0) + slides.length) % slides.length;
+      for (i = 0; i < slides.length; i++) {
+        slides[i].classList.toggle('active', i === idx);
+      }
+      var ctr = resolveCounter(id, box);
+      if (ctr) ctr.textContent = (idx + 1) + ' / ' + slides.length;
+    } catch (e) {
+      console.error('navSlide error', id, e);
+    }
+  };
+  window.setSlide = function (id, variant) {
+    try {
+      var box = resolveBox(id);
+      if (!box) return;
+      var slides = getSlides(box);
+      var i, idx = -1;
+      for (i = 0; i < slides.length; i++) {
+        if (slides[i].getAttribute('data-variant') === variant) { idx = i; break; }
+      }
+      if (idx < 0) return;
+      for (i = 0; i < slides.length; i++) {
+        slides[i].classList.toggle('active', i === idx);
+      }
+      var ctr = resolveCounter(id, box);
+      if (ctr) ctr.textContent = (idx + 1) + ' / ' + slides.length;
+    } catch (e) {
+      console.error('setSlide error', id, e);
+    }
+  };
+  // Touch swipe for product cards + gallery
+  ['newborn','toddler','adult','tuque','gallery','slide-gallery'].forEach(function (id) {
+    var el = resolveBox(id);
+    if (!el) return;
+    var sx = 0;
+    el.addEventListener('touchstart', function (e) {
+      sx = e.changedTouches[0].screenX;
+    }, { passive: true });
+    el.addEventListener('touchend', function (e) {
+      var dx = sx - e.changedTouches[0].screenX;
+      if (Math.abs(dx) > 30) window.navSlide(id, dx > 0 ? 1 : -1);
+    }, { passive: true });
+  });
+})();
+</script>
+
   <script>
    // LKC slippers: add selected pair to cart with its specific photo
    window.cartSlipper = function(selectId, title){

@@ -246,6 +246,10 @@ fbq('track', 'PageView');
  .product-card, .commission-package { background: Window; border: 1px solid WindowText; }
  .cd-feature { background: Window; border-color: WindowText; }
 }
+
+    .inv-badge{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.04em;padding:3px 8px;border-radius:999px;margin:0 0 8px;vertical-align:middle;}
+    .inv-ready{background:#14532d;color:#bbf7d0;border:1px solid #22c55e;}
+    .inv-mto{background:#3f3f46;color:#e4e4e7;border:1px solid #71717a;}
 </style>
 <style>
 @media (max-width:768px){.about-slide{flex:0 0 100% !important;max-width:100% !important;}.about-slide img{width:100% !important;max-width:100% !important;height:auto !important;}}</style>
@@ -424,11 +428,24 @@ fbq('track', 'PageView');
         🍂 Fall &amp; winter are our <strong>peak production season</strong>. Each piece is hand-knit to order — slippers and other knits take a few days to prepare. To <strong>beat the rush</strong>, please place your order early. Need yours <strong>ASAP</strong> (e.g., just a few days before Christmas)? Add the optional <span class="fee">$5 Priority</span> at checkout to flag it as urgent. Thank you for your patience and understanding. 💛
       </div>
 
+<div class="ae-fulfill" style="max-width:860px;margin:16px auto;padding:14px 16px;background:#f8f6f1;border:1px solid #e3d9cd;border-left:4px solid #b5651d;border-radius:10px;color:#2d2a26;font-size:.95rem;line-height:1.55;">
+  <p style="margin:0 0 6px;font-weight:800;letter-spacing:.04em;font-size:.78rem;color:#8a4b12;">PICKUP · PAYMENT · SHIPPING</p>
+  <ul style="margin:0;padding-left:1.1rem;">
+    <li><strong>Thunder Bay:</strong> pickup or local drop-off by arrangement · cash, Interac e-transfer, or PayPal</li>
+    <li><strong>Canada-wide shipping:</strong> available on online orders — rate quoted at checkout (NetParcel / Canada Post path) from Thunder Bay, ON</li>
+    <li><strong>Custom / made-to-order:</strong> message first so we lock size, colour, and timing before payment</li>
+    <li><strong>Invoices &amp; order #:</strong> included with paid orders · put your Order # in e-transfer messages</li>
+    <li><strong>Questions:</strong> <a href="contact.html" style="color:#007a63;font-weight:600;">contact form</a> or <a href="mailto:abstractemporiumart@outlook.com" style="color:#007a63;font-weight:600;">abstractemporiumart@outlook.com</a></li>
+  </ul>
+</div>
+
+
       <div class="product-grid">
 <div class="product-card">
 <div class="body">
     <h3>
 🧶 Handmade Knit Tuques</h3>
+    <span class="inv-badge inv-ready">READY NOW · LIVE STOCK</span>
 
     <!-- Newborn Tuques — 5 ready units (src-swap + labeled thumbs; light bg so 3/4 always visible) -->
     <p class="notes" style="margin:0 0 6px;">5 completed newborn ribbed tuques — ready to ship/pickup. $5 each. Tap a photo below or use arrows. <strong>1–2 cream · 3 taupe · 4 maroon · 5 cream</strong>.</p>
@@ -479,6 +496,7 @@ fbq('track', 'PageView');
 <div class="product-card">
    <div class="body">
     <h3>🧶 Mop / Swiffer Pads — Ready Stock (11)</h3>
+    <span class="inv-badge inv-ready">READY NOW · LIVE STOCK</span>
     <p class="notes">~10&quot;×6&quot; — fits Swiffer wet-jet style pads, grabs velcro, reusable. Knit/purl checkerboard texture. <strong>11 finished pads ready</strong> — pick your colour. $8 each (3 for $20 if you want a mixed pack — message me).</p>
     <div class="slip-viewer" id="slide-swiffer" style="position:relative;width:100%;height:300px;background:#f3efe8;border:1px solid #d4cfc4;border-radius:8px;overflow:hidden;margin:8px 0 8px;">
       <img id="swiffer-view-img" src="lkc-swiffer-01.jpg" alt="Hand-knit Swiffer/mop pad — Red Rainbow Edge (ready)" width="960" height="1280" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#f3efe8;display:block;opacity:1;">
@@ -509,6 +527,7 @@ fbq('track', 'PageView');
 <div class="product-card">
    <div class="body">
     <h3>🧼 Wash Cloths — Ready Stock (10)</h3>
+    <span class="inv-badge inv-ready">READY NOW · LIVE STOCK</span>
     <p class="notes">6&quot;×6&quot; textured chevron squares. Soft, reusable, eco-friendly. <strong>10 finished cloths ready</strong> — pick your colour. $5 each (message for mixed 3-pack $10).</p>
     <div class="slip-viewer" id="slide-cloth" style="position:relative;width:100%;height:300px;background:#f3efe8;border:1px solid #d4cfc4;border-radius:8px;overflow:hidden;margin:8px 0 8px;">
       <img id="cloth-view-img" src="lkc-washcloth-01.jpg" alt="Hand-knit wash cloth — Red &amp; Lilac Sparkle (ready)" width="960" height="1280" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#f3efe8;display:block;opacity:1;">
@@ -539,6 +558,7 @@ fbq('track', 'PageView');
 <div class="product-card" id="tb-local-bundle">
    <div class="body">
     <h3>🏠 Thunder Bay Local Bundle</h3>
+    <span class="inv-badge inv-ready">READY NOW · LIVE STOCK</span>
     <p class="notes"><strong>2 washcloths + 1 Swiffer pad</strong> — pick colours from ready stock. TB pickup/drop-off only (not shipped). Save $2 vs buying separate ($18 → $16).</p>
     <p class="price">$16 local bundle</p>
     <p style="font-size:.85rem;color:#aaa;margin:0 0 10px;">Message after adding with your colour picks (cloth #s + pad #), or email/DM. Cash / e-transfer on pickup.</p>
@@ -549,6 +569,7 @@ fbq('track', 'PageView');
 <div class="product-card">
    <div class="body">
     <h3>🧶 Cozy Knit Slippers — Newborn</h3>
+    <span class="inv-badge inv-ready">READY NOW · LIVE STOCK</span>
     <p class="notes">Hand-knit newborn slippers (3.5"-4"). The 4 pairs below are finished and ready to ship. $7 each.</p>
     <div class="slip-viewer card-slideshow" id="slide-newborn" style="position:relative;overflow:hidden;height:260px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
 <img id="newborn-view-img" src="lkc-slippers-newborn-01.jpg" alt="Newborn slippers pair 1 of 4 — ready" width="1600" height="1200" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#0f0f1a;display:block;">
@@ -583,6 +604,7 @@ fbq('track', 'PageView');
 <div class="product-card">
    <div class="body">
     <h3>🧶 Cozy Knit Slippers — Toddler</h3>
+    <span class="inv-badge inv-ready">READY NOW · LIVE STOCK</span>
     <p class="notes">Hand-knit toddler slippers (5"-5.75"). The 5 pairs below are finished and ready to ship. $12 each.</p>
     <div class="card-slideshow" id="slide-toddler" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
 <img src="lkc-slippers-toddler-01.jpg" alt="toddler pair 1" class="slide active" data-variant="toddler-p1" loading="eager" decoding="async">
@@ -618,6 +640,7 @@ fbq('track', 'PageView');
 <div class="product-card">
    <div class="body">
     <h3>🧶 Cozy Knit Slippers — Adult 9"</h3>
+    <span class="inv-badge inv-ready">READY NOW · LIVE STOCK</span>
     <p class="notes">Hand-knit adult slippers (9"-9.5" foot). The 11 pairs below are finished and ready to ship. $35 each.</p>
     <div class="card-slideshow" id="slide-adult" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
 <img src="lkc-slippers-adult9-01.jpg" alt="adult pair 1" class="slide active" data-variant="adult-p1" loading="eager" decoding="async">
@@ -746,6 +769,7 @@ fbq('track', 'PageView');
 
 <section id="custom-order" aria-label="Custom Order Request">
 <h3>Custom Order Request</h3>
+    <span class="inv-badge inv-mto">MADE TO ORDER · MESSAGE FIRST</span>
 <form onsubmit="event.preventDefault(); alert('Request saved (ID: AE-'+Date.now()+'). A merchant quote and timeline will follow within 48 hours.'); this.reset();" style="max-width:500px;margin:0 auto;background:#fdf6e3;padding:1rem;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);">
   <label for="cust-name">Name: <input type="text" id="cust-name" required style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></label>
   <label for="cust-email">Email: <input type="email" id="cust-email" required style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></label>

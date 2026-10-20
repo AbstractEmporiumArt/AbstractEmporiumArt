@@ -92,7 +92,7 @@
         <button type="submit" class="checkout-btn">Checkout with PayPal</button>
       </form>
       ${fall15 > 0 ? `<p style="font-size:0.85em;color:#1a7f37;margin-top:6px;">🎉 FALL15 applied: 15% off your $60+ order.</p>` : `<p style="font-size:0.85em;color:#666;margin-top:6px;">Spend $60+ to unlock code <strong>FALL15</strong> (15% off).</p>`}
-      <p style="font-size:0.9em;color:#666;margin-top:10px;">Shipping via NetParcel (real-time rate at PayPal checkout, or quoted for e-Transfer after your address). From Thunder Bay, ON. Free shipping on orders over ${formatMoney(SHIPPING_THRESHOLD)}.</p>
+      <p style="font-size:0.9em;color:#666;margin-top:10px;">Canada-wide shipping from Thunder Bay, ON — live NetParcel rate at PayPal checkout, or quote for Interac e-transfer after you share your address. TB pickup/drop-off: no shipping fee. Invoice + Order # with every paid order. Free shipping on orders over ${formatMoney(SHIPPING_THRESHOLD)} (when threshold applies).</p>
       <p style="font-size:0.85em;color:#666;margin-top:6px;">Paying by Interac e-Transfer? Send to <strong>[EMAIL]</strong> (auto-deposits to our Canadian bank — free for you) and put your Order # <strong>${orderNumber}</strong> in the message. Then confirm at <a href="etransfer-confirm.html?order=${orderNumber}">eTransfer confirm</a>.</p>
       <div id="etTransferQuote" style="margin-top:10px;border:1px solid #ddd;border-radius:8px;padding:10px;background:#fafaff;">
         <label style="font-size:0.85em;font-weight:600;" for="etPostal">Get your live NetParcel shipping quote (e-Transfer):</label>

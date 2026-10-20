@@ -34,6 +34,13 @@
       flex-direction: column;
     }
     .product-card img { width: 100%; height: auto; max-height: 240px; object-fit: contain; background: #0f0f1a; }
+    .product-card #swiffer-view-img, .product-card #slide-swiffer img {
+      max-height: none !important; height: 100% !important; width: 100% !important;
+      object-fit: contain !important; position: absolute !important; inset: 0 !important;
+      display: block !important; background: #f3efe8 !important;
+    }
+    .product-card #slide-swiffer { height: 300px !important; max-height: none !important; background: #f3efe8 !important; }
+
     .product-card #cloth-view-img, .product-card #slide-cloth img {
       max-height: none !important; height: 100% !important; width: 100% !important;
       object-fit: contain !important; position: absolute !important; inset: 0 !important;
@@ -459,24 +466,32 @@ fbq('track', 'PageView');
   </div>
 <div class="product-card">
    <div class="body">
-    <h3>🧶 Mop / Swiffer Pads</h3>
-    <p class="notes">10"x6" fits on bottom of Swiffer wet jet pad; holds onto velcro, reusable. Stitch knit and purl checkerboard.</p>
-    <p class="price">$8 ea - 3 for $20</p>
-    <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
-     <input type="hidden" name="cmd" value="_xclick">
-     <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
-     <input type="hidden" name="item_name" value="Lissa's Knitting - Mop Pads">
-     <input type="hidden" name="currency_code" value="CAD">
-     <label class="size-label">Pack: <select name="amount" id="mopSelect" class="size-select" required>
-      <option value="8">1 pad - $8</option>
-      <option value="20">3 pads - $20</option>
-     </select></label>
-     <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
-     <button type="submit" class="buy-btn"></button>
-    </form>
-    <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('mopSelect', 'Lissa\'s Knitting - Mop Pads', 'logo.jpg')">Add to Cart</button>
-    
+    <h3>🧶 Mop / Swiffer Pads — Ready Stock (11)</h3>
+    <p class="notes">~10&quot;×6&quot; — fits Swiffer wet-jet style pads, grabs velcro, reusable. Knit/purl checkerboard texture. <strong>11 finished pads ready</strong> — pick your colour. $8 each (3 for $20 if you want a mixed pack — message me).</p>
+    <div class="slip-viewer" id="slide-swiffer" style="position:relative;width:100%;height:300px;background:#f3efe8;border:1px solid #d4cfc4;border-radius:8px;overflow:hidden;margin:8px 0 8px;">
+      <img id="swiffer-view-img" src="lkc-swiffer-01.jpg" alt="Hand-knit Swiffer/mop pad — Red Rainbow Edge (ready)" width="960" height="1280" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#f3efe8;display:block;opacity:1;">
+      <button type="button" class="nav-btn prev" onclick="swifferStep(-1)" aria-label="Previous pad" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.7);color:#fff;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:18px;line-height:40px;">&#9664;</button>
+      <button type="button" class="nav-btn next" onclick="swifferStep(1)" aria-label="Next pad" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.7);color:#fff;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:18px;line-height:40px;">&#9654;</button>
+      <div id="swiffer-view-count" style="position:absolute;bottom:8px;right:12px;z-index:40;background:rgba(0,0,0,.8);color:#fff;font-size:.8em;padding:3px 10px;border-radius:10px;">1 / 11</div>
+      <div id="swiffer-view-label" style="position:absolute;bottom:8px;left:12px;z-index:40;background:rgba(0,0,0,.8);color:#fff;font-size:.8em;padding:3px 10px;border-radius:10px;">Red Rainbow Edge</div>
+    </div>
+    <label class="size-label">Choose mop / Swiffer pad:
+      <select id="mopSelect" class="size-select" required onchange="swifferSelectIdx(this.selectedIndex)">
+        <option value="8" data-img="lkc-swiffer-01.jpg" data-name="Red Rainbow Edge">1 — Red Rainbow Edge — $8</option>
+        <option value="8" data-img="lkc-swiffer-02.jpg" data-name="Ocean to Pink">2 — Ocean to Pink — $8</option>
+        <option value="8" data-img="lkc-swiffer-03.jpg" data-name="Red Confetti Multi">3 — Red Confetti Multi — $8</option>
+        <option value="8" data-img="lkc-swiffer-04.jpg" data-name="Mint Multi Bound">4 — Mint Multi Bound — $8</option>
+        <option value="8" data-img="lkc-swiffer-05.jpg" data-name="Speckled to Magenta">5 — Speckled to Magenta — $8</option>
+        <option value="8" data-img="lkc-swiffer-06.jpg" data-name="Red Aqua Sparkle">6 — Red Aqua Sparkle — $8</option>
+        <option value="8" data-img="lkc-swiffer-07.jpg" data-name="Mint Pastel Yellow">7 — Mint Pastel Yellow — $8</option>
+        <option value="8" data-img="lkc-swiffer-08.jpg" data-name="Pink Charcoal Zebra">8 — Pink Charcoal Zebra — $8</option>
+        <option value="8" data-img="lkc-swiffer-09.jpg" data-name="Ocean Blue Teal">9 — Ocean Blue Teal — $8</option>
+        <option value="8" data-img="lkc-swiffer-10.jpg" data-name="Electric Blue Black">10 — Electric Blue Black — $8</option>
+        <option value="8" data-img="lkc-swiffer-11.jpg" data-name="Navy & Mint">11 — Navy & Mint — $8</option>
+      </select>
+    </label>
+    <p class="price" style="margin-top:8px;">$8 each</p>
+    <button type="button" class="buy-btn add-to-cart" onclick="cartSwiffer()">Add Selected Pad to Cart — $8</button>
    </div>
   </div>
 <div class="product-card">
@@ -1027,6 +1042,67 @@ fbq('track', 'PageView');
   if(document.readyState !== 'loading') paint();
 })();
 </script>
+
+<script id="lkc-swiffer-viewer">
+(function(){
+  var imgs = [
+      {src:'lkc-swiffer-01.jpg', name:'Red Rainbow Edge', alt:'Hand-knit Swiffer/mop pad — Red multi with rainbow bottom edge (ready)'},
+      {src:'lkc-swiffer-02.jpg', name:'Ocean to Pink', alt:'Hand-knit Swiffer/mop pad — Teal/blue multi fading to pink white (ready)'},
+      {src:'lkc-swiffer-03.jpg', name:'Red Confetti Multi', alt:'Hand-knit Swiffer/mop pad — Red with white blue yellow confetti (ready)'},
+      {src:'lkc-swiffer-04.jpg', name:'Mint Multi Bound', alt:'Hand-knit Swiffer/mop pad — Mint multi with pink/charcoal bound top (ready)'},
+      {src:'lkc-swiffer-05.jpg', name:'Speckled to Magenta', alt:'Hand-knit Swiffer/mop pad — Grey multi with mint top and magenta band (ready)'},
+      {src:'lkc-swiffer-06.jpg', name:'Red Aqua Sparkle', alt:'Hand-knit Swiffer/mop pad — Bright red with turquoise sparkle flecks (ready)'},
+      {src:'lkc-swiffer-07.jpg', name:'Mint Pastel Yellow', alt:'Hand-knit Swiffer/mop pad — Mint top, pastel middle, yellow edge (ready)'},
+      {src:'lkc-swiffer-08.jpg', name:'Pink Charcoal Zebra', alt:'Hand-knit Swiffer/mop pad — Pink and charcoal alternating bands (ready)'},
+      {src:'lkc-swiffer-09.jpg', name:'Ocean Blue Teal', alt:'Hand-knit Swiffer/mop pad — Solid blue-teal checkerboard (ready)'},
+      {src:'lkc-swiffer-10.jpg', name:'Electric Blue Black', alt:'Hand-knit Swiffer/mop pad — Bright blue with black flecks (ready)'},
+      {src:'lkc-swiffer-11.jpg', name:'Navy & Mint', alt:'Hand-knit Swiffer/mop pad — Navy and mint alternating bands (ready)'}
+  ];
+  imgs.forEach(function(it){ var i=new Image(); i.src=it.src; });
+  var idx = 0;
+  function paint(){
+    var el = document.getElementById('swiffer-view-img');
+    var ctr = document.getElementById('swiffer-view-count');
+    var lab = document.getElementById('swiffer-view-label');
+    var sel = document.getElementById('mopSelect');
+    if(!el) return;
+    var it = imgs[idx];
+    el.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#f3efe8;display:block;opacity:1;visibility:visible;z-index:1;';
+    el.alt = it.alt;
+    if ((el.getAttribute('src')||'') !== it.src) el.src = it.src;
+    if(ctr) ctr.textContent = (idx+1) + ' / ' + imgs.length;
+    if(lab) lab.textContent = it.name;
+    if(sel) sel.selectedIndex = idx;
+  }
+  window.swifferStep = function(d){
+    idx = (idx + d + imgs.length) % imgs.length;
+    paint();
+  };
+  window.swifferSelectIdx = function(i){
+    if(typeof i !== 'number' || i < 0 || i >= imgs.length) return;
+    idx = i; paint();
+  };
+  window.cartSwiffer = function(){
+    var it = imgs[idx];
+    if(window.addToCartDirect){
+      window.addToCartDirect("Lissa's Knitting - Mop/Swiffer Pad (" + it.name + ")", 8.00, it.src);
+    }
+  };
+  document.addEventListener('DOMContentLoaded', function(){
+    paint();
+    var box = document.getElementById('slide-swiffer');
+    if(!box) return;
+    var sx=0;
+    box.addEventListener('touchstart', function(e){ sx=e.changedTouches[0].screenX; }, {passive:true});
+    box.addEventListener('touchend', function(e){
+      var dx = sx - e.changedTouches[0].screenX;
+      if(Math.abs(dx)>30) window.swifferStep(dx>0?1:-1);
+    }, {passive:true});
+  });
+  if(document.readyState !== 'loading') paint();
+})();
+</script>
+
 
 
 

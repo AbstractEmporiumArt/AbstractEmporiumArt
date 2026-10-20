@@ -34,6 +34,13 @@
       flex-direction: column;
     }
     .product-card img { width: 100%; height: auto; max-height: 240px; object-fit: contain; background: #0f0f1a; }
+    .product-card #cloth-view-img, .product-card #slide-cloth img {
+      max-height: none !important; height: 100% !important; width: 100% !important;
+      object-fit: contain !important; position: absolute !important; inset: 0 !important;
+      display: block !important; background: #f3efe8 !important;
+    }
+    .product-card #slide-cloth { height: 300px !important; max-height: none !important; background: #f3efe8 !important; }
+
     /* Newborn tuque main viewer must not inherit 240px cap — portraits need full frame */
     .product-card .tuque-viewer,
     .product-card #tuque-viewer {
@@ -474,24 +481,31 @@ fbq('track', 'PageView');
   </div>
 <div class="product-card">
    <div class="body">
-    <h3>🧼 Wash Cloths</h3>
-    <p class="notes">6"x6" Checkerboard Square stitch pattern creates a gently textured square. Reusable, soft, durable, eco-friendly.</p>
-    <p class="price">$5 ea - 3 for $10</p>
-    <p style="font-size:.85rem;color:#777;margin:.5rem 0 0;line-height:1.4;">📏 Sizes without photos are made to order — message us for colour and timing confirmation. Custom orders use the form below.</p>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
-     <input type="hidden" name="cmd" value="_xclick">
-     <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
-     <input type="hidden" name="item_name" value="Lissa's Knitting - Cloths">
-     <input type="hidden" name="currency_code" value="CAD">
-     <label class="size-label">Pack: <select name="amount" id="clothSelect" class="size-select" required>
-      <option value="5">1 cloth - $5</option>
-      <option value="10">3 cloths - $10</option>
-     </select></label>
-     <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
-     <button type="submit" class="buy-btn"></button>
-    </form>
-    <button type="button" class="buy-btn add-to-cart" onclick="addSelectToCart('clothSelect', 'Lissa\'s Knitting - Cloths', 'logo.jpg')">Add to Cart</button>
-    
+    <h3>🧼 Wash Cloths — Ready Stock (10)</h3>
+    <p class="notes">6&quot;×6&quot; textured chevron squares. Soft, reusable, eco-friendly. <strong>10 finished cloths ready</strong> — pick your colour. $5 each (message for mixed 3-pack $10).</p>
+    <div class="slip-viewer" id="slide-cloth" style="position:relative;width:100%;height:300px;background:#f3efe8;border:1px solid #d4cfc4;border-radius:8px;overflow:hidden;margin:8px 0 8px;">
+      <img id="cloth-view-img" src="lkc-washcloth-01.jpg" alt="Hand-knit wash cloth — Red &amp; Lilac Sparkle (ready)" width="960" height="1280" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#f3efe8;display:block;opacity:1;">
+      <button type="button" class="nav-btn prev" onclick="clothStep(-1)" aria-label="Previous cloth" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.7);color:#fff;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:18px;line-height:40px;">&#9664;</button>
+      <button type="button" class="nav-btn next" onclick="clothStep(1)" aria-label="Next cloth" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.7);color:#fff;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:18px;line-height:40px;">&#9654;</button>
+      <div id="cloth-view-count" style="position:absolute;bottom:8px;right:12px;z-index:40;background:rgba(0,0,0,.8);color:#fff;font-size:.8em;padding:3px 10px;border-radius:10px;">1 / 10</div>
+      <div id="cloth-view-label" style="position:absolute;bottom:8px;left:12px;z-index:40;background:rgba(0,0,0,.8);color:#fff;font-size:.8em;padding:3px 10px;border-radius:10px;">Red &amp; Lilac Sparkle</div>
+    </div>
+    <label class="size-label">Choose wash cloth:
+      <select id="clothSelect" class="size-select" required onchange="clothSelectIdx(this.selectedIndex)">
+        <option value="5" data-img="lkc-washcloth-01.jpg" data-name="Red & Lilac Sparkle">1 — Red & Lilac Sparkle — $5</option>
+        <option value="5" data-img="lkc-washcloth-02.jpg" data-name="Mustard & Forest">2 — Mustard & Forest — $5</option>
+        <option value="5" data-img="lkc-washcloth-03.jpg" data-name="Hot Pink Multi">3 — Hot Pink Multi — $5</option>
+        <option value="5" data-img="lkc-washcloth-04.jpg" data-name="Red & Aqua Sparkle">4 — Red & Aqua Sparkle — $5</option>
+        <option value="5" data-img="lkc-washcloth-05.jpg" data-name="Pastel Confetti">5 — Pastel Confetti — $5</option>
+        <option value="5" data-img="lkc-washcloth-06.jpg" data-name="Mint & Red Split">6 — Mint & Red Split — $5</option>
+        <option value="5" data-img="lkc-washcloth-07.jpg" data-name="Red & Cream">7 — Red & Cream — $5</option>
+        <option value="5" data-img="lkc-washcloth-08.jpg" data-name="Solid Purple">8 — Solid Purple — $5</option>
+        <option value="5" data-img="lkc-washcloth-09.jpg" data-name="Cream Pastel Multi">9 — Cream Pastel Multi — $5</option>
+        <option value="5" data-img="lkc-washcloth-10.jpg" data-name="Cream-to-Pink Rainbow">10 — Cream-to-Pink Rainbow — $5</option>
+      </select>
+    </label>
+    <p class="price" style="margin-top:8px;">$5 each</p>
+    <button type="button" class="buy-btn add-to-cart" onclick="cartCloth()">Add Selected Cloth to Cart — $5</button>
    </div>
   </div>
 <div class="product-card">
@@ -954,6 +968,66 @@ fbq('track', 'PageView');
   if(document.readyState !== 'loading') paint();
 })();
 </script>
+
+<script id="lkc-cloth-viewer">
+(function(){
+  var imgs = [
+      {src:'lkc-washcloth-01.jpg', name:'Red & Lilac Sparkle', alt:'Hand-knit wash cloth — Red base with lilac-blue chevron, sparkle (ready)'},
+      {src:'lkc-washcloth-02.jpg', name:'Mustard & Forest', alt:'Hand-knit wash cloth — Mustard yellow with dark forest chevron (ready)'},
+      {src:'lkc-washcloth-03.jpg', name:'Hot Pink Multi', alt:'Hand-knit wash cloth — Hot pink with teal, blue and gold flecks (ready)'},
+      {src:'lkc-washcloth-04.jpg', name:'Red & Aqua Sparkle', alt:'Hand-knit wash cloth — Bright red with turquoise chevron sparkle (ready)'},
+      {src:'lkc-washcloth-05.jpg', name:'Pastel Confetti', alt:'Hand-knit wash cloth — Pastel pink, blue, yellow multi confetti (ready)'},
+      {src:'lkc-washcloth-06.jpg', name:'Mint & Red Split', alt:'Hand-knit wash cloth — Mint green half with red multi sparkle half (ready)'},
+      {src:'lkc-washcloth-07.jpg', name:'Red & Cream', alt:'Hand-knit wash cloth — Bright red with cream chevron zig-zag (ready)'},
+      {src:'lkc-washcloth-08.jpg', name:'Solid Purple', alt:'Hand-knit wash cloth — Solid violet/lilac textured cloth (ready)'},
+      {src:'lkc-washcloth-09.jpg', name:'Cream Pastel Multi', alt:'Hand-knit wash cloth — Cream with pink, blue, yellow flecks (ready)'},
+      {src:'lkc-washcloth-10.jpg', name:'Cream-to-Pink Rainbow', alt:'Hand-knit wash cloth — Cream multi fading into hot pink multi (ready)'}
+  ];
+  imgs.forEach(function(it){ var i=new Image(); i.src=it.src; });
+  var idx = 0;
+  function paint(){
+    var el = document.getElementById('cloth-view-img');
+    var ctr = document.getElementById('cloth-view-count');
+    var lab = document.getElementById('cloth-view-label');
+    var sel = document.getElementById('clothSelect');
+    if(!el) return;
+    var it = imgs[idx];
+    el.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#f3efe8;display:block;opacity:1;visibility:visible;z-index:1;';
+    el.alt = it.alt;
+    if ((el.getAttribute('src')||'') !== it.src) el.src = it.src;
+    if(ctr) ctr.textContent = (idx+1) + ' / ' + imgs.length;
+    if(lab) lab.textContent = it.name;
+    if(sel) sel.selectedIndex = idx;
+  }
+  window.clothStep = function(d){
+    idx = (idx + d + imgs.length) % imgs.length;
+    paint();
+  };
+  window.clothSelectIdx = function(i){
+    if(typeof i !== 'number' || i < 0 || i >= imgs.length) return;
+    idx = i; paint();
+  };
+  window.cartCloth = function(){
+    var it = imgs[idx];
+    if(window.addToCartDirect){
+      window.addToCartDirect("Lissa's Knitting - Wash Cloth (" + it.name + ")", 5.00, it.src);
+    }
+  };
+  document.addEventListener('DOMContentLoaded', function(){
+    paint();
+    var box = document.getElementById('slide-cloth');
+    if(!box) return;
+    var sx=0;
+    box.addEventListener('touchstart', function(e){ sx=e.changedTouches[0].screenX; }, {passive:true});
+    box.addEventListener('touchend', function(e){
+      var dx = sx - e.changedTouches[0].screenX;
+      if(Math.abs(dx)>30) window.clothStep(dx>0?1:-1);
+    }, {passive:true});
+  });
+  if(document.readyState !== 'loading') paint();
+})();
+</script>
+
 
 
   <script>

@@ -36,53 +36,54 @@
     .product-card img { width: 100%; height: auto; max-height: 240px; object-fit: contain; background: #0f0f1a; }
     /* Newborn tuque main viewer must not inherit 240px cap — portraits need full frame */
     .product-card .tuque-viewer,
-    .product-card #tuque-viewer { height: 360px !important; max-height: none !important; overflow: hidden; }
+    .product-card #tuque-viewer {
+      height: 380px !important;
+      max-height: none !important;
+      min-height: 300px !important;
+      overflow: hidden !important;
+      background: #f3efe8 !important; /* light so taupe/maroon never look "blank" on black */
+      border: 1px solid #d4cfc4 !important;
+    }
     .product-card .tuque-viewer img,
     .product-card #tuque-view-img {
       max-height: none !important;
       height: 100% !important;
       width: 100% !important;
       object-fit: contain !important;
-      object-position: center !important;
-      display: block !important;
-      position: absolute !important;
-      inset: 0 !important;
-    }
-
-    /* Slipper card viewers — never inherit .product-card img 240px cap */
-    .product-card .card-slideshow,
-    .product-card .slip-viewer {
-      height: 260px !important;
-      max-height: none !important;
-      min-height: 220px !important;
-      position: relative !important;
-      overflow: hidden !important;
-      background: #0f0f1a !important;
-    }
-    .product-card .card-slideshow img,
-    .product-card .slip-viewer img,
-    .product-card #newborn-view-img,
-    .product-card #toddler-view-img,
-    .product-card #adult-view-img {
-      max-height: none !important;
-      height: 100% !important;
-      width: 100% !important;
-      object-fit: contain !important;
-      object-position: center !important;
+      object-position: center center !important;
       display: block !important;
       position: absolute !important;
       inset: 0 !important;
       opacity: 1 !important;
+      visibility: visible !important;
+      background: #f3efe8 !important;
       z-index: 1 !important;
     }
-    .tuque-thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 0 0 10px; }
-    .tuque-thumbs button {
-      appearance: none; border: 2px solid #2e2e4a; border-radius: 8px; padding: 0;
-      background: #0f0f1a; cursor: pointer; overflow: hidden; aspect-ratio: 3/4;
+    .tuque-thumbs {
+      display: grid !important;
+      grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      gap: 8px !important;
+      margin: 0 0 12px !important;
     }
-    .tuque-thumbs button img { width: 100%; height: 100%; object-fit: cover; max-height: none !important; display: block; position: static !important; }
-    .tuque-thumbs button.active, .tuque-thumbs button[aria-current="true"] { border-color: #22d3ee; box-shadow: 0 0 0 1px #22d3ee; }
-    .tuque-thumbs button:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }
+    .tuque-thumbs button {
+      appearance: none; border: 2px solid #c9c2b4; border-radius: 10px; padding: 4px 4px 2px;
+      background: #f3efe8; cursor: pointer; overflow: hidden;
+      display: flex; flex-direction: column; align-items: stretch; gap: 4px;
+    }
+    .tuque-thumbs button img {
+      width: 100% !important; height: auto !important; aspect-ratio: 3/4 !important;
+      object-fit: contain !important; max-height: none !important;
+      display: block !important; position: static !important;
+      background: #f3efe8 !important; border-radius: 6px;
+    }
+    .tuque-thumbs button span {
+      display: block; text-align: center; font-size: 0.68rem; line-height: 1.15;
+      color: #333; font-weight: 600; padding: 0 2px 4px;
+    }
+    .tuque-thumbs button.active, .tuque-thumbs button[aria-current="true"] {
+      border-color: #0e7490 !important; box-shadow: 0 0 0 2px #22d3ee;
+    }
+    .tuque-thumbs button:focus-visible { outline: 2px solid #0e7490; outline-offset: 2px; }
 
     .product-card .body { padding: 18px; flex: 1; display: flex; flex-direction: column; min-width: 0; }
     .product-card h3 { margin: 0 0 6px; color: #f5d76e; }
@@ -403,28 +404,29 @@ fbq('track', 'PageView');
     <h3>
 🧶 Handmade Knit Tuques</h3>
 
-    <!-- Newborn Tuques — 5 ready units: main viewer + always-visible thumbs -->
-    <p class="notes" style="margin:0 0 6px;">5 completed newborn ribbed tuques — ready to ship/pickup. $5 each. All five photos below; tap a thumb or use arrows. Two cream speckled, taupe, maroon, cream #3.</p>
-    <div class="tuque-viewer" id="tuque-viewer" style="position:relative;width:100%;height:360px;background:#0f0f1a;border-radius:8px;overflow:hidden;margin:8px 0 8px;">
-      <img id="tuque-view-img" src="lkc-newborn-tuque-cream-a.jpg" alt="Completed cream speckled newborn tuque — ready #1" width="960" height="1280" decoding="async" loading="eager" style="position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#0f0f1a;display:block;">
-      <button type="button" class="nav-btn prev" onclick="tuqueStep(-1)" aria-label="Previous tuque" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;">&#9664;</button>
-      <button type="button" class="nav-btn next" onclick="tuqueStep(1)" aria-label="Next tuque" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;">&#9654;</button>
-      <div id="tuque-view-count" style="position:absolute;bottom:8px;right:12px;z-index:40;background:rgba(0,0,0,.75);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;">1 / 5</div>
+    <!-- Newborn Tuques — 5 ready units (src-swap + labeled thumbs; light bg so 3/4 always visible) -->
+    <p class="notes" style="margin:0 0 6px;">5 completed newborn ribbed tuques — ready to ship/pickup. $5 each. Tap a photo below or use arrows. <strong>1–2 cream · 3 taupe · 4 maroon · 5 cream</strong>.</p>
+    <div class="tuque-viewer" id="tuque-viewer" style="position:relative;width:100%;height:380px;min-height:300px;background:#f3efe8;border:1px solid #d4cfc4;border-radius:8px;overflow:hidden;margin:8px 0 8px;">
+      <img id="tuque-view-img" src="lkc-tuque-ready-01-cream.jpg" alt="Completed cream speckled newborn tuque — ready #1" width="960" height="1280" decoding="async" loading="eager" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#f3efe8;display:block;opacity:1;visibility:visible;z-index:1;">
+      <button type="button" class="nav-btn prev" onclick="tuqueStep(-1)" aria-label="Previous tuque" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.7);color:#fff;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:18px;line-height:40px;">&#9664;</button>
+      <button type="button" class="nav-btn next" onclick="tuqueStep(1)" aria-label="Next tuque" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);z-index:40;background:rgba(0,0,0,.7);color:#fff;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:18px;line-height:40px;">&#9654;</button>
+      <div id="tuque-view-count" style="position:absolute;bottom:8px;right:12px;z-index:40;background:rgba(0,0,0,.8);color:#fff;font-size:.8em;padding:3px 10px;border-radius:10px;">1 / 5</div>
+      <div id="tuque-view-label" style="position:absolute;bottom:8px;left:12px;z-index:40;background:rgba(0,0,0,.8);color:#fff;font-size:.8em;padding:3px 10px;border-radius:10px;">Cream Speckled #1</div>
     </div>
     <div class="tuque-thumbs" id="tuque-thumbs" role="listbox" aria-label="All 5 newborn tuques">
-      <button type="button" role="option" aria-current="true" class="active" data-i="0" onclick="tuqueSelect(0)" title="Cream Speckled #1"><img src="lkc-newborn-tuque-cream-a.jpg" alt="Cream Speckled #1" width="192" height="256" loading="eager" decoding="async"></button>
-      <button type="button" role="option" data-i="1" onclick="tuqueSelect(1)" title="Cream Speckled #2"><img src="lkc-newborn-tuque-cream-b.jpg" alt="Cream Speckled #2" width="192" height="256" loading="eager" decoding="async"></button>
-      <button type="button" role="option" data-i="2" onclick="tuqueSelect(2)" title="Taupe Ribbed"><img src="lkc-newborn-tuque-3.jpg" alt="Taupe Ribbed" width="192" height="256" loading="eager" decoding="async"></button>
-      <button type="button" role="option" data-i="3" onclick="tuqueSelect(3)" title="Maroon Ribbed"><img src="lkc-newborn-tuque-4.jpg" alt="Maroon Ribbed" width="192" height="256" loading="eager" decoding="async"></button>
-      <button type="button" role="option" data-i="4" onclick="tuqueSelect(4)" title="Cream Ribbed #3"><img src="lkc-newborn-tuque-1.jpg" alt="Cream Ribbed #3" width="192" height="256" loading="eager" decoding="async"></button>
+      <button type="button" role="option" aria-current="true" class="active" data-i="0" onclick="tuqueSelect(0)" title="Cream Speckled #1"><img src="lkc-tuque-ready-01-cream.jpg" alt="1 Cream" width="192" height="256" loading="eager" decoding="async"><span>1 · Cream</span></button>
+      <button type="button" role="option" data-i="1" onclick="tuqueSelect(1)" title="Cream Speckled #2"><img src="lkc-tuque-ready-02-cream.jpg" alt="2 Cream" width="192" height="256" loading="eager" decoding="async"><span>2 · Cream</span></button>
+      <button type="button" role="option" data-i="2" onclick="tuqueSelect(2)" title="Taupe Ribbed"><img src="lkc-tuque-ready-03-taupe.jpg" alt="3 Taupe" width="192" height="256" loading="eager" decoding="async"><span>3 · Taupe</span></button>
+      <button type="button" role="option" data-i="3" onclick="tuqueSelect(3)" title="Maroon Ribbed"><img src="lkc-tuque-ready-04-maroon.jpg" alt="4 Maroon" width="192" height="256" loading="eager" decoding="async"><span>4 · Maroon</span></button>
+      <button type="button" role="option" data-i="4" onclick="tuqueSelect(4)" title="Cream Ribbed #3"><img src="lkc-tuque-ready-05-cream.jpg" alt="5 Cream" width="192" height="256" loading="eager" decoding="async"><span>5 · Cream</span></button>
     </div>
     <label class="size-label">Choose newborn tuque:
       <select id="newbornTuqueSelect" class="size-select" required onchange="tuqueSelect(this.selectedIndex)">
-        <option value="5" data-img="lkc-newborn-tuque-cream-a.jpg" data-name="Cream Speckled #1">1 — Cream Speckled (ready) #1 — $5</option>
-        <option value="5" data-img="lkc-newborn-tuque-cream-b.jpg" data-name="Cream Speckled #2">2 — Cream Speckled (ready) #2 — $5</option>
-        <option value="5" data-img="lkc-newborn-tuque-3.jpg" data-name="Taupe Ribbed">3 — Taupe Ribbed (ready) — $5</option>
-        <option value="5" data-img="lkc-newborn-tuque-4.jpg" data-name="Maroon Ribbed">4 — Maroon Ribbed (ready) — $5</option>
-        <option value="5" data-img="lkc-newborn-tuque-1.jpg" data-name="Cream Ribbed #3">5 — Cream Ribbed (ready) #3 — $5</option>
+        <option value="5" data-img="lkc-tuque-ready-01-cream.jpg" data-name="Cream Speckled #1">1 — Cream Speckled (ready) #1 — $5</option>
+        <option value="5" data-img="lkc-tuque-ready-02-cream.jpg" data-name="Cream Speckled #2">2 — Cream Speckled (ready) #2 — $5</option>
+        <option value="5" data-img="lkc-tuque-ready-03-taupe.jpg" data-name="Taupe Ribbed">3 — Taupe Ribbed (ready) — $5</option>
+        <option value="5" data-img="lkc-tuque-ready-04-maroon.jpg" data-name="Maroon Ribbed">4 — Maroon Ribbed (ready) — $5</option>
+        <option value="5" data-img="lkc-tuque-ready-05-cream.jpg" data-name="Cream Ribbed #3">5 — Cream Ribbed (ready) #3 — $5</option>
       </select>
     </label>
     <button type="button" class="buy-btn add-to-cart" onclick="cartTuque()">Add to Cart — $5</button>
@@ -884,24 +886,36 @@ fbq('track', 'PageView');
 <script id="lkc-tuque-viewer">
 (function(){
   var imgs = [
-    {src:'lkc-newborn-tuque-cream-a.jpg', name:'Cream Speckled #1', alt:'Completed cream speckled newborn tuque — ready #1'},
-    {src:'lkc-newborn-tuque-cream-b.jpg', name:'Cream Speckled #2', alt:'Completed cream speckled newborn tuque — ready #2'},
-    {src:'lkc-newborn-tuque-3.jpg', name:'Taupe Ribbed', alt:'Completed taupe ribbed newborn tuque — ready'},
-    {src:'lkc-newborn-tuque-4.jpg', name:'Maroon Ribbed', alt:'Completed maroon ribbed newborn tuque — ready'},
-    {src:'lkc-newborn-tuque-1.jpg', name:'Cream Ribbed #3', alt:'Completed cream ribbed newborn tuque — ready #3'}
+    {src:'lkc-tuque-ready-01-cream.jpg', name:'Cream Speckled #1', alt:'Completed cream speckled newborn tuque — ready #1'},
+    {src:'lkc-tuque-ready-02-cream.jpg', name:'Cream Speckled #2', alt:'Completed cream speckled newborn tuque — ready #2'},
+    {src:'lkc-tuque-ready-03-taupe.jpg', name:'Taupe Ribbed', alt:'Completed taupe ribbed newborn tuque — ready'},
+    {src:'lkc-tuque-ready-04-maroon.jpg', name:'Maroon Ribbed', alt:'Completed maroon ribbed newborn tuque — ready'},
+    {src:'lkc-tuque-ready-05-cream.jpg', name:'Cream Ribbed #3', alt:'Completed cream ribbed newborn tuque — ready #3'}
   ];
-  // preload all so 3/4 never blank
-  imgs.forEach(function(it){ var i=new Image(); i.src=it.src; });
+  // Preload all five (esp. taupe #3 + maroon #4)
+  imgs.forEach(function(it){ var i=new Image(); i.decoding='async'; i.src=it.src; });
   var idx = 0;
   function paint(){
     var el = document.getElementById('tuque-view-img');
     var ctr = document.getElementById('tuque-view-count');
+    var lab = document.getElementById('tuque-view-label');
     var sel = document.getElementById('newbornTuqueSelect');
     if(!el) return;
     var it = imgs[idx];
-    el.src = it.src;
+    // Force visible even if global CSS fights
+    el.style.display = 'block';
+    el.style.opacity = '1';
+    el.style.visibility = 'visible';
+    el.style.maxHeight = 'none';
+    el.style.objectFit = 'contain';
+    el.style.background = '#f3efe8';
+    // Cache-safe swap: blank then set (some mobile WebViews keep stale decode)
+    el.removeAttribute('src');
     el.alt = it.alt;
+    el.src = it.src;
+    if (el.decode) { try { el.decode().catch(function(){}); } catch (e) {} }
     if(ctr) ctr.textContent = (idx+1) + ' / ' + imgs.length;
+    if(lab) lab.textContent = it.name;
     if(sel) sel.selectedIndex = idx;
     var thumbs = document.querySelectorAll('#tuque-thumbs button');
     for (var t=0; t<thumbs.length; t++){
@@ -926,7 +940,6 @@ fbq('track', 'PageView');
       window.addToCartDirect("Lissa's Knitting - Newborn Tuque (" + it.name + ")", 5.00, it.src);
     }
   };
-  // swipe on viewer
   document.addEventListener('DOMContentLoaded', function(){
     paint();
     var box = document.getElementById('tuque-viewer');
@@ -938,7 +951,6 @@ fbq('track', 'PageView');
       if(Math.abs(dx)>30) window.tuqueStep(dx>0?1:-1);
     }, {passive:true});
   });
-  // also paint immediately if DOM already ready
   if(document.readyState !== 'loading') paint();
 })();
 </script>

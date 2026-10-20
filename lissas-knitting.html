@@ -256,21 +256,52 @@ fbq('track', 'PageView');
     <h3>
 🧶 Handmade Knit Tuques</h3>
 
-    <!-- Newborn Tuques Slideshow (added 2026-10-20, pattern matched to slippers) -->
+    <!-- Newborn Tuques Interactive Slideshow + Dropdown (added 2026-10-20, matched to slippers pattern) -->
     <div class="slippers-slideshow" id="newborn-tuques-slideshow">
       <div class="about-carousel-track">
-        <div class="about-slide"><img src="lkc-newborn-tuque-1.jpg" alt="Cream ribbed newborn tuque on circular needles with ball of cream yarn on grey blanket" loading="lazy" decoding="async"></div>
-        <div class="about-slide"><img src="lkc-newborn-tuque-2.jpg" alt="Close-up of cream ribbed newborn tuque knitting texture and detail" loading="lazy" decoding="async"></div>
-        <div class="about-slide"><img src="lkc-newborn-tuque-3.jpg" alt="Taupe ribbed newborn tuque on grey background" loading="lazy" decoding="async"></div>
-        <div class="about-slide"><img src="lkc-newborn-tuque-4.jpg" alt="Maroon ribbed newborn tuque on grey background" loading="lazy" decoding="async"></div>
-        <div class="about-slide"><img src="lkc-newborn-tuque-5.jpg" alt="Fifth newborn tuque angle and texture detail" loading="lazy" decoding="async"></div>
+        <div class="about-slide" data-variant="1"><img src="lkc-newborn-tuque-1.jpg" alt="Cream ribbed newborn tuque on circular needles with ball of cream yarn on grey blanket" loading="lazy" decoding="async"></div>
+        <div class="about-slide" data-variant="2"><img src="lkc-newborn-tuque-2.jpg" alt="Close-up of cream ribbed newborn tuque knitting texture and detail" loading="lazy" decoding="async"></div>
+        <div class="about-slide" data-variant="3"><img src="lkc-newborn-tuque-3.jpg" alt="Taupe ribbed newborn tuque on grey background" loading="lazy" decoding="async"></div>
+        <div class="about-slide" data-variant="4"><img src="lkc-newborn-tuque-4.jpg" alt="Maroon ribbed newborn tuque on grey background" loading="lazy" decoding="async"></div>
+        <div class="about-slide" data-variant="5"><img src="lkc-newborn-tuque-5.jpg" alt="Fifth newborn tuque angle and texture detail" loading="lazy" decoding="async"></div>
       </div>
       <button class="nav-btn prev" onclick="navSlide('newborn-tuques', -1)">‹</button>
       <button class="nav-btn next" onclick="navSlide('newborn-tuques', 1)">›</button>
       <div class="counter" id="count-newborn-tuques">1 / 5</div>
     </div>
 
-    <div class="gal-note" style="margin-top:8px">Newborn size (approx 4–4.5″ tall). Ribbed knit in multiple colours. $5 each. Made to order or ready stock — message for colour/timing confirmation.</div>
+    <label class="size-label" style="display:block;margin:12px 0 8px">Choose Newborn Tuque:
+      <select id="newbornTuqueSelect" class="size-select" onchange="selectNewbornVariant(this.value)" required>
+        <option value="1">1 - Cream Ribbed on Needles ($5)</option>
+        <option value="2">2 - Cream Ribbed Close-up ($5)</option>
+        <option value="3">3 - Taupe Ribbed ($5)</option>
+        <option value="4">4 - Maroon Ribbed ($5)</option>
+        <option value="5">5 - Additional Angle ($5)</option>
+      </select>
+    </label>
+
+    <button type="button" class="buy-btn add-to-cart" onclick="addNewbornToCart()">Add Selected Newborn Tuque to Cart</button>
+
+    <div class="gal-note" style="margin-top:8px">Newborn size (approx 4–4.5″ tall). Ribbed knit in 5 colour/angle variants. $5 each. Dropdown selects which one to add to cart and updates the slideshow. Made to order or ready stock — message for timing.</div>
+
+    <script>
+    function selectNewbornVariant(n) {
+      const slides = document.querySelectorAll('#newborn-tuques-slideshow .about-slide');
+      slides.forEach(slide => slide.classList.toggle('active', slide.getAttribute('data-variant') === n));
+      document.getElementById('count-newborn-tuques').textContent = n + ' / 5';
+    }
+    function addNewbornToCart() {
+      const select = document.getElementById('newbornTuqueSelect');
+      const variant = select.value;
+      const name = select.options[select.selectedIndex].text.split(' - ')[1].replace(' ($5)', '');
+      const image = `lkc-newborn-tuque-${variant}.jpg`;
+      addToCartDirect(`Lissa's Knitting - Newborn Tuque (${name})`, 5.00, image);
+    }
+    // Initialize first slide
+    window.addEventListener('load', () => {
+      selectNewbornVariant('1');
+    });
+    </script>
 
     <p class="notes">Ribbed Beanie Knit Mariner Hats. Two styles: beanie (tiny sizes) and mariner ribbed, worsted weight. Colours: confetti charcoal, purple variegated, navy confetti pom, pink confetti, mustard & navy (more on request).</p>
     <p class="price">Newborn $5 - Baby $8 - Toddler $12 - Child $15 - Adult $20</p>

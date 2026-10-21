@@ -94,13 +94,14 @@ async function handleQuote(context) {
     `</domestic></destination>` +
     `</mailing-scenario>`;
 
-  const auth = btoa(`${user}:${pass}`);
-
+  const auth = (env.CANADA_POST_API_USERNAME || '').trim();
+  const bearer = auth ? 'Bearer ' + auth : '';
+  // Shipping 8.0 uses OAuth Bearer token via CANADA_POST_API_USERNAME.
   try {
     const resp = await fetch(`${host}/rs/ship/price`, {
       method: 'POST',
       headers: {
-        Authorization: `Basic ${auth}`,
+        Authorization: bearer,
         'Content-Type': 'application/vnd.cpc.ship.rate-v4+xml',
         Accept: 'application/vnd.cpc.ship.rate-v4+xml',
         'Accept-Language': 'en-CA'

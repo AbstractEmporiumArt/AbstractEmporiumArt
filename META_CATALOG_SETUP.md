@@ -73,3 +73,16 @@ Also in repo: `catalog/ae-meta-catalog.csv` (36 in-stock SKUs).
 5. Personal Marketplace listings stay separate until you migrate them
 
 Pixel on site is already complete (`1719352401749537`).
+
+
+## API sync (working 2026-10-24)
+Script: `catalog/sync_meta_catalog.py`
+Reads `.env` `CATALOG_ACCESS_TOKEN_API` + `CATALOG_ID` (never commit).
+Pushes `catalog/ae-meta-catalog.csv` via Graph `items_batch` upsert.
+
+Run:
+```
+python catalog/sync_meta_catalog.py
+```
+
+Verified: 36 CSV retailer_ids present in catalog; catalog total 42 (6 extra older/manual items left in place).

@@ -1,15 +1,16 @@
-// AE Shipping Rate quote — Canada Post live rates (e-transfer path).
-// PayPal path stays NetParcel-at-PayPal (separate; no change here).
-//
-// Cloudflare Pages secrets (Production):
-//   CANADA_POST_API_USERNAME   — from Canada Post Developer Program
-//   CANADA_POST_API_PASSWORD   — API password (not your CPC login)
-//   CANADA_POST_CUSTOMER_NUMBER — optional; Solutions for Small Business / commercial discounts
-//   AE_POSTAL                  — origin postal, e.g. P7A1A1 (Thunder Bay)
-// Optional:
-//   CANADA_POST_USE_PRODUCTION = "1" (default production). Set "0" for ct.soa-gw sandbox.
-//
-// Docs: Get Rates REST — POST /rs/ship/price
+// AE shipping quotes — Canada Post Developer Portal Rating 4.0 (OAuth + JSON)
+// One production app credential set covers Rating + Shipping + Tracking.
+// Secrets (CF Pages Production env AND local .env):
+//   CANADA_POST_API_USERNAME  = API Key (client id)
+//   CANADA_POST_API_PASSWORD  = API Secret (client secret)
+//   CANADA_POST_CUSTOMER_NUMBER
+//   AE_POSTAL
+//   CANADA_POST_USE_PRODUCTION = 1 (prod host) | 0 unused (same portal prod path)
+
+const TOKEN_URL =
+  'https://api.canadapost-postescanada.ca/prod/devportal-portaildesdeveloppeurs/cpc-api-native-oauth-provider/oauth2/token';
+const PRICES_URL =
+  'https://api.canadapost-postescanada.ca/prod/devportal-portaildesdeveloppeurs/rating/v1/prices';
 
 export async function onRequestPost(context) {
   return handleQuote(context);
@@ -21,15 +22,14 @@ export async function onRequestGet(context) {
 async function handleQuote(context) {
   const { request, env } = context;
   const url = new URL(request.url);
-
-  const user = env.CANADA_POST_API_USERNAME || env.CANADA_POST_USER;
-  const pass = env.CANADA_POST_API_PASSWORD || env.CANADA_POST_PASS;
-  if (!user || !pass) {
+  const clientId = (env.CANADA_POST_API_USERNAME || env.CANADA_POST_USER || '').trim();
+  const clientSecret = (env.CANADA_POST_API_PASSWORD || env.CANADA_POST_PASS || '').trim();
+  if (!clientId || !clientSecret) {
     return json(
       {
         ok: false,
         error:
-          'Canada Post quote not configured yet. PayPal checkout still uses NetParcel. For e-transfer we will quote after you share your address, or set CANADA_POST_API_USERNAME + CANADA_POST_API_PASSWORD in Cloudflare.'
+          'Canada Post quote not configured yet. PayPal checkout still uses NetParcel. Set CANADA_POST_API_USERNAME + CANADA_POST_API_PASSWORD (Developer Portal API Key + Secret).'
       },
       503
     );
@@ -48,20 +48,9 @@ async function handleQuote(context) {
       /* query fallback */
     }
   }
-
   if (!postalCode || !/^[A-Za-z0-9 ]{3,10}$/.test(postalCode)) {
     return json({ ok: false, error: 'A valid postal/zip code is required.' }, 400);
   }
-
-  const origin = String(env.AE_POSTAL || 'P7A1A1')
-    .replace(/\s+/g, '')
-    .toUpperCase();
-  const dest = String(postalCode).replace(/\s+/g, '').toUpperCase();
-  // Canada Post weight is kg
-  const weightKg = Math.max(0.1, Math.round((weightLb * 0.453592) * 1000) / 1000);
-  const customerNumber = (env.CANADA_POST_CUSTOMER_NUMBER || '').trim();
-
-  // Domestic CA only for v1 of this endpoint (US/intl can be added later)
   if (countryCode !== 'CA') {
     return json(
       {
@@ -73,120 +62,102 @@ async function handleQuote(context) {
     );
   }
 
-  const useProd = String(env.CANADA_POST_USE_PRODUCTION || '1') !== '0';
-  const host = useProd ? 'https://soa-gw.canadapost.ca' : 'https://ct.soa-gw.canadapost.ca';
+  const origin = String(env.AE_POSTAL || 'P7A1A1').replace(/\s+/g, '').toUpperCase();
+  const dest = String(postalCode).replace(/\s+/g, '').toUpperCase();
+  const weightKg = Math.max(0.1, Math.round(weightLb * 0.453592 * 1000) / 1000);
+  const customerNumber = (env.CANADA_POST_CUSTOMER_NUMBER || '').trim();
 
-  const customerXml = customerNumber
-    ? `<customer-number>${escapeXml(customerNumber)}</customer-number>`
-    : '';
+  const token = await getMerchantToken(clientId, clientSecret);
+  if (!token) {
+    return json({ ok: false, error: 'Canada Post OAuth token failed.' }, 401);
+  }
 
-  // rate-v4 mailing-scenario — omit customer-number for counter rates
-  const xml =
-    `<?xml version="1.0" encoding="UTF-8"?>` +
-    `<mailing-scenario xmlns="http://www.canadapost.ca/ws/ship/rate-v4">` +
-    customerXml +
-    `<parcel-characteristics>` +
-    `<weight>${weightKg}</weight>` +
-    `</parcel-characteristics>` +
-    `<origin-postal-code>${escapeXml(origin)}</origin-postal-code>` +
-    `<destination><domestic>` +
-    `<postal-code>${escapeXml(dest)}</postal-code>` +
-    `</domestic></destination>` +
-    `</mailing-scenario>`;
+  const body = {
+    parcelCharacteristics: { weight: weightKg },
+    originPostalCode: origin,
+    destination: { domestic: { postalCode: dest } }
+  };
+  if (customerNumber) body.customerNumber = customerNumber;
 
-  const auth = (env.CANADA_POST_API_USERNAME || '').trim();
-  const bearer = auth ? 'Bearer ' + auth : '';
-  // Shipping 8.0 uses OAuth Bearer token via CANADA_POST_API_USERNAME.
   try {
-    const resp = await fetch(`${host}/rs/ship/price`, {
+    const resp = await fetch(PRICES_URL, {
       method: 'POST',
       headers: {
-        Authorization: bearer,
-        'Content-Type': 'application/vnd.cpc.ship.rate-v4+xml',
-        Accept: 'application/vnd.cpc.ship.rate-v4+xml',
-        'Accept-Language': 'en-CA'
+        Authorization: 'Bearer ' + token,
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'X-IBM-Client-Id': clientId
       },
-      body: xml
+      body: JSON.stringify(body)
     });
-
-    const text = await resp.text();
+    const data = await resp.json();
     if (!resp.ok) {
-      const msg = extractCpError(text) || 'Canada Post rate error.';
       return json(
-        { ok: false, error: msg, status: resp.status, detail: text.slice(0, 500) },
+        {
+          ok: false,
+          error: (data && (data.message || data.error)) || 'Canada Post rate error.',
+          status: resp.status
+        },
         resp.status >= 400 && resp.status < 600 ? resp.status : 502
       );
     }
-
-    const rates = parseCpRates(text);
-    rates.sort((a, b) => a.amount - b.amount);
+    const quotes = Array.isArray(data) ? data : data.priceQuotes || data.quotes || [];
+    const rates = quotes
+      .map(function (q) {
+        const pd = q.priceDetails || {};
+        const std = q.serviceStandard || {};
+        const amount = Number(pd.due != null ? pd.due : pd.base);
+        return {
+          carrier: 'Canada Post',
+          service: q.serviceName || q.serviceCode || 'Canada Post',
+          service_code: q.serviceCode || '',
+          amount: Number.isFinite(amount) ? amount : 0,
+          currency: 'CAD',
+          est_delivery_days: std.expectedTransitTime != null ? Number(std.expectedTransitTime) : null
+        };
+      })
+      .filter(function (r) {
+        return r.amount > 0;
+      })
+      .sort(function (a, b) {
+        return a.amount - b.amount;
+      });
     return json({
       ok: true,
       provider: 'canada-post',
       from: 'Thunder Bay, ON',
       origin_postal: origin,
       weight_kg: weightKg,
-      rates
+      rates: rates
     });
   } catch (e) {
-    return json(
-      { ok: false, error: 'Could not reach Canada Post.', detail: String(e) },
-      502
-    );
+    return json({ ok: false, error: 'Could not reach Canada Post.', detail: String(e) }, 502);
   }
 }
 
-function parseCpRates(xml) {
-  // price-quotes / price-quote blocks
-  const rates = [];
-  const blocks = xml.split(/<price-quote[\s>]/i).slice(1);
-  for (const block of blocks) {
-    const chunk = block.split(/<\/price-quote>/)[0] || '';
-    const service = textBetween(chunk, 'service-name') || textBetween(chunk, 'service-code') || 'Canada Post';
-    const code = textBetween(chunk, 'service-code') || '';
-    // due amount often under <due-amount> or price-details
-    let amount = parseFloat(textBetween(chunk, 'due-amount') || '');
-    if (!Number.isFinite(amount)) {
-      amount = parseFloat(textBetween(chunk, 'base') || '');
-    }
-    if (!Number.isFinite(amount)) continue;
-    const days = textBetween(chunk, 'expected-transit-time') || textBetween(chunk, 'service-standard');
-    let est = null;
-    if (days && /^\d+$/.test(days.trim())) est = parseInt(days.trim(), 10);
-    rates.push({
-      carrier: 'Canada Post',
-      service: service.trim(),
-      service_code: code.trim(),
-      amount,
-      currency: 'CAD',
-      est_delivery_days: est
+async function getMerchantToken(clientId, clientSecret) {
+  try {
+    const resp = await fetch(TOKEN_URL, {
+      method: 'POST',
+      headers: {
+        'X-IBM-Client-Id': clientId,
+        'X-IBM-Client-Secret': clientSecret,
+        accept: 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: 'scope=merchant&grant_type=client_credentials'
     });
+    const data = await resp.json();
+    if (!resp.ok || !data.access_token) return null;
+    return data.access_token;
+  } catch (e) {
+    return null;
   }
-  return rates;
 }
 
-function textBetween(xml, tag) {
-  const re = new RegExp(`<${tag}[^>]*>([^<]*)</${tag}>`, 'i');
-  const m = xml.match(re);
-  return m ? m[1] : '';
-}
-
-function extractCpError(xml) {
-  const desc = textBetween(xml, 'description') || textBetween(xml, 'message');
-  return desc ? desc.trim() : '';
-}
-
-function escapeXml(s) {
-  return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-function json(obj, status = 200) {
+function json(obj, status) {
   return new Response(JSON.stringify(obj), {
-    status,
+    status: status || 200,
     headers: { 'content-type': 'application/json; charset=utf-8' }
   });
 }

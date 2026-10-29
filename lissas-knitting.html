@@ -414,7 +414,7 @@ fbq('track', 'PageView');
 
       <div id="lkc-ready-stock" style="max-width:860px;margin:12px auto 18px;padding:14px 16px;background:#1a1a2e;border:1px solid #3a2a4a;border-radius:12px;color:#f5f0e8;text-align:center;">
         <p style="margin:0 0 6px;font-size:.72rem;letter-spacing:.1em;font-weight:800;color:#f5d76e;">READY STOCK · THUNDER BAY</p>
-        <p style="margin:0 0 10px;font-size:1.05rem;font-weight:700;">5 newborn tuques · 10 washcloths · 11 Swiffer pads · slippers ready</p>
+        <p style="margin:0 0 10px;font-size:1.05rem;font-weight:700;">5 newborn tuques · 10 washcloths · 11 Swiffer pads · kids 6–6.5&quot; slippers (6) ready</p>
         <p style="margin:0 0 12px;font-size:.9rem;color:#cbb8e8;line-height:1.45;"><strong style="color:#fff;">Local TB bundle:</strong> 2 washcloths + 1 Swiffer pad = <strong style="color:#f5d76e;">$16</strong> (save $2) — pickup/drop-off Thunder Bay only. Message to claim colours.</p>
         <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
           <a href="#slide-cloth" style="background:#f5d76e;color:#1a1a2e;text-decoration:none;padding:8px 12px;border-radius:999px;font-size:.82rem;font-weight:800;">Washcloths</a>
@@ -637,6 +637,41 @@ fbq('track', 'PageView');
     <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
    </div>
   </div>
+
+<div class="product-card" id="lkc-kids65-slippers">
+   <div class="body">
+    <h3>🧶 Cozy Knit Slippers — Kids 6–6.5"</h3>
+    <span class="inv-badge inv-ready">READY NOW · LIVE STOCK</span>
+    <p class="notes">Hand-knit kids slippers (6"-6.5" foot). The 6 pairs below are finished and ready to ship. $15 each.</p>
+    <div class="slip-viewer card-slideshow" id="slide-kids65" style="position:relative;overflow:hidden;height:260px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
+<img id="kids65-view-img" src="lkc-slippers-kids65-01.jpg" alt="Kids 6-6.5 inch knit slippers pair 1 — teal blue green variegated" width="1600" height="1200" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#0f0f1a;display:block;">
+<button type="button" class="nav-btn prev" onclick="slipStep('kids65',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:40;">&#9664;</button>
+<button type="button" class="nav-btn next" onclick="slipStep('kids65',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:40;">&#9654;</button>
+<div class="counter" id="count-kids65" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:40;">1 / 6</div>
+</div>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;">
+     <input type="hidden" name="cmd" value="_xclick">
+     <input type="hidden" name="business" value="[EMAIL]">
+     <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Kids 6-6.5 inch">
+     <input type="hidden" name="currency_code" value="CAD">
+     <label class="size-label">Choose pair:
+      <select name="amount" id="kids65Pairs" class="size-select" required onchange="slipSelect('kids65', this.selectedIndex)">
+        <option value="15" data-img="lkc-slippers-kids65-01.jpg" data-variant="kids-p1">Kids (6-6.5") Pair 1 of 6 — $15</option>
+        <option value="15" data-img="lkc-slippers-kids65-02.jpg" data-variant="kids-p2">Kids (6-6.5") Pair 2 of 6 — $15</option>
+        <option value="15" data-img="lkc-slippers-kids65-03.jpg" data-variant="kids-p3">Kids (6-6.5") Pair 3 of 6 — $15</option>
+        <option value="15" data-img="lkc-slippers-kids65-04.jpg" data-variant="kids-p4">Kids (6-6.5") Pair 4 of 6 — $15</option>
+        <option value="15" data-img="lkc-slippers-kids65-05.jpg" data-variant="kids-p5">Kids (6-6.5") Pair 5 of 6 — $15</option>
+        <option value="15" data-img="lkc-slippers-kids65-06.jpg" data-variant="kids-p6">Kids (6-6.5") Pair 6 of 6 — $15</option>
+      </select>
+     </label>
+     <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+     <button type="submit" class="buy-btn"></button>
+    </form>
+    <button type="button" class="buy-btn add-to-cart" onclick="cartSlipper('kids65Pairs', 'Lissa\'s Knitting - Slippers Kids 6-6.5 inch')">Add to Cart</button>
+    <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Youth, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
+   </div>
+  </div>
+
 <div class="product-card">
    <div class="body">
     <h3>🧶 Cozy Knit Slippers — Adult 9"</h3>
@@ -906,9 +941,22 @@ fbq('track', 'PageView');
         {src:'lkc-slippers-newborn-03.jpg', alt:'Newborn slippers pair 3 of 4 — ready'},
         {src:'lkc-slippers-newborn-04.jpg', alt:'Newborn slippers pair 4 of 4 — ready'}
       ]
+    },
+    kids65: {
+      imgId: 'kids65-view-img',
+      countId: 'count-kids65',
+      selectId: 'kids65Pairs',
+      items: [
+        {src:'lkc-slippers-kids65-01.jpg', alt:'Kids 6-6.5 inch knit slippers pair 1 — teal blue green variegated'},
+        {src:'lkc-slippers-kids65-02.jpg', alt:'Kids 6-6.5 inch knit slippers pair 2 — gray teal white speckled'},
+        {src:'lkc-slippers-kids65-03.jpg', alt:'Kids 6-6.5 inch knit slippers pair 3 — red maroon multicolor'},
+        {src:'lkc-slippers-kids65-04.jpg', alt:'Kids 6-6.5 inch knit slippers pair 4 — pink white variegated'},
+        {src:'lkc-slippers-kids65-05.jpg', alt:'Kids 6-6.5 inch knit slippers pair 5 — pink purple lavender multicolor'},
+        {src:'lkc-slippers-kids65-06.jpg', alt:'Kids 6-6.5 inch knit slippers pair 6 — pink black white mottled'}
+      ]
     }
   };
-  var idx = { newborn: 0 };
+  var idx = { newborn: 0, kids65: 0 };
   Object.keys(CATALOG).forEach(function(k){
     CATALOG[k].items.forEach(function(it){ var i=new Image(); i.src=it.src; });
   });
@@ -938,23 +986,21 @@ fbq('track', 'PageView');
   // Keep setSlide('newborn', variant) working for any leftover callers
   var _set = window.setSlide;
   window.setSlide = function(id, variant){
-    if(id === 'newborn' || id === 'slide-newborn'){
-      var cat = CATALOG.newborn;
-      var j;
-      for(j=0;j<cat.items.length;j++){
-        // match by filename index from variant newborn-pN
-        var m = String(variant||'').match(/p(\d+)/);
-        if(m){ slipSelect('newborn', parseInt(m[1],10)-1); return; }
-      }
+    if(id === 'newborn' || id === 'slide-newborn' || id === 'kids65' || id === 'slide-kids65'){
+      var key = (id === 'kids65' || id === 'slide-kids65') ? 'kids65' : 'newborn';
+      var cat = CATALOG[key];
+      var m = String(variant||'').match(/p(\d+)/);
+      if(m){ slipSelect(key, parseInt(m[1],10)-1); return; }
     }
     if(typeof _set === 'function') return _set(id, variant);
   };
   var _nav = window.navSlide;
   window.navSlide = function(id, delta){
     if(id === 'newborn' || id === 'slide-newborn'){ slipStep('newborn', delta||0); return; }
+    if(id === 'kids65' || id === 'slide-kids65'){ slipStep('kids65', delta||0); return; }
     if(typeof _nav === 'function') return _nav(id, delta);
   };
-  function boot(){ paint('newborn'); }
+  function boot(){ paint('newborn'); paint('kids65'); }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
 })();

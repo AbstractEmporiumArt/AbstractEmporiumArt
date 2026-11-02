@@ -1,0 +1,80 @@
+{
+  "updated": "2026-10-20",
+  "channel": "Thunder Bay, ON local only (FB + pickup/drop-off)",
+  "custom_cutoff": "2026-12-23",
+  "rules": [
+    "1 loyalty stamp per paid order (bundle = 1 stamp)",
+    "No 5oz on hero tiles unless customer asks upgrade",
+    "Custom sizes: fixed $ off list (see size tables)",
+    "Oct 18 FL/Cap'n/MF curing until ~Nov 1 \u2014 use other ready Classic only",
+    "Seasonal deals only after Oct 27 burn PASS + production pour"
+  ],
+  "singles": [
+    {
+      "name": "Fall Glow Classic",
+      "status": "LIVE_SOON",
+      "phase": 1,
+      "featured_price": 30.0,
+      "featured_size": "Adult M",
+      "includes": "1 pair slippers + Classic 2oz",
+      "scent_default": "Classic 2oz ($5)",
+      "list_adult_m": 35.0,
+      "discount": 5.0,
+      "upgrade_5oz_note": "Only if asked \u2014 Adult M ~$35 (slippers + 5oz \u2212 $5)",
+      "size_prices": {
+        "Adult S": 25.0,
+        "Adult M": 30.0,
+        "Adult L": 35.0,
+        "Adult XL": 40.0,
+        "Youth": 20.0
+      }
+    },
+    {
+      "name": "Holiday Glow Seasonal",
+      "status": "GATED",
+      "phase": "1b",
+      "gate": "Oct 27 seasonal burn PASS + production batches",
+      "featured_price": 35.0,
+      "featured_size": "Adult M",
+      "includes": "1 pair slippers + Seasonal 2.5oz (Hello Fall or Santa's Pipe)",
+      "scent_default": "Seasonal 2.5oz ($7.50)",
+      "list_adult_m": 37.5,
+      "discount": 2.5,
+      "size_prices": {
+        "Adult S": 30.0,
+        "Adult M": 35.0,
+        "Adult L": 40.0,
+        "Adult XL": 45.0,
+        "Youth": 25.0
+      }
+    }
+  ],
+  "couples": [
+    {
+      "name": "Couples Fall Classic",
+      "status": "DEC",
+      "featured_price": 62.0,
+      "featured_sizes": "Adult M + L",
+      "includes": "2 pairs slippers + Classic 2oz",
+      "scent_default": "Classic 2oz",
+      "list_ml": 70.0,
+      "alt_sm": 54.0,
+      "upgrade_5oz_ml": 67.0
+    },
+    {
+      "name": "Couples Holiday Seasonal",
+      "status": "DEC_GATED",
+      "featured_price": 65.0,
+      "featured_sizes": "Adult M + L",
+      "includes": "2 pairs + Seasonal 2.5oz",
+      "scent_default": "Seasonal 2.5oz",
+      "list_ml": 72.5,
+      "alt_sm": 56.0
+    }
+  ],
+  "timeline": [
+    "Now: Fall Glow Classic $30 (ready Classic stock)",
+    "After seasonal PASS+pour: Holiday Glow Seasonal $35",
+    "Dec 1\u201323: Couples + singles; custom cutoff Dec 23"
+  ]
+}

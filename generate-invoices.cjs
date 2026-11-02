@@ -17,17 +17,26 @@ for (const line of lines) {
   n++;
   const inv = String(n).padStart(4, '0');
   const cust = o.customer || o.customer_name || 'Unknown';
-  const items = (o.items || []).map(it => ({
-    title: it.title || '(no title)',
-    qty: it.qty || 1,
-    price: it.price || 0,
-    line: (it.qty || 1) * (it.price || 0),
-  }));
-  const subtotal = o.subtotal != null ? o.subtotal : items.reduce((s, i) => s + i.line, 0);
-  const discount = o.discount || 0;
-  const tax = o.tax != null ? o.tax : 0;
-  const shipping = o.shipping != null ? o.shipping : 0;
-  const total = o.total != null ? o.total : (subtotal - discount + tax + shipping);
+  const num = (v, d=0) => {
+    const n = Number(v);
+    return Number.isFinite(n) ? n : d;
+  };
+  const items = (o.items || []).map(it => {
+    const qty = num(it.qty, 1);
+    const price = num(it.price != null ? it.price : it.line_total, 0);
+    const line = num(it.line_total, qty * price);
+    return {
+      title: it.title || it.name || '(no title)',
+      qty,
+      price,
+      line,
+    };
+  });
+  const subtotal = num(o.subtotal != null ? o.subtotal : items.reduce((s, i) => s + i.line, 0));
+  const discount = num(o.discount, 0);
+  const tax = num(o.tax, 0);
+  const shipping = num(o.shipping, 0);
+  const total = num(o.total != null ? o.total : (subtotal - discount + tax + shipping));
   const isCredit = total < 0 || items.length === 0;
   const stamps = (o.status === 'paid') ? '1 loyalty stamp (paid order)' : '—';
   const itemRows = items.length

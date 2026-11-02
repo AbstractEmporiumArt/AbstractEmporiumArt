@@ -1,8 +1,15 @@
-{"customer": "Tracey", "stamps": 3, "last_order": "2026-09-19", "notes": "3rd order paid $167 (2026-09-19); empties returns credit; big spender (3 orders)"}
-{"customer": "Carissa", "stamps": 3, "last_order": "2026-09-02", "notes": "$5 credit for sampler container donations; frequent buyer (3 orders)"}
-{"customer": "Kelsie", "stamps": 1, "last_order": "2026-07-30", "notes": "Thunder Bay"}
-{"customer": "Janice", "stamps": 1, "last_order": "2026-08-06", "notes": "FB Marketplace"}
-{"customer": "Eugene", "stamps": 1, "last_order": "2026-08-08", "notes": "Paid $20 for 2 pairs of slippers"}
-{"customer": "Jamie (City)", "stamps": 1, "last_order": "2026-09-04", "notes": "$20 cash, 4x 2oz candles + incense freebie"}
-{"customer": "Jayme", "stamps": 1, "last_order": "2026-09-05", "notes": "HIGH RISK - FB Marketplace, e-transfer after follow-up; pay in advance going forward", "high_risk": true}
-{"customer": "Heather", "stamps": 2, "last_order": "2026-08-23", "notes": "2x Bourbon & Sandalwood melts; 2nd order completed (2 loyalty)"}
+{"customer": "Tracey", "stamps": 3, "note": "1st 2026-07-18 $50 · 2nd 2026-08-09 $176.80 · 3rd 2026-09-19 $167 (less $15 credit). REGULAR REFILLER. $39 CREDIT BANKED (13 empties @ $3). Additional $21 credit 2026-10-19 for 7×5oz returned (contain"}
+{"customer": "Carissa", "stamps": 3, "note": "1st 2026-06-20 $6 · 2nd 2026-07-22 $12 · 3rd $10 (MF+FT melts). User-confirmed 3 stamps 2026-10-20."}
+{"customer": "Heather", "stamps": 4, "note": "1st 2026-08-23 $20 · 2nd 2026-09-17 $20 · 3rd 2026-10-04 COMPLETE newborn tuque $5 + slippers $7 = $12 less $2 gift = $10 cash (gift for new mother). 4th 2026-10-30 COMPLETE size 9 women's slippers $2"}
+{"customer": "Jen", "stamps": 3, "note": "LEGACY 2024-10-04: 12 pairs, paid $200 (stamp 1, NO AE revenue — pre-reg). 2nd 2026-10-04 COMPLETED paid $40 e-transfer (2x Adult Large mens size 9, list $70 goodwill -$30). Stamp 2. Referred Tim."}
+{"customer": "Tim", "stamps": 1, "note": "Referred by Jen. 2 pairs Adult Large men's slippers size 9. $50 e-transfer 2026-10-19. Stamp 1."}
+{"customer": "Jackie", "stamps": 1, "note": "1st FB Marketplace 2026-10-13/19 $28 cash: 2oz Simple Daydreams + 2oz Bourbon & Sandalwood. Stamp 1."}
+{"customer": "Debbie", "stamps": 1, "note": "1st FB Marketplace 2026-10-19 $20 cash: 2oz Satsuma + Simple Daydreams + Fruit Loops + Cap'n Crunch Berries. Stamp 1."}
+{"customer": "Jamie (City)", "stamps": 1, "note": "1st 2026-09-04 $20 cash — 4× 2oz + incense freebie (freebie NO slot). Stamp 1."}
+{"customer": "Jayme", "stamps": 1, "note": "HIGH RISK — 1st 2026-09-05 $5 (2oz Fruit Loops Heart Tin). Claimed e-transfer, delayed; pay in advance going forward. Stamp 1."}
+{"customer": "Brenda", "stamps": 2, "note": "1st 2026-05-21 $24 e-transfer — 2oz MF + B&S + Fruit Loops. Partner's co-worker. Stamp 1. Already paid a while ago. | 2nd order 2026-10-31 $20 e-transfer — 2x2oz Fruit Loops + 2x2oz Cap'n Crunch Berri"}
+{"customer": "Kelsie", "stamps": 1, "note": "1st 2026-07-30 $20 cash — 2× 5oz Fruit Loops. Stamp 1."}
+{"customer": "Eugene", "stamps": 1, "note": "1st 2026-08-14 $20 cash — 2 pairs YOUTH slippers (tbdiwsg board). Stamp 1."}
+{"customer": "Tom", "stamps": 1, "note": "LEGACY 2026-01-07 $100 — 6 pairs NHL colourways. Stamp 1, NO AE revenue period (pre/personal)."}
+{"customer": "Janice (Janie)", "stamps": 1, "note": "AKA Janie. 1st 2026-08-06 $10 cash — 2× Fruit Loops wax melt, FB Marketplace. Stamp 1. CONFIRMED keep 2026-10-20 by Lissa."}
+{"customer": "Melissa Craig", "stamps": 1, "note": "LEGACY 2025-05-15 $100 Alberta — 3 pairs LKC. Stamp 1, NO AE revenue (pre-reg / personal account). CONFIRMED keep 2026-10-20 by Lissa."}

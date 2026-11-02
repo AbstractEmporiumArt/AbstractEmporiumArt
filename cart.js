@@ -1,8 +1,11 @@
 (function(){
-  const BUSINESS_EMAIL = 'abstractemporiumart@outlook.com'; // Interac e-Transfer: sender picks their Canadian bank/credit union from dropdown; receiver (AE) gets it free
+  const BUSINESS_EMAIL = 'abstractemporiumart@outlook.com'; // Interac e-Transfer to AE Canadian bank (auto-deposit)
   const SHIPPING_THRESHOLD = 100;
-  const SHIPPING_RATE = -1; // -1 = QUOTED: no flat rate. Real shipping via NetParcel (PayPal checkout) or quoted for e-Transfer. $12 flat removed — underfunded.
   let priorityOptIn = false;
+  let pickupTB = false;
+  let cpPostal = '';
+  let cpRates = [];
+  let cpIdx = -1; // selected Canada Post rate for e-transfer only
 
   function getCart(){
     try { return JSON.parse(localStorage.getItem('artCart') || '[]'); }
@@ -13,7 +16,10 @@
   function calcSubtotal(cart){ return cart.reduce((sum, i) => sum + (Number(i.price) || 0), 0); }
   function calcShipping(sub, count){
     if (count === 0 || sub <= 0) return 0;
-    return sub >= SHIPPING_THRESHOLD ? 0 : SHIPPING_RATE;
+    if (pickupTB) return 0;
+    if (sub >= SHIPPING_THRESHOLD) return 0;
+    if (cpIdx >= 0 && cpRates[cpIdx]) return Number(cpRates[cpIdx].amount) || 0;
+    return -1; // QUOTED — not in total until a CP rate is picked (PayPal uses NetParcel separately)
   }
   function formatMoney(n){ return '$' + (Number(n) || 0).toFixed(2); }
   function escapeHtml(s){
@@ -33,6 +39,9 @@
       wrap.innerHTML = '';
       summary.style.display = 'none';
       empty.style.display = 'block';
+      pickupTB = false;
+      cpRates = [];
+      cpIdx = -1;
       return;
     }
     empty.style.display = 'none';
@@ -56,13 +65,23 @@
     const FALL15_RATE = 0.15;
     const fall15 = subtotal >= FALL15_MIN ? subtotal * FALL15_RATE : 0;
     const discounted = subtotal - fall15;
-    const total = discounted + shipping + priority;
+    const shipAdd = shipping < 0 ? 0 : shipping;
+    const total = discounted + shipAdd + priority;
     const orderNumber = (window.AE && window.AE.getOrderNumber) ? window.AE.getOrderNumber() : '';
+    const shipLabel = pickupTB ? 'FREE (TB pickup)' : (shipping === 0 ? 'FREE' : (shipping < 0 ? 'QUOTED' : formatMoney(shipping)));
+    const cpChosen = (cpIdx >= 0 && cpRates[cpIdx]) ? cpRates[cpIdx] : null;
+
+    const rateRadios = cpRates.map((r, i) => {
+      const days = r.est_delivery_days != null ? ` (≈${r.est_delivery_days} days)` : '';
+      const chk = i === cpIdx ? ' checked' : '';
+      return `<label style="display:block;margin:4px 0;cursor:pointer;"><input type="radio" name="cpRate" value="${i}"${chk}> ${escapeHtml(r.service || r.carrier)} — ${formatMoney(r.amount)} ${escapeHtml(r.currency || 'CAD')}${days}</label>`;
+    }).join('');
 
     summary.innerHTML = `
       <div class="cart-row"><span>Subtotal</span><span>${formatMoney(subtotal)}</span></div>
       ${fall15 > 0 ? `<div class="cart-row" style="color:#1a7f37;font-weight:600"><span>FALL15 — 15% off $60+</span><span>-${formatMoney(fall15)}</span></div>` : ''}
-      <div class="cart-row"><span>Shipping</span><span>${shipping === 0 ? 'FREE' : (shipping < 0 ? 'QUOTED' : formatMoney(shipping))}</span></div>
+      <div class="cart-row"><span>Shipping</span><span>${shipLabel}</span></div>
+      ${cpChosen ? `<div class="cart-row" style="font-size:0.85em;color:#555"><span>Canada Post</span><span>${escapeHtml(cpChosen.service)}</span></div>` : ''}
       <div class="cart-row priority-row">
         <label class="priority-label">
           <input type="checkbox" id="priorityCheck" ${priorityOptIn ? 'checked' : ''}>
@@ -91,16 +110,18 @@
         ` : ''}
         <button type="submit" class="checkout-btn">Checkout with PayPal</button>
       </form>
+      <p style="font-size:0.82em;color:#666;margin-top:6px;">PayPal checkout uses <strong>NetParcel</strong> live shipping at PayPal — Canada Post is not added to the PayPal total.</p>
       ${fall15 > 0 ? `<p style="font-size:0.85em;color:#1a7f37;margin-top:6px;">🎉 FALL15 applied: 15% off your $60+ order.</p>` : `<p style="font-size:0.85em;color:#666;margin-top:6px;">Spend $60+ to unlock code <strong>FALL15</strong> (15% off).</p>`}
-      <p style="font-size:0.9em;color:#666;margin-top:10px;">Canada-wide from Thunder Bay, ON. <strong>PayPal:</strong> live shipping via NetParcel at checkout. <strong>E-transfer:</strong> Canada Post quote below (or we quote after your address). <strong>TB pickup/drop-off:</strong> no shipping fee. Invoice + Order # with every paid order.</p>
-      <p style="font-size:0.85em;color:#666;margin-top:6px;">Paying by Interac e-Transfer? Send to <strong>[EMAIL]</strong> (auto-deposits to our Canadian bank — free for you) and put your Order # <strong>${orderNumber}</strong> in the message. Then confirm at <a href="etransfer-confirm.html?order=${orderNumber}">eTransfer confirm</a>.</p>
+      <p style="font-size:0.9em;color:#666;margin-top:10px;">Canada-wide from Thunder Bay, ON. <strong>PayPal:</strong> NetParcel at PayPal checkout. <strong>E-transfer:</strong> pick a Canada Post rate below (Canadian bank Interac). <strong>TB pickup:</strong> $0.</p>
+      <p style="font-size:0.85em;color:#666;margin-top:6px;">Paying by Interac e-Transfer? Send <strong>${formatMoney(total)} CAD</strong> to <strong>${BUSINESS_EMAIL}</strong> (auto-deposits to our Canadian bank — free for you). Put Order # <strong>${orderNumber}</strong>${cpChosen ? ' + ' + escapeHtml(cpChosen.service) : ''} in the message. Then confirm at <a href="etransfer-confirm.html?order=${orderNumber}">eTransfer confirm</a>.</p>
       <div id="etTransferQuote" style="margin-top:10px;border:1px solid #ddd;border-radius:8px;padding:10px;background:#fafaff;">
-        <label style="font-size:0.85em;font-weight:600;" for="etPostal">Canada Post shipping quote (e-Transfer · Canada only):</label>
+        <label style="display:block;font-size:0.85em;margin-bottom:8px;cursor:pointer;"><input type="checkbox" id="pickupCheck" ${pickupTB ? 'checked' : ''}> Thunder Bay pickup / drop-off — $0 shipping</label>
+        <label style="font-size:0.85em;font-weight:600;" for="etPostal">Canada Post quote (e-Transfer · Canada only):</label>
         <div style="display:flex;gap:6px;margin-top:6px;">
-          <input id="etPostal" type="text" inputmode="latin" placeholder="Postal code (e.g. M5V 2T6)" style="flex:1;padding:8px;border:1px solid #ccc;border-radius:6px;">
-          <button id="etQuoteBtn" type="button" style="padding:8px 12px;border:none;border-radius:6px;background:#007a63;color:#fff;cursor:pointer;">Quote</button>
+          <input id="etPostal" type="text" inputmode="latin" placeholder="Postal code (e.g. M5V 2T6)" value="${escapeHtml(cpPostal)}" style="flex:1;padding:8px;border:1px solid #ccc;border-radius:6px;" ${pickupTB ? 'disabled' : ''}>
+          <button id="etQuoteBtn" type="button" style="padding:8px 12px;border:none;border-radius:6px;background:#007a63;color:#fff;cursor:pointer;" ${pickupTB ? 'disabled' : ''}>Quote</button>
         </div>
-        <div id="etQuoteResult" style="font-size:0.85em;margin-top:8px;color:#444;"></div>
+        <div id="etQuoteResult" style="font-size:0.85em;margin-top:8px;color:#444;">${rateRadios ? rateRadios : ''}</div>
       </div>
     `;
 
@@ -122,6 +143,15 @@
       });
     }
 
+    const pickupBox = document.getElementById('pickupCheck');
+    if (pickupBox) {
+      pickupBox.addEventListener('change', (e) => {
+        pickupTB = e.target.checked;
+        if (pickupTB) { cpIdx = -1; }
+        render();
+      });
+    }
+
     const etQuoteBtn = document.getElementById('etQuoteBtn');
     const etPostal = document.getElementById('etPostal');
     const etQuoteResult = document.getElementById('etQuoteResult');
@@ -135,11 +165,21 @@
           const data = await res.json();
           if (!data.ok) { etQuoteResult.textContent = 'Quote unavailable: ' + (data.error || 'try again'); return; }
           if (!data.rates.length) { etQuoteResult.textContent = 'No rates returned.'; return; }
-          const lines = data.rates.map(r => `• ${r.service || r.carrier}: ${formatMoney(r.amount)} ${r.currency}` + (r.est_delivery_days != null ? ` (≈${r.est_delivery_days} days)` : '')).join('<br>');
-          etQuoteResult.innerHTML = 'From Thunder Bay, ON — Canada Post:<br>' + lines + '<br><span style="color:#666">PayPal checkout still uses NetParcel live rates.</span>';
+          cpPostal = postal;
+          cpRates = data.rates;
+          cpIdx = 0;
+          pickupTB = false;
+          render();
         } catch (e) {
           etQuoteResult.textContent = 'Network error fetching quote.';
         }
+      });
+      etQuoteResult.querySelectorAll('input[name="cpRate"]').forEach(function (rad) {
+        rad.addEventListener('change', function () {
+          cpIdx = Number(rad.value);
+          pickupTB = false;
+          render();
+        });
       });
     }
   }

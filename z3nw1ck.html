@@ -95,7 +95,7 @@
         .product-card .body .about-carousel .about-slide figcaption {
             position:static;
             background:none;
-            color:#ccc;
+            color:#fff;
             text-shadow:none;
             padding:4px 0 0;
             font-size:0.75rem;
@@ -129,7 +129,19 @@
 .high-contrast{background:#000;color:#fff}
 .high-contrast a{color:#60a5fa}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style>
+
+/* Product Card Text Readability */
+.product-card .notes, .product-card .price, .product-card h3, .product-card .tier-badge {
+    color: #ffffff !important;
+    position: relative;
+    z-index: 2;
+}
+.about-carousel {
+    z-index: 1;
+    margin-top: 25px;
+    clear: both;
+}
+</style></style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

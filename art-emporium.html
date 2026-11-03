@@ -145,14 +145,10 @@ fbq('track', 'PageView');
 <p style="margin:0;text-align:center;font-weight:700;color:#f5d76e;font-size:1.2rem;">$80 CAD &rarr;</p>
 <p style="margin:0.2rem 0 0;text-align:center;color:#b8a88a;font-size:.85rem;font-style:italic;">One of a kind — original 14&times;11 in. acrylic + silver leaf & metallic accents</p>
 <p style="text-align:center;margin:0.4rem 0 0;font-size:.82rem;color:#c9bda8;font-style:italic;">This piece captures 12 years of experimenting with light, colour, and texture — from my first messy fluid pours to the focused, glowing work you see here.</p>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;margin-top:1rem;">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="[EMAIL]">
-<input type="hidden" name="item_name" value="Celestial Drift - Original Painting">
-<input type="hidden" name="amount" value="80">
-<input type="hidden" name="currency_code" value="CAD">
-<button type="submit" class="buy-btn" style="background:#f5d76e;color:#1a1a2e;padding:12px 24px;border:none;border-radius:8px;font-weight:700;cursor:pointer;">Buy Now — $80 CAD</button>
-</form>
+<div style="text-align:center;margin-top:1rem;">
+<button type="button" class="buy-btn" style="background:#f5d76e;color:#1a1a2e;padding:12px 24px;border:none;border-radius:8px;font-weight:700;cursor:pointer;" onclick="addToCartDirect('Abstract Emporium Art - Celestial Drift (Original 1/1)', 80, 'celestial-drift-main.webp')">Add to Cart — $80 CAD</button>
+<p style="margin:0.6rem 0 0;font-size:0.9rem;color:#b8a88a;">Checkout: PayPal (NetParcel) or Interac e-Transfer (Canada Post) · <a href="cart.html" style="color:#f5d76e;">Open cart</a></p>
+</div>
 <p style="text-align:center;margin:0.75rem 0 0;"><a href="celestial-drift.html" style="color:#f5d76e;">Full Celestial Drift details →</a></p>
 </section>
 </div><!-- /.cd-feature -->
@@ -492,5 +488,6 @@ fbq('track', 'PageView');
 })();
 </script>
 
+<script src="cart.js"></script>
 </body>
 </html>

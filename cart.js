@@ -216,6 +216,11 @@
 
   window.addToCartDirect = function(title, price, image){ pushItem(title, price, image); };
 
+  // z3nw1ck product pages call aeAddToCart(id, title, price[, image])
+  window.aeAddToCart = function(id, title, price, image){
+    pushItem(title || id, price, image || null);
+  };
+
   window.addCandleToCart = function(selectId, title, image){
     const sel = document.getElementById(selectId);
     if(!sel){ pushItem(title, 0, image); return; }

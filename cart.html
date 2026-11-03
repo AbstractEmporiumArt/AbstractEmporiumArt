@@ -1,104 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content="Shopping cart — Abstract Emporium">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart - Abstract Emporium</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .cart-container { max-width: 900px; margin: 40px auto; padding: 20px; }
-        .cart-item { display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #eee; align-items: center; }
-        .cart-item img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; }
-        .cart-item-info { flex: 1; }
-        .cart-item-title { font-weight: 700; margin-bottom: 4px; }
-        .cart-item-price { color: #666; }
-        .cart-summary { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px; }
-        .cart-row { display: flex; justify-content: space-between; padding: 6px 0; }
-        .cart-total { font-weight: 700; font-size: 1.2em; border-top: 2px solid #333; padding-top: 10px; margin-top: 10px; }
-        .checkout-btn { display: inline-block; margin-top: 16px; padding: 14px 28px; background: #0070f3; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; }
-        .empty-cart { text-align: center; padding: 60px 20px; }
-        .remove-btn { background: #dc3545; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
-        .priority-row { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; padding: 10px 12px; margin: 10px 0; }
-        .priority-label { display: flex; align-items: center; gap: 8px; font-weight: 600; cursor: pointer; }
-        .priority-label input { width: 18px; height: 18px; }
-        .priority-note { font-size: 0.85em; color: #7c2d12; margin: 6px 0 0; line-height: 1.4; }
-    
-/* === Accessibility / Disability angle === */
-.skip-link{position:absolute;top:-40px;left:0;background:#1a1a2e;color:#fff;padding:8px 16px;z-index:1000;font-size:14px;border-radius:0 0 4px 0;transition:top 0.2s}
-.skip-link:focus{top:0}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Your cart — PayPal (NetParcel) or Interac e-Transfer (Canada Post). Thunder Bay pickup available. Abstract Emporium.">
+<title>Your Cart - Abstract Emporium</title>
+<link rel="canonical" href="https://abstractemporium.art/cart.html">
+<meta property="og:title" content="Your Cart - Abstract Emporium">
+<meta property="og:description" content="Checkout with PayPal (NetParcel) or Canadian Interac e-Transfer. Canada Post quotes and Thunder Bay pickup.">
+<meta property="og:url" content="https://abstractemporium.art/cart.html">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<style>
+.cart-container { max-width: 900px; margin: 40px auto; padding: 20px; }
+.cart-item { display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #eee; align-items: center; }
+.cart-item img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; }
+.cart-item-info { flex: 1; }
+.cart-item-title { font-weight: 700; margin-bottom: 4px; }
+.cart-item-price { color: #666; }
+.cart-summary { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px; }
+.cart-row { display: flex; justify-content: space-between; padding: 6px 0; }
+.cart-total { font-weight: 700; font-size: 1.2em; border-top: 2px solid #333; padding-top: 10px; margin-top: 10px; }
+.checkout-btn { display: inline-block; margin-top: 16px; padding: 14px 28px; background: #0070f3; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; }
+.empty-cart { text-align: center; padding: 40px 20px; }
+.remove-btn { background: #dc3545; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+.priority-row { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; padding: 10px 12px; margin: 10px 0; }
+.priority-label { display: flex; align-items: center; gap: 8px; font-weight: 600; cursor: pointer; }
+.priority-label input { width: 18px; height: 18px; }
+.priority-note { font-size: 0.85em; color: #7c2d12; margin: 6px 0 0; line-height: 1.4; }
+.pay-trust { max-width: 900px; margin: 16px auto; padding: 16px 18px; background: #f8f6f1; border: 1px solid #e3d9cd; border-left: 4px solid #007a63; border-radius: 10px; color: #2d2a26; font-size: .95rem; line-height: 1.55; }
+.pay-trust h2 { margin: 0 0 8px; font-size: 1.05rem; color: #007a63; }
+.pay-trust ul { margin: 0; padding-left: 1.15rem; }
+.shop-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+.shop-links a { display: inline-block; padding: 10px 16px; background: #1a1a2e; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; }
+.skip-link{position:absolute;left:0;top:0;transform:translateY(-120%);background:#1a1a2e;color:#fff;padding:8px 16px;z-index:10000;font-size:14px;border-radius:0 0 4px 0;transition:transform .15s}
+.skip-link:focus,.skip-link:focus-visible{transform:translateY(0);outline:3px solid #2563eb;outline-offset:2px}
 *:focus{outline:3px solid #2563eb;outline-offset:2px}
 :focus:not(:focus-visible){outline:none}
 :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
-[role="banner"],[role="navigation"],[role="main"],[role="contentinfo"]{display:block}
-.disability-badge{display:inline-block;background:#1a1a2e;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px 0}
-.high-contrast{background:#000;color:#fff}
-.high-contrast a{color:#60a5fa}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (forced-colors: active){
+  body{background:Window;color:WindowText}
+  .shop-links a,.checkout-btn,.remove-btn{forced-color-adjust:none;background:ButtonFace;color:ButtonText;border:1px solid ButtonText}
+  .pay-trust{border-color:ButtonText;background:Window;color:WindowText}
+}
 </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
+<header role="banner">
+<nav role="navigation" class="navbar" aria-label="Primary">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" width="40" height="40" loading="lazy" decoding="async">
+      <span>Abstract Emporium</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
+      <li><a href="lissas-knitting.html" class="nav-link">Lissa's Knitting</a></li>
+      <li><a href="art-emporium.html" class="nav-link">Art Emporium</a></li>
+      <li><a href="pods.html" class="nav-link">PODs</a></li>
+      <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="cart.html" class="nav-link" aria-current="page">Cart <span id="cartCount">(0)</span></a></li>
+    </ul>
+    <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+</header>
 
-<nav role="navigation" class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" loading="lazy" decoding="async">
-                <span>Abstract Emporium</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
-                <li><a href="lissas-knitting.html" class="nav-link">Knitting</a></li>
-                <li><a href="art-emporium.html" class="nav-link">Art Emporium</a></li>
-                <li>
-                <a href="pods.html" class="nav-link">PODs</a></li>
-                
-                <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="cart.html" class="nav-link">Cart <span id="cartCount">(0)</span></a></li>
-                </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo">Abstract Emporium</a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="art-emporium.html">Art Emporium</a></li>
-                <li><a href="pods.html">Art</a></li>
-                <li><a href="loyalty.html">Loyalty</a></li>
-                <li><a href="cart.html" class="active">Cart <span id="cartCount">(0)</span></a></li>
-            
-            <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
-            <li><a href="lissas-knitting.html" class="nav-link">Lissa's Knitting</a></li></ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+<main id="main-content" role="main">
+  <div class="pay-trust">
+    <h2>Payment and shipping (CAD)</h2>
+    <ul>
+      <li><strong>PayPal:</strong> checkout uses <strong>NetParcel</strong> live shipping rates at PayPal.</li>
+      <li><strong>Interac e-Transfer:</strong> pay our Canadian bank (auto-deposit). Put your <strong>Order #</strong> in the memo, then confirm on the e-transfer page.</li>
+      <li><strong>Canada Post:</strong> choose a quoted rate for e-transfer orders (Canada-wide from Thunder Bay, ON).</li>
+      <li><strong>Thunder Bay pickup / drop-off:</strong> $0 shipping when selected at checkout.</li>
+    </ul>
+  </div>
 
-    <div class="cart-container">
-        <h1>Your Cart</h1>
-        <div id="cartItems"></div>
-        <div id="cartSummary" class="cart-summary" style="display:none;"></div>
-        <div id="emptyCart" class="empty-cart" style="display:none;">
-            <h2>Your cart is empty</h2>
-            <p>Browse <a href="z3nw1ck.html">Z3NW1CK</a> or <a href="lissas-knitting.html">Lissa's Knitting</a> to add items.</p>
-        </div>
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+    <div id="cartItems"></div>
+    <div id="cartSummary" class="cart-summary" style="display:none;"></div>
+    <div id="emptyCart" class="empty-cart" style="display:none;">
+      <h2>Your cart is empty</h2>
+      <p>Add items from any shop, then return here to check out with PayPal (NetParcel) or Interac e-Transfer.</p>
+      <div class="shop-links">
+        <a href="z3nw1ck.html">Shop Z3NW1CK candles</a>
+        <a href="lissas-knitting.html">Shop Lissa's Knitting</a>
+        <a href="art-emporium.html">Shop Art Emporium</a>
+        <a href="celestial-drift.html">Celestial Drift — $80</a>
+      </div>
     </div>
+  </div>
+</main>
 
-    <script src="cart.js"></script>
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script>
-    <script src="script.js"></script>
+<script src="cart.js"></script>
+<script src="script.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"70acaa15a3db43f396e61811cf876fbd"}'></script>
 </body>
 </html>

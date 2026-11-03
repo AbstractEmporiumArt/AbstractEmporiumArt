@@ -5135,3 +5135,46 @@ textarea:focus-visible,
     border: 1px solid ButtonText;
   }
 }
+
+
+/* AE contrast polish — dark product cards (WCAG-minded) */
+.product-card {
+  background: #12122a !important;
+  border-color: #3a3a5c !important;
+}
+.product-card .body { color: #f5f5fa !important; }
+.product-card .notes {
+  color: #f0f0f8 !important;
+  opacity: 1 !important;
+  line-height: 1.45;
+}
+.product-card .price {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+.product-card h3 {
+  color: #ffffff !important;
+}
+.product-card label {
+  color: #e8e8f4 !important;
+}
+.product-card .size-select {
+  background: #ffffff;
+  color: #1a1a2e;
+  border: 2px solid #c5c5d6;
+}
+.product-card .buy-btn,
+.product-card a.buy-btn {
+  background: #f5d76e !important;
+  color: #1a1a2e !important;
+  font-weight: 800 !important;
+  border: 2px solid #1a1a2e;
+}
+.product-card a.buy-btn:focus-visible,
+.product-card .buy-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+.tier-classic { background: #c8e6c9 !important; color: #0d3b12 !important; border-color: #1b5e20 !important; }
+.tier-premium { background: #e1bee7 !important; color: #4a148c !important; border-color: #6a1b9a !important; }
+

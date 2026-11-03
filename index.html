@@ -188,25 +188,43 @@ fbq('track', 'PageView');
       };
       var AUTOHIDE = Boolean(0);
     </script>
-    <script async defer src="https://www.google.com/recaptcha/api.js?hl=en"></script>
-    
-    <!-- Ko-fi Support Button -->
-    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js' defer></script>
-    <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'Q5Q71YC8FL');kofiwidget2.draw();</script>
-    
-    <!-- Ko-fi Floating Tip Widget -->
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js' defer></script>
+    <!-- recaptcha removed from home: no widget on this page (perf) -->
+<!-- Ko-fi: idle-load floating tip (perf) — static link always available -->
+    <p class="ae-kofi-static" style="text-align:center;margin:8px 0;">
+      <a href="https://ko-fi.com/abstractemporium" target="_blank" rel="noopener noreferrer">Support Abstract Emporium on Ko-fi</a>
+    </p>
     <script>
-      kofiWidgetOverlay.draw('abstractemporium', {
-        'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Tip Me',
-        'floating-chat.donateButton.background-color': '#00b9fe',
-        'floating-chat.donateButton.text-color': '#fff'
-      });
+    (function(){
+      function loadKofi(){
+        if (window.__aeKofiLoaded) return;
+        window.__aeKofiLoaded = true;
+        var s = document.createElement('script');
+        s.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
+        s.defer = true;
+        s.onload = function(){
+          try {
+            kofiWidgetOverlay.draw('abstractemporium', {
+              'type': 'floating-chat',
+              'floating-chat.donateButton.text': 'Tip Me',
+              'floating-chat.donateButton.background-color': '#007a63',
+              'floating-chat.donateButton.text-color': '#fff'
+            });
+          } catch (e) {}
+        };
+        document.body.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadKofi, {timeout: 4000});
+      } else {
+        setTimeout(loadKofi, 3000);
+      }
+      window.addEventListener('scroll', loadKofi, {once:true, passive:true});
+      window.addEventListener('pointerdown', loadKofi, {once:true});
+    })();
     </script>
     <script src="jsonld-core.js" defer></script>
     <script src="analytics-tracking.js" defer></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script>
     (function(){
       function initSlideshow(containerId, images){
@@ -252,7 +270,7 @@ fbq('track', 'PageView');
       ]);
     })();
     </script>
-  <script src="cart.js"></script>
+  <script src="cart.js" defer></script>
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "70acaa15a3db43f396e61811cf876fbd"}'></script>
   <div style="margin-top:1rem;padding:1rem;background:#fdf6e3;border-left:4px solid #b07d2b;border-radius:4px;"><div style="display:inline-block;padding:.25rem .6rem;background:#2a2233;color:#fdf6e3;border-radius:999px;font-weight:700;font-size:.85rem;letter-spacing:.03em;margin-bottom:.6rem;">SEASONAL COLLECTION</div>

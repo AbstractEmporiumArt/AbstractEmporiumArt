@@ -117,8 +117,22 @@
 fbq('init', '1719352401749537');
 fbq('track', 'PageView');
 </script>
-<noscript><img alt="Abstract Emporium artwork"height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1719352401749537&ev=PageView&noscript=1"/></noscript>
+<noscript><img alt="Abstract Emporium artwork"height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1719352401749537&ev=PageView&noscript=1"/ loading="lazy" decoding="async"></noscript>
 <!-- End Meta Pixel -->
+
+<style id="ae-a11y-polish">
+.skip-link{position:absolute;left:0;top:0;transform:translateY(-120%);background:#1a1a2e;color:#fff;padding:8px 16px;z-index:10000;font-size:14px}
+.skip-link:focus,.skip-link:focus-visible{transform:translateY(0);outline:3px solid #2563eb;outline-offset:2px}
+:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media (forced-colors: active){
+  body{background:Window;color:WindowText}
+  a{color:LinkText}
+  .navbar,.nav-menu a,.buy-btn,.checkout-btn,button{forced-color-adjust:none;border:1px solid ButtonText}
+  .product-card{border:1px solid ButtonText}
+}
+</style>
+
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -177,11 +191,11 @@ fbq('track', 'PageView');
     <script async defer src="https://www.google.com/recaptcha/api.js?hl=en"></script>
     
     <!-- Ko-fi Support Button -->
-    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js' defer></script>
     <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'Q5Q71YC8FL');kofiwidget2.draw();</script>
     
     <!-- Ko-fi Floating Tip Widget -->
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js' defer></script>
     <script>
       kofiWidgetOverlay.draw('abstractemporium', {
         'type': 'floating-chat',
@@ -190,8 +204,8 @@ fbq('track', 'PageView');
         'floating-chat.donateButton.text-color': '#fff'
       });
     </script>
-    <script src="jsonld-core.js"></script>
-    <script src="analytics-tracking.js"></script>
+    <script src="jsonld-core.js" defer></script>
+    <script src="analytics-tracking.js" defer></script>
     <script src="script.js"></script>
     <script>
     (function(){

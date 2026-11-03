@@ -5178,3 +5178,22 @@ textarea:focus-visible,
 .tier-classic { background: #c8e6c9 !important; color: #0d3b12 !important; border-color: #1b5e20 !important; }
 .tier-premium { background: #e1bee7 !important; color: #4a148c !important; border-color: #6a1b9a !important; }
 
+
+/* ae-cta-contrast */
+.cta-button, button.cta-button {
+  background: #1a1a2e !important;
+  color: #ffffff !important;
+  border: 2px solid #f5d76e !important;
+  font-weight: 700 !important;
+}
+.cta-button:hover, button.cta-button:hover {
+  background: #2a2a4a !important;
+  color: #ffffff !important;
+}
+.social-link span {
+  color: #ffffff !important;
+}
+.social-link {
+  background: #1a1a2e !important;
+  border: 1px solid #f5d76e;
+}

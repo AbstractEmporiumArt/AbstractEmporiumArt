@@ -550,6 +550,21 @@
       "fb_product_category": "clothing & accessories > shoes",
       "quantity_to_sell_on_facebook": "1",
       "status": "active"
+    },
+    {
+      "id": "AE-LKC-BM-001",
+      "title": "Handmade Knitted Bookmark - Horizontal Ridge",
+      "description": "Handmade knitted bookmark with textured horizontal ridge design. Approximately 2 inches wide, 7 inches knitted length, 10.5 inches total length including tassel. Assorted colours and colour combinations. Each bookmark is individually handmade with a coordinating yarn tassel. A lovely little gift for book lovers, students, teachers, birthdays, and stocking stuffers. Every bookmark is unique with slight variations that are part of its handmade charm.",
+      "availability": "in stock",
+      "condition": "new",
+      "price": "5.00 CAD",
+      "link": "https://abstractemporium.art/lissas-knitting.html",
+      "image_link": "https://abstractemporium.art/lissas-knitting-product-photos/bookmark-horizontal-ridge.jpg",
+      "brand": "Lissa's Knitting Creations",
+      "google_product_category": "Apparel & Accessories > Clothing Accessories > Hats",
+      "fb_product_category": "clothing & accessories > clothing accessories > newborn & baby fashion accessories > hats",
+      "quantity_to_sell_on_facebook": "1",
+      "status": "active"
     }
   ]
 }

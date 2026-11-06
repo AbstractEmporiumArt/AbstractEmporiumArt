@@ -777,7 +777,7 @@ fbq('track', 'PageView');
 </div>
     </div><!-- /.container -->
     <h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.1rem;text-align:center;">
-  <!-- <div class="about-carousel" aria-label="Handmade Knitted Bookmark – Horizontal Ridge label slideshow">
+ <div class="about-carousel" aria-label="Handmade Knitted Bookmark – Horizontal Ridge label slideshow">
                         <div class="about-carousel-track">
                             <div class="about-slide">
                                 <img src="LKC-Bookmarks/AELKCBookmark1_resized.jpg" alt="Handmade Knitted Bookmark – Horizontal Ridge bookmark 1 label" loading="eager" decoding="async">
@@ -831,71 +831,14 @@ fbq('track', 'PageView');
                                 <img src="LKC-Bookmarks/AELKCBookmark19_resized.jpg" alt="Handmade Knitted Bookmark – Horizontal Ridge bookmark 17 label" loading="eager" decoding="async">
                             </div>
                         </div>
-                    </div>
 
-                        <button class="about-carousel-prev" aria-label="Previous bookmark">
-                            ←
-                        </button>
-                        <button class="about-carousel-next" aria-label="Next bookmark">
-                            →
-                        </button>
-LKC Gallery — Completed &amp; Commissioned Creations (12)</h3>
-<div class="slippers-slideshow" id="slide-gallery" style="position:relative;overflow:hidden;height:70vh;max-height:520px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
-<img src="lkc-custom-ordered-slippers.jpg" alt="Custom ordered knit slippers" class="slide active" data-variant="gallery-p1" loading="eager" decoding="async">
-<img src="lkc-newborn-red-set.jpg" alt="Newborn pink pair" class="slide" data-variant="gallery-p2" loading="eager" decoding="async">
-<img src="lkc-personal-2-pairs-slippers.jpg" alt="Personal colorful pairs" class="slide" data-variant="gallery-p3" loading="eager" decoding="async">
-<img src="lkc-gift-4-pairs-slippers.jpg" alt="Gift 4 pairs" class="slide" data-variant="gallery-p4" loading="eager" decoding="async">
-<img src="lkc-personal-slippers.jpg" alt="Personal finished" class="slide" data-variant="gallery-p5" loading="eager" decoding="async">
-<img src="lkc-completed-adult-slippers.jpg" alt="Adult completed" class="slide" data-variant="gallery-p6" loading="eager" decoding="async">
-<img src="lkc-sold-hockey-slippers.jpg" alt="Hockey team slippers" class="slide" data-variant="gallery-p7" loading="eager" decoding="async">
-<img src="lkc-newborn-slippers-pair.jpg" alt="Newborn finished pair" class="slide" data-variant="gallery-p8" loading="eager" decoding="async">
-<img src="lkc-gallery-pink-coral-slippers.jpg" alt="Pink and coral hand-knit slippers, completed pair" class="slide" data-variant="gallery-p9" loading="eager" decoding="async">
-<img src="lkc-gallery-mint-green-slippers.jpg" alt="Mint green hand-knit slippers with teal and variegated green-tan edging, completed pair" class="slide" data-variant="gallery-p10" loading="eager" decoding="async">
-<img src="lkc-gallery-teal-black-gold-slippers.jpg" alt="Teal, black and gold hand-knit slippers, completed pair" class="slide" data-variant="gallery-p11" loading="eager" decoding="async">
-<img src="lkc-gallery-navy-red-turquoise-slippers.jpg" alt="Navy, red and turquoise striped hand-knit slippers, completed pair" class="slide" data-variant="gallery-p12" loading="eager" decoding="async">
-<div class="counter" id="count-slide-gallery" style="position:absolute;bottom:8px;right:12px;background:rgba(0,0,0,.7);color:#fff;font-size:.78em;padding:2px 8px;border-radius:10px;z-index:10;">1 / 12</div>
-<button class="nav-btn prev" onclick="navSlide('gallery',-1)" aria-label="Previous" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9664;</button>
-<button class="nav-btn next" onclick="navSlide('gallery',1)" aria-label="Next" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:36px;z-index:10;">&#9654;</button>
-</div>
-<p style="text-align:center;font-size:.85rem;color:#777;margin:.3rem 0 1rem;">Swipe or click arrows — 10 completed / commissioned / gift / personal creations.</p>
-<script>
-// Shared cart across all 3 shops
-(function() {
-  if (!window.aeCart) window.aeCart = { items: [] };
-  function save() { localStorage.setItem('ae_cart', JSON.stringify(window.aeCart.items)); }
-  function load() {
-    try { var s = localStorage.getItem('ae_cart'); if (s) window.aeCart.items = JSON.parse(s); } catch(e){}
-  }
-  load();
-  window.aeAddToCart = function(id, name, price, qty) {
-    qty = qty || 1; var existing = window.aeCart.items.find(i => i.id === id);
-    if (existing) existing.qty += qty; else window.aeCart.items.push({id:id, name:name, price:parseFloat(price)||0, qty:qty});
-    save(); alert('Added: ' + name + ' (x' + qty + ')');
-  };
-  window.aeRemoveFromCart = function(id) {
-    window.aeCart.items = window.aeCart.items.filter(i => i.id !== id); save();
-  };
-  window.aeGetCart = function() { return window.aeCart.items; };
-})();
-</script>
-<p style="text-align:center;margin-top:1rem;"><a href="z3nw1ck.html#checkout" style="color:#1a4a6e;text-decoration:underline;"><p style="text-align:center;font-size:1.1rem;font-weight:bold;color:#1a1a2e;margin-bottom:.5rem;">Cart / Checkout — PayPal + Canadian Interac e-Transfer</p>
-<p style="text-align:center;font-size:.85rem;color:#777;margin-top:.5rem;"><a href="z3nw1ck.html#custom-order" style="color:#1a4a6e;text-decoration:underline;">Custom Orders — request quote + deposit</a></p>
-
-<section id="custom-order" aria-label="Custom Order Request">
-<h3>Custom Order Request</h3>
-    <span class="inv-badge inv-mto">MADE TO ORDER · MESSAGE FIRST</span>
-<form onsubmit="event.preventDefault(); alert('Request saved (ID: AE-'+Date.now()+'). A merchant quote and timeline will follow within 48 hours.'); this.reset();" style="max-width:500px;margin:0 auto;background:#fdf6e3;padding:1rem;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);">
-  <label for="cust-name">Name: <input type="text" id="cust-name" required style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></label>
-  <label for="cust-email">Email: <input type="email" id="cust-email" required style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></label>
-  <label for="cust-item">Item / Description (e.g., custom knit, size, colour): <textarea id="cust-item" rows="3" required style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></textarea></label>
-  <label for="cust-deposit">Agreed deposit (CAD): <input type="number" id="cust-deposit" min="5" step="1" placeholder="e.g. 25" style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></label>
-  <label for="cust-notes">Pickup / delivery / priority notes: <textarea id="cust-notes" rows="2" style="width:100%;padding:.4rem;margin-bottom:.5rem;border:1px solid #ccc;border-radius:4px;"></textarea></label>
-  <p style="font-size:.7rem;color:#777;">Terms: 50% deposit confirms order; balance due before delivery. Refunds only before work begins. Pickup available; delivery options quoted.</p>
-  <button type="submit" style="padding:.6rem 1.2rem;background:#1a1a2e;color:#fdf6e3;border:none;border-radius:999px;font-size:.9rem;cursor:pointer;">Submit Request</button>
-</form>
-</section>
-
-<!-- navSlide deferred to end-of-page (after script.js) -->
+                    <button class="about-carousel-prev" aria-label="Previous bookmark">
+                        ←
+                    </button>
+                    <button class="about-carousel-next" aria-label="Next bookmark">
+                        →
+                    </button>                    </div>
+-->
 
 
 <p class="ae-pairing" style="text-align:center;margin:1.25rem auto;max-width:720px;font-size:.95rem;line-height:1.5;">Complete the cozy experience — pair candles with <a href="lissas-knitting.html">Lissa's Knitting</a>, <a href="z3nw1ck.html">Z3NW1CK</a>, and <a href="art-emporium.html">original art</a>. Checkout: <a href="cart.html">PayPal (NetParcel) or Interac e-Transfer</a>.</p>

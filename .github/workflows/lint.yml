@@ -23,42 +23,9 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24.x'
-          cache: npm
-
-      - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          elif [ -f package.json ]; then
-            npm install
-          else
-            echo "No package.json found, skipping install"
-          fi
-
-      - name: Check JSON files
-        run: |
-          echo "Validating JSON files..."
-          node -e "const fs = require('fs'); JSON.parse(fs.readFileSync('package.json', 'utf8')); console.log('✓ package.json');"
-
-      - name: Check JavaScript syntax
-        run: |
-          echo "Checking JavaScript syntax..."
-          node --check script.js
-          node --check image-loader.js
-          node --check item-detail.js
-          echo "✓ All JavaScript files valid"
-
       - name: Check required HTML files
         run: |
           echo "Checking HTML files..."
-          for f in index.html item-detail.html contact.html; do
+          for f in lissas-knitting.html; do
             [ -f "$f" ] && echo "✓ $f" || (echo "✗ Missing $f"; exit 1)
           done
-
-      - name: Check CSS files
-        run: |
-          [ -f "styles.css" ] && echo "✓ styles.css" || (echo "✗ Missing styles.css"; exit 1)

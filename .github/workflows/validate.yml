@@ -23,38 +23,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24.x'
-          cache: npm
-
-      - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          elif [ -f package.json ]; then
-            npm install
-          else
-            echo "No package.json found, skipping install"
-          fi
-
-      - name: Validate configuration files
-        run: |
-          echo "Validating configuration files..."
-          node -e "const fs = require('fs'); try { JSON.parse(fs.readFileSync('package.json', 'utf8')); console.log('✓ package.json'); } catch (e) { console.error('✗ package.json'); process.exit(1); }"
-
       - name: Check project structure
         run: |
           echo "Checking project structure..."
-          for f in index.html item-detail.html contact.html script.js image-loader.js item-detail.js styles.css; do
+          for f in lissas-knitting.html; do
             [ -f "$f" ] && echo "✓ $f" || (echo "✗ Missing $f"; exit 1)
           done
-
-      - name: Check optional directories
-        run: |
-          echo "Checking optional directories..."
-          [ -d "api" ] && echo "✓ api directory" || echo "ℹ api directory not found"
-          [ -d ".github/workflows" ] && echo "✓ .github/workflows" || echo "ℹ workflows not found"
-          [ -f "package-lock.json" ] && echo "✓ package-lock.json" || echo "ℹ package-lock.json not found"
+          [ -d "LKC-Bookmarks" ] && echo "✓ LKC-Bookmarks directory" || echo "ℹ LKC-Bookmarks directory not found"
           exit 0

@@ -1,759 +1,586 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="2FfLbRapfEI5LR9oLM75mJgn3lwYE8GcEB1TZUo59xc">
-    <meta name="msvalidate.01" content="E958527EEF5DF92B51F83A21DBD81613">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Z3NW1CK by Abstract Emporium — hand-poured soy wax candles, wax melts, and incense sticks. Small-batch, premium fragrance oils. Made in Canada.">
-    <meta name="robots" content="index,follow,max-image-preview:large">
-    <link rel="canonical" href="https://abstractemporium.art/z3nw1ck.html">
-    <meta property="og:title" content="Z3NW1CK Hand-Poured Candles, Wax Melts & Incense | Abstract Emporium">
-    <meta property="og:description" content="Small-batch soy wax candles, wax melts, and incense in three signature scents. Handcrafted in Canada.">
-    <meta property="og:image" content="https://abstractemporium.art/z3nw1ck-product-photos/z3nw1ck-banner.png">
-    <meta property="og:url" content="https://abstractemporium.art/z3nw1ck.html">
-    <meta property="og:type" content="website">
-    <title>Z3NW1CK Candles, Wax Melts & Incense | Abstract Emporium</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
-    <style>
-        /* ponytail: page-scoped, only what store-card grid doesn't cover */
-        .z3-hero { text-align: center; margin: 20px 0 10px; }
-        .z3-hero img { max-width: 100%; height: auto; border-radius: 12px; }
-        .z3-intro { max-width: 720px; margin: 0 auto 30px; text-align: center; color: var(--text-dark); }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-            margin: 30px 0;
-        }
-        .product-card {
-            background: #1a1a2e;
-            border: 1px solid #2e2e4a;
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-        .product-card .body { padding: 18px; flex: 1; display: flex; flex-direction: column; color: #ffffff; }
-        .product-card .notes { color: #e8e8f4; }
-        .product-card .price { color: #ffffff; }
-.tier-badge { font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; }
-.tier-classic { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
-.tier-premium { background: #f3e5f5; color: #4a148c; border: 1px solid #ce93d8; }
-.collection-sub { grid-column: 1 / -1; text-align: center; color: #c9c9d6; font-size: 0.95em; margin: -4px auto 18px; max-width: 760px; line-height: 1.4; }
-
-        .product-card .notes { font-size: 0.9em; color: #e8e8f4; margin: 0 0 12px; flex: 1; }
-        .product-card .price { font-weight: 700; color: #fff; font-size: 1.1em; margin-bottom: 12px; }
-        .product-card a.buy-btn {
-            display: block; text-align: center; padding: 10px;
-            background: #f5d76e; color: #1a1a2e; border-radius: 8px;
-            text-decoration: none; font-weight: 700;
-        }
-        .product-card a.buy-btn:hover { background: #ffefa0; }
-        .z3-lifestyle { max-width: 100%; border-radius: 12px; margin: 20px 0; }
-        .z3-cta { text-align: center; margin: 30px 0; }
-        .z3-cta a {
-            display: inline-block; padding: 14px 28px; background: #f5d76e; color: #1a1a2e;
-            text-decoration: none; font-weight: 700; border-radius: 8px;
-        }
-        /* ponytail: scoped carousel override inside product cards only */
-        .product-card .body .about-carousel {
-            overflow-x:auto;overflow-y:hidden;
-            display:flex;
-            gap:10px;
-            padding:10px 4px;
-            scroll-snap-type:x mandatory;
-            -webkit-overflow-scrolling:touch;
-            scrollbar-width:none;
-            position:relative;
-            mask-image:linear-gradient(to right, transparent 0%, black 4%, black 92%, transparent 100%);
-            -webkit-mask-image:linear-gradient(to right, transparent 0%, black 4%, black 92%, transparent 100%);
-            margin-top: 15px;
-            clear: both;
-            z-index: 0;
-        }
-        .product-card .body .about-carousel::-webkit-scrollbar { display:none; }
-        .product-card .body .about-carousel .about-carousel-track,
-        .product-card .body .about-carousel[style*="--count"] .about-carousel-track {
-            display:flex !important;
-            animation:none !important;
-            width:auto !important;
-        }
-        .product-card .body .about-carousel .about-slide,
-        .product-card .body .about-carousel[style*="--count"] .about-slide {
-            flex:0 0 auto !important;
-            width:200px;
-            scroll-snap-align:start;
-        }
-        .product-card .body .about-carousel .about-slide img {
-            width:200px; height:150px; object-fit:cover; border-radius:8px; display:block; cursor:zoom-in;
-        }
-        .product-card .body .about-carousel .about-slide figcaption {
-            position:static;
-            background:none;
-            color:#fff;
-            text-shadow:none;
-            padding:4px 0 0;
-            font-size:0.75rem;
-            text-align:center;
-        }
-        /* ponytail: scoped fullscreen lightbox for product-card carousels only */
-        .z3-lightbox {
-            position:fixed; inset:0; z-index:9999;
-            background:rgba(0,0,0,0.92);
-            display:none; align-items:center; justify-content:center;
-        }
-        .z3-lightbox.open { display:flex; }
-        .z3-lightbox img {
-            max-width:92vw; max-height:92vh; object-fit:contain;
-            border-radius:12px; box-shadow:0 0 40px rgba(0,0,0,0.7);
-        }
-        .z3-lightbox-close {
-            position:absolute; top:18px; right:22px;
-            background:none; border:none; color:#fff;
-            font-size:28px; cursor:pointer; line-height:1;
-        }
-    
-/* === Accessibility / Disability angle === */
-.skip-link{position:absolute;top:-40px;left:0;background:#1a1a2e;color:#fff;padding:8px 16px;z-index:1000;font-size:14px;border-radius:0 0 4px 0;transition:top 0.2s}
-.skip-link:focus{top:0}
-*:focus{outline:3px solid #2563eb;outline-offset:2px}
-:focus:not(:focus-visible){outline:none}
-:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
-[role="banner"],[role="navigation"],[role="main"],[role="contentinfo"]{display:block}
-.disability-badge{display:inline-block;background:#1a1a2e;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px 0}
-.high-contrast{background:#000;color:#fff}
-.high-contrast a{color:#60a5fa}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-
-/* Product Card Text Readability */
-.product-card .notes, .product-card .price, .product-card h3, .product-card .tier-badge {
-    color: #ffffff !important;
-    position: relative;
-    z-index: 2;
-}
-.about-carousel {
-    z-index: 1;
-    margin-top: 25px;
-    clear: both;
-}
-
-/* label slideshow: real photos, readable on white */
-.product-card .about-carousel {
-  background: #ffffff !important;
-  padding: 10px !important;
-  margin: 12px 0 0 !important;
-  min-height: 180px;
-}
-.product-card .about-slide {
-  flex: 0 0 86% !important;
-  width: 86% !important;
-  max-width: 420px;
-  background: #ffffff !important;
-  scroll-snap-align: start;
-}
-.product-card .about-slide img {
-  width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  background: #ffffff !important;
-  display: block !important;
-  border-radius: 8px;
-}
-.product-card .about-slide figcaption { display: none !important; }
-.product-card h3, .product-card .notes, .product-card .price { color: #ffffff !important; }
-.product-card .tier-badge, .product-card .tier-classic, .product-card .tier-premium {
-  color: #1b5e20 !important;
-}
-.product-card .tier-premium { color: #4a148c !important; }
-
-</style></style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Z3NW1CK Hand-Poured Candles, Wax Melts & Incense",
-      "description": "Small-batch soy wax candles, wax melts, and incense sticks in three signature scents. Handcrafted in Canada.",
-      "image": "https://abstractemporium.art/z3nw1ck-product-photos/z3nw1ck-banner.png",
-      "brand": { "@type": "Brand", "name": "Z3NW1CK" },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "CAD",
-        "lowPrice": "1",
-        "highPrice": "16",
-        "availability": "https://schema.org/InStock",
-        "url": "https://abstractemporium.art/z3nw1ck.html"
-      }
-    }
-    </script>
-
-<!-- Meta Pixel -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1719352401749537');
-fbq('track', 'PageView');
-</script>
-<noscript><img alt="Abstract Emporium artwork"height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1719352401749537&ev=PageView&noscript=1"/></noscript>
-<!-- End Meta Pixel -->
-<script>fbq('track','ViewContent',{content_name:'Z3NW1CK Collection',content_category:'Candles & Wax Melts'});</script><style>
-.slideshow-slide { flex: 0 0 100vw; max-width: 100vw; width: 100vw; scroll-snap-align: center; }
-.slideshow-track { display: flex; gap: 0; width: max-content; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
-</style>
-<style>
-*:focus{outline:3px solid #cfae00;outline-offset:2px;transition:outline .1s;}
-.slideshow-slide img, .gallery-img{display:block;max-width:100%;height:auto;}
-</style>
-
-<style id="ae-a11y-polish">
-.skip-link{position:absolute;left:0;top:0;transform:translateY(-120%);background:#1a1a2e;color:#fff;padding:8px 16px;z-index:10000;font-size:14px}
-.skip-link:focus,.skip-link:focus-visible{transform:translateY(0);outline:3px solid #2563eb;outline-offset:2px}
-:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media (forced-colors: active){
-  body{background:Window;color:WindowText}
-  a{color:LinkText}
-  .navbar,.nav-menu a,.buy-btn,.checkout-btn,button{forced-color-adjust:none;border:1px solid ButtonText}
-  .product-card{border:1px solid ButtonText}
-}
-</style>
-
-<style id="ae-contrast-polish">
-/* AE contrast polish — dark product cards (WCAG-minded) */
-.product-card {
-  background: #12122a !important;
-  border-color: #3a3a5c !important;
-}
-.product-card .body { color: #f5f5fa !important; }
-.product-card .notes {
-  color: #f0f0f8 !important;
-  opacity: 1 !important;
-  line-height: 1.45;
-}
-.product-card .price {
-  color: #ffffff !important;
-  font-weight: 800 !important;
-}
-.product-card h3 {
-  color: #ffffff !important;
-}
-.product-card label {
-  color: #e8e8f4 !important;
-}
-.product-card .size-select {
-  background: #ffffff;
-  color: #1a1a2e;
-  border: 2px solid #c5c5d6;
-}
-.product-card .buy-btn,
-.product-card a.buy-btn {
-  background: #f5d76e !important;
-  color: #1a1a2e !important;
-  font-weight: 800 !important;
-  border: 2px solid #1a1a2e;
-}
-.product-card a.buy-btn:focus-visible,
-.product-card .buy-btn:focus-visible {
-  outline: 3px solid #ffffff;
-  outline-offset: 2px;
-}
-.tier-classic { background: #c8e6c9 !important; color: #0d3b12 !important; border-color: #1b5e20 !important; }
-.tier-premium { background: #e1bee7 !important; color: #4a148c !important; border-color: #6a1b9a !important; }
-</style>
-<style id="ae-promo-contrast">
-div[style*="667eea"], div[style*="2a1a5e"] { color:#fff !important; }
-div[style*="2a1a5e"] h3, div[style*="2a1a5e"] p, div[style*="2a1a5e"] strong { color:#ffffff !important; }
-</style></head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z3NW1CK Candles, Wax Melts & Incense | Abstract Emporium</title>
+<meta name="description" content="Z3NW1CK by Abstract Emporium — hand-poured soy wax candles, wax melts, and incense sticks. Small-batch, premium fragrance oils. Made in Canada.">
+<meta property="og:description" content="Small-batch soy wax candles, wax melts, and incense in three signature scents. Handcrafted in Canada.">
+<link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<nav role="navigation" class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" loading="lazy" decoding="async">
-                <span>Abstract Emporium</span>
-            </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="art-emporium.html" class="nav-link">Art Emporium</a></li>
-                <li><a href="pods.html" class="nav-link">PODs</a></li>
-                <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
-                <li><a href="lissas-knitting.html" class="nav-link">Lissa's Knitting</a></li>
-                <li><a href="cart.html">Cart <span id="cartCount">(0)</span></a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger"><span></span><span></span><span></span></div>
-        </div>
-    </nav>
-
-<main id="main-content" role="main">
-<h1 class="z3-page-title" style="text-align:center;margin:18px 12px 8px;color:#1a1a2e;font-size:1.75rem;">Z3NW1CK — Hand-Poured Candles, Wax Melts &amp; Incense</h1>
-<p style="text-align:center;max-width:720px;margin:0 auto 12px;color:#333;">Small-batch soy wax · Thunder Bay, ON · Cart checkout: PayPal (NetParcel) or Interac e-Transfer (Canada Post)</p>
-
-<div class="ae-fulfill" style="max-width:860px;margin:16px auto;padding:14px 16px;background:#f8f6f1;border:1px solid #e3d9cd;border-left:4px solid #b5651d;border-radius:10px;color:#2d2a26;font-size:.95rem;line-height:1.55;">
-  <p style="margin:0 0 6px;font-weight:800;letter-spacing:.04em;font-size:.78rem;color:#8a4b12;">PICKUP · PAYMENT · SHIPPING</p>
-  <ul style="margin:0;padding-left:1.1rem;">
-    <li><strong>Thunder Bay:</strong> pickup or local drop-off by arrangement · cash, Interac e-transfer, or PayPal</li>
-    <li><strong>Canada-wide shipping:</strong> available on online orders — rate quoted at checkout from Thunder Bay, ON</li>
-    <li><strong>Custom / made-to-order:</strong> message first so we lock scent, size, and timing before payment</li>
-    <li><strong>Invoices &amp; order #:</strong> included with paid orders · put your Order # in e-transfer messages</li>
-    <li><strong>Questions:</strong> <a href="contact.html" style="color:#007a63;font-weight:600;">contact form</a></li>
-  </ul>
+<header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="art-emporium.html">Art Emporium</a></li>
+<li><a href="lissas-knitting.html">Knitting</a></li>
+<li><a href="z3nw1ck.html" class="active">Z3NW1CK</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="orders.html">Orders</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<div class="container">
+<section class="collection-section classic">
+<h2>CLASSIC COLLECTION</h2>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Fruit Loops - Fruit Loops - Candle 2oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Delicious scent reminiscent of the popular cereal classic, with buttery vanilla infused cereal base and bursts of fresh picked summer berries, apricots and blackberries. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">5</p>
+<label for="fruitloops-fruitloops-candle-2oz"">Fruit Loops candle 2oz size</label>
+<select id="fruitloops-fruitloops-candle-2oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Fruit Loops candle 2oz size">
+<option value="5">2oz — $5 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('fruitloops-fruitloops-candle-2oz', 'Z3NW1CK Fruit Loops Fruit Loops - Candle 2oz', 5)">Add Add Candle</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
 </div>
-
-<section style="padding:1rem;background:#fdf6e3;border-radius:6px;margin:1rem auto;max-width:860px;border-left:4px solid #b07d2b;">
-  <span style="display:inline-block;background:#1a1a2e;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px 0">✓ Ready to ship — Thunder Bay ON Canada — Accessible &amp; disability-owned</span>
-  <div style="background:#1a1a2e;color:#fff;padding:10px 14px;border-radius:8px;margin:10px 0;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:13px;">
-    <span style="font-weight:700;background:#5c3d12;color:#ffffff;padding:3px 10px;border-radius:20px;">Custom Fragrance Request</span>
-    <span style="opacity:0.92;">Welcome — full process takes ~1 month (supplier check, test batch, 2-week cure, recipe tweak).</span>
-    <a href="contact.html?product=custom-fragrance" style="color:#f5d76e;font-weight:700;white-space:nowrap;">Request a custom fragrance</a>
-  </div>
+<div class="about-carousel" aria-label="Fruit Loops Fruit Loops - Candle 2oz label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-2oz-label.jpg" alt="Fruit Loops Fruit Loops - Candle 2oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-2oz-label.jpg" alt="Fruit Loops Fruit Loops - Candle 2oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-2oz-label.jpg" alt="Fruit Loops Fruit Loops - Candle 2oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-2oz-label.jpg" alt="Fruit Loops Fruit Loops - Candle 2oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Fruit Loops - Fruit Loops - Candle 5oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Delicious scent reminiscent of the popular cereal classic, with buttery vanilla infused cereal base and bursts of fresh picked summer berries, apricots and blackberries. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">10</p>
+<label for="fruitloops-fruitloops-candle-5oz"">Fruit Loops candle 5oz size</label>
+<select id="fruitloops-fruitloops-candle-5oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Fruit Loops candle 5oz size">
+<option value="10">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('fruitloops-fruitloops-candle-5oz', 'Z3NW1CK Fruit Loops Fruit Loops - Candle 5oz', 10)">Add Add Candle</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Fruit Loops Fruit Loops - Candle 5oz label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-5oz-candle-label.jpg" alt="Fruit Loops Fruit Loops - Candle 5oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-5oz-candle-label.jpg" alt="Fruit Loops Fruit Loops - Candle 5oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-5oz-candle-label.jpg" alt="Fruit Loops Fruit Loops - Candle 5oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-5oz-candle-label.jpg" alt="Fruit Loops Fruit Loops - Candle 5oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Fruit Loops - Fruit Loops - Wax Melts</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Delicious scent reminiscent of the popular cereal classic, with buttery vanilla infused cereal base and bursts of fresh picked summer berries, apricots and blackberries. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">6</p>
+<label for="fruitloops-fruitloops-waxmelt-6"">Fruit Loops Wax Melts size</label>
+<select id="fruitloops-fruitloops-waxmelt-6" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Fruit Loops Wax Melts size">
+<option value="6">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('fruitloops-fruitloops-waxmelt-6', 'Z3NW1CK Fruit Loops Fruit Loops - Wax Melts', 6)">Add Add Melts</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Fruit Loops Fruit Loops - Wax Melts label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-waxmelt-label.jpg" alt="Fruit Loops Fruit Loops - Wax Melts slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-waxmelt-label.jpg" alt="Fruit Loops Fruit Loops - Wax Melts slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-waxmelt-label.jpg" alt="Fruit Loops Fruit Loops - Wax Melts slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-waxmelt-label.jpg" alt="Fruit Loops Fruit Loops - Wax Melts slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Fruit Loops - Fruit Loops - Incense</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Delicious scent reminiscent of the popular cereal classic, with buttery vanilla infused cereal base and bursts of fresh picked summer berries, apricots and blackberries. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">8</p>
+<label for="fruitloops-fruitloops-incense-10in"">Fruit Loops Incense size</label>
+<select id="fruitloops-fruitloops-incense-10in" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Fruit Loops Incense size">
+<option value="8">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('fruitloops-fruitloops-incense-10in', 'Z3NW1CK Fruit Loops Fruit Loops - Incense', 8)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Fruit Loops Fruit Loops - Incense label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-incense-label.jpg" alt="Fruit Loops Fruit Loops - Incense slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-incense-label.jpg" alt="Fruit Loops Fruit Loops - Incense slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-incense-label.jpg" alt="Fruit Loops Fruit Loops - Incense slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-incense-label.jpg" alt="Fruit Loops Fruit Loops - Incense slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Simple Daydreams - Simple Daydreams - Candle 2oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Top Notes: White Citrus, Blue Skies, Silver Birch; Middle/Heart Notes: English Lavender, Jasmine Tea, Magnolia Blossoms; Base Notes: White Oak, Soft Cashmere, Leather. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">5</p>
+<label for="simpledaydreams-daydreams-candle-2oz"">Simple Daydreams candle 2oz size</label>
+<select id="simpledaydreams-daydreams-candle-2oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Simple Daydreams candle 2oz size">
+<option value="5">2oz — $5 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('daydreams-daydreams-candle-2oz', 'Z3NW1CK Simple Daydreams Simple Daydreams - Candle 2oz', 5)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Simple Daydreams Simple Daydreams - Candle 2oz label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-candle-2oz-label.jpg" alt="Simple Daydreams Simple Daydreams - Candle 2oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-candle-2oz-label.jpg" alt="Simple Daydreams Simple Daydreams - Candle 2oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-candle-2oz-label.jpg" alt="Simple Daydreams Simple Daydreams - Candle 2oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-candle-2oz-label.jpg" alt="Simple Daydreams Simple Daydreams - Candle 2oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Simple Daydreams - Simple Daydreams - Candle 5oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Top Notes: White Citrus, Blue Skies, Silver Birch; Middle/Heart Notes: English Lavender, Jasmine Tea, Magnolia Blossoms; Base Notes: White Oak, Soft Cashmere, Leather. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">10</p>
+<label for="simpledaydreams-daydreams-candle-5oz"">Simple Daydreams candle 5oz size</label>
+<select id="simpledaydreams-daydreams-candle-5oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Simple Daydreams candle 5oz size">
+<option value="10">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('daydreams-daydreams-candle-5oz', 'Z3NW1CK Simple Daydreams Simple Daydreams - Candle 5oz', 10)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Simple Daydreams Simple Daydreams - Candle 5oz label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-5oz-candle-label.jpg" alt="Simple Daydreams Simple Daydreams - Candle 5oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-5oz-candle-label.jpg" alt="Simple Daydreams Simple Daydreams - Candle 5oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-5oz-candle-label.jpg" alt="Simple Daydreams Simple Daydreams - Candle 5oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-5oz-candle-label.jpg" alt="Simple Daydreams Simple Daydreams - Candle 5oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Simple Daydreams - Simple Daydreams - Wax Melts</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Top Notes: White Citrus, Blue Skies, Silver Birch; Middle/Heart Notes: English Lavender, Jasmine Tea, Magnolia Blossoms; Base Notes: White Oak, Soft Cashmere, Leather. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">6</p>
+<label for="simpledaydreams-daydreams-waxmelt-6"">Simple Daydreams Wax Melts size</label>
+<select id="simpledaydreams-daydreams-waxmelt-6" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Simple Daydreams Wax Melts size">
+<option value="6">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('daydreams-daydreams-waxmelt-6', 'Z3NW1CK Simple Daydreams Simple Daydreams - Wax Melts', 6)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Simple Daydreams Simple Daydreams - Wax Melts label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-waxmelt-label.jpg" alt="Simple Daydreams Simple Daydreams - Wax Melts slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-waxmelt-label.jpg" alt="Simple Daydreams Simple Daydreams - Wax Melts slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-waxmelt-label.jpg" alt="Simple Daydreams Simple Daydreams - Wax Melts slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-waxmelt-label.jpg" alt="Simple Daydreams Simple Daydreams - Wax Melts slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Simple Daydreams - Simple Daydreams - Incense</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Top Notes: White Citrus, Blue Skies, Silver Birch; Middle/Heart Notes: English Lavender, Jasmine Tea, Magnolia Blossoms; Base Notes: White Oak, Soft Cashmere, Leather. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">8</p>
+<label for="simpledaydreams-daydreams-incense-10in"">Simple Daydreams Incense size</label>
+<select id="simpledaydreams-daydreams-incense-10in" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Simple Daydreams Incense size">
+<option value="8">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('daydreams-daydreams-incense-10in', 'Z3NW1CK Simple Daydreams Simple Daydreams - Incense', 8)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Simple Daydreams Simple Daydreams - Incense label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-incense-label.jpg" alt="Simple Daydreams Simple Daydreams - Incense slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-incense-label.jpg" alt="Simple Daydreams Simple Daydreams - Incense slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-incense-label.jpg" alt="Simple Daydreams Simple Daydreams - Incense slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-incense-label.jpg" alt="Simple Daydreams Simple Daydreams - Incense slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Satsuma - Satsuma - Candle 2oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Citrus explosion - burst of juicy orange with hints of grapefruit and white musk. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">5</p>
+<label for="satsuma-satsuma-candle-2oz"">Satsuma candle 2oz size</label>
+<select id="satsuma-satsuma-candle-2oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Satsuma candle 2oz size">
+<option value="5">2oz — $5 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('satsuma-satsuma-candle-2oz', 'Z3NW1CK Satsuma Satsuma - Candle 2oz', 5)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Satsuma Satsuma - Candle 2oz labels">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-2oz-label.jpg" alt="Satsuma Satsuma - Candle 2oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-2oz-label.jpg" alt="Satsuma Satsuma - Candle 2oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-2oz-label.jpg" alt="Satsuma Satsuma - Candle 2oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-2oz-label.jpg" alt="Satsuma Satsuma - Candle 2oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Satsuma - Satsuma - Candle 5oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Citrus explosion - burst of juicy orange with hints of grapefruit and white musk. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">10</p>
+<label for="satsuma-satsuma-candle-5oz"">Satsuma candle 5oz size</label>
+<select id="satsuma-satsuma-candle-5oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Satsuma candle 5oz size">
+<option value="10">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('satsuma-satsuma-candle-5oz', 'Z3NW1CK Satsuma Satsuma - Candle 5oz', 10)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Satsuma Satsuma - Candle 5oz labels">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-5oz-candle-label.jpg" alt="Satsuma Satsuma - Candle 5oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-5oz-candle-label.jpg" alt="Satsuma Satsuma - Candle 5oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-5oz-candle-label.jpg" alt="Satsuma Satsuma - Candle 5oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-5oz-candle-label.jpg" alt="Satsuma Satsuma - Candle 5oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Satsuma - Satsuma - Wax Melts</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Citrus explosion - burst of juicy orange with hints of grapefruit and white musk. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">6</p>
+<label for="satsuma-satsuma-waxmelt-6"">Satsuma Wax Melts size</label>
+<select id="satsuma-satsuma-waxmelt-6" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Satsuma Wax Melts size">
+<option value="6">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('satsuma-satsuma-waxmelt-6', 'Z3NW1CK Satsuma Satsuma - Wax Melts', 6)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Satsuma Satsuma - Wax Melts labels">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-waxmelt-label.jpg" alt="Satsuma Satsuma - Wax Melts slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-waxmelt-label.jpg" alt="Satsuma Satsuma - Wax Melts slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-waxmelt-label.jpg" alt="Satsuma Satsuma - Wax Melts slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-waxmelt-label.jpg" alt="Satsuma Satsuma - Wax Melts slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Satsuma - Satsuma - Incense</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Citrus explosion - burst of juicy orange with hints of grapefruit and white musk. 2oz $5, 5oz $10, melt $6, incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">8</p>
+<label for="satsuma-satsuma-incense-10in"">Satsuma Incense size</label>
+<select id="satsuma-satsuma-incense-10in" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Satsuma Incense size">
+<option value="8">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('satsuma-satsuma-incense-10in', 'Z3NW1CK Satsuma Satsuma - Incense', 8)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Satsuma Satsuma - Incense labels">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-incense-label.jpg" alt="Satsuma Satsuma - Incense slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-incense-label.jpg" alt="Satsuma Satsuma - Incense slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-incense-label.jpg" alt="Satsuma Satsuma - Incense slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-incense-label.jpg" alt="Satsuma Satsuma - Incense slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> 🍁 Cap'n Crust Berries - Cap'n Crunch Berries - Candle 2oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Delicious scent reminiscent of the popular cereal classic, with buttery vanilla infused cereal base and bursts of fresh picked summer berries, apricots and blackberries. 2oz $5, 5oz $10, 2oz 6-cube melt $6, 10" incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">5</p>
+<label for="capncrunch-capncrunch-candle-2oz"">Cap'n Crust Berries candle 2oz size</label>
+<select id="capncrunch-capncrunch-candle-2oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Cap'n Crust Berries candle 2oz size">
+<option value="5">2oz — $5 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('capncrunch-capncrunch-candle-2oz', 'Z3NW1CK Cap' + "\u0027" + "n Crust Berries Cap'n Crunch Berries - Candle 2oz', 5)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Cap'n Crust Berries Cap'n Crunch Berries - Candle 2oz image gallery">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Candle 2oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Candle 2oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Candle 2oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Candle 2oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> 🍁 Cap'n Crust Berries - Cap'n Crunch Berries - Candle 5oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Delicious scent reminiscent of the popular cereal classic, with buttery vanilla infused cereal base and bursts of fresh picked summer berries, apricots and blackberries. 2oz $5, 5oz $10, 2oz 6-cube melt $6, 10" incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">10</p>
+<label for="capncrunch-capncrunch-candle-5oz"">Cap'n Crust Berries candle 5oz size</label>
+<select id="capncrunch-capncrunch-candle-5oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Cap'n Crust Berries candle 5oz size">
+<option value="10">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('capncrunch-capncrunch-candle-5oz', 'Z3NW1CK Cap' + "\u0027" + "n Crust Berries Cap'n Crunch Berries - Candle 5oz', 10)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Cap'n Crust Berries Cap'n Crunch Berries - Candle 5oz image gallery">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-5oz-candle-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Candle 5oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-5oz-candle-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Candle 5oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-5oz-candle-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Candle 5oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-5oz-candle-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Candle 5oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> 🍁 Cap'n Crust Berries - Cap'n Crunch Berries - Wax Melts</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Delicious scent reminiscent of the popular cereal classic, with buttery vanilla infused cereal base and bursts of fresh picked summer berries, apricots and blackberries. 2oz $5, 5oz $10, 2oz 6-cube melt $6, 10" incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">6</p>
+<label for="capncrunch-capncrunch-waxmelt-6"">Cap'n Crust Berries Wax Melts size</label>
+<select id="capncrunch-capncrunch-waxmelt-6" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Cap'n Crust Berries Wax Melts size">
+<option value="6">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('capncrunch-capncrunch-waxmelt-6', 'Z3NW1CK Cap' + "\u0027" + "n Crust Berries Cap'n Crunch Berries - Wax Melts', 6)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Cap'n Crust Berries Cap'n Crunch Berries - Wax Melts image gallery">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-waxmelt-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Wax Melts slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-waxmelt-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Wax Melts slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-waxmelt-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Wax Melts slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-waxmelt-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Wax Melts slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> 🍁 Cap'n Crust Berries - Cap'n Crunch Berries - Incense</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Delicious scent reminiscent of the popular cereal classic, with buttery vanilla infused cereal base and bursts of fresh picked summer berries, apricots and blackberries. 2oz $5, 5oz $10, 2oz 6-cube melt $6, 10" incense $8.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">8</p>
+<label for="capncrunch-capncrunch-incense-10in"">Cap'n Crust Berries Incense size</label>
+<select id="capncrunch-capncrunch-incense-10in" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Cap'n Crust Berries Incense size">
+<option value="8">5oz — $10 CAD</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('capncrunch-capncrunch-incense-10in', 'Z3NW1CK Cap' + "\u0027" + "n Crust Berries Cap'n Crunch Berries - Incense', 8)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Cap'n Crust Berries Cap'n Crunch Berries - Incense image gallery">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-incense-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Incense slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-incense-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Incense slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-incense-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Incense slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-incense-label.jpg" alt="Cap'n Crust Berries Cap'n Crunch Berries - Incense slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<section class="collection-section premium">
+<h2>PREMIUM COLLECTION</h2>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🐒 Monkey Farts - Monkey Farts - Candle 2oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Melt $6.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">Clamshell Wax Melts $6</p>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('monkeyfarts-waxmelt-6', 'Z3NW1CK Monkey Farts Wax Melts', 6)">Add Melts</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Monkey Farts candle label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-label.jpg" alt="Monkey Farts Monkey Farts - Candle 2oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-label.jpg" alt="Monkey Farts Monkey Farts - Candle 2oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-label.jpg" alt="Monkey Farts Monkey Farts - Candle 2oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-label.jpg" alt="Monkey Farts Monkey Farts - Candle 2oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🐒 Monkey Farts - Monkey Farts - Candle 5oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Melt $6.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">Clamshell Wax Melts $6</p>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('monkeyfarts-waxmelt-6', 'Z3NW1CK Monkey Farts Wax Melts', 6)">Add Melts</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Monkey Farts candle label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-5oz-candle-label.jpg" alt="Monkey Farts Monkey Farts - Candle 5oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-5oz-candle-label.jpg" alt="Monkey Farts Monkey Farts - Candle 5oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-5oz-candle-label.jpg" alt="Monkey Farts Monkey Farts - Candle 5oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-5oz-candle-label.jpg" alt="Monkey Farts Monkey Farts - Candle 5oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🐒 Monkey Farts - Monkey Farts - Wax Melts</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Melt $6.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">Clamshell Wax Melts $6</p>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('monkeyfarts-waxmelt-6', 'Z3NW1CK Monkey Farts Wax Melts', 6)">Add Melts</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Monkey Farts candle label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-label.jpg" alt="Monkey Farts Monkey Farts - Wax Melts slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-label.jpg" alt="Monkey Farts Monkey Farts - Wax Melts slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-label.jpg" alt="Monkey Farts Monkey Farts - Wax Melts slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-label.jpg" alt="Monkey Farts Monkey Farts - Wax Melts slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🐒 Monkey Farts - Monkey Farts - Incense</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Melt $6.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">Clamshell Wax Melts $6</p>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('monkeyfarts-waxmelt-6', 'Z3NW1CK Monkey Farts Wax Melts', 6)">Add Melts</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Monkey Farts candle label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-incense-label.jpg" alt="Monkey Farts Monkey Farts - Incense slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-incense-label.jpg" alt="Monkey Farts Monkey Farts - Incense slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-incense-label.jpg" alt="Monkey Farts Monkey Farts - Incense slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-incense-label.jpg" alt="Monkey Farts Monkey Farts - Incense slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🌰 Bourbon & Sandalwood - Bourbon & Sandalwood - Candle 2oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Wintergreen, sage, jasmine and lavender blend over a base of vanilla, cedarwood, patchouli and musk. 2oz $9, 5oz $16, melt $10, incense $12.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">9</p>
+<label for="bourbon-bourbonsandalwood-candle-2oz"">Bourbon & Sandalwood candle 2oz size</label>
+<select id="bourbon-bourbonsandalwood-candle-2oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Bourbon & Sandalwood candle 2oz size">
+<option value="9">2oz or 5oz</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('bourbonsandalwood-bourbonsandalwood-candle-2oz', 'Z3NW1CK Bourbon & Sandalwood Bourbon & Sandalwood - Candle 2oz', 9)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 2oz label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-candle-2oz-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 2oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-candle-2oz-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 2oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-candle-2oz-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 2oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-candle-2oz-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 2oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🌰 Bourbon & Sandalwood - Bourbon & Sandalwood - Candle 5oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Wintergreen, sage, jasmine and lavender blend over a base of vanilla, cedarwood, patchouli and musk. 2oz $9, 5oz $16, melt $10, incense $12.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">16</p>
+<label for="bourbon-bourbonsandalwood-candle-5oz"">Bourbon & Sandalwood candle 5oz size</label>
+<select id="bourbon-bourbonsandalwood-candle-5oz" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Bourbon & Sandalwood candle 5oz size">
+<option value="16">2oz or 5oz</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('bourbonsandalwood-bourbonsandalwood-candle-5oz', 'Z3NW1CK Bourbon & Sandalwood Bourbon & Sandalwood - Candle 5oz', 16)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 5oz label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-5oz-candle-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 5oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-5oz-candle-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 5oz slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-5oz-candle-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 5oz slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-5oz-candle-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Candle 5oz slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🌰 Bourbon & Sandalwood - Bourbon & Sandalwood - Wax Melts</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Wintergreen, sage, jasmine and lavender blend over a base of vanilla, cedarwood, patchouli and musk. 2oz $9, 5oz $16, melt $10, incense $12.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">10</p>
+<label for="bourbon-bourbonsandalwood-waxmelt-6"">Bourbon & Sandalwood Wax Melts size</label>
+<select id="bourbon-bourbonsandalwood-waxmelt-6" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Bourbon & Sandalwood Wax Melts size">
+<option value="10">2oz or 5oz</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('bourbonsandalwood-bourbonsandalwood-waxmelt-6', 'Z3NW1CK Bourbon & Sandalwood Bourbon & Sandalwood - Wax Melts', 10)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Bourbon & Sandalwood Bourbon & Sandalwood - Wax Melts label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-waxmelt-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Wax Melts slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-waxmelt-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Wax Melts slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-waxmelt-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Wax Melts slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-waxmelt-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Wax Melts slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🌰 Bourbon & Sandalwood - Bourbon & Sandalwood - Incense</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Wintergreen, sage, jasmine and lavender blend over a base of vanilla, cedarwood, patchouli and musk. 2oz $9, 5oz $16, melt $10, incense $12.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">12</p>
+<label for="bourbon-bourbonsandalwood-incense-10in"">Bourbon & Sandalwood Incense size</label>
+<select id="bourbon-bourbonsandalwood-incense-10in" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Bourbon & Sandalwood Incense size">
+<option value="12">2oz or 5oz</option>
+</select>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('bourbonsandalwood-bourbonsandalwood-incense-10in', 'Z3NW1CK Bourbon & Sandalwood Bourbon & Sandalwood - Incense', 12)">Add Add Incense</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Bourbon & Sandalwood Bourbon & Sandalwood - Incense label slideshow">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-incense-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Incense slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-incense-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Incense slide 2" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-incense-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Incense slide 3" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-incense-label.jpg" alt="Bourbon & Sandalwood Bourbon & Sandalwood - Incense slide 4" loading="eager" decoding="async"></div>
+</div>
+</div>
+</div>
+<section class="collection-section seasonal">
+<h2>SEASONAL COLLECTION</h2>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-seasonal" style="background:#fff8e1;color:#e65100;border:1px solid #ffd54f;">SEASONAL</span> 🍂 Hello Fall - Hello Fall - Candle 2.5oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Warm autumn fragrance blend — limited seasonal release. Ready to ship from Thunder Bay, ON.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">7.5</p>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('hellofall-hellofall-candle-2oz', 'Z3NW1CK Hello Fall Hello Fall - Candle 2.5oz', 7.5)">Add Add Candle</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Hello Fall Hello Fall - Candle 2.5oz product image gallery">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-label.jpg" alt="Hello Fall Hello Fall - Candle 2.5oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-label.jpg" alt="Hello Fall Hello Fall - Candle 2.5oz slide 2" loading="eager" decoding="async"></div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-seasonal" style="background:#fff8e1;color:#e65100;border:1px solid #ffd54f;">SEASONAL</span> 🍂 Hello Fall - Hello Fall - Wax Melt</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Warm autumn fragrance blend — limited seasonal release. Ready to ship from Thunder Bay, ON.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">7.5</p>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('hellofall-hellofall-waxmelt', 'Z3NW1CK Hello Fall Hello Fall - Wax Melt', 7.5)">Add Add Melt</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Hello Fall Hello Fall - Wax Melt product image gallery">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-waxmelt-label.jpg" alt="Hello Fall Hello Fall - Wax Melt slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-waxmelt-label.jpg" alt="Hello Fall Hello Fall - Wax Melt slide 2" loading="eager" decoding="async"></div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-seasonal" style="background:#fff8e1;color:#e65100;border:1px solid #ffd54f;">SEASONAL</span> 🎅 Santa's Pipe - Santa's Pipe - Candle 2.5oz</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Wintergreen, sage, jasmine and lavender blend over a base of vanilla, cedarwood, patchouli and musk.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">9.5</p>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('santaspipe-santaspipe-candle-2oz', 'Z3NW1CK Santa' + "\u0027" + "s Pipe Santa's Pipe - Candle 2.5oz', 9.5)">Add Add Candle</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Santa's Pipe Santa's Pipe - Candle 2.5oz product image gallery">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-label.jpg" alt="Santa's Pipe Santa's Pipe - Candle 2.5oz slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-label.jpg" alt="Santa's Pipe Santa's Pipe - Candle 2.5oz slide 2" loading="eager" decoding="async"></div>
+</div>
+</div>
+<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
+<div class="body" style="padding: 16px;">
+<h3><span class="tier-badge tier-seasonal" style="background:#fff8e1;color:#e65100;border:1px solid #ffd54f;">SEASONAL</span> 🎅 Santa's Pipe - Santa's Pipe - Wax Melt</h3>
+<p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Wintergreen, sage, jasmine and lavender blend over a base of vanilla, cedarwood, patchouli and musk.</p>
+<p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">9.5</p>
+<button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('santaspipe-santaspipe-waxmelt', 'Z3NW1CK Santa' + "\u0027" + "s Pipe Santa's Pipe - Wax Melt', 9.5)">Add Add Melt</button>
+<a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
+</div>
+<div class="about-carousel" aria-label="Santa's Pipe Santa's Pipe - Wax Melt product image gallery">
+<div class="about-carousel-track">
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-waxmelt-label.jpg" alt="Santa's Pipe Santa's Pipe - Wax Melt slide 1" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-waxmelt-label.jpg" alt="Santa's Pipe Santa's Pipe - Wax Melt slide 2" loading="eager" decoding="async"></div>
+</div>
+</div>
 </section>
-
-<!-- SEASONAL COLLECTION -->
-<div class="collection-section">
-  <h2>SEASONAL COLLECTION</h2>
-  <p class="collection-subtitle">Limited seasonal releases - hand-poured in Thunder Bay, Ontario</p>
-  
-<!-- Seasonal Product 1: Hello Fall Candle -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">SEASONAL</span> 🍂 Hello Fall — Candle 2.5oz</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Hand-poured soy wax in a 2.5oz tin. Warm autumn fragrance blend — limited seasonal release. Ready to ship from Thunder Bay, ON.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">$7.50</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('hello-fall-candle-2.5oz', 'Z3NW1CK Hello Fall Candle 2.5oz', 7.50)">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <!-- About Carousel / Slideshow -->
-  <div class="about-carousel" aria-label="Hello Fall product image gallery">
-    <div class="about-carousel-track" >
-<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-label.jpg?v=20261102f" alt="Hello Fall 2.5oz candle label, $7.50" loading="eager" decoding="async"></div>
+</section>
+</section>
 </div>
-</div>
-    </div>
-  </div>
-</div>
-<!-- Seasonal Product 2: Hello Fall Wax Melt -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">SEASONAL</span> 🍂 Hello Fall — Wax Melt</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Hand-poured soy wax clamshell. Warm autumn fragrance blend — limited seasonal release. Ready to ship from Thunder Bay, ON.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">$8.50</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('hello-fall-waxmelt-6', 'Z3NW1CK Hello Fall Wax Melts', 8)">Add Melts</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <!-- About Carousel / Slideshow -->
-  <div class="about-carousel" aria-label="Hello Fall wax melt image gallery">
-    <div class="about-carousel-track" >
-<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-waxmelt-label.jpg?v=20261102f" alt="Hello Fall wax melt clamshell label, $8.50" loading="eager" decoding="async"></div>
-</div>
-</div>
-    </div>
-  </div>
-</div>
-<!-- Seasonal Product 3: Santa's Pipe Candle -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">SEASONAL</span> 🎅 Santa's Pipe — Candle 2.5oz</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Hand-poured soy wax seasonal fragrance. 2.5oz candle ($7.50) or clamshell wax melt ($8.50). Ready to ship from Thunder Bay.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">Candle $7.50 / Melt $8.50</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('santas-pipe-candle-2.5oz', 'Z3NW1CK Santa's Pipe Candle 2.5oz', 7.50)">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <!-- About Carousel / Slideshow -->
-  <div class="about-carousel" aria-label="Santa's Pipe product image gallery">
-    <div class="about-carousel-track" >
-<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-label.jpg?v=20261102c" alt="Santa's Pipe 2.5oz candle label, $7.50" loading="eager" decoding="async"></div>
-</div>
-</div>
-    </div>
-  </div>
-</div>
-<!-- Seasonal Product 4: Santa's Pipe Wax Melt -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">SEASONAL</span> 🎅 Santa's Pipe — Wax Melt</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Hand-poured soy wax clamshell seasonal fragrance. 2.5oz candle ($7.50) or clamshell wax melt ($8.50). Ready to ship from Thunder Bay.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">Melt $8.50</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('santas-pipe-waxmelt-20pk', 'Z3NW1CK Santa's Pipe Wax Melts', 8)">Add Melt</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <!-- About Carousel / Slideshow -->
-  <div class="about-carousel" aria-label="Santa's Pipe wax melt image gallery">
-    <div class="about-carousel-track" >
-<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-waxmelt-label.jpg?v=20261102c" alt="Santa's Pipe wax melt label, $8.50" loading="eager" decoding="async"></div>
-</div>
-</div>
-    </div>
-  </div>
-</div>
-</div>
-
-
-<!-- CLASSIC COLLECTION -->
-<div class="collection-section">
-  <h2>CLASSIC COLLECTION</h2>
-  <p class="collection-subnote">Timeless fragrances - hand-poured in Thunder Bay, Ontario</p>
-  <!-- Classic Product 1 -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> 🍊 Satsuma - Candle</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Bursting citrus juices of the orange will help to rejuvenate you with the added combination of white grapefruit softened by white musk! 2oz $5, 5oz $10, melt $6, incense $8.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">2oz $5 - 5oz $10</p>
-    <label for="satsuma-candle-size">Satsuma candle size</label>
-<select id="satsuma-candle-size" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Satsuma candle size">
-      <option value="5">2oz — $5 CAD</option>
-      <option value="10">5oz — $10 CAD</option>
-    </select>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('satsuma-candle-2or5', 'Z3NW1CK Satsuma Candle', Number(document.getElementById('satsuma-candle-size').value))">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <div class="about-carousel" aria-label="Satsuma candle labels">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-2oz-label.jpg?v=20261102d" alt="Satsuma 2oz candle tin label, $5" loading="eager" decoding="async"></div>
-      <div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-5oz-label.jpg?v=20261102d" alt="Satsuma 5oz candle tin label, $10" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-
-    </div>
-  </div>
-</div>
-<!-- Classic Product 2 -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> 🍊 Satsuma - Wax Melts</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Bursting citrus juices of the orange will help to rejuvenate you with the added combination of white grapefruit softened by white musk! Melt $6, incense $8.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">Clamshell Wax Melts $6</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('satsuma-waxmelt-6', 'Z3NW1CK Satsuma Wax Melts', 6)">Add Melts</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <div class="about-carousel" aria-label="Satsuma wax melt label">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-waxmelt-label.jpg?v=20261102d" alt="Satsuma wax melt clamshell label, $6" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-
-    </div>
-  </div>
-</div>
-<!-- Classic Product 3 -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> 🍊 Satsuma - Incense</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Bursting citrus juices of the orange will help to rejuvenate you with the added combination of white grapefruit softened by white musk! Incense $8.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">Incense 20-pack $8</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('satsuma-incense-20pk', 'Z3NW1CK Satsuma Incense 20-pack', 8)">Add Incense</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <div class="about-carousel" aria-label="Satsuma incense label">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/satsuma/satsuma-incense-label.jpg?v=20261102d" alt="Satsuma 10 inch incense label, $8" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-
-    </div>
-  </div>
-</div>
-<!-- Classic Product 4: Fruit Loops 2oz candle -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> Fruit Loops — Candle 2oz</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Tangy lemon, raspberry, orange, lime and cherry with a hint of vanilla cereal. 2oz (57 g) candle tin. Handcrafted in Thunder Bay, Ontario.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">$5.00 CAD</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('fruitloops-candle-2oz', 'Z3NW1CK Fruit Loops Candle 2oz', 5)">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <div class="about-carousel" aria-label="Fruit Loops 2oz candle label slideshow">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-2oz-label.jpg?v=20261105" alt="Fruit Loops 2oz candle tin label, $5.00" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-</div>
-
-<!-- Classic Product 5: Fruit Loops 5oz candle -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> Fruit Loops — Candle 5oz</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Tangy lemon, raspberry, orange, lime and cherry with a hint of vanilla cereal. 5oz (142 g) candle tin. Handcrafted in Thunder Bay, Ontario.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">$10.00 CAD</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('fruitloops-candle-5oz', 'Z3NW1CK Fruit Loops Candle 5oz', 10)">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <div class="about-carousel" aria-label="Fruit Loops 5oz candle label slideshow">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-5oz-label.jpg?v=20261105" alt="Fruit Loops 5oz candle tin label, $10.00" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-</div>
-
-<!-- Classic Product 6: Fruit Loops wax melt -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> Fruit Loops — Wax Melt</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Tangy lemon, raspberry, orange, lime and cherry with a hint of vanilla cereal. Wax melt clamshell, 2oz / 6 cubes. Handcrafted in Thunder Bay, Ontario.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">$6.00 CAD</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('fruitloops-waxmelt-6', 'Z3NW1CK Fruit Loops Wax Melts', 6)">Add Melts</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <div class="about-carousel" aria-label="Fruit Loops wax melt label slideshow">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-waxmelt-label.jpg?v=20261105" alt="Fruit Loops wax melt clamshell label, $6.00" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-</div>
-
-<!-- Classic Product 7 was Simple Daydreams — Fruit Loops incense sits here as 4th Fruit Loops card -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> Fruit Loops — Incense</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Tangy lemon, raspberry, orange, lime and cherry with a hint of vanilla cereal. 10 inch bamboo incense sticks. Handcrafted in Thunder Bay, Ontario.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">$8.00 CAD</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('fruitloops-incense-10in', 'Z3NW1CK Fruit Loops Incense 10 inch', 8)">Add Incense</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <div class="about-carousel" aria-label="Fruit Loops incense label slideshow">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-incense-label.jpg?v=20261105" alt="Fruit Loops 10 inch incense label, $8.00" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-</div>
-
-<!-- Classic Product 7 -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Simple Daydreams - Candle</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Top Notes: White Citrus, Blue Skies, Silver Birch; Middle/Heart Notes: English Lavender, Jasmine Tea, Magnolia Blossoms; Base Notes: White Oak, Soft Cashmere, Leather. 2oz $5, 5oz $10, melt $6, incense $8.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">2oz $5 - 5oz $10</p>
-    <label for="simpledaydreams-candle-size">Simple Daydreams candle size</label>
-<select id="simpledaydreams-candle-size" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Simple Daydreams candle size">
-      <option value="5">2oz — $5 CAD</option>
-      <option value="10">5oz — $10 CAD</option>
-    </select>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('daydreams-candle-2or5', 'Z3NW1CK Simple Daydreams Candle', Number(document.getElementById('simpledaydreams-candle-size').value))">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-
-    </div>
-  </div>
-  <div class="about-carousel" aria-label="Simple Daydreams candle 2oz label slideshow">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-candle-2oz-label.jpg" alt="Simple Daydreams 2oz candle tin label, $5" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-</div>
-<!-- Classic Product 8 -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> ☁️ Simple Daydreams - Wax Melts</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Melt $6.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">Clamshell Wax Melts $6</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('simpledaydreams-waxmelt-6', 'Z3NW1CK Simple Daydreams Wax Melts', 6)">Add Melts</button>
-  <div class="about-carousel" aria-label="Simple Daydreams wax melt label slideshow">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-waxmelt-label.jpg" alt="Simple Daydreams wax melt clamshell label, $6" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-
-    </div>
-  </div>
-</div>
-<!-- Classic Product 9: Simple Daydreams Candle 5oz -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> Simple Daydreams — Candle 5oz</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Top Notes: White Citrus, Blue Skies, Silver Birch; Middle/Heart Notes: English Lavender, Jasmine Tea, Magnolia Blossoms; Base Notes: White Oak, Soft Cashmere, Leather. 2oz $5, 5oz $10, melt $6, incense $8.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">$10.00 CAD</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('daydreams-candle-5oz', 'Z3NW1CK Simple Daydreams Candle 5oz', 10)">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <div class="about-carousel" aria-label="Simple Daydreams candle 5oz label slideshow">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-5oz-candle-label.jpg?v=20261105" alt="Simple Daydreams 5oz candle tin label, $10.00" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-</div>
-<!-- Classic Product 10: Simple Daydreams Incense 10 inch -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> Simple Daydreams — Incense</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Light, clean and peaceful bouquet of fresh lavender and delicate magnolia blossoms warmed by a comforting infusion of white oak and soft cashmere. Incense 20-pack $8.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">$8.00 CAD</p>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('daydreams-incense-10in', 'Z3NW1CK Simple Daydreams Incense 10 inch', 8)">Add Incense</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-    
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-  <div class="about-carousel-track">
-    <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async">
-    
-  
-
-  <div class="about-carousel" aria-label="Simple Daydreams incense label slideshow">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-incense-label.jpg?v=20261105" alt="Simple Daydreams 10 inch incense label, $8.00" loading="eager" decoding="async">  
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-  <div class="about-carousel-track">
-    <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async">
-    
-  
-
-      
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-  <div class="about-carousel-track">
-    <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async">
-    
-  
-
-    
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-  <div class="about-carousel-track">
-    <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async">
-    
-  
-
-  
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-  <div class="about-carousel-track">
-    <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async">
-    
-  
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-  <div class="about-carousel-track">
-    <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async">
-    
-  
-
-      
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-  <div class="about-carousel-track">
-    <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async">
-    
-  
-
-    
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-  <div class="about-carousel-track">
-    <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async">
-    
-  
-
-  
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-  <div class="about-carousel-track">
-    <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async">
-    
-  
-'''
-    </select>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('capncrunch-candle-2or5', 'Z3NW1CK Cap'n Crunch Berries Candle', Number(document.getElementById('capncrunch-candle-size').value))">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <!-- About Carousel / Slideshow -->
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-    <div class="about-carousel-track" >
-<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunchberries/capn-candle-2oz-label.jpg?v=20261102e" alt="Cap'n Crunch Berries 2oz candle tin label, $5" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunchberries/capn-candle-5oz-label.jpg?v=20261102c" alt="Cap'n Crunch Berries 5oz candle label, $10" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunchberries/capn-waxmelt-label.jpg?v=20261102c" alt="Cap'n Crunch Berries wax melt label, $6" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/capncrunchberries/capn-incense-label.jpg?v=20261102c" alt="Cap'n Crunch Berries 10 inch incense label, $8" loading="eager" decoding="async">
-'''<!-- Classic Product 11: Cap'n Crunch Berries - Candle -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-classic" style="background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;">CLASSIC</span> Cap'n Crunch Berries - Candle</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Delicious scent reminiscent of the popular cereal classic, Cap'n Crunch Berries! With its buttery, vanilla infused cereal base and bursts of fresh picked summer berries, apricots and blackberries. 2oz $5, 5oz $10, 2oz 6-cube melt $6, 10" incense $8.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">2oz $5 - 5oz $10</p>
-    <label for="capncrunch-candle-size">Cap'n Crunch Berries candle size</label>
-<select id="capncrunch-candle-size" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Cap'n Crunch Berries candle size">
-      <option value="5">2oz — $5 CAD</option>
-      <option value="10">5oz — $10 CAD</option>
-    </select>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('capncrunch-candle-2or5', 'Z3NW1CK Cap'n Crunch Berries Candle', Number(document.getElementById('capncrunch-candle-size').value))">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-  <div class="about-carousel" aria-label="Cap'n Crunch Berries Candle image gallery">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/capncrunch/capncrunch-candle-label.jpg?v=20261105" alt="Cap'n Crunch Berries candle label" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-</div>'''
-</div>
-</div>
-</div>
-    </div>
-  </div>
-</div>
-<!-- PREMIUM COLLECTION -->
-<div class="collection-section">
-  <h2>PREMIUM COLLECTION</h2>
-  <p class="collection-subnote">Premium craft fragrances - hand-poured in Thunder Bay, Ontario</p>
-    <div class="about-carousel" aria-label="Monkey Farts candle label slideshow"><div class="about-carousel-track"><div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-label.jpg" alt="Monkey Farts 2oz candle label" loading="eager" decoding="async"></div><div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-5oz-candle-label.jpg" alt="Monkey Farts 5oz candle label" loading="eager" decoding="async"></div><div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-label.jpg" alt="Monkey Farts wax melt label" loading="eager" decoding="async"></div><div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-incense-label.jpg" alt="Monkey Farts incense label" loading="eager" decoding="async"></div></div></div>
-<!-- Premium Product 1 -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🐒 Monkey Farts - Candle</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Fresh banana blended with sweet grapefruit, mandarin orange, kiwi, coconut cream, pink raspberries, strawberries and apples. Top: Ozone, Fruity, Bergamot, Pineapple; Mid: Muguet, Floral, Jasmine, Red Fruits; Base: Vanilla, Heliotrope, Coconut, Tonka. 2oz $9, 5oz $16, melt $10, incense $12.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">2oz $9 - 5oz $16</p>
-    <label for="monkeyfarts-candle-size">Monkey Farts candle size</label>
-<select id="monkeyfarts-candle-size" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Monkey Farts candle size">
-      <option value="9">2oz — $9 CAD</option>
-      <option value="16">5oz — $16 CAD</option>
-    </select>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('monkeyfarts-candle-2or5', 'Z3NW1CK Monkey Farts Candle', Number(document.getElementById('monkeyfarts-candle-size').value))">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  </div>
-
-    </div>
-  </div>
-</div>
-<!-- Premium Product 2 -->
-<div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
-  <div class="body" style="padding: 16px;">
-    <h3><span class="tier-badge tier-premium" style="background: #f3e5f5; color: #4a148c; font-size: 0.6em; font-weight: 800; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; border: 1px solid #ce93d8;">PREMIUM</span> 🥃 Bourbon & Sandalwood - Candle</h3>
-    <p class="notes" style="color: #e8e8f4; font-size: 0.9em; margin: 6px 0;">Wintergreen, sage, jasmine and lavender blend over a base of vanilla, cedarwood, patchouli and musk. 2oz $9, 5oz $16, melt $10, incense $12.</p>
-    <p class="price" style="font-weight: 700; color: #fff; font-size: 1.1em; margin: 10px 0;">2oz $9 - 5oz $16</p>
-    <label for="bourbon-candle-size">Bourbon and Sandalwood candle size</label>
-<select id="bourbon-candle-size" class="size-select" style="padding:8px;border-radius:6px;border:1px solid #ccc;" aria-label="Bourbon and Sandalwood candle size">
-      <option value="9">2oz — $9 CAD</option>
-      <option value="16">5oz — $16 CAD</option>
-    </select>
-    <button type="button" class="buy-btn add-to-cart" onclick="aeAddToCart('bourbonsandalwood-candle-2or5', 'Z3NW1CK Bourbon & Sandalwood Candle', Number(document.getElementById('bourbon-candle-size').value))">Add Candle</button>
-    <a class="buy-btn" href="cart.html" style="display:inline-block;margin-top:8px;padding:8px 14px;text-align:center;text-decoration:none;">Go to Cart / Checkout</a>
-  <div class="about-carousel" aria-label="Bourbon & Sandalwood candle label slideshow">
-    <div class="about-carousel-track">
-      <div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-candle-2oz-label.jpg" alt="Bourbon & Sandalwood 2oz candle label, $9" loading="eager" decoding="async"></div>
-      <div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-5oz-candle-label.jpg" alt="Bourbon & Sandalwood 5oz candle label, $16" loading="eager" decoding="async"></div>
-      <div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-waxmelt-label.jpg" alt="Bourbon & Sandalwood wax melt label, $10" loading="eager" decoding="async"></div>
-      <div class="about-slide"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-incense-label.jpg" alt="Bourbon & Sandalwood incense label, $12" loading="eager" decoding="async"></div>
-    </div>
-  </div>
-  </div>
-
-    </div>
-  </div>
-</div>
-
-</div>
-
-
-
-
-<!-- Online Promo Banner -->
-<div style="background: linear-gradient(135deg, #2a1a5e 0%, #3b1a6e 100%); padding: 20px; border-radius: 8px; color: #ffffff; margin: 20px 0; text-align: center;">
-  <h3 style="margin: 0 0 10px 0;">🛍️ Online Promo</h3>
-  <p style="margin: 5px 0; font-size: 1.1em;">Buy $60+ worth of Classic or Premium collection — <strong>15% off</strong> at checkout</p>
-  <p style="margin: 5px 0; font-size: 0.9em;">Use promo code: <strong>FALL15</strong></p>
-  <p style="margin: 5px 0; font-size: 0.9em;">*Online orders only • Free shipping on orders over $100</p>
-</div>
-<p style="text-align:center;margin:1.5rem auto;max-width:720px;">Complete the cozy experience — pair your candle with <a href="lissas-knitting.html">knit slippers</a> and <a href="art-emporium.html">original art</a>.</p>
-<section id="checkout"><h2>Cart / Checkout</h2>
-<p>Checkout connected: PayPal (via NetParcel) + Canadian e-Transfer (Canada Post).</p></section>
-</main>
-<script src="cart.js"></script>
+<footer>
+<p>&copy; 2026 Abstract Emporium. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

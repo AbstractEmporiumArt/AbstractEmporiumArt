@@ -5198,20 +5198,32 @@ textarea:focus-visible,
   border: 1px solid #f5d76e;
 }
 
-/* ponytail: bookmarks product-card carousel — one slide at a time + nav buttons */
-.product-card .body .about-carousel .about-slide {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: center;
+/* ponytail: bookmarks product-card carousel — true slideshow, one slide visible at a time.
+   Scoped to .bm-slideshow so the shared z3nw1ck.html carousels are NOT affected. */
+.bm-slideshow .about-slide {
+    display: none !important;
 }
-.product-card .body .about-carousel .about-slide img {
-    width: 100%;
-    height: auto;
+.bm-slideshow .about-slide.about-slide-active {
+    display: block !important;
+}
+.bm-slideshow .about-slide.about-slide-active img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 70vh;
+    margin: 0 auto;
     object-fit: contain;
     border-radius: 8px;
 }
-.about-carousel-nav { display: flex; justify-content: center; gap: 12px; margin-top: 8px; }
+.about-carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 8px;
+}
 .about-carousel-btn {
     background: #1a1a2e; color: #fff; border: none; border-radius: 50%;
     width: 36px; height: 36px; font-size: 1.25rem; line-height: 1; cursor: pointer;
 }
+#bm-count { color: #ccc; font-size: 0.9rem; min-width: 56px; text-align: center; }

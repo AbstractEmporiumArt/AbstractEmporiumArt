@@ -770,7 +770,7 @@ fbq('track', 'PageView');
    <div class="body">
     <h3>📚 Handmade Knitted Bookmark – Horizontal Ridge</h3>
     <p class="notes">Handmade knitted bookmark with textured horizontal ridge design. Approximately 2 inches wide, 7 inches knitted length, 10.5 inches total length including tassel. Assorted colours and colour combinations. Each bookmark is individually handmade with a coordinating yarn tassel. A lovely little gift for book lovers, students, teachers, birthdays, and stocking stuffers. Every bookmark is unique with slight variations that are part of its handmade charm.</p>
-    <p class="price">$5.00</p><div class="about-carousel" aria-label="Handmade Knitted Bookmark – Horizontal Ridge label slideshow">
+    <p class="price">$5.00</p><div class="about-carousel bm-slideshow" aria-label="Handmade Knitted Bookmark – Horizontal Ridge label slideshow">
                         <div class="about-carousel-track">
                             <div class="about-slide">
                                 <img src="LKC-Bookmarks/AELKCBookmark1_resized.jpg" alt="Handmade Knitted Bookmark – Horizontal Ridge bookmark 1 label" loading="eager" decoding="async">
@@ -825,6 +825,7 @@ fbq('track', 'PageView');
 
                     <div class="about-carousel-nav">
                         <button type="button" class="about-carousel-btn" onclick="bmScroll(-1)" aria-label="Previous bookmark photo">&#8249;</button>
+                        <span id="bm-count">1 / 16</span>
                         <button type="button" class="about-carousel-btn" onclick="bmScroll(1)" aria-label="Next bookmark photo">&#8250;</button>
                     </div>
 
@@ -1238,12 +1239,34 @@ fbq('track', 'PageView');
    })();
   </script>
 <script id="bm-carousel">
-/* Bookmarks carousel: scroll one slide per button press (slides are 100% width, scroll-snap). */
-window.bmScroll = function (d) {
-  var c = document.querySelector('.product-card .body .about-carousel');
-  if (!c) return;
-  c.scrollBy({ left: d * c.clientWidth, behavior: 'smooth' });
-};
+/* Bookmarks slideshow: one slide visible at a time; buttons + touch swipe toggle it. */
+(function () {
+  function init() {
+    var box = document.querySelector('.bm-slideshow');
+    if (!box) return;
+    var slides = box.querySelectorAll('.about-slide');
+    if (!slides.length) return;
+    var cur = 0;
+    function show(i) {
+      cur = (i + slides.length) % slides.length;
+      for (var k = 0; k < slides.length; k++) {
+        slides[k].classList.toggle('about-slide-active', k === cur);
+      }
+      var ctr = document.getElementById('bm-count');
+      if (ctr) ctr.textContent = (cur + 1) + ' / ' + slides.length;
+    }
+    window.bmScroll = function (d) { show(cur + d); };
+    var sx = 0;
+    box.addEventListener('touchstart', function (e) { sx = e.changedTouches[0].screenX; }, { passive: true });
+    box.addEventListener('touchend', function (e) {
+      var dx = sx - e.changedTouches[0].screenX;
+      if (Math.abs(dx) > 30) show(cur + (dx > 0 ? 1 : -1));
+    }, { passive: true });
+    show(0);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
 </script>
 </body>
 </html>

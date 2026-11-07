@@ -346,11 +346,11 @@ function setupCollaborationFeatures() {
 function navSlide(id, delta) {
   const box = document.getElementById(id);
   if (!box) return;
-  const slides = box.querySelectorAll('.slide');
+  const slides = box.querySelectorAll('.slide, .about-slide');
   if (!slides.length) return;
   let idx = 0;
   for (let i = 0; i < slides.length; i++) {
-    if (slides[i].classList.contains('active')) { idx = i; break; }
+    if (slides[i].classList.contains('active') || slides[i].classList.contains('about-slide-active')) { idx = i; break; }
   }
   idx = (idx + delta + slides.length) % slides.length;
   slides.forEach(function(s, i) { s.classList.toggle('active', i === idx); });

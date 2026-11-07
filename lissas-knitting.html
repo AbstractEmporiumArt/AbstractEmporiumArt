@@ -255,7 +255,21 @@ fbq('track', 'PageView');
 @media (max-width:768px){.about-slide{flex:0 0 100% !important;max-width:100% !important;}.about-slide img{width:100% !important;max-width:100% !important;height:auto !important;}}</style>
 <style>
 .slippers-slideshow { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; display: block; scroll-behavior: smooth; }
-.slippers-slideshow .about-carousel-track { display: flex; flex-wrap: wrap; gap: 12px; width: 100%; justify-content: center; height: 240px; max-hei.about-slide { flex: 0 0 100%; max-width: 100%; box-sizing: border-box; overflow: hidden; margin-bottom: 12px; height: 240px; min-height: 200px; }}
+.slippers-slideshow .about-carousel-track { display: flex; flex-wrap: wrap; gap: 12px; width: 100%; justify-content: center; }
+.slippers-slideshow .about-slide { flex: 0 0 48%; max-width: 48%; width: 100%; box-sizing: border-box; overflow: hidden; margin-bottom: 12px; }
+.slippers-slideshow .about-slide img { width: 100%; max-width: 100%; height: auto; display: block; object-fit: contain; border-radius: 8px; }
+@media (max-width: 768px) {
+ /* removed 100% about-slide rule */
+ .slippers-slideshow .about-slide img { max-height: 60vh; width: 100%; height: auto; object-fit: contain; border-radius: 8px; }
+}
+</style>
+<style>
+/* removed 100% about-slide rule */
+.slippers-slideshow .about-carousel-track { display:flex; gap:0; width:max-content; }
+.slippers-slideshow { overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scrollbar-width:none; scroll-behavior:smooth; }
+</style>
+<style>
+*:focus{outline:3px solid #cfae00;outline-offset:2px;transition:outline .1s;}
 .slideshow-slide img, .gallery-img{display:block;max-width:100%;height:auto;}
 </style>
 <style>
@@ -805,6 +819,431 @@ fbq('track', 'PageView');
                             </div>
     <div class="about-slide">
                                     <img src="LKC-Bookmarks/AELKCBookmark19.jpg" alt="Handmade Knitted Bookmark – Horizontal Ridge bookmark 19 label" loading="eager" decoding="async">
-                            </div>    </div><!-- /.container -->
-    <h3 style="color:#1a1a2e;margin:2rem 0 1rem;font-size:1.1rem;text-align:center;">
- 
+                                                        </div>
+                        </div>
+                    </div>
+
+                    <div class="about-carousel-nav">
+                        <button type="button" class="about-carousel-btn" onclick="bmScroll(-1)" aria-label="Previous bookmark photo">&#8249;</button>
+                        <button type="button" class="about-carousel-btn" onclick="bmScroll(1)" aria-label="Next bookmark photo">&#8250;</button>
+                    </div>
+
+                    <a href="cart.html" class="buy-btn" style="display:block;text-align:center;padding:10px;width:100%;background:#f5d76e;color:#1a1a2e;border:none;border-radius:8px;font-weight:700;cursor:pointer;box-sizing:border-box;margin-top:8px;">Add to Cart</a>
+   </div>
+  </div>
+</div>
+    </div><!-- /.container -->
+
+
+<p class="ae-pairing" style="text-align:center;margin:1.25rem auto;max-width:720px;font-size:.95rem;line-height:1.5;">Complete the cozy experience &mdash; pair candles with <a href="lissas-knitting.html">Lissa's Knitting</a>, <a href="z3nw1ck.html">Z3NW1CK</a>, and <a href="art-emporium.html">original art</a>. Checkout: <a href="cart.html">PayPal (NetParcel) or Interac e-Transfer</a>.</p>
+</main>
+
+<script src="order.js"></script>
+<script src="cart.js"></script>
+<script src="sales-announcements.js"></script>
+<script src="jsonld-core.js"></script>
+<script src="analytics-tracking.js"></script>
+<script src="script.js"></script>
+
+<script id="lkc-navslide-final">
+/* LKC slideshow nav — must load AFTER script.js (which overwrites navSlide).
+   Accepts short ids ('newborn') OR full ids ('slide-newborn', 'slide-gallery'). */
+(function () {
+  function resolveBox(id) {
+    if (!id) return null;
+    return document.getElementById(id)
+      || document.getElementById('slide-' + id)
+      || document.getElementById(id.replace(/^slide-/, ''))
+      || null;
+  }
+  function resolveCounter(id, box) {
+    var keys = [
+      'count-' + id,
+      'count-slide-' + id,
+      'count-' + id.replace(/^slide-/, ''),
+      'count-' + (box && box.id ? box.id : ''),
+      'count-' + (box && box.id ? box.id.replace(/^slide-/, '') : '')
+    ];
+    for (var i = 0; i < keys.length; i++) {
+      var el = document.getElementById(keys[i]);
+      if (el) return el;
+    }
+    if (box) {
+      var c = box.querySelector('.counter');
+      if (c) return c;
+    }
+    return null;
+  }
+  function getSlides(box) {
+    // Prefer direct children/descendants with .slide
+    return box.querySelectorAll(':scope > .slide, .slide');
+  }
+  window.navSlide = function (id, delta) {
+    try {
+      var box = resolveBox(id);
+      if (!box) { console.warn('navSlide: no box for', id); return; }
+      var slides = getSlides(box);
+      if (!slides.length) { console.warn('navSlide: no slides in', id); return; }
+      var idx = 0, i;
+      for (i = 0; i < slides.length; i++) {
+        if (slides[i].classList.contains('active')) { idx = i; break; }
+      }
+      idx = (idx + (delta || 0) + slides.length) % slides.length;
+      for (i = 0; i < slides.length; i++) {
+        slides[i].classList.toggle('active', i === idx);
+      }
+      var ctr = resolveCounter(id, box);
+      
+      // Force decode of newly active slide (fixes blank slides 3/4 after lazy/display:none)
+      try {
+        var active = slides[idx];
+        if (active && active.tagName === 'IMG') {
+          if (!active.complete) { active.loading = 'eager'; active.setAttribute('src', active.getAttribute('src')); }
+          if (active.decode) active.decode().catch(function(){});
+        }
+      } catch (ignore) {}
+
+      if (ctr) ctr.textContent = (idx + 1) + ' / ' + slides.length;
+    } catch (e) {
+      console.error('navSlide error', id, e);
+    }
+  };
+  window.setSlide = function (id, variant) {
+    try {
+      var box = resolveBox(id);
+      if (!box) return;
+      var slides = getSlides(box);
+      var i, idx = -1;
+      for (i = 0; i < slides.length; i++) {
+        if (slides[i].getAttribute('data-variant') === variant) { idx = i; break; }
+      }
+      if (idx < 0) return;
+      for (i = 0; i < slides.length; i++) {
+        slides[i].classList.toggle('active', i === idx);
+      }
+      var ctr = resolveCounter(id, box);
+      if (ctr) ctr.textContent = (idx + 1) + ' / ' + slides.length;
+    } catch (e) {
+      console.error('setSlide error', id, e);
+    }
+  };
+  // Touch swipe for product cards + gallery
+  ['newborn','toddler','adult','tuque','gallery','slide-gallery'].forEach(function (id) {
+    var el = resolveBox(id);
+    if (!el) return;
+    var sx = 0;
+    el.addEventListener('touchstart', function (e) {
+      sx = e.changedTouches[0].screenX;
+    }, { passive: true });
+    el.addEventListener('touchend', function (e) {
+      var dx = sx - e.changedTouches[0].screenX;
+      if (Math.abs(dx) > 30) window.navSlide(id, dx > 0 ? 1 : -1);
+    }, { passive: true });
+  });
+})();
+</script>
+<script id="lkc-slip-viewers">
+/* Single-img src-swap for product slippers — avoids .slide opacity/display wars (blank 3/4). */
+(function(){
+  var CATALOG = {
+    newborn: {
+      imgId: 'newborn-view-img',
+      countId: 'count-newborn',
+      selectId: 'newbornPairs',
+      items: [
+        {src:'lkc-slippers-newborn-01.jpg', alt:'Newborn slippers pair 1 of 4 — ready'},
+        {src:'lkc-slippers-newborn-02.jpg', alt:'Newborn slippers pair 2 of 4 — ready'},
+        {src:'lkc-slippers-newborn-03.jpg', alt:'Newborn slippers pair 3 of 4 — ready'},
+        {src:'lkc-slippers-newborn-04.jpg', alt:'Newborn slippers pair 4 of 4 — ready'}
+      ]
+    },
+    kids65: {
+      imgId: 'kids65-view-img',
+      countId: 'count-kids65',
+      selectId: 'kids65Pairs',
+      items: [
+        {src:'lkc-slippers-kids65-01.jpg', alt:'Kids 6-6.5 inch knit slippers pair 1 — teal blue green variegated'},
+        {src:'lkc-slippers-kids65-02.jpg', alt:'Kids 6-6.5 inch knit slippers pair 2 — gray teal white speckled'},
+        {src:'lkc-slippers-kids65-03.jpg', alt:'Kids 6-6.5 inch knit slippers pair 3 — red maroon multicolor'},
+        {src:'lkc-slippers-kids65-04.jpg', alt:'Kids 6-6.5 inch knit slippers pair 4 — pink white variegated'},
+        {src:'lkc-slippers-kids65-05.jpg', alt:'Kids 6-6.5 inch knit slippers pair 5 — pink purple lavender multicolor'},
+        {src:'lkc-slippers-kids65-06.jpg', alt:'Kids 6-6.5 inch knit slippers pair 6 — pink black white mottled'}
+      ]
+    }
+  };
+  var idx = { newborn: 0, kids65: 0 };
+  Object.keys(CATALOG).forEach(function(k){
+    CATALOG[k].items.forEach(function(it){ var i=new Image(); i.src=it.src; });
+  });
+  function paint(key){
+    var cat = CATALOG[key]; if(!cat) return;
+    var i = idx[key] || 0;
+    var it = cat.items[i]; if(!it) return;
+    var el = document.getElementById(cat.imgId);
+    var ctr = document.getElementById(cat.countId);
+    var sel = document.getElementById(cat.selectId);
+    if(el){ el.src = it.src; el.alt = it.alt; el.style.opacity='1'; el.style.display='block'; el.style.visibility='visible'; }
+    if(ctr) ctr.textContent = (i+1) + ' / ' + cat.items.length;
+    if(sel) sel.selectedIndex = i;
+  }
+  window.slipStep = function(key, d){
+    var cat = CATALOG[key]; if(!cat) return;
+    var n = cat.items.length;
+    idx[key] = ((idx[key]||0) + d + n) % n;
+    paint(key);
+  };
+  window.slipSelect = function(key, i){
+    var cat = CATALOG[key]; if(!cat) return;
+    if(typeof i !== 'number' || i < 0 || i >= cat.items.length) return;
+    idx[key] = i;
+    paint(key);
+  };
+  // Keep setSlide('newborn', variant) working for any leftover callers
+  var _set = window.setSlide;
+  window.setSlide = function(id, variant){
+    if(id === 'newborn' || id === 'slide-newborn' || id === 'kids65' || id === 'slide-kids65'){
+      var key = (id === 'kids65' || id === 'slide-kids65') ? 'kids65' : 'newborn';
+      var cat = CATALOG[key];
+      var m = String(variant||'').match(/p(\d+)/);
+      if(m){ slipSelect(key, parseInt(m[1],10)-1); return; }
+    }
+    if(typeof _set === 'function') return _set(id, variant);
+  };
+  var _nav = window.navSlide;
+  window.navSlide = function(id, delta){
+    if(id === 'newborn' || id === 'slide-newborn'){ slipStep('newborn', delta||0); return; }
+    if(id === 'kids65' || id === 'slide-kids65'){ slipStep('kids65', delta||0); return; }
+    if(typeof _nav === 'function') return _nav(id, delta);
+  };
+  function boot(){ paint('newborn'); paint('kids65'); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+})();
+</script>
+<script id="lkc-tuque-viewer">
+(function(){
+  var imgs = [
+    {src:'lkc-tuque-ready-01-cream.jpg', name:'Cream Speckled #1', alt:'Completed cream speckled newborn tuque — ready #1'},
+    {src:'lkc-tuque-ready-02-cream.jpg', name:'Cream Speckled #2', alt:'Completed cream speckled newborn tuque — ready #2'},
+    {src:'lkc-tuque-ready-03-taupe.jpg', name:'Taupe Ribbed', alt:'Completed taupe ribbed newborn tuque — ready'},
+    {src:'lkc-tuque-ready-04-maroon.jpg', name:'Maroon Ribbed', alt:'Completed maroon ribbed newborn tuque — ready'},
+    {src:'lkc-tuque-ready-05-cream.jpg', name:'Cream Ribbed #3', alt:'Completed cream ribbed newborn tuque — ready #3'}
+  ];
+  // Preload all five (esp. taupe #3 + maroon #4)
+  imgs.forEach(function(it){ var i=new Image(); i.decoding='async'; i.src=it.src; });
+  var idx = 0;
+  function paint(){
+    var el = document.getElementById('tuque-view-img');
+    var ctr = document.getElementById('tuque-view-count');
+    var lab = document.getElementById('tuque-view-label');
+    var sel = document.getElementById('newbornTuqueSelect');
+    if(!el) return;
+    var it = imgs[idx];
+    // Force visible even if global CSS fights
+    el.style.display = 'block';
+    el.style.opacity = '1';
+    el.style.visibility = 'visible';
+    el.style.maxHeight = 'none';
+    el.style.objectFit = 'contain';
+    el.style.background = '#f3efe8';
+    // Cache-safe swap: blank then set (some mobile WebViews keep stale decode)
+    el.removeAttribute('src');
+    el.alt = it.alt;
+    el.src = it.src;
+    if (el.decode) { try { el.decode().catch(function(){}); } catch (e) {} }
+    if(ctr) ctr.textContent = (idx+1) + ' / ' + imgs.length;
+    if(lab) lab.textContent = it.name;
+    if(sel) sel.selectedIndex = idx;
+    var thumbs = document.querySelectorAll('#tuque-thumbs button');
+    for (var t=0; t<thumbs.length; t++){
+      var on = (t === idx);
+      thumbs[t].classList.toggle('active', on);
+      if(on) thumbs[t].setAttribute('aria-current','true');
+      else thumbs[t].removeAttribute('aria-current');
+    }
+  }
+  window.tuqueStep = function(d){
+    idx = (idx + d + imgs.length) % imgs.length;
+    paint();
+  };
+  window.tuqueSelect = function(i){
+    if(typeof i !== 'number' || i < 0 || i >= imgs.length) return;
+    idx = i;
+    paint();
+  };
+  window.cartTuque = function(){
+    var it = imgs[idx];
+    if(window.addToCartDirect){
+      window.addToCartDirect("Lissa's Knitting - Newborn Tuque (" + it.name + ")", 5.00, it.src);
+    }
+  };
+  document.addEventListener('DOMContentLoaded', function(){
+    paint();
+    var box = document.getElementById('tuque-viewer');
+    if(!box) return;
+    var sx=0;
+    box.addEventListener('touchstart', function(e){ sx=e.changedTouches[0].screenX; }, {passive:true});
+    box.addEventListener('touchend', function(e){
+      var dx = sx - e.changedTouches[0].screenX;
+      if(Math.abs(dx)>30) window.tuqueStep(dx>0?1:-1);
+    }, {passive:true});
+  });
+  if(document.readyState !== 'loading') paint();
+})();
+</script>
+<script id="lkc-cloth-viewer">
+(function(){
+  var imgs = [
+      {src:'lkc-washcloth-01.jpg', name:'Red & Lilac Sparkle', alt:'Hand-knit wash cloth — Red base with lilac-blue chevron, sparkle (ready)'},
+      {src:'lkc-washcloth-02.jpg', name:'Mustard & Forest', alt:'Hand-knit wash cloth — Mustard yellow with dark forest chevron (ready)'},
+      {src:'lkc-washcloth-03.jpg', name:'Hot Pink Multi', alt:'Hand-knit wash cloth — Hot pink with teal, blue and gold flecks (ready)'},
+      {src:'lkc-washcloth-04.jpg', name:'Red & Aqua Sparkle', alt:'Hand-knit wash cloth — Bright red with turquoise chevron sparkle (ready)'},
+      {src:'lkc-washcloth-05.jpg', name:'Pastel Confetti', alt:'Hand-knit wash cloth — Pastel pink, blue, yellow multi confetti (ready)'},
+      {src:'lkc-washcloth-06.jpg', name:'Mint & Red Split', alt:'Hand-knit wash cloth — Mint green half with red multi sparkle half (ready)'},
+      {src:'lkc-washcloth-07.jpg', name:'Red & Cream', alt:'Hand-knit wash cloth — Bright red with cream chevron zig-zag (ready)'},
+      {src:'lkc-washcloth-08.jpg', name:'Solid Purple', alt:'Hand-knit wash cloth — Solid violet/lilac textured cloth (ready)'},
+      {src:'lkc-washcloth-09.jpg', name:'Cream Pastel Multi', alt:'Hand-knit wash cloth — Cream with pink, blue, yellow flecks (ready)'},
+      {src:'lkc-washcloth-10.jpg', name:'Cream-to-Pink Rainbow', alt:'Hand-knit wash cloth — Cream multi fading into hot pink multi (ready)'}
+  ];
+  imgs.forEach(function(it){ var i=new Image(); i.src=it.src; });
+  var idx = 0;
+  function paint(){
+    var el = document.getElementById('cloth-view-img');
+    var ctr = document.getElementById('cloth-view-count');
+    var lab = document.getElementById('cloth-view-label');
+    var sel = document.getElementById('clothSelect');
+    if(!el) return;
+    var it = imgs[idx];
+    el.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#f3efe8;display:block;opacity:1;visibility:visible;z-index:1;';
+    el.alt = it.alt;
+    if ((el.getAttribute('src')||'') !== it.src) el.src = it.src;
+    if(ctr) ctr.textContent = (idx+1) + ' / ' + imgs.length;
+    if(lab) lab.textContent = it.name;
+    if(sel) sel.selectedIndex = idx;
+  }
+  window.clothStep = function(d){
+    idx = (idx + d + imgs.length) % imgs.length;
+    paint();
+  };
+  window.clothSelectIdx = function(i){
+    if(typeof i !== 'number' || i < 0 || i >= imgs.length) return;
+    idx = i; paint();
+  };
+  window.cartCloth = function(){
+    var it = imgs[idx];
+    if(window.addToCartDirect){
+      window.addToCartDirect("Lissa's Knitting - Wash Cloth (" + it.name + ")", 5.00, it.src);
+    }
+  };
+  document.addEventListener('DOMContentLoaded', function(){
+    paint();
+    var box = document.getElementById('slide-cloth');
+    if(!box) return;
+    var sx=0;
+    box.addEventListener('touchstart', function(e){ sx=e.changedTouches[0].screenX; }, {passive:true});
+    box.addEventListener('touchend', function(e){
+      var dx = sx - e.changedTouches[0].screenX;
+      if(Math.abs(dx)>30) window.clothStep(dx>0?1:-1);
+    }, {passive:true});
+  });
+  if(document.readyState !== 'loading') paint();
+})();
+</script>
+<script id="lkc-swiffer-viewer">
+(function(){
+  var imgs = [
+      {src:'lkc-swiffer-01.jpg', name:'Red Rainbow Edge', alt:'Hand-knit Swiffer/mop pad — Red multi with rainbow bottom edge (ready)'},
+      {src:'lkc-swiffer-02.jpg', name:'Ocean to Pink', alt:'Hand-knit Swiffer/mop pad — Teal/blue multi fading to pink white (ready)'},
+      {src:'lkc-swiffer-03.jpg', name:'Red Confetti Multi', alt:'Hand-knit Swiffer/mop pad — Red with white blue yellow confetti (ready)'},
+      {src:'lkc-swiffer-04.jpg', name:'Mint Multi Bound', alt:'Hand-knit Swiffer/mop pad — Mint multi with pink/charcoal bound top (ready)'},
+      {src:'lkc-swiffer-05.jpg', name:'Speckled to Magenta', alt:'Hand-knit Swiffer/mop pad — Grey multi with mint top and magenta band (ready)'},
+      {src:'lkc-swiffer-06.jpg', name:'Red Aqua Sparkle', alt:'Hand-knit Swiffer/mop pad — Bright red with turquoise sparkle flecks (ready)'},
+      {src:'lkc-swiffer-07.jpg', name:'Mint Pastel Yellow', alt:'Hand-knit Swiffer/mop pad — Mint top, pastel middle, yellow edge (ready)'},
+      {src:'lkc-swiffer-08.jpg', name:'Pink Charcoal Zebra', alt:'Hand-knit Swiffer/mop pad — Pink and charcoal alternating bands (ready)'},
+      {src:'lkc-swiffer-09.jpg', name:'Ocean Blue Teal', alt:'Hand-knit Swiffer/mop pad — Solid blue-teal checkerboard (ready)'},
+      {src:'lkc-swiffer-10.jpg', name:'Electric Blue Black', alt:'Hand-knit Swiffer/mop pad — Bright blue with black flecks (ready)'},
+      {src:'lkc-swiffer-11.jpg', name:'Navy & Mint', alt:'Hand-knit Swiffer/mop pad — Navy and mint alternating bands (ready)'}
+  ];
+  imgs.forEach(function(it){ var i=new Image(); i.src=it.src; });
+  var idx = 0;
+  function paint(){
+    var el = document.getElementById('swiffer-view-img');
+    var ctr = document.getElementById('swiffer-view-count');
+    var lab = document.getElementById('swiffer-view-label');
+    var sel = document.getElementById('mopSelect');
+    if(!el) return;
+    var it = imgs[idx];
+    el.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#f3efe8;display:block;opacity:1;visibility:visible;z-index:1;';
+    el.alt = it.alt;
+    if ((el.getAttribute('src')||'') !== it.src) el.src = it.src;
+    if(ctr) ctr.textContent = (idx+1) + ' / ' + imgs.length;
+    if(lab) lab.textContent = it.name;
+    if(sel) sel.selectedIndex = idx;
+  }
+  window.swifferStep = function(d){
+    idx = (idx + d + imgs.length) % imgs.length;
+    paint();
+  };
+  window.swifferSelectIdx = function(i){
+    if(typeof i !== 'number' || i < 0 || i >= imgs.length) return;
+    idx = i; paint();
+  };
+  window.cartSwiffer = function(){
+    var it = imgs[idx];
+    if(window.addToCartDirect){
+      window.addToCartDirect("Lissa's Knitting - Mop/Swiffer Pad (" + it.name + ")", 8.00, it.src);
+    }
+  };
+  document.addEventListener('DOMContentLoaded', function(){
+    paint();
+    var box = document.getElementById('slide-swiffer');
+    if(!box) return;
+    var sx=0;
+    box.addEventListener('touchstart', function(e){ sx=e.changedTouches[0].screenX; }, {passive:true});
+    box.addEventListener('touchend', function(e){
+      var dx = sx - e.changedTouches[0].screenX;
+      if(Math.abs(dx)>30) window.swifferStep(dx>0?1:-1);
+    }, {passive:true});
+  });
+  if(document.readyState !== 'loading') paint();
+})();
+</script>
+<script>
+   // LKC slippers: add selected pair to cart with its specific photo
+   window.cartSlipper = function(selectId, title){
+    var sel = document.getElementById(selectId);
+    if(!sel) return;
+    var opt = sel.options[sel.selectedIndex];
+    var price = parseFloat(sel.value) || 0;
+    var img = opt.getAttribute('data-img') || 'logo.jpg';
+    if(window.addToCartDirect){ window.addToCartDirect(title, price, img); }
+   };
+   // Lightbox for slipper thumbnails
+   (function(){
+    var lb = document.createElement('div');
+    lb.className = 'lkc-lightbox';
+    lb.innerHTML = '<img alt="Enlarged slipper photo">';
+    document.body.appendChild(lb);
+    var img = lb.querySelector('img');
+    document.addEventListener('click', function(e){
+     var t = e.target;
+     if(t && t.classList && t.classList.contains('sl-thumb')){
+      img.src = t.getAttribute('data-full') || t.src;
+      lb.classList.add('open');
+     } else if(e.target === lb || (t && t.classList && t.classList.contains('lkc-lightbox')) ){
+      lb.classList.remove('open');
+     }
+    });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.classList.remove('open'); });
+   })();
+  </script>
+<script id="bm-carousel">
+/* Bookmarks carousel: scroll one slide per button press (slides are 100% width, scroll-snap). */
+window.bmScroll = function (d) {
+  var c = document.querySelector('.product-card .body .about-carousel');
+  if (!c) return;
+  c.scrollBy({ left: d * c.clientWidth, behavior: 'smooth' });
+};
+</script>
+</body>
+</html>

@@ -5197,3 +5197,21 @@ textarea:focus-visible,
   background: #1a1a2e !important;
   border: 1px solid #f5d76e;
 }
+
+/* ponytail: bookmarks product-card carousel — one slide at a time + nav buttons */
+.product-card .body .about-carousel .about-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: center;
+}
+.product-card .body .about-carousel .about-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+.about-carousel-nav { display: flex; justify-content: center; gap: 12px; margin-top: 8px; }
+.about-carousel-btn {
+    background: #1a1a2e; color: #fff; border: none; border-radius: 50%;
+    width: 36px; height: 36px; font-size: 1.25rem; line-height: 1; cursor: pointer;
+}

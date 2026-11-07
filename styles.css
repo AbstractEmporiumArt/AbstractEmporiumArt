@@ -4975,12 +4975,12 @@ img.loaded {
 }
 .product-card .body .about-slide,
 .product-card .body .about-slide img {
-    display: none !important;
+    display: block !important;
 }
 /* ponytail: show slides in slippers-slideshow (not the JS-populated z3nw1ck ones) */
 .product-card .body .slippers-slideshow .about-slide,
 .product-card .body .slippers-slideshow .about-slide img {
-    display: block !important;
+display: block !important;
 }
 /* ponytail: slippers-slideshow reuses carousel layout but is static HTML, not JS-populated */
 .product-card .body .slippers-slideshow {

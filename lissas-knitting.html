@@ -365,6 +365,22 @@ fbq('track', 'PageView');
 }
 </style>
 
+<style>
+/* ponytail: uniform card media frames — every LKC product card gets the same 260px media height */
+.product-card .card-slideshow,
+.product-card .slippers-slideshow,
+.product-card #slide-newborn,
+.product-card #slide-cloth,
+.product-card #slide-swiffer,
+.product-card .tuque-viewer,
+.product-card #tuque-viewer,
+.product-card .bm-slideshow {
+  height: 260px !important;
+  max-height: 260px !important;
+  min-height: 260px !important;
+}
+.product-card .bm-slideshow .about-slide.about-slide-active img { max-height: 235px !important; }
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -829,7 +845,7 @@ fbq('track', 'PageView');
                         <button type="button" class="about-carousel-btn" onclick="bmScroll(1)" aria-label="Next bookmark photo">&#8250;</button>
                     </div>
 
-                    <a href="cart.html" class="buy-btn" style="display:block;text-align:center;padding:10px;width:100%;background:#f5d76e;color:#1a1a2e;border:none;border-radius:8px;font-weight:700;cursor:pointer;box-sizing:border-box;margin-top:8px;">Add to Cart</a>
+                    <button type="button" class="buy-btn add-to-cart" onclick="addToCartDirect('Lissa\'s Knitting - Handmade Knitted Bookmark (Horizontal Ridge, Assorted)', 5.00, 'LKC-Bookmarks/AELKCBookmark1_resized.jpg')">Add to Cart</button>
    </div>
   </div>
 </div>

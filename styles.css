@@ -5199,14 +5199,15 @@ textarea:focus-visible,
 }
 
 /* ponytail: bookmarks product-card carousel — true slideshow, one slide visible at a time.
-   Scoped to .bm-slideshow so the shared z3nw1ck.html carousels are NOT affected. */
-.bm-slideshow .about-slide {
+   Scoped to .bm-slideshow (only on lissas-knitting bookmarks) so z3nw1ck carousels are NOT affected.
+   Specificity must beat .product-card .body .about-slide (0,3,0) — hence the ancestor chain. */
+.product-card .body .bm-slideshow .about-slide {
     display: none !important;
 }
-.bm-slideshow .about-slide.about-slide-active {
+.product-card .body .bm-slideshow .about-slide.about-slide-active {
     display: block !important;
 }
-.bm-slideshow .about-slide.about-slide-active img {
+.product-card .body .bm-slideshow .about-slide.about-slide-active img {
     display: block;
     width: auto;
     max-width: 100%;

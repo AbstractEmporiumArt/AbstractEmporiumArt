@@ -23,7 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.setAttribute('aria-expanded', 'false');
         hamburger.setAttribute('tabindex', '0');
 
-        hamburger.addEventListener('click', () => {
+        
+    // Initialize about-carousel slideshow
+    const aboutCarousel = document.querySelector(".about-carousel");
+    if (aboutCarousel) {
+        // Set first slide as active on page load
+        navSlide("about-carousel", 0);
+        
+        // Attach click handlers to about-carousel buttons
+        const prevBtn = aboutCarousel.querySelector(".about-carousel-prev");
+        const nextBtn = aboutCarousel.querySelector(".about-carousel-next");
+        if (prevBtn) {
+            prevBtn.addEventListener("click", () => navSlide("about-carousel", -1));
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener("click", () => navSlide("about-carousel", 1));
+        }
+    }hamburger.addEventListener('click', () => {
             const isActive = navMenu.classList.toggle('active');
             hamburger.classList.toggle('active', isActive);
             hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');

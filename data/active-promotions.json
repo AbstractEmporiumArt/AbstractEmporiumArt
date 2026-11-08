@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-11-08T05:47:27.086Z",
+  "lastCheck": "2026-11-08T13:11:25.285Z",
   "active": [
     {
       "platform": "kofi",
@@ -8,7 +8,7 @@
       "discount": null,
       "description": "Ko-fi shop promotion",
       "confidence": "medium",
-      "detectedAt": "2026-11-08T05:47:27.086Z",
+      "detectedAt": "2026-11-08T13:11:25.285Z",
       "priority": "high"
     }
   ],

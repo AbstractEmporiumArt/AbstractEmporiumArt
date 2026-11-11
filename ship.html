@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mark shipped — Abstract Emporium (owner)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main style="max-width:520px;margin:40px auto;padding:24px;">
+  <h1>Mark an order shipped</h1>
+  <p>Owner only. Enter the customer’s AE order # and the Canada Post tracking PIN. They (and you) get an email with the tracking link.</p>
+  <form id="sForm">
+    <label style="display:block;font-weight:600;margin:10px 0 4px;">Admin secret</label>
+    <input id="sSecret" type="password" required autocomplete="off" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+    <label style="display:block;font-weight:600;margin:10px 0 4px;">Order #</label>
+    <input id="sOrder" required placeholder="AE-261111-1234" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+    <label style="display:block;font-weight:600;margin:10px 0 4px;">Tracking #</label>
+    <input id="sTrack" required placeholder="Canada Post PIN" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+    <label style="display:block;font-weight:600;margin:10px 0 4px;">Carrier</label>
+    <input id="sCarrier" value="Canada Post" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+    <button type="submit" style="margin-top:14px;background:#007a63;color:#fff;border:none;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;">Save &amp; notify</button>
+  </form>
+  <p id="sStatus" role="status" style="margin-top:14px;font-weight:600;"></p>
+  <p style="font-size:.85rem;color:#666;">If this returns 503, set <code>AE_ORDER_ADMIN_SECRET</code> in Cloudflare Pages → abstractemporium → Environment variables (Production). Do not put the secret in the repo.</p>
+</main>
+<script>
+document.getElementById('sForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var st = document.getElementById('sStatus');
+  st.textContent = 'Saving…';
+  try {
+    var res = await fetch('/api/order-ship', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        secret: document.getElementById('sSecret').value,
+        order: document.getElementById('sOrder').value.trim(),
+        tracking: document.getElementById('sTrack').value.trim(),
+        carrier: document.getElementById('sCarrier').value.trim() || 'Canada Post'
+      })
+    });
+    var data = await res.json();
+    if (data.ok) {
+      st.style.color = '#1a7f37';
+      st.textContent = 'Shipped ' + data.order + ' · tracking ' + data.tracking + (data.emailed ? ' · email sent' : ' · email not sent (check Brevo env)');
+    } else {
+      st.style.color = '#b03a2e';
+      st.textContent = data.error || ('HTTP ' + res.status);
+    }
+  } catch (err) {
+    st.style.color = '#b03a2e';
+    st.textContent = 'Network error';
+  }
+});
+</script>
+</body>
+</html>

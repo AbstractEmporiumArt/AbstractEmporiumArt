@@ -63,7 +63,7 @@
 <main role="main">
   <div class="ec-wrap">
     <h1>eTransfer Confirmation</h1>
-    <p>After sending your Interac eTransfer to <strong>[EMAIL]</strong>, confirm it here so we can auto-match it to your order and email you the match.</p>
+    <p>After sending your Interac e-Transfer to <strong>abstractemporiumart@outlook.com</strong>, confirm it here. We email you the Abstract Emporium invoice (order #, items, customer-paid shipping) and you can <a href="track.html">track the package</a> once it ships.</p>
     <form id="ecForm">
       <div class="ec-field">
         <label for="ecOrder">Order #</label>
@@ -74,8 +74,12 @@
         <input id="ecAmount" name="amount" type="number" step="0.01" placeholder="0.00" required>
       </div>
       <div class="ec-field">
-        <label for="ecName">Your name / email</label>
-        <input id="ecName" name="name" placeholder="so we can confirm the match" required>
+        <label for="ecName">Your name</label>
+        <input id="ecName" name="name" placeholder="Name on the e-transfer" required>
+      </div>
+      <div class="ec-field">
+        <label for="ecEmail">Email (for your invoice)</label>
+        <input id="ecEmail" name="email" type="email" placeholder="you@example.com" required>
       </div>
       <div class="ec-field">
         <label for="ecMsg">Anything in the eTransfer message?</label>
@@ -100,12 +104,16 @@
   document.getElementById('ecForm').addEventListener('submit', async function(e){
     e.preventDefault();
     const status = document.getElementById('ecStatus');
+    const snap = (function(){ try { return JSON.parse(localStorage.getItem('ae_checkout_snapshot') || '{}'); } catch(e){ return {}; } })();
     const payload = {
       order: document.getElementById('ecOrder').value,
       amount: document.getElementById('ecAmount').value,
       name: document.getElementById('ecName').value,
+      email: document.getElementById('ecEmail').value,
       message: document.getElementById('ecMsg').value,
       channel: 'etransfer_manual_confirm',
+      items: snap.items || [],
+      shipping: snap.shipping || 0,
       timestamp: new Date().toISOString()
     };
     status.textContent = 'Submitting…';
@@ -117,7 +125,7 @@
       });
       if (res.ok) {
         status.style.color = '#1a7f37';
-        status.textContent = '✅ Confirmed. We will email you once the eTransfer is matched to your order.';
+        status.textContent = 'Confirmed. Check your email for the Abstract Emporium invoice (order #, total, shipping). Track at track.html once we ship.';
         var nm = encodeURIComponent(document.getElementById('ecName').value);
         var od = encodeURIComponent(document.getElementById('ecOrder').value);
         var dt = encodeURIComponent(new Date().toISOString().slice(0,10));
@@ -126,11 +134,11 @@
         status.parentNode.appendChild(link);
       } else {
         status.style.color = '#b03a2e';
-        status.textContent = 'Could not submit (server unavailable). Please email [EMAIL] with your order #.';
+        status.textContent = 'Could not submit (server unavailable). Please email abstractemporiumart@outlook.com with your order #.';
       }
     } catch(err) {
       status.style.color = '#b03a2e';
-      status.textContent = 'Network error — please email [EMAIL] with your order # and amount.';
+      status.textContent = 'Network error — please email abstractemporiumart@outlook.com with your order # and amount.';
     }
   });
 </script>

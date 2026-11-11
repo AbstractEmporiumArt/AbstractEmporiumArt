@@ -7,18 +7,31 @@
 
   function pad(n, w) { return String(n).padStart(w, '0'); }
 
+  function mint() {
+    const now = new Date();
+    const yy = String(now.getFullYear()).slice(2);
+    const mm = pad(now.getMonth() + 1, 2);
+    const dd = pad(now.getDate(), 2);
+    const rand = pad(Math.floor(Math.random() * 10000), 4);
+    return `AE-${yy}${mm}${dd}-${rand}`;
+  }
+
   function getOrderNumber() {
     let num = localStorage.getItem(STORAGE_KEY);
     if (!num) {
-      const now = new Date();
-      const yy = String(now.getFullYear()).slice(2);
-      const mm = pad(now.getMonth() + 1, 2);
-      const dd = pad(now.getDate(), 2);
-      const rand = pad(Math.floor(Math.random() * 10000), 4);
-      num = `AE-${yy}${mm}${dd}-${rand}`;
+      num = mint();
       localStorage.setItem(STORAGE_KEY, num);
     }
     return num;
+  }
+
+  function clearOrderNumber() {
+    localStorage.removeItem(STORAGE_KEY);
+  }
+
+  function newOrderNumber() {
+    clearOrderNumber();
+    return getOrderNumber();
   }
 
   function getCartTitles() {
@@ -31,5 +44,7 @@
   // Expose for product/cart pages
   window.AE = window.AE || {};
   window.AE.getOrderNumber = getOrderNumber;
+  window.AE.clearOrderNumber = clearOrderNumber;
+  window.AE.newOrderNumber = newOrderNumber;
   window.AE.getCartTitles = getCartTitles;
 })();

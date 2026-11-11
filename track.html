@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track your order — Abstract Emporium</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="canonical" href="https://abstractemporium.art/track.html">
+<meta name="description" content="Track your Abstract Emporium order with your order number.">
+</head>
+<body>
+<nav role="navigation" class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo"><img src="logo.jpg" alt="Abstract Emporium Logo" class="logo-img" loading="lazy"><span>Abstract Emporium</span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="z3nw1ck.html" class="nav-link">Z3NW1CK</a></li>
+      <li><a href="lissas-knitting.html" class="nav-link">Lissa's Knitting</a></li>
+      <li><a href="art-emporium.html" class="nav-link">Art Emporium</a></li>
+      <li><a href="cart.html" class="nav-link">Cart</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<main style="max-width:560px;margin:40px auto;padding:24px;">
+  <h1>Track your order</h1>
+  <p>Enter the Abstract Emporium order number from your invoice (AE-YYMMDD-XXXX).</p>
+  <form id="tForm">
+    <label for="tOrder" style="display:block;font-weight:600;margin-bottom:6px;">Order #</label>
+    <input id="tOrder" required placeholder="AE-261111-1234" style="width:100%;padding:10px;margin-bottom:12px;border:1px solid #ccc;border-radius:6px;">
+    <button type="submit" style="background:#1a1a2e;color:#fff;border:none;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;">Look up</button>
+  </form>
+  <p id="tStatus" role="status" style="margin-top:16px;font-weight:600;"></p>
+</main>
+<script src="script.js" defer></script>
+<script>
+(function(){
+  var params = new URLSearchParams(location.search);
+  var preset = params.get('order');
+  if (preset) document.getElementById('tOrder').value = preset;
+  function show(rec){
+    var el = document.getElementById('tStatus');
+    if (!rec || !rec.ok) { el.textContent = 'Could not look that up.'; return; }
+    if (rec.status === 'not_shipped_yet' || !rec.tracking) {
+      el.innerHTML = 'Order <b>' + rec.order + '</b> is not marked shipped yet. We email you the tracking number when it goes out.';
+      return;
+    }
+    var url = rec.track_url || ('https://www.canadapost-postescanada.ca/track-reperage/en#/search?searchFor=' + encodeURIComponent(rec.tracking));
+    el.innerHTML = 'Order <b>' + rec.order + '</b> shipped via ' + (rec.carrier || 'Canada Post') +
+      '.<br>Tracking #: <b>' + rec.tracking + '</b><br><a href="' + url + '">Track on Canada Post</a>';
+  }
+  document.getElementById('tForm').addEventListener('submit', async function(e){
+    e.preventDefault();
+    var o = document.getElementById('tOrder').value.trim();
+    document.getElementById('tStatus').textContent = 'Looking up…';
+    try {
+      var res = await fetch('/api/order-ship?order=' + encodeURIComponent(o));
+      show(await res.json());
+    } catch (err) {
+      document.getElementById('tStatus').textContent = 'Network error.';
+    }
+  });
+  if (preset) document.getElementById('tForm').dispatchEvent(new Event('submit'));
+})();
+</script>
+</body>
+</html>

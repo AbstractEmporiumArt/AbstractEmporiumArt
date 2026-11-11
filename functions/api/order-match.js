@@ -15,10 +15,11 @@ export async function onRequestPost(context) {
 
   const order = String(payload.order || '').trim();
   const amount = Number(payload.amount || 0);
+  var email = String(payload.email || payload.customer_email || '').trim();
   const name = String(payload.name || '').trim();
+  if (!email && name.indexOf('@') !== -1) email = name;
   const message = String(payload.message || '').trim();
   const channel = String(payload.channel || 'webhook').trim();
-  const email = String(payload.email || payload.customer_email || '').trim();
   const items = Array.isArray(payload.items) ? payload.items : [];
   const shipping = Number(payload.shipping || 0);
   const ts = new Date().toISOString();
@@ -97,13 +98,14 @@ function buildInvoicePdf(rec) {
     '--- Line items ---'
   ].concat(itemLines).concat([
     '',
-    rec.shipping ? ('Shipping: $' + Number(rec.shipping).toFixed(2) + ' CAD') : null,
+    rec.shipping ? ('Shipping (customer-paid): $' + Number(rec.shipping).toFixed(2) + ' CAD') : 'Shipping (customer-paid): $0.00 CAD (Thunder Bay pickup or PayPal/NetParcel)',
     'TOTAL (reported): $' + Number(rec.amount || 0).toFixed(2) + ' CAD',
     'HST: $0.00 (under $30k small-supplier threshold)',
     '',
     'Customer message: ' + (rec.message || '(none)'),
     '',
     'Match this to your bank/PayPal notification before shipping.',
+    'Track: https://abstractemporium.art/track.html?order=' + rec.order,
     'Questions: site contact form (AELB-tagged mail).'
   ]).filter(function (x) { return x !== null && x !== undefined; });
 
@@ -213,8 +215,44 @@ async function sendMatchEmail(env, rec) {
       },
       body: JSON.stringify(body)
     });
+    await sendCustomerInvoice(env, rec, attachment);
     return res.ok;
   } catch (e) {
     return false;
   }
+}
+
+async function sendCustomerInvoice(env, rec, attachment) {
+  var apiKey = env.BREVO_API_KEY;
+  var fromEmail = env.AE_FROM_EMAIL || env.OWNER_EMAIL;
+  var fromName = env.AE_FROM_NAME || 'Abstract Emporium';
+  if (!apiKey || !fromEmail || !rec.email || rec.email.indexOf('@') === -1) return;
+  var subject = 'Abstract Emporium invoice — Order ' + rec.order;
+  var text =
+    'Thank you for your order.\n\n' +
+    'Order # : ' + rec.order + '\n' +
+    'Total   : $' + Number(rec.amount || 0).toFixed(2) + ' CAD\n' +
+    'Shipping (customer-paid): $' + Number(rec.shipping || 0).toFixed(2) + ' CAD\n\n' +
+    'Invoice PDF attached. Track: https://abstractemporium.art/track.html?order=' + rec.order + '\n';
+  var html =
+    '<p>Thank you for your Abstract Emporium order.</p><ul>' +
+    '<li><b>Order #</b>: ' + escapeHtml(rec.order) + '</li>' +
+    '<li><b>Total</b>: $' + Number(rec.amount || 0).toFixed(2) + ' CAD</li>' +
+    '<li><b>Shipping (customer-paid)</b>: $' + Number(rec.shipping || 0).toFixed(2) + ' CAD</li></ul>' +
+    '<p><a href="https://abstractemporium.art/track.html?order=' + encodeURIComponent(rec.order) + '">Track your order</a></p>';
+  var body = {
+    sender: { name: fromName, email: fromEmail },
+    to: [{ email: rec.email }],
+    subject: subject,
+    textContent: text,
+    htmlContent: html
+  };
+  if (attachment) body.attachment = attachment;
+  try {
+    await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: { 'api-key': apiKey, 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(body)
+    });
+  } catch (e) {}
 }

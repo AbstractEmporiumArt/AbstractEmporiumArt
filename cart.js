@@ -90,13 +90,15 @@
       </div>
       <p class="priority-note">Handmade to order: Z3NW1CK candles, wax melts &amp; incense need curing time, and Lissa's knitting (especially slippers) takes time to create. Add $5 Priority to flag your order as rush during the busy fall/winter season.</p>
       <div class="cart-row cart-total"><span>Total</span><span>${formatMoney(total)}</span></div>
-      ${orderNumber ? `<div class="cart-row" style="font-size:0.9em;color:#555"><span>Order #</span><span><strong>${orderNumber}</strong></span></div>` : ''}
+      ${orderNumber ? `<div class="cart-row" style="font-size:0.9em;color:#555"><span>Order #</span><span><strong>${orderNumber}</strong> · <a href="track.html?order=${encodeURIComponent(orderNumber)}">Track</a></span></div>` : ''}
       <form id="paypalCheckout" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <input type="hidden" name="cmd" value="_cart">
         <input type="hidden" name="upload" value="1">
         <input type="hidden" name="business" value="${BUSINESS_EMAIL}">
         <input type="hidden" name="currency_code" value="CAD">
         <input type="hidden" name="custom" value="${orderNumber}">
+        <input type="hidden" name="notify_url" value="https://abstractemporium.art/api/paypal-ipn">
+        <input type="hidden" name="no_shipping" value="2">
         ${fall15 > 0 ? `<input type="hidden" name="discount_amount_cart" value="${fall15.toFixed(2)}">` : ''}
         ${cart.map((item, i) => `
           <input type="hidden" name="item_name_${i+1}" value="${escapeHtml(item.title)}">
@@ -112,7 +114,7 @@
       </form>
       <p style="font-size:0.82em;color:#666;margin-top:6px;">PayPal checkout uses <strong>NetParcel</strong> live shipping at PayPal — Canada Post is not added to the PayPal total.</p>
       ${fall15 > 0 ? `<p style="font-size:0.85em;color:#1a7f37;margin-top:6px;">🎉 FALL15 applied: 15% off your $60+ order.</p>` : `<p style="font-size:0.85em;color:#666;margin-top:6px;">Spend $60+ to unlock code <strong>FALL15</strong> (15% off).</p>`}
-      <p style="font-size:0.9em;color:#666;margin-top:10px;">Canada-wide from Thunder Bay, ON. <strong>PayPal:</strong> NetParcel at PayPal checkout. <strong>E-transfer:</strong> pick a Canada Post rate below (Canadian bank Interac). <strong>TB pickup:</strong> $0.</p>
+      <p style="font-size:0.9em;color:#666;margin-top:10px;">Canada-wide from Thunder Bay, ON. <strong>Shipping is paid by the customer</strong> (not baked into product prices). <strong>PayPal:</strong> NetParcel quotes shipping at PayPal. <strong>E-transfer:</strong> pick a Canada Post rate below — it is added to your total. <strong>TB pickup:</strong> $0.</p>
       <p style="font-size:0.85em;color:#666;margin-top:6px;">Paying by Interac e-Transfer? Send <strong>${formatMoney(total)} CAD</strong> to <strong>${BUSINESS_EMAIL}</strong> (auto-deposits to our Canadian bank — free for you). Put Order # <strong>${orderNumber}</strong>${cpChosen ? ' + ' + escapeHtml(cpChosen.service) : ''} in the message. Then confirm at <a href="etransfer-confirm.html?order=${orderNumber}">eTransfer confirm</a>.</p>
       <div id="etTransferQuote" style="margin-top:10px;border:1px solid #ddd;border-radius:8px;padding:10px;background:#fafaff;">
         <label style="display:block;font-size:0.85em;margin-bottom:8px;cursor:pointer;"><input type="checkbox" id="pickupCheck" ${pickupTB ? 'checked' : ''}> Thunder Bay pickup / drop-off — $0 shipping</label>
@@ -182,6 +184,18 @@
         });
       });
     }
+
+    try {
+      localStorage.setItem('ae_checkout_snapshot', JSON.stringify({
+        order: orderNumber,
+        items: cart.map(function (i) { return { title: i.title, price: i.price, qty: 1 }; }),
+        subtotal: subtotal,
+        shipping: shipAdd,
+        total: total,
+        pickup: pickupTB,
+        service: cpChosen ? cpChosen.service : (pickupTB ? 'Thunder Bay pickup' : 'PayPal / NetParcel')
+      }));
+    } catch (e) {}
   }
 
   document.addEventListener('DOMContentLoaded', render);

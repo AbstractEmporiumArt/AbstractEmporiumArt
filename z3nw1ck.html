@@ -8,11 +8,24 @@
 <meta property="og:description" content="Small-batch soy wax candles, wax melts, and incense in three signature scents. Handcrafted in Canada.">
 <link rel="stylesheet" href="styles.css">
 <style>
-/* z3nw1ck one-at-a-time slideshows — page-scoped marker: z3-slideshow */
-.product-card .body .z3-slideshow .about-slide { display: none !important; }
-.product-card .body .z3-slideshow .about-slide.about-slide-active { display: block !important; }
-.product-card .body .z3-slideshow .about-slide.about-slide-active img { display: block !important; width: 100%; height: auto; }
-.product-card .body .z3-slideshow { overflow-x: hidden; }
+/* z3nw1ck one-at-a-time slideshows — carousel is a sibling of .body, not inside it */
+.product-card .z3-slideshow { position: relative; overflow: hidden; border-radius: 10px; }
+.product-card .z3-slideshow .about-slide { display: none !important; }
+.product-card .z3-slideshow .about-slide.about-slide-active { display: block !important; }
+.product-card .z3-slideshow .about-slide.about-slide-active img { display: block !important; width: 100%; height: auto; }
+.product-card .z3-slideshow .z3-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,.7); color: #fff; border: none; border-radius: 50%;
+  width: 40px; height: 40px; font-size: 18px; line-height: 40px;
+  cursor: pointer; z-index: 40; padding: 0;
+}
+.product-card .z3-slideshow .z3-nav.prev { left: 8px; }
+.product-card .z3-slideshow .z3-nav.next { right: 8px; }
+.product-card .z3-slideshow .z3-count {
+  position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+  background: rgba(0,0,0,.65); color: #fff; font-size: 0.85rem;
+  padding: 2px 10px; border-radius: 999px; z-index: 40; min-width: 48px; text-align: center;
+}
 </style>
 </head>
 <body>
@@ -47,7 +60,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-fruitloops-candle-2oz" aria-label="☁️ Fruit Loops - Candle 2oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-2oz-official-label.png?v=20261110z3" alt="☁️ Fruit Loops - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-2oz-official-label.png?v=20261110z3b" alt="☁️ Fruit Loops - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -65,7 +78,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-fruitloops-candle-5oz" aria-label="☁️ Fruit Loops - Candle 5oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-5oz-official-label.png?v=20261110z3" alt="☁️ Fruit Loops - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-candle-5oz-official-label.png?v=20261110z3b" alt="☁️ Fruit Loops - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -83,7 +96,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-fruitloops-waxmelt" aria-label="☁️ Fruit Loops - Wax Melts photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-waxmelt-official-label.png?v=20261110z3" alt="☁️ Fruit Loops - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-waxmelt-official-label.png?v=20261110z3b" alt="☁️ Fruit Loops - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -101,7 +114,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-fruitloops-incense" aria-label="☁️ Fruit Loops - Incense photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-incense-official-label.png?v=20261110z3" alt="☁️ Fruit Loops - Incense label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/fruitloops/fruitloops-incense-official-label.png?v=20261110z3b" alt="☁️ Fruit Loops - Incense label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -119,7 +132,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-simpledaydreams-candle-2oz" aria-label="☁️ Simple Daydreams - Candle 2oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-candle-2oz-official-label.png?v=20261110z3" alt="☁️ Simple Daydreams - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-candle-2oz-official-label.png?v=20261110z3b" alt="☁️ Simple Daydreams - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -137,7 +150,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-simpledaydreams-candle-5oz" aria-label="☁️ Simple Daydreams - Candle 5oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-candle-5oz-official-label.png?v=20261110z3" alt="☁️ Simple Daydreams - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-candle-5oz-official-label.png?v=20261110z3b" alt="☁️ Simple Daydreams - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -155,7 +168,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-simpledaydreams-waxmelt" aria-label="☁️ Simple Daydreams - Wax Melts photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-waxmelt-official-label.png?v=20261110z3" alt="☁️ Simple Daydreams - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-waxmelt-official-label.png?v=20261110z3b" alt="☁️ Simple Daydreams - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -173,7 +186,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-simpledaydreams-incense" aria-label="☁️ Simple Daydreams - Incense photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-incense-official-label.png?v=20261110z3" alt="☁️ Simple Daydreams - Incense label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/simpledaydreams/simpledaydreams-incense-official-label.png?v=20261110z3b" alt="☁️ Simple Daydreams - Incense label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -191,7 +204,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-satsuma-candle-2oz" aria-label="☁️ Satsuma - Candle 2oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-2oz-official-label.png?v=20261110z3" alt="☁️ Satsuma - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-2oz-official-label.png?v=20261110z3b" alt="☁️ Satsuma - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -209,7 +222,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-satsuma-candle-5oz" aria-label="☁️ Satsuma - Candle 5oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-5oz-official-label.png?v=20261110z3" alt="☁️ Satsuma - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/satsuma/satsuma-candle-5oz-official-label.png?v=20261110z3b" alt="☁️ Satsuma - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -227,7 +240,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-satsuma-waxmelt" aria-label="☁️ Satsuma - Wax Melts photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/satsuma/satsuma-waxmelt-official-label.png?v=20261110z3" alt="☁️ Satsuma - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/satsuma/satsuma-waxmelt-official-label.png?v=20261110z3b" alt="☁️ Satsuma - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -245,7 +258,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-satsuma-incense" aria-label="☁️ Satsuma - Incense photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/satsuma/satsuma-incense-official-label.png?v=20261110z3" alt="☁️ Satsuma - Incense label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/satsuma/satsuma-incense-official-label.png?v=20261110z3b" alt="☁️ Satsuma - Incense label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -263,7 +276,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-capncrunch-candle-2oz" aria-label="🍁 Cap'n Crunch Berries - Candle 2oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/capncrunchberries/capn-candle-2oz-official-label.png?v=20261110z3" alt="🍁 Cap'n Crunch Berries - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/capncrunchberries/capn-candle-2oz-official-label.png?v=20261110z3b" alt="🍁 Cap'n Crunch Berries - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -281,7 +294,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-capncrunch-candle-5oz" aria-label="🍁 Cap'n Crunch Berries - Candle 5oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/capncrunchberries/capn-candle-5oz-official-label.png?v=20261110z3" alt="🍁 Cap'n Crunch Berries - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/capncrunchberries/capn-candle-5oz-official-label.png?v=20261110z3b" alt="🍁 Cap'n Crunch Berries - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -299,7 +312,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-capncrunch-waxmelt" aria-label="🍁 Cap'n Crunch Berries - Wax Melts photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/capncrunchberries/capn-waxmelt-label.jpg?v=20261110z3" alt="🍁 Cap'n Crunch Berries - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/capncrunchberries/capn-waxmelt-label.jpg?v=20261110z3b" alt="🍁 Cap'n Crunch Berries - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -317,7 +330,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-capncrunch-incense" aria-label="🍁 Cap'n Crunch Berries - Incense photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/capncrunchberries/capn-incense-official-label.png?v=20261110z3" alt="🍁 Cap'n Crunch Berries - Incense label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/capncrunchberries/capn-incense-official-label.png?v=20261110z3b" alt="🍁 Cap'n Crunch Berries - Incense label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -338,15 +351,15 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-monkeyfarts-candle-2oz" aria-label="🐒 Monkey Farts - Candle 2oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-official-label.png?v=20261110z3" alt="🐒 Monkey Farts - Candle 2oz label 1 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-1.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 2oz photo 2 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-2.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 2oz photo 3 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-3.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 2oz photo 4 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-4.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 2oz photo 5 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-5.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 2oz photo 6 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-6.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 2oz photo 7 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-official-label.png?v=20261110z3b" alt="🐒 Monkey Farts - Candle 2oz label 1 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-1.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 2oz photo 2 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-2.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 2oz photo 3 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-3.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 2oz photo 4 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-4.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 2oz photo 5 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-5.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 2oz photo 6 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-2oz-photo-6.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 2oz photo 7 of 7" loading="eager" decoding="async"></div>
 </div>
-<div class="about-carousel-nav"><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-monkeyfarts-candle-2oz', -1)" aria-label="Previous photo">&#8249;</button><span id="count-slide-z3-monkeyfarts-candle-2oz">1 / 7</span><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-monkeyfarts-candle-2oz', 1)" aria-label="Next photo">&#8250;</button></div></div>
+<button type="button" class="z3-nav prev" onclick="navSlide('slide-z3-monkeyfarts-candle-2oz', -1)" aria-label="Previous photo">&#9664;</button><button type="button" class="z3-nav next" onclick="navSlide('slide-z3-monkeyfarts-candle-2oz', 1)" aria-label="Next photo">&#9654;</button><span class="z3-count" id="count-slide-z3-monkeyfarts-candle-2oz">1 / 7</span></div>
 </div>
 <div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
 <div class="body" style="padding: 16px;">
@@ -362,13 +375,13 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-monkeyfarts-candle-5oz" aria-label="🐒 Monkey Farts - Candle 5oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-official-label.png?v=20261110z3" alt="🐒 Monkey Farts - Candle 5oz label 1 of 5" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-photo-1.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 5oz photo 2 of 5" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-photo-2.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 5oz photo 3 of 5" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-photo-3.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 5oz photo 4 of 5" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-photo-4.jpg?v=20261110z3" alt="🐒 Monkey Farts - Candle 5oz photo 5 of 5" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-official-label.png?v=20261110z3b" alt="🐒 Monkey Farts - Candle 5oz label 1 of 5" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-photo-1.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 5oz photo 2 of 5" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-photo-2.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 5oz photo 3 of 5" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-photo-3.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 5oz photo 4 of 5" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-candle-5oz-photo-4.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Candle 5oz photo 5 of 5" loading="eager" decoding="async"></div>
 </div>
-<div class="about-carousel-nav"><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-monkeyfarts-candle-5oz', -1)" aria-label="Previous photo">&#8249;</button><span id="count-slide-z3-monkeyfarts-candle-5oz">1 / 5</span><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-monkeyfarts-candle-5oz', 1)" aria-label="Next photo">&#8250;</button></div></div>
+<button type="button" class="z3-nav prev" onclick="navSlide('slide-z3-monkeyfarts-candle-5oz', -1)" aria-label="Previous photo">&#9664;</button><button type="button" class="z3-nav next" onclick="navSlide('slide-z3-monkeyfarts-candle-5oz', 1)" aria-label="Next photo">&#9654;</button><span class="z3-count" id="count-slide-z3-monkeyfarts-candle-5oz">1 / 5</span></div>
 </div>
 <div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
 <div class="body" style="padding: 16px;">
@@ -384,15 +397,15 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-monkeyfarts-waxmelt" aria-label="🐒 Monkey Farts - Wax Melts photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-official-label.png?v=20261110z3" alt="🐒 Monkey Farts - Wax Melts label 1 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-1.jpg?v=20261110z3" alt="🐒 Monkey Farts - Wax Melts photo 2 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-2.jpg?v=20261110z3" alt="🐒 Monkey Farts - Wax Melts photo 3 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-3.jpg?v=20261110z3" alt="🐒 Monkey Farts - Wax Melts photo 4 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-4.jpg?v=20261110z3" alt="🐒 Monkey Farts - Wax Melts photo 5 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-5.jpg?v=20261110z3" alt="🐒 Monkey Farts - Wax Melts photo 6 of 7" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-6.jpg?v=20261110z3" alt="🐒 Monkey Farts - Wax Melts photo 7 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-official-label.png?v=20261110z3b" alt="🐒 Monkey Farts - Wax Melts label 1 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-1.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Wax Melts photo 2 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-2.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Wax Melts photo 3 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-3.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Wax Melts photo 4 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-4.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Wax Melts photo 5 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-5.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Wax Melts photo 6 of 7" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-waxmelt-photo-6.jpg?v=20261110z3b" alt="🐒 Monkey Farts - Wax Melts photo 7 of 7" loading="eager" decoding="async"></div>
 </div>
-<div class="about-carousel-nav"><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-monkeyfarts-waxmelt', -1)" aria-label="Previous photo">&#8249;</button><span id="count-slide-z3-monkeyfarts-waxmelt">1 / 7</span><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-monkeyfarts-waxmelt', 1)" aria-label="Next photo">&#8250;</button></div></div>
+<button type="button" class="z3-nav prev" onclick="navSlide('slide-z3-monkeyfarts-waxmelt', -1)" aria-label="Previous photo">&#9664;</button><button type="button" class="z3-nav next" onclick="navSlide('slide-z3-monkeyfarts-waxmelt', 1)" aria-label="Next photo">&#9654;</button><span class="z3-count" id="count-slide-z3-monkeyfarts-waxmelt">1 / 7</span></div>
 </div>
 <div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
 <div class="body" style="padding: 16px;">
@@ -408,7 +421,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-monkeyfarts-incense" aria-label="🐒 Monkey Farts - Incense photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-incense-official-label.png?v=20261110z3" alt="🐒 Monkey Farts - Incense label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/monkeyfarts/monkeyfarts-incense-official-label.png?v=20261110z3b" alt="🐒 Monkey Farts - Incense label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -426,7 +439,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-bourbon-candle-2oz" aria-label="🌰 Bourbon &amp; Sandalwood - Candle 2oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-candle-2oz-official-label.png?v=20261110z3" alt="🌰 Bourbon &amp; Sandalwood - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-candle-2oz-official-label.png?v=20261110z3b" alt="🌰 Bourbon &amp; Sandalwood - Candle 2oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -444,7 +457,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-bourbon-candle-5oz" aria-label="🌰 Bourbon &amp; Sandalwood - Candle 5oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-candle-5oz-official-label.png?v=20261110z3" alt="🌰 Bourbon &amp; Sandalwood - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-candle-5oz-official-label.png?v=20261110z3b" alt="🌰 Bourbon &amp; Sandalwood - Candle 5oz label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -462,7 +475,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-bourbon-waxmelt" aria-label="🌰 Bourbon &amp; Sandalwood - Wax Melts photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-waxmelt-official-label.png?v=20261110z3" alt="🌰 Bourbon &amp; Sandalwood - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-waxmelt-official-label.png?v=20261110z3b" alt="🌰 Bourbon &amp; Sandalwood - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -480,7 +493,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-bourbon-incense" aria-label="🌰 Bourbon &amp; Sandalwood - Incense photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-incense-official-label.png?v=20261110z3" alt="🌰 Bourbon &amp; Sandalwood - Incense label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/bourbon-sandalwood/bourbon-sandalwood-incense-official-label.png?v=20261110z3b" alt="🌰 Bourbon &amp; Sandalwood - Incense label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -497,16 +510,16 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-hellofall-candle" aria-label="🍂 Hello Fall - Candle 2.5oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-official-label.png?v=20261110z3" alt="🍂 Hello Fall - Candle 2.5oz label 1 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-1.jpg?v=20261110z3" alt="🍂 Hello Fall - Candle 2.5oz photo 2 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-2.jpg?v=20261110z3" alt="🍂 Hello Fall - Candle 2.5oz photo 3 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-3.jpg?v=20261110z3" alt="🍂 Hello Fall - Candle 2.5oz photo 4 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-4.jpg?v=20261110z3" alt="🍂 Hello Fall - Candle 2.5oz photo 5 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-5.jpg?v=20261110z3" alt="🍂 Hello Fall - Candle 2.5oz photo 6 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-6.jpg?v=20261110z3" alt="🍂 Hello Fall - Candle 2.5oz photo 7 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-7.jpg?v=20261110z3" alt="🍂 Hello Fall - Candle 2.5oz photo 8 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-official-label.png?v=20261110z3b" alt="🍂 Hello Fall - Candle 2.5oz label 1 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-1.jpg?v=20261110z3b" alt="🍂 Hello Fall - Candle 2.5oz photo 2 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-2.jpg?v=20261110z3b" alt="🍂 Hello Fall - Candle 2.5oz photo 3 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-3.jpg?v=20261110z3b" alt="🍂 Hello Fall - Candle 2.5oz photo 4 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-4.jpg?v=20261110z3b" alt="🍂 Hello Fall - Candle 2.5oz photo 5 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-5.jpg?v=20261110z3b" alt="🍂 Hello Fall - Candle 2.5oz photo 6 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-6.jpg?v=20261110z3b" alt="🍂 Hello Fall - Candle 2.5oz photo 7 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-candle-photo-7.jpg?v=20261110z3b" alt="🍂 Hello Fall - Candle 2.5oz photo 8 of 8" loading="eager" decoding="async"></div>
 </div>
-<div class="about-carousel-nav"><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-hellofall-candle', -1)" aria-label="Previous photo">&#8249;</button><span id="count-slide-z3-hellofall-candle">1 / 8</span><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-hellofall-candle', 1)" aria-label="Next photo">&#8250;</button></div></div>
+<button type="button" class="z3-nav prev" onclick="navSlide('slide-z3-hellofall-candle', -1)" aria-label="Previous photo">&#9664;</button><button type="button" class="z3-nav next" onclick="navSlide('slide-z3-hellofall-candle', 1)" aria-label="Next photo">&#9654;</button><span class="z3-count" id="count-slide-z3-hellofall-candle">1 / 8</span></div>
 </div>
 <div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
 <div class="body" style="padding: 16px;">
@@ -518,7 +531,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-hellofall-waxmelt" aria-label="🍂 Hello Fall - Wax Melts photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-waxmelt-official-label.png?v=20261110z3" alt="🍂 Hello Fall - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/hello-fall/hello-fall-waxmelt-official-label.png?v=20261110z3b" alt="🍂 Hello Fall - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -532,16 +545,16 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-santaspipe-candle" aria-label="🎅 Santa's Pipe - Candle 2.5oz photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-official-label.png?v=20261110z3" alt="🎅 Santa's Pipe - Candle 2.5oz label 1 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-1.jpg?v=20261110z3" alt="🎅 Santa's Pipe - Candle 2.5oz photo 2 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-2.jpg?v=20261110z3" alt="🎅 Santa's Pipe - Candle 2.5oz photo 3 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-3.jpg?v=20261110z3" alt="🎅 Santa's Pipe - Candle 2.5oz photo 4 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-4.jpg?v=20261110z3" alt="🎅 Santa's Pipe - Candle 2.5oz photo 5 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-5.jpg?v=20261110z3" alt="🎅 Santa's Pipe - Candle 2.5oz photo 6 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-6.jpg?v=20261110z3" alt="🎅 Santa's Pipe - Candle 2.5oz photo 7 of 8" loading="eager" decoding="async"></div>
-<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-7.jpg?v=20261110z3" alt="🎅 Santa's Pipe - Candle 2.5oz photo 8 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-official-label.png?v=20261110z3b" alt="🎅 Santa's Pipe - Candle 2.5oz label 1 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-1.jpg?v=20261110z3b" alt="🎅 Santa's Pipe - Candle 2.5oz photo 2 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-2.jpg?v=20261110z3b" alt="🎅 Santa's Pipe - Candle 2.5oz photo 3 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-3.jpg?v=20261110z3b" alt="🎅 Santa's Pipe - Candle 2.5oz photo 4 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-4.jpg?v=20261110z3b" alt="🎅 Santa's Pipe - Candle 2.5oz photo 5 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-5.jpg?v=20261110z3b" alt="🎅 Santa's Pipe - Candle 2.5oz photo 6 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-6.jpg?v=20261110z3b" alt="🎅 Santa's Pipe - Candle 2.5oz photo 7 of 8" loading="eager" decoding="async"></div>
+<div class="about-slide"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-candle-photo-7.jpg?v=20261110z3b" alt="🎅 Santa's Pipe - Candle 2.5oz photo 8 of 8" loading="eager" decoding="async"></div>
 </div>
-<div class="about-carousel-nav"><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-santaspipe-candle', -1)" aria-label="Previous photo">&#8249;</button><span id="count-slide-z3-santaspipe-candle">1 / 8</span><button type="button" class="about-carousel-btn" onclick="navSlide('slide-z3-santaspipe-candle', 1)" aria-label="Next photo">&#8250;</button></div></div>
+<button type="button" class="z3-nav prev" onclick="navSlide('slide-z3-santaspipe-candle', -1)" aria-label="Previous photo">&#9664;</button><button type="button" class="z3-nav next" onclick="navSlide('slide-z3-santaspipe-candle', 1)" aria-label="Next photo">&#9654;</button><span class="z3-count" id="count-slide-z3-santaspipe-candle">1 / 8</span></div>
 </div>
 <div class="product-card" style="border: 2px solid #e8c545; border-radius: 8px; margin: 12px 0;">
 <div class="body" style="padding: 16px;">
@@ -553,7 +566,7 @@
 </div>
 <div class="about-carousel z3-slideshow" id="slide-z3-santaspipe-waxmelt" aria-label="🎅 Santa's Pipe - Wax Melts photos">
 <div class="about-carousel-track">
-<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-waxmelt-official-label.png?v=20261110z3" alt="🎅 Santa's Pipe - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
+<div class="about-slide about-slide-active active"><img src="z3nw1ck-product-photos/santas-pipe/santas-pipe-waxmelt-official-label.png?v=20261110z3b" alt="🎅 Santa's Pipe - Wax Melts label 1 of 1" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -563,8 +576,8 @@
 <footer>
 <p>&copy; 2026 Abstract Emporium. All rights reserved.</p>
 </footer>
-<script src="cart.js?v=20261110z3"></script>
-<script src="script.js?v=20261110z3"></script>
+<script src="cart.js?v=20261110z3b"></script>
+<script src="script.js?v=20261110z3b"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.z3-slideshow').forEach(function (box) {
@@ -575,6 +588,16 @@ document.addEventListener('DOMContentLoaded', function () {
       s.classList.toggle('about-slide-active', on);
       s.classList.toggle('active', on);
     });
+    var startX = null;
+    box.addEventListener('touchstart', function (e) {
+      if (e.changedTouches && e.changedTouches[0]) startX = e.changedTouches[0].clientX;
+    }, {passive: true});
+    box.addEventListener('touchend', function (e) {
+      if (startX == null || !e.changedTouches || !e.changedTouches[0]) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      startX = null;
+      if (Math.abs(dx) > 30) navSlide(box.id, dx > 0 ? -1 : 1);
+    }, {passive: true});
   });
 });
 </script>

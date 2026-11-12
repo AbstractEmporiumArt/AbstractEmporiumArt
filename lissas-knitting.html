@@ -694,6 +694,43 @@ fbq('track', 'PageView');
    </div>
   </div>
 
+<div class="product-card" id="lkc-youth-slippers">
+   <div class="body">
+    <h3>🧶 Cozy Knit Slippers — Youth / Preteens 7–7¼"</h3>
+    <span class="inv-badge inv-ready">READY NOW · LIVE STOCK</span>
+    <p class="notes">Hand-knit youth / preteen slippers (7"–7¼" foot). The 5 pairs below are finished and ready to ship. $20 each.</p>
+    <div class="card-slideshow" id="slide-youth" style="position:relative;overflow:hidden;height:220px;background:#0f0f1a;border-radius:8px;margin-bottom:8px;">
+<img src="lkc-slippers-youth-01.jpg" alt="Youth 7-7.25 inch knit slippers pair 1 — blue and white variegated" class="slide active" data-variant="youth-p1" loading="eager" decoding="async">
+<img src="lkc-slippers-youth-02.jpg" alt="Youth 7-7.25 inch knit slippers pair 2 — pink and cream" class="slide" data-variant="youth-p2" loading="eager" decoding="async">
+<img src="lkc-slippers-youth-03.jpg" alt="Youth 7-7.25 inch knit slippers pair 3 — pink and burgundy mix" class="slide" data-variant="youth-p3" loading="eager" decoding="async">
+<img src="lkc-slippers-youth-04.jpg" alt="Youth 7-7.25 inch knit slippers pair 4 — sky and royal blue" class="slide" data-variant="youth-p4" loading="eager" decoding="async">
+<img src="lkc-slippers-youth-05.jpg" alt="Youth 7-7.25 inch knit slippers pair 5 — blue pink confetti speckled" class="slide" data-variant="youth-p5" loading="eager" decoding="async">
+<button class="nav-btn prev" onclick="navSlide('youth',-1)" aria-label="Previous" type="button">&#9664;</button>
+<button class="nav-btn next" onclick="navSlide('youth',1)" aria-label="Next" type="button">&#9654;</button>
+<div class="counter" id="count-youth">1 / 5</div>
+</div>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:inline-block;vertical-align:top;width:100%;">
+     <input type="hidden" name="cmd" value="_xclick">
+     <input type="hidden" name="business" value="abstractemporiumart@outlook.com">
+     <input type="hidden" name="item_name" value="Lissa's Knitting - Slippers Youth 7-7.25 inch">
+     <input type="hidden" name="currency_code" value="CAD">
+     <label class="size-label">Choose pair:
+      <select name="amount" id="youthPairs" class="size-select" required onchange="setSlide('youth', this.options[this.selectedIndex].getAttribute('data-variant'))">
+        <option value="20" data-img="lkc-slippers-youth-01.jpg" data-variant="youth-p1">Youth / Preteens (7–7¼") Pair 1 of 5 — $20</option>
+        <option value="20" data-img="lkc-slippers-youth-02.jpg" data-variant="youth-p2">Youth / Preteens (7–7¼") Pair 2 of 5 — $20</option>
+        <option value="20" data-img="lkc-slippers-youth-03.jpg" data-variant="youth-p3">Youth / Preteens (7–7¼") Pair 3 of 5 — $20</option>
+        <option value="20" data-img="lkc-slippers-youth-04.jpg" data-variant="youth-p4">Youth / Preteens (7–7¼") Pair 4 of 5 — $20</option>
+        <option value="20" data-img="lkc-slippers-youth-05.jpg" data-variant="youth-p5">Youth / Preteens (7–7¼") Pair 5 of 5 — $20</option>
+      </select>
+     </label>
+     <input type="number" name="quantity" min="1" value="1" class="qty-input" aria-label="Quantity">
+     <button type="submit" class="buy-btn" style="display:none;" aria-hidden="true"></button>
+    </form>
+    <button type="button" class="buy-btn add-to-cart" onclick="cartSlipper('youthPairs', 'Lissa\'s Knitting - Slippers Youth 7-7.25 inch')">Add to Cart</button>
+    <p class="notes" style="margin-top:10px;">Other sizes (Baby, Child, Adult S/M/XL)? <a href="#customSlippers">Custom order below →</a></p>
+   </div>
+  </div>
+
 <div class="product-card">
    <div class="body">
     <h3>🧶 Cozy Knit Slippers — Adult 9"</h3>
@@ -945,7 +982,7 @@ fbq('track', 'PageView');
     }
   };
   // Touch swipe for product cards + gallery
-  ['newborn','toddler','adult','tuque','gallery','slide-gallery'].forEach(function (id) {
+  ['newborn','toddler','youth','adult','tuque','gallery','slide-gallery'].forEach(function (id) {
     var el = resolveBox(id);
     if (!el) return;
     var sx = 0;

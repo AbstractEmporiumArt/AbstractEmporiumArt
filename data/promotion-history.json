@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "timestamp": "2026-11-12T23:28:29.436Z",
+      "newPromotions": [],
+      "endedPromotions": [
+        {
+          "platform": "kofi",
+          "platformName": "Ko-fi",
+          "type": "shop_sale",
+          "discount": null,
+          "description": "Ko-fi shop promotion",
+          "confidence": "medium",
+          "detectedAt": "2026-11-12T15:00:24.264Z",
+          "priority": "high"
+        }
+      ]
+    },
+    {
       "timestamp": "2026-11-08T21:56:05.520Z",
       "newPromotions": [
         {
@@ -2198,33 +2214,6 @@
         }
       ],
       "endedPromotions": []
-    },
-    {
-      "timestamp": "2026-06-09T09:59:56.974Z",
-      "newPromotions": [
-        {
-          "platform": "fineartamerica",
-          "platformName": "Fine Art America",
-          "type": "sitewide_sale",
-          "discount": "20%",
-          "description": "20% off sitewide sale",
-          "confidence": "high",
-          "detectedAt": "2026-06-09T09:59:56.974Z",
-          "priority": "high"
-        }
-      ],
-      "endedPromotions": [
-        {
-          "platform": "fineartamerica",
-          "platformName": "Fine Art America",
-          "type": "potential_sale",
-          "discount": null,
-          "description": "Possible promotion detected",
-          "confidence": "medium",
-          "detectedAt": "2026-06-09T04:17:19.401Z",
-          "priority": "high"
-        }
-      ]
     }
   ]
 }

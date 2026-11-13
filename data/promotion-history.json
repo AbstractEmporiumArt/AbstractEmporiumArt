@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "timestamp": "2026-11-13T06:21:20.202Z",
+      "newPromotions": [
+        {
+          "platform": "kofi",
+          "platformName": "Ko-fi",
+          "type": "shop_sale",
+          "discount": null,
+          "description": "Ko-fi shop promotion",
+          "confidence": "medium",
+          "detectedAt": "2026-11-13T06:21:20.202Z",
+          "priority": "high"
+        }
+      ],
+      "endedPromotions": []
+    },
+    {
       "timestamp": "2026-11-12T23:28:29.436Z",
       "newPromotions": [],
       "endedPromotions": [
@@ -2198,22 +2214,6 @@
           "priority": "high"
         }
       ]
-    },
-    {
-      "timestamp": "2026-06-09T20:18:04.425Z",
-      "newPromotions": [
-        {
-          "platform": "kofi",
-          "platformName": "Ko-fi",
-          "type": "shop_sale",
-          "discount": null,
-          "description": "Ko-fi shop promotion",
-          "confidence": "medium",
-          "detectedAt": "2026-06-09T20:18:04.425Z",
-          "priority": "high"
-        }
-      ],
-      "endedPromotions": []
     }
   ]
 }
